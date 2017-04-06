@@ -45,9 +45,9 @@
     <ul>
         <li>This Charter: <a href="https://github.com/w3c/opentrack-cg/blob/master/charter.html">https://github.com/w3c/opentrack-cg/blob/master/charter.html</a></li>
         <!--li>Previous Charter: <span class="remove">{TBD: URI}</span></li-->
-        <li>Start Date: <span class="remove">April 17, 2017</span>
+        <li>Start Date: <span class="remove">2017-04-17</span>
         </li>
-        <li>Last Modifed: <span class="remove">April 17, 2017</span>
+        <li>Last Modifed: <span class="remove">2017-04-17</span>
         </li>
     </ul>
     <h2 id="goals">
@@ -57,13 +57,16 @@
         This group aims to <strong>develop an open schema for data in Athletics</strong>. Such a common vocabulary will enable interoperability and the development of better software to manage the sport, resulting in major savings of time for volunteers; more efficient management of events and federations; and more services for participants and fans.
     </p>
     <p>
-        The resulting schema will be open and offered as a basis to construct a future standard to manage data in Athletics universally. In order to facilitate and foster adoption, the resulting model will be aligned with <a href="http://schema.org">schema.org</a>, aiming at wide-spreading across all sectors.
+        The resulting schema will be open and offered as a basis to construct a future standard to manage data in Athletics universally. In order to facilitate and foster adoption, the resulting model will be aligned with <a href="http://schema.org">schema.org</a>, easy to implement by all sectors —publishers, consumers, competition management, etc.
     </p>
     <h2 id="scope-of-work">
         Scope of Work
     </h2>
     <p>
-        This CG will develop technical documents to model and describe data in Athletics, including the following disciplines: Track and Field; Road Running; Race Walking; Cross-Country Running; Mountain Running; and trail Running. This model will be focus on Athletics competitions, having into account: events; athletes and teams; results; performances; management of start lists; results; and facilities.
+        This CG will develop technical documents to model and describe data in Athletics, including the following disciplines: Track and Field; Road Running; Race Walking; Cross-Country Running; Mountain Running; and trail Running.
+    </p>
+    <p>
+        This model will be focus on Athletics competitions, having into account: events; athletes and teams; results; performances; management of start lists; results; and facilities.
     </p>
     <h3 id="out-of-scope">
         Out of Scope
@@ -80,11 +83,14 @@
     <p>The proposed OpenTrack model will include two main Specifications:</p>
     <dl>
         <dt>OpenTrack Abstract Model</dt>
-        <dd>A light and easy-to-understand document explaining the abstract model of Athletics competitions, including classes and properties.</dd>
+        <dd>A light and easy-to-understand document explaining the conceptual model of Athletics competitions, including classes and properties.</dd>
         <dd>Expected in May 2017</dd>
-        <dt>OpenTrack Vocabulary</dt>
+        <dt>OpenTrack Schema</dt>
         <dd>
-            RDF vocabulary to describe semantically the abstract model specified in the previous document. This RDF vocabulary will be based on existing vocabularies, specially on <a href="http://schema.org">schema.org</a>. This vocabulary will also include taxonomies and other classification schemas involved in Athletics (e.g., type of Athletics events, codes for federations, and others).
+            RDF vocabulary to describe semantically Athletics competitions specified in the abstract model. This RDF vocabulary will be based on existing vocabularies, specially on <a href="http://schema.org">schema.org</a>. This vocabulary will also include taxonomies and other classification schemas involved in Athletics (e.g., type of Athletics events, codes for federations, and others).
+        </dd>
+        <dd>
+            This schema will follow the schema.org approach, describing classes and properties under a flexible, intuitive and easy-to-implement model. Specification will include examples of code in at least one serialization format (e.g., JSON-LD). 
         </dd>
         <dd>Expected in October 2017</dd>
     </dl>
