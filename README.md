@@ -6,6 +6,8 @@ OpenTrack is a set of tools to increase interoperability among systems managing 
 
 Through OpenTrack athletics entities around the world (sport clubs, federations, private event organizers, etc.) will be able to open the data contributing towards open data in sports. This will bring new business opportunities to third parties (developers, public bodies, private companies, citizens, academia). 
 
+<mark>[Charter](https://w3c.github.io/opentrack-cg/charter.html) is in development.</mark>
+
 ## What tools?
 
 The main component of OpenTrack is a set of vocabularies and taxonomies that will help publishers to model and expose information regarding athletics (events, athletes, facilities, results, rankings, and others). 
@@ -14,14 +16,14 @@ Participants in this group will contribute with code recipes, libraries, and exa
 
 ## Formats and standards
 
-All documents will be encoded in UTF-8.
+All documents will be written in English and encoded in UTF-8.
 
 Schemas and vocabularies will be aligned with the existing W3C standards, in concrete with the Data on the Web specifications. Although they will be described as abstract vocabularies, they will be also modeled in RDF.
 
 
 ## Can I use it?
 
-Of course! Unless the piece of software or document listed in this repository has specified a explicit license, everything is under the [W3C Software and Document License](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document). This means that, by default, you have permission to copy, modify, and distribute OpenTrack works, with or without modification, for any purpose and without fee or royalty.
+Of course! Unless the piece of software or document listed in this repository has specified an explicit license, everything is under the [W3C Software and Document License](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document). This means that, by default, you have permission to copy, modify, and distribute OpenTrack works, with or without modification, for any purpose and without fee or royalty.
 
 ## How can I participate?
 
