@@ -71,7 +71,7 @@ Athletes are **[Persons](#Persons)** who participate in Athletics competitions. 
 | height | Athlete's height. | [Quantitive Value](#Quantitive-Values) |
 | weight | Athlete's weight. | [Quantitive Value](#Quantitive-Values) |
 | nationality | Athlete's nationality. | [Country](#Countries) |
-| federation | Federation which the athlete is attached to. | [Federation](#Federations) |
+| federation | Federation which the athlete is attached to. | [Athletics Federation](#Athletics-Federations) |
 | coach | Athlete's main coach. | [Person](#Persons) |
 | sponsor | Athlete's sponsor. | [Person](#Persons) or [Organization](#Organizations) |
 | team | Team which the athlete is affiliated to. | **[Team](#Teams)** |
@@ -93,7 +93,7 @@ Teams may be described using the following attributes:
 | logo | Logo or flag of the team. | URL |
 | email | Main email address of the team. | Text |
 | url | Webpage URL about the team. | URL |
-| federation | Federation which the team is attached to. | [Federation](#Federations) |
+| federation | Federation which the team is attached to. | [Athletics Federation](#Athletics-Federations) |
 | sponsor | Sponsor of the team. | [Person](#Persons) or [Organization](#Organizations) |
 | coach | Main coach of the team. | [Person](#Persons) |
 | captain(s) | Athlete(s) who represents the team. | **[Athlete](#Athletes)** |
@@ -246,12 +246,14 @@ A postal address may be represented by some common properties:
 
 ### Persons
 
-Person is a basic entity to represent any person (i.e., athlete, coach, organizer, etc.). There are some properties that will be used commonly to represent people:
+Person is a basic entity to represent any person (i.e., athlete, coach, organizer, etc.). 
+
+There are some properties that will be used commonly to represent people:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the person. | Text |
-| name | Person's ull name. | Text |
+| name | Person's full name. | Text |
 | family name | Person's family name; surname. | Text |
 | given name | Person's given name; first name. | Text |
 | alternate name | An alias to name the person. | Text |
@@ -263,66 +265,83 @@ Person is a basic entity to represent any person (i.e., athlete, coach, organize
 
 ### Organizations
 
-<mark>TODO</mark>
+This entity may represent any type of organization (i.e., private company, public body, association, etc.). 
 
-### Federations
+Organizations can be represented by the following properties:
 
-<mark>TODO</mark>
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the organization. | Text |
+| name | Organiation name. | Text |
+| alternate name | An alias to name the organization. | Text |
+| address | Postal address where the organization is located. | [Postal Address](#Postal-Addresses) or Text |
+| logo | Logo of the organization. | URL |
+| email | Main email address. | Text |
+| url | Webpage URL about the organization. | URL |
+| telephone | Main telephone number of the organization. | URL |
+
+
+### Athletics Federations
+
+Federations are special types of organizations in charge of governing and rule the sport of athletics. Federations may be attached to other higher-level federations.
+
+<mark>TODO: Should federations be defined in detail?</mark>
+
+
+*******
 
 
 ## Classification schemas and data types 
 
-Definitions and values for this set of entities and value schemes are mainly extracted from the official Technical Competition Rules published by IAAF.
+Most of the following definitions and values for this set of value schemas are extracted from the official [Technical Competition Rules](https://www.iaaf.org/about-iaaf/documents/rules-regulations) published by IAAF.
 
 ### Gender
 
 Enumeration of genders with two values: 
 
-* Male
-* Female
+- `Male`
+- `Female`
 
 NOTE: Competition is divided into men’s and women’s classifications, but there are mixed competitions. Although mixed competitions are not frequent, **mixed stadium competition*** in field events and in races of 5000m or longer are permitted.
 
 
 ### Start Lists and Results
 
-(RULE 132.4)
-
-Standard abbreviations and symbols used in the preparation of start lists and results where applicable:
+According to IAAF Rule 132.4, there are official standard abbreviations and symbols used in the preparation of start lists and results:
 
 | Issue/feature | Code |
 | ------------- | ---- |
-| Did not start | DNS |
-| Did not finish | DNF |
-| No valid trial recorded | NM |
-| Disqualified | DQ |
-| valid trial in High Jump and Pole vault | “O” |
-| Failed trial in Field events | “X” |
-| Passed trial in Field events | “–” |
-| Retired from competition | r |
-| Qualified by place in track events | Q |
-| Qualified by time in track events | q |
-| Qualified by standard in field events– Q |
-| Qualified without standard in field events | q |
-| Advanced to next round by Referee | qR |
-| Advanced to next round by Jury of Appeal | qJ |
-| Bent knee (Race walking) | “>” |
-| loss of contact (Race walking) | “~” |
-| yellow Card | yC |
-| Second yellow Card | yRC |
-| Red Card | RC |
+| Did not start | `DNS` |
+| Did not finish | `DNF` |
+| No valid trial recorded | `NM` |
+| Disqualified | `DQ` |
+| valid trial in High Jump and Pole vault | `O` |
+| Failed trial in Field events | `X` |
+| Passed trial in Field events | `–` |
+| Retired from competition | `r` |
+| Qualified by place in track events | `Q` |
+| Qualified by time in track events | `q` |
+| Qualified by standard in field events | `Q` |
+| Qualified without standard in field events | `q` |
+| Advanced to next round by Referee | `qR` |
+| Advanced to next round by Jury of Appeal | `qJ` |
+| Bent knee (Race walking) | `>` |
+| loss of contact (Race walking) | `~` |
+| yellow Card | `yC` |
+| Second yellow Card | `yRC` |
+| Red Card | `RC` |
 
 
 ### Competing "Under protest"
 
-In either a track or field  event, if an athlete makes an immediate oral protest against having been charged with a false start or a failure trial, the athlete may continue competing “under protest”.
+In either a track or field  event, if an athlete makes an immediate oral protest against having been charged with a false start or a failure trial, the athlete may continue competing `under protest`.
 
 
 ### Timekeeping
 
 There are three alternative methods of timekeeping, recognised as official by IAAF:
-- (HT) Hand timing;
-- (FAT) Fully Automatic timing obtained from a Photo Finish System;
+- (`HT`) Hand timing;
+- (`FAT`) Fully Automatic timing obtained from a Photo Finish System;
 - timing provided by a transponder system.
 
 ### Quantitive Values
