@@ -6,7 +6,7 @@ OpenTrack is a set of tools to increase interoperability among systems managing 
 
 Through OpenTrack athletics entities around the world (sport clubs, federations, private event organizers, etc.) will be able to open the data contributing towards open data in sports. This will bring new business opportunities to third parties (developers, public bodies, private companies, citizens, academia). 
 
-<mark>[Charter](https://w3c.github.io/opentrack-cg/charter.html) is in development.</mark>
+[Charter](https://w3c.github.io/opentrack-cg/charter.html) is in development.
 
 ## What tools?
 
