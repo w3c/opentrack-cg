@@ -32,29 +32,29 @@ Some of the entities referred in this document, are named using abbreviations. T
 
 The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish information related to the following entities. 
 
-* **[Competitors](#Competitors)**. **[Athletes](#Athletes)** or **[Teams](#Teams)** that takes part in Athletics competitions. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information.       
+* **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics competitions. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information.       
 
-* **[Athletics Events](#Athletics-Events)**. Sports organized occasion where Athletics competitions are planed and take place at a specific location during a period of time. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, etc.). Athletics events may include one or several [Athletics competitions] (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent competition disciplines for men and 23 for women).
+* **[Athletics Events](#athletics-events)**. Sports organized occasion where Athletics competitions are planed and take place at a specific location during a period of time. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, etc.). Athletics events may include one or several [Athletics competitions] (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent competition disciplines for men and 23 for women).
 
-* **[Athletics Competitions](#Athletics-Competitions)**. Competition events corresponding to specific disciplines where competitors take part (e.g., 100m Men). Competitions are composed of one or more rounds. 
+* **[Athletics Competitions](#athletics-competitions)**. Competition events corresponding to specific disciplines where competitors take part (e.g., 100m Men). Competitions are composed of one or more rounds. 
 
-* **[Competition Rounds](#Competition-Rounds)**. Stages of Athletics competitions (e.g., Heats, Finals, etc.) where competitors are distributed in groups. Rounds depend on the competition rules for each discipline (i.e, horizontal and vertical jumps have different rules regarding rounds). 
+* **[Competition Rounds](#competition-rounds)**. Stages of Athletics competitions (e.g., Heats, Finals, etc.) where competitors are distributed in groups. Rounds depend on the competition rules for each discipline (i.e, horizontal and vertical jumps have different rules regarding rounds). 
 
-* **[Start List](#Start-List)**. Ordered set of competitors (athletes or teams) qualified to compete in a specific competition round. Start list contains information about competitors, their marks and other competition information provided by judges.
+* **[Start List](#start-list)**. Ordered set of competitors (athletes or teams) qualified to compete in a specific competition round. Start list contains information about competitors, their marks and other competition information provided by judges.
 
-* **[Results](#Results)**. Ordered list of competitors with their **performances** after a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
+* **[Results](#results)**. Ordered list of competitors with their **performances** after a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
 
-* **[Performances](#Performances)**. Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed).
+* **[Performances](#performances)**. Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed).
 
-* **[Venues](#Venues)**. Location where events and competitions are held.
+* **[Venues](#venues)**. Location where events and competitions are held.
 
 ## Competitors
 
-Competitor is an agent that takes part in Athletics competitions. Depending on the type of competition, either for individuals or for teams, agent is either an **[Athlete](#Athletes)** or a **[Team](#Teams)**, respectively. 
+Competitor is an agent that takes part in Athletics competitions. Depending on the type of competition, either for individuals or for teams, agent is either an **[Athlete](#athletes)** or a **[Team](#teams)**, respectively. 
 
 ### Athletes
 
-Athletes are **[Persons](#Persons)** who participate in Athletics competitions. Athletes may be described using the following attributes:
+Athletes are **[Persons](#persons)** who participate in Athletics competitions. Athletes may be described using the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
@@ -63,18 +63,18 @@ Athletes are **[Persons](#Persons)** who participate in Athletics competitions. 
 | family name | Athlete's family name; surname. | Text |
 | given name | Athlete's given name; first name. | Text |
 | alternate name | An alias to name the athlete. | Text |
-| address | Main residence address of the athlete. | [Postal Address](#Postal-Addresses) or Text |
+| address | Main residence address of the athlete. | [Postal Address](#postal-addresses) or Text |
 | image | Picture of the athlete. | URL |
 | email | Email address. | Text |
 | url | Webpage URL about the athlete. | URL |
-| gender | Athlete's gender. | [Gender](#Gender) |
-| height | Athlete's height. | [Quantitative Value](#Quantitative-Values) |
-| weight | Athlete's weight. | [Quantitative Value](#Quantitative-Values) |
-| nationality | Athlete's nationality. | [Country](#Countries) |
-| federation | Federation which the athlete is attached to. | [Athletics Federation](#Athletics-Federations) |
-| coach | Athlete's main coach. | [Person](#Persons) |
-| sponsor | Athlete's sponsor. | [Person](#Persons) or [Organization](#Organizations) |
-| team | Team which the athlete is affiliated to. | **[Team](#Teams)** |
+| gender | Athlete's gender. | [Gender](#gender) |
+| height | Athlete's height. | [Quantitative Value](#quantitative-values) |
+| weight | Athlete's weight. | [Quantitative Value](#quantitative-values) |
+| nationality | Athlete's nationality. | [Country](#countries) |
+| federation | Federation which the athlete is attached to. | [Athletics Federation](#athletics-federations) |
+| coach | Athlete's main coach. | [Person](#persons) |
+| sponsor | Athlete's sponsor. | [Person](#persons) or [Organization](#organizations) |
+| team | Team which the athlete is affiliated to. | **[Team](#teams)** |
 
 
 ### Teams
@@ -88,16 +88,16 @@ Teams may be described using the following attributes:
 | identifier | Unique character string to identify the team. | Text |
 | name | Descriptive name of the team. | Text |
 | alternate name | An alias to name the team. | Text |
-| address | Main postal address where the team is registered or located. | [Postal Address](#Postal-Addresses) or Text |
+| address | Main postal address where the team is registered or located. | [Postal Address](#postal-addresses) or Text |
 | image | Picture of the team. | URL |
 | logo | Logo or flag of the team. | URL |
 | email | Main email address of the team. | Text |
 | url | Webpage URL about the team. | URL |
-| federation | Federation which the team is attached to. | [Athletics Federation](#Athletics-Federations) |
-| sponsor | Sponsor of the team. | [Person](#Persons) or [Organization](#Organizations) |
-| coach | Main coach of the team. | [Person](#Persons) |
-| captain(s) | Athlete(s) who represents the team. | **[Athlete](#Athletes)** |
-| athlete(s) | Athlete(s) affiliated to the team. | **[Athlete](#Athletes)** |
+| federation | Federation which the team is attached to. | [Athletics Federation](#athletics-federations) |
+| sponsor | Sponsor of the team. | [Person](#persons) or [Organization](#organizations) |
+| coach | Main coach of the team. | [Person](#persons) |
+| captain(s) | Athlete(s) who represents the team. | **[Athlete](#athletes)** |
+| athlete(s) | Athlete(s) affiliated to the team. | **[Athlete](#athletes)** |
 
 
 ### Athletics Events
@@ -113,17 +113,17 @@ These events may be described by the following attributes:
 | identifier | Unique character string to identify the event. | Text |
 | name | Descriptive name of the event. | Text |
 | alternate name | An alias to name the event. | Text |
-| location | Venue where the event is held. | [Venue](#Venues) or Text |
+| location | Venue where the event is held. | [Venue](#venues) or Text |
 | url | Webpage URL about the event. | URL |
 | image | Picture about the event. | URL |
-| start date | Date and time when the event starts. | [Date and Time](#Date,-Time-and-Periods) |
-| end date | Date and time when the event ends. | [Date and Time](#Date,-Time-and-Periods) |
+| start date | Date and time when the event starts. | [Date and Time](#date,-pime-and-periods) |
+| end date | Date and time when the event ends. | [Date and Time](#date,-pime-and-periods) |
 | status | Status of the event (planned, cancelled, etc.) | [Event Status](#Event-Status) |
-| organizer | Person or organization that organizes the event. | [Person](#Persons) or [Organization](#Organizations) |
-| contributor | Person or organization that collaborates in the organization of the event. | [Person](#Persons) or [Organization](#Organizations) |
-| sponsor | Person or organization that sponsors the event. | [Person](#Persons) or [Organization](#Organizations) |
-| attendee(s) | Person(s) who attends the event. | [Person](#Persons) |
-| competition(s) | Competition events that are part of the main event. | **[Athletics Competition](#Athletics-Competitions)** |
+| organizer | Person or organization that organizes the event. | [Person](#persons) or [Organization](#organizations) |
+| contributor | Person or organization that collaborates in the organization of the event. | [Person](#persons) or [Organization](#organizations) |
+| sponsor | Person or organization that sponsors the event. | [Person](#persons) or [Organization](#organizations) |
+| attendee(s) | Person(s) who attends the event. | [Person](#persons) |
+| competition(s) | Competition events that are part of the main event. | **[Athletics Competition](#athletics-competitions)** |
 
 
 ### Athletics Competitions
@@ -137,11 +137,11 @@ Competitions may be described by the following attributes:
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the competition. | Text |
 | name | Descriptive name of the competition. | Text |
-| gender | Gender of athletes involved in the competition. In case of mixed competitions, more than a gender may be indicated. | [Gender](#Gender) |
-| date | Date and time where the competition is held. | [Date and Time](#Date,-Time-and-Periods) |
+| gender | Gender of athletes involved in the competition. In case of mixed competitions, more than a gender may be indicated. | [Gender](#gender) |
+| date | Date and time where the competition is held. | [Date and Time](#date,-pime-and-periods) |
 | age range | Description of the athletes' range of age to be eligible for the competition.  | Text |
-| round(s) | Round(s) performed as part of the competition (trials, heats, final, etc.).  | **[Competition Round](#Competition-Rounds)** |
-| combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Competition Round](#Athletics-Competitions)** |
+| round(s) | Round(s) performed as part of the competition (trials, heats, final, etc.).  | **[Competition Round](#competition-rounds)** |
+| combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Competition Round](#athletics-competitions)** |
 
 
 ### Competition Rounds
@@ -155,11 +155,11 @@ Competition rounds aims at qualifying athletes to next round until the final. Th
 | identifier | Unique character string to identify the round and/or heat. | Text |
 | name | Descriptive name of the round and/or heat. | Text |
 | description | Longer descriptive text of the round and/or heat. | Text |
-| date | Date and time where the round and/or heat is held. | [Date and Time](#Date,-Time-and-Periods) |
+| date | Date and time where the round and/or heat is held. | [Date and Time](#date,-pime-and-periods) |
 | age range | Description of the athletes' range of age to be eligible for the competition.  | Text |
-| time-keeping | Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#Timekeeping) |
-| start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#Start-List)** |
-| results | List with the results after the celebration of the competition.  | **[Results](#Results)** |
+| time-keeping | Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
+| start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
+| results | List with the results after the celebration of the competition.  | **[Results](#results)** |
 
 ### Start Lists
 
@@ -171,13 +171,13 @@ Each entry of the start list may include the following properties:
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the entry in the list. | Text |
 | rank | Position of the competitor in the rank of the round and/or heat. | Number |
-| feature(s) | Set of features and notes included by officials in the starting list (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#Start-Lists-and-Results)** |
+| feature(s) | Set of features and notes included by officials in the starting list (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
 | under protest | Flag indicating the competitor will take part in the round and/or heat competing 'under protest'. | Boolean |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | order | Competitor's order in the start list. | Number |
 | lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
 | score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
-| personal best | Competitor's best performance in the same discipline at the start of the round and/or heat.  | **[Performance](#Performances)** |
+| personal best | Competitor's best performance in the same discipline at the start of the round and/or heat.  | **[Performance](#performances)** |
 
 ### Results
 
@@ -189,12 +189,12 @@ Each entry of the results may include the following properties:
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the entry in the list. | Text |
 | rank | Position of the competitor in the rank after the round and/or heat. | Number |
-| feature(s) | Set of features and notes included by officials after the round and/or heat (e.g., Red Card in Race Walking).  | **[Start Lists and Results](#Start-Lists-and-Results)** |
+| feature(s) | Set of features and notes included by officials after the round and/or heat (e.g., Red Card in Race Walking).  | **[Start Lists and Results](#start-lists-and-results)** |
 | under protest | Flag indicating the competitor took part in the round and/or heat competing 'under protest'. | Boolean |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | score points | Score points earned by the competitor in a specific round and/or heat in case of Combined Events such as Decathlon and Heptathlon. | Number |
 | record(s) | Flags indicating records achieved after the competition round (e.g., World Record, Personal Best, etc.). | Number |
-| performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#Performances)** |
+| performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
 
 ### Performances
 
@@ -203,9 +203,9 @@ Performance represent the resulting competitor's accomplishment measured and rec
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the performance univocally. | Text |
-| value | Official measure of the performance (i.e., distance, height, time) | [Quantitative Value](#Quantitative-Values) |
-| reaction time | Reaction time of the athlete during a sprint event. | [Quantitative Value](#Quantitative-Values) |
-| wind | Wind speed at the moment of registering the performance. | [Quantitative Value](#Quantitative-Values) |
+| value | Official measure of the performance (i.e., distance, height, time) | [Quantitative Value](#quantitative-values) |
+| reaction time | Reaction time of the athlete during a sprint event. | [Quantitative Value](#quantitative-values) |
+| wind | Wind speed at the moment of registering the performance. | [Quantitative Value](#quantitative-values) |
 
 
 ### Venues
@@ -219,14 +219,14 @@ Venues can be described by the following attributes:
 | identifier | Unique character string to identify the venue. | Text |
 | name | Descriptive name of the venue. | Text |
 | description | Descriptive text about the place. | Text |
-| address | Postal address related to the venue. | [Postal Address](#Postal-Addresses) or Text |
+| address | Postal address related to the venue. | [Postal Address](#postal-addresses) or Text |
 | url | Webpage URL about the venue. | URL |
 | image | Picture about the venue. | URL |
 | geo | Coordinates of the venue. | URL |
 | map | URL to a map pointing to the venue. | URL |
 | telephone | Telephone number of the venue. | URL |
 | fax number | Fax number of the venue. | URL |
-| type | Type of the venue. | **[Venue Type](#Venue-Type)** |
+| type | Type of the venue. | **[Venue Type](#venue-type)** |
 
 
 ### Postal Addresses
@@ -241,7 +241,7 @@ A postal address may be represented by some common properties:
 | locality | The locality (e.g., Helsinki). | Text |
 | post office box number | The post office box number for PO box addresses. | Text |
 | postal code | The postal code (e.g., 00250)| Text |
-| country | The country (e.g., Finland). | [Country](#Countries) |
+| country | The country (e.g., Finland). | [Country](#countries) |
 
 
 ### Persons
@@ -257,7 +257,7 @@ There are some properties that will be used commonly to represent people:
 | family name | Person's family name; surname. | Text |
 | given name | Person's given name; first name. | Text |
 | alternate name | An alias to name the person. | Text |
-| address | Main residence address. | [Postal Address](#Postal-Addresses) or Text |
+| address | Main residence address. | [Postal Address](#postal-addresses) or Text |
 | image | Picture of the person. | URL |
 | email | Email address. | Text |
 | url | Webpage URL about him/her. | URL |
@@ -274,7 +274,7 @@ Organizations can be represented by the following properties:
 | identifier | Unique character string to identify the organization. | Text |
 | name | Organization name. | Text |
 | alternate name | An alias to name the organization. | Text |
-| address | Postal address where the organization is located. | [Postal Address](#Postal-Addresses) or Text |
+| address | Postal address where the organization is located. | [Postal Address](#postal-addresses) or Text |
 | logo | Logo of the organization. | URL |
 | email | Main email address. | Text |
 | url | Webpage URL about the organization. | URL |
@@ -287,7 +287,7 @@ Federation is a special type of organization in charge of governing and rule the
 
 <mark>Federations have other federations as sub-organizations and/or parent organizations?</mark>
 
-Potential relation with: [Territories and countries](#Territories-and-countries).
+Potential relation with: [Territories and countries](#territories-and-countries).
 
 
 *******
@@ -307,13 +307,13 @@ Examples:
 * Date (`[YYYY][MM][DD]` or `[YYYY]-[MM]-[DD]`): 2017-04-07
 * Date and Time (`<date>T<time>`): `2017-04-07T04:45:38+00:00` 
 
-Please, note that this representation for time is not sufficient for time performances. Sprint competitions are time scaled to 0.01 seconds, so performances need to be measured with better resolution. See [Quantitative Values](#Quantitative-Values).
+Please, note that this representation for time is not sufficient for time performances. Sprint competitions are time scaled to 0.01 seconds, so performances need to be measured with better resolution. See [Quantitative Values](#quantitative-values).
 
 ### Height and Distance
 
 Some Athletics disciplines (i.e., throwing events and jumps) measure performances as distance. IAAF specifies measures in whole centimetres. 
 
-Also, distance describes the event in the case of races (e.g., 200m, 3000m steeplechase, length of cross-country course, etc.). In this case, distance is usually measured in meters (kilometers) or miles. See [Quantitative Values](#Quantitative-Values). 
+Also, distance describes the event in the case of races (e.g., 200m, 3000m steeplechase, length of cross-country course, etc.). In this case, distance is usually measured in meters (kilometers) or miles. See [Quantitative Values](#quantitative-values). 
 
 
 ### Quantitative Values
@@ -419,7 +419,7 @@ There are three alternative methods of timekeeping, recognised as official by IA
 
 ### Age and Sex Categories
 
-According to IAFF RULE 141 (Age and Sex Categories), apart from [Gender](#Gender) competition may also be divided into specific age group classifications. Below, all the potential age categories are analyzed:
+According to IAFF RULE 141 (Age and Sex Categories), apart from [Gender](#gender) competition may also be divided into specific age group classifications. Below, all the potential age categories are analyzed:
 
 #### Junior
 
@@ -572,7 +572,7 @@ Types of venues that can be considered:
       - Uphill Course: the profile of the course involves considerable amounts of ascent, and is mainly uphill.
       - Ascent/descent course: the profile of the course involves considerable amounts of ascent and descent, with start and finish at the same elevation level approximately.
 
-These venues may be described in detail. Some proposed metadata related to the type of venue (extending the basic [description of Venue](#Venues)): 
+These venues may be described in detail. Some proposed metadata related to the type of venue (extending the basic [description of Venue](#venues)): 
 
 Stadium: Outdoor|Indoor
 - track
@@ -599,7 +599,7 @@ Consecutive order of athletes or teams (including repetition of ranks) in result
 
 ### Scoring tables
 
-Combined events use IAAF Scoring Tables to quantify performances. See [Scoring Points](#Scoring-Points).
+Combined events use IAAF Scoring Tables to quantify performances. See [Scoring Points](#scoring-points).
 
 
 ### Event Status
