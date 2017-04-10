@@ -68,8 +68,8 @@ Athletes are **[Persons](#Persons)** who participate in Athletics competitions. 
 | email | Email address. | Text |
 | url | Webpage URL about the athlete. | URL |
 | gender | Athlete's gender. | [Gender](#Gender) |
-| height | Athlete's height. | [Quantitive Value](#Quantitive-Values) |
-| weight | Athlete's weight. | [Quantitive Value](#Quantitive-Values) |
+| height | Athlete's height. | [Quantitative Value](#Quantitative-Values) |
+| weight | Athlete's weight. | [Quantitative Value](#Quantitative-Values) |
 | nationality | Athlete's nationality. | [Country](#Countries) |
 | federation | Federation which the athlete is attached to. | [Athletics Federation](#Athletics-Federations) |
 | coach | Athlete's main coach. | [Person](#Persons) |
@@ -181,7 +181,7 @@ Each entry of the start list may include the following properties:
 
 ### Results
 
-Results are an ordered list collecting the performances achieved by competitors after a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
+'Results' is an ordered list collecting the performances achieved by competitors after a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
 
 Each entry of the results may include the following properties:
 
@@ -202,10 +202,10 @@ Performance represent the resulting competitor's accomplishment measured and rec
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify univocally the performance. | Text |
-| value | Official measure of the performance (i.e., distance, time) | [Quantitive Value](#Quantitive-Values) |
-| reaction time | Reaction time of the athlete during a sprint event. | [Quantitive Value](#Quantitive-Values) |
-| wind | Wind speed at the moment of registering the performance. | [Quantitive Value](#Quantitive-Values) |
+| identifier | Unique character string to identify the performance univocally. | Text |
+| value | Official measure of the performance (i.e., distance, time) | [Quantitative Value](#Quantitative-Values) |
+| reaction time | Reaction time of the athlete during a sprint event. | [Quantitative Value](#Quantitative-Values) |
+| wind | Wind speed at the moment of registering the performance. | [Quantitative Value](#Quantitative-Values) |
 
 
 ### Venues
@@ -241,7 +241,7 @@ A postal address may be represented by some common properties:
 | locality | The locality (e.g., Helsinki). | Text |
 | post office box number | The post office box number for PO box addresses. | Text |
 | postal code | The postal code (e.g., 00250)| Text |
-| country | The country (e.g., Finland). | Text |
+| country | The country (e.g., Finland). | [Country](#Countries) |
 
 
 ### Persons
@@ -272,20 +272,22 @@ Organizations can be represented by the following properties:
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the organization. | Text |
-| name | Organiation name. | Text |
+| name | Organization name. | Text |
 | alternate name | An alias to name the organization. | Text |
 | address | Postal address where the organization is located. | [Postal Address](#Postal-Addresses) or Text |
 | logo | Logo of the organization. | URL |
 | email | Main email address. | Text |
 | url | Webpage URL about the organization. | URL |
-| telephone | Main telephone number of the organization. | URL |
+| telephone | Main telephone number of the organization. | Text |
 
 
 ### Athletics Federations
 
-Federations are special types of organizations in charge of governing and rule the sport of athletics. Federations may be attached to other higher-level federations.
+Federation is a special type of organization in charge of governing and rule the sport of athletics. Federations may be attached to other higher-level federations.
 
-<mark>TODO: Should federations be defined in detail?</mark>
+<mark>Federations have other federations as sub-organizations and/or parent organizations?</mark>
+
+Potential relation with: [Territories and countries](#Territories-and-countries).
 
 
 *******
@@ -294,6 +296,76 @@ Federations are special types of organizations in charge of governing and rule t
 ## Classification schemas and data types 
 
 Most of the following definitions and values for this set of value schemas are extracted from the official [Technical Competition Rules](https://www.iaaf.org/about-iaaf/documents/rules-regulations) published by IAAF.
+
+
+### Date, Time and Periods
+
+Dates and time will be represented using the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard. 
+
+Examples:
+* Time (`[hh][mm][ss]` or `[hh]:[mm]:[ss]`): `04:45:38` (it can include the timezone `<time>±[hh]:[mm]`)
+* Date (`[YYYY][MM][DD]` or `[YYYY]-[MM]-[DD]`): 2017-04-07
+* Date and Time (`<date>T<time>`): `2017-04-07T04:45:38+00:00` 
+
+Please, note that this representation for time is not sufficient for time performances. Sprint competitions are time scaled to 0.01 seconds, so performances need to be measured with better resolution. See [Quantitative Values](#Quantitative-Values).
+
+### Distances
+
+Some Athletics disciplines (i.e., throwing events and jumps) measure performances as distances. IAAF specifies measures in whole centimetres. 
+
+Also, distances are needed to describe the event in the case of races (e.g., 200m, 3000m steeplechase, length of cross-country course, etc.). In this case, distances are usually measured in meters (kilometers) or miles. See [Quantitative Values](#Quantitative-Values). 
+
+
+### Quantitative Values
+
+This entity could serve to represent the official measurement for distance, height, weight, speed (of wind), and others. Basically, the representation will be a pair value-unit. Units will use the normative list of [UN/CEFACT](https://www.unece.org/cefact/) [Common Codes for Units of Measurement](http://www.unece.org/fileadmin/DAM/cefact/recommendations/rec20/rec20_Rev9e_2014.xls).
+
+So, when possible, measurements must be described using the following properties:
+
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| value | The value of the measurement | Number |
+| unit code | UN/CEFACT Common Code (3 characters) | Text |
+
+The most used codes are: 
+
+#### Time Unit Codes
+
+| UN/CEFACT Common Code | Unit of Measurement |
+| --------------------- | ------------------- |
+| `C26` | millisecond |
+| `SEC` | second |
+| `MIN` | minute |
+| `HUR` | hour |
+
+#### Distance Unit Codes
+
+| UN/CEFACT Common Code | Unit of Measurement |
+| --------------------- | ------------------- |
+| `MMT` | millimetre |
+| `CMT` | centimetre |
+| `MTR` | metre |
+| `KTM` | kilometre |
+| `INH` |	inch |
+| `M7` |	micro-inch |
+| `FOT` |	foot |
+| `YRD` |	yard |
+| `SMI` |	mile (statute mile) |
+
+
+#### Speed Unit Codes
+
+| UN/CEFACT Common Code | Unit of Measurement |
+| --------------------- | ------------------- |
+| `MTS` |	metre per second |
+| `KNT` |	knot |
+| `KMH` |	kilometre per hour |
+
+#### Scoring Points 
+
+Combined competitions use IAAF Scoring Tables to assign points according to performances. There is no specific code for `points`.
+
 
 ### Gender
 
@@ -344,11 +416,6 @@ There are three alternative methods of timekeeping, recognised as official by IA
 - (`FAT`) Fully Automatic timing obtained from a Photo Finish System;
 - timing provided by a transponder system.
 
-### Quantitive Values
-
-Measures for distance, height, weight, speed (of wind)…
-
-<mark>TODO</mark>
 
 ### Age and Sex Categories
 
@@ -373,8 +440,6 @@ Athletes aged 20-34 belongs to **`Senior`** age group.
 
 Master Men and women: Any athlete who has reached his/her 35th birthday Masters go in 5 year bands (global standard set by WMA): V35, V40, V45 etc. It is commonly conflated with gender e.g. M45, W50.
 
-| Age | Male age‐group ID | Female age‐group ID |
-| --- | ----------------- | ------------------- |
 
 #### Youth
 
@@ -382,7 +447,9 @@ Youth sports includes school sport at primary and secondary school level. Below 
 
 IAAF recognises the U18 category, including Boys and Girls aged 16 or 17, so this is the only category to be recognised officially into this vocabulary. 
 
-#### Summary
+<mark>Should we include below U18 ages in the classification? or just open to specify whatever category in a flexible way?</mark>
+
+#### Summary of Age Ranges
 
 So, in summary:
 
@@ -412,29 +479,18 @@ So, in summary:
 
 Athletics federations are autonomous bodies in control of Athletics at different levels, depending on the territory they cover. By its geographical area covered,  federations can be local (e.g., [19 Athletics federations for each region in Spain](http://www.rfea.es/web/federacion/mapaespana.asp)), national (e.g., [British Athletics](http://www.britishathletics.org.uk/governance/about-uka/)) and supranational (e.g. [Oceania Athletics](https://athletics-oceania.com)). Federations are usually attached to other federations hierarchically. 
 
+See list of [IAAF Member Federations](../federations).
 
-#### Country
+
+#### Countries
 
 Countries may be represented by their [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) code (e.g., `ZW` for Zimbabwe, `ZA`for South Africa, `TG` for Togo).
 
+
 #### Other territories
 
-See list of [territorial federations] recognized by IAAF.
+<mark>Shall we use normalized territories from a common database such as Geonames?</mark>
 
-### Date, Time and Periods
-
-Dates and time will be represented using the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard. 
-
-Examples:
-* Time (`[hh][mm][ss]` or `[hh]:[mm]:[ss]`): `04:45:38` (it can include the timezone `<time>±[hh]:[mm]`)
-* Date (`[YYYY][MM][DD]` or `[YYYY]-[MM]-[DD]`): 2017-04-07
-* Date and Time (`<date>T<time>`): `2017-04-07T04:45:38+00:00` 
-
-### Distances
-
-Some Athletics disciplines (i.e., throwing events and jumps) measure performances as distances. IAAF specifies measures in whole centimetres. 
-
-Also, distances are needed to describe the event in the case of races (e.g., 200m, 3000m steeplechase, length of cross-country course, etc.). In this case, distances are usually measured in metres or miles. Distances may be described as `<value>+<unit>`.
 
 ### Venue Type
 
@@ -444,33 +500,32 @@ Types of venues that can be considered:
 
 - Stadium (or arena)
 - Outdoor Course:
- - Road course: course on road suitable for running and race-walking competitions.
-  - Circular Road Course: Start and finish line at the same point 
-  - Linear Road Course: Start and finish line at different places.
- - Off-road course: off-road course on an open area.  
-  - Cross Country Course: course on an open, woodland area, covered as far as possible by grass, with natural obstacles 
-  - Mountain Course: open country course that is mainly off-road and can have significant elevation gain on the route, within a natural environment such as mountains, desert, forests or plains). Macadamised or concrete surface is acceptable but minimum.
-   - Uphill Course: the profile of the course involves considerable amounts of ascent, and is mainly uphill.
-   - Ascent/descent course: the profile of the course involves considerable amounts of ascent and descent, with start and finish at the same elevation level approximately.
+  - Road course: course on road suitable for running and race-walking competitions.
+    - Circular Road Course: Start and finish line at the same point 
+    - Linear Road Course: Start and finish line at different places.
+  - Off-road course: off-road course on an open area.  
+    - Cross Country Course: course on an open, woodland area, covered as far as possible by grass, with natural obstacles 
+    - Mountain Course: open country course that is mainly off-road and can have significant elevation gain on the route, within a natural environment such as mountains, desert, forests or plains). Macadamised or concrete surface is acceptable but minimum.
+      - Uphill Course: the profile of the course involves considerable amounts of ascent, and is mainly uphill.
+      - Ascent/descent course: the profile of the course involves considerable amounts of ascent and descent, with start and finish at the same elevation level approximately.
 
 These venues may be described in detail. Some proposed metadata related to the type of venue (extending the basic [description of Venue](#Venues)): 
 
 Stadium: Outdoor|Indoor
- - track
+- track
   - type {Straight|Oval}
   - lanes (integer)
   - length (metres)
-
- - Payment Accepted (cash, credit card, etc.)
- - Currencies Accepted (cash, credit card, etc.)
+- Payment Accepted (cash, credit card, etc.)
+- Currencies Accepted (cash, credit card, etc.)
  
 Outdoor course:
- - Start point (geo)
- - Finish point (geo)
- - aid station(s): stations for providing athletes any kind of aid such us clothing, communications, sponges, food or drinks.
- - elevation gain (metres)
- - elevation loss (metres)
- - course geometry (polygon, polyline)
+- Start point (geo)
+- Finish point (geo)
+- aid station(s): stations for providing athletes any kind of aid such us clothing, communications, sponges, food or drinks.
+- elevation gain (metres)
+- elevation loss (metres)
+- course geometry (polygon, polyline)
 
 ### Disciplines
 
@@ -482,229 +537,61 @@ Athletics Competitions:
 
 - **Stadia Competitions**: Track and Field events within stadium
 
- - **Outdoor Track and Field**: events held within outdoor stadia
-  - **Outdoor Track**:
-   - **Sprints**: distance below 400m.
-   - **Hurdles**: distance below 400m with hurdles.
-   - **Relays**: relay events in distance below 400m.
-   - **Middle distance**: distances over 400m up to 2000m.
-   - **Long distance**: higher distances races.
-   - **Steeplechase**: races with steeplechase obstacles.
-   - **Track Race Walking**: race walking races with standard distances up to 5000m.
+  - **Outdoor Track and Field**: events held within outdoor stadia
+    - **Outdoor Track**:
+      - **Outdoor Sprints**: distance below 400m.
+      - **Outdoor Hurdles**: distance below 400m with hurdles.
+      - **Outdoor Relays**: relay events.
+      - **Outdoor Middle distance**: distances over 400m up to 2000m.
+      - **Outdoor Long distance**: higher distances races.
+      - **Outdoor Steeplechase**: races with steeplechase obstacles.
+    - **Outdoor Track Race Walking**: race walking races with standard distances up to 5000m.
   - **Outdoor Field**: 
-   - **Throws**: throwing events
-   - **Jumps**: vertical and horizontal jumps.
-    - **Vertical jumps**.
-    - **Horizontal jumps**.
+    - **Outdoor Throws**: throwing events
+    - **Outdoor Jumps**: vertical and horizontal jumps.
+    - **Outdoor Vertical jumps**.
+    - **Outdoor Horizontal jumps**.
   - **Outdoor Combined**: combination of disciplines such as decathlon and heptathlon.
-   - **Decathlon**
-   - **Heptathlon**
+    - **Decathlon**
+    - **Outdoor Heptathlon**
    
- - **Indoor Track and Field**: events held within indoor stadia
-  - **Indoor Track**:
-   - **Indoor Sprints**: distance below 400m.
-   - **Indoor Hurdles**: distance below 400m with hurdles.
-   - **Indoor Relays**: relay events in distance below 400m.
-   - **Indoor Middle distance**: distances over 400m up to 2000m.
-   - **Indoor Long distance**: higher distances races.
-   - **Indoor Track Race Walking**: race walking races indoor.   
-  - **Indoor Field**: 
-   - **Indoor Throws**: throwing events
-   - **Indoor Jumps**: vertical and horizontal jumps.
-    - **Vertical jumps**.
-    - **Horizontal jumps**.   
-  - **Indoor Combined**: combination of disciplines such as heptathlon or pentathlon.
+  - **Indoor Track and Field**: events held within indoor stadia
+    - **Indoor Track**:
+      - **Indoor Sprints**: distance below 400m.
+      - **Indoor Hurdles**: distance below 400m with hurdles.
+      - **Indoor Relays**: relay events.
+      - **Indoor Middle distance**: distances over 400m up to 2000m.
+      - **Indoor Long distance**: higher distances races.
+      - **Indoor Track Race Walking**: race walking races indoor.   
+    - **Indoor Field**: 
+      - **Indoor Throws**: throwing events
+      - **Indoor Jumps**: vertical and horizontal jumps.
+      - **Indoor Vertical jumps**.
+      - **Horizontal jumps**.   
+    - **Indoor Combined**: combination of disciplines such as heptathlon or pentathlon.
    - **Indoor Pentathlon**
    - **Indoor Heptathlon**
   
 - **Off-Stadia Competitions**:
- - **Road Competitions**: races outside stadia, on road.
-  - **Road Running**: running events on road
-  - **Road Race-Walking**: race walking outside stadium (standard distances from 5000m to 50Km).
- - **Off-road**: non-standard distances, surfaces and altitude, offroad.
-  - **Cross Country**: races on a loop course placed on open or woodland area. 
-  - **Mountain Races**: races on off-road terrain with significant elevation gain on the route.
-   - **Classic Mountain Races**: races either mainly uphill or with positive/negative altitude balanced.
-   - **Long Distance Mountain Races**: off-road races that include distances of approximately 20km to 42.195km, with significant elevation gain.
-   - **Relay Mountain Races**: relay mountain race competitions.
-   - **Time trial Mountain Races**: mountain races with individual start times at various intervals. The results are ordered by the individual finish times.
-  - **Trail Races**: trail races on a variety of terrain (including dirt roads, forest paths and single track footpaths) within a natural environment in open country (such as mountains, desert, forests or plains) that is mainly off-road. Organisers may impose or recommend obligatory security equipment applicable.
+  - **Road Competitions**: races outside stadia, on road.
+    - **Road Running**: running events on road
+    - **Road Race-Walking**: race walking outside stadium (standard distances from 5000m to 50Km).
+  - **Off-road**: non-standard distances, surfaces and altitude, off-road.
+    - **Cross Country**: races on a loop course placed on open or woodland area. 
+    - **Mountain Races**: races on off-road terrain with significant elevation gain on the route.
+      - **Classic Mountain Races**: races either mainly uphill or with positive/negative altitude balanced.
+      - **Long Distance Mountain Races**: off-road races that include distances of approximately 20km to 42.195km, with significant elevation gain.
+      - **Relay Mountain Races**: relay mountain race competitions.
+      - **Time trial Mountain Races**: mountain races with individual start times at various intervals. The results are ordered by the individual finish times.
+    - **Trail Races**: trail races on a variety of terrain (including dirt roads, forest paths and single track footpaths) within a natural environment in open country (such as mountains, desert, forests or plains) that is mainly off-road. Organisers may impose or recommend obligatory security equipment applicable.
 
 
 <mark>Should we implement a classification of all disciplines?</mark> 
 
-#### Outdoor Competitions
-
-Hurdle Races
-The standard distances:
-Men, U20 Men and U18 Boys: 110m, 400m
-Women, U20 women and U18 Girls: 100m, 400m
-Steeplechase Races: The standard distances are: 2000m and 3000m.
-Relay Races: The standard distances are: 4 × 100m, 4 × 200m, 100m-200m-300m-400m Medley Relay (Medley Relay), 4 × 400m, 4 × 800m, 1200m-400m-800m-1600m Distance Medley Relay (Distance Medley Relay), 4 × 1500m.
-
-Horizontal jump: long jump, triple jump
-Vertical jumps: pole vault, High Jump
-Throwing events: Shot Put, Discus Throw, Hammer Throw, Javelin Throw
-
-Race Walking: 5000m, 10km, 10,000m, 20km, 20,000m, 50km, 50,000m.
-
-#### Indoor Competitions
-
-60m, 60m H, 50m H
-200m, 400m, 800m, 4 × 200m, 4 × 400m
-1500m, 3000m
-
-Pole Vault, High Jump, Shot Put, Horizontal Jumps
-
-Race Walking: 3000m, 5000m;
-
-Combined events competitions (indoor)
-U18 Boys, U20 and Senior Men (Pentathlon)
-Pentathlon consists of five events held on one day in the following order:
-60m Hurdles; long Jump; Shot Put; High Jump; 1000m.
-U18 Boys, U20 and Senior Men (Heptathlon):
-Seven events which may be held over two consecutive days in the following order:
-- First day: 60m; long Jump; Shot Put; High Jump.
-- Second day: 60m Hurdles; Pole vault; 1000m.
-U18 Girls, U20 and Senior Women (Pentathlon)
-Five events held on one day in the following order:
-60m Hurdles; High Jump; Shot Put; long Jump; 800m.
-
-
-#### Road Races
-
-Standard distances: 10km, 15km, 20km, Half-Marathon, 25km, 30km, Marathon (42.195km), 100km and Road Relay.
-(There may be drinking/sponging and refreshment stations).
-
-
-### Field Competitions
-
-### Trials
-
-in all Field events, except for the High Jump and Pole vault, where there are more than eight athletes, each athlete shall be allowed three trials and the eight athletes with the best valid performances shall be allowed three additional trials.
-
-Where there are eight athletes or fewer, each athlete shall be allowed six trials. if more than one fail to achieve a valid trial during the first three rounds of trials, such athletes shall compete in subsequent rounds of trials before those with valid trials, in the same relative order according to the original draw.
-
-Except in High Jump and Pole vault, a valid trial shall be indicated by the measurement taken. For the standard abbreviations and symbols to be used in all other
-cases see [Start lists and results](#Start lists and results).
-
-* Values: `valid|failure`
-* Trial: `passed|eliminated`
-
-A ´substitute´ trial is given in case an athlete is hampered in a trial or it cannot be correctly recorded.
-
-Result of trials each athlete will be credited with the best of all his trials.
-
-
-### Vertical jumps
-
-Including: High Jump, and Pole Vault.
-
-Measurements (height) are recorded in whole centimetres.
-
-Results of trials:
-- O = Cleared
-- X = Failed
-- – = Did not jump
-
-### Horizontal jumps
-
-Including: Long Jump, and Triple Jump.
-
-
-### Throwing events
-
-Including: Shot Put, Discus Throw, Hammer Throw, Javelin Throw, [Weight Throw](https://en.wikipedia.org/wiki/Weight_throw)
-
-Measurements (distance) are recorded in whole centimetres.
-
-Trials: `failure|valid`
-
-
-### Combined events competitions
-
-Scores are calculated according to the current iAAF Combined events Scoring tables.
-
-#### U18 Boys, U20 and Senior Men: Pentathlon and Decathlon
-
-Pentathlon consists of five events held on one day in the following order: 
-`long Jump; Javelin throw; 200m; Discus throw; 1500m`
-
-Decathlon consists of ten events which may be held on two consecutive days in the following order:
-- First day: `100m; long Jump; Shot Put; High Jump; 400m.` 
-- Second day: `110m Hurdles; Discus throw; Pole vault; Javelin throw; 1500m.`
-
-#### U20 and Senior Women (Heptathlon and Decathlon)
-
-Heptathlon consists of seven events, which may be held on two consecutive days in the following order: 
-- First day: `100m Hurdles; High Jump; Shot Put; 200m.` 
-- Second day: `long Jump; Javelin throw; 800m.`
-
-Women’s Decathlon consists of ten events which may be held on two consecutive days in the following order:
-- First day: `100m; Discus throw; Pole vault; Javelin throw; 400m.`
-- Second day: `100m Hurdles; long Jump; Shot Put; High Jump; 1500m.`
-
-#### U18 Girls (Heptathlon only)
-U18 Girls’ Heptathlon consists of seven events, which may be held on two consecutive days in the following order:
-- First day: 100m Hurdles; High Jump; Shot Put; 200m.
-- Second day: long Jump; Javelin throw; 800m.
-
-### Race Walking
-
-Race walking is a progression of steps so taken that the walker makes contact with the ground, so that no visible (to the human eye) loss of contact occurs. the advancing leg must be straightened (i.e. not bent at the knee) from the moment of first contact with the ground until the vertical upright position.
-
-The standard distances shall be: 
-- indoor: 3000m, 5000m; 
-- outdoor: 5000m, 10km, 10,000m, 20km, 20,000m, 50km, 50,000m.
-
-There are some features specific for this competition, such as 'Yellow paddle' or 'Red Cards' shown during a competition: {0-3} per athlete -> Disqualification.
-
-### Road Races
-
-Standard distances: 
-10km, 15km, 20km, Half-Marathon, 25km, 30km, Marathon (42.195km), 100km and Road Relay.
-
-### Cross-Country
-Variable distance.
-
-### Mountain Races 
-Variable Distance.
-Average incline: {5-20}%
-Ascent: in metres
-Descent: in metres
-Highest point: <=3000m 
-
-Types (3 types):
-- Classic Mountain Races (two subtypes)
-  - Mainly uphill
-  - Up and down races
-- Long Distance Mountain Races: Distances of approximately 20km to 42.195km, with a maximum elevation of 4000m. 
-- Relay Mountain Races
-- Time Trial Mountain Races: individual start times at various intervals.
-
-There may be Drinking / Sponging and Refreshment Stations at suitable places along the course.
-
-### Trail Races
-Variable distance.
-
-Trail Running does not specify the use of a particular technique or specific equipment in its progression, but the organiser may, however, impose or recommend obligatory security equipment applicable (A survival blanket, whistle, supply of water and a food reserve
-are the minimum elements which each athlete should possess).
-
-- Recommended security equipment `text`
-- Required secururity equipment `text`
-
-If specifically permitted by the Organisers, athletes may use poles such as hiking poles.
-
-- Poles Allowed? `yes|no`
-
-Aid Stations may be located along the course.
-
-There may be Drinking / Sponging and Refreshment Stations at suitable places along the course.
 
 ### Ranks
 
-Consecutive order of athletes or teams (including repetition of ranks) 1,2,3,4,5,…
-  
+Consecutive order of athletes or teams (including repetition of ranks) in results: 1, 2, 3, 4, 5,…
   
 ### Records 
 - Title of record
@@ -714,10 +601,14 @@ Consecutive order of athletes or teams (including repetition of ranks) 1,2,3,4,5
 
 ### Scoring tables
 
-IAAF Scoring Tables for Outdoor Events -> performance points 
+Combined events use IAAF Scoring Tables to quantify performances. See [Scoring Points](#Scoring-Points).
+
 
 ### Event Status
 
-planned, cancelled, etc.
+Athletics events may have a property to represent the states that they may be in:
 
-<mark>TODO</mark>
+- Cancelled
+- Postponed
+- Rescheduled
+- Scheduled
