@@ -203,7 +203,7 @@ Performance represent the resulting competitor's accomplishment measured and rec
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the performance univocally. | Text |
-| value | Official measure of the performance (i.e., distance, time) | [Quantitative Value](#Quantitative-Values) |
+| value | Official measure of the performance (i.e., distance, height, time) | [Quantitative Value](#Quantitative-Values) |
 | reaction time | Reaction time of the athlete during a sprint event. | [Quantitative Value](#Quantitative-Values) |
 | wind | Wind speed at the moment of registering the performance. | [Quantitative Value](#Quantitative-Values) |
 
@@ -309,11 +309,11 @@ Examples:
 
 Please, note that this representation for time is not sufficient for time performances. Sprint competitions are time scaled to 0.01 seconds, so performances need to be measured with better resolution. See [Quantitative Values](#Quantitative-Values).
 
-### Distances
+### Height and Distance
 
-Some Athletics disciplines (i.e., throwing events and jumps) measure performances as distances. IAAF specifies measures in whole centimetres. 
+Some Athletics disciplines (i.e., throwing events and jumps) measure performances as distance. IAAF specifies measures in whole centimetres. 
 
-Also, distances are needed to describe the event in the case of races (e.g., 200m, 3000m steeplechase, length of cross-country course, etc.). In this case, distances are usually measured in meters (kilometers) or miles. See [Quantitative Values](#Quantitative-Values). 
+Also, distance describes the event in the case of races (e.g., 200m, 3000m steeplechase, length of cross-country course, etc.). In this case, distance is usually measured in meters (kilometers) or miles. See [Quantitative Values](#Quantitative-Values). 
 
 
 ### Quantitative Values
@@ -492,41 +492,6 @@ Countries may be represented by their [ISO 3166-1](https://en.wikipedia.org/wiki
 <mark>Shall we use normalized territories from a common database such as Geonames?</mark>
 
 
-### Venue Type
-
-Competition could be held either within stadia (track and field events) or outside (cross country, mountain races, road races, and others).
-
-Types of venues that can be considered:
-
-- Stadium (or arena)
-- Outdoor Course:
-  - Road course: course on road suitable for running and race-walking competitions.
-    - Circular Road Course: Start and finish line at the same point 
-    - Linear Road Course: Start and finish line at different places.
-  - Off-road course: off-road course on an open area.  
-    - Cross Country Course: course on an open, woodland area, covered as far as possible by grass, with natural obstacles 
-    - Mountain Course: open country course that is mainly off-road and can have significant elevation gain on the route, within a natural environment such as mountains, desert, forests or plains). Macadamised or concrete surface is acceptable but minimum.
-      - Uphill Course: the profile of the course involves considerable amounts of ascent, and is mainly uphill.
-      - Ascent/descent course: the profile of the course involves considerable amounts of ascent and descent, with start and finish at the same elevation level approximately.
-
-These venues may be described in detail. Some proposed metadata related to the type of venue (extending the basic [description of Venue](#Venues)): 
-
-Stadium: Outdoor|Indoor
-- track
-  - type {Straight|Oval}
-  - lanes (integer)
-  - length (metres)
-- Payment Accepted (cash, credit card, etc.)
-- Currencies Accepted (cash, credit card, etc.)
- 
-Outdoor course:
-- Start point (geo)
-- Finish point (geo)
-- aid station(s): stations for providing athletes any kind of aid such us clothing, communications, sponges, food or drinks.
-- elevation gain (metres)
-- elevation loss (metres)
-- course geometry (polygon, polyline)
-
 ### Disciplines
 
 We can identify several categories for Athletics events, depending on gender, age, type of venue, distance and type of event (e.g., 100m Hurdles Women and 110m Hurdles Men). Although events rules may vary for the same type of discipline (i.e., differences of shot weight depending on gender and/or age).
@@ -588,15 +553,48 @@ Athletics Competitions:
 
 <mark>Should we implement a classification of all disciplines?</mark> 
 
+### Venue Type
+
+<mark>Not sure about modeling the type of venue. Just as a first approach to check fesability:</mark>
+
+Competition could be held either within stadia (track and field events) or outside (cross country, mountain races, road races, and others).
+
+Types of venues that can be considered:
+
+- Stadium (or arena)
+- Outdoor Course:
+  - Road course: course on road suitable for running and race-walking competitions.
+    - Circular Road Course: Start and finish line at the same point 
+    - Linear Road Course: Start and finish line at different places.
+  - Off-road course: off-road course on an open area.  
+    - Cross Country Course: course on an open, woodland area, covered as far as possible by grass, with natural obstacles 
+    - Mountain Course: open country course that is mainly off-road and can have significant elevation gain on the route, within a natural environment such as mountains, desert, forests or plains). Macadamised or concrete surface is acceptable but minimum.
+      - Uphill Course: the profile of the course involves considerable amounts of ascent, and is mainly uphill.
+      - Ascent/descent course: the profile of the course involves considerable amounts of ascent and descent, with start and finish at the same elevation level approximately.
+
+These venues may be described in detail. Some proposed metadata related to the type of venue (extending the basic [description of Venue](#Venues)): 
+
+Stadium: Outdoor|Indoor
+- track
+  - type {Straight|Oval}
+  - lanes (integer)
+  - length (metres)
+- Payment Accepted (cash, credit card, etc.)
+- Currencies Accepted (cash, credit card, etc.)
+ 
+Outdoor course:
+- Start point (geo)
+- Finish point (geo)
+- aid station(s): stations for providing athletes any kind of aid such us clothing, communications, sponges, food or drinks.
+- elevation gain (metres)
+- elevation loss (metres)
+- course geometry (polygon, polyline)
+
+
 
 ### Ranks
 
 Consecutive order of athletes or teams (including repetition of ranks) in results: 1, 2, 3, 4, 5,…
-  
-### Records 
-- Title of record
-- Event
-- Type {World record | Olympic record | National record | Competition record | others}
 
 
 ### Scoring tables
@@ -608,7 +606,23 @@ Combined events use IAAF Scoring Tables to quantify performances. See [Scoring P
 
 Athletics events may have a property to represent the states that they may be in:
 
-- Cancelled
-- Postponed
-- Rescheduled
-- Scheduled
+- `Cancelled`
+- `Postponed`
+- `Rescheduled`
+- `Scheduled`
+
+### Records 
+
+(Performances)[#Performances], if validated in competition (Results)[#Results] can set records of different type:
+
+- `World Record`
+- `Olympic Record`
+- `National Record`
+- `Competition Record` 
+- `Supranational Record` (European, )
+- `Local Record` 
+- `Age-range Record`
+- `Club Record`
+- `Personal Best`
+- ???
+
