@@ -64,7 +64,7 @@ Athletes are persons who participate in Athletics competitions. Athletes may be 
 | given name | Athlete's given name; first name. | Text |
 | alternate name | An alias to name the athlete. | Text |
 | family name | Athlete's family name. | Text |
-| address | Main residence address of the athlete. | [Location](#Locations) or Text |
+| address | Main residence address of the athlete. | [Postal Address](#Postal-Addresses) or Text |
 | image | Picture of the athlete. | URL |
 | email | Email address. | Text |
 | url | Webpage URL about the athlete. | URL |
@@ -89,7 +89,7 @@ Teams may be described using the following attributes:
 | identifier | Unique character string to identify the team. | Text |
 | name | Descriptive name of the team. | Text |
 | alternate name | An alias to name the team. | Text |
-| address | Main postal address where the team is registered or located. | [Location](#Locations) or Text |
+| address | Main postal address where the team is registered or located. | [Postal Address](#Postal-Addresses) or Text |
 | image | Picture of the team. | URL |
 | logo | Logo or flag of the team. | URL |
 | email | Main email address of the team. | Text |
@@ -114,7 +114,7 @@ These events may be described by the following attributes:
 | identifier | Unique character string to identify the event. | Text |
 | name | Descriptive name of the event. | Text |
 | alternate name | An alias to name the event. | Text |
-| location | Location where the event is held. | [Location](#Locations) or Text |
+| location | Venue where the event is held. | [Venue](#Venues) or Text |
 | url | Webpage URL about the event. | URL |
 | image | Picture about the event. | URL |
 | start date | Date and time when the event starts. | [Date and Time](#Date,-Time-and-Periods) |
@@ -212,7 +212,7 @@ Performance represent the resulting competitor's accomplishment measured and rec
 
 ### Venues
 
-Location where events and competitions are held. Competitions may take part either in stadia (i.e., track and field events) or outside stadia (e.g., cross-country, mountain races, road races, etc.).
+**Places** where events and competitions are held. Competitions may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). 
 
 Venues can be described by the following attributes:
 
@@ -221,7 +221,7 @@ Venues can be described by the following attributes:
 | identifier | Unique character string to identify the venue. | Text |
 | name | Descriptive name of the venue. | Text |
 | description | Descriptive text about the place. | Text |
-| address | Postal address related to the venue. | [Location](#Locations) or Text |
+| address | Postal address related to the venue. | [Postal Address](#Postal-Addresses) or Text |
 | url | Webpage URL about the venue. | URL |
 | image | Picture about the venue. | URL |
 | geo | Coordinates of the venue. | URL |
@@ -231,9 +231,20 @@ Venues can be described by the following attributes:
 | type | Type of the venue. | **[Venue Type](#Venue-Type)** |
 
 
-### Locations
+### Postal Addresses
 
-<mark>TODO</mark>
+A postal address may be represented by some common properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the postal address. | Text |
+| name | Descriptive name of the place (e.g., Helsinki Olympic Stadium). | Text |
+| street address | The street address (e.g., Paavo Nurmen tie 1).  | Text |
+| locality | The locality (e.g., Helsinki). | Text |
+| post office box number | The post office box number for PO box addresses. | Text |
+| postal code | The postal code (e.g., 00250)| Text |
+| country | The country (e.g., Finland). | Text |
+
 
 ### Persons
 
