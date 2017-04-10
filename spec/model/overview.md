@@ -352,22 +352,22 @@ Measures for distance, height, weight, speed (of wind)…
 
 ### Age and Sex Categories
 
-According to IAFF RULE 141 (Age and Sex Categories), competition may be divided into age group classifications as follows:
+According to IAFF RULE 141 (Age and Sex Categories), apart from [Gender](#Gender) competition may also be divided into specific age group classifications. Below, all the potential age categories are analyzed:
 
 #### Junior
 
-Junior (U20) is a category under the age of 20. Participators in the competitions in this class may be athletes who have not completed their twentieth birthday on the 31st December of the year the competition occurs.
+Junior (`U20`) is a category under the age of 20. Participators in the competitions in this class may be athletes who have not completed their twentieth birthday on the 31st December of the year the competition occurs.
 
-* Under-18 (U18) Boys and Girls (16 or 17 years)
-* Under-20 (U20) Men and women (19 or 19 years)
+* Under-18 (**`U18`**) Boys and Girls (16 or 17 years)
+* Under-20 (**`U20`**) Men and women (19 or 19 years)
 
 #### U23
 
-EA, NACAC and CONSUDALE recognises the U23 age category for those athletes aged between 20-22. Athletes under this age range may take part in the competitions. Historically, NACAC had a U25 category for those athletes under 25.
+EA, NACAC and CONSUDALE recognises the **`U23`** age category for those athletes aged between 20-22. Athletes under this age range may take part in the competitions. Historically, NACAC used to had a **`U25`** category for those athletes under 25.
 
 #### Senior
 
-Athletes aged 20-34 belongs to Senior age group.
+Athletes aged 20-34 belongs to **`Senior`** age group.
 
 #### Master
 
@@ -375,24 +375,10 @@ Master Men and women: Any athlete who has reached his/her 35th birthday Masters 
 
 | Age | Male age‐group ID | Female age‐group ID |
 | --- | ----------------- | ------------------- |
-| 35 ‐ 39 | M35 | W35 |
-| 40 ‐ 44 | M40 | W40 |
-| 45 ‐ 49 | M45 | W45 |
-| 50 ‐ 54 | M50 | W50 |
-| 55 ‐ 59 | M55 | W55 |
-| 60 ‐ 64 | M60 | W60 |
-| 65 ‐ 69 | M65 | W65 |
-| 70 ‐ 74 | M70 | W70 |
-| 75 ‐ 79 | M75 | W75 |
-| 80 ‐ 84 | M80 | W80 |
-| 85 ‐ 89 | M85 | W85 |
-| 90 ‐ 94 | M90 | W90 |
-| 95 ‐ 99 | M95 | W95 |
-| 100+ | M100 | W100 |
 
 #### Youth
 
-Youth sports includes school sport at primary and secondary school level. Below 18, most of sports and territories considers age categories in ranges of 2 years, represented as: U4, U6, U8, U10, U12, U14, U16, U18. Age classification assignments and competition rules (disciplines) depend on each sport/federation/territory, so there are no homogeneous criteria to classify boys and girls into these categories.
+Youth sports includes school sport at primary and secondary school level. Below 18, most of sports and territories considers age categories in ranges of 2 years, represented as: `U4`, `U6`, `U8`, `U10`, `U12`, `U14`, `U16`, `U18`. Age classification assignments and competition rules (disciplines) depend on each sport/federation/territory, so there are no homogeneous criteria to classify boys and girls into these categories.
 
 IAAF recognises the U18 category, including Boys and Girls aged 16 or 17, so this is the only category to be recognised officially into this vocabulary. 
 
@@ -402,29 +388,30 @@ So, in summary:
 
 | Age | Male age‐group ID | Female age‐group ID |
 | --- | ----------------- | ------------------- |
-| 16 - 17 | U18 (Male) | U18 (Female) |
-| 18 - 19 | U20 (Male) | U20 (Female) |
-| 20 - 22 | U23 (Male) | U23 (Female) |
-| 23 - 34 | Senior (Male) | Senior (Female) |
-| 35 ‐ 39 | M35 | W35 |
-| 40 ‐ 44 | M40 | W40 |
-| 45 ‐ 49 | M45 | W45 |
-| 50 ‐ 54 | M50 | W50 |
-| 55 ‐ 59 | M55 | W55 |
-| 60 ‐ 64 | M60 | W60 |
-| 65 ‐ 69 | M65 | W65 |
-| 70 ‐ 74 | M70 | W70 |
-| 75 ‐ 79 | M75 | W75 |
-| 80 ‐ 84 | M80 | W80 |
-| 85 ‐ 89 | M85 | W85 |
-| 90 ‐ 94 | M90 | W90 |
-| 95 ‐ 99 | M95 | W95 |
-| 100+ | M100 | W100 |
+| 16 - 17 | `U18 (Male)` | `U18 (Female)` |
+| 18 - 19 | `U20 (Male)` | `U20 (Female)` |
+| 20 - 22 | `U23 (Male)` | `U23 (Female)` |
+| 23 - 34 | `Senior (Male)` | `Senior (Female)` |
+| 35 ‐ 39 | `M35` | `W35` |
+| 40 ‐ 44 | `M40` | `W40` |
+| 45 ‐ 49 | `M45` | `W45` |
+| 50 ‐ 54 | `M50` | `W50` |
+| 55 ‐ 59 | `M55` | `W55` |
+| 60 ‐ 64 | `M60` | `W60` |
+| 65 ‐ 69 | `M65` | `W65` |
+| 70 ‐ 74 | `M70` | `W70` |
+| 75 ‐ 79 | `M75` | `W75` |
+| 80 ‐ 84 | `M80` | `W80` |
+| 85 ‐ 89 | `M85` | `W85` |
+| 90 ‐ 94 | `M90` | `W90` |
+| 95 ‐ 99 | `M95` | `W95` |
+| 100+ | `M100` | `W100` |
 
 
 ### Territories and countries
 
 Athletics federations are autonomous bodies in control of Athletics at different levels, depending on the territory they cover. By its geographical area covered,  federations can be local (e.g., [19 Athletics federations for each region in Spain](http://www.rfea.es/web/federacion/mapaespana.asp)), national (e.g., [British Athletics](http://www.britishathletics.org.uk/governance/about-uka/)) and supranational (e.g. [Oceania Athletics](https://athletics-oceania.com)). Federations are usually attached to other federations hierarchically. 
+
 
 #### Country
 
