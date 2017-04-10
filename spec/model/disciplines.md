@@ -89,7 +89,7 @@ Measurements (distance) are recorded in whole centimetres. See (Distance Unit Co
 
 ### Combined events competitions
 
-Scores are calculated according to the current iAAF Combined events Scoring tables. See (Scoring Points)[#Scoring-Points].
+Scores are calculated according to the current iAAF Combined events Scoring tables.
 
 
 #### U18 Boys, U20 and Senior Men: Pentathlon and Decathlon
