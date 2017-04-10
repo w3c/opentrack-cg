@@ -54,7 +54,7 @@ Competitor is an agent that takes part in Athletics competitions. Depending on t
 
 ### Athletes
 
-Athletes are persons who participate in Athletics competitions. Athletes may be described using the following attributes:
+Athletes are **[Persons](#Persons)** who participate in Athletics competitions. Athletes may be described using the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
@@ -63,7 +63,6 @@ Athletes are persons who participate in Athletics competitions. Athletes may be 
 | family name | Athlete's family name; surname. | Text |
 | given name | Athlete's given name; first name. | Text |
 | alternate name | An alias to name the athlete. | Text |
-| family name | Athlete's family name. | Text |
 | address | Main residence address of the athlete. | [Postal Address](#Postal-Addresses) or Text |
 | image | Picture of the athlete. | URL |
 | email | Email address. | Text |
@@ -209,7 +208,6 @@ Performance represent the resulting competitor's accomplishment measured and rec
 | wind | Wind speed at the moment of registering the performance. | [Quantitive Value](#Quantitive-Values) |
 
 
-
 ### Venues
 
 **Places** where events and competitions are held. Competitions may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). 
@@ -248,7 +246,20 @@ A postal address may be represented by some common properties:
 
 ### Persons
 
-<mark>TODO</mark>
+Person is a basic entity to represent any person (i.e., athlete, coach, organizer, etc.). There are some properties that will be used commonly to represent people:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the person. | Text |
+| name | Person's ull name. | Text |
+| family name | Person's family name; surname. | Text |
+| given name | Person's given name; first name. | Text |
+| alternate name | An alias to name the person. | Text |
+| address | Main residence address. | [Postal Address](#Postal-Addresses) or Text |
+| image | Picture of the person. | URL |
+| email | Email address. | Text |
+| url | Webpage URL about him/her. | URL |
+
 
 ### Organizations
 
