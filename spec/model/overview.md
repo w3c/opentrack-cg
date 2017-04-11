@@ -8,7 +8,7 @@ This model will be focus on Athletics competitions, having into account: events;
 
 This document specifies <mark>the model in an abstract way, not the implementation of the final vocabulary</mark> with classes, properties and codes.  
 
-## References
+## Background and References
 
 OpenTrack descriptions need homogeneous classes, properties and data types to specify values of properties. This work is based [on existing requirements](http://opentrack.run/standards/), and rules set up by [IAAF](http://iaaf.org).
 
@@ -30,7 +30,7 @@ Some of the entities referred in this document, are named using abbreviations. T
 
 ## Overview of the model
 
-The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish information related to the following entities. 
+The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish information related to the following main entities.  
 
 * **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics competitions. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information.       
 
@@ -113,7 +113,7 @@ These events may be described by the following attributes:
 | identifier | Unique character string to identify the event. | Text |
 | name | Descriptive name of the event. | Text |
 | alternate name | An alias to name the event. | Text |
-| location | Venue where the event is held. | [Venue](#venues) or Text |
+| location | Venue where the event is held (for instance, Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | url | Webpage URL about the event. | URL |
 | image | Picture about the event. | URL |
 | start date | Date and time when the event starts. | [Date and Time](#date,-pime-and-periods) |
@@ -139,6 +139,7 @@ Competitions may be described by the following attributes:
 | name | Descriptive name of the competition. | Text |
 | gender | Gender of athletes involved in the competition. In case of mixed competitions, more than a gender may be indicated. | [Gender](#gender) |
 | date | Date and time where the competition is held. | [Date and Time](#date,-pime-and-periods) |
+| location | Venue where this competition is held (for instance, Main Outdoor Track at Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | age range | Description of the athletes' range of age to be eligible for the competition.  | Text |
 | round(s) | Round(s) performed as part of the competition (trials, heats, final, etc.).  | **[Competition Round](#competition-rounds)** |
 | combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Competition Round](#athletics-competitions)** |
