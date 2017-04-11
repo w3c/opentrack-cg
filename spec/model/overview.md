@@ -75,10 +75,12 @@ Athletes are **[Persons](#persons)** who participate in Athletics competitions. 
 | height | Athlete's height. | [Quantitative Value](#quantitative-values) |
 | weight | Athlete's weight. | [Quantitative Value](#quantitative-values) |
 | nationality | Athlete's nationality. | [Country](#countries) |
+| birth place | Locality and country of birt (e.g. "Tallinn, Estonia") | Text |
 | federation | Federation which the athlete is attached to. | [Athletics Federation](#athletics-federations) |
 | coach | Athlete's main coach. | [Person](#persons) |
 | sponsor | Athlete's sponsor. | [Person](#persons) or [Organization](#organizations) |
 | team | Team which the athlete is affiliated to. | **[Team](#teams)** |
+| best(s) | Athlete's best performances. | [Best](#bests) |  
 
 
 ### Teams
@@ -101,6 +103,7 @@ Teams may be described using the following attributes:
 | sponsor | Sponsor of the team. | [Person](#persons) or [Organization](#organizations) |
 | coach | Main coach of the team. | [Person](#persons) |
 | captain(s) | Athlete(s) who represents the team. | **[Athlete](#athletes)** |
+| best(s) | Best performances of the team (e.g., relay competitions). | [Best](#bests) |  
 | athlete(s) | Athlete(s) affiliated to the team. | **[Athlete](#athletes)** |
 
 
