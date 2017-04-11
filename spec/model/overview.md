@@ -32,6 +32,10 @@ Some of the entities referred in this document, are named using abbreviations. T
 
 The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish information related to the following main entities.  
 
+
+[!Overview of the class model for this vocabulary](/images/high_level_overall_model.png)
+
+
 * **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics competitions. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information.       
 
 * **[Athletics Events](#athletics-events)**. Sports organized occasion where Athletics competitions are planed and take place at a specific location during a period of time. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, etc.). Athletics events may include one or several [Athletics competitions] (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent competition disciplines for men and 23 for women).
@@ -47,6 +51,7 @@ The model is related to the competition management in Athletics. By using this m
 * **[Performances](#performances)**. Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed).
 
 * **[Venues](#venues)**. Location where events and competitions are held.
+
 
 ## Competitors
 
