@@ -38,7 +38,7 @@ The model is related to the competition management in Athletics. By using this m
 
 * **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics competitions. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information.       
 
-* **[Athletics Events](#athletics-events)**. Sports organized occasion where Athletics competitions are planed and take place at a specific location during a period of time. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, etc.). Athletics events may include one or several [Athletics competitions] (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent competition disciplines for men and 23 for women).
+* **[Athletics Events](#athletics-events)**. Organized occasion where Athletics competitions are planed and take place at a specific location during a period of time. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, etc.). Athletics events may include one or several [Athletics competitions](#athletics-competitions) (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent competition disciplines for men and 23 for women).
 
 * **[Athletics Competitions](#athletics-competitions)**. Competition events corresponding to specific disciplines where competitors take part (e.g., 100m Men). Competitions are composed of one or more rounds. 
 
@@ -109,7 +109,7 @@ Teams may be described using the following attributes:
 
 ### Athletics Events
 
-Events where Athletics competitions are planed and held. These competitions take place at a specific location during a concrete period of time. Athletics events may include one or several [Athletics competitions] of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). 
+Events where Athletics competitions are planed and held. These competitions take place at a specific location during a concrete period of time. Athletics events may include one or several [Athletics competitions](#athletics-competitions) of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). 
 
 _Examples of Athletics events are: [IAAF World Championships London 2017](http://www.iaafworldchampionships.com), [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/), [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/), [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx), and [Summer Olympic Games Rio 2016](https://www.olympic.org/rio-2016/athletics)._ 
 
@@ -195,7 +195,6 @@ Each entry of the start list may include the following properties:
 | order | Competitor's order in the start list. | Number |
 | lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
 | score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
-| best | Competitor's best performance at the start of the round and/or heat.  | **[Performance](#performances)** |
 
 ### Results
 
@@ -219,14 +218,17 @@ Each entry of the results may include the following properties:
 
 ### Performances
 
-Performance represent the resulting competitor's accomplishment measured and recognized by officials after a competition round/heat. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed).
+Performance represent the resulting competitor's accomplishment measured and recognized by officials after a competition round/heat. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind assistance).
+
+_Using the previous example of result list, Shelly-Ann Fraser-Pryce's performance is: **11.09 (seconds), +0.6 (m/s wind assistance), setting a new CR record** at 100m Women Final._  
+
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the performance univocally. | Text |
 | value | Official measure of the performance (i.e., distance, height, time) | [Quantitative Value](#quantitative-values) |
 | reaction time | Reaction time of the athlete during a sprint event. | [Quantitative Value](#quantitative-values) |
-| wind | Wind speed at the moment of registering the performance. | [Quantitative Value](#quantitative-values) |
+| wind assistance | Wind speed at the moment of registering the performance. | [Quantitative Value](#quantitative-values) |
 | record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
 | best(s) | Flags indicating bests achieved after the competition round (e.g., Personal Best, Season Leader, etc.). | [Best](#bests) |
 
@@ -234,6 +236,7 @@ Performance represent the resulting competitor's accomplishment measured and rec
 ### Venues
 
 **Places** where events and competitions are held. Competitions may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). 
+
 
 Venues can be described by the following attributes:
 
