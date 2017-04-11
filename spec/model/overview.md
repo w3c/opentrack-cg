@@ -237,10 +237,10 @@ Venues can be described by the following attributes:
 | address | Postal address related to the venue. | [Postal Address](#postal-addresses) or Text |
 | url | Webpage URL about the venue. | URL |
 | image | Picture about the venue. | URL |
-| geo | Coordinates of the venue. | URL |
+| geo | Coordinates of the venue. | Text |
 | map | URL to a map pointing to the venue. | URL |
-| telephone | Telephone number of the venue. | URL |
-| fax number | Fax number of the venue. | URL |
+| telephone | Telephone number of the venue. | Text |
+| fax number | Fax number of the venue. | Text |
 | type | Type of the venue. | **[Venue Type](#venue-type)** |
 
 
