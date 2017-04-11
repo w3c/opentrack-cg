@@ -33,7 +33,7 @@ Some of the entities referred in this document, are named using abbreviations. T
 The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish information related to the following main entities.  
 
 
-[!Overview of the class model for this vocabulary](/images/high_level_overall_model.png)
+[!Overview of the class model for this vocabulary](images/high_level_overall_model.png)
 
 
 * **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics competitions. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information.       
