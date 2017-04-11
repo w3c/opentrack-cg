@@ -52,7 +52,6 @@ The model is related to the competition management in Athletics. By using this m
 
 * **[Venues](#venues)**. Location where events and competitions are held.
 
-
 ## Competitors
 
 Competitor is an agent that takes part in Athletics competitions. Depending on the type of competition, either for individuals or for teams, agent is either an **[Athlete](#athletes)** or a **[Team](#teams)**, respectively. 
@@ -303,6 +302,11 @@ Federation is a special type of organization in charge of governing and rule the
 <mark>Federations have other federations as sub-organizations and/or parent organizations?</mark>
 
 Potential relation with: [Territories and countries](#territories-and-countries).
+
+
+The overall picture of this model is shown in the following UML diagram:
+
+![Complete class model for this conceptual vocabulary](https://w3c.github.io/opentrack-cg/spec/model/images/complete_overall_model.png)
 
 
 *******
