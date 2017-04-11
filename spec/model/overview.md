@@ -176,7 +176,8 @@ Rounds may be described by the following properties:
 
 Rounds of competitions have **start lists**. These lists are provided by officials and include an ordered set of competitors (athletes or teams) qualified to compete in the related heat or round. 
 
-_Examples of Competition rounds are: 110m Hurdles Men **Preliminary Round Heat 1**, 10,000m Men **Final**, and 110 Hurdles Man **Semifinal 1**._  
+_Example of start list of Final round in 100m Women event:_
+![Example of start list](https://w3c.github.io/opentrack-cg/spec/model/images/example_start_list.png)
 
 Each entry of the start list may include the following properties:
 
@@ -195,6 +196,9 @@ Each entry of the start list may include the following properties:
 ### Results
 
 'Results' is an ordered list collecting the performances achieved by competitors after a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
+
+Example of results after the Final round in 100m Women event:
+![Example of results](https://w3c.github.io/opentrack-cg/spec/model/images/example_results.png)
 
 Each entry of the results may include the following properties:
 
