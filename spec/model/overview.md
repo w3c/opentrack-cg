@@ -104,7 +104,7 @@ Teams may be described using the following attributes:
 
 Events where Athletics competitions are planed and held. These competitions take place at a specific location during a concrete period of time. Athletics events may include one or several [Athletics competitions] of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). 
 
-Examples of Athletics events are: [IAAF World Championships London 2017](http://www.iaafworldchampionships.com), [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/), [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/), [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx), and [Summer Olympic Games Rio 2016](https://www.olympic.org/rio-2016/athletics). 
+_Examples of Athletics events are: [IAAF World Championships London 2017](http://www.iaafworldchampionships.com), [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/), [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/), [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx), and [Summer Olympic Games Rio 2016](https://www.olympic.org/rio-2016/athletics)._ 
 
 These events may be described by the following attributes:
 
@@ -130,7 +130,9 @@ These events may be described by the following attributes:
 
 Competitions are those events that correspond to specific disciplines where competitors take part (e.g., 100m Men). These competitions may be part or broader Athletics events (e.g., 110m Hurdles at Summer Olympic Games). Athletics competitions are composed of one or more rounds, at least the final. 
 
-Competitions may be described by the following attributes:
+_Examples of Athletics competitions are: **110m Hurdles Men** at Summer Olympic Games, **Senior Women Race** at Cross Country World Championships, and **Javelin Throw Men** at European Throwing Cup._   
+
+Competitions may be described by the following attributes: 
 
 
 | Property | Description | Value Type |
@@ -151,6 +153,10 @@ Rounds are stages in Athletics competitions (e.g., heats, finals, throwing trial
 
 Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races.
 
+_Examples of Competition rounds are: 110m Hurdles Men **Preliminary Round Heat 1**, 10,000m Men **Final**, and 110 Hurdles Man **Semifinal 1**._  
+
+Rounds may be described by the following properties:
+
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the round and/or heat. | Text |
@@ -166,6 +172,8 @@ Competition rounds aims at qualifying athletes to next round until the final. Th
 
 Rounds of competitions have **start lists**. These lists are provided by officials and include an ordered set of competitors (athletes or teams) qualified to compete in the related heat or round. 
 
+_Examples of Competition rounds are: 110m Hurdles Men **Preliminary Round Heat 1**, 10,000m Men **Final**, and 110 Hurdles Man **Semifinal 1**._  
+
 Each entry of the start list may include the following properties:
 
 | Property | Description | Value Type |
@@ -178,7 +186,7 @@ Each entry of the start list may include the following properties:
 | order | Competitor's order in the start list. | Number |
 | lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
 | score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
-| personal best | Competitor's best performance in the same discipline at the start of the round and/or heat.  | **[Performance](#performances)** |
+| best | Competitor's best performance at the start of the round and/or heat.  | **[Performance](#performances)** |
 
 ### Results
 
@@ -194,7 +202,6 @@ Each entry of the results may include the following properties:
 | under protest | Flag indicating the competitor took part in the round and/or heat competing 'under protest'. | Boolean |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | score points | Score points earned by the competitor in a specific round and/or heat in case of Combined Events such as Decathlon and Heptathlon. | Number |
-| record(s) | Flags indicating records achieved after the competition round (e.g., World Record, Personal Best, etc.). | Number |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
 
 ### Performances
@@ -207,6 +214,8 @@ Performance represent the resulting competitor's accomplishment measured and rec
 | value | Official measure of the performance (i.e., distance, height, time) | [Quantitative Value](#quantitative-values) |
 | reaction time | Reaction time of the athlete during a sprint event. | [Quantitative Value](#quantitative-values) |
 | wind | Wind speed at the moment of registering the performance. | [Quantitative Value](#quantitative-values) |
+| record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
+| best(s) | Flags indicating bests achieved after the competition round (e.g., Personal Best, Season Leader, etc.). | [Best](#bests) |
 
 
 ### Venues
@@ -616,14 +625,31 @@ Athletics events may have a property to represent the states that they may be in
 
 (Performances)[#Performances], if validated in competition (Results)[#Results] can set records of different type:
 
-- `World Record`
-- `Olympic Record`
-- `National Record`
-- `Competition Record` 
-- `Supranational Record` (European, )
-- `Local Record` 
-- `Age-range Record`
-- `Club Record`
-- `Personal Best`
-- ???
 
+| Code | Record Type |
+| ---- | ----------- |
+| WR | World Record |
+| OR | Olympic Record |
+| CR | Championship Record |
+| GR | Games Record |
+| AR | Area (or continental) Record |
+| NR | National Record (for a specific country) |
+| MR | Meet Record |
+| DLR | Diamond League Record |
+| WJR | World Junior Record |
+| AJR | Area (or continental) Junior Record |
+| NJR | National Junior Record (for a specific country) |
+| # | indicates a record has not been accepted. The same mark is also used to indicate some sort of irregularity with a result |
+| X | indicates the athlete has been disqualified after the performance |
+
+### Bests 
+
+The concept of 'best' refers to athlete's personal achievements, without setting official records with the (Performance)[#Performances].
+
+| Code | Best Type |
+| ---- | ----------- |
+| WYB | World Youth Best (the best mark achieved by an athlete in the youth age category) |
+| WB | World Best (the best mark recorded for a non-IAAF world record event) |
+| PB | Personal Best (the best mark achieved by an athlete on a personal level) |
+| SB | Season's Best (the best mark achieved by an athlete on a personal level within a given season) |
+| WL | World Leader (the best mark achieved worldwide within a given season) |
