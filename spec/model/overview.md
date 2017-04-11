@@ -305,7 +305,7 @@ Organizations can be represented by the following properties:
 
 Federation is a special type of organization in charge of governing and rule the sport of athletics. Federations may be attached to other higher-level federations.
 
-<mark>Federations have other federations as sub-organizations and/or parent organizations?</mark>
+<mark>Discussion about this at Issue #3.</mark>
 
 Potential relation with: [Territories and countries](#territories-and-countries).
 
@@ -474,7 +474,7 @@ Youth sports includes school sport at primary and secondary school level. Below 
 
 IAAF recognises the U18 category, including Boys and Girls aged 16 or 17, so this is the only category to be recognised officially into this vocabulary. 
 
-<mark>Should we include below U18 ages in the classification? or just open to specify whatever category in a flexible way?</mark>
+<mark>Should we include below U18 ages in the classification? Discussion under issue #5.</mark>
 
 #### Summary of Age Ranges
 
@@ -501,6 +501,7 @@ So, in summary:
 | 95 ‐ 99 | `M95` | `W95` |
 | 100+ | `M100` | `W100` |
 
+Discussion under issue #4.
 
 ### Territories and countries
 
