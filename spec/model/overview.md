@@ -33,7 +33,7 @@ Some of the entities referred in this document, are named using abbreviations. T
 The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish information related to the following main entities.  
 
 
-![Overview of the class model for this vocabulary](https://w3c.github.io/opentrack-cg/spec/model/images/high_level_overall_model.png)
+![Overview of the class model for this vocabulary](images/high_level_overall_model.png)
 
 
 * **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics competitions. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information.       
@@ -178,7 +178,7 @@ Rounds of competitions have **start lists**. These lists are provided by officia
 
 _Example of start list of Final round in 100m Women event:_
 
-![Example of start list](https://w3c.github.io/opentrack-cg/spec/model/images/example_start_list.png)
+![Example of start list](images/example_start_list.png)
 
 Each entry of the start list may include the following properties:
 
@@ -312,7 +312,7 @@ Potential relation with: [Territories and countries](#territories-and-countries)
 
 The overall picture of this model is shown in the following UML diagram:
 
-![Complete class model for this conceptual vocabulary](https://w3c.github.io/opentrack-cg/spec/model/images/complete_overall_model.png)
+![Complete class model for this conceptual vocabulary](images/complete_overall_model.png)
 
 
 *******
