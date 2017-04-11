@@ -310,6 +310,8 @@ Federation is a special type of organization in charge of governing and rule the
 Potential relation with: [Territories and countries](#territories-and-countries).
 
 
+## UML Class Diagram
+
 The overall picture of this model is shown in the following UML diagram:
 
 ![Complete class model for this conceptual vocabulary](images/complete_overall_model.png)
