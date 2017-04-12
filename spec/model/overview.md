@@ -171,6 +171,7 @@ Rounds may be described by the following properties:
 | date | Date and time where the round and/or heat is held. | [Date and Time](#date,-pime-and-periods) |
 | age range | Description of the athletes' range of age to be eligible for the competition.  | Text |
 | time-keeping | Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
+| qualification criteria | Details what a competitor has to do to get to the next round. | Text |
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
 | results | List with the results after the celebration of the competition.  | **[Results](#results)** |
 
