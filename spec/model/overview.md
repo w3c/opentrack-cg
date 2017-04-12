@@ -36,11 +36,11 @@ The model is related to the competition management in Athletics. By using this m
 ![Overview of the class model for this vocabulary](images/high_level_overall_model.png)
 
 
-* **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics competitions. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information.       
+* **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics events. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information.       
 
-* **[Athletics Events](#athletics-events)**. Organized occasion where Athletics competitions are planed and take place at a specific location during a period of time. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, etc.). Athletics events may include one or several [Athletics competitions](#athletics-competitions) (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent competition disciplines for men and 23 for women).
+* **[Athletics Competitions](#athletics-competitions)**. Organized occasion where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, etc.). Athletics events may include one or several [Athletics Events_](#athletics-events) (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women).
 
-* **[Athletics Competitions](#athletics-competitions)**. Competition events corresponding to specific disciplines where competitors take part (e.g., 100m Men). Competitions are composed of one or more rounds. 
+* **[Athletics Events_](#athletics-events)**. Competition events corresponding to specific disciplines where competitors take part (e.g., 100m Men). Events are composed of one or more rounds. 
 
 * **[Competition Rounds](#competition-rounds)**. Stages of Athletics competitions (e.g., Heats, Finals, etc.) where competitors are distributed in groups. Rounds depend on the competition rules for each discipline (i.e, horizontal and vertical jumps have different rules regarding rounds). 
 
@@ -54,11 +54,11 @@ The model is related to the competition management in Athletics. By using this m
 
 ## Competitors
 
-Competitor is an agent that takes part in Athletics competitions. Depending on the type of competition, either for individuals or for teams, agent is either an **[Athlete](#athletes)** or a **[Team](#teams)**, respectively. 
+Competitor is an agent that takes part in Athletics events. Depending on the type of event, either for individuals or for teams, agent is either an **[Athlete](#athletes)** or a **[Team](#teams)**, respectively. 
 
 ### Athletes
 
-Athletes are **[Persons](#persons)** who participate in Athletics competitions. Athletes may be described using the following attributes:
+Athletes are **[Persons](#persons)** who participate in Athletics events. Athletes may be described using the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
@@ -85,7 +85,7 @@ Athletes are **[Persons](#persons)** who participate in Athletics competitions. 
 
 ### Teams
 
-In certain competitions, such as relay races, competitors are groups of athletes or teams. These teams could be clubs, national teams, or just a joint of several athletes. 
+In certain events, such as relay races, competitors are groups of athletes or teams. These teams could be clubs, national teams, or just a joint of several athletes. 
 
 Teams may be described using the following attributes:
 
@@ -107,13 +107,13 @@ Teams may be described using the following attributes:
 | athlete(s) | Athlete(s) affiliated to the team. | **[Athlete](#athletes)** |
 
 
-### Athletics Events
+### Athletics Competitions
 
-Events where Athletics competitions are planed and held. These competitions take place at a specific location during a concrete period of time. Athletics events may include one or several [Athletics competitions](#athletics-competitions) of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). 
+Events where Athletics competitions are planed and held. These competitions take place at a specific location during a concrete period of time. Athletics events may include one or several [Athletics Events](#athletics-events) of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). 
 
-_Examples of Athletics events are: [IAAF World Championships London 2017](http://www.iaafworldchampionships.com), [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/), [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/), [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx), and [Summer Olympic Games Rio 2016](https://www.olympic.org/rio-2016/athletics)._ 
+_Examples of Athletics competitions are: [IAAF World Championships London 2017](http://www.iaafworldchampionships.com), [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/), [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/), [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx), and [Summer Olympic Games Rio 2016](https://www.olympic.org/rio-2016/athletics)._ 
 
-These events may be described by the following attributes:
+Competitions may be described by the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
@@ -130,17 +130,16 @@ These events may be described by the following attributes:
 | contributor | Person or organization that collaborates in the organization of the event. | [Person](#persons) or [Organization](#organizations) |
 | sponsor | Person or organization that sponsors the event. | [Person](#persons) or [Organization](#organizations) |
 | attendee(s) | Person(s) who attends the event. | [Person](#persons) |
-| competition(s) | Competition events that are part of the main event. | **[Athletics Competition](#athletics-competitions)** |
+| event(s) | Competition events that are part of the main event. | **[Athletics Event](#athletics-events)** |
 
 
-### Athletics Competitions
+### Athletics Events
 
-Competitions are those events that correspond to specific disciplines where competitors take part (e.g., 100m Men). These competitions may be part or broader Athletics events (e.g., 110m Hurdles at Summer Olympic Games). Athletics competitions are composed of one or more rounds, at least the final. 
+Athletics events are those events that correspond to specific disciplines where competitors take part (e.g., 100m Men). These events may be part or broader Athletics competitions (e.g., 110m Hurdles at Summer Olympic Games). Athletics events are composed of one or more rounds, at least the final. 
 
-_Examples of Athletics competitions are: **110m Hurdles Men** at Summer Olympic Games, **Senior Women Race** at Cross Country World Championships, and **Javelin Throw Men** at European Throwing Cup._   
+_Examples of Athletics events are: **110m Hurdles Men** at Summer Olympic Games, **Senior Women Race** at Cross Country World Championships, and **Javelin Throw Men** at European Throwing Cup._   
 
-Competitions may be described by the following attributes: 
-
+Athletics events may be described by the following attributes: 
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
@@ -151,12 +150,12 @@ Competitions may be described by the following attributes:
 | location | Venue where this competition is held (for instance, Main Outdoor Track at Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | age range | Description of the athletes' range of age to be eligible for the competition.  | Text |
 | round(s) | Round(s) performed as part of the competition (trials, heats, final, etc.).  | **[Competition Round](#competition-rounds)** |
-| combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Competition Round](#athletics-competitions)** |
+| combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
 
 
 ### Competition Rounds
 
-Rounds are stages in Athletics competitions (e.g., heats, finals, throwing trials) where competitors are distributed. Number and type of rounds depend on the competition rules for each discipline. For instance, track sprint competitions with many participants may have various heats at preliminary round, several heats at first round, two semifinals, and a final.
+Rounds are stages in Athletics events (e.g., heats, finals, throwing trials) where competitors are distributed. Number and type of rounds depend on the competition rules for each discipline. For instance, track sprint competitions with many participants may have various heats at preliminary round, several heats at first round, two semifinals, and a final.
 
 Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races.
 
@@ -235,7 +234,7 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 
 ### Venues
 
-**Places** where events and competitions are held. Competitions may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). 
+**Places** where events and competitions are held. Events may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). 
 
 
 Venues can be described by the following attributes:
@@ -397,7 +396,7 @@ The most used codes are:
 
 #### Scoring Points 
 
-Combined competitions use IAAF Scoring Tables to assign points according to performances. There is no specific code for `points`.
+Combined events use IAAF Scoring Tables to assign points according to performances. There is no specific code for `points`.
 
 
 ### Gender
@@ -532,12 +531,12 @@ We can identify several categories for Athletics events, depending on gender, ag
 
 A potential hierarchical abstract classification for disciplines could be. 
 
-Athletics Competitions:
+Athletics Events:
 
-- **Stadia Competitions**: Track and Field events within stadium
+- **Stadia Events**: Track and Field events within stadium
 
-  - **Outdoor Track and Field**: events held within outdoor stadia
-    - **Outdoor Track**:
+  - **Outdoor Track and Field Events**: events held within outdoor stadia
+    - **Outdoor Track Events**:
       - **Outdoor Sprints**: distance below 400m.
       - **Outdoor Hurdles**: distance below 400m with hurdles.
       - **Outdoor Relays**: relay events.
@@ -545,37 +544,37 @@ Athletics Competitions:
       - **Outdoor Long distance**: higher distances races.
       - **Outdoor Steeplechase**: races with steeplechase obstacles.
     - **Outdoor Track Race Walking**: race walking races with standard distances up to 5000m.
-  - **Outdoor Field**: 
+  - **Outdoor Field Events**: 
     - **Outdoor Throws**: throwing events
     - **Outdoor Jumps**: vertical and horizontal jumps.
     - **Outdoor Vertical jumps**.
     - **Outdoor Horizontal jumps**.
-  - **Outdoor Combined**: combination of disciplines such as decathlon and heptathlon.
+  - **Outdoor Combined Events**: combination of disciplines such as decathlon and heptathlon.
     - **Decathlon**
     - **Outdoor Heptathlon**
    
-  - **Indoor Track and Field**: events held within indoor stadia
-    - **Indoor Track**:
+  - **Indoor Track and Field Events**: events held within indoor stadia
+    - **Indoor Track Events**:
       - **Indoor Sprints**: distance below 400m.
       - **Indoor Hurdles**: distance below 400m with hurdles.
       - **Indoor Relays**: relay events.
       - **Indoor Middle distance**: distances over 400m up to 2000m.
       - **Indoor Long distance**: higher distances races.
       - **Indoor Track Race Walking**: race walking races indoor.   
-    - **Indoor Field**: 
+    - **Indoor Field Events**: 
       - **Indoor Throws**: throwing events
       - **Indoor Jumps**: vertical and horizontal jumps.
       - **Indoor Vertical jumps**.
       - **Horizontal jumps**.   
-    - **Indoor Combined**: combination of disciplines such as heptathlon or pentathlon.
+    - **Indoor Combined Events**: combination of disciplines such as heptathlon or pentathlon.
    - **Indoor Pentathlon**
    - **Indoor Heptathlon**
   
-- **Off-Stadia Competitions**:
-  - **Road Competitions**: races outside stadia, on road.
+- **Off-Stadia Events**:
+  - **Road Events**: races outside stadia, on road.
     - **Road Running**: running events on road
     - **Road Race-Walking**: race walking outside stadium (standard distances from 5000m to 50Km).
-  - **Off-road**: non-standard distances, surfaces and altitude, off-road.
+  - **Off-road Events**: non-standard distances, surfaces and altitude, off-road.
     - **Cross Country**: races on a loop course placed on open or woodland area. 
     - **Mountain Races**: races on off-road terrain with significant elevation gain on the route.
       - **Classic Mountain Races**: races either mainly uphill or with positive/negative altitude balanced.
@@ -585,13 +584,13 @@ Athletics Competitions:
     - **Trail Races**: trail races on a variety of terrain (including dirt roads, forest paths and single track footpaths) within a natural environment in open country (such as mountains, desert, forests or plains) that is mainly off-road. Organisers may impose or recommend obligatory security equipment applicable.
 
 
-<mark>Should we implement a classification of all disciplines?</mark> 
+<mark>Should we implement a reference classification of all disciplines?</mark> 
 
 ### Venue Type
 
 <mark>Not sure about modeling the type of venue. Just as a first approach to check fesability:</mark>
 
-Competition could be held either within stadia (track and field events) or outside (cross country, mountain races, road races, and others).
+Events could be held either within stadia (track and field events) or outside (cross country, mountain races, road races, and others).
 
 Types of venues that can be considered:
 
