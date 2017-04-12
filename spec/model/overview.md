@@ -192,6 +192,7 @@ Each entry of the start list may include the following properties:
 | feature(s) | Set of features and notes included by officials in the starting list (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
 | under protest | Flag indicating the competitor will take part in the round and/or heat competing 'under protest'. | Boolean |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
+| transponder identifier | Text or code identifying the competitor by a transponder. | Text |
 | order | Competitor's order in the start list. | Number |
 | lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
 | score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
