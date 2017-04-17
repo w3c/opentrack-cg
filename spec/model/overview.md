@@ -33,10 +33,10 @@ Some of the entities referred in this document, are named using abbreviations. T
 The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish information related to the following main entities.  
 
 
-![Overview of the class model for this vocabulary](images/high_level_overall_model.png)
+![Complete class model for this conceptual vocabulary](images/complete_overall_model.png)
 
 
-* **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics events. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information.       
+* **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics events. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information. 
 
 * **[Athletics Competitions](#athletics-competitions)**. Organized occasion where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, etc.). Athletics events may include one or several [Athletics Events_](#athletics-events) (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women).
 
@@ -49,6 +49,8 @@ The model is related to the competition management in Athletics. By using this m
 * **[Results](#results)**. Ordered list of competitors with their **performances** after a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
 
 * **[Performances](#performances)**. Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed).
+
+* **[Timekeeping](#timekeeping)**. Method or system used for timekeeping.
 
 * **[Venues](#venues)**. Location where events and competitions are held.
 
@@ -234,6 +236,24 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 | best(s) | Flags indicating bests achieved after the competition round (e.g., Personal Best, Season Leader, etc.). | [Best](#bests) |
 
 
+### Timekeeping
+
+There are three alternative methods of timekeeping, recognised as official by IAAF:
+- **Hand Timing** (`HT`);
+- **Fully Automatic Timing** (`FAT`), obtained from a Photo Finish System;
+- **Transponder System Timing**. Automatic timing provided by radio signal devices.
+
+Sometimes may be of interest gathering and representing information about devices and the specific conditions of timekeeping. Thus, timekeeping is represented by the following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the timekeeping method. | Text |
+| name | Name of the method used for timekeeping (i.e., `Hand Timing`, `Fully Automatic` or `Transponder System Timing`) | Text |
+| description | Description and notes about the method used for timekeeping. | Text |
+| device | Brand, model and features of the device/system used for timekeeping. | Text |
+
+
+
 ### Venues
 
 **Places** where events and competitions are held. Events may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). 
@@ -316,12 +336,6 @@ Federation is a special type of organization in charge of governing and rule the
 
 Potential relation with: [Territories and countries](#territories-and-countries).
 
-
-## UML Class Diagram
-
-The overall picture of this model is shown in the following UML diagram:
-
-![Complete class model for this conceptual vocabulary](images/complete_overall_model.png)
 
 
 *******
@@ -441,14 +455,6 @@ According to IAAF Rule 132.4, there are official standard abbreviations and symb
 ### Competing "Under protest"
 
 In either a track or field  event, if an athlete makes an immediate oral protest against having been charged with a false start or a failure trial, the athlete may continue competing `under protest`.
-
-
-### Timekeeping
-
-There are three alternative methods of timekeeping, recognised as official by IAAF:
-- (`HT`) Hand timing;
-- (`FAT`) Fully Automatic timing obtained from a Photo Finish System;
-- timing provided by a transponder system.
 
 
 ### Age and Sex Categories
