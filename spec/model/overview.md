@@ -222,6 +222,8 @@ Trials may be described by the following properties:
 
 Rounds of competitions have **start lists**. These lists are provided by officials and include an ordered set of competitors (athletes or teams) qualified to compete in the related heat or round. 
 
+In either a track or field  event, if an athlete makes an immediate oral protest against having been charged with a false start or a failure trial, the athlete may continue competing `under protest`.
+
 _Example of start list of Final round in 100m Women event:_
 
 ![Example of start list](images/example_start_list.png)
@@ -374,9 +376,12 @@ Organizations can be represented by the following properties:
 
 Federation is a special type of organization in charge of governing and rule the sport of athletics. Federations may be attached to other higher-level federations.
 
-<mark>Discussion about this at [Issue #3](https://github.com/w3c/opentrack-cg/issues/3).</mark>
+Federations will have the properties of [Organizations](#organizations), adding the following:
 
-Potential relation with: [Territories and countries](#territories-and-countries).
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| spatial | Spatial coverage of the federation, usually one or more administrative areas (city, region, country, etc.) | [Territory and Country](#territories-and-countries) | 
+| federated into | Higher-level organization to which this federation is attached. | [Athletics Federation](#athletics-federations) | 
 
 
 
@@ -399,16 +404,12 @@ Examples:
 
 Please, note that this representation for time is not sufficient for time performances. Sprint competitions are time scaled to 0.01 seconds, so performances need to be measured with better resolution. See [Quantitative Values](#quantitative-values).
 
-### Height and Distance
-
-Some Athletics disciplines (i.e., throwing events and jumps) measure performances as distance. IAAF specifies measures in whole centimetres. 
-
-Also, distance describes the event in the case of races (e.g., 200m, 3000m steeplechase, length of cross-country course, etc.). In this case, distance is usually measured in meters (kilometers) or miles. See [Quantitative Values](#quantitative-values). 
-
 
 ### Quantitative Values
 
 This entity could serve to represent the official measurement for distance, height, weight, speed (of wind), and others. Basically, the representation will be a pair value-unit. Units will use the normative list of [UN/CEFACT](https://www.unece.org/cefact/) [Common Codes for Units of Measurement](http://www.unece.org/fileadmin/DAM/cefact/recommendations/rec20/rec20_Rev9e_2014.xls).
+
+Some Athletics disciplines (i.e., throwing events and jumps) measure performances as distance. IAAF specifies measures in whole centimetres. Also, distance describes the event in the case of races (e.g., 200m, 3000m steeplechase, length of cross-country course, etc.). In this case, distance is usually measured in meters (kilometers) or miles. 
 
 So, when possible, measurements must be described using the following properties:
 
@@ -494,11 +495,6 @@ According to IAAF Rule 132.4, there are official standard abbreviations and symb
 | Red Card | `RC` |
 
 
-### Competing "Under protest"
-
-In either a track or field  event, if an athlete makes an immediate oral protest against having been charged with a false start or a failure trial, the athlete may continue competing `under protest`.
-
-
 ### Age and Sex Categories
 
 According to IAFF RULE 141 (Age and Sex Categories), apart from [Gender](#gender) competition may also be divided into specific age group classifications. Below, all the potential age categories are analyzed:
@@ -525,11 +521,11 @@ Master Men and women: Any athlete who has reached his/her 35th birthday Masters 
 
 #### Youth
 
-Youth sports includes school sport at primary and secondary school level. Below 18, most of sports and territories considers age categories in ranges of 2 years, represented as: `U4`, `U6`, `U8`, `U10`, `U12`, `U14`, `U16`, `U18`. Age classification assignments and competition rules (disciplines) depend on each sport/federation/territory, so there are no homogeneous criteria to classify boys and girls into these categories.
+Youth sports includes school sport at primary and secondary school level. Below 18, most of sports and territories usually considers age categories in ranges of 2 years (represented as: `U4`, `U6`, `U8`, `U10`, `U12`, `U14`, `U16`, `U18`), but sometimes one-year age range is stablished. Age classification assignments and competition rules (disciplines) depend on each sport/federation/territory, so there are no homogeneous criteria to classify boys and girls into these categories. 
 
 IAAF recognises the U18 category, including Boys and Girls aged 16 or 17, so this is the only category to be recognised officially into this vocabulary. 
 
-<mark>Should we include below U18 ages in the classification? Discussion under [Issue #5](https://github.com/w3c/opentrack-cg/issues/5).</mark>
+<mark>Discussion under [Issue #5](https://github.com/w3c/opentrack-cg/issues/5).</mark>
 
 #### Summary of Age Ranges
 
