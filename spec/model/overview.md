@@ -257,6 +257,8 @@ Each entry of the results may include the following properties:
 | under protest | Flag indicating the competitor took part in the round and/or heat competing 'under protest'. | Boolean |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | score points | Score points earned by the competitor in a specific round and/or heat in case of Combined Events such as Decathlon and Heptathlon. | Number |
+| record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
+| timestamp | Exact date and time when the results where produced. | [Date and Time](#date,-pime-and-periods) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
 
 ### Performances
