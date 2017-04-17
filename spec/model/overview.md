@@ -161,8 +161,6 @@ Rounds are stages in Athletics events (e.g., heats, finals, throwing trials) whe
 
 Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races.
 
-Rounds in **Field events** are rounds of [Trials](#field-trials), where athletes have several attempts to achieve the best performance. Depending on the discipline and the number of competitors, number of trials varies. Athletes will be credited with their best valid performances after the rounds of trials.
-
 _Examples of Competition rounds are: 110m Hurdles Men **Preliminary Round Heat 1**, 10,000m Men **Final**, and 110 Hurdles Man **Semifinal 1**._  
 
 Rounds may be described by the following properties:
@@ -178,6 +176,28 @@ Rounds may be described by the following properties:
 | qualification criteria | Details what a competitor has to do to get to the next round. | Text |
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
 | results | List with the results after the celebration of the competition.  | **[Results](#results)** |
+
+
+#### Field Rounds
+
+Rounds in **Field events** are rounds of [Trials](#field-trials), where athletes have several attempts to achieve the best performance. Depending on the discipline and the number of competitors, number of trials varies. Athletes will be credited with their best valid performances after the rounds of trials.
+
+Rounds in Field Events are rounds with additional properties (including the previous ones):
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| trial(s) | Trial(s) corresponding to a round. | [Field Trial](#field-trials) |
+
+
+##### Vertical Jumps Rounds
+
+Specific rounds for High Jump and Pole Vault Events. This entity inherites from [Field Round](#field-rounds). It also includes the following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| starting height | The starting height the bar is raised at the start of the round. | [Quantitative Value](#quantitative-values) |
+| increasing height | The subsequent heights to which the bar will be raised at the end of each round of trials. | Text |
+
 
 
 ### Field Trials
@@ -211,7 +231,6 @@ Each entry of the start list may include the following properties:
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the entry in the list. | Text |
-| rank | Position of the competitor in the rank of the round and/or heat. | Number |
 | feature(s) | Set of features and notes included by officials in the starting list (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
 | under protest | Flag indicating the competitor will take part in the round and/or heat competing 'under protest'. | Boolean |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
@@ -233,7 +252,7 @@ Each entry of the results may include the following properties:
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the entry in the list. | Text |
-| rank | Position of the competitor in the rank after the round and/or heat. | Number |
+| order | (Rank) position of the competitor in the rank after the round and/or heat. | Number |
 | feature(s) | Set of features and notes included by officials after the round and/or heat (e.g., Red Card in Race Walking).  | **[Start Lists and Results](#start-lists-and-results)** |
 | under protest | Flag indicating the competitor took part in the round and/or heat competing 'under protest'. | Boolean |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
