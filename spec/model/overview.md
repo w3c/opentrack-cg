@@ -119,9 +119,9 @@ Competitions may be described by the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the event. | Text |
-| name | Descriptive name of the event. | Text |
-| alternate name | An alias to name the event. | Text |
+| identifier | Unique character string to identify the competition. | Text |
+| name | Descriptive name of the competition. | Text |
+| alternate name | An alias to name the competition. | Text |
 | location | Venue where the event is held (for instance, Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | url | Webpage URL about the event. | URL |
 | image | Picture about the event. | URL |
@@ -145,15 +145,16 @@ Athletics events may be described by the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the competition. | Text |
-| name | Descriptive name of the competition. | Text |
-| gender | Gender of athletes involved in the competition. In case of mixed competitions, more than a gender may be indicated. | [Gender](#gender) |
+| identifier | Unique character string to identify the event. | Text |
+| name | Descriptive name of the event (e.g., `1-1-2-4 Medley Relay Men`). | Text |
+| description | Descriptive name of the event (e.g., `Medley Relay 800 meters Men: two times 100 meters legs, a 200 meters leg and a 400 meters leg`). | Text |
+| discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
+| gender | Gender of athletes involved in the event. In case of mixed competitions, more than a gender may be indicated. | [Gender](#gender) |
 | date | Date and time where the competition is held. | [Date and Time](#date,-pime-and-periods) |
 | location | Venue where this competition is held (for instance, Main Outdoor Track at Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | age range | Description of the athletes' range of age to be eligible for the competition.  | Text |
 | round(s) | Round(s) performed as part of the competition (preliminary heats, semifinals, final, mass start waves in road races, etc.).  | **[Competition Round](#competition-rounds)** |
 | combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
-
 
 ### Competition Rounds
 
@@ -570,14 +571,54 @@ Countries may be represented by their [ISO 3166-1](https://en.wikipedia.org/wiki
 
 <mark>Shall we use normalized territories from a common database such as Geonames?</mark>
 
+### Event Status
+
+Athletics events may have a property to represent the states that they may be in:
+
+- `Cancelled`
+- `Postponed`
+- `Rescheduled`
+- `Scheduled`
+
+### Records 
+
+(Performances)[#Performances], if validated in competition (Results)[#Results] can set records of different type:
+
+
+| Code | Record Type |
+| ---- | ----------- |
+| `WR` | World Record |
+| `OR` | Olympic Record |
+| `CR` | Championship Record |
+| `GR` | Games Record |
+| `AR` | Area (or continental) Record |
+| `NR` | National Record (for a specific country) |
+| `MR` | Meet Record |
+| `DLR` | Diamond League Record |
+| `WJR` | World Junior Record |
+| `AJR` | Area (or continental) Junior Record |
+| `NJR` | National Junior Record (for a specific country) |
+| `#` | indicates a record has not been accepted. The same mark is also used to indicate some sort of irregularity with a result |
+| `X` | indicates the athlete has been disqualified after the performance |
+
+### Bests 
+
+The concept of 'best' refers to athlete's personal achievements, without setting official records with the (Performance)[#Performances].
+
+| Code | Best Type |
+| ---- | ----------- |
+| `WYB` | World Youth Best (the best mark achieved by an athlete in the youth age category) |
+| `WB` | World Best (the best mark recorded for a non-IAAF world record event) |
+| `PB` | Personal Best (the best mark achieved by an athlete on a personal level) |
+| `SB` | Season's Best (the best mark achieved by an athlete on a personal level within a given season) |
+| `WL` | World Leader (the best mark achieved worldwide within a given season) |
+
 
 ### Disciplines
 
 We can identify several categories for Athletics events, depending on gender, age, type of venue, distance and type of event (e.g., 100m Hurdles Women and 110m Hurdles Men). Although events rules may vary for the same type of discipline (i.e., differences of shot weight depending on gender and/or age).
 
-A potential hierarchical abstract classification for disciplines could be. 
-
-Athletics Events:
+A potential hierarchical abstract classification for **Athletics Events** is:
 
 - **Stadia Events**: Track and Field events within stadium
 
@@ -593,8 +634,8 @@ Athletics Events:
   - **Outdoor Field Events**: 
     - **Outdoor Throws**: throwing events
     - **Outdoor Jumps**: vertical and horizontal jumps.
-    - **Outdoor Vertical jumps**.
-    - **Outdoor Horizontal jumps**.
+      - **Outdoor Vertical jumps**.
+      - **Outdoor Horizontal jumps**.
   - **Outdoor Combined Events**: combination of disciplines such as decathlon and heptathlon.
     - **Decathlon**
     - **Outdoor Heptathlon**
@@ -610,11 +651,11 @@ Athletics Events:
     - **Indoor Field Events**: 
       - **Indoor Throws**: throwing events
       - **Indoor Jumps**: vertical and horizontal jumps.
-      - **Indoor Vertical jumps**.
-      - **Horizontal jumps**.   
+        - **Indoor Vertical jumps**.
+        - **Indoor Horizontal jumps**.   
     - **Indoor Combined Events**: combination of disciplines such as heptathlon or pentathlon.
-   - **Indoor Pentathlon**
-   - **Indoor Heptathlon**
+      - **Indoor Pentathlon**
+      - **Indoor Heptathlon**
   
 - **Off-Stadia Events**:
   - **Road Events**: races outside stadia, on road.
@@ -629,8 +670,6 @@ Athletics Events:
       - **Time trial Mountain Races**: mountain races with individual start times at various intervals. The results are ordered by the individual finish times.
     - **Trail Races**: trail races on a variety of terrain (including dirt roads, forest paths and single track footpaths) within a natural environment in open country (such as mountains, desert, forests or plains) that is mainly off-road. Organisers may impose or recommend obligatory security equipment applicable.
 
-
-<mark>Should we implement a reference classification of all disciplines?</mark> 
 
 ### Venue Type
 
@@ -668,57 +707,3 @@ Outdoor course:
 - elevation gain (metres)
 - elevation loss (metres)
 - course geometry (polygon, polyline)
-
-
-
-### Ranks
-
-Consecutive order of athletes or teams (including repetition of ranks) in results: 1, 2, 3, 4, 5,…
-
-
-### Scoring tables
-
-Combined events use IAAF Scoring Tables to quantify performances. See [Scoring Points](#scoring-points).
-
-
-### Event Status
-
-Athletics events may have a property to represent the states that they may be in:
-
-- `Cancelled`
-- `Postponed`
-- `Rescheduled`
-- `Scheduled`
-
-### Records 
-
-(Performances)[#Performances], if validated in competition (Results)[#Results] can set records of different type:
-
-
-| Code | Record Type |
-| ---- | ----------- |
-| WR | World Record |
-| OR | Olympic Record |
-| CR | Championship Record |
-| GR | Games Record |
-| AR | Area (or continental) Record |
-| NR | National Record (for a specific country) |
-| MR | Meet Record |
-| DLR | Diamond League Record |
-| WJR | World Junior Record |
-| AJR | Area (or continental) Junior Record |
-| NJR | National Junior Record (for a specific country) |
-| # | indicates a record has not been accepted. The same mark is also used to indicate some sort of irregularity with a result |
-| X | indicates the athlete has been disqualified after the performance |
-
-### Bests 
-
-The concept of 'best' refers to athlete's personal achievements, without setting official records with the (Performance)[#Performances].
-
-| Code | Best Type |
-| ---- | ----------- |
-| WYB | World Youth Best (the best mark achieved by an athlete in the youth age category) |
-| WB | World Best (the best mark recorded for a non-IAAF world record event) |
-| PB | Personal Best (the best mark achieved by an athlete on a personal level) |
-| SB | Season's Best (the best mark achieved by an athlete on a personal level within a given season) |
-| WL | World Leader (the best mark achieved worldwide within a given season) |
