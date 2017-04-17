@@ -36,7 +36,7 @@ The model is related to the competition management in Athletics. By using this m
 ![Complete class model for this conceptual vocabulary](images/complete_overall_model.png)
 
 
-* **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics events. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information. 
+* **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics events. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information. Both athletes and teams can be attached to [Clubs](#clubs) as organizations.
 
 * **[Athletics Competitions](#athletics-competitions)**. Organized occasion where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, etc.). Athletics events may include one or several [Athletics Events](#athletics-events) (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women).
 
@@ -49,6 +49,8 @@ The model is related to the competition management in Athletics. By using this m
 * **[Results](#results)**. Ordered list of competitors with their **performances** after a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
 
 * **[Performances](#performances)**. Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed).
+
+* **[Athletics Federations](#athletics-federations)**. Sports organizations in charge of governing and rule Athletics in specific territories. [Athletics Federations](#athletics-federations) may be attached to other higher-level federations. **[Athletes](#athletes)**, **[Teams](#teams)**, and **[Clubs](#clubs) may be attached to federations. 
 
 * **[Timekeeping](#timekeeping)**. Method or system used for timekeeping.
 
@@ -81,8 +83,29 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | federation | Federation which the athlete is attached to. | [Athletics Federation](#athletics-federations) |
 | coach | Athlete's main coach. | [Person](#persons) |
 | sponsor | Athlete's sponsor. | [Person](#persons) or [Organization](#organizations) |
-| team | Team which the athlete is affiliated to. | **[Team](#teams)** |
+| club | Club which the athlete is affiliated to. | **[Club](#club)** |
+| team | Team which the athlete is part of (for instance, a National Team). | **[Team](#teams)** |
 | best(s) | Athlete's best performances. | [Best](#bests) |  
+
+### Clubs
+
+An [Organization](#organizations) for [Athletes](#athletes). Clubs can create different [Teams](#teams) for specific competitions, such as leagues, relays, etc.  
+
+Clubs may be described using the following attributes:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the club. | Text |
+| name | Descriptive name of the club. | Text |
+| alternate name | An alias to name the club. | Text |
+| address | Main postal address where the club is registered or located. | [Postal Address](#postal-addresses) or Text |
+| image | Picture of the club. | URL |
+| logo | Logo or flag of the club. | URL |
+| email | Main email address of the club. | Text |
+| url | Club homepage URL. | URL |
+| federation | Federation which the club is attached to. | [Athletics Federation](#athletics-federations) |
+| sponsor | Sponsor of the club. | [Person](#persons) or [Organization](#organizations) |
+| team(s) | Teams(s) attached to this club. | **[Team](#teams)** |
 
 
 ### Teams
@@ -99,7 +122,6 @@ Teams may be described using the following attributes:
 | address | Main postal address where the team is registered or located. | [Postal Address](#postal-addresses) or Text |
 | image | Picture of the team. | URL |
 | logo | Logo or flag of the team. | URL |
-| email | Main email address of the team. | Text |
 | url | Webpage URL about the team. | URL |
 | federation | Federation which the team is attached to. | [Athletics Federation](#athletics-federations) |
 | sponsor | Sponsor of the team. | [Person](#persons) or [Organization](#organizations) |
@@ -192,7 +214,7 @@ Rounds in Field Events are rounds with additional properties (including the prev
 
 ##### Vertical Jumps Rounds
 
-Specific rounds for High Jump and Pole Vault Events. This entity inherites from [Field Round](#field-rounds). It also includes the following properties:
+Specific rounds for High Jump and Pole Vault Events. This entity inherits from [Field Round](#field-rounds). It also includes the following properties:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
@@ -261,7 +283,7 @@ Each entry of the results may include the following properties:
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | score points | Score points earned by the competitor in a specific round and/or heat in case of Combined Events such as Decathlon and Heptathlon. | Number |
 | record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
-| timestamp | Exact date and time when the results where produced. | [Date and Time](#date,-pime-and-periods) |
+| timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-pime-and-periods) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
 
 ### Performances
