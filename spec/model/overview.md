@@ -38,9 +38,9 @@ The model is related to the competition management in Athletics. By using this m
 
 * **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics events. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information. 
 
-* **[Athletics Competitions](#athletics-competitions)**. Organized occasion where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, etc.). Athletics events may include one or several [Athletics Events_](#athletics-events) (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women).
+* **[Athletics Competitions](#athletics-competitions)**. Organized occasion where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, etc.). Athletics events may include one or several [Athletics Events](#athletics-events) (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women).
 
-* **[Athletics Events_](#athletics-events)**. Competition events corresponding to specific disciplines where competitors take part (e.g., 100m Men). Events are composed of one or more rounds. 
+* **[Athletics Events](#athletics-events)**. Competition events corresponding to specific disciplines where competitors take part (e.g., 100m Men). Events are composed of one or more rounds. 
 
 * **[Competition Rounds](#competition-rounds)**. Stages of Athletics competitions (e.g., Heats, Finals, etc.) where competitors are distributed in groups. Rounds depend on the competition rules for each discipline (i.e, horizontal and vertical jumps have different rules regarding rounds). 
 
@@ -151,7 +151,7 @@ Athletics events may be described by the following attributes:
 | date | Date and time where the competition is held. | [Date and Time](#date,-pime-and-periods) |
 | location | Venue where this competition is held (for instance, Main Outdoor Track at Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | age range | Description of the athletes' range of age to be eligible for the competition.  | Text |
-| round(s) | Round(s) performed as part of the competition (trials, heats, final, etc.).  | **[Competition Round](#competition-rounds)** |
+| round(s) | Round(s) performed as part of the competition (preliminary heats, semifinals, final, mass start waves in road races, etc.).  | **[Competition Round](#competition-rounds)** |
 | combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
 
 
@@ -160,6 +160,8 @@ Athletics events may be described by the following attributes:
 Rounds are stages in Athletics events (e.g., heats, finals, throwing trials) where competitors are distributed. Number and type of rounds depend on the competition rules for each discipline. For instance, track sprint competitions with many participants may have various heats at preliminary round, several heats at first round, two semifinals, and a final.
 
 Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races.
+
+Rounds in **Field events** are rounds of [Trials](#field-trials), where athletes have several attempts to achieve the best performance. Depending on the discipline and the number of competitors, number of trials varies. Athletes will be credited with their best valid performances after the rounds of trials.
 
 _Examples of Competition rounds are: 110m Hurdles Men **Preliminary Round Heat 1**, 10,000m Men **Final**, and 110 Hurdles Man **Semifinal 1**._  
 
@@ -176,6 +178,25 @@ Rounds may be described by the following properties:
 | qualification criteria | Details what a competitor has to do to get to the next round. | Text |
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
 | results | List with the results after the celebration of the competition.  | **[Results](#results)** |
+
+
+### Field Trials
+
+**Field events** are composed of **rounds of trials**, where the number of trials is variable. Except for Vertical Jumps, each competitor only will have no more than one trial recorded in any one round of trials of the competition. 
+
+Except in Vertical Jumps, a valid trial shall be indicated by the measurement taken. For the standard abbreviations and symbols to be used in all other cases see [Start lists and results](#Start lists and results). A *´substitute´* trial is given in case an athlete is hampered in a trial or it cannot be correctly recorded.
+
+Trials may be described by the following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the trial. | Text |
+| attempt | Number indicating the correlative number of the attempt. | Number |
+| feature | Feature relative to the result of the trial (i.e., `failed`, `cleared`, `passed`, `eliminated`, `did not jump`, etc.). | [Start Lists and Results](#start-lists-and-results) |
+| performance | Performance achieved in case the trial was valid. | [Performance](#performances) |
+| valid | Flag indicating if the trial was valid or not (failure) | Boolean |
+| isSubstitute | Flag indicating if the trial is a *substitute* trial. | Boolean |
+
 
 ### Start Lists
 
