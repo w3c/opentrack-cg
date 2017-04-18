@@ -424,7 +424,8 @@ Federations will have the properties of [Organizations](#organizations), adding 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | spatial | Spatial coverage of the federation, usually one or more administrative areas (city, region, country, etc.) | [Territory and Country](#territories-and-countries) | 
-| federated into | Higher-level organization(s) to which this federation is attached. | [Athletics Federation](#athletics-federations) | 
+| memberOf | Higher-level federation(s) to which this federation is attached. | [Athletics Federation](#athletics-federations) | 
+| member(s) | Lower level organization(s) attached to this federation. | [Organization](#organization) | 
 
 
 
