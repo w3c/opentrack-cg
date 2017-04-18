@@ -624,6 +624,9 @@ Athletics events may have a property to represent the states that they may be in
 | `#` | indicates a record has not been accepted. The same mark is also used to indicate some sort of irregularity with a result |
 | `X` | indicates the athlete has been disqualified after the performance |
 
+Records will be described by the type of record and the age-range category.
+
+
 ### Bests 
 
 The concept of 'best' refers to athlete's personal achievements, without setting official records with the (Performance)[#Performances].
