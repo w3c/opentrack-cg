@@ -171,13 +171,13 @@ Athletics events may be described by the following attributes:
 | identifier | Unique character string to identify the event. | Text |
 | name | Descriptive name of the event (e.g., `1-1-2-4 Medley Relay Men`). | Text |
 | description | Descriptive name of the event (e.g., `Medley Relay 800 meters Men: two times 100 meters legs, a 200 meters leg and a 400 meters leg`). | Text |
-| discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
-| gender | Gender of athletes involved in the event. In case of mixed competitions, more than a gender may be indicated. | [Gender](#gender) |
 | date | Date and time where the competition is held. | [Date and Time](#date,-pime-and-periods) |
 | location | Venue where this competition is held (for instance, Main Outdoor Track at Berlin Olympic Stadium). | [Venue](#venues) or Text |
-| age range | Description of the athletes' range of age to be eligible for the competition.  | Text |
 | round(s) | Round(s) performed as part of the competition (preliminary heats, semifinals, final, mass start waves in road races, etc.).  | **[Competition Round](#competition-rounds)** |
 | combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
+| discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
+| category | The specific category for this event competition. | [Category](#category) |
+
 
 ### Competition Rounds
 
@@ -304,14 +304,32 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 | best(s) | Flags indicating bests achieved after the competition round (e.g., Personal Best, Season Leader, etc.). | [Best](#bests) |
 
 
+### Category
+
+Division that marks the competition of athletes and teams in events. Categories may include gender, age range and specific rules depending of the event.  
+
+_Examples of categories are: *M35* (Men aged 35-39), *U23* (Under 23) Men, or *ad hoc* categories for non-official competitions such as *teachers* and *parents* in school sports._     
+
+Categories will be described by these following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the category. | Text |
+| name | Name of the category (i.e., `Under 23 Men`, `Teachers`) | Text |
+| description | Description and notes about the category. | Text |
+| gender | Gender of athletes involved this category. In case of mixed competitions, more than a gender may be indicated. | [Gender](#gender) |
+| age range | Description of the athletes' range of age to be eligible for this category.  | Text |
+
+
+There is a predefined list of [standard categories](#age-and-sex-categories).
+
+
 ### Timekeeping
 
 There are three alternative methods of timekeeping, recognised as official by IAAF:
 - **Hand Timing** (`HT`) – Hand Timing is usually given to 0.1 seconds (average the different timekeepers and rounded up);
 - **Fully Automatic Timing** (`FAT`), obtained from a Photo Finish System (FAT usually given to 0.01 seconds);
 - **Transponder System Timing**. Automatic timing provided by radio signal devices. Road races use a variety of chip timing systems, precision is less important than recording thousands of people easily in the right order. 
-
- 
 
 Sometimes may be of interest gathering and representing information about devices and the specific conditions of timekeeping. Thus, timekeeping is represented by the following properties:
 
@@ -321,7 +339,6 @@ Sometimes may be of interest gathering and representing information about device
 | name | Name of the method used for timekeeping (i.e., `Hand Timing`, `Fully Automatic` or `Transponder System Timing`) | Text |
 | description | Description and notes about the method used for timekeeping. | Text |
 | device | Brand, model and features of the device/system used for timekeeping. | Text |
-
 
 
 ### Venues
@@ -483,6 +500,8 @@ The most used codes are:
 
 Combined events use IAAF Scoring Tables to assign points according to performances. There is no specific code for `points`.
 
+Examples will be provided with recommendations about the use of these quantitative units.
+
 
 ### Gender
 
@@ -579,6 +598,8 @@ So, in summary:
 | 100+ | `M100` | `W100` |
 
 Discussion under [Issue #4](https://github.com/w3c/opentrack-cg/issues/4).
+
+**Category** should be flexible to allow organizers to create virtual categories or adapt the *official* ones.
 
 ### Territories and countries
 
