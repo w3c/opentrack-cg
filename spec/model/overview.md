@@ -15,6 +15,7 @@ OpenTrack descriptions need homogeneous classes, properties and data types to sp
 Some of the entities referred in this document, are named using abbreviations. These are the main organizations involved in the management and definition of Athletics rules:
 
 * AIMS - [Association of International Marathons and Distance Races](http://www.aimsworldrunning.org)
+* EA - [European Athletics](http://www.european-athletics.org/)
 * IAAF - [International Association of Athletics Federations](http://iaaf.org)
 * IAU - [International Association of Ultrarunners](http://www.iau-ultramarathon.org)
 * IOC - [International Olympic Committee](https://www.olympic.org/the-ioc)
@@ -80,11 +81,11 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | weight | Athlete's weight. | [Quantitative Value](#quantitative-values) |
 | nationality | Athlete's nationality. | [Country](#countries) |
 | birth place | Locality and country of birt (e.g. "Tallinn, Estonia") | Text |
-| federation | Federation which the athlete is attached to. | [Athletics Federation](#athletics-federations) |
-| coach | Athlete's main coach. | [Person](#persons) |
-| sponsor | Athlete's sponsor. | [Person](#persons) or [Organization](#organizations) |
-| club | Club which the athlete is affiliated to. | **[Club](#club)** |
-| team | Team which the athlete is part of (for instance, a National Team). | **[Team](#teams)** |
+| federation(s) | Federation(s) which the athlete is attached to. | [Athletics Federation](#athletics-federations) |
+| coach(es) | Athlete's main coach(es). | [Person](#persons) |
+| sponsor(s) | Athlete's sponsor(s). | [Person](#persons) or [Organization](#organizations) |
+| club(s) | Club(s) which the athlete is affiliated to. | **[Club](#club)** |
+| team(s) | Team(s) which the athlete is part of (for instance, a National Team). | **[Team](#teams)** |
 | best(s) | Athlete's best performances. | [Best](#bests) |  
 
 ### Clubs
@@ -103,8 +104,8 @@ Clubs may be described using the following attributes:
 | logo | Logo or flag of the club. | URL |
 | email | Main email address of the club. | Text |
 | url | Club homepage URL. | URL |
-| federation | Federation which the club is attached to. | [Athletics Federation](#athletics-federations) |
-| sponsor | Sponsor of the club. | [Person](#persons) or [Organization](#organizations) |
+| federation(s) | Federation(s) which the club is attached to. | [Athletics Federation](#athletics-federations) |
+| sponsor(s) | Sponsor(s) of the club. | [Person](#persons) or [Organization](#organizations) |
 | team(s) | Teams(s) attached to this club. | **[Team](#teams)** |
 
 
@@ -123,9 +124,9 @@ Teams may be described using the following attributes:
 | image | Picture of the team. | URL |
 | logo | Logo or flag of the team. | URL |
 | url | Webpage URL about the team. | URL |
-| federation | Federation which the team is attached to. | [Athletics Federation](#athletics-federations) |
-| sponsor | Sponsor of the team. | [Person](#persons) or [Organization](#organizations) |
-| coach | Main coach of the team. | [Person](#persons) |
+| federation(s) | Federation(s) which the team is attached to. | [Athletics Federation](#athletics-federations) |
+| sponsor(s) | Sponsor(s) of the team. | [Person](#persons) or [Organization](#organizations) |
+| coach(es) | Main coach(es) of the team. | [Person](#persons) |
 | captain(s) | Athlete(s) who represents the team. | **[Athlete](#athletes)** |
 | best(s) | Best performances of the team (e.g., relay competitions). | [Best](#bests) |  
 | athlete(s) | Athlete(s) affiliated to the team. | **[Athlete](#athletes)** |
@@ -150,9 +151,9 @@ Competitions may be described by the following attributes:
 | start date | Date and time when the event starts. | [Date and Time](#date,-pime-and-periods) |
 | end date | Date and time when the event ends. | [Date and Time](#date,-pime-and-periods) |
 | status | Status of the event (planned, cancelled, etc.) | [Event Status](#Event-Status) |
-| organizer | Person or organization that organizes the event. | [Person](#persons) or [Organization](#organizations) |
-| contributor | Person or organization that collaborates in the organization of the event. | [Person](#persons) or [Organization](#organizations) |
-| sponsor | Person or organization that sponsors the event. | [Person](#persons) or [Organization](#organizations) |
+| organizer(s) | Person(s) or organization(s) that organizes the event. | [Person](#persons) or [Organization](#organizations) |
+| contributor(s) | Person(s) or organization(s) that collaborates in the organization of the event. | [Person](#persons) or [Organization](#organizations) |
+| sponsor(s) | Person(s) or organization(s) that sponsors the event. | [Person](#persons) or [Organization](#organizations) |
 | attendee(s) | Person(s) who attends the event. | [Person](#persons) |
 | event(s) | Competition events that are part of the main event. | **[Athletics Event](#athletics-events)** |
 
@@ -235,7 +236,7 @@ Trials may be described by the following properties:
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the trial. | Text |
 | attempt | Number indicating the correlative number of the attempt. | Number |
-| feature | Feature relative to the result of the trial (i.e., `failed`, `cleared`, `passed`, `eliminated`, `did not jump`, etc.). | [Start Lists and Results](#start-lists-and-results) |
+| feature(s) | Feature(s) relative to the result of the trial (i.e., `failed`, `cleared`, `passed`, `eliminated`, `did not jump`, etc.). | [Start Lists and Results](#start-lists-and-results) |
 | performance | Performance achieved in case the trial was valid. | [Performance](#performances) |
 | valid | Flag indicating if the trial was valid or not (failure) | Boolean |
 | isSubstitute | Flag indicating if the trial is a *substitute* trial. | Boolean |
@@ -338,7 +339,7 @@ Venues can be described by the following attributes:
 | image | Picture about the venue. | URL |
 | geo | Coordinates of the venue. | Text |
 | map | URL to a map pointing to the venue. | URL |
-| telephone | Telephone number of the venue. | Text |
+| telephone(s) | Telephone number(s) of the venue. | Text |
 | fax number | Fax number of the venue. | Text |
 | type | Type of the venue. | **[Venue Type](#venue-type)** |
 
@@ -392,7 +393,7 @@ Organizations can be represented by the following properties:
 | logo | Logo of the organization. | URL |
 | email | Main email address. | Text |
 | url | Webpage URL about the organization. | URL |
-| telephone | Main telephone number of the organization. | Text |
+| telephone(s) | Main telephone number(s) of the organization. | Text |
 
 
 ### Athletics Federations
@@ -404,7 +405,7 @@ Federations will have the properties of [Organizations](#organizations), adding 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | spatial | Spatial coverage of the federation, usually one or more administrative areas (city, region, country, etc.) | [Territory and Country](#territories-and-countries) | 
-| federated into | Higher-level organization to which this federation is attached. | [Athletics Federation](#athletics-federations) | 
+| federated into | Higher-level organization(s) to which this federation is attached. | [Athletics Federation](#athletics-federations) | 
 
 
 
