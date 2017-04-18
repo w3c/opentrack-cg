@@ -15,8 +15,8 @@ OpenTrack descriptions need homogeneous classes, properties and data types to sp
 Some of the entities referred in this document, are named using abbreviations. These are the main organizations involved in the management and definition of Athletics rules:
 
 * AIMS - [Association of International Marathons and Distance Races](http://www.aimsworldrunning.org)
-* EA - [European Athletics](http://www.european-athletics.org/)
-* IAAF - [International Association of Athletics Federations](http://iaaf.org)
+* EA - [European Athletics](http://www.european-athletics.org/) ([EA's Member Federations](http://www.european-athletics.org/member-federations/)).
+* IAAF - [International Association of Athletics Federations](http://iaaf.org) ([IAAF's Member Federations](https://www.iaaf.org/about-iaaf/structure/member-federations))
 * IAU - [International Association of Ultrarunners](http://www.iau-ultramarathon.org)
 * IOC - [International Olympic Committee](https://www.olympic.org/the-ioc)
 * IPC - [International Paralympic Committee](http://www.paralympic.org/athletics)
@@ -39,7 +39,7 @@ The model is related to the competition management in Athletics. By using this m
 
 * **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics events. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information. Both athletes and teams can be attached to [Clubs](#clubs) as organizations.
 
-* **[Athletics Competitions](#athletics-competitions)**. Organized occasion where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, etc.). Athletics events may include one or several [Athletics Events](#athletics-events) (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women).
+* **[Athletics Competitions](#athletics-competitions)**. Organized occasion where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fundraising road races, etc.). Athletics events may include one or several [Athletics Events](#athletics-events) (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women).
 
 * **[Athletics Events](#athletics-events)**. Competition events corresponding to specific disciplines where competitors take part (e.g., 100m Men). Events are composed of one or more rounds. 
 
@@ -134,7 +134,7 @@ Teams may be described using the following attributes:
 
 ### Athletics Competitions
 
-Events where Athletics competitions are planed and held. These competitions take place at a specific location during a concrete period of time. Athletics events may include one or several [Athletics Events](#athletics-events) of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). 
+Events where Athletics competitions are planed and held. These competitions take place at a specific location during a concrete period of time. Athletics events may include one or several [Athletics Events](#athletics-events) of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fundraising road races or school races are also considered Athletics competitions.
 
 _Examples of Athletics competitions are: [IAAF World Championships London 2017](http://www.iaafworldchampionships.com), [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/), [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/), [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx), and [Summer Olympic Games Rio 2016](https://www.olympic.org/rio-2016/athletics)._ 
 
