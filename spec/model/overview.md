@@ -307,9 +307,11 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 ### Timekeeping
 
 There are three alternative methods of timekeeping, recognised as official by IAAF:
-- **Hand Timing** (`HT`);
-- **Fully Automatic Timing** (`FAT`), obtained from a Photo Finish System;
-- **Transponder System Timing**. Automatic timing provided by radio signal devices.
+- **Hand Timing** (`HT`) – Hand Timing is usually given to 0.1 seconds (average the different timekeepers and rounded up);
+- **Fully Automatic Timing** (`FAT`), obtained from a Photo Finish System (FAT usually given to 0.01 seconds);
+- **Transponder System Timing**. Automatic timing provided by radio signal devices. Road races use a variety of chip timing systems, precision is less important than recording thousands of people easily in the right order. 
+
+ 
 
 Sometimes may be of interest gathering and representing information about devices and the specific conditions of timekeeping. Thus, timekeeping is represented by the following properties:
 
