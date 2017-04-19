@@ -89,45 +89,7 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | team(s) | Team(s) which the athlete is part of (for instance, a National Team). | **[Team](#teams)** |
 | best(s) | Athlete's best performances. | [Best](#bests) |  
 
-
-Example of [athlete](http://www.thepowerof10.info/athletes/profile.aspx?athleteid=482) described using this model:
-````
-{
-    identifier : <Mo_Farah>,
-    name : 'Mohamed Muktar Jama Farah',
-    family name : 'Farah',
-    given name : 'Mohamed Muktar Jama',
-    alternate name : 'Mo Farah',
-    url : 'http://www.mofarah.com',
-    gender : 'Male' ,
-    image : 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/MoPodiumRio2016.png/260px-MoPodiumRio2016.png',
-    nationality : <UK>,
-    email : 'fakeemail@example.org',
-    height : { value: 175, units: 'CMT' },
-    weight : { value: 65, units: 'KGS' },
-    birth place : 'Mogadishu, Somalia' ,
-    date of birth : '1983-04-23',
-    address : 
-        { 
-            locality : 'Portland' ,
-            country : 'USA'
-        },
-    coach : [ { name : 'Alberto Salazar' }]
-    sponsor : <Nike>,
-    club : 
-        [ 
-            <Newham & Essex Beagles> ,
-            <Nike Oregon Project>
-        ],
-    federation : 
-        [ 
-            <England Athletics> , 
-            <USATF> 
-        ],
-    bests : <MoFarah Bests>
-}
-````
-
+[Use cases and examples](./examples/athletes).
 
 ### Clubs
 
@@ -144,10 +106,15 @@ Clubs may be described using the following attributes:
 | image | Picture of the club. | URL |
 | logo | Logo or flag of the club. | URL |
 | email | Main email address of the club. | Text |
+| telephone | Telephone number(s) of the club | Text |
+| fax | Fax number(s) of the club | Text |
 | url | Club homepage URL. | URL |
 | federation(s) | Federation(s) which the club is attached to. | [Athletics Federation](#athletics-federations) |
 | sponsor(s) | Sponsor(s) of the club. | [Person](#persons) or [Organization](#organizations) |
 | team(s) | Teams(s) attached to this club. | **[Team](#teams)** |
+
+
+[Use cases and examples](./examples/clubs).
 
 
 ### Teams
@@ -167,10 +134,12 @@ Teams may be described using the following attributes:
 | url | Webpage URL about the team. | URL |
 | federation(s) | Federation(s) which the team is attached to. | [Athletics Federation](#athletics-federations) |
 | sponsor(s) | Sponsor(s) of the team. | [Person](#persons) or [Organization](#organizations) |
-| coach(es) | Main coach(es) of the team. | [Person](#persons) |
 | captain(s) | Athlete(s) who represents the team. | **[Athlete](#athletes)** |
+| coach(es) | Person(s) who acts as coach for the team. | **[Person](#persons)** |
 | best(s) | Best performances of the team (e.g., relay competitions). | [Best](#bests) |  
 | athlete(s) | Athlete(s) affiliated to the team. | **[Athlete](#athletes)** |
+
+[Use cases and examples](./examples/teams).
 
 
 ### Athletics Competitions
@@ -198,6 +167,7 @@ Competitions may be described by the following attributes:
 | attendee(s) | Person(s) who attends the event. | [Person](#persons) |
 | event(s) | Competition events that are part of the main event. | **[Athletics Event](#athletics-events)** |
 
+[Use cases and examples](./examples/competitions).
 
 ### Athletics Events
 
@@ -219,6 +189,7 @@ Athletics events may be described by the following attributes:
 | discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
 | category | The specific category for this event competition. | [Category](#category) |
 
+[Use cases and examples](./examples/events).
 
 ### Competition Rounds
 
@@ -236,12 +207,12 @@ Rounds may be described by the following properties:
 | name | Descriptive name of the round and/or heat. | Text |
 | description | Longer descriptive text of the round and/or heat. | Text |
 | date | Date and time where the round and/or heat is held. | [Date and Time](#date,-time-and-periods) |
-| age range | Description of the athletes' range of age to be eligible for the competition.  | Text |
 | time-keeping | Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
 | qualification criteria | Details what a competitor has to do to get to the next round. | Text |
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
 | results | List with the results after the celebration of the competition.  | **[Results](#results)** |
 
+[Use cases and examples](./examples/rounds).
 
 #### Field Rounds
 
@@ -298,6 +269,7 @@ Each entry of the start list may include the following properties:
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the entry in the list. | Text |
+| competitor | Athlete or team competing in this round. | [Athlete](#athletes) or [Team](#teams) |
 | feature(s) | Set of features and notes included by officials in the starting list (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
 | under protest | Flag indicating the competitor will take part in the round and/or heat competing 'under protest'. | Boolean |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
@@ -305,6 +277,8 @@ Each entry of the start list may include the following properties:
 | order | Competitor's order in the start list. | Number |
 | lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
 | score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
+
+[Use cases and examples](./examples/startList).
 
 ### Results
 
@@ -319,6 +293,7 @@ Each entry of the results may include the following properties:
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the entry in the list. | Text |
+| competitor | Athlete or team competing in this round. | [Athlete](#athletes) or [Team](#teams) |
 | order | (Rank) position of the competitor in the rank after the round and/or heat. | Number |
 | feature(s) | Set of features and notes included by officials after the round and/or heat (e.g., Red Card in Race Walking).  | **[Start Lists and Results](#start-lists-and-results)** |
 | under protest | Flag indicating the competitor took part in the round and/or heat competing 'under protest'. | Boolean |
@@ -327,6 +302,8 @@ Each entry of the results may include the following properties:
 | record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
 | timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-time-and-periods) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
+
+[Use cases and examples](./examples/results).
 
 ### Performances
 
@@ -344,6 +321,7 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 | record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
 | best(s) | Flags indicating bests achieved after the competition round (e.g., Personal Best, Season Leader, etc.). | [Best](#bests) |
 
+[Use cases and examples](./examples/performances).
 
 ### Category
 
@@ -403,6 +381,8 @@ Venues can be described by the following attributes:
 | fax number | Fax number of the venue. | Text |
 | type | Type of the venue. | **[Venue Type](#venue-type)** |
 
+
+See [RunTrack Directory](http://www.runtrackdir.com/details.asp?track=london-nh)
 
 ### Postal Addresses
 
