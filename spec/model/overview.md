@@ -80,6 +80,7 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | height | Athlete's height. | [Quantitative Value](#quantitative-values) |
 | weight | Athlete's weight. | [Quantitative Value](#quantitative-values) |
 | nationality | Athlete's nationality. | [Country](#countries) |
+| date of birth | Date of birth. | [Date and Time](#date,-time-and-periods) |
 | birth place | Locality and country of birt (e.g. "Tallinn, Estonia") | Text |
 | federation(s) | Federation(s) which the athlete is attached to. | [Athletics Federation](#athletics-federations) |
 | coach(es) | Athlete's main coach(es). | [Person](#persons) |
@@ -87,6 +88,46 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | club(s) | Club(s) which the athlete is affiliated to. | **[Club](#club)** |
 | team(s) | Team(s) which the athlete is part of (for instance, a National Team). | **[Team](#teams)** |
 | best(s) | Athlete's best performances. | [Best](#bests) |  
+
+
+Example of [athlete](http://www.thepowerof10.info/athletes/profile.aspx?athleteid=482) described using this model:
+````
+{
+    identifier : <Mo_Farah>,
+    name : 'Mohamed Muktar Jama Farah',
+    family name : 'Farah',
+    given name : 'Mohamed Muktar Jama',
+    alternate name : 'Mo Farah',
+    url : 'http://www.mofarah.com',
+    gender : 'Male' ,
+    image : 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/MoPodiumRio2016.png/260px-MoPodiumRio2016.png',
+    nationality : <UK>,
+    email : 'fakeemail@example.org',
+    height : { value: 175, units: 'CMT' },
+    weight : { value: 65, units: 'KGS' },
+    birth place : 'Mogadishu, Somalia' ,
+    date of birth : '1983-04-23',
+    address : 
+        { 
+            locality : 'Portland' ,
+            country : 'USA'
+        },
+    coach : [ { name : 'Alberto Salazar' }]
+    sponsor : <Nike>,
+    club : 
+        [ 
+            <Newham & Essex Beagles> ,
+            <Nike Oregon Project>
+        ],
+    federation : 
+        [ 
+            <England Athletics> , 
+            <USATF> 
+        ],
+    bests : <MoFarah Bests>
+}
+````
+
 
 ### Clubs
 
@@ -148,8 +189,8 @@ Competitions may be described by the following attributes:
 | location | Venue where the event is held (for instance, Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | url | Webpage URL about the event. | URL |
 | image | Picture about the event. | URL |
-| start date | Date and time when the event starts. | [Date and Time](#date,-pime-and-periods) |
-| end date | Date and time when the event ends. | [Date and Time](#date,-pime-and-periods) |
+| start date | Date and time when the event starts. | [Date and Time](#date,-time-and-periods) |
+| end date | Date and time when the event ends. | [Date and Time](#date,-time-and-periods) |
 | status | Status of the event (planned, cancelled, etc.) | [Event Status](#Event-Status) |
 | organizer(s) | Person(s) or organization(s) that organizes the event. | [Person](#persons) or [Organization](#organizations) |
 | contributor(s) | Person(s) or organization(s) that collaborates in the organization of the event. | [Person](#persons) or [Organization](#organizations) |
@@ -171,7 +212,7 @@ Athletics events may be described by the following attributes:
 | identifier | Unique character string to identify the event. | Text |
 | name | Descriptive name of the event (e.g., `1-1-2-4 Medley Relay Men`). | Text |
 | description | Descriptive name of the event (e.g., `Medley Relay 800 meters Men: two times 100 meters legs, a 200 meters leg and a 400 meters leg`). | Text |
-| date | Date and time where the competition is held. | [Date and Time](#date,-pime-and-periods) |
+| date | Date and time where the competition is held. | [Date and Time](#date,-time-and-periods) |
 | location | Venue where this competition is held (for instance, Main Outdoor Track at Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | round(s) | Round(s) performed as part of the competition (preliminary heats, semifinals, final, mass start waves in road races, etc.).  | **[Competition Round](#competition-rounds)** |
 | combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
@@ -194,7 +235,7 @@ Rounds may be described by the following properties:
 | identifier | Unique character string to identify the round and/or heat. | Text |
 | name | Descriptive name of the round and/or heat. | Text |
 | description | Longer descriptive text of the round and/or heat. | Text |
-| date | Date and time where the round and/or heat is held. | [Date and Time](#date,-pime-and-periods) |
+| date | Date and time where the round and/or heat is held. | [Date and Time](#date,-time-and-periods) |
 | age range | Description of the athletes' range of age to be eligible for the competition.  | Text |
 | time-keeping | Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
 | qualification criteria | Details what a competitor has to do to get to the next round. | Text |
@@ -284,7 +325,7 @@ Each entry of the results may include the following properties:
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | score points | Score points earned by the competitor in a specific round and/or heat in case of Combined Events (i.e., Decathlon, Heptathlon) and other team competitions (e.g. team competitions using score age grading). | Number |
 | record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
-| timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-pime-and-periods) |
+| timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-time-and-periods) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
 
 ### Performances
