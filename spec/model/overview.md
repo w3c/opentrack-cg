@@ -278,7 +278,7 @@ Each entry of the start list may include the following properties:
 | lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
 | score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
 
-[Use cases and examples](./examples/startList).
+[Use cases and examples](./examples/startLists).
 
 ### Results
 
