@@ -184,7 +184,8 @@ Athletics events may be described by the following attributes:
 | identifier | Unique character string to identify the event. | Text |
 | name | Descriptive name of the event (e.g., `1-1-2-4 Medley Relay Men`). | Text |
 | description | Descriptive name of the event (e.g., `Medley Relay 800 meters Men: two times 100 meters legs, a 200 meters leg and a 400 meters leg`). | Text |
-| date | Date and time where the competition is held. | [Date and Time](#date,-time-and-periods) |
+| start date | Date and time when the event starts. | [Date and Time](#date,-time-and-periods) |
+| end date | Date and time when the event ends. | [Date and Time](#date,-time-and-periods) |
 | location | Venue where this competition is held (for instance, Main Outdoor Track at Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | round(s) | Round(s) performed as part of the competition (preliminary heats, semifinals, final, mass start waves in road races, etc.).  | **[Competition Round](#competition-rounds)** |
 | combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
