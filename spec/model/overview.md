@@ -155,6 +155,7 @@ Competitions may be described by the following attributes:
 | identifier | Unique character string to identify the competition. | Text |
 | name | Descriptive name of the competition. | Text |
 | alternate name | An alias to name the competition. | Text |
+| description | About the competition. | Text |
 | location | Venue where the event is held (for instance, Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | url | Webpage URL about the event. | URL |
 | image | Picture about the event. | URL |
