@@ -203,6 +203,8 @@ Competition rounds aims at qualifying athletes to next round until the final. Th
 
 _Examples of Competition rounds are: 110m Hurdles Men **Preliminary Round Heat 1**, 10,000m Men **Final**, and 110 Hurdles Man **Semifinal 1**._  
 
+Rounds in **Field events** include [Trials Rounds](#trials-rounds), where each athlete have several attempts to achieve the best performance. Depending on the discipline and the number of competitors, the number of trials varies. Athletes will be credited with their best valid performances after the rounds of trials.
+
 Rounds may be described by the following properties:
 
 | Property | Description | Value Type |
@@ -211,35 +213,15 @@ Rounds may be described by the following properties:
 | name | Descriptive name of the round and/or heat. | Text |
 | description | Longer descriptive text of the round and/or heat. | Text |
 | date | Date and time where the round and/or heat is held. | [Date and Time](#date,-time-and-periods) |
-| time-keeping | Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
+| time-keeping | (Timed Events) Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
 | qualification criteria | Details what a competitor has to do to get to the next round. | Text |
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
 | results | List with the results after the celebration of the round.  | **[Results](#results)** |
+| starting height | (Vertical jumps) The starting height the bar is raised at the start of the round. | [Quantitative Value](#quantitative-values) |
+| increasing height | (Vertical jumps) The subsequent heights to which the bar will be raised at the end of each round of trials. | Text |
+| trials rounds(s) | Rounds of trials corresponding to a field event. | [Trials Round](#trials-rounds) |
 
 [Use cases and examples](./examples).
-
-#### Field Rounds
-
-Rounds in **Field events** include [Trials Rounds](#trials-rounds), where each athlete have several attempts to achieve the best performance. Depending on the discipline and the number of competitors, the number of trials varies. Athletes will be credited with their best valid performances after the rounds of trials.
-
-In Vertical Jump Events, rounds of trials are different. See [below](#vertical-jump-rounds).
-
-Rounds in Field Events are rounds with additional properties (including the previous ones):
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| trials rounds(s) | Rounds of trials corresponding to a field round. | [Trials Round](#trials-rounds) |
-
-
-##### Vertical Jumps Rounds
-
-Specific rounds for High Jump and Pole Vault Events. This entity inherits from [Field Round](#field-rounds). It also includes the following properties:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| trials rounds(s) | Rounds of trials corresponding to a field round. | [Trials Round](#trials-rounds) |
-| starting height | The starting height the bar is raised at the start of the round. | [Quantitative Value](#quantitative-values) |
-| increasing height | The subsequent heights to which the bar will be raised at the end of each round of trials. | Text |
 
 
 ### Trials Rounds
@@ -248,26 +230,22 @@ Specific rounds for High Jump and Pole Vault Events. This entity inherits from [
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the round of trials. | Text |
 | competitor | Athlete or team competing in this round of trials. | [Athlete](#athletes) or [Team](#teams) |
-| trial(s) | Athlete's attempt in this round of trials. | [Field Trial](#field-trials) |
-
-
-#### Vertical Trials Rounds
-
-Vertical Jump competitions have disctinct rules in comparison with the rest of field disciplines. Competition is structured in rounds (incresing height) that can be passed by athletes after a limited number of attempts.  
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| competitor | Athlete or team competing in this round of trials. | [Athlete](#athletes) or [Team](#teams) |
-| trial(s) | Athlete's attempt in this round of trials. | [Field Trial](#field-trials) |
-| number of trial round | Number of the round of trials. | Number |
-| height | The target height the bar is raised for this round. | [Quantitative Value](#quantitative-values) |
+| feature(s) | Set of features and notes included by officials for this round of trials  (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
+| under protest | Flag indicating the competitor will take part in the round of trials. | Boolean |
+| bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
+| transponder identifier | (Timed events) Text or code identifying the competitor by a transponder. | Text |
+| order | Competitor's order in the start list of this round. | Number |
+| score points | Score points accumulated by the competitor at the start of the round in case of Combined Events such as Decathlon and Heptathlon. | Number |
+| roundNumber | Number of the round of trials. | Number |
+| height | (Vertical Jumps) The target height the bar is raised for this round. | [Quantitative Value](#quantitative-values) |
 | trial(s) | Athlete's attempt in this round of trials. | [Field Trial](#field-trials) |
 
 
 ### Field Trials
 
-**Field events** are composed of **rounds of trials**, where the number of trials is variable. Except for Vertical Jumps, each competitor only will have no more than one trial recorded in any one round of trials of the competition. 
+**Field events** are composed of **rounds of trials**, where the number of trials is variable. Except for Vertical Jumps, each competitor only will have no more than one trial recorded in any one round of trials of the competition. Anyway, all trials belonging to rounds of trials will have the same structure, independently of the discipline.
 
 Except in Vertical Jumps, a valid trial shall be indicated by the measurement taken. For the standard abbreviations and symbols to be used in all other cases see [Start lists and results](#Start lists and results). A *´substitute´* trial is given in case an athlete is hampered in a trial or it cannot be correctly recorded.
 
@@ -276,8 +254,11 @@ Trials may be described by the following properties:
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the trial. | Text |
+| competitor | Athlete or team competing in this trials. | [Athlete](#athletes) or [Team](#teams) |
+| feature(s) | Set of features and notes included by officials for this attempt  (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
+| under protest | Flag indicating the competitor will take part in the round of trials. | Boolean |
+| bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | attempt | Number indicating the correlative number of the attempt. | Number |
-| feature(s) | Feature(s) relative to the result of the trial (i.e., `failed`, `cleared`, `passed`, `eliminated`, `did not jump`, etc.). | [Start Lists and Results](#start-lists-and-results) |
 | performance | Performance achieved in case the trial was valid. | [Performance](#performances) |
 | valid | Flag indicating if the trial was valid or not (failure) | Boolean |
 | isSubstitute | Flag indicating if the trial is a *substitute* trial. | Boolean |
