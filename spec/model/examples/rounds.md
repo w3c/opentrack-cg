@@ -69,7 +69,7 @@ Example of rounds of Heptathlon Events [at the 2016 European Champioships](https
 }
 
 // Two groups (A,B) in High Jump 
-// Instance of 'Vertical Jumps Round'
+// Instance of 'Field Round'
 {
     identifier : <2016_EA_Championships_Heptathlon_HJ_Group_A>,
     name : 'Heptathlon High Jump - Group A',
@@ -93,7 +93,7 @@ Example of rounds of Heptathlon Events [at the 2016 European Champioships](https
             // and so on…
         ],
     // Rounds of trials for each athlete in vertical jumps are described as instances of 'Trials Round'
-    vertical_jump_trials_round : 
+    trials_round : 
         [
             // 4 rounds of trials for 3 athletes:
             // Trials Round 1 with 3 athletes
@@ -113,13 +113,13 @@ Example of rounds of Heptathlon Events [at the 2016 European Champioships](https
 }
 
 // Two groups (A,B) in Javelin Throw, Shot Put and Long Jump (all with the same structure)
-// Instance of 'Field Rounds'
+// Instance of 'Field Round'
 {
     identifier : <2016_EA_Championships_Heptathlon_JT_Group_B>,
-    name : 'Heptathlon Javelin Throw - Group B',
+    name : 'Heptathlon High Jump - Group B - Athlete 1',
     description : 'Group B in Javelin Throw at Heptathlon',
     date : '2016-07-09T16:30:00+01:00',
-    start list :
+    start_list :
         [
             <2016_EA_Championships_Heptathlon_JT_Group_B_StartList_Item_1>,
             <2016_EA_Championships_Heptathlon_JT_Group_B_StartList_Item_2>,
@@ -145,3 +145,51 @@ Example of rounds of Heptathlon Events [at the 2016 European Champioships](https
 }
 
 ```
+
+
+## Trial Rounds
+
+Following the previous example of [Heptathlon at European Championships](#heptathlon-at-european-championships), field events may have different rounds (distribution in groups), and these rounds have "round of trials" in field events.
+
+
+```javascript
+// Round of trials (Field Round) for each athlete in the Group 'A' of High Jump (Athlete 2 in Round 1) 
+{
+    identifier : <2016_EA_Championships_Heptathlon_HJ_Group_A_Trials_Round_1_Athlete2>,
+    competitor : <2016_EA_Athlete2>,          // Athlete
+    bib_identifier: "122",
+    order: 1,
+    // feature : [],                          // Potential features about this round
+    round_number : 1,
+    trial :                                   // List of Field Trials
+        [
+            <2016_EA_Championships_Heptathlon_HJ_Group_A_Trials_Round_1_Athlete2_Trial1>,
+            <2016_EA_Championships_Heptathlon_HJ_Group_A_Trials_Round_1_Athlete2_Trial2> // Pass round at 2nd Attempt 
+        ]
+}
+
+// These trials (attempts) can be defined as instances of 'Field Trial':
+// Athlete 2 - Trial 1
+{
+    identifier : <2016_EA_Championships_Heptathlon_HJ_Group_A_Trials_Round_1_Athlete2_Trial1>,
+    competitor : <2016_EA_Athlete2>,          // Athlete
+    timestamp : '2016-07-09T16:30:00+01:00',
+    feature : [ <NM> ],                       // List of features related to the result
+    attempt : 1,
+    valid: "false"                            // False attempt
+}
+
+// Athlete 2 - Trial 2
+{
+    identifier : <2016_EA_Championships_Heptathlon_HJ_Group_A_Trials_Round_1_Athlete2_Trial2>,
+    competitor : <2016_EA_Athlete2>,          // Athlete
+    timestamp : '2016-07-09T16:30:00+01:00',
+    feature : [ <–> ],                        // List of features related to the result
+    attempt : 2,
+    valid : "true",                            // False attempt
+    performance : '65m'                        // Better as quantitative value
+}
+
+```
+
+
