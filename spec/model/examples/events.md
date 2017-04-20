@@ -4,6 +4,7 @@
 
 Example of match [at a Cross Country League](http://surreyleague.org) described by this model using pseudocode (it is not real JSON schema):
 ```javascript
+// Instance of Event (is part of a bigger competition)
 {
     identifier : <Surrey_League_201617_Div1_Men_Match1>,
     name : 'Division 1 Men - Match 1',
@@ -62,7 +63,7 @@ Example of match [at a Cross Country League](http://surreyleague.org) described 
 ```
 
 
-## Hepthathlon at European Championships
+## Heptathlon at European Championships
 
 Example of Heptathlon [at the 2016 European Champioships](https://en.wikipedia.org/wiki/2016_European_Athletics_Championships_%E2%80%93_Women%27s_heptathlon) described by this model using pseudocode (it is not real JSON schema):
 
