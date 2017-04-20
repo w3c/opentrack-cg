@@ -156,7 +156,7 @@ Example of Heptathlon [at the 2016 European Champioships](https://en.wikipedia.o
         ]
 }
 
-// Shot Put in Heptathlon (Javeling Throw and Long Jump have similar descriptions)
+// Shot Put in Heptathlon (Javelin Throw and Long Jump have similar descriptions)
 {
     identifier : <2016_European_Athletics_Championships_Heptathlon_SP>,
     name : 'Heptathlon - Shot Put',

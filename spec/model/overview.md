@@ -220,13 +220,15 @@ Rounds may be described by the following properties:
 
 #### Field Rounds
 
-Rounds in **Field events** are rounds of [Trials](#field-trials), where athletes have several attempts to achieve the best performance. Depending on the discipline and the number of competitors, number of trials varies. Athletes will be credited with their best valid performances after the rounds of trials.
+Rounds in **Field events** include [Trials Rounds](#trials-rounds), where each athlete have several attempts to achieve the best performance. Depending on the discipline and the number of competitors, the number of trials varies. Athletes will be credited with their best valid performances after the rounds of trials.
+
+In Vertical Jump Events, rounds of trials are different. See [below](#vertical-jump-rounds).
 
 Rounds in Field Events are rounds with additional properties (including the previous ones):
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| trial(s) | Trial(s) corresponding to a round. | [Field Trial](#field-trials) |
+| trials rounds(s) | Rounds of trials corresponding to a field round. | [Trials Round](#trials-rounds) |
 
 
 ##### Vertical Jumps Rounds
@@ -235,9 +237,32 @@ Specific rounds for High Jump and Pole Vault Events. This entity inherits from [
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
+| trials rounds(s) | Rounds of trials corresponding to a field round. | [Trials Round](#trials-rounds) |
 | starting height | The starting height the bar is raised at the start of the round. | [Quantitative Value](#quantitative-values) |
 | increasing height | The subsequent heights to which the bar will be raised at the end of each round of trials. | Text |
 
+
+### Trials Rounds
+
+**Field events** are composed of **rounds of trials** that are performed by each athlete. 
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| competitor | Athlete or team competing in this round of trials. | [Athlete](#athletes) or [Team](#teams) |
+| trial(s) | Athlete's attempt in this round of trials. | [Field Trial](#field-trials) |
+
+
+#### Vertical Trials Rounds
+
+Vertical Jump competitions have disctinct rules in comparison with the rest of field disciplines. Competition is structured in rounds (incresing height) that can be passed by athletes after a limited number of attempts.  
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| competitor | Athlete or team competing in this round of trials. | [Athlete](#athletes) or [Team](#teams) |
+| trial(s) | Athlete's attempt in this round of trials. | [Field Trial](#field-trials) |
+| number of trial round | Number of the round of trials. | Number |
+| height | The target height the bar is raised for this round. | [Quantitative Value](#quantitative-values) |
+| trial(s) | Athlete's attempt in this round of trials. | [Field Trial](#field-trials) |
 
 
 ### Field Trials
