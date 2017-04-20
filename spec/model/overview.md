@@ -89,7 +89,7 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | team(s) | Team(s) which the athlete is part of (for instance, a National Team). | **[Team](#teams)** |
 | best(s) | Athlete's best performances. | [Best](#bests) |  
 
-[Use cases and examples](./examples/athletes).
+[Use cases and examples](./examples).
 
 ### Clubs
 
@@ -114,7 +114,7 @@ Clubs may be described using the following attributes:
 | team(s) | Teams(s) attached to this club. | **[Team](#teams)** |
 
 
-[Use cases and examples](./examples/clubs).
+[Use cases and examples](./examples).
 
 
 ### Teams
@@ -139,7 +139,7 @@ Teams may be described using the following attributes:
 | best(s) | Best performances of the team (e.g., relay competitions). | [Best](#bests) |  
 | athlete(s) | Athlete(s) affiliated to the team. | **[Athlete](#athletes)** |
 
-[Use cases and examples](./examples/teams).
+[Use cases and examples](./examples).
 
 
 ### Athletics Competitions
@@ -158,6 +158,7 @@ Competitions may be described by the following attributes:
 | location | Venue where the event is held (for instance, Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | url | Webpage URL about the event. | URL |
 | image | Picture about the event. | URL |
+| logo | Logo of the event. | URL |
 | start date | Date and time when the event starts. | [Date and Time](#date,-time-and-periods) |
 | end date | Date and time when the event ends. | [Date and Time](#date,-time-and-periods) |
 | status | Status of the event (planned, cancelled, etc.) | [Event Status](#Event-Status) |
@@ -167,7 +168,7 @@ Competitions may be described by the following attributes:
 | attendee(s) | Person(s) who attends the event. | [Person](#persons) |
 | event(s) | Competition events that are part of the main event. | **[Athletics Event](#athletics-events)** |
 
-[Use cases and examples](./examples/competitions).
+[Use cases and examples](./examples).
 
 ### Athletics Events
 
@@ -189,7 +190,7 @@ Athletics events may be described by the following attributes:
 | discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
 | category | The specific category for this event competition. | [Category](#category) |
 
-[Use cases and examples](./examples/events).
+[Use cases and examples](./examples).
 
 ### Competition Rounds
 
@@ -212,7 +213,7 @@ Rounds may be described by the following properties:
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
 | results | List with the results after the celebration of the competition.  | **[Results](#results)** |
 
-[Use cases and examples](./examples/rounds).
+[Use cases and examples](./examples).
 
 #### Field Rounds
 
@@ -278,7 +279,7 @@ Each entry of the start list may include the following properties:
 | lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
 | score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
 
-[Use cases and examples](./examples/startLists).
+[Use cases and examples](./examples).
 
 ### Results
 
@@ -303,7 +304,7 @@ Each entry of the results may include the following properties:
 | timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-time-and-periods) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
 
-[Use cases and examples](./examples/results).
+[Use cases and examples](./examples).
 
 ### Performances
 
@@ -321,7 +322,7 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 | record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
 | best(s) | Flags indicating bests achieved after the competition round (e.g., Personal Best, Season Leader, etc.). | [Best](#bests) |
 
-[Use cases and examples](./examples/performances).
+[Use cases and examples](./examples).
 
 ### Category
 
