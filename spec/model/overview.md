@@ -191,6 +191,7 @@ Athletics events may be described by the following attributes:
 | combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
 | discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
 | category | The specific category for this event competition. | [Category](#category) |
+| results | List with the results after the celebration of all rounds of the event.  | **[Results](#results)** |
 
 [Use cases and examples](./examples).
 
@@ -213,7 +214,7 @@ Rounds may be described by the following properties:
 | time-keeping | Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
 | qualification criteria | Details what a competitor has to do to get to the next round. | Text |
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
-| results | List with the results after the celebration of the competition.  | **[Results](#results)** |
+| results | List with the results after the celebration of the round.  | **[Results](#results)** |
 
 [Use cases and examples](./examples).
 
