@@ -31,33 +31,161 @@ Some of the entities referred in this document, are named using abbreviations. T
 
 ## Overview of the model
 
-The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish information related to the following main entities.  
-
+The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish information related to the following main entities.
 
 ![Complete class model for this conceptual vocabulary](images/complete_overall_model.png)
 
+The UML diagram represents three main aspects of Athletics: 
 
-* **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics events. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information. Both athletes and teams can be attached to [Clubs](#clubs) as organizations.
+**Schedule and venues of Athletics events:**
 
 * **[Athletics Competitions](#athletics-competitions)**. Organized occasion where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fundraising road races, etc.). Athletics events may include one or several [Athletics Events](#athletics-events) (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women).
 
-* **[Athletics Events](#athletics-events)**. Competition events corresponding to specific disciplines where competitors take part (e.g., 100m Men). Events are composed of one or more rounds. 
-
-* **[Competition Rounds](#competition-rounds)**. Stages of Athletics competitions (e.g., Heats, Finals, etc.) where competitors are distributed in groups. Rounds depend on the competition rules for each discipline (i.e, horizontal and vertical jumps have different rules regarding rounds). 
-
-* **[Start List](#start-list)**. Ordered set of competitors (athletes or teams) qualified to compete in a specific competition round. Start list contains information about competitors, their marks and other competition information provided by judges.
-
-* **[Results](#results)**. Ordered list of competitors with their **performances** after a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
-
-* **[Performances](#performances)**. Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed).
-
-* **[Athletics Federations](#athletics-federations)**. Sports organizations in charge of governing and rule Athletics in specific territories. [Athletics Federations](#athletics-federations) may be attached to other higher-level federations. **[Athletes](#athletes)**, **[Teams](#teams)**, and **[Clubs](#clubs) may be attached to federations. 
-
-* **[Timekeeping](#timekeeping)**. Method or system used for timekeeping.
+* **[Athletics Events](#athletics-events)**. Competition events corresponding to specific disciplines and categories where competitors take part (e.g., 100m Men). Events may be composed of several sub-events (e.g., Combined events such as Decathlon).
 
 * **[Venues](#venues)**. Location where events and competitions are held.
 
-## Competitors
+* **[Category](#category)**. Specific category of an event (e.g., Senior Men, U18 Women, etc.).
+
+**Competitors and affiliation:**
+
+* **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics events. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information. Both athletes and teams can be attached to [Clubs](#clubs) as organizations.
+
+* **[Athletics Federations](#athletics-federations)**. Sports organizations in charge of governing and rule Athletics in specific territories. [Athletics Federations](#athletics-federations) may be attached to other higher-level federations. **[Athletes](#athletes)**, **[Teams](#teams)**, and **[Clubs](#clubs) may be attached to federations. 
+
+**Competition management:**
+
+* **[Competition Rounds](#competition-rounds)**. Stages of Athletics competitions (e.g., Heats, Finals, etc.) where competitors are distributed in groups. Rounds depend on the competition rules for each discipline, so there is a difference between rounds within timed events, and rounds in field events. Vertical jumps have different rules regarding rounds in field events.  
+
+* **[Timekeeping](#timekeeping)**. Method or system used for timekeeping in timed events.
+
+* **[Start List](#start-list)**. Ordered set of competitors (athletes or teams) qualified to compete in a specific competition round. Start list contains information about competitors, the order of competition, and other competition information provided by judges. 
+
+* **[Results](#results)**. Ordered list of competitors with their **performances** after an event or a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
+
+* **[Performances](#performances)**. Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed).
+
+* **[Trials Rounds](#trials-rounds)**. Rounds of Field Events include one of several rounds of [Trials](#field-trials), where athletes have different attempts to achieve their best performance in the competition.  
+
+* **[Field Trials](#field-trials)**. Each one of the attempts performed by athletes within a round of trials ([Trial Round](#trials-rounds)).  
+
+
+
+## Schedule, Venues of Events
+
+### Athletics Competitions
+
+Events where Athletics competitions are planed and held. These competitions take place at a specific location during a concrete period of time. Athletics events may include one or several [Athletics Events](#athletics-events) of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fundraising road races or school races are also considered Athletics competitions.
+
+_Examples of Athletics competitions are: [IAAF World Championships London 2017](http://www.iaafworldchampionships.com), [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/), [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/), [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx), and [Summer Olympic Games Rio 2016](https://www.olympic.org/rio-2016/athletics)._ 
+
+Competitions may be described by the following attributes:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the competition. | Text |
+| name | Descriptive name of the competition. | Text |
+| alternate name | An alias to name the competition. | Text |
+| description | About the competition. | Text |
+| location | Venue where the event is held (for instance, Berlin Olympic Stadium). | [Venue](#venues) or Text |
+| url | Webpage URL about the event. | URL |
+| image | Picture about the event. | URL |
+| logo | Logo of the event. | URL |
+| start date | Date and time when the event starts. | [Date and Time](#date,-time-and-periods) |
+| end date | Date and time when the event ends. | [Date and Time](#date,-time-and-periods) |
+| status | Status of the event (planned, cancelled, etc.) | [Event Status](#Event-Status) |
+| organizer(s) | Person(s) or organization(s) that organizes the event. | [Person](#persons) or [Organization](#organizations) |
+| contributor(s) | Person(s) or organization(s) that collaborates in the organization of the event. | [Person](#persons) or [Organization](#organizations) |
+| sponsor(s) | Person(s) or organization(s) that sponsors the event. | [Person](#persons) or [Organization](#organizations) |
+| attendee(s) | Person(s) who attends the event. | [Person](#persons) |
+| event(s) | Competition events that are part of the main event. | **[Athletics Event](#athletics-events)** |
+
+[Use cases and examples](./examples).
+
+### Athletics Events
+
+Athletics events are those events that correspond to specific disciplines where competitors take part (e.g., 100m Men). These events may be part or broader Athletics competitions (e.g., 110m Hurdles at Summer Olympic Games). Athletics events are composed of one or more rounds, at least the final. 
+
+_Examples of Athletics events are: **110m Hurdles Men** at Summer Olympic Games, **Senior Women Race** at Cross Country World Championships, and **Javelin Throw Men** at European Throwing Cup._   
+
+Athletics events may be described by the following attributes: 
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the event. | Text |
+| name | Descriptive name of the event (e.g., `1-1-2-4 Medley Relay Men`). | Text |
+| description | Descriptive name of the event (e.g., `Medley Relay 800 meters Men: two times 100 meters legs, a 200 meters leg and a 400 meters leg`). | Text |
+| start date | Date and time when the event starts. | [Date and Time](#date,-time-and-periods) |
+| end date | Date and time when the event ends. | [Date and Time](#date,-time-and-periods) |
+| location | Venue where this competition is held (for instance, Main Outdoor Track at Berlin Olympic Stadium). | [Venue](#venues) or Text |
+| round(s) | Round(s) performed as part of the competition (preliminary heats, semifinals, final, mass start waves in road races, etc.).  | **[Competition Round](#competition-rounds)** |
+| combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
+| discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
+| category | The specific category for this event competition. | [Category](#category) |
+| results | List with the results after the celebration of all rounds of the event.  | **[Results](#results)** |
+
+[Use cases and examples](./examples).
+
+### Category
+
+Division that marks the competition of athletes and teams in events. Categories may include gender, age range and specific rules depending of the event.  
+
+_Examples of categories are: *M35* (Men aged 35-39), *U23* (Under 23) Men, or *ad hoc* categories for non-official competitions such as *teachers* and *parents* in school sports._     
+
+Categories will be described by these following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the category. | Text |
+| name | Name of the category (i.e., `Under 23 Men`, `Teachers`) | Text |
+| description | Description and notes about the category. | Text |
+| gender | Gender of athletes involved this category. In case of mixed competitions, more than a gender may be indicated. | [Gender](#gender) |
+| age range | Description of the athletes' range of age to be eligible for this category.  | Text |
+
+
+There is a predefined list of [standard categories](#age-and-sex-categories).
+
+
+### Venues
+
+**Places** where events and competitions are held. Events may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). 
+
+
+Venues can be described by the following attributes:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the venue. | Text |
+| name | Descriptive name of the venue. | Text |
+| description | Descriptive text about the place. | Text |
+| address | Postal address related to the venue. | [Postal Address](#postal-addresses) or Text |
+| url | Webpage URL about the venue. | URL |
+| image | Picture about the venue. | URL |
+| geo | Coordinates of the venue. | Text |
+| map | URL to a map pointing to the venue. | URL |
+| telephone(s) | Telephone number(s) of the venue. | Text |
+| fax number | Fax number of the venue. | Text |
+| type | Type of the venue. | **[Venue Type](#venue-type)** |
+
+
+See [RunTrack Directory](http://www.runtrackdir.com/details.asp?track=london-nh)
+
+### Postal Addresses
+
+A postal address may be represented by some common properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the postal address. | Text |
+| name | Descriptive name of the place (e.g., Helsinki Olympic Stadium). | Text |
+| street address | The street address (e.g., Paavo Nurmen tie 1).  | Text |
+| locality | The locality (e.g., Helsinki). | Text |
+| post office box number | The post office box number for PO box addresses. | Text |
+| postal code | The postal code (e.g., 00250)| Text |
+| country | The country (e.g., Finland). | [Country](#countries) |
+
+
+## Competitors and Affiliation
 
 Competitor is an agent that takes part in Athletics events. Depending on the type of event, either for individuals or for teams, agent is either an **[Athlete](#athletes)** or a **[Team](#teams)**, respectively. 
 
@@ -141,59 +269,56 @@ Teams may be described using the following attributes:
 
 [Use cases and examples](./examples).
 
+### Athletics Federations
 
-### Athletics Competitions
+Federation is a special type of organization in charge of governing and rule the sport of athletics. Federations may be attached to other higher-level federations.
 
-Events where Athletics competitions are planed and held. These competitions take place at a specific location during a concrete period of time. Athletics events may include one or several [Athletics Events](#athletics-events) of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fundraising road races or school races are also considered Athletics competitions.
-
-_Examples of Athletics competitions are: [IAAF World Championships London 2017](http://www.iaafworldchampionships.com), [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/), [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/), [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx), and [Summer Olympic Games Rio 2016](https://www.olympic.org/rio-2016/athletics)._ 
-
-Competitions may be described by the following attributes:
+Federations will have the properties of [Organizations](#organizations), adding the following:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the competition. | Text |
-| name | Descriptive name of the competition. | Text |
-| alternate name | An alias to name the competition. | Text |
-| description | About the competition. | Text |
-| location | Venue where the event is held (for instance, Berlin Olympic Stadium). | [Venue](#venues) or Text |
-| url | Webpage URL about the event. | URL |
-| image | Picture about the event. | URL |
-| logo | Logo of the event. | URL |
-| start date | Date and time when the event starts. | [Date and Time](#date,-time-and-periods) |
-| end date | Date and time when the event ends. | [Date and Time](#date,-time-and-periods) |
-| status | Status of the event (planned, cancelled, etc.) | [Event Status](#Event-Status) |
-| organizer(s) | Person(s) or organization(s) that organizes the event. | [Person](#persons) or [Organization](#organizations) |
-| contributor(s) | Person(s) or organization(s) that collaborates in the organization of the event. | [Person](#persons) or [Organization](#organizations) |
-| sponsor(s) | Person(s) or organization(s) that sponsors the event. | [Person](#persons) or [Organization](#organizations) |
-| attendee(s) | Person(s) who attends the event. | [Person](#persons) |
-| event(s) | Competition events that are part of the main event. | **[Athletics Event](#athletics-events)** |
+| spatial | Spatial coverage of the federation, usually one or more administrative areas (city, region, country, etc.) | [Territory and Country](#territories-and-countries) | 
+| memberOf | Higher-level federation(s) to which this federation is attached. | [Athletics Federation](#athletics-federations) | 
+| member(s) | Lower level organization(s) attached to this federation. | [Organization](#organization) | 
 
-[Use cases and examples](./examples).
+### Persons
 
-### Athletics Events
+Person is a basic entity to represent any person (i.e., athlete, coach, organizer, etc.). 
 
-Athletics events are those events that correspond to specific disciplines where competitors take part (e.g., 100m Men). These events may be part or broader Athletics competitions (e.g., 110m Hurdles at Summer Olympic Games). Athletics events are composed of one or more rounds, at least the final. 
-
-_Examples of Athletics events are: **110m Hurdles Men** at Summer Olympic Games, **Senior Women Race** at Cross Country World Championships, and **Javelin Throw Men** at European Throwing Cup._   
-
-Athletics events may be described by the following attributes: 
+There are some properties that will be used commonly to represent people:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the event. | Text |
-| name | Descriptive name of the event (e.g., `1-1-2-4 Medley Relay Men`). | Text |
-| description | Descriptive name of the event (e.g., `Medley Relay 800 meters Men: two times 100 meters legs, a 200 meters leg and a 400 meters leg`). | Text |
-| start date | Date and time when the event starts. | [Date and Time](#date,-time-and-periods) |
-| end date | Date and time when the event ends. | [Date and Time](#date,-time-and-periods) |
-| location | Venue where this competition is held (for instance, Main Outdoor Track at Berlin Olympic Stadium). | [Venue](#venues) or Text |
-| round(s) | Round(s) performed as part of the competition (preliminary heats, semifinals, final, mass start waves in road races, etc.).  | **[Competition Round](#competition-rounds)** |
-| combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
-| discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
-| category | The specific category for this event competition. | [Category](#category) |
-| results | List with the results after the celebration of all rounds of the event.  | **[Results](#results)** |
+| identifier | Unique character string to identify the person. | Text |
+| name | Person's full name. | Text |
+| family name | Person's family name; surname. | Text |
+| given name | Person's given name; first name. | Text |
+| alternate name | An alias to name the person. | Text |
+| address | Main residence address. | [Postal Address](#postal-addresses) or Text |
+| image | Picture of the person. | URL |
+| email | Email address. | Text |
+| url | Webpage URL about him/her. | URL |
 
-[Use cases and examples](./examples).
+
+### Organizations
+
+This entity may represent any type of organization (i.e., private company, public body, association, etc.). 
+
+Organizations can be represented by the following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the organization. | Text |
+| name | Organization name. | Text |
+| alternate name | An alias to name the organization. | Text |
+| address | Postal address where the organization is located. | [Postal Address](#postal-addresses) or Text |
+| logo | Logo of the organization. | URL |
+| email | Main email address. | Text |
+| url | Webpage URL about the organization. | URL |
+| telephone(s) | Main telephone number(s) of the organization. | Text |
+
+
+## Competition Management
 
 ### Competition Rounds
 
@@ -217,21 +342,57 @@ Rounds may be described by the following properties:
 | qualification criteria | Details what a competitor has to do to get to the next round. | Text |
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
 | results | List with the results after the celebration of the round.  | **[Results](#results)** |
-| starting height | (Vertical jumps) The starting height the bar is raised at the start of the round. | [Quantitative Value](#quantitative-values) |
-| increasing height | (Vertical jumps) The subsequent heights to which the bar will be raised at the end of each round of trials. | Text |
-| trials rounds(s) | Rounds of trials corresponding to a field event. | [Trials Round](#trials-rounds) |
 
 [Use cases and examples](./examples).
+
+#### Timed Events Rounds
+
+Timed events have specific information about timekeeping.
+
+##### Timekeeping
+
+There are three alternative methods of timekeeping, recognised as official by IAAF:
+- **Hand Timing** (`HT`) – Hand Timing is usually given to 0.1 seconds (average the different timekeepers and rounded up);
+- **Fully Automatic Timing** (`FAT`), obtained from a Photo Finish System (FAT usually given to 0.01 seconds);
+- **Transponder System Timing**. Automatic timing provided by radio signal devices. Road races use a variety of chip timing systems, precision is less important than recording thousands of people easily in the right order. 
+
+Sometimes may be of interest gathering and representing information about devices and the specific conditions of timekeeping. Thus, timekeeping is represented by the following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the timekeeping method. | Text |
+| name | Name of the method used for timekeeping (i.e., `Hand Timing`, `Fully Automatic` or `Transponder System Timing`) | Text |
+| description | Description and notes about the method used for timekeeping. | Text |
+| device | Brand, model and features of the device/system used for timekeeping. | Text |
+
+
+#### Field Events Rounds
+
+Competition in field events has a specific structure based on rounds of trials. 
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| trials rounds(s) | Rounds of trials corresponding to a field event. | [Trials Round](#trials-rounds) |
+
+
+##### Vertical Jumps Rounds
+
+Rounds in Vertical Jumps include also specific information about height of the bar.
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| starting height | (Vertical jumps) The starting height the bar is raised at the start of the round. | [Quantitative Value](#quantitative-values) |
+| increasing height | (Vertical jumps) The subsequent heights to which the bar will be raised at the end of each round of trials. | Text |
 
 
 ### Trials Rounds
 
-**Field events** are composed of **rounds of trials** that are performed by each athlete. 
+**Field events** rounds are composed of **rounds of trials** that are performed by each athlete. 
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the round of trials. | Text |
-| competitor | Athlete or team competing in this round of trials. | [Athlete](#athletes) or [Team](#teams) |
+| athlete | Athlete competing in this round of trials. | [Athlete](#athletes) or [Team](#teams) |
 | feature(s) | Set of features and notes included by officials for this round of trials  (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
 | under protest | Flag indicating the competitor will take part in the round of trials. | Boolean |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
@@ -239,9 +400,16 @@ Rounds may be described by the following properties:
 | order | Competitor's order in the start list of this round. | Number |
 | score points | Score points accumulated by the competitor at the start of the round in case of Combined Events such as Decathlon and Heptathlon. | Number |
 | roundNumber | Number of the round of trials. | Number |
-| height | (Vertical Jumps) The target height the bar is raised for this round. | [Quantitative Value](#quantitative-values) |
 | trial(s) | Athlete's attempt in this round of trials. | [Field Trial](#field-trials) |
 
+
+#### Vertical Jumps Trials Rounds
+
+In **Vertical Jumps** the **rounds of trials** include the height the athlete is attempting. 
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| current height | The target height the bar is raised for this round. | [Quantitative Value](#quantitative-values) |
 
 ### Field Trials
 
@@ -254,7 +422,7 @@ Trials may be described by the following properties:
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the trial. | Text |
-| competitor | Athlete or team competing in this trials. | [Athlete](#athletes) or [Team](#teams) |
+| athlete | Athlete or team competing in this trials. | [Athlete](#athletes) or [Team](#teams) |
 | feature(s) | Set of features and notes included by officials for this attempt  (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
 | under protest | Flag indicating the competitor will take part in the round of trials. | Boolean |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
@@ -283,16 +451,24 @@ Each entry of the start list may include the following properties:
 | feature(s) | Set of features and notes included by officials in the starting list (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
 | under protest | Flag indicating the competitor will take part in the round and/or heat competing 'under protest'. | Boolean |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
-| transponder identifier | Text or code identifying the competitor by a transponder. | Text |
 | order | Competitor's order in the start list. | Number |
-| lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
 | score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
+
+#### Start Lists in Timed Events
+
+Timed events may include specific information about the identification of athlete's chip, and track lane to be used. 
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| transponder identifier | Text or code identifying the competitor by a transponder. | Text |
+| lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
+
 
 [Use cases and examples](./examples).
 
 ### Results
 
-'Results' is an ordered list collecting the performances achieved by competitors after a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
+'Results' is an ordered list collecting the performances achieved by competitors after a concrete round or at the end of the event. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
 
 Example of results after the Final round in 100m Women event:
 
@@ -332,132 +508,6 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 | best(s) | Flags indicating bests achieved after the competition round (e.g., Personal Best, Season Leader, etc.). | [Best](#bests) |
 
 [Use cases and examples](./examples).
-
-### Category
-
-Division that marks the competition of athletes and teams in events. Categories may include gender, age range and specific rules depending of the event.  
-
-_Examples of categories are: *M35* (Men aged 35-39), *U23* (Under 23) Men, or *ad hoc* categories for non-official competitions such as *teachers* and *parents* in school sports._     
-
-Categories will be described by these following properties:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the category. | Text |
-| name | Name of the category (i.e., `Under 23 Men`, `Teachers`) | Text |
-| description | Description and notes about the category. | Text |
-| gender | Gender of athletes involved this category. In case of mixed competitions, more than a gender may be indicated. | [Gender](#gender) |
-| age range | Description of the athletes' range of age to be eligible for this category.  | Text |
-
-
-There is a predefined list of [standard categories](#age-and-sex-categories).
-
-
-### Timekeeping
-
-There are three alternative methods of timekeeping, recognised as official by IAAF:
-- **Hand Timing** (`HT`) – Hand Timing is usually given to 0.1 seconds (average the different timekeepers and rounded up);
-- **Fully Automatic Timing** (`FAT`), obtained from a Photo Finish System (FAT usually given to 0.01 seconds);
-- **Transponder System Timing**. Automatic timing provided by radio signal devices. Road races use a variety of chip timing systems, precision is less important than recording thousands of people easily in the right order. 
-
-Sometimes may be of interest gathering and representing information about devices and the specific conditions of timekeeping. Thus, timekeeping is represented by the following properties:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the timekeeping method. | Text |
-| name | Name of the method used for timekeeping (i.e., `Hand Timing`, `Fully Automatic` or `Transponder System Timing`) | Text |
-| description | Description and notes about the method used for timekeeping. | Text |
-| device | Brand, model and features of the device/system used for timekeeping. | Text |
-
-
-### Venues
-
-**Places** where events and competitions are held. Events may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). 
-
-
-Venues can be described by the following attributes:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the venue. | Text |
-| name | Descriptive name of the venue. | Text |
-| description | Descriptive text about the place. | Text |
-| address | Postal address related to the venue. | [Postal Address](#postal-addresses) or Text |
-| url | Webpage URL about the venue. | URL |
-| image | Picture about the venue. | URL |
-| geo | Coordinates of the venue. | Text |
-| map | URL to a map pointing to the venue. | URL |
-| telephone(s) | Telephone number(s) of the venue. | Text |
-| fax number | Fax number of the venue. | Text |
-| type | Type of the venue. | **[Venue Type](#venue-type)** |
-
-
-See [RunTrack Directory](http://www.runtrackdir.com/details.asp?track=london-nh)
-
-### Postal Addresses
-
-A postal address may be represented by some common properties:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the postal address. | Text |
-| name | Descriptive name of the place (e.g., Helsinki Olympic Stadium). | Text |
-| street address | The street address (e.g., Paavo Nurmen tie 1).  | Text |
-| locality | The locality (e.g., Helsinki). | Text |
-| post office box number | The post office box number for PO box addresses. | Text |
-| postal code | The postal code (e.g., 00250)| Text |
-| country | The country (e.g., Finland). | [Country](#countries) |
-
-
-### Persons
-
-Person is a basic entity to represent any person (i.e., athlete, coach, organizer, etc.). 
-
-There are some properties that will be used commonly to represent people:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the person. | Text |
-| name | Person's full name. | Text |
-| family name | Person's family name; surname. | Text |
-| given name | Person's given name; first name. | Text |
-| alternate name | An alias to name the person. | Text |
-| address | Main residence address. | [Postal Address](#postal-addresses) or Text |
-| image | Picture of the person. | URL |
-| email | Email address. | Text |
-| url | Webpage URL about him/her. | URL |
-
-
-### Organizations
-
-This entity may represent any type of organization (i.e., private company, public body, association, etc.). 
-
-Organizations can be represented by the following properties:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the organization. | Text |
-| name | Organization name. | Text |
-| alternate name | An alias to name the organization. | Text |
-| address | Postal address where the organization is located. | [Postal Address](#postal-addresses) or Text |
-| logo | Logo of the organization. | URL |
-| email | Main email address. | Text |
-| url | Webpage URL about the organization. | URL |
-| telephone(s) | Main telephone number(s) of the organization. | Text |
-
-
-### Athletics Federations
-
-Federation is a special type of organization in charge of governing and rule the sport of athletics. Federations may be attached to other higher-level federations.
-
-Federations will have the properties of [Organizations](#organizations), adding the following:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| spatial | Spatial coverage of the federation, usually one or more administrative areas (city, region, country, etc.) | [Territory and Country](#territories-and-countries) | 
-| memberOf | Higher-level federation(s) to which this federation is attached. | [Athletics Federation](#athletics-federations) | 
-| member(s) | Lower level organization(s) attached to this federation. | [Organization](#organization) | 
-
 
 
 *******
