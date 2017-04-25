@@ -799,6 +799,12 @@ Example:
 
 Competition in field events has a specific structure based on rounds of trials. 
 
+
+Example of height card with the main concepts highlighted:
+
+![Example of height card](images/example_height_card_concepts.png)
+
+
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | trials rounds(s) | Rounds of trials corresponding to a field event. | [Trials Round](#trials-rounds) |
