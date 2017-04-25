@@ -1011,7 +1011,6 @@ Rounds of competitions have **start lists**. These lists are provided by officia
 In either a track or field  event, if an athlete makes an immediate oral protest against having been charged with a false start or a failure trial, the athlete may continue competing `under protest`.
 
 _Example of start list of Final round in 100m Women event:_
-
 ![Example of start list](images/example_start_list.png)
 
 Each entry of the start list may include the following properties:
@@ -1066,11 +1065,16 @@ Example:
 
 ### Results
 
-'Results' is an ordered list collecting the performances achieved by competitors after a concrete round or at the end of the event. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
+'Results' is an ordered list collecting the performances achieved by competitors after a concrete round or at the end of the event. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.). 
 
-Example of results after the Final round in 100m Women event:
-
+_Example of results after the Final round in 100m Women event:_
 ![Example of results](images/example_results.png)
+
+_Results of a timed competition for National teams:_
+![Example of results for teams](images/results_final_teams.png)
+
+_Results of a field competition:_
+![Example of results for dicus throw competition](images/results_discus.png)
 
 Each entry of the results may include the following properties:
 
