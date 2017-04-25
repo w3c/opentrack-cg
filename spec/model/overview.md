@@ -1068,12 +1068,15 @@ Example:
 'Results' is an ordered list collecting the performances achieved by competitors after a concrete round or at the end of the event. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.). 
 
 _Example of results after the Final round in 100m Women event:_
+
 ![Example of results](images/example_results.png)
 
 _Results of a timed competition for National teams:_
+
 ![Example of results for teams](images/results_final_teams.png)
 
 _Results of a field competition:_
+
 ![Example of results for dicus throw competition](images/results_discus.png)
 
 Each entry of the results may include the following properties:
