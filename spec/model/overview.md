@@ -415,6 +415,8 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | name | Athlete's full name. | Text |
 | family name | Athlete's family name; surname. | Text |
 | given name | Athlete's given name; first name. | Text |
+| previous family name | Athlete's family name; surname. | Text |
+| previous given name | Athlete's given name; first name. | Text |
 | alternate name | An alias to name the athlete. | Text |
 | address | Main residence address of the athlete. | [Postal Address](#postal-addresses) or Text |
 | image | Picture of the athlete. | URL |
