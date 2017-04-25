@@ -800,9 +800,8 @@ Example:
 Competition in field events has a specific structure based on rounds of trials. 
 
 
-Example of height card with the main concepts highlighted:
-
-![Example of height card](images/example_height_card_concepts.png)
+Field rounds and trails highlighted on a control card for Distance Field Events:
+![Example of distance card](images/example_distance_card_concepts.png)
 
 
 | Property | Description | Value Type |
@@ -846,6 +845,10 @@ Example:
 
 
 ##### Vertical Jumps Rounds
+
+Field rounds and trails highlighted on a control card for Vertical Jumps Events:
+![Example of height card](images/example_height_card_concepts.png)
+
 
 Rounds in Vertical Jumps include also specific information about height of the bar.
 
