@@ -1,0 +1,130 @@
+//
+// Example of single marathon with multiple classifications
+//
+
+{
+    '@context' : 'https://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld', 
+    '@id' : 'http://example.com/competition:736384',
+    '@type' :  'Competition',
+    'name' : 'B.A.A. 2017 Boston Marathon',
+    'alternateName' : '2017 Boston Marathon',
+    'description' : 'The legendary Boston Marathon course follows a point-to-point route from Hopkinton to Boston, and is certified per the guidelines set forth by the IAAF and USA Track and Field.',
+    'url' : 'http://www.baa.org/races/boston-marathon.aspx',
+    'image' : 'http://example.org/image',
+    'logo' : 'http://example.org/logo',    
+    'startDate' : '2017-04-17T10:00:00-05:00',  
+    'endDate' : '2016-06-10',    
+    'location' : 'Eastern Massachusetts, ending in Boston',               // It should be described in detail as Venue
+    'status' : 'status:scheduled',
+    'organizer' : 
+        {
+            'name' : 'Boston Athletic Association',
+            'alternateName' : 'B.A.A.',
+            'postalAddress' : 
+                {
+                    'streetAddress': '185 Dartmouth Street, 6th Floor',
+                    'addressLocality': 'Boston, MA',
+                    'addressCountry': 'country:USA',                      
+                    'postalCode': '02116'
+                },
+            telephone: '+1 617-236-1652',
+            url: 'http://www.baa.org'    
+        },        
+    'sponsor': 'John Hancock',                          // More info about this Agent
+    'contributor': 
+        [
+            'Abbott', 'Airgas', 'AMR'
+        ],
+    // List of events (categories) inside the competition 
+    'event' :     
+        [
+            {
+                '@type' :  'Event',
+                'name' : 'Elite Male Race (Mass Start 1)',
+                'startDate' : '2017-04-17T10:00:00-05:00',
+                'discipline' : 'discipline:RoadRace',
+                'category' : 
+                    {
+                        '@type' :  'Category',
+                        'name' : 'Elite Men',
+                        'description' : 'Mass Start 1 for Elite Men',
+                        'gender' : 'gender:Male'
+                    },
+                'startList' :   // Start list of the race
+                    [
+                        {
+                            'bibIdentifier' : '1',
+                            'transponderIdentifier' : '1',
+                            'competitor' : 'http://example.com/athlete:343434'
+                        },
+                        {
+                            'bibIdentifier' : '2',
+                            'transponderIdentifier' : '2',
+                            'competitor' : 'http://example.com/athlete:343422'
+                        }
+                        // … and so on until the start list is complete
+                    ],
+                'result' :      // The list of results for Senior Men 
+                    [
+                        {
+                            '@id' : 'http://example.com/result:00112312',
+                            '@type' :  'Result',
+                            'rank' : 1,
+                            'bibIdentifier' : '1006',
+                            'transponderIdentifier' : '1006',
+                            'timestamp' : '2017-04-17T12:45:00-05:00',
+                            'competitor' : 'http://example.com/athlete:000101',
+                            'performance' : 
+                                {
+                                    '@id' : 'http://example.com/performance:000010',
+                                    '@type' : 'Performance', 
+                                    'value' : '2:05:47'         
+                                }
+                        }
+                        // And so on, the rest of results
+                    ]
+            },
+            // Women Elite Category
+            {
+                '@type' :  'Event',
+                'name' : 'Elite Female Race (Mass Start 2)',
+                'startDate' : '2017-04-17T10:20:00-05:00',
+                'discipline' : 'discipline:RoadRace',
+                'category' : 
+                    {
+                        '@type' :  'Category',
+                        'name' : 'Elite Female',
+                        'description' : 'Category for Elite Women',
+                        'gender' : 'gender:Female'
+                    }
+                // The same structure for this event (category)
+                // 'startList' : []     // Start list for elite women
+                // 'result' : []        // Results for elite women
+                
+            },
+            // Also other virtual categories, for instance, Bostonians
+            {
+                '@type' :  'Event',
+                'name' : 'Bostonians\' Marathon',
+                'startDate' : '2017-04-17T10:00:00-05:00',
+                'discipline' : 'discipline:RoadRace',
+                'category' : 
+                    {
+                        '@type' :  'Category',
+                        'name' : 'Bostonians',
+                        'description' : 'Category just for Bostonians',
+                        'gender' : 
+                            [ 
+                                'gender:Female',
+                                'gender:Male'
+                            ],
+                    }
+                // The same structure for this event (category)
+                // 'startList' : []     // Start list for elite women
+                // 'result' : []        // Results for elite women
+                
+            }
+            // All the categories will be defined as events, or subevents.            
+        ]
+}
+

@@ -69,8 +69,6 @@ The UML diagram represents three main aspects of Athletics:
 
 * **[Field Trials](#field-trials)**. Each one of the attempts performed by athletes within a round of trials ([Trial Round](#trials-rounds)).  
 
-
-
 ## Schedule, Venues of Events
 
 ### Athletics Competitions
@@ -100,7 +98,43 @@ Competitions may be described by the following attributes:
 | attendee(s) | Person(s) who attends the event. | [Person](#persons) |
 | event(s) | Competition events that are part of the main event. | **[Athletics Event](#athletics-events)** |
 
-[Use cases and examples](./examples).
+
+Example:
+```javascript
+{
+    '@id' : 'http://example.com/competition:0001',
+    '@type' :  'Competition',
+    'name' : '2016 European Athletics Championships',
+    'alternateName' : 'Amsterdam Euro 2016',        
+    'url' : 'http://www.european-athletics.org/competitions/european-athletics-championships/2016/events/',
+    'image' : 'https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Amsterdam2016logo.png',
+    'location' : 'http://example.com/venue:0001',
+    'startDate' : '2016-06-06',  
+    'endDate' : '2016-06-10',    
+    'status' : 'status:completed',
+    'organizer' : 'http://example.com/federation:EA' ,
+    'event' :     // List of events within the overall competition
+        [
+            'http://example.com/event:EURO2016_100_metres_Men',
+            'http://example.com/event:EURO2016_100_metres_Women',
+            'http://example.com/event:EURO2016_200_metres_Men',
+            'http://example.com/event:EURO2016_200_metres_Women',
+            'http://example.com/event:EURO2016_400_metres_Men',
+            'http://example.com/event:EURO2016_400_metres_Women',
+            // …
+            'http://example.com/event:EURO2016_400x100_metres_Men',
+            'http://example.com/event:EURO2016_400x100_metres_Women',
+            'http://example.com/event:EURO2016_LJ_Men',
+            'http://example.com/event:EURO2016_LJ_Women',
+            'http://example.com/event:EURO2016_Marathon_Men',
+            'http://example.com/event:EURO2016_Marathon_Women',
+            'http://example.com/event:EURO2016_Heptathlon',
+            'http://example.com/event:EURO2016_Decathlon'
+        ]
+}
+```
+
+[More use cases and examples](./examples).
 
 ### Athletics Events
 
@@ -122,9 +156,102 @@ Athletics events may be described by the following attributes:
 | combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
 | discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
 | category | The specific category for this event competition. | [Category](#category) |
+| timekeeping | Type of timekeeping used to control the competition.  | [Timekeeping](#timekeeping) |
 | results | List with the results after the celebration of all rounds of the event.  | **[Results](#results)** |
 
-[Use cases and examples](./examples).
+Example:
+```javascript
+{
+    '@id' : 'http://example.com/event:EURO2016_Heptathlon',
+    '@type' : 'Event',
+    'name' : 'Heptathlon - European Championships 2016',
+    'description' : 'Women\'s heptathlon at the 2016 European Athletics Championships',
+    'url' : 'http://www.european-athletics.org/link_to_heptathlon_2016',
+    'startDate' : '2016-07-08',
+    'endDate' : '2016-07-09',
+    'location' : 'http://example.com/venue:0001',  
+    'discipline' : 'discipline:heptathlon',
+    'category' : 'http://example.com/category:SeniorWomen'
+    'subEvent' :       // Hepthatlon is composed of seven subEvents: 
+        [
+            {
+                '@id' : 'http://example.com/event:EURO2016_Heptathlon_100mH',
+                '@type' : 'Event',
+                'name' : 'Heptathlon - 100m Hurdles',
+                'description' : '100 Hurdles at heptathlon as part of the 2016 European Athletics Championships',
+                'url' : 'http://www.european-athletics.org/link_to_heptathlon_2016_100',
+                'startDate' : '2016-07-08',
+                'discipline' : 'discipline:100mH',
+                'round' :       // Split in three heats (1, 2 and 3)
+                    [
+                        'http://example.com/round:EURO2016_Heptathlon_100mH_Heat1',
+                        'http://example.com/round:EURO2016_Heptathlon_100mH_Heat2',
+                        'http://example.com/round:EURO2016_Heptathlon_100mH_Heat3'
+                    ],
+                'result' :       // Results of the overall event after rounds
+                    [
+                        'http://example.com/result:00001',
+                        'http://example.com/result:00002'
+                        // … and so on, including results for all athletes
+                    ]
+            },
+            {
+                '@id' : 'http://example.com/event:EURO2016_Heptathlon_HJ',
+                '@type' : 'Event',
+                'name' : 'Heptathlon - High Jump',
+                'description' : 'High Jump at heptathlon as part of the 2016 European Athletics Championships',
+                'startDate' : '2016-07-08',
+                'discipline' : 'discipline:HJ',
+                'round' :                                    // Grouped in: Group A and Group B
+                    [
+                        'http://example.com/round:EURO2016_Heptathlon_HJ_A',
+                        'http://example.com/round:EURO2016_Heptathlon_HJ_B'
+                    ],
+                'result' :       
+                    [
+                        'http://example.com/result:00101',
+                        'http://example.com/result:00102'
+                        // … and so on, including results for all athletes
+                    ]
+            },
+            {
+                '@id' : 'http://example.com/event:EURO2016_Heptathlon_SP',
+                '@type' : 'Event',
+                'name' : 'Heptathlon - Shot Put',
+                'description' : 'Shot Put at heptathlon as part of the 2016 European Athletics Championships',
+                'startDate' : '2016-07-09',
+                'discipline' : 'discipline:SP',
+                // Information about rounds                
+                'round' :                                    // Grouped in: Group A and Group B
+                    [
+                        'http://example.com/round:EURO2016_Heptathlon_SP_A',
+                        'http://example.com/round:EURO2016_Heptathlon_SP_B'
+                    ],
+                'results' :         // Final results for Shot Put
+                    [
+                        'http://example.com/result:00201',
+                        'http://example.com/result:00202'
+                        // … and so on, including results for all athletes
+                    ]                
+            }
+            // …
+            // The rest of disciplines (sub-events for heptathlon) will be defined in the same way
+            // …
+        ],
+        // The final results for heptathlon
+        'result' : 
+            [
+                'http://example.com/result:01201',
+                'http://example.com/result:01202',
+                'http://example.com/result:01203'
+                // … and so on, including results for all athletes
+            ]
+}
+
+```
+
+[More use cases and examples](./examples).
+
 
 ### Category
 
@@ -141,6 +268,20 @@ Categories will be described by these following properties:
 | description | Description and notes about the category. | Text |
 | gender | Gender of athletes involved this category. In case of mixed competitions, more than a gender may be indicated. | [Gender](#gender) |
 | age range | Description of the athletes' range of age to be eligible for this category.  | Text |
+
+
+Example:
+```javascript
+{
+    '@type' :  'Category',
+    'name' : 'U18 Male',
+    'description' : 'Boys under 18',
+    'gender' : 'gender:Male',
+    'ageRange' : 'age:U18'
+}
+
+```
+[More use cases and examples](./examples).
 
 
 There is a predefined list of [standard categories](#age-and-sex-categories).
@@ -167,6 +308,24 @@ Venues can be described by the following attributes:
 | fax number | Fax number of the venue. | Text |
 | type | Type of the venue. | **[Venue Type](#venue-type)** |
 
+Example:
+```javascript
+{
+    '@id' : 'http://example.com/venue:0001'
+    '@type' : 'Venue',                
+    'name' : 'Olympic Stadium Amsterdam',
+    'geo' : 
+        {
+            'latitude' : '52.343417',
+            'longitude' : '4.854192'
+        },
+    'map' : 'http://example.org/map',
+    'address' : 'http://example.org/postaladdress:0001'
+}
+```
+[More use cases and examples](./examples).
+
+
 
 See [RunTrack Directory](http://www.runtrackdir.com/details.asp?track=london-nh)
 
@@ -183,6 +342,20 @@ A postal address may be represented by some common properties:
 | post office box number | The post office box number for PO box addresses. | Text |
 | postal code | The postal code (e.g., 00250)| Text |
 | country | The country (e.g., Finland). | [Country](#countries) |
+
+
+Example:
+```javascript
+{
+    '@id' : 'http://example.org/postaladdress:0001',
+    '@type' : 'PostalAddress',
+    'streetAddress' : 'Olympisch Stadion 2',
+    'addressLocality' : 'Amsterdam',
+    'postalCode' : '1076 DE',
+    'addressCountry' : 'country:NL'
+}
+```
+[More use cases and examples](./examples).
 
 
 ## Competitors and Affiliation
@@ -217,7 +390,68 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | team(s) | Team(s) which the athlete is part of (for instance, a National Team). | **[Team](#teams)** |
 | best(s) | Athlete's best performances. | [Best](#bests) |  
 
-[Use cases and examples](./examples).
+
+Example:
+```javascript
+{
+    '@id' : 'http://example.com/athlete:000021', 
+    '@type' : 'Athlete',
+    'name' : 'Mohamed Muktar Jama Farah',
+    'familyName' : 'Farah',
+    'givenName' : 'Mohamed Muktar Jama',
+    'alternateName' : 'Mo Farah',                // How they are known
+    'url' : 'http://www.mofarah.com',
+    'gender' : 'gender:Male' ,
+    'image' : 'https://example.com/260px-MoPodiumRio2016.png',
+    'nationality' : 'country:UK',                       
+    'email' : 'fakeemail@example.com',
+    'height' : 
+        { 
+            '@type' : 'QuantitativeValue',
+            'value': 175, 
+            'unitCode': 'CMT'                   // 'FOT'->feet ; 'INH'->inches ; 'MTR'->meter 
+        },  
+    weight : 
+        {
+            '@type' : 'QuantitativeValue',
+            'value' : 65, 
+            'unitCode' : 'KGM'                  // 'LBR'->pound(lb) ; 'ONZ'->ounce(oz) 
+        },   
+    'birthPlace' : 'Mogadishu, Somalia' ,
+    'birthDate' : '1983-04-23',             
+    'address' : 'http://example.org/postaladdress:00002',
+    coach : 
+        { 
+            '@type' : 'Person',
+            'name' : 'Alberto Salazar' 
+        },
+    sponsor : 
+        {
+            '@type' : 'Organization',
+            'name' : 'Nike Oregon Project',
+            'url' : 'https://nikeoregonproject.com'            
+        },
+    club :                                  // Zero or more clubs
+        [ 
+            'http://example.com/club:NEB',
+            'http://example.com/club:NOP'
+        ],
+    federation :
+        [ 
+            'http://example.com/federation:England_Athletics', 
+            'http://example.com/federation:USATF' 
+        ],
+    bests :                                 // Lists to best performances
+        [
+            'http://example.com/performance:0000122',
+            'http://example.com/performance:0000124',
+            'http://example.com/performance:0002122',
+            'http://example.com/performance:0000234'
+            // … and so on 
+        ]
+}
+```
+[More use cases and examples](./examples).
 
 ### Clubs
 
@@ -241,8 +475,33 @@ Clubs may be described using the following attributes:
 | sponsor(s) | Sponsor(s) of the club. | [Person](#persons) or [Organization](#organizations) |
 | team(s) | Teams(s) attached to this club. | **[Team](#teams)** |
 
-
-[Use cases and examples](./examples).
+Example:
+```javascript
+{
+    '@id' : 'http://example.com/club:NEB',
+    '@type' : 'Club',
+    'name' : 'Newham & Essex Beagles',
+    'alternateName' : 'BeaglesAC',                       // Alias, acronym, etc.
+    'url' : 'http://www.newhamandessexbeagles.co.uk/',
+    'image' : 'http://example.org/image.png',
+    'logo' : 'http://example.org/logo.png',               // Logo, flag, etc.
+    'telephone' : '(+44) 020 7511 6463',                  
+    'fax' : '(+44) 020 7511 4477',
+    'email' : 'fakeemail@example.org',
+    'address' : 'http://example.org/postaladdress:0004',
+    'sponsor' : 'Asics',
+    'athlete' :                                           // List of athletes affiliated to the club
+        [
+            'http://example.com/athlete:082838',
+            'http://example.com/athlete:082839',
+            'http://example.com/athlete:082840'
+            // … and so on
+        ],
+    
+    memberOf : 'http://example.com/federation:England_Athletics'
+}
+```
+[More use cases and examples](./examples).
 
 
 ### Teams
@@ -267,7 +526,49 @@ Teams may be described using the following attributes:
 | best(s) | Best performances of the team (e.g., relay competitions). | [Best](#bests) |  
 | athlete(s) | Athlete(s) affiliated to the team. | **[Athlete](#athletes)** |
 
-[Use cases and examples](./examples).
+Examples:
+```javascript
+{
+    '@id' : 'http://example.com/team:KEN001',
+    '@type' : 'Team',
+    'name' : 'Kent Athletic Club – Cross Country 2017 Team',
+    'alternateName' : 'KEN',                              // Alias, acronym, etc.
+    'image' : 'http://example.org/image.png',
+    'logo' : 'http://example.org/logo.png',               // Logo, flag, etc.
+    'captain' : 'http://example.com/athlete:092838',
+    'athlete' :                                           // List of athletes composing the team
+        [
+            'http://example.com/athlete:092838',
+            'http://example.com/athlete:092839',
+            'http://example.com/athlete:092840'
+            // … and so on
+        ],
+    'club' : 'http://example.com/club:KEN'
+}
+
+//
+// Example of National Team
+//
+{
+    '@id' : 'http://example.com/team:JAP2017',
+    '@type' : 'Team',
+    'name' : 'Japan Team - Marathon 2017',
+    'alternateName' : 'JAP',
+    'image' : 'http://example.org/image.png',
+    'logo' : 'http://example.org/logo.png',               // Logo, flag, etc.
+    'captain' : 'http://example.com/athlete:122838',
+    'athlete' :                                           // List of athletes composing the team
+        [
+            'http://example.com/athlete:122838',
+            'http://example.com/athlete:122839',
+            'http://example.com/athlete:122840'
+            // … and so on
+        ],
+    'federation' : 'http://example.com/federation:JAP'
+}
+```
+[More use cases and examples](./examples).
+
 
 ### Athletics Federations
 
@@ -280,6 +581,28 @@ Federations will have the properties of [Organizations](#organizations), adding 
 | spatial | Spatial coverage of the federation, usually one or more administrative areas (city, region, country, etc.) | [Territory and Country](#territories-and-countries) | 
 | memberOf | Higher-level federation(s) to which this federation is attached. | [Athletics Federation](#athletics-federations) | 
 | member(s) | Lower level organization(s) attached to this federation. | [Organization](#organization) | 
+
+Example:
+```javascript
+{
+    '@id' : 'http://example.com/federation:England_Athletics',
+    '@type' : 'Federation',
+    'name' : 'England Athletics',
+    'email' : 'ea@example.com',
+    'faxNumber' : '(+44) 0121 347 65439',
+    'telephone' : '(+44) 0121 347 65423',
+    'address' : 'http://example.org/postaladdress:00012',
+    'memberOf' : 'http://example.com/federation:UK',    // Member of Federation
+    'member' :                                          // Members attached to this federation
+        [
+            'http://example.com/club:NEB',
+            'http://example.com/club:THH'
+            
+        ]
+}
+```
+[More use cases and examples](./examples).
+
 
 ### Persons
 
@@ -299,6 +622,15 @@ There are some properties that will be used commonly to represent people:
 | email | Email address. | Text |
 | url | Webpage URL about him/her. | URL |
 
+Example:
+```javascript
+{ 
+    '@type' : 'Person',
+    'name' : 'Alberto Salazar' 
+}
+```
+[More use cases and examples](./examples).
+
 
 ### Organizations
 
@@ -316,6 +648,16 @@ Organizations can be represented by the following properties:
 | email | Main email address. | Text |
 | url | Webpage URL about the organization. | URL |
 | telephone(s) | Main telephone number(s) of the organization. | Text |
+
+Example:
+```javascript
+{
+    '@type' : 'Organization',
+    'name' : 'Nike Oregon Project',
+    'url' : 'https://nikeoregonproject.com'            
+}
+```
+[More use cases and examples](./examples).
 
 
 ## Competition Management
@@ -338,16 +680,45 @@ Rounds may be described by the following properties:
 | name | Descriptive name of the round and/or heat. | Text |
 | description | Longer descriptive text of the round and/or heat. | Text |
 | date | Date and time where the round and/or heat is held. | [Date and Time](#date,-time-and-periods) |
-| time-keeping | (Timed Events) Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
+| timekeeping | (Timed Events) Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
 | qualification criteria | Details what a competitor has to do to get to the next round. | Text |
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
 | results | List with the results after the celebration of the round.  | **[Results](#results)** |
 
-[Use cases and examples](./examples).
-
 #### Timed Events Rounds
 
 Timed events have specific information about timekeeping.
+
+Example:
+```javascript
+// 1st heat for 100m Hurdles
+{
+    '@id' : 'http://example.com/round:EURO2016_Heptathlon_100mH_Heat1',
+    '@type' : 'TimedRound',
+    'name' : 'Heptathlon 100m Hurdles - Heat 1',
+    'description' : 'Heat 1 of 3 within Heptathlon 100m Hurdles',
+    'date' : '2016-07-08T10:30:00+01:00',
+    'qualificationCriteria': '3 heats without qualification. Assignation  of score points according to performance.' ,
+    'timekeeping' : 'timekeeping:FAT',        
+    'startList' :
+        [
+            'http://example.org/startlistitem:00001',
+            'http://example.org/startlistitem:00002',
+            'http://example.org/startlistitem:00003'
+            // … All the participants in the starting list
+        ],
+    'result' : 
+        [
+            'http://example.org/result:000011',
+            'http://example.org/result:000021',
+            'http://example.org/result:000031'
+            // … All list of results 
+        ]
+}
+
+```
+[More use cases and examples](./examples).
+
 
 ##### Timekeeping
 
@@ -365,6 +736,19 @@ Sometimes may be of interest gathering and representing information about device
 | description | Description and notes about the method used for timekeeping. | Text |
 | device | Brand, model and features of the device/system used for timekeeping. | Text |
 
+Example:
+```javascript
+{
+    '@id' :  'http://example.com/timekeeping:0001',
+    '@type' :  'Timekeeping',
+    'name' : 'Transponder Based System',
+    'description' : 'Fully automatic timekeeping system based on RFID transponders',
+    'device' : 'RFID System – Brand and model'
+}
+```
+[More use cases and examples](./examples).
+
+
 
 #### Field Events Rounds
 
@@ -375,6 +759,41 @@ Competition in field events has a specific structure based on rounds of trials.
 | trials rounds(s) | Rounds of trials corresponding to a field event. | [Trials Round](#trials-rounds) |
 
 
+Example:
+```javascript
+{
+    '@id' : 'http://example.com/round:EURO2016_Heptathlon_SP_A',
+    '@type' : 'FieldRound',
+    'name' : 'Heptathlon Shot Put - Group A',
+    'description' : 'Group A within Heptathlon - Shot Put',
+    'date' : '2016-07-08T10:30:00+01:00',
+    'qualificationCriteria' : '2 groups without qualification. Assignation of score points according to performance.' ,
+    'startList' :
+        [
+            'http://example.org/startlistitem:000011',
+            'http://example.org/startlistitem:000021',
+            'http://example.org/startlistitem:000031'
+            // … All the participants in the starting list
+        ],
+    'result' : 
+        [
+            'http://example.org/result:0000111',
+            'http://example.org/result:0000211',
+            'http://example.org/result:0000311'
+            // … All list of results 
+        ],
+    'trialsRound' :
+        [
+            'http://example.com/trialsround:SP11',
+            'http://example.com/trialsround:SP12',
+            'http://example.com/trialsround:SP13'
+        ]
+}
+```
+[More use cases and examples](./examples).
+
+
+
 ##### Vertical Jumps Rounds
 
 Rounds in Vertical Jumps include also specific information about height of the bar.
@@ -383,6 +802,43 @@ Rounds in Vertical Jumps include also specific information about height of the b
 |:-------- |:----------- |:---------- |
 | starting height | (Vertical jumps) The starting height the bar is raised at the start of the round. | [Quantitative Value](#quantitative-values) |
 | increasing height | (Vertical jumps) The subsequent heights to which the bar will be raised at the end of each round of trials. | Text |
+
+
+Example:
+```javascript
+{
+    '@id' : 'http://example.com/round:EURO2016_Heptathlon_HJ_A',
+    '@type' : 'VerticalJumpRound',
+    'name' : 'Heptathlon High Jump - Group A',
+    'description' : 'Group A within Heptathlon High Jump',
+    'date' : '2016-07-08T10:30:00+01:00',
+    'qualificationCriteria' : '2 groups without qualification. Assignation of score points according to performance.' ,
+    'startingHeight': "150cm" ,                     // Also as Quantitative Value
+    'increasingHeight': "+3cm after each round" ,     
+    'startList' :
+        [
+            'http://example.org/startlistitem:000011',
+            'http://example.org/startlistitem:000021',
+            'http://example.org/startlistitem:000031'
+            // … All the participants in the starting list
+        ],
+    'result' : 
+        [
+            'http://example.org/result:HJ111',
+            'http://example.org/result:HJ211',
+            'http://example.org/result:HJ311'
+            // … All list of results 
+        ],
+    'trialsRound' :
+        [
+            'http://example.com/trialsround:HJ11',
+            'http://example.com/trialsround:HJ21',
+            'http://example.com/trialsround:HJ31'
+        ]
+}
+```
+[More use cases and examples](./examples).
+
 
 
 ### Trials Rounds
@@ -399,8 +855,27 @@ Rounds in Vertical Jumps include also specific information about height of the b
 | transponder identifier | (Timed events) Text or code identifying the competitor by a transponder. | Text |
 | order | Competitor's order in the start list of this round. | Number |
 | score points | Score points accumulated by the competitor at the start of the round in case of Combined Events such as Decathlon and Heptathlon. | Number |
-| roundNumber | Number of the round of trials. | Number |
+| round number | Number of the round of trials. | Number |
 | trial(s) | Athlete's attempt in this round of trials. | [Field Trial](#field-trials) |
+
+Example:
+```javascript
+{
+    '@id' : 'http://example.com/trialsround:SP11',
+    '@type' : 'TrialsRound',
+    'name' : 'Athlete 13 (Group A), list of attempts Shot Put',
+    'order' : 1,
+    'bibIdentifier': '13',
+    'athlete' : 'http://example.com/athlete:29384',
+    'trial' :  
+        [
+            'http://example.com/trial:SP11',
+            'http://example.com/trial:SP12',
+            'http://example.com/trial:SP13'
+        ]                                    
+}
+```
+[More use cases and examples](./examples).
 
 
 #### Vertical Jumps Trials Rounds
@@ -410,6 +885,27 @@ In **Vertical Jumps** the **rounds of trials** include the height the athlete is
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | current height | The target height the bar is raised for this round. | [Quantitative Value](#quantitative-values) |
+
+Example:
+```javascript
+{
+    '@id' : 'http://example.com/trialsround:HJ11',
+    '@type' : 'VerticalJumpTrialsRound',
+    'name' : 'Athlete 13 (Group A), 1st round of trials with bar at 1.75m',
+    'roundNumber' : 1,
+    'order' : 1,
+    'bibIdentifier': '13',
+    'athlete' : 'http://example.com/athlete:29384',
+    'currentHeight' : '1.75',
+    'trial' :    // List of attempts
+        [
+            'http://example.com/trial:HJ11',
+            'http://example.com/trial:HJ12'
+        ]    
+}
+```
+[More use cases and examples](./examples).
+
 
 ### Field Trials
 
@@ -430,6 +926,28 @@ Trials may be described by the following properties:
 | performance | Performance achieved in case the trial was valid. | [Performance](#performances) |
 | valid | Flag indicating if the trial was valid or not (failure) | Boolean |
 | isSubstitute | Flag indicating if the trial is a *substitute* trial. | Boolean |
+
+Examples:
+```javascript
+{
+    '@id' : 'http://example.com/trial:HJ11',
+    '@type' : 'Trial',
+    'numberAttempt' : 1,
+    'feature' : 'feature:Failed',
+    'valid' : false
+}
+
+{
+    '@id' : 'http://example.com/trial:HJ12',
+    '@type' : 'Trial',
+    'numberAttempt' : 2,
+    'valid' : true,
+    'feature' : 'feature:PassedTrial',
+    'performance' : 'http://example.com/performance:34354'
+}
+
+```
+[More use cases and examples](./examples).
 
 
 ### Start Lists
@@ -454,6 +972,19 @@ Each entry of the start list may include the following properties:
 | order | Competitor's order in the start list. | Number |
 | score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
 
+Example:
+```javascript
+{
+    '@id' : 'http://example.org/startlistitem:000011',
+    '@type' : 'StartListItem',
+    'order' : '1',
+    'bibIdentifier' : '1',
+    'competitor' : 'http://example.com/athlete:29383'
+}
+```
+[More use cases and examples](./examples).
+
+
 #### Start Lists in Timed Events
 
 Timed events may include specific information about the identification of athlete's chip, and track lane to be used. 
@@ -464,7 +995,20 @@ Timed events may include specific information about the identification of athlet
 | lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
 
 
-[Use cases and examples](./examples).
+Example:
+```javascript
+{
+    '@id' : 'http://example.org/startlistitem:000211',
+    '@type' : 'TimedEventStartListItem',
+    'order' : '1',
+    'bibIdentifier' : '1',
+    'transponderIdentifier' : '1',
+    'lane' : 2,
+    'competitor' : 'http://example.com/athlete:29383'
+}
+```
+[More use cases and examples](./examples).
+
 
 ### Results
 
@@ -489,7 +1033,20 @@ Each entry of the results may include the following properties:
 | timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-time-and-periods) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
 
-[Use cases and examples](./examples).
+Example:
+```javascript
+{
+    '@id' : 'http://example.com/result:234534',
+    'rank' : '1',
+    'bibIdentifier' : '13',
+    'scorePoints' : 4587,
+    'competitor' : 'http://example.com/athlete:29384',
+    'timestamp' : '2016-10-15T10:31:12+01:00',
+    'performance' : 'http://example.com/performance:032410'
+}
+```
+[More use cases and examples](./examples).
+
 
 ### Performances
 
@@ -507,7 +1064,15 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 | record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
 | best(s) | Flags indicating bests achieved after the competition round (e.g., Personal Best, Season Leader, etc.). | [Best](#bests) |
 
-[Use cases and examples](./examples).
+Example:
+```javascript
+{
+    '@id' : 'http://example.com/performance:032410',
+    'value' : '11.21'                                   // Should be a Quantitative Value
+}                                        
+```
+[More use cases and examples](./examples).
+
 
 
 *******

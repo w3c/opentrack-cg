@@ -1,0 +1,170 @@
+//
+// Example of description of competitors: Athletes, Teams, and their Clubs
+//
+
+{
+    '@id' : 'http://example.com/athlete:000021', 
+    '@type' : 'Athlete',
+    'name' : 'Mohamed Muktar Jama Farah',
+    'familyName' : 'Farah',
+    'givenName' : 'Mohamed Muktar Jama',
+    'alternateName' : 'Mo Farah',                // How they are known
+    'url' : 'http://www.mofarah.com',
+    'gender' : 'gender:Male' ,
+    'image' : 'https://example.com/260px-MoPodiumRio2016.png',
+    'nationality' : 'country:UK',                       
+    'email' : 'fakeemail@example.com',
+    'height' : 
+        { 
+            '@type' : 'QuantitativeValue',
+            'value': 175, 
+            'unitCode': 'CMT'                   // 'FOT'->feet ; 'INH'->inches ; 'MTR'->meter 
+        },  
+    weight : 
+        {
+            '@type' : 'QuantitativeValue',
+            'value' : 65, 
+            'unitCode' : 'KGM'                  // 'LBR'->pound(lb) ; 'ONZ'->ounce(oz) 
+        },   
+    'birthPlace' : 'Mogadishu, Somalia' ,
+    'birthDate' : '1983-04-23',             
+    'address' :
+        { 
+            '@type' : 'PostalAddress',
+            'addressLocality' : 'Portland' ,
+            'addressCountry' : 'country:USA'
+        },
+    coach : 
+        { 
+            '@type' : 'Person',
+            'name' : 'Alberto Salazar' 
+        },
+    sponsor : 
+        {
+            '@type' : 'Organization',
+            'name' : 'Nike Oregon Project',
+            'url' : 'https://nikeoregonproject.com'            
+        },
+    club :                                  // Zero or more clubs
+        [ 
+            'http://example.com/club:NEB',
+            'http://example.com/club:NOP'
+        ],
+    federation :
+        [ 
+            'http://example.com/federation:England_Athletics', 
+            'http://example.com/federation:USATF' 
+        ],
+    bests :                                 // Lists to best performances
+        [
+            'http://example.com/performance:0000122',
+            'http://example.com/performance:0000124',
+            'http://example.com/performance:0002122',
+            'http://example.com/performance:0000234'
+            // … and so on 
+        ]
+}
+
+//
+// Example of Club
+//
+{
+    '@id' : 'http://example.com/club:NEB',
+    '@type' : 'Club',
+    'name' : 'Newham & Essex Beagles',
+    'alternateName' : 'BeaglesAC',                       // Alias, acronym, etc.
+    'url' : 'http://www.newhamandessexbeagles.co.uk/',
+    'image' : 'http://example.org/image.png',
+    'logo' : 'http://example.org/logo.png',               // Logo, flag, etc.
+    'telephone' : '(+44) 020 7511 6463',                  
+    'fax' : '(+44) 020 7511 4477',
+    'email' : 'fakeemail@example.org',
+    'address' :                                           
+        {    
+            '@type' : 'PostalAddress',
+            'name' : 'Terence McMillan Stadium - Newham Leisure Centre',
+            'streetAddress' : '281 Prince Regent Lane',
+            'addressLocality' : 'London',
+            'postalCode' : 'E13 8SD',
+            'addressCountry' : 'country:UK'
+        },
+    sponsor : 'Asics',
+    'athlete' :                                           // List of athletes affiliated to the club
+        [
+            'http://example.com/athlete:082838',
+            'http://example.com/athlete:082839',
+            'http://example.com/athlete:082840'
+            // … and so on
+        ],
+    
+    memberOf : 'http://example.com/federation:England_Athletics'
+}
+
+//
+// Example of Federation
+//
+{
+    '@id' : 'http://example.com/federation:England_Athletics',
+    '@type' : 'Federation',
+    'name' : 'England Athletics',
+    'email' : 'ea@example.com',
+    'faxNumber' : '(+44) 0121 347 65439',
+    'telephone' : '(+44) 0121 347 65439',
+    'address' : 
+        {
+            'name' : 'Athletics House, Alexander Stadium',
+            'streetAddress' : 'Walsall Road',
+            'addressLocality' : 'Birmingham',
+            'postalCode' : 'B42 2BE',
+            'addressCountry' : 'country:UK'
+        },
+    'memberOf' : 'http://example.com/federation:UK',    // Member of Federation
+    'member' :                                          // Members attached to this federation
+        [
+            'http://example.com/club:NEB',
+            'http://example.com/club:THH'
+            
+        ]
+}
+
+//
+// Example of Team
+//
+{
+    '@id' : 'http://example.com/team:KEN001',
+    '@type' : 'Team',
+    'name' : 'Kent Athletic Club – Cross Country 2017 Team',
+    'alternateName' : 'KEN',                              // Alias, acronym, etc.
+    'image' : 'http://example.org/image.png',
+    'logo' : 'http://example.org/logo.png',               // Logo, flag, etc.
+    'captain' : 'http://example.com/athlete:092838',
+    'athlete' :                                           // List of athletes composing the team
+        [
+            'http://example.com/athlete:092838',
+            'http://example.com/athlete:092839',
+            'http://example.com/athlete:092840'
+            // … and so on
+        ],
+    'club' : 'http://example.com/club:KEN'
+}
+
+//
+// Example of Team (national team representing Japanese Federation)
+//
+{
+    '@id' : 'http://example.com/team:JAP2017',
+    '@type' : 'Team',
+    'name' : 'Japan Team - Marathon 2017',
+    'alternateName' : 'JAP',
+    'image' : 'http://example.org/image.png',
+    'logo' : 'http://example.org/logo.png',               // Logo, flag, etc.
+    'captain' : 'http://example.com/athlete:122838',
+    'athlete' :                                           // List of athletes composing the team
+        [
+            'http://example.com/athlete:122838',
+            'http://example.com/athlete:122839',
+            'http://example.com/athlete:122840'
+            // … and so on
+        ],
+    'federation' : 'http://example.com/federation:JAP'
+}

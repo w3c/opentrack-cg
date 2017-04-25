@@ -1,0 +1,290 @@
+// 
+// Example of Cross Country League based on [http://surreyleague.org/slm/race/138/]
+// 
+
+{
+    '@context' : 'https://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld', 
+    '@id' : 'http://example.com/competition:0101',
+    '@type' :  'Competition',
+    'name' : 'Surrey Cross Country League 2016/17',
+    'alternateName' : 'XC Surrey League 2016/17',        // Acronym, abbreviation, etc.
+    'url' : 'http://surreyleague.org',
+    'image' : 'http://example.org/image.png',
+    'startDate' : '2016-10-15',                           // ISO 8601
+    'endDate' : '2017-02-11',                             // ISO 8601
+    'status' : 'status:Completed',                        // Value from a taxonomy of statuses 
+    'organizer' : 'Surrey League Organization',           // Instance of 'Organization' or 'Person'
+    'contributor' : 'Reportlab',                          // Instance of 'Organization' or 'Person'
+    'sponsor' : 'Start Fitness',                          // Instance of 'Organization' or 'Person'
+    'event' :                                             // Instances of Events: 
+        [
+            // First League Match - Men
+            {
+                '@id' : 'http://example.com/event:0012',
+                '@type' :  'Event',
+                'name' : 'Division 1 Men - Match 1',
+                'description' : 'Match 1 of the Men First Division within the Surrey Cross Country League 2016/17',
+                'url' : 'http://surreyleague.org/slm/match/60/',
+                'startDate' : '2016-10-15',
+                'location' :                              // Description of the Venue
+                    {
+                        '@id' : 'http://example.com/venue:0001',
+                        '@type' : 'Venue',                
+                        'name' : 'Richmond Park',
+                        'description' : 'Race HQ and the start/finish is inside Richmond Park on the edge of Sidmouth Wood, 5min walk from Pembroke Lodge (TW10 5HX) and Richmond Gate.',
+                        'geo' : 
+                            {
+                                'latitude' : '51.4472241',
+                                'longitude' : '-0.29'
+                            },
+                        'map' : 'http://example.org/map',
+                        'address' : 
+                            {
+                                'name' : 'Richmond Park',
+                                'streetAddress' : 'Sidmouth Wood',
+                                'postalCode' : 'TW10 5HX'
+                            }
+                    },
+                'discipline' : 'discipline:Cross_Country',
+                'category' : 
+                    {
+                        '@type' :  'Category',
+                        'name' : 'Division 1 Men',
+                        'description' : 'Senior and Junior in Division 1 (Men)',
+                        'gender' : 'gender:Male',
+                        'ageRange' : 
+                            [ 
+                                'age:U18', 
+                                'age:SEN'
+                            ]
+                    },
+                'subEvent' :            
+                    // There were two races: U18 and Senior Men
+                    // Plus one virtual race in terms of results: Men Teams
+                    [
+                        {
+                            '@id' : 'http://example.com/event:00122',
+                            '@type' :  'Event',
+                            'name' : 'Division 1 Men - Match 1 (Senior)',
+                            'startDate' : '2016-10-15',
+                            'location' : 'http://example.com/venue:0001',   // Same venue of the parent event
+                            'discipline' : 'discipline:Cross_Country',
+                            'category' : 
+                                {
+                                    '@type' :  'Category',
+                                    'name' : 'Division 1 Senior Men',
+                                    'description' : 'Senior in Division 1 (Men)',
+                                    'gender' : 'gender:Male',
+                                    'ageRange' : 'age:SEN'
+                                },
+                            'startList' :   // Start list of the race
+                                [
+                                    {
+                                        'bibIdentifier' : '1023',
+                                        'competitor' : 'http://example.com/athlete:002321'
+                                    },
+                                    {
+                                        'bibIdentifier' : '1024',
+                                        'competitor' : 'http://example.com/athlete:002322'
+                                    }
+                                    // … and so on until the start list is complete
+                                ],
+                            'result' :      // The list of results for Senior Men 
+                                [
+                                    {
+                                        '@id' : 'http://example.com/result:00001',
+                                        '@type' :  'Result',
+                                        'rank' : 1,
+                                        'bibIdentifier' : '1006',
+                                        'scorePoints' : '1',        // Points depending on performance 
+                                        'transponderIdentifier' : '1006',
+                                        'timestamp' : '2016-10-15T10:31:12+01:00',
+                                        'competitor' : 'http://example.com/athlete:000101',
+                                        'performance' : 
+                                            {
+                                                '@id' : 'http://example.com/performance:000010',
+                                                '@type' : 'Performance', 
+                                                'value' : '14:40'          // Also as QuantitativeValue
+                                            }
+                                    },
+                                    {
+                                        '@id' : 'http://example.com/result:00002',
+                                        '@type' :  'Result',
+                                        'rank' : 2,
+                                        'scorePoints' : '2',        
+                                        'bibIdentifier' : '1138',
+                                        'transponderIdentifier' : '1138',
+                                        'timestamp' : '2016-10-15T10:31:12+01:00',
+                                        'competitor' : 'http://example.com/athlete:000102',
+                                        'performance' : 
+                                            {
+                                                '@id' : 'http://example.com/performance:000020',
+                                                '@type' : 'Performance', 
+                                                'value' : '15:13'          
+                                            }
+                                    },
+                                    // –
+                                    // … All the list of results for this event/category
+                                    // –
+                                    {
+                                        '@id' : 'http://example.com/result:0000n',
+                                        '@type' :  'Result',
+                                        'rank' : 143,
+                                        'bibIdentifier' : '389',
+                                        'transponderIdentifier' : '389',
+                                        'timestamp' : '2016-10-15T10:31:12+01:00',
+                                        'competitor' : 'http://example.com/athlete:000187',
+                                        'feature' : 'feature:DNF'       // no performance, no score points
+                                    }
+                                ]
+                        },
+                        // The sub-event for the junior race
+                        {
+                            '@id' : 'http://example.com/event:00123',
+                            '@type' :  'Event',
+                            'name' : 'Division 1 Men - Match 1 (Junior)',
+                            'startDate' : '2016-10-15',
+                            'location' : 'http://example.com/venue:0001',   // Same venue of the parent event
+                            'discipline' : 'discipline:Cross_Country',
+                            'category' : 
+                                {
+                                    '@type' :  'Category',
+                                    'name' : 'Division 1 Junior Men',
+                                    'description' : 'Junior in Division 1 (Men)',
+                                    'gender' : 'gender:Male',
+                                    'ageRange' : 'age:U18'
+                                },
+                            'startList' :   // Start list of the race
+                                [
+                                    {
+                                        'bibIdentifier' : '3043',
+                                        'competitor' : 'http://example.com/athlete:234334'
+                                    },
+                                    {
+                                        'bibIdentifier' : '3524',
+                                        'competitor' : 'http://example.com/athlete:034243'
+                                    }
+                                    // … and so on until the start list is complete
+                                ],                            
+                            'result' :      // The list of results for Junior Men 
+                                [
+                                    {
+                                        '@id' : 'http://example.com/result:10001',
+                                        '@type' :  'Result',
+                                        'rank' : 1,
+                                        'bibIdentifier' : '1087',
+                                        'transponderIdentifier' : '1087',
+                                        'timestamp' : '2016-10-15T11:31:12+01:00',
+                                        'competitor' : 'http://example.com/athlete:000201',
+                                        'scorePoints' : '1',
+                                        'performance' : 
+                                            {
+                                                '@id' : 'http://example.com/performance:000210',
+                                                '@type' : 'Performance', 
+                                                'value' : '21:40' 
+                                            }
+                                    }
+                                    // …
+                                    // And so on, until complete the list of results for this event/category …
+                                    // …
+                                ]
+                        },
+                        // Classification for teams (using organization's rules)
+                        {
+                            '@id' : 'http://example.com/event:00423',
+                            '@type' :  'Event',
+                            'name' : 'Division 1 Men - Match 1 (Teams)',
+                            'startDate' : '2016-10-15',
+                            'location' : 'http://example.com/venue:0001',   // Same venue of the parent event
+                            'discipline' : 'discipline:Cross_Country',
+                            'category' : 
+                                {
+                                    'name' : 'Division 1 Men Teams',
+                                    'description' : 'Male Teams in Division 1',
+                                    'gender' : 'gender:Male',
+                                    'ageRange' : 'age:SEN'
+                                },
+                            'startList' :   // Start list of the race competitors = teams
+                                [
+                                    {
+                                        'bibIdentifier' : '3243',
+                                        'competitor' : 'http://example.com/team:THH002'
+                                    },
+                                    {
+                                        'bibIdentifier' : '3624',
+                                        'competitor' : 'http://example.com/team:KEN001'
+                                    }
+                                    // … and so on
+                                ],                             
+                            'result' :      // The list of results for Teams (non athletes)
+                                [
+                                    {
+                                        '@id' : 'http://example.com/result:11001',
+                                        'rank' : 1,
+                                        'timestamp' : '2016-10-15T11:31:12+01:00',
+                                        'competitor' : 'http://example.com/team:KEN001',
+                                        'scorePoints' : '282',
+                                        'performance' : 
+                                            {
+                                                '@id' : 'http://example.com/performance:002210',
+                                                'value' : '39272'   // points 
+                                            }
+                                    }
+                                    // …
+                                    // And so on, until complete the list of results for this event/category …
+                                    // …
+                                ]
+                        }
+                        
+                    ]
+            },
+            // First League Match - Ladies 
+            {
+                '@id' : 'http://example.com/event:00129',
+                '@type' :  'Event',
+                'name' : 'Division 1 Ladies - Match 1',
+                'description' : 'Match 1 of Ladies First Division within the Surrey Cross Country League 2016/17',
+                'url' : 'http://surreyleague.org/slm/match/60/',
+                'startDate' : '2016-10-15',
+                'location' : 'http://example.com/venue:0001',   // Reuse the already described venue
+                'discipline' : 'discipline:Cross_Country',
+                'category' : 
+                    {
+                        'name' : 'Division 1 Ladies',
+                        'description' : 'Senior and Junior in Division 1 (Ladies)',
+                        'gender' : 'gender:Female',
+                        'ageRange' : 
+                            [ 
+                                'age:U18', 
+                                'age:SEN' 
+                            ]
+                    },
+                'subEvent' :            // There were two races: U18 and Senior Ladies
+                    [                   // Subevents are described in the same way as before
+                        {
+                            '@id' : 'http://example.com/event:00222',
+                            'name' : 'Division 1 Ladies - Match 1 (Senior)',
+                            'category' : 
+                                {
+                                    'name' : 'Division 1 Senior Ladies',
+                                    'description' : 'Senior in Division 1 (Ladies)',
+                                    'gender' : 'gender:Female',
+                                    'ageRange' : 'age:SEN'
+                                }
+                        },
+                        {
+                            '@id' : 'http://example.com/event:00223',
+                            'name' : 'Division 1 Ladies - Match 1 (Junior)',
+                            'category' : 
+                                {
+                                    'name' : 'Division 1 Junior Ladies',
+                                    'description' : 'Junior in Division 1 (Ladies)',
+                                    'gender' : 'gender:Female',
+                                    'ageRange' : 'age:U18'
+                                }
+                        }
+                    ]
+            }
+            // The rest of the matches (for all divisions/categories) will be defined in this way
+        ]
+}
