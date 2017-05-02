@@ -42,7 +42,6 @@
     * [Records](#records)
     * [Bests](#bests)
     * [Disciplines](#disciplines)
-    * [Venue Type](#venue-type)
     
     
 ## Introduction
