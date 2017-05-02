@@ -201,6 +201,7 @@ Athletics events may be described by the following attributes:
 | discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
 | category | The specific category for this event competition. | [Category](#category) |
 | timekeeping | Type of timekeeping used to control the competition.  | [Timekeeping](#timekeeping) |
+| entryRequirements | Requirements to take part in the event.  | Text |
 | results | List with the results after the celebration of all rounds of the event.  | **[Results](#results)** |
 
 Example:
