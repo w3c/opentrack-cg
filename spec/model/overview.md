@@ -25,10 +25,12 @@
     * [Trials Rounds](#trials-rounds)
         * [Vertical Jumps Trials Rounds](#vertical-jumps-trials-rounds)
     * [Field Trials](#field-trials)
-    * [Start Lists](#start-lists)
-        * [Start Lists in Timed Events](#start-lists-in-timed-events)
-    * [Results](#results)
+    * [Event Participation](#participation)
+        * [Start Lists](#start-lists)
+            * [Start Lists in Timed Events](#start-lists-in-timed-events)
+        * [Results](#results)
     * [Performances](#performances)
+    * [Relays Legs](#relays-legs)    
 * [Classification schemas and data types](#classification-schemas-and-data-types)
     * [Date, Time and Periods](#date-time-and-periods)
     * [Quantitative Values](#quantitative-values)
@@ -102,9 +104,9 @@ The UML diagram represents three main aspects of Athletics:
 
 * **[Timekeeping](#timekeeping)**. Method or system used for timekeeping in timed events.
 
-* **[Start List](#start-list)**. Ordered set of competitors (athletes or teams) qualified to compete in a specific competition round. Start list contains information about competitors, the order of competition, and other competition information provided by judges. 
-
-* **[Results](#results)**. Ordered list of competitors with their **performances** after an event or a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
+* **[Participation](#participation)**. Stages within the process of taking part in an Athletics event, from entries in the **[Start List](#start-list)** to [Results](#results) after the competition. 
+    * **[Start List](#start-list)**. Ordered set of competitors (athletes or teams) qualified to compete in a specific competition round. Start list contains information about competitors, the order of competition, and other competition information provided by judges. 
+    * **[Results](#results)**. Ordered list of competitors with their **performances** after an event or a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
 
 * **[Performances](#performances)**. Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed).
 
@@ -747,9 +749,9 @@ Example:
     'timekeeping' : 'timekeeping:FAT',        
     'startList' :
         [
-            'http://example.org/startlistitem:00001',
-            'http://example.org/startlistitem:00002',
-            'http://example.org/startlistitem:00003'
+            'http://example.org/entry:00001',
+            'http://example.org/entry:00002',
+            'http://example.org/entry:00003'
             // … All the participants in the starting list
         ],
     'result' : 
@@ -820,9 +822,9 @@ Example:
     'qualificationCriteria' : '2 groups without qualification. Assignation of score points according to performance.' ,
     'startList' :
         [
-            'http://example.org/startlistitem:000011',
-            'http://example.org/startlistitem:000021',
-            'http://example.org/startlistitem:000031'
+            'http://example.org/entrt:000011',
+            'http://example.org/entrt:000021',
+            'http://example.org/entrt:000031'
             // … All the participants in the starting list
         ],
     'result' : 
@@ -871,9 +873,9 @@ Example:
     'increasingHeight': "+3cm after each round" ,     
     'startList' :
         [
-            'http://example.org/startlistitem:000011',
-            'http://example.org/startlistitem:000021',
-            'http://example.org/startlistitem:000031'
+            'http://example.org/entrt:000011',
+            'http://example.org/entrt:000021',
+            'http://example.org/entrt:000031'
             // … All the participants in the starting list
         ],
     'result' : 
@@ -1009,7 +1011,26 @@ Examples:
 [More use cases and examples](./examples).
 
 
-### Start Lists
+### Participation
+
+This entity models stages of the process of athletes taking part in events, from entries in [Start Lists](#start-lists) to [Results](#results).
+
+Participation of athletes may be described by the following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the entry in the list. | Text |
+| competitor | Athlete or team competing in this round. | [Athlete](#athletes) or [Team](#teams) |
+| feature(s) | Set of features and notes included by officials in the starting list (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
+| under protest | Flag indicating the competitor will take part in the round and/or heat competing 'under protest'. | Boolean |
+| bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
+| transponder identifier | Text or code identifying the competitor by a transponder. | Text |
+| score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
+| relays legs | List of consecutive legs in the case of a relays event. | [Relays Legs](#relays-legs) |
+
+
+
+#### Start Lists
 
 Rounds of competitions have **start lists**. These lists are provided by officials and include an ordered set of competitors (athletes or teams) qualified to compete in the related heat or round. 
 
@@ -1027,37 +1048,18 @@ Each entry of the start list may include the following properties:
 | feature(s) | Set of features and notes included by officials in the starting list (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
 | under protest | Flag indicating the competitor will take part in the round and/or heat competing 'under protest'. | Boolean |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
-| order | Competitor's order in the start list. | Number |
-| score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
-
-Example:
-```javascript
-{
-    '@id' : 'http://example.org/startlistitem:000011',
-    '@type' : 'StartListItem',
-    'order' : '1',
-    'bibIdentifier' : '1',
-    'competitor' : 'http://example.com/athlete:29383'
-}
-```
-[More use cases and examples](./examples).
-
-
-#### Start Lists in Timed Events
-
-Timed events may include specific information about the identification of athlete's chip, and track lane to be used. 
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
 | transponder identifier | Text or code identifying the competitor by a transponder. | Text |
+| score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
+| startingOrder | Competitor's order in the start list. | Number |
 | lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
+| relays legs | List of consecutive legs in the case of a team relays event. | [Relays Legs](#relays-legs) |
 
 
 Example:
 ```javascript
 {
-    '@id' : 'http://example.org/startlistitem:000211',
-    '@type' : 'TimedEventStartListItem',
+    '@id' : 'http://example.org/entrt:000211',
+    '@type' : 'Entry',
     'order' : '1',
     'bibIdentifier' : '1',
     'transponderIdentifier' : '1',
@@ -1068,7 +1070,7 @@ Example:
 [More use cases and examples](./examples).
 
 
-### Results
+#### Results
 
 'Results' is an ordered list collecting the performances achieved by competitors after a concrete round or at the end of the event. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.). 
 
@@ -1092,14 +1094,15 @@ Each entry of the results may include the following properties:
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the entry in the list. | Text |
 | competitor | Athlete or team competing in this round. | [Athlete](#athletes) or [Team](#teams) |
-| order | (Rank) position of the competitor in the rank after the round and/or heat. | Number |
-| feature(s) | Set of features and notes included by officials after the round and/or heat (e.g., Red Card in Race Walking).  | **[Start Lists and Results](#start-lists-and-results)** |
-| under protest | Flag indicating the competitor took part in the round and/or heat competing 'under protest'. | Boolean |
+| feature(s) | Set of features and notes included by officials in the starting list (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
+| under protest | Flag indicating the competitor will take part in the round and/or heat competing 'under protest'. | Boolean |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
+| transponder identifier | Text or code identifying the competitor by a transponder. | Text |
 | score points | Score points earned by the competitor in a specific round and/or heat in case of Combined Events (i.e., Decathlon, Heptathlon) and other team competitions (e.g. team competitions using score age grading). | Number |
 | record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
 | timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-time-and-periods) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
+| relays legs | List of consecutive legs in the case of a team relays event with individual results. | [Relays Legs](#relays-legs) |
 
 Example:
 ```javascript
@@ -1138,6 +1141,36 @@ Example:
     '@id' : 'http://example.com/performance:032410',
     'value' : '11.21'                                   // Should be a Quantitative Value
 }                                        
+```
+[More use cases and examples](./examples).
+
+
+### Relays Legs
+
+Relays events are competitions between two or more [Teams](#teams) where [Athletes](#athletes) of each team does part of the race and then another member continues. So Teams' [Participation](#participation) may include two or more consecutive legs with independent performances that will aggregated for the overall team results.
+
+_For instance, 4×400 metres relay is a discipline for teams of four runners, who each complete a leg of 400 metres._
+
+Legs are defined by the following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the relays leg. | Text |
+| order | Order of this leg in the relays event. | Number |
+| athlete | Person competing in this event. | [Athlete](#athletes) |
+| performance | Measure to quantify the performance of the athlete after the leg.  | **[Performance](#performances)** |
+
+Example:
+```javascript
+{
+    '@type' : 'RelaysLeg',
+    'order' : 1,
+    'athlete' : 'http://example.com/athlete:09822',
+    'performance' : 
+        {
+            'value': '51.56'
+        }
+}
 ```
 [More use cases and examples](./examples).
 
@@ -1383,94 +1416,5 @@ The concept of 'best' refers to athlete's personal achievements, without setting
 
 We can identify several categories for Athletics events, depending on gender, age, type of venue, distance and type of event (e.g., 100m Hurdles Women and 110m Hurdles Men). Although events rules may vary for the same type of discipline (i.e., differences of shot weight depending on gender and/or age).
 
-A potential hierarchical abstract classification for **Athletics Events** is:
+See a full [taxonomy of disciplines](./disciplines.md).
 
-- **Stadia Events**: Track and Field events within stadium
-
-  - **Outdoor Track and Field Events**: events held within outdoor stadia
-    - **Outdoor Track Events**:
-      - **Outdoor Sprints**: distance below 400m.
-      - **Outdoor Hurdles**: distance below 400m with hurdles.
-      - **Outdoor Relays**: relay events.
-      - **Outdoor Middle distance**: distances over 400m up to 2000m.
-      - **Outdoor Long distance**: higher distances races.
-      - **Outdoor Steeplechase**: races with steeplechase obstacles.
-    - **Outdoor Track Race Walking**: race walking races with standard distances up to 5000m.
-  - **Outdoor Field Events**: 
-    - **Outdoor Throws**: throwing events
-    - **Outdoor Jumps**: vertical and horizontal jumps.
-      - **Outdoor Vertical jumps**.
-      - **Outdoor Horizontal jumps**.
-  - **Outdoor Combined Events**: combination of disciplines such as decathlon and heptathlon.
-    - **Decathlon**
-    - **Outdoor Heptathlon**
-   
-  - **Indoor Track and Field Events**: events held within indoor stadia
-    - **Indoor Track Events**:
-      - **Indoor Sprints**: distance below 400m.
-      - **Indoor Hurdles**: distance below 400m with hurdles.
-      - **Indoor Relays**: relay events.
-      - **Indoor Middle distance**: distances over 400m up to 2000m.
-      - **Indoor Long distance**: higher distances races.
-      - **Indoor Track Race Walking**: race walking races indoor.   
-    - **Indoor Field Events**: 
-      - **Indoor Throws**: throwing events
-      - **Indoor Jumps**: vertical and horizontal jumps.
-        - **Indoor Vertical jumps**.
-        - **Indoor Horizontal jumps**.   
-    - **Indoor Combined Events**: combination of disciplines such as heptathlon or pentathlon.
-      - **Indoor Pentathlon**
-      - **Indoor Heptathlon**
-  
-- **Off-Stadia Events**:
-  - **Road Events**: races outside stadia, on road.
-    - **Road Running**: running events on road
-      - **Relays Road Running**: relay events on road (e.g. Ekiden)
-    - **Road Race-Walking**: race walking outside stadium (standard distances from 5000m to 50Km).
-  - **Off-road Events**: non-standard distances, surfaces and altitude, off-road.
-    - **Cross Country**: races on a loop course placed on open or woodland area. 
-      - **Relays Cross Country**: relay cross country events 
-    - **Mountain Races**: races on off-road terrain with significant elevation gain on the route.
-      - **Classic Mountain Races**: races either mainly uphill or with positive/negative altitude balanced.
-      - **Long Distance Mountain Races**: off-road races that include distances of approximately 20km to 42.195km, with significant elevation gain.
-      - **Relay Mountain Races**: relay mountain race competitions.
-      - **Time trial Mountain Races**: mountain races with individual start times at various intervals. The results are ordered by the individual finish times.
-    - **Trail Races**: trail races on a variety of terrain (including dirt roads, forest paths and single track footpaths) within a natural environment in open country (such as mountains, desert, forests or plains) that is mainly off-road. Organisers may impose or recommend obligatory security equipment applicable.
-
-
-### Venue Type
-
-<mark>Not sure about modeling the type of venue. Just as a first approach to check fesability:</mark>
-
-Events could be held either within stadia (track and field events) or outside (cross country, mountain races, road races, and others).
-
-Types of venues that can be considered:
-
-- Stadium (or arena)
-- Outdoor Course:
-  - Road course: course on road suitable for running and race-walking competitions.
-    - Circular Road Course: Start and finish line at the same point 
-    - Linear Road Course: Start and finish line at different places.
-  - Off-road course: off-road course on an open area.  
-    - Cross Country Course: course on an open, woodland area, covered as far as possible by grass, with natural obstacles 
-    - Mountain Course: open country course that is mainly off-road and can have significant elevation gain on the route, within a natural environment such as mountains, desert, forests or plains). Macadamised or concrete surface is acceptable but minimum.
-      - Uphill Course: the profile of the course involves considerable amounts of ascent, and is mainly uphill.
-      - Ascent/descent course: the profile of the course involves considerable amounts of ascent and descent, with start and finish at the same elevation level approximately.
-
-These venues may be described in detail. Some proposed metadata related to the type of venue (extending the basic [description of Venue](#venues)): 
-
-Stadium: Outdoor|Indoor
-- track
-  - type {Straight|Oval}
-  - lanes (integer)
-  - length (metres)
-- Payment Accepted (cash, credit card, etc.)
-- Currencies Accepted (cash, credit card, etc.)
- 
-Outdoor course:
-- Start point (geo)
-- Finish point (geo)
-- aid station(s): stations for providing athletes any kind of aid such us clothing, communications, sponges, food or drinks.
-- elevation gain (metres)
-- elevation loss (metres)
-- course geometry (polygon, polyline)

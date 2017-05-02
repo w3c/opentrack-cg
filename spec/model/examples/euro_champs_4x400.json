@@ -1,0 +1,164 @@
+//
+// Description of 4x400 event in the European Championships 2016 (euro_champs.json)
+//
+{
+    '@id' : 'http://example.com/event:EURO2016_400x100_metres_Women',
+    '@type' : 'RelaysEvent',
+    'name' : '4x400 - European Championships 2016',
+    'url' : 'http://www.european-athletics.org/link_to_4x400_2016',
+    'startDate' : '2016-07-09',
+    'endDate' : '2016-07-10',
+    'location' : 'http://example.com/venue:AMS_OS',  
+    'discipline' : 'discipline:4x400M',
+    'category' : 
+        {
+            '@type' :  'Category',
+            'name' : 'Senior Women',
+            'gender' : 'gender:Women',
+            'ageRange' : 'age:SEN'
+        },
+    'round' :      // Round 1 and Final
+        [
+            {
+                'name' : 'Round 1 - Heat 1',
+                '@type' : 'RelaysRound',
+                'date' : '2016-07-09',
+                'qualificationCriteria' : 'First 3 in each heat (Q) and 2 best performers (q) advance to the Final',
+                'startList' : 
+                    [
+                        {
+                            '@type' : 'TimedEventStartListItem',
+                            'competitor' : 'http://example.com/team:GRB',    
+                            'lane' : 1,
+                            'bibIdentifier' : 'GRB'
+                        },
+                        {
+                            '@type' : 'TimedEventStartListItem',
+                            'competitor' : 'http://example.com/team:POL',    
+                            'lane' : 2,
+                            'bibIdentifier' : 'GRB'
+                        }
+                        // … and so on. All teams for this heat
+                    ],
+                'result' : // Results for this Heat
+                    [
+                        {
+                            '@type' : 'Result',
+                            'competitor' : 'http://example.com/team:GRB',    
+                            'rank' : 1,
+                            'bibIdentifier' : 'GRB',
+                            'feature' : 'feature:Q',
+                            'performance' : // Performance as team
+                                {
+                                    'value' : '3:26.42'
+                                },
+                            'relaysLegs' : 
+                                [
+                                    {
+                                        '@type' : 'RelaysLeg',
+                                        'order' : 1,
+                                        'athlete' : 'http://example.com/athlete:09822',
+                                        'performance' : 
+                                            {
+                                                'value': '51.56'
+                                            }
+                                    },
+                                    {
+                                        'order' : 2,
+                                        'athlete' : 'http://example.com/athlete:09823',
+                                        'performance' : 
+                                            {
+                                                'value': '51.80'
+                                            }
+                                    },
+                                    {
+                                        'order' : 3,
+                                        'athlete' : 'http://example.com/athlete:09824',
+                                        'performance' : 
+                                            {
+                                                'value': '50.70'
+                                            }
+                                    },
+                                    {
+                                        'order' : 4,
+                                        'athlete' : 'http://example.com/athlete:09825',
+                                        'performance' : 
+                                            {
+                                                'value': '50.99'
+                                            }
+                                    }                        
+                                ]
+                        },
+                        {
+                            '@type' : 'Result',
+                            'competitor' : 'http://example.com/team:POL',    
+                            'rank' : 2,
+                            'bibIdentifier' : 'POL',
+                            'feature' : 'feature:Q',
+                            'performance' : 
+                                {
+                                    'value' : '3:27.72'
+                                },
+                            'relaysLegs' : 
+                                [
+                                    {
+                                        'order' : 1,
+                                        'athlete' : 'http://example.com/athlete:09832',
+                                        'performance' : 
+                                            {
+                                                'value': '51.56'
+                                            }
+                                    },
+                                    {
+                                        'order' : 2,
+                                        'athlete' : 'http://example.com/athlete:09833',
+                                        'performance' : 
+                                            {
+                                                'value': '51.88'
+                                            }
+                                    },
+                                    {
+                                        'order' : 3,
+                                        'athlete' : 'http://example.com/athlete:09834',
+                                        'performance' : 
+                                            {
+                                                'value': '51.70'
+                                            }
+                                    },
+                                    {
+                                        'order' : 4,
+                                        'athlete' : 'http://example.com/athlete:09835',
+                                        'performance' : 
+                                            {
+                                                'value': '50.98'
+                                            }
+                                    }                        
+                                ]
+                            
+                        }
+                        // … and so on. All the results for this heat
+                    ]                
+            },
+            {
+                'name' : 'Round 1 - Heat 2',
+                '@type' : 'RelaysRound',
+                'date' : '2016-07-09',
+                // Similar description as in Heat 1
+                'qualificationCriteria' : 'First 3 in each heat (Q) and 2 best performers (q) advance to the Final',
+                //'startList' : []
+                //'result' : []
+            },
+            {
+                'name' : 'Final',
+                '@type' : 'RelaysRound',
+                'date' : '2016-07-10',
+                // Similar description as in Round 1 
+                //'startList' : []
+                //'result' : []
+            },
+        ],
+    // 'results' : [] -> In case we want to represent the overall results (the same as in the final round)
+}
+  
+
+
