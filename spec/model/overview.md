@@ -715,7 +715,7 @@ Competition rounds aims at qualifying athletes to next round until the final. Th
 
 _Examples of Competition rounds are: 110m Hurdles Men **Preliminary Round Heat 1**, 10,000m Men **Final**, and 110 Hurdles Man **Semifinal 1**._  
 
-Rounds in **Field events** include [Trials Rounds](#trials-rounds), where each athlete have several attempts to achieve the best performance. Depending on the discipline and the number of competitors, the number of trials varies. Athletes will be credited with their best valid performances after the rounds of trials.
+Rounds in **Field events** include [Trials Rounds](#trials-rounds), where each athlete have several attempts to achieve the best performance. Depending on the discipline and the number of competitors, the number of trials varies. Athletes will be credited with their best valid performances after the rounds of trials. 
 
 Rounds may be described by the following properties:
 
@@ -967,6 +967,11 @@ Example:
 
 Except in Vertical Jumps, a valid trial shall be indicated by the measurement taken. For the standard abbreviations and symbols to be used in all other cases see [Start lists and results](#Start lists and results). A *´substitute´* trial is given in case an athlete is hampered in a trial or it cannot be correctly recorded.
 
+Results of trials in vertical jumps:
+* `O` = Cleared
+* `X` = Failed
+* `–` = Did not jump
+
 Trials may be described by the following properties:
 
 | Property | Description | Value Type |
@@ -1066,6 +1071,8 @@ Example:
 ### Results
 
 'Results' is an ordered list collecting the performances achieved by competitors after a concrete round or at the end of the event. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.). 
+
+In Combined Events, scores are calculated according to *Combined events scoring tables*.
 
 _Example of results after the Final round in 100m Women event:_
 
@@ -1354,6 +1361,7 @@ Athletics events may have a property to represent the states that they may be in
 | `NJR` | National Junior Record (for a specific country) |
 | `#` | indicates a record has not been accepted. The same mark is also used to indicate some sort of irregularity with a result |
 | `X` | indicates the athlete has been disqualified after the performance |
+| `ClubR` | Club Record |
 
 Records will be described by the type of record and the age-range category.
 
