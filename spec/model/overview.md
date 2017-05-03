@@ -738,6 +738,7 @@ Rounds may be described by the following properties:
 | identifier | Unique character string to identify the round and/or heat. | Text |
 | name | Descriptive name of the round and/or heat. | Text |
 | description | Longer descriptive text of the round and/or heat. | Text |
+| final | Indicates if this round is the final (true). | Boolean |
 | date | Date and time where the round and/or heat is held. | [Date and Time](#date,-time-and-periods) |
 | timekeeping | (Timed Events) Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
 | qualification criteria | Details what a competitor has to do to get to the next round. | [Qualification Criteria](#qualification-criteria) |
