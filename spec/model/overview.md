@@ -298,6 +298,18 @@ Example:
 [More use cases and examples](./examples).
 
 
+### Timed Events
+
+Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race.
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| start point | Place where the timed event starts. | Place |
+| finish point | Place where the timed event finishes. | Place |
+| course | Track (polygon) where the timed competition will be held. | GeoShape |
+
+
+
 ### Category
 
 Division that marks the competition of athletes and teams in events. Categories may include gender, age range and specific rules depending of the event.  
@@ -755,7 +767,16 @@ Example:
 
 #### Timed Events Rounds
 
-Timed events have specific information about timekeeping.
+For those timed events held outside stadia, they may have different start and end points. 
+
+These rounds may include also the following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| start point | Place where the timed event starts. | Place |
+| finish point | Place where the timed event finishes. | Place |
+| course | Track (polygon) where the timed competition will be held. | GeoShape |
+
 
 Example:
 ```javascript
@@ -1179,6 +1200,9 @@ Legs are defined by the following properties:
 | identifier | Unique character string to identify the relays leg. | Text |
 | order | Order of this leg in the relays event. | Number |
 | length | Length of the leg to be covered by the athlete. | [Quantitative Value](#quantitative-values) |
+| start point | Place where the leg starts. | Place |
+| finish point | Place where the leg finishes. | Place |
+| course | Track (polygon) where the leg is held. | GeoShape |
 | athlete | Person competing in this event. | [Athlete](#athletes) |
 | performance | Measure to quantify the performance of the athlete after the leg.  | **[Performance](#performances)** |
 
