@@ -135,7 +135,7 @@ Competitions may be described by the following attributes:
 | logo | Logo of the event. | URL |
 | start date | Date and time when the event starts. | [Date and Time](#date,-time-and-periods) |
 | end date | Date and time when the event ends. | [Date and Time](#date,-time-and-periods) |
-| status | Status of the event (planned, cancelled, etc.) | [Event Status](#Event-Status) |
+| status | Status of the event (scheduled, completed, etc.) | [Event Status](#Event-Status) |
 | organizer(s) | Person(s) or organization(s) that organizes the event. | [Person](#persons) or [Organization](#organizations) |
 | contributor(s) | Person(s) or organization(s) that collaborates in the organization of the event. | [Person](#persons) or [Organization](#organizations) |
 | sponsor(s) | Person(s) or organization(s) that sponsors the event. | [Person](#persons) or [Organization](#organizations) |
@@ -197,7 +197,8 @@ Athletics events may be described by the following attributes:
 | end date | Date and time when the event ends. | [Date and Time](#date,-time-and-periods) |
 | location | Venue where this competition is held (for instance, Main Outdoor Track at Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | round(s) | Round(s) performed as part of the competition (preliminary heats, semifinals, final, mass start waves in road races, etc.).  | **[Competition Round](#competition-rounds)** |
-| combined event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
+| sub event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
+| status | Status of the event (scheduled, completed, etc.) | [Event Status](#Event-Status) |
 | discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
 | category | The specific category for this event competition. | [Category](#category) |
 | timekeeping | Type of timekeeping used to control the competition.  | [Timekeeping](#timekeeping) |
@@ -740,7 +741,7 @@ Rounds may be described by the following properties:
 | description | Longer descriptive text of the round and/or heat. | Text |
 | final | Indicates if this round is the final (true). | Boolean |
 | date | Date and time where the round and/or heat is held. | [Date and Time](#date,-time-and-periods) |
-| timekeeping | (Timed Events) Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
+| status | Status of the event (scheduled, completed, etc.) | [Event Status](#Event-Status) |
 | qualification criteria | Details what a competitor has to do to get to the next round. | [Qualification Criteria](#qualification-criteria) |
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
 | results | List with the results after the celebration of the round.  | **[Results](#results)** |
@@ -753,6 +754,7 @@ Requirements for the competitor to pass the round. Qualification may be based on
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
+| timekeeping | Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
 | description | Descriptive text of the qualification criteria. | Text |
 | byPosition | Number of competitors that are qualified in a round by their position. | Text |
 | byTime | Number of competitors that are qualified in a round by best time. | Text |
@@ -1420,10 +1422,11 @@ Countries may be represented by their [ISO 3166-1](https://en.wikipedia.org/wiki
 
 Athletics events may have a property to represent the states that they may be in:
 
-- `Cancelled`
-- `Postponed`
-- `Rescheduled`
-- `Scheduled`
+* `Scheduled`
+* `Started`
+* `Finished`
+* `Completed`
+* `Completed`
 
 ### Records 
 

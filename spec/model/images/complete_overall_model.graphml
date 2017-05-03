@@ -52,7 +52,7 @@ attendee: Person</y:AttributeLabel>
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="165.0655889145496" width="166.44295612009233" x="353.5374350604794" y="294.72021497471684"/>
+          <y:Geometry height="186.71593533487294" width="166.44295612009233" x="353.5374350604794" y="273.0698685543935"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="40.943359375" x="62.74979837254617" y="3.0">Event<y:LabelModel>
@@ -71,6 +71,7 @@ discipline: Discipline
 startDate: DateTime
 endDate: DateTime
 entryRequirements: Text
+status: EventStatus
 result: Result</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
@@ -111,7 +112,7 @@ faxNumber: Text</y:AttributeLabel>
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="107.0" width="143.0" x="78.5" y="323.75300943199164"/>
+          <y:Geometry height="107.0" width="143.0" x="78.5" y="312.92783622183"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="64.15673828125" x="39.421630859375" y="3.0">Category<y:LabelModel>
@@ -136,7 +137,7 @@ ageRange: Text </y:AttributeLabel>
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="122.0" width="159.0" x="891.5" y="329.0"/>
+          <y:Geometry height="137.9528868360277" width="159.0" x="891.5" y="321.02355658198616"/>
           <y:Fill color="#FFCC99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="46.9609375" x="56.01953125" y="3.0">Round<y:LabelModel>
@@ -152,6 +153,7 @@ name: Text
 alternateName: Text
 description: Text
 date: DateTime
+status: EventStatus
 final: Boolean</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
@@ -806,12 +808,12 @@ byTime: Number</y:AttributeLabel>
     <edge id="e3" source="n0" target="n1">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="0.0" sy="96.67349884526561" tx="0.0" ty="0.0">
-            <y:Point x="436.75891312052556" y="246.6734988452656"/>
+          <y:Path sx="-17.884526558891366" sy="39.33643187066974" tx="0.0" ty="0.0">
+            <y:Point x="436.75891312052556" y="189.33643187066974"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="35.517578125" x="-139.50658980916194" y="24.913910043076214">event<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="35.517578125" x="-139.48248092244313" y="60.60063027314351">event<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -843,10 +845,13 @@ byTime: Number</y:AttributeLabel>
     <edge id="e6" source="n1" target="n4">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="59.69468822170899" sy="12.746990568008377" tx="0.0" ty="0.0"/>
+          <y:Path sx="36.71175662543294" sy="24.598664932904512" tx="0.0" ty="0.0">
+            <y:Point x="733.7268006711173" y="391.0265011547345"/>
+            <y:Point x="733.7268006711173" y="390.0"/>
+          </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="38.728515625" x="327.7701416015625" y="-39.06640624999994">round<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="38.728515625" x="327.7869873046875" y="-40.0928955078125">round<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1402,13 +1407,13 @@ athlete<y:LabelModel>
     <edge id="e43" source="n1" target="n1">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="41.48217375894893" sy="-41.13311573472513" tx="83.22921838914544" ty="-18.829391342844858">
-            <y:Point x="556.5" y="336.1198936972665"/>
-            <y:Point x="556.5" y="358.42361808914677"/>
+          <y:Path sx="41.48217375894893" sy="-46.52822086148214" tx="83.22921838914544" ty="-21.299093526911008">
+            <y:Point x="556.5" y="319.89961536034787"/>
+            <y:Point x="556.5" y="345.12874269491897"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="56.453125" x="38.29296875" y="13.237308274693646">subEvent<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="56.453125" x="38.29296875" y="16.162708759372094">subEvent<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1445,7 +1450,7 @@ athlete<y:LabelModel>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="53.98046875" x="-127.0526123046875" y="-39.06641805824273">category<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="53.98046875" x="-127.0526123046875" y="-39.0663959559044">category<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1647,7 +1652,7 @@ athlete<y:LabelModel>
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="54.2699572862261">
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="61.38811791067457">
             <y:Point x="516.75" y="510.0"/>
             <y:Point x="436.75891312052556" y="510.0"/>
           </y:Path>
@@ -1870,7 +1875,7 @@ athlete<y:LabelModel>
           <y:Path sx="0.0" sy="0.0" tx="-9.75" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="118.85546875" x="17.291434216224047" y="-70.89525177628195">qualificationCriteria<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="118.85546875" x="17.291434216223934" y="-62.90254547745383">qualificationCriteria<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1886,13 +1891,13 @@ athlete<y:LabelModel>
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="49.0" sy="0.0" tx="63.425404157043886" ty="-50.25063510392607">
-            <y:Point x="1020.0" y="300.0"/>
-            <y:Point x="1034.4254041570439" y="300.0"/>
+          <y:Path sx="49.0" sy="0.0" tx="63.425404157043886" ty="-56.82147686828226">
+            <y:Point x="1020.0" y="292.02355658198616"/>
+            <y:Point x="1034.4254041570439" y="292.02355658198616"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="29.248046875" x="15.3759765625" y="-30.5595703125">heat<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="29.248046875" x="15.3759765625" y="-30.63852227543572">heat<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
