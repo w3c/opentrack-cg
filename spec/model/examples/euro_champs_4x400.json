@@ -23,7 +23,13 @@
                 'name' : 'Round 1 - Heat 1',
                 '@type' : 'RelaysRound',
                 'date' : '2016-07-09',
-                'qualificationCriteria' : 'First 3 in each heat (Q) and 2 best performers (q) advance to the Final',
+                'qualificationCriteria' : 
+                    { 
+                        '@type' : 'QualificationCriteria',
+                        'description' : 'First 3 in each heat (Q) and 2 best performers (q) advance to the Final',
+                        'byPosition' : 3,
+                        'byTime' : 2
+                    }
                 'startList' : 
                     [
                         {

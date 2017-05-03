@@ -728,9 +728,30 @@ Rounds may be described by the following properties:
 | description | Longer descriptive text of the round and/or heat. | Text |
 | date | Date and time where the round and/or heat is held. | [Date and Time](#date,-time-and-periods) |
 | timekeeping | (Timed Events) Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
-| qualification criteria | Details what a competitor has to do to get to the next round. | Text |
+| qualification criteria | Details what a competitor has to do to get to the next round. | [Qualification Criteria](#qualification-criteria) |
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
 | results | List with the results after the celebration of the round.  | **[Results](#results)** |
+
+
+#### Qualification Criteria
+
+Requirements for the competitor to pass the round. Qualification may be based on the *finishing position* or by *best time*.
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| description | Descriptive text of the qualification criteria. | Text |
+| byPosition | Number of competitors that are qualified in a round by their position. | Text |
+| byTime | Number of competitors that are qualified in a round by best time. | Text |
+
+Example:
+```javascript
+{ 
+    '@type' : 'QualificationCriteria',
+    'description' : 'First 3 in each heat (Q) and 2 best performers (q) advance to the Final',
+    'byPosition' : 3,
+    'byTime' : 2
+}
+```
 
 #### Timed Events Rounds
 
@@ -745,7 +766,6 @@ Example:
     'name' : 'Heptathlon 100m Hurdles - Heat 1',
     'description' : 'Heat 1 of 3 within Heptathlon 100m Hurdles',
     'date' : '2016-07-08T10:30:00+01:00',
-    'qualificationCriteria': '3 heats without qualification. Assignation  of score points according to performance.' ,
     'timekeeping' : 'timekeeping:FAT',        
     'startList' :
         [
@@ -765,7 +785,6 @@ Example:
 
 ```
 [More use cases and examples](./examples).
-
 
 ##### Timekeeping
 
@@ -819,7 +838,10 @@ Example:
     'name' : 'Heptathlon Shot Put - Group A',
     'description' : 'Group A within Heptathlon - Shot Put',
     'date' : '2016-07-08T10:30:00+01:00',
-    'qualificationCriteria' : '2 groups without qualification. Assignation of score points according to performance.' ,
+    'qualificationCriteria' : 
+        {
+            'description' : '2 groups without qualification. Assignation of score points according to performance.' 
+        },
     'startList' :
         [
             'http://example.org/entrt:000011',
@@ -868,7 +890,6 @@ Example:
     'name' : 'Heptathlon High Jump - Group A',
     'description' : 'Group A within Heptathlon High Jump',
     'date' : '2016-07-08T10:30:00+01:00',
-    'qualificationCriteria' : '2 groups without qualification. Assignation of score points according to performance.' ,
     'startingHeight': "150cm" ,                     // Also as Quantitative Value
     'increasingHeight': "+3cm after each round" ,     
     'startList' :
