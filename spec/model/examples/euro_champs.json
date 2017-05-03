@@ -1,59 +1,45 @@
-// 
-// Example of description of a Decathlon event at championship
-// 
-
 {
-    '@context' : 'https://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld', 
-    '@id' : 'http://example.com/competition:0103441',
-    '@type' :  'Competition',
-    'name' : '2016 European Athletics Championships',
-    'alternateName' : 'Amsterdam Euro 2016',        
-    'url' : 'http://www.european-athletics.org/competitions/european-athletics-championships/2016/events/',
-    'image' : 'https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Amsterdam2016logo.png',
-    'location' :
-        {
-            '@id' : 'http://example.com/venue:AMS_OS',
-            '@type' : 'Venue',                
-            'name' : 'Olympic Stadium Amsterdam',
-            'geo' : 
-                {
-                    'latitude' : '52.343417',
-                    'longitude' : '4.854192'
-                },
-            'map' : 'http://example.org/map',
-            'address' : 
-                {
-                    'streetAddress' : 'Olympisch Stadion 2',
-                    'addressLocality' : 'Amsterdam',
-                    'postalCode' : '1076 DE',
-                    'addressCountry' : 'country:NL'
-                }
+    "@context": "https://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://example.com/competition:0103441",
+    "@type": "Competition",
+    "name": "2016 European Athletics Championships",
+    "alternateName": "Amsterdam Euro 2016",
+    "url": "http://www.european-athletics.org/competitions/european-athletics-championships/2016/events/",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Amsterdam2016logo.png",
+    "location": {
+        "@id": "http://example.com/venue:AMS_OS",
+        "@type": "Venue",
+        "name": "Olympic Stadium Amsterdam",
+        "geo": {
+            "latitude": "52.343417",
+            "longitude": "4.854192"
         },
-    'startDate' : '2016-06-06',  
-    'endDate' : '2016-06-10',    
-    'status' : 'status:completed',
-    'organizer' : 'http://example.com/federation:EA' ,
-    'event' :     // List of events within the overall competition
-        [
-            'http://example.com/event:EURO2016_100_metres_Men',
-            'http://example.com/event:EURO2016_100_metres_Women',
-            'http://example.com/event:EURO2016_200_metres_Men',
-            'http://example.com/event:EURO2016_200_metres_Women',
-            'http://example.com/event:EURO2016_400_metres_Men',
-            'http://example.com/event:EURO2016_400_metres_Women',
-            // …
-            'http://example.com/event:EURO2016_400x100_metres_Men',
-            'http://example.com/event:EURO2016_400x100_metres_Women',
-            'http://example.com/event:EURO2016_LJ_Men',
-            'http://example.com/event:EURO2016_LJ_Women',
-            'http://example.com/event:EURO2016_Marathon_Men',
-            'http://example.com/event:EURO2016_Marathon_Women',
-            'http://example.com/event:EURO2016_Heptathlon',
-            'http://example.com/event:EURO2016_Decathlon'
-        ]
+        "map": "http://example.org/map",
+        "address": {
+            "streetAddress": "Olympisch Stadion 2",
+            "addressLocality": "Amsterdam",
+            "postalCode": "1076 DE",
+            "addressCountry": "country:NL"
+        }
+    },
+    "startDate": "2016-06-06",
+    "endDate": "2016-06-10",
+    "status": "status:completed",
+    "organizer": "http://example.com/federation:EA",
+    "event": [
+        "http://example.com/event:EURO2016_100_metres_Men",
+        "http://example.com/event:EURO2016_100_metres_Women",
+        "http://example.com/event:EURO2016_200_metres_Men",
+        "http://example.com/event:EURO2016_200_metres_Women",
+        "http://example.com/event:EURO2016_400_metres_Men",
+        "http://example.com/event:EURO2016_400_metres_Women",
+        "http://example.com/event:EURO2016_400x100_metres_Men",
+        "http://example.com/event:EURO2016_400x100_metres_Women",
+        "http://example.com/event:EURO2016_LJ_Men",
+        "http://example.com/event:EURO2016_LJ_Women",
+        "http://example.com/event:EURO2016_Marathon_Men",
+        "http://example.com/event:EURO2016_Marathon_Women",
+        "http://example.com/event:EURO2016_Heptathlon",
+        "http://example.com/event:EURO2016_Decathlon"
+    ]
 }
-
-// Events are described in other files: 
-//  - euro_champs_heptathlon.json
-//  - euro_champs_100m.json
-//  - euro_champs_LJ.json
