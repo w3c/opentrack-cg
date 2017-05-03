@@ -1157,6 +1157,7 @@ Legs are defined by the following properties:
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the relays leg. | Text |
 | order | Order of this leg in the relays event. | Number |
+| length | Length of the leg to be covered by the athlete. | [Quantitative Value](#quantitative-values) |
 | athlete | Person competing in this event. | [Athlete](#athletes) |
 | performance | Measure to quantify the performance of the athlete after the leg.  | **[Performance](#performances)** |
 
@@ -1166,6 +1167,7 @@ Example:
     '@type' : 'RelaysLeg',
     'order' : 1,
     'athlete' : 'http://example.com/athlete:09822',
+    'length' : '400m',
     'performance' : 
         {
             'value': '51.56'
