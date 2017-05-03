@@ -146,34 +146,34 @@ Competitions may be described by the following attributes:
 Example:
 ```javascript
 {
-    '@id' : 'http://example.com/competition:0001',
-    '@type' :  'Competition',
-    'name' : '2016 European Athletics Championships',
-    'alternateName' : 'Amsterdam Euro 2016',        
-    'url' : 'http://www.european-athletics.org/competitions/european-athletics-championships/2016/events/',
-    'image' : 'https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Amsterdam2016logo.png',
-    'location' : 'http://example.com/venue:0001',
-    'startDate' : '2016-06-06',  
-    'endDate' : '2016-06-10',    
-    'status' : 'status:completed',
-    'organizer' : 'http://example.com/federation:EA' ,
-    'event' :     // List of events within the overall competition
+    "@id" : "http://example.com/competition:0001",
+    "@type" :  "Competition",
+    "name" : "2016 European Athletics Championships",
+    "alternateName" : "Amsterdam Euro 2016",        
+    "url" : "http://www.european-athletics.org/competitions/european-athletics-championships/2016/events/",
+    "image" : "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Amsterdam2016logo.png",
+    "location" : "http://example.com/venue:0001",
+    "startDate" : "2016-06-06",  
+    "endDate" : "2016-06-10",    
+    "status" : "status:completed",
+    "organizer" : "http://example.com/federation:EA" ,
+    "event" :     // List of events within the overall competition
         [
-            'http://example.com/event:EURO2016_100_metres_Men',
-            'http://example.com/event:EURO2016_100_metres_Women',
-            'http://example.com/event:EURO2016_200_metres_Men',
-            'http://example.com/event:EURO2016_200_metres_Women',
-            'http://example.com/event:EURO2016_400_metres_Men',
-            'http://example.com/event:EURO2016_400_metres_Women',
+           "http://example.com/event:EURO2016_100_metres_Men",
+           "http://example.com/event:EURO2016_100_metres_Women",
+           "http://example.com/event:EURO2016_200_metres_Men",
+           "http://example.com/event:EURO2016_200_metres_Women",
+           "http://example.com/event:EURO2016_400_metres_Men",
+           "http://example.com/event:EURO2016_400_metres_Women",
             // …
-            'http://example.com/event:EURO2016_400x100_metres_Men',
-            'http://example.com/event:EURO2016_400x100_metres_Women',
-            'http://example.com/event:EURO2016_LJ_Men',
-            'http://example.com/event:EURO2016_LJ_Women',
-            'http://example.com/event:EURO2016_Marathon_Men',
-            'http://example.com/event:EURO2016_Marathon_Women',
-            'http://example.com/event:EURO2016_Heptathlon',
-            'http://example.com/event:EURO2016_Decathlon'
+           "http://example.com/event:EURO2016_400x100_metres_Men",
+           "http://example.com/event:EURO2016_400x100_metres_Women",
+           "http://example.com/event:EURO2016_LJ_Men",
+           "http://example.com/event:EURO2016_LJ_Women",
+           "http://example.com/event:EURO2016_Marathon_Men",
+           "http://example.com/event:EURO2016_Marathon_Women",
+           "http://example.com/event:EURO2016_Heptathlon",
+           "http://example.com/event:EURO2016_Decathlon"
         ]
 }
 ```
@@ -208,75 +208,75 @@ Athletics events may be described by the following attributes:
 Example:
 ```javascript
 {
-    '@id' : 'http://example.com/event:EURO2016_Heptathlon',
-    '@type' : 'Event',
-    'name' : 'Heptathlon - European Championships 2016',
-    'description' : 'Women\'s heptathlon at the 2016 European Athletics Championships',
-    'url' : 'http://www.european-athletics.org/link_to_heptathlon_2016',
-    'startDate' : '2016-07-08',
-    'endDate' : '2016-07-09',
-    'location' : 'http://example.com/venue:0001',  
-    'discipline' : 'discipline:heptathlon',
-    'category' : 'http://example.com/category:SeniorWomen'
-    'subEvent' :       // Hepthatlon is composed of seven subEvents: 
+    "@id" : "http://example.com/event:EURO2016_Heptathlon",
+    "@type" : "Event",
+    "name" : "Heptathlon - European Championships 2016",
+    "description" : "Women\'s heptathlon at the 2016 European Athletics Championships",
+    "url" : "http://www.european-athletics.org/link_to_heptathlon_2016",
+    "startDate" : "2016-07-08",
+    "endDate" : "2016-07-09",
+    "location" : "http://example.com/venue:0001",  
+    "discipline" : "discipline:heptathlon",
+    "category" : "http://example.com/category:SeniorWomen"
+   "subEvent" :       // Hepthatlon is composed of seven subEvents: 
         [
             {
-                '@id' : 'http://example.com/event:EURO2016_Heptathlon_100mH',
-                '@type' : 'Event',
-                'name' : 'Heptathlon - 100m Hurdles',
-                'description' : '100 Hurdles at heptathlon as part of the 2016 European Athletics Championships',
-                'url' : 'http://www.european-athletics.org/link_to_heptathlon_2016_100',
-                'startDate' : '2016-07-08',
-                'discipline' : 'discipline:100mH',
-                'round' :       // Split in three heats (1, 2 and 3)
+                "@id" : "http://example.com/event:EURO2016_Heptathlon_100mH",
+                "@type" : "Event",
+                "name" : "Heptathlon - 100m Hurdles",
+                "description" : "100 Hurdles at heptathlon as part of the 2016 European Athletics Championships",
+                "url" : "http://www.european-athletics.org/link_to_heptathlon_2016_100",
+                "startDate" : "2016-07-08",
+                "discipline" : "discipline:100mH",
+               "round" :       // Split in three heats (1, 2 and 3)
                     [
-                        'http://example.com/round:EURO2016_Heptathlon_100mH_Heat1',
-                        'http://example.com/round:EURO2016_Heptathlon_100mH_Heat2',
-                        'http://example.com/round:EURO2016_Heptathlon_100mH_Heat3'
+                       "http://example.com/round:EURO2016_Heptathlon_100mH_Heat1",
+                       "http://example.com/round:EURO2016_Heptathlon_100mH_Heat2",
+                       "http://example.com/round:EURO2016_Heptathlon_100mH_Heat3"
                     ],
-                'result' :       // Results of the overall event after rounds
+               "result" :       // Results of the overall event after rounds
                     [
-                        'http://example.com/result:00001',
-                        'http://example.com/result:00002'
+                       "http://example.com/result:00001",
+                       "http://example.com/result:00002"
                         // … and so on, including results for all athletes
                     ]
             },
             {
-                '@id' : 'http://example.com/event:EURO2016_Heptathlon_HJ',
-                '@type' : 'Event',
-                'name' : 'Heptathlon - High Jump',
-                'description' : 'High Jump at heptathlon as part of the 2016 European Athletics Championships',
-                'startDate' : '2016-07-08',
-                'discipline' : 'discipline:HJ',
-                'round' :                                    // Grouped in: Group A and Group B
+                "@id" : "http://example.com/event:EURO2016_Heptathlon_HJ",
+                "@type" : "Event",
+                "name" : "Heptathlon - High Jump",
+                "description" : "High Jump at heptathlon as part of the 2016 European Athletics Championships",
+                "startDate" : "2016-07-08",
+                "discipline" : "discipline:HJ",
+               "round" :                                    // Grouped in: Group A and Group B
                     [
-                        'http://example.com/round:EURO2016_Heptathlon_HJ_A',
-                        'http://example.com/round:EURO2016_Heptathlon_HJ_B'
+                       "http://example.com/round:EURO2016_Heptathlon_HJ_A",
+                       "http://example.com/round:EURO2016_Heptathlon_HJ_B"
                     ],
-                'result' :       
+               "result" :       
                     [
-                        'http://example.com/result:00101',
-                        'http://example.com/result:00102'
+                       "http://example.com/result:00101",
+                       "http://example.com/result:00102"
                         // … and so on, including results for all athletes
                     ]
             },
             {
-                '@id' : 'http://example.com/event:EURO2016_Heptathlon_SP',
-                '@type' : 'Event',
-                'name' : 'Heptathlon - Shot Put',
-                'description' : 'Shot Put at heptathlon as part of the 2016 European Athletics Championships',
-                'startDate' : '2016-07-09',
-                'discipline' : 'discipline:SP',
+                "@id" : "http://example.com/event:EURO2016_Heptathlon_SP",
+                "@type" : "Event",
+                "name" : "Heptathlon - Shot Put",
+                "description" : "Shot Put at heptathlon as part of the 2016 European Athletics Championships",
+                "startDate" : "2016-07-09",
+                "discipline" : "discipline:SP",
                 // Information about rounds                
-                'round' :                                    // Grouped in: Group A and Group B
+               "round" :                                    // Grouped in: Group A and Group B
                     [
-                        'http://example.com/round:EURO2016_Heptathlon_SP_A',
-                        'http://example.com/round:EURO2016_Heptathlon_SP_B'
+                       "http://example.com/round:EURO2016_Heptathlon_SP_A",
+                       "http://example.com/round:EURO2016_Heptathlon_SP_B"
                     ],
-                'results' :         // Final results for Shot Put
+               "results" :         // Final results for Shot Put
                     [
-                        'http://example.com/result:00201',
-                        'http://example.com/result:00202'
+                       "http://example.com/result:00201",
+                       "http://example.com/result:00202"
                         // … and so on, including results for all athletes
                     ]                
             }
@@ -285,11 +285,11 @@ Example:
             // …
         ],
         // The final results for heptathlon
-        'result' : 
+       "result" : 
             [
-                'http://example.com/result:01201',
-                'http://example.com/result:01202',
-                'http://example.com/result:01203'
+               "http://example.com/result:01201",
+               "http://example.com/result:01202",
+               "http://example.com/result:01203"
                 // … and so on, including results for all athletes
             ]
 }
@@ -331,11 +331,11 @@ Categories will be described by these following properties:
 Example:
 ```javascript
 {
-    '@type' :  'Category',
-    'name' : 'U18 Male',
-    'description' : 'Boys under 18',
-    'gender' : 'gender:Male',
-    'ageRange' : 'age:U18'
+   "@type" :  "Category",
+    "name" : "U18 Male",
+    "description" : "Boys under 18",
+    "gender" : "gender:Male",
+    "ageRange" : "age:U18"
 }
 
 ```
@@ -369,16 +369,16 @@ Venues can be described by the following attributes:
 Example:
 ```javascript
 {
-    '@id' : 'http://example.com/venue:0001'
-    '@type' : 'Venue',                
-    'name' : 'Olympic Stadium Amsterdam',
-    'geo' : 
+    "@id" : "http://example.com/venue:0001"
+    "@type" : "Venue",                
+    "name" : "Olympic Stadium Amsterdam",
+   "geo" : 
         {
-            'latitude' : '52.343417',
-            'longitude' : '4.854192'
+            "latitude" : "52.343417",
+            "longitude" : "4.854192"
         },
-    'map' : 'http://example.org/map',
-    'address' : 'http://example.org/postaladdress:0001'
+    "map" : "http://example.org/map",
+    "address" : "http://example.org/postaladdress:0001"
 }
 ```
 [More use cases and examples](./examples).
@@ -405,12 +405,12 @@ A postal address may be represented by some common properties:
 Example:
 ```javascript
 {
-    '@id' : 'http://example.org/postaladdress:0001',
-    '@type' : 'PostalAddress',
-    'streetAddress' : 'Olympisch Stadion 2',
-    'addressLocality' : 'Amsterdam',
-    'postalCode' : '1076 DE',
-    'addressCountry' : 'country:NL'
+    "@id" : "http://example.org/postaladdress:0001",
+    "@type" : "PostalAddress",
+    "streetAddress" : "Olympisch Stadion 2",
+    "addressLocality" : "Amsterdam",
+    "postalCode" : "1076 DE",
+    "addressCountry" : "country:NL"
 }
 ```
 [More use cases and examples](./examples).
@@ -454,59 +454,59 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 Example:
 ```javascript
 {
-    '@id' : 'http://example.com/athlete:000021', 
-    '@type' : 'Athlete',
-    'name' : 'Mohamed Muktar Jama Farah',
-    'familyName' : 'Farah',
-    'givenName' : 'Mohamed Muktar Jama',
-    'alternateName' : 'Mo Farah',                // How they are known
-    'url' : 'http://www.mofarah.com',
-    'gender' : 'gender:Male' ,
-    'image' : 'https://example.com/260px-MoPodiumRio2016.png',
-    'nationality' : 'country:UK',                       
-    'email' : 'fakeemail@example.com',
-    'height' : 
+    "@id" : "http://example.com/athlete:000021", 
+    "@type" : "Athlete",
+    "name" : "Mohamed Muktar Jama Farah",
+    "familyName" : "Farah",
+    "givenName" : "Mohamed Muktar Jama",
+    "alternateName" : "Mo Farah",                // How they are known
+    "url" : "http://www.mofarah.com",
+    "gender" : "gender:Male" ,
+    "image" : "https://example.com/260px-MoPodiumRio2016.png",
+    "nationality" : "country:UK",                       
+    "email" : "fakeemail@example.com",
+   "height" : 
         { 
-            '@type' : 'QuantitativeValue',
-            'value': 175, 
-            'unitCode': 'CMT'                   // 'FOT'->feet ; 'INH'->inches ; 'MTR'->meter 
+            "@type" : "QuantitativeValue",
+            "value": 175, 
+            "unitCode": "CMT"                   // 'FOT'->feet ; 'INH'->inches ; 'MTR"->meter 
         },  
     weight : 
         {
-            '@type' : 'QuantitativeValue',
-            'value' : 65, 
-            'unitCode' : 'KGM'                  // 'LBR'->pound(lb) ; 'ONZ'->ounce(oz) 
+            "@type" : "QuantitativeValue",
+            "value" : 65, 
+            "unitCode" : "KGM"                  // 'LBR'->pound(lb) ; 'ONZ"->ounce(oz) 
         },   
-    'birthPlace' : 'Mogadishu, Somalia' ,
-    'birthDate' : '1983-04-23',             
-    'address' : 'http://example.org/postaladdress:00002',
+    "birthPlace" : "Mogadishu, Somalia" ,
+    "birthDate" : "1983-04-23",             
+    "address" : "http://example.org/postaladdress:00002",
     coach : 
         { 
-            '@type' : 'Person',
-            'name' : 'Alberto Salazar' 
+            "@type" : "Person",
+            "name" : "Alberto Salazar" 
         },
     sponsor : 
         {
-            '@type' : 'Organization',
-            'name' : 'Nike Oregon Project',
-            'url' : 'https://nikeoregonproject.com'            
+            "@type" : "Organization",
+            "name" : "Nike Oregon Project",
+            "url" : "https://nikeoregonproject.com"            
         },
     club :                                  // Zero or more clubs
         [ 
-            'http://example.com/club:NEB',
-            'http://example.com/club:NOP'
+           "http://example.com/club:NEB",
+           "http://example.com/club:NOP"
         ],
     federation :
         [ 
-            'http://example.com/federation:England_Athletics', 
-            'http://example.com/federation:USATF' 
+           "http://example.com/federation:England_Athletics", 
+           "http://example.com/federation:USATF" 
         ],
     bests :                                 // Lists to best performances
         [
-            'http://example.com/performance:0000122',
-            'http://example.com/performance:0000124',
-            'http://example.com/performance:0002122',
-            'http://example.com/performance:0000234'
+           "http://example.com/performance:0000122",
+           "http://example.com/performance:0000124",
+           "http://example.com/performance:0002122",
+           "http://example.com/performance:0000234"
             // … and so on 
         ]
 }
@@ -538,27 +538,27 @@ Clubs may be described using the following attributes:
 Example:
 ```javascript
 {
-    '@id' : 'http://example.com/club:NEB',
-    '@type' : 'Club',
-    'name' : 'Newham & Essex Beagles',
-    'alternateName' : 'BeaglesAC',                       // Alias, acronym, etc.
-    'url' : 'http://www.newhamandessexbeagles.co.uk/',
-    'image' : 'http://example.org/image.png',
-    'logo' : 'http://example.org/logo.png',               // Logo, flag, etc.
-    'telephone' : '(+44) 020 7511 6463',                  
-    'fax' : '(+44) 020 7511 4477',
-    'email' : 'fakeemail@example.org',
-    'address' : 'http://example.org/postaladdress:0004',
-    'sponsor' : 'Asics',
-    'athlete' :                                           // List of athletes affiliated to the club
+    "@id" : "http://example.com/club:NEB",
+    "@type" : "Club",
+    "name" : "Newham & Essex Beagles",
+    "alternateName" : "BeaglesAC",                       // Alias, acronym, etc.
+    "url" : "http://www.newhamandessexbeagles.co.uk/",
+    "image" : "http://example.org/image.png",
+    "logo" : "http://example.org/logo.png",               // Logo, flag, etc.
+    "telephone" : "(+44) 020 7511 6463",                  
+    "fax" : "(+44) 020 7511 4477",
+    "email" : "fakeemail@example.org",
+    "address" : "http://example.org/postaladdress:0004",
+    "sponsor" : "Asics",
+    "athlete" :                                           // List of athletes affiliated to the club
         [
-            'http://example.com/athlete:082838',
-            'http://example.com/athlete:082839',
-            'http://example.com/athlete:082840'
+           "http://example.com/athlete:082838",
+           "http://example.com/athlete:082839",
+           "http://example.com/athlete:082840"
             // … and so on
         ],
     
-    memberOf : 'http://example.com/federation:England_Athletics'
+    memberOf :"http://example.com/federation:England_Athletics"
 }
 ```
 [More use cases and examples](./examples).
@@ -589,42 +589,42 @@ Teams may be described using the following attributes:
 Examples:
 ```javascript
 {
-    '@id' : 'http://example.com/team:KEN001',
-    '@type' : 'Team',
-    'name' : 'Kent Athletic Club – Cross Country 2017 Team',
-    'alternateName' : 'KEN',                              // Alias, acronym, etc.
-    'image' : 'http://example.org/image.png',
-    'logo' : 'http://example.org/logo.png',               // Logo, flag, etc.
-    'captain' : 'http://example.com/athlete:092838',
-    'athlete' :                                           // List of athletes composing the team
+    "@id" : "http://example.com/team:KEN001",
+    "@type" : "Team",
+    "name" : "Kent Athletic Club – Cross Country 2017 Team",
+    "alternateName" : "KEN",                              // Alias, acronym, etc.
+    "image" : "http://example.org/image.png",
+    "logo" : "http://example.org/logo.png",               // Logo, flag, etc.
+    "captain" : "http://example.com/athlete:092838",
+   "athlete" :                                           // List of athletes composing the team
         [
-            'http://example.com/athlete:092838',
-            'http://example.com/athlete:092839',
-            'http://example.com/athlete:092840'
+           "http://example.com/athlete:092838",
+           "http://example.com/athlete:092839",
+           "http://example.com/athlete:092840"
             // … and so on
         ],
-    'club' : 'http://example.com/club:KEN'
+    "club" : "http://example.com/club:KEN"
 }
 
 //
 // Example of National Team
 //
 {
-    '@id' : 'http://example.com/team:JAP2017',
-    '@type' : 'Team',
-    'name' : 'Japan Team - Marathon 2017',
-    'alternateName' : 'JAP',
-    'image' : 'http://example.org/image.png',
-    'logo' : 'http://example.org/logo.png',               // Logo, flag, etc.
-    'captain' : 'http://example.com/athlete:122838',
-    'athlete' :                                           // List of athletes composing the team
+    "@id" : "http://example.com/team:JAP2017",
+    "@type" : "Team",
+    "name" : "Japan Team - Marathon 2017",
+    "alternateName" : "JAP",
+    "image" : "http://example.org/image.png",
+    "logo" : "http://example.org/logo.png",               // Logo, flag, etc.
+    "captain" : "http://example.com/athlete:122838",
+   "athlete" :                                           // List of athletes composing the team
         [
-            'http://example.com/athlete:122838',
-            'http://example.com/athlete:122839',
-            'http://example.com/athlete:122840'
+           "http://example.com/athlete:122838",
+           "http://example.com/athlete:122839",
+           "http://example.com/athlete:122840"
             // … and so on
         ],
-    'federation' : 'http://example.com/federation:JAP'
+    "federation" : "http://example.com/federation:JAP"
 }
 ```
 [More use cases and examples](./examples).
@@ -645,18 +645,18 @@ Federations will have the properties of [Organizations](#organizations), adding 
 Example:
 ```javascript
 {
-    '@id' : 'http://example.com/federation:England_Athletics',
-    '@type' : 'Federation',
-    'name' : 'England Athletics',
-    'email' : 'ea@example.com',
-    'faxNumber' : '(+44) 0121 347 65439',
-    'telephone' : '(+44) 0121 347 65423',
-    'address' : 'http://example.org/postaladdress:00012',
-    'memberOf' : 'http://example.com/federation:UK',    // Member of Federation
-    'member' :                                          // Members attached to this federation
+    "@id" : "http://example.com/federation:England_Athletics",
+    "@type" : "Federation",
+    "name" : "England Athletics",
+    "email" : "ea@example.com",
+    "faxNumber" : "(+44) 0121 347 65439",
+    "telephone" : "(+44) 0121 347 65423",
+    "address" : "http://example.org/postaladdress:00012",
+    "memberOf" : "http://example.com/federation:UK",    // Member of Federation
+   "member" :                                          // Members attached to this federation
         [
-            'http://example.com/club:NEB',
-            'http://example.com/club:THH'
+           "http://example.com/club:NEB",
+           "http://example.com/club:THH"
             
         ]
 }
@@ -685,8 +685,8 @@ There are some properties that will be used commonly to represent people:
 Example:
 ```javascript
 { 
-    '@type' : 'Person',
-    'name' : 'Alberto Salazar' 
+    "@type" : "Person",
+    "name" : "Alberto Salazar" 
 }
 ```
 [More use cases and examples](./examples).
@@ -712,9 +712,9 @@ Organizations can be represented by the following properties:
 Example:
 ```javascript
 {
-    '@type' : 'Organization',
-    'name' : 'Nike Oregon Project',
-    'url' : 'https://nikeoregonproject.com'            
+    "@type" : "Organization",
+    "name" : "Nike Oregon Project",
+    "url" : "https://nikeoregonproject.com"            
 }
 ```
 [More use cases and examples](./examples).
@@ -762,10 +762,10 @@ Requirements for the competitor to pass the round. Qualification may be based on
 Example:
 ```javascript
 { 
-    '@type' : 'QualificationCriteria',
-    'description' : 'First 3 in each heat (Q) and 2 best performers (q) advance to the Final',
-    'byPosition' : 3,
-    'byTime' : 2
+    "@type" : "QualificationCriteria",
+    "description" : "First 3 in each heat (Q) and 2 best performers (q) advance to the Final",
+   "byPosition" : 3,
+   "byTime" : 2
 }
 ```
 
@@ -786,24 +786,24 @@ Example:
 ```javascript
 // 1st heat for 100m Hurdles
 {
-    '@id' : 'http://example.com/round:EURO2016_Heptathlon_100mH_Heat1',
-    '@type' : 'TimedRound',
-    'name' : 'Heptathlon 100m Hurdles - Heat 1',
-    'description' : 'Heat 1 of 3 within Heptathlon 100m Hurdles',
-    'date' : '2016-07-08T10:30:00+01:00',
-    'timekeeping' : 'timekeeping:FAT',        
-    'startList' :
+    "@id" : "http://example.com/round:EURO2016_Heptathlon_100mH_Heat1",
+    "@type" : "TimedRound",
+    "name" : "Heptathlon 100m Hurdles - Heat 1",
+    "description" : "Heat 1 of 3 within Heptathlon 100m Hurdles",
+    "date" : "2016-07-08T10:30:00+01:00",
+    "timekeeping" : "timekeeping:FAT",        
+   "startList" :
         [
-            'http://example.org/entry:00001',
-            'http://example.org/entry:00002',
-            'http://example.org/entry:00003'
+           "http://example.org/entry:00001",
+           "http://example.org/entry:00002",
+           "http://example.org/entry:00003"
             // … All the participants in the starting list
         ],
-    'result' : 
+    "result" : 
         [
-            'http://example.org/result:000011',
-            'http://example.org/result:000021',
-            'http://example.org/result:000031'
+            "http://example.org/result:000011",
+            "http://example.org/result:000021",
+            "http://example.org/result:000031"
             // … All list of results 
         ]
 }
@@ -830,11 +830,11 @@ Sometimes may be of interest gathering and representing information about device
 Example:
 ```javascript
 {
-    '@id' :  'http://example.com/timekeeping:0001',
-    '@type' :  'Timekeeping',
-    'name' : 'Transponder Based System',
-    'description' : 'Fully automatic timekeeping system based on RFID transponders',
-    'device' : 'RFID System – Brand and model'
+    "@id" :  "http://example.com/timekeeping:0001",
+    "@type" :  "Timekeeping",
+    "name" : "Transponder Based System",
+    "description" : "Fully automatic timekeeping system based on RFID transponders",
+    "device" : "RFID System – Brand and model"
 }
 ```
 [More use cases and examples](./examples).
@@ -858,34 +858,34 @@ Field rounds and trails highlighted on a control card for Distance Field Events:
 Example:
 ```javascript
 {
-    '@id' : 'http://example.com/round:EURO2016_Heptathlon_SP_A',
-    '@type' : 'FieldRound',
-    'name' : 'Heptathlon Shot Put - Group A',
-    'description' : 'Group A within Heptathlon - Shot Put',
-    'date' : '2016-07-08T10:30:00+01:00',
-    'qualificationCriteria' : 
+    "@id" : "http://example.com/round:EURO2016_Heptathlon_SP_A",
+    "@type" : "FieldRound",
+    "name" : "Heptathlon Shot Put - Group A",
+    "description" : "Group A within Heptathlon - Shot Put",
+    "date" : "2016-07-08T10:30:00+01:00",
+    "qualificationCriteria" : 
         {
-            'description' : '2 groups without qualification. Assignation of score points according to performance.' 
+            "description" : "2 groups without qualification. Assignation of score points according to performance." 
         },
-    'startList' :
+    "startList" :
         [
-            'http://example.org/entrt:000011',
-            'http://example.org/entrt:000021',
-            'http://example.org/entrt:000031'
+            "http://example.org/entrt:000011",
+            "http://example.org/entrt:000021",
+            "http://example.org/entrt:000031"
             // … All the participants in the starting list
         ],
-    'result' : 
+    "result" : 
         [
-            'http://example.org/result:0000111',
-            'http://example.org/result:0000211',
-            'http://example.org/result:0000311'
+            "http://example.org/result:0000111",
+            "http://example.org/result:0000211",
+            "http://example.org/result:0000311"
             // … All list of results 
         ],
-    'trialsRound' :
+    "trialsRound" :
         [
-            'http://example.com/trialsround:SP11',
-            'http://example.com/trialsround:SP12',
-            'http://example.com/trialsround:SP13'
+            "http://example.com/trialsround:SP11",
+            "http://example.com/trialsround:SP12",
+            "http://example.com/trialsround:SP13"
         ]
 }
 ```
@@ -910,32 +910,32 @@ Rounds in Vertical Jumps include also specific information about height of the b
 Example:
 ```javascript
 {
-    '@id' : 'http://example.com/round:EURO2016_Heptathlon_HJ_A',
-    '@type' : 'VerticalJumpRound',
-    'name' : 'Heptathlon High Jump - Group A',
-    'description' : 'Group A within Heptathlon High Jump',
-    'date' : '2016-07-08T10:30:00+01:00',
-    'startingHeight': "150cm" ,                     // Also as Quantitative Value
-    'increasingHeight': "+3cm after each round" ,     
-    'startList' :
+    "@id" : "http://example.com/round:EURO2016_Heptathlon_HJ_A",
+    "@type" : "VerticalJumpRound",
+    "name" : "Heptathlon High Jump - Group A",
+    "description" : "Group A within Heptathlon High Jump",
+    "date" : "2016-07-08T10:30:00+01:00",
+    "startingHeight": "150cm" ,                     // Also as Quantitative Value
+    "increasingHeight": "+3cm after each round" ,     
+    "startList" :
         [
-            'http://example.org/entrt:000011',
-            'http://example.org/entrt:000021',
-            'http://example.org/entrt:000031'
+           "http://example.org/entrt:000011",
+           "http://example.org/entrt:000021",
+           "http://example.org/entrt:000031"
             // … All the participants in the starting list
         ],
-    'result' : 
+   "result" : 
         [
-            'http://example.org/result:HJ111',
-            'http://example.org/result:HJ211',
-            'http://example.org/result:HJ311'
+           "http://example.org/result:HJ111",
+           "http://example.org/result:HJ211",
+           "http://example.org/result:HJ311"
             // … All list of results 
         ],
-    'trialsRound' :
+   "trialsRound" :
         [
-            'http://example.com/trialsround:HJ11',
-            'http://example.com/trialsround:HJ21',
-            'http://example.com/trialsround:HJ31'
+           "http://example.com/trialsround:HJ11",
+           "http://example.com/trialsround:HJ21",
+           "http://example.com/trialsround:HJ31"
         ]
 }
 ```
@@ -963,17 +963,17 @@ Example:
 Example:
 ```javascript
 {
-    '@id' : 'http://example.com/trialsround:SP11',
-    '@type' : 'TrialsRound',
-    'name' : 'Athlete 13 (Group A), list of attempts Shot Put',
-    'order' : 1,
-    'bibIdentifier': '13',
-    'athlete' : 'http://example.com/athlete:29384',
-    'trial' :  
+    "@id" : "http://example.com/trialsround:SP11",
+    "@type" : "TrialsRound",
+    "name" : "Athlete 13 (Group A), list of attempts Shot Put",
+   "order" : 1,
+   "bibIdentifier": "13",
+    "athlete" : "http://example.com/athlete:29384",
+   "trial" :  
         [
-            'http://example.com/trial:SP11',
-            'http://example.com/trial:SP12',
-            'http://example.com/trial:SP13'
+           "http://example.com/trial:SP11",
+           "http://example.com/trial:SP12",
+           "http://example.com/trial:SP13"
         ]                                    
 }
 ```
@@ -991,18 +991,18 @@ In **Vertical Jumps** the **rounds of trials** include the height the athlete is
 Example:
 ```javascript
 {
-    '@id' : 'http://example.com/trialsround:HJ11',
-    '@type' : 'VerticalJumpTrialsRound',
-    'name' : 'Athlete 13 (Group A), 1st round of trials with bar at 1.75m',
-    'roundNumber' : 1,
-    'order' : 1,
-    'bibIdentifier': '13',
-    'athlete' : 'http://example.com/athlete:29384',
-    'currentHeight' : '1.75',
-    'trial' :    // List of attempts
+    "@id" : "http://example.com/trialsround:HJ11",
+    "@type" : "VerticalJumpTrialsRound",
+    "name" : "Athlete 13 (Group A), 1st round of trials with bar at 1.75m",
+   "roundNumber" : 1,
+   "order" : 1,
+   "bibIdentifier": "13",
+    "athlete" : "http://example.com/athlete:29384",
+    "currentHeight" : "1.75",
+   "trial" :    // List of attempts
         [
-            'http://example.com/trial:HJ11',
-            'http://example.com/trial:HJ12'
+           "http://example.com/trial:HJ11",
+           "http://example.com/trial:HJ12"
         ]    
 }
 ```
@@ -1037,20 +1037,20 @@ Trials may be described by the following properties:
 Examples:
 ```javascript
 {
-    '@id' : 'http://example.com/trial:HJ11',
-    '@type' : 'Trial',
-    'numberAttempt' : 1,
-    'feature' : 'feature:Failed',
-    'valid' : false
+    "@id" : "http://example.com/trial:HJ11",
+    "@type" : "Trial",
+   "numberAttempt" : 1,
+    "feature" : "feature:Failed",
+   "valid" : false
 }
 
 {
-    '@id' : 'http://example.com/trial:HJ12',
-    '@type' : 'Trial',
-    'numberAttempt' : 2,
-    'valid' : true,
-    'feature' : 'feature:PassedTrial',
-    'performance' : 'http://example.com/performance:34354'
+    "@id" : "http://example.com/trial:HJ12",
+    "@type" : "Trial",
+   "numberAttempt" : 2,
+   "valid" : true,
+    "feature" : "feature:PassedTrial",
+    "performance" : "http://example.com/performance:34354"
 }
 
 ```
@@ -1104,13 +1104,13 @@ Each entry of the start list may include the following properties:
 Example:
 ```javascript
 {
-    '@id' : 'http://example.org/entrt:000211',
-    '@type' : 'Entry',
-    'order' : '1',
-    'bibIdentifier' : '1',
-    'transponderIdentifier' : '1',
-    'lane' : 2,
-    'competitor' : 'http://example.com/athlete:29383'
+    "@id" : "http://example.org/entry:000211",
+    "@type" : "Entry",
+    "order" : "1",
+    "bibIdentifier" : "1",
+    "transponderIdentifier" : "1",
+    "lane" : 2,
+    "competitor" : "http://example.com/athlete:29383"
 }
 ```
 [More use cases and examples](./examples).
@@ -1153,13 +1153,13 @@ Each entry of the results may include the following properties:
 Example:
 ```javascript
 {
-    '@id' : 'http://example.com/result:234534',
-    'rank' : '1',
-    'bibIdentifier' : '13',
-    'scorePoints' : 4587,
-    'competitor' : 'http://example.com/athlete:29384',
-    'timestamp' : '2016-10-15T10:31:12+01:00',
-    'performance' : 'http://example.com/performance:032410'
+    "@id" : "http://example.com/result:234534",
+    "rank" : "1",
+    "bibIdentifier" : "13",
+   "scorePoints" : 4587,
+    "competitor" : "http://example.com/athlete:29384",
+    "timestamp" : "2016-10-15T10:31:12+01:00",
+    "performance" : "http://example.com/performance:032410"
 }
 ```
 [More use cases and examples](./examples).
@@ -1184,8 +1184,8 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 Example:
 ```javascript
 {
-    '@id' : 'http://example.com/performance:032410',
-    'value' : '11.21'                                   // Should be a Quantitative Value
+    "@id" : "http://example.com/performance:032410",
+    "value" : "11.21"                                   // Should be a Quantitative Value
 }                                        
 ```
 [More use cases and examples](./examples).
@@ -1214,14 +1214,14 @@ Legs are defined by the following properties:
 Example:
 ```javascript
 {
-    '@type' : 'RelaysLeg',
-    'order' : 1,
-    'athlete' : 'http://example.com/athlete:09822',
-    'length' : '400m',
-    'rank' : 1, 
-    'performance' : 
+    "@type" : "RelaysLeg",
+   "order" : 1,
+    "athlete" : "http://example.com/athlete:09822",
+    "length" : "400m",
+   "rank" : 1, 
+   "performance" : 
         {
-            'value': '51.56'
+           "value": "51.56"
         }
 }
 ```
