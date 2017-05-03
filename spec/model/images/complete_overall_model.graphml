@@ -631,6 +631,7 @@ course: GeoShape</y:AttributeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>identifier: Text
 order: Number
+rank: Number
 length: QuantitativeValue
 startPoint: Place
 finishPoint: Place

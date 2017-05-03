@@ -1201,6 +1201,7 @@ Legs are defined by the following properties:
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the relays leg. | Text |
 | order | Order of this leg in the relays event. | Number |
+| rank | Position achieved by the athlete after the leg. | Number |
 | length | Length of the leg to be covered by the athlete. | [Quantitative Value](#quantitative-values) |
 | start point | Place where the leg starts. | Place |
 | finish point | Place where the leg finishes. | Place |
@@ -1215,6 +1216,7 @@ Example:
     'order' : 1,
     'athlete' : 'http://example.com/athlete:09822',
     'length' : '400m',
+    'rank' : 1, 
     'performance' : 
         {
             'value': '51.56'
