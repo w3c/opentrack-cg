@@ -157,7 +157,7 @@ Example:
     "endDate" : "2016-06-10",    
     "status" : "status:completed",
     "organizer" : "http://example.com/federation:EA" ,
-    "event" :     // List of events within the overall competition
+   "event" :     // List of events within the overall competition
         [
            "http://example.com/event:EURO2016_100_metres_Men",
            "http://example.com/event:EURO2016_100_metres_Women",
@@ -218,7 +218,7 @@ Example:
     "location" : "http://example.com/venue:0001",  
     "discipline" : "discipline:heptathlon",
     "category" : "http://example.com/category:SeniorWomen"
-   "subEvent" :       // Hepthatlon is composed of seven subEvents: 
+    "subEvent" :       // Hepthatlon is composed of seven subEvents: 
         [
             {
                 "@id" : "http://example.com/event:EURO2016_Heptathlon_100mH",
@@ -228,13 +228,13 @@ Example:
                 "url" : "http://www.european-athletics.org/link_to_heptathlon_2016_100",
                 "startDate" : "2016-07-08",
                 "discipline" : "discipline:100mH",
-               "round" :       // Split in three heats (1, 2 and 3)
+                "round" :       // Split in three heats (1, 2 and 3)
                     [
                        "http://example.com/round:EURO2016_Heptathlon_100mH_Heat1",
                        "http://example.com/round:EURO2016_Heptathlon_100mH_Heat2",
                        "http://example.com/round:EURO2016_Heptathlon_100mH_Heat3"
                     ],
-               "result" :       // Results of the overall event after rounds
+                "result" :       // Results of the overall event after rounds
                     [
                        "http://example.com/result:00001",
                        "http://example.com/result:00002"
@@ -248,12 +248,12 @@ Example:
                 "description" : "High Jump at heptathlon as part of the 2016 European Athletics Championships",
                 "startDate" : "2016-07-08",
                 "discipline" : "discipline:HJ",
-               "round" :                                    // Grouped in: Group A and Group B
+                "round" :                                    // Grouped in: Group A and Group B
                     [
                        "http://example.com/round:EURO2016_Heptathlon_HJ_A",
                        "http://example.com/round:EURO2016_Heptathlon_HJ_B"
                     ],
-               "result" :       
+                "result" :       
                     [
                        "http://example.com/result:00101",
                        "http://example.com/result:00102"
@@ -268,12 +268,12 @@ Example:
                 "startDate" : "2016-07-09",
                 "discipline" : "discipline:SP",
                 // Information about rounds                
-               "round" :                                    // Grouped in: Group A and Group B
+                "round" :                                    // Grouped in: Group A and Group B
                     [
                        "http://example.com/round:EURO2016_Heptathlon_SP_A",
                        "http://example.com/round:EURO2016_Heptathlon_SP_B"
                     ],
-               "results" :         // Final results for Shot Put
+                "results" :         // Final results for Shot Put
                     [
                        "http://example.com/result:00201",
                        "http://example.com/result:00202"
@@ -285,7 +285,7 @@ Example:
             // …
         ],
         // The final results for heptathlon
-       "result" : 
+        "result" : 
             [
                "http://example.com/result:01201",
                "http://example.com/result:01202",
@@ -331,7 +331,7 @@ Categories will be described by these following properties:
 Example:
 ```javascript
 {
-   "@type" :  "Category",
+    "@type" :  "Category",
     "name" : "U18 Male",
     "description" : "Boys under 18",
     "gender" : "gender:Male",
@@ -372,7 +372,7 @@ Example:
     "@id" : "http://example.com/venue:0001"
     "@type" : "Venue",                
     "name" : "Olympic Stadium Amsterdam",
-   "geo" : 
+    "geo" : 
         {
             "latitude" : "52.343417",
             "longitude" : "4.854192"
@@ -475,7 +475,7 @@ Example:
         {
             "@type" : "QuantitativeValue",
             "value" : 65, 
-            "unitCode" : "KGM"                  // 'LBR'->pound(lb) ; 'ONZ"->ounce(oz) 
+            "unitCode" : "KGM'                  // 'LBR'->pound(lb) ; 'ONZ"->ounce(oz) 
         },   
     "birthPlace" : "Mogadishu, Somalia" ,
     "birthDate" : "1983-04-23",             
@@ -1425,7 +1425,6 @@ Athletics events may have a property to represent the states that they may be in
 * `Scheduled`
 * `Started`
 * `Finished`
-* `Completed`
 * `Completed`
 
 ### Records 
