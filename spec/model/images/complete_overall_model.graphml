@@ -112,7 +112,7 @@ faxNumber: Text</y:AttributeLabel>
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="107.0" width="143.0" x="78.5" y="312.92783622183"/>
+          <y:Geometry height="137.9528868360277" width="143.0" x="78.5" y="297.45139280381613"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="64.15673828125" x="39.421630859375" y="3.0">Category<y:LabelModel>
@@ -125,9 +125,11 @@ faxNumber: Text</y:AttributeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>identifier: Text
 name: Text
+alternateName: Text
 description: Text
 gender: Gender
-ageRange: Text </y:AttributeLabel>
+ageRange: AgeRange
+ruledBy: Federation </y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>

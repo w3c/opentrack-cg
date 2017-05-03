@@ -36,7 +36,7 @@
     * [Quantitative Values](#quantitative-values)
     * [Gender](#gender)
     * [Start Lists and Results](#start-lists-and-results)
-    * [Age and Sex Categories](#age-and-sex-categories)
+    * [Age Range](#age-range)
     * [Territories and countries](#territories-and-countries)
     * [Event Status](#event-status)
     * [Records](#records)
@@ -323,9 +323,11 @@ Categories will be described by these following properties:
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the category. | Text |
 | name | Name of the category (i.e., `Under 23 Men`, `Teachers`) | Text |
+| alternate name | Alternate name of the category (i.e., `M35`, `W35`) | Text |
 | description | Description and notes about the category. | Text |
 | gender | Gender of athletes involved this category. In case of mixed competitions, more than a gender may be indicated. | [Gender](#gender) |
-| age range | Description of the athletes' range of age to be eligible for this category.  | Text |
+| age range | Athletes' range of age to be eligible for this category.  | [Age Range](#age-range) or Text |
+| ruledBy | Federation that rules this specific category.  | [Federation](#federations) |
 
 
 Example:
@@ -335,7 +337,8 @@ Example:
     "name" : "U18 Male",
     "description" : "Boys under 18",
     "gender" : "gender:Male",
-    "ageRange" : "age:U18"
+    "ageRange" : "age:U18",
+    "ruledBy" : "federation:IAAF"
 }
 
 ```
@@ -1341,66 +1344,41 @@ According to IAAF Rule 132.4, there are official standard abbreviations and symb
 | Red Card | `RC` |
 
 
-### Age and Sex Categories
+### Age Range
 
-According to IAFF RULE 141 (Age and Sex Categories), apart from [Gender](#gender) competition may also be divided into specific age group classifications. Below, all the potential age categories are analyzed:
+According to IAFF RULE 141 (Age and Sex Categories), apart from [Gender](#gender) competition may also be divided into specific age group classifications (Under 18, Under 20, Senior). 
 
-#### Junior
+EA, NACAC and CONSUDALE recognises the **`U23`** age category for those athletes aged between 20-22. Athletes under this age range may take part in the competitions. Historically, NACAC used to had a **`U25`** category for those athletes under 25. 
 
-Junior (`U20`) is a category under the age of 20. Participators in the competitions in this class may be athletes who have not completed their twentieth birthday on the 31st December of the year the competition occurs.
+WMA rules the case of *Master* categories for men and women. Thes categories affects to any athlete who has reached their 35th birthday. Masters go in 5 year bands (global standard set by WMA): V35, V40, V45 etc. It is commonly conflated with gender e.g. M45, W50.
 
-* Under-18 (**`U18`**) Boys and Girls (16 or 17 years)
-* Under-20 (**`U20`**) Men and women (19 or 19 years)
+Usually, for those categories officially recognized, participators in the competitions in these categories may be athletes who have not completed their nth birthday on the 31st December of the year the competition occurs. Eligibility dates may vary depending on specific rules, such as in the case of youth sports. 
 
-#### U23
+Thus, the official *standard* age ranges are: 
 
-EA, NACAC and CONSUDALE recognises the **`U23`** age category for those athletes aged between 20-22. Athletes under this age range may take part in the competitions. Historically, NACAC used to had a **`U25`** category for those athletes under 25.
-
-#### Senior
-
-Athletes aged 20-34 belongs to **`Senior`** age group.
-
-#### Master
-
-Master Men and women: Any athlete who has reached his/her 35th birthday Masters go in 5 year bands (global standard set by WMA): V35, V40, V45 etc. It is commonly conflated with gender e.g. M45, W50.
-
-
-#### Youth
-
-Youth sports includes school sport at primary and secondary school level. Below 18, most of sports and territories usually considers age categories in ranges of 2 years (represented as: `U4`, `U6`, `U8`, `U10`, `U12`, `U14`, `U16`, `U18`), but sometimes one-year age range is stablished. Age classification assignments and competition rules (disciplines) depend on each sport/federation/territory, so there are no homogeneous criteria to classify boys and girls into these categories. 
-
-IAAF recognises the U18 category, including Boys and Girls aged 16 or 17, so this is the only category to be recognised officially into this vocabulary. 
-
-<mark>Discussion under [Issue #5](https://github.com/w3c/opentrack-cg/issues/5).</mark>
-
-#### Summary of Age Ranges
-
-So, in summary:
-
-| Age | Male age‐group ID | Female age‐group ID |
-| --- | ----------------- | ------------------- |
-| 16 - 17 | `U18 (Male)` | `U18 (Female)` |
-| 18 - 19 | `U20 (Male)` | `U20 (Female)` |
-| 20 - 22 | `U23 (Male)` | `U23 (Female)` |
-| 23 - 34 | `Senior (Male)` | `Senior (Female)` |
-| 35 ‐ 39 | `M35` | `W35` |
-| 40 ‐ 44 | `M40` | `W40` |
-| 45 ‐ 49 | `M45` | `W45` |
-| 50 ‐ 54 | `M50` | `W50` |
-| 55 ‐ 59 | `M55` | `W55` |
-| 60 ‐ 64 | `M60` | `W60` |
-| 65 ‐ 69 | `M65` | `W65` |
-| 70 ‐ 74 | `M70` | `W70` |
-| 75 ‐ 79 | `M75` | `W75` |
-| 80 ‐ 84 | `M80` | `W80` |
-| 85 ‐ 89 | `M85` | `W85` |
-| 90 ‐ 94 | `M90` | `W90` |
-| 95 ‐ 99 | `M95` | `W95` |
-| 100+ | `M100` | `W100` |
-
-Discussion under [Issue #4](https://github.com/w3c/opentrack-cg/issues/4).
+| Age range | Age‐group ID |
+| --------- | ----------------- |
+| 16 - 17 | `U18` |
+| 18 - 19 | `U20` |
+| 20 - 22 | `U23` |
+| 23 - 34 | `SEN` |
+| 35 ‐ 39 | `V35` |
+| 40 ‐ 44 | `V40` |
+| 45 ‐ 49 | `V45` |
+| 50 ‐ 54 | `V50` |
+| 55 ‐ 59 | `V55` |
+| 60 ‐ 64 | `V60` |
+| 65 ‐ 69 | `V65` |
+| 70 ‐ 74 | `V70` |
+| 75 ‐ 79 | `V75` |
+| 80 ‐ 84 | `V80` |
+| 85 ‐ 89 | `V85` |
+| 90 ‐ 94 | `V90` |
+| 95 ‐ 99 | `V95` |
+| 100+ | `V100` |
 
 **Category** should be flexible to allow organizers to create virtual categories or adapt the *official* ones.
+
 
 ### Territories and countries
 
@@ -1469,5 +1447,5 @@ The concept of 'best' refers to athlete's personal achievements, without setting
 
 We can identify several categories for Athletics events, depending on gender, age, type of venue, distance and type of event (e.g., 100m Hurdles Women and 110m Hurdles Men). Although events rules may vary for the same type of discipline (i.e., differences of shot weight depending on gender and/or age).
 
-See a full [taxonomy of disciplines](./disciplines.md).
+See a [taxonomy of disciplines](./disciplines.md).
 
