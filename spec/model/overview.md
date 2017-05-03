@@ -744,6 +744,7 @@ Rounds may be described by the following properties:
 | qualification criteria | Details what a competitor has to do to get to the next round. | [Qualification Criteria](#qualification-criteria) |
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
 | results | List with the results after the celebration of the round.  | **[Results](#results)** |
+| heat(s) | Heat that is part of a round. | **[Competition Round](#competition-rounds)** |
 
 
 #### Qualification Criteria
