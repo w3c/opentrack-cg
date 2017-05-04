@@ -21,19 +21,34 @@ Disciplines are described by specific features (i.e., throws disciplines, such a
 
 ![Taxonomy for Athletics Disciplines](images/disciplines.png)
 
+In brackets, the code [used by Athlib](http://opentrack.run/athlib/build/html/eventcodes.html).
+
 * Timed Disciplines
-  * Sprints
-  * Middle/Long Distance
-    * Steeplechase
-  * Hurdles
-  * Road Running
-  * Race Walks
-  * Relays
-  * Cross Country
+  * Sprints (`<DISTANCE>`)
+  * Middle/Long Distance (`<DISTANCE>`)
+    * Steeplechase (`<DISTANCE>SC`)
+  * Hurdles (`<DISTANCE>H<HEIGHT>`)
+  * Road Running (`<DISTANCE>`, `HM`, `MAR`)
+  * Race Walks (`<DISTANCE>W`)
+  * Track Relays (`<LEGS>x<DISTANCE>`)
+  * Cross Country (`<DISTANCE>XC`)
   * Mountain Running
   * Ultra Running
 * Combined Events
+  * Pentathlon (`PEN`)
+  * Heptathlon (`HEP`)
+  * Decathlon (`DEC`)
+  * Throws Pentathlon (`PENWT`)
 * Jumps
+  * High Jump (`HJ`)
+  * Long Jump (`LJ`)
+  * Triple Jump (`TJ`)
+  * Pole Vault (`PV`)
 * Throws
+  * Shot Put (`SP<WEIGHT>`)
+  * Discus Throw (`DT<WEIGHT>`)
+  * Hammer Throw (`HT<WEIGHT>`)
+  * Javelin Throw (`JT<WEIGHT>`)
+  * Weight Throw (`WT<WEIGHT>`)
 
 This taxonomy includes `Steeplechase` as a narrower concept of `Middle/Long Distance` because of the different nature of this kind of events.
