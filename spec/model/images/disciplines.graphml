@@ -352,7 +352,7 @@ spacing: Distance</y:AttributeLabel>
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="50.0" width="137.44295612009222" x="441.27852193995386" y="905.0"/>
+          <y:Geometry height="63.0" width="137.44295612009222" x="441.27852193995386" y="905.0"/>
           <y:Fill color="#FFCC99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="120.35888671875" x="8.54203470067111" y="3.0">Combined Events<y:LabelModel>
@@ -364,7 +364,7 @@ spacing: Distance</y:AttributeLabel>
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>indoor: Boolean
-</y:AttributeLabel>
+disciplines: Discipline</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
@@ -507,7 +507,7 @@ relays: Boolean
           <y:Geometry height="30.0" width="151.44295612009233" x="711.7785219399537" y="842.5"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="47.38623046875" x="52.02836282567117" y="3.0">Relays<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="89.337890625" x="31.052532747546167" y="3.0">Track Relays<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -528,7 +528,7 @@ relays: Boolean
           <y:Geometry height="30.0" width="137.44295612009222" x="170.7785219399539" y="1005.0"/>
           <y:Fill color="#CCCCCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="77.607421875" x="29.91776712254611" y="3.0">Disciplines<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="70.2568359375" x="33.59306009129611" y="3.0">Discipline<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -973,7 +973,7 @@ relays: Boolean
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="4.0" tx="68.68910219399538" ty="0.0">
+          <y:Path sx="0.0" sy="4.0" tx="0.0" ty="0.0">
             <y:Point x="630.0" y="1294.0"/>
             <y:Point x="630.0" y="1380.0"/>
           </y:Path>
@@ -1057,8 +1057,8 @@ relays: Boolean
       <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="5.0" tx="41.5" ty="0.0">
-            <y:Point x="360.0" y="935.0"/>
+          <y:Path sx="0.0" sy="6.3" tx="41.5" ty="0.0">
+            <y:Point x="360.0" y="942.8"/>
             <y:Point x="360.0" y="1020.0"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
