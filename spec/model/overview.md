@@ -157,7 +157,7 @@ Example:
     "endDate" : "2016-06-10",    
     "status" : "status:completed",
     "organizer" : "http://example.com/federation:EA" ,
-   "event" :     // List of events within the overall competition
+    "event" :     // List of events within the overall competition
         [
            "http://example.com/event:EURO2016_100_metres_Men",
            "http://example.com/event:EURO2016_100_metres_Women",
@@ -468,13 +468,13 @@ Example:
     "image" : "https://example.com/260px-MoPodiumRio2016.png",
     "nationality" : "country:UK",                       
     "email" : "fakeemail@example.com",
-   "height" : 
+    "height" : 
         { 
             "@type" : "QuantitativeValue",
             "value": 175, 
             "unitCode": "CMT"                   // 'FOT'->feet ; 'INH'->inches ; 'MTR"->meter 
         },  
-    weight : 
+    "weight" : 
         {
             "@type" : "QuantitativeValue",
             "value" : 65, 
@@ -483,28 +483,28 @@ Example:
     "birthPlace" : "Mogadishu, Somalia" ,
     "birthDate" : "1983-04-23",             
     "address" : "http://example.org/postaladdress:00002",
-    coach : 
+    "coach" : 
         { 
             "@type" : "Person",
             "name" : "Alberto Salazar" 
         },
-    sponsor : 
+    "sponsor" : 
         {
             "@type" : "Organization",
             "name" : "Nike Oregon Project",
             "url" : "https://nikeoregonproject.com"            
         },
-    club :                                  // Zero or more clubs
+    "club" :                                  // Zero or more clubs
         [ 
            "http://example.com/club:NEB",
            "http://example.com/club:NOP"
         ],
-    federation :
+    "federation" :
         [ 
            "http://example.com/federation:England_Athletics", 
            "http://example.com/federation:USATF" 
         ],
-    bests :                                 // Lists to best performances
+    "bests" :                                 // Lists to best performances
         [
            "http://example.com/performance:0000122",
            "http://example.com/performance:0000124",
@@ -599,7 +599,7 @@ Examples:
     "image" : "http://example.org/image.png",
     "logo" : "http://example.org/logo.png",               // Logo, flag, etc.
     "captain" : "http://example.com/athlete:092838",
-   "athlete" :                                           // List of athletes composing the team
+    "athlete" :                                           // List of athletes composing the team
         [
            "http://example.com/athlete:092838",
            "http://example.com/athlete:092839",
@@ -620,7 +620,7 @@ Examples:
     "image" : "http://example.org/image.png",
     "logo" : "http://example.org/logo.png",               // Logo, flag, etc.
     "captain" : "http://example.com/athlete:122838",
-   "athlete" :                                           // List of athletes composing the team
+    "athlete" :                                           // List of athletes composing the team
         [
            "http://example.com/athlete:122838",
            "http://example.com/athlete:122839",
@@ -656,7 +656,7 @@ Example:
     "telephone" : "(+44) 0121 347 65423",
     "address" : "http://example.org/postaladdress:00012",
     "memberOf" : "http://example.com/federation:UK",    // Member of Federation
-   "member" :                                          // Members attached to this federation
+    "member" :                                          // Members attached to this federation
         [
            "http://example.com/club:NEB",
            "http://example.com/club:THH"
@@ -767,8 +767,8 @@ Example:
 { 
     "@type" : "QualificationCriteria",
     "description" : "First 3 in each heat (Q) and 2 best performers (q) advance to the Final",
-   "byPosition" : 3,
-   "byTime" : 2
+    "byPosition" : 3,
+    "byTime" : 2
 }
 ```
 
@@ -795,7 +795,7 @@ Example:
     "description" : "Heat 1 of 3 within Heptathlon 100m Hurdles",
     "date" : "2016-07-08T10:30:00+01:00",
     "timekeeping" : "timekeeping:FAT",        
-   "startList" :
+    "startList" :
         [
            "http://example.org/entry:00001",
            "http://example.org/entry:00002",
@@ -927,14 +927,14 @@ Example:
            "http://example.org/entrt:000031"
             // … All the participants in the starting list
         ],
-   "result" : 
+    "result" : 
         [
            "http://example.org/result:HJ111",
            "http://example.org/result:HJ211",
            "http://example.org/result:HJ311"
             // … All list of results 
         ],
-   "trialsRound" :
+    "trialsRound" :
         [
            "http://example.com/trialsround:HJ11",
            "http://example.com/trialsround:HJ21",
@@ -969,10 +969,10 @@ Example:
     "@id" : "http://example.com/trialsround:SP11",
     "@type" : "TrialsRound",
     "name" : "Athlete 13 (Group A), list of attempts Shot Put",
-   "order" : 1,
-   "bibIdentifier": "13",
+    "order" : 1,
+    "bibIdentifier": "13",
     "athlete" : "http://example.com/athlete:29384",
-   "trial" :  
+    "trial" :  
         [
            "http://example.com/trial:SP11",
            "http://example.com/trial:SP12",
@@ -997,12 +997,12 @@ Example:
     "@id" : "http://example.com/trialsround:HJ11",
     "@type" : "VerticalJumpTrialsRound",
     "name" : "Athlete 13 (Group A), 1st round of trials with bar at 1.75m",
-   "roundNumber" : 1,
-   "order" : 1,
-   "bibIdentifier": "13",
+    "roundNumber" : 1,
+    "order" : 1,
+    "bibIdentifier": "13",
     "athlete" : "http://example.com/athlete:29384",
     "currentHeight" : "1.75",
-   "trial" :    // List of attempts
+    "trial" :    // List of attempts
         [
            "http://example.com/trial:HJ11",
            "http://example.com/trial:HJ12"
@@ -1042,16 +1042,16 @@ Examples:
 {
     "@id" : "http://example.com/trial:HJ11",
     "@type" : "Trial",
-   "numberAttempt" : 1,
+    "numberAttempt" : 1,
     "feature" : "feature:Failed",
-   "valid" : false
+    "valid" : false
 }
 
 {
     "@id" : "http://example.com/trial:HJ12",
     "@type" : "Trial",
-   "numberAttempt" : 2,
-   "valid" : true,
+    "numberAttempt" : 2,
+    "valid" : true,
     "feature" : "feature:PassedTrial",
     "performance" : "http://example.com/performance:34354"
 }
@@ -1159,7 +1159,7 @@ Example:
     "@id" : "http://example.com/result:234534",
     "rank" : "1",
     "bibIdentifier" : "13",
-   "scorePoints" : 4587,
+    "scorePoints" : 4587,
     "competitor" : "http://example.com/athlete:29384",
     "timestamp" : "2016-10-15T10:31:12+01:00",
     "performance" : "http://example.com/performance:032410"
@@ -1394,7 +1394,7 @@ Countries may be represented by their [ISO 3166-1](https://en.wikipedia.org/wiki
 
 #### Other territories
 
-<mark>Shall we use normalized territories from a common database such as Geonames?</mark>
+Territories may be local/regional. In this case, it should include the normalized country. 
 
 ### Event Status
 
