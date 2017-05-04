@@ -2,7 +2,7 @@
 
 Athletics events may be defined depending on the main target of the discipline, and main rules of the competition: *timed events* for events involving timekeeping and the performance is measured as time; *field events* for jumps and throws; and *combined events* that are a combination of *timed* and *field* events.
 
-According to IAAF, Athletics events may be classified into these following disciplines:
+[According to IAAF](https://www.iaaf.org/disciplines), Athletics events may be classified into these following disciplines:
 
 * Sprints
 * Middle/long distance
