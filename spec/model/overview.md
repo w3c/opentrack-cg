@@ -1402,10 +1402,14 @@ Territories may be local/regional. In this case, it should include the normalize
 
 Athletics events may have a property to represent the states that they may be in:
 
+* `Cancelled`
+* `Postponed`
+* `Rescheduled`
 * `Scheduled`
 * `Started`
 * `Finished`
 * `Completed`
+
 
 ### Records 
 
