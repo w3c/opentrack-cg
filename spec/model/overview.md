@@ -1386,7 +1386,7 @@ Thus, the official *standard* age ranges are:
 
 Athletics federations are autonomous bodies in control of Athletics at different levels, depending on the territory they cover. By its geographical area covered,  federations can be local (e.g., [19 Athletics federations for each region in Spain](http://www.rfea.es/web/federacion/mapaespana.asp)), national (e.g., [British Athletics](http://www.britishathletics.org.uk/governance/about-uka/)) and supranational (e.g. [Oceania Athletics](https://athletics-oceania.com)). Federations are usually attached to other federations hierarchically. 
 
-See list of [IAAF Member Federations](../federations).
+See list of [IAAF Member Federations](./federations.md).
 
 
 #### Countries
