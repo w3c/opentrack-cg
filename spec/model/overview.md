@@ -1413,7 +1413,7 @@ Athletics events may have a property to represent the states that they may be in
 
 ### Records 
 
-[Performances](#performances), if validated in competition (Results)[#Results] can set records of different type:
+[Performances](#performances), if validated in competition [Results](#Results) can set records of different type:
 
 
 | Code | Record Type |
