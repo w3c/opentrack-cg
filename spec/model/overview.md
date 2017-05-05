@@ -149,7 +149,7 @@ Competitions may be described by the following attributes:
 
 
 Example:
-```javascript
+```
 {
     "@id" : "http://example.com/competition:0001",
     "@type" :  "Competition",
@@ -211,7 +211,7 @@ Athletics events may be described by the following attributes:
 | results | List with the results after the celebration of all rounds of the event.  | **[Results](#results)** |
 
 Example:
-```javascript
+```
 {
     "@id" : "http://example.com/event:EURO2016_Heptathlon",
     "@type" : "Event",
@@ -336,7 +336,7 @@ Categories will be described by these following properties:
 
 
 Example:
-```javascript
+```
 {
     "@type" :  "Category",
     "name" : "U18 Male",
@@ -375,7 +375,7 @@ Venues can be described by the following attributes:
 | type | Type of the venue. | **[Venue Type](#venue-type)** |
 
 Example:
-```javascript
+```
 {
     "@id" : "http://example.com/venue:0001"
     "@type" : "Venue",                
@@ -411,7 +411,7 @@ A postal address may be represented by some common properties:
 
 
 Example:
-```javascript
+```
 {
     "@id" : "http://example.org/postaladdress:0001",
     "@type" : "PostalAddress",
@@ -460,7 +460,7 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 
 
 Example:
-```javascript
+```
 {
     "@id" : "http://example.com/athlete:000021", 
     "@type" : "Athlete",
@@ -534,7 +534,7 @@ Clubs may be described using the following attributes:
 | team(s) | Teams(s) attached to this club. | **[Team](#teams)** |
 
 Example:
-```javascript
+```
 {
     "@id" : "http://example.com/club:NEB",
     "@type" : "Club",
@@ -585,7 +585,7 @@ Teams may be described using the following attributes:
 | athlete(s) | Athlete(s) affiliated to the team. | **[Athlete](#athletes)** |
 
 Examples:
-```javascript
+```
 {
     "@id" : "http://example.com/team:KEN001",
     "@type" : "Team",
@@ -641,7 +641,7 @@ Federations will have the properties of [Organizations](#organizations), adding 
 | member(s) | Lower level organization(s) attached to this federation. | [Organization](#organization) | 
 
 Example:
-```javascript
+```
 {
     "@id" : "http://example.com/federation:England_Athletics",
     "@type" : "Federation",
@@ -681,7 +681,7 @@ There are some properties that will be used commonly to represent people:
 | url | Webpage URL about him/her. | URL |
 
 Example:
-```javascript
+```
 { 
     "@type" : "Person",
     "name" : "Alberto Salazar" 
@@ -708,7 +708,7 @@ Organizations can be represented by the following properties:
 | telephone(s) | Main telephone number(s) of the organization. | Text |
 
 Example:
-```javascript
+```
 {
     "@type" : "Organization",
     "name" : "Nike Oregon Project",
@@ -758,7 +758,7 @@ Requirements for the competitor to pass the round. Qualification may be based on
 | byTime | Number of competitors that are qualified in a round by best time. | Text |
 
 Example:
-```javascript
+```
 { 
     "@type" : "QualificationCriteria",
     "description" : "First 3 in each heat (Q) and 2 best performers (q) advance to the Final",
@@ -781,7 +781,7 @@ These rounds may include also the following properties:
 
 
 Example:
-```javascript
+```
 // 1st heat for 100m Hurdles
 {
     "@id" : "http://example.com/round:EURO2016_Heptathlon_100mH_Heat1",
@@ -826,7 +826,7 @@ Sometimes may be of interest gathering and representing information about device
 | device | Brand, model and features of the device/system used for timekeeping. | Text |
 
 Example:
-```javascript
+```
 {
     "@id" :  "http://example.com/timekeeping:0001",
     "@type" :  "Timekeeping",
@@ -854,7 +854,7 @@ Field rounds and trails highlighted on a control card for Distance Field Events:
 
 
 Example:
-```javascript
+```
 {
     "@id" : "http://example.com/round:EURO2016_Heptathlon_SP_A",
     "@type" : "FieldRound",
@@ -906,7 +906,7 @@ Rounds in Vertical Jumps include also specific information about height of the b
 
 
 Example:
-```javascript
+```
 {
     "@id" : "http://example.com/round:EURO2016_Heptathlon_HJ_A",
     "@type" : "VerticalJumpRound",
@@ -959,7 +959,7 @@ Example:
 | trial(s) | Athlete's attempt in this round of trials. | [Field Trial](#field-trials) |
 
 Example:
-```javascript
+```
 {
     "@id" : "http://example.com/trialsround:SP11",
     "@type" : "TrialsRound",
@@ -987,7 +987,7 @@ In **Vertical Jumps** the **rounds of trials** include the height the athlete is
 | current height | The target height the bar is raised for this round. | [Distance](#distance) |
 
 Example:
-```javascript
+```
 {
     "@id" : "http://example.com/trialsround:HJ11",
     "@type" : "VerticalJumpTrialsRound",
@@ -1033,7 +1033,7 @@ Trials may be described by the following properties:
 | isSubstitute | Flag indicating if the trial is a *substitute* trial. | Boolean |
 
 Examples:
-```javascript
+```
 {
     "@id" : "http://example.com/trial:HJ11",
     "@type" : "Trial",
@@ -1100,7 +1100,7 @@ Each entry of the start list may include the following properties:
 
 
 Example:
-```javascript
+```
 {
     "@id" : "http://example.org/entry:000211",
     "@type" : "Entry",
@@ -1149,7 +1149,7 @@ Each entry of the results may include the following properties:
 | relays legs | List of consecutive legs in the case of a team relays event with individual results. | [Relays Legs](#relays-legs) |
 
 Example:
-```javascript
+```
 {
     "@id" : "http://example.com/result:234534",
     "rank" : "1",
@@ -1190,7 +1190,7 @@ Apart from all properties of the parent class `Perfomance`, this entity includes
 | reaction time | Reaction time of the athlete during a sprint event. | [Date and Time](#date,-time-and-periods) |
 
 Example:
-```javascript
+```
 // 11.21 seconds
 // 12 milliseconds
 {
@@ -1208,7 +1208,7 @@ Apart from all properties of the parent class `Perfomance`, this entity includes
 | points | Official measure of the performance expressed as score points. | Number |
 
 Example:
-```javascript
+```
 {
     "points" : 18273
 }                                        
@@ -1223,7 +1223,7 @@ Apart from all properties of the parent class `Perfomance`, this entity includes
 | points | Official measure of the performance expressed as distance. | [Distance](#distance) |
 
 Example:
-```javascript
+```
 {
     "distance" : "56 m"
 }                                        
@@ -1238,7 +1238,7 @@ Apart from all properties of the parent class `Perfomance`, this entity includes
 | height | Official measure of the performance expressed as vertical distance. | [Distance](#distance) |
 
 Example:
-```javascript
+```
 {
     "height" : "2.14 m"
 }                                        
@@ -1265,7 +1265,7 @@ Legs are defined by the following properties:
 | performance | Measure to quantify the performance of the athlete after the leg.  | **[Performance](#performances)** |
 
 Example:
-```javascript
+```
 {
     "@type" : "RelaysLeg",
     "order" : 1,
