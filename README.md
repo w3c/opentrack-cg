@@ -1,18 +1,23 @@
 # OpenTrack – Open Tools for Athletics
 
-This is the repository for [W3C OpenTrack Community Group](https://www.w3.org/community/opentrack/) to develop and document specifications and code related to OpenTrack. 
+This is the repository for the [W3C OpenTrack Community Group](https://www.w3.org/community/opentrack/) to develop and document specifications and code related to **OpenTrack**. 
 
 OpenTrack is a set of tools to increase interoperability among systems managing information on athletics and sports in general. OpenTrack includes schemas and vocabularies to describe sports, as well as open source software that helps managing that kind of information.
 
 Through OpenTrack athletics entities around the world (sport clubs, federations, private event organizers, etc.) will be able to open the data contributing towards open data in sports. This will bring new business opportunities to third parties (developers, public bodies, private companies, citizens, academia). 
 
-[Charter](https://w3c.github.io/opentrack-cg/charter.html) is in development.
+Read the [Charter](https://w3c.github.io/opentrack-cg/charter.html) for more information about this group.
 
 ## What tools?
 
 The main component of OpenTrack is a set of vocabularies and taxonomies that will help publishers to model and expose information regarding athletics (events, athletes, facilities, results, rankings, and others). 
 
 Participants in this group will contribute with code recipes, libraries, and examples about the use of athletics information.
+
+Currently, we are working on:
+
+* a [Conceptual Model](./spec/model/overview.md) to represent Athletics competitions, events, management and participation.
+
 
 ## Formats and standards
 
@@ -23,7 +28,7 @@ Schemas and vocabularies will be aligned with the existing W3C standards, in con
 
 ## Can I use it?
 
-Of course! Unless the piece of software or document listed in this repository has specified an explicit license, everything is under the [W3C Software and Document License](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document). This means that, by default, you have permission to copy, modify, and distribute OpenTrack works, with or without modification, for any purpose and without fee or royalty.
+Of course you can! Unless the piece of software or document listed in this repository has specified an explicit license, everything is under the [W3C Software and Document License](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document). This means that, by default, you have permission to copy, modify, and distribute OpenTrack works, with or without modification, for any purpose and without fee or royalty.
 
 ## How can I participate?
 
