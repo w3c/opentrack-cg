@@ -1,8 +1,18 @@
 # OpenTrack Abstract Model 
 
+## Introduction
+
+This section describes the conceptual model for OpenTrack. As described in [the charter](https://w3c.github.io/opentrack-cg/charter.html),  this model describes data related to Athletics competitions including: Track and Field; Road Running; Race Walking; Cross-Country Running; Mountain Running; and trail Running disciplines.
+
+This model will be focus on Athletics competitions, having into account: events; athletes and teams; results; performances; management of start lists; results; and facilities. 
+
+This document specifies the model in an abstract way, not the implementation of the final vocabulary.  
+
+This is a work in progress. No section should be considered final, and the absence of any content does not imply that such content is out of scope, or may not appear in the future. If you feel something should be covered, please [tell us](https://github.com/w3c/opentrack-cg/issues).
+
+
 ## Contents
 
-* [Introduction](#introduction)
 * [Background and References](#background-and-references)
 * [Overview of the model](#overview-of-the-model)
 * [Schedule, Venues of Events](#schedule,-venues-of-events)
@@ -49,14 +59,6 @@
     * [Disciplines](#disciplines)
     
     
-## Introduction
-
-This section describes the conceptual model for OpenTrack. As described in [the charter](https://w3c.github.io/opentrack-cg/charter.html),  this model describes data related to Athletics competitions including: Track and Field; Road Running; Race Walking; Cross-Country Running; Mountain Running; and trail Running disciplines.
-
-This model will be focus on Athletics competitions, having into account: events; athletes and teams; results; performances; management of start lists; results; and facilities. 
-
-This document specifies <mark>the model in an abstract way, not the implementation of the final vocabulary</mark> with classes, properties and codes.  
-
 ## Background and References
 
 OpenTrack descriptions need homogeneous classes, properties and data types to specify values of properties. This work is based [on existing requirements](http://opentrack.run/standards/), and rules set up by [IAAF](http://iaaf.org).
@@ -140,7 +142,7 @@ Competitions may be described by the following attributes:
 | logo | Logo of the event. | URL |
 | start date | Date and time when the event starts. | [Date and Time](#date,-time-and-periods) |
 | end date | Date and time when the event ends. | [Date and Time](#date,-time-and-periods) |
-| status | Status of the event (scheduled, completed, etc.) | [Event Status](#Event-Status) |
+| status | Status of the event (scheduled, completed, etc.) | [Event Status](#event-status) |
 | organizer(s) | Person(s) or organization(s) that organizes the event. | [Person](#persons) or [Organization](#organizations) |
 | contributor(s) | Person(s) or organization(s) that collaborates in the organization of the event. | [Person](#persons) or [Organization](#organizations) |
 | sponsor(s) | Person(s) or organization(s) that sponsors the event. | [Person](#persons) or [Organization](#organizations) |
@@ -203,7 +205,7 @@ Athletics events may be described by the following attributes:
 | location | Venue where this competition is held (for instance, Main Outdoor Track at Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | round(s) | Round(s) performed as part of the competition (preliminary heats, semifinals, final, mass start waves in road races, etc.).  | **[Competition Round](#competition-rounds)** |
 | sub event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
-| status | Status of the event (scheduled, completed, etc.) | [Event Status](#Event-Status) |
+| status | Status of the event (scheduled, completed, etc.) | [Event Status](#event-status) |
 | discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
 | category | The specific category for this event competition. | [Category](#category) |
 | timekeeping | Type of timekeeping used to control the competition.  | [Timekeeping](#timekeeping) |
@@ -377,7 +379,7 @@ Venues can be described by the following attributes:
 Example:
 ```
 {
-    "@id" : "http://example.com/venue:0001"
+    "@id" : "http://example.com/venue:0001",
     "@type" : "Venue",                
     "name" : "Olympic Stadium Amsterdam",
     "geo" : 
@@ -556,7 +558,7 @@ Example:
             // … and so on
         ],
     
-    memberOf :"http://example.com/federation:England_Athletics"
+    "memberOf" :"http://example.com/federation:England_Athletics"
 }
 ```
 [More use cases and examples](./examples).
@@ -739,7 +741,7 @@ Rounds may be described by the following properties:
 | description | Longer descriptive text of the round and/or heat. | Text |
 | final | Indicates if this round is the final (true). | Boolean |
 | date | Date and time where the round and/or heat is held. | [Date and Time](#date,-time-and-periods) |
-| status | Status of the event (scheduled, completed, etc.) | [Event Status](#Event-Status) |
+| status | Status of the event (scheduled, completed, etc.) | [Event Status](#event-status) |
 | qualification criteria | Details what a competitor has to do to get to the next round. | [Qualification Criteria](#qualification-criteria) |
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
 | results | List with the results after the celebration of the round.  | **[Results](#results)** |
