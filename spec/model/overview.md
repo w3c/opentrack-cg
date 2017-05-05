@@ -30,9 +30,14 @@
             * [Start Lists in Timed Events](#start-lists-in-timed-events)
         * [Results](#results)
     * [Performances](#performances)
+      * [Timed Performance](#timed-performance)
+      * [Combined Performance](#combined-performance)
+      * [Length Performance](#length-performance)
+      * [Height Performance](#height-performance)
     * [Relays Legs](#relays-legs)    
 * [Classification schemas and data types](#classification-schemas-and-data-types)
     * [Date, Time and Periods](#date-time-and-periods)
+    * [Distance](#distance)
     * [Quantitative Values](#quantitative-values)
     * [Gender](#gender)
     * [Start Lists and Results](#start-lists-and-results)
@@ -441,8 +446,8 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | email | Email address. | Text |
 | url | Webpage URL about the athlete. | URL |
 | gender | Athlete's gender. | [Gender](#gender) |
-| height | Athlete's height. | [Quantitative Value](#quantitative-values) |
-| weight | Athlete's weight. | [Quantitative Value](#quantitative-values) |
+| height | Athlete's height. | [Distance](#distance) |
+| weight | Athlete's weight. | [Mass](#mass) |
 | nationality | Athlete's nationality. | [Country](#countries) |
 | date of birth | Date of birth. | [Date and Time](#date,-time-and-periods) |
 | birth place | Locality and country of birt (e.g. "Tallinn, Estonia") | Text |
@@ -468,18 +473,8 @@ Example:
     "image" : "https://example.com/260px-MoPodiumRio2016.png",
     "nationality" : "country:UK",                       
     "email" : "fakeemail@example.com",
-    "height" : 
-        { 
-            "@type" : "QuantitativeValue",
-            "value": 175, 
-            "unitCode": "CMT"                   // 'FOT'->feet ; 'INH'->inches ; 'MTR"->meter 
-        },  
-    "weight" : 
-        {
-            "@type" : "QuantitativeValue",
-            "value" : 65, 
-            "unitCode" : "KGM'                  // 'LBR'->pound(lb) ; 'ONZ"->ounce(oz) 
-        },   
+    "height" : "175 cm",
+    "weight" : "65 Kg",   
     "birthPlace" : "Mogadishu, Somalia" ,
     "birthDate" : "1983-04-23",             
     "address" : "http://example.org/postaladdress:00002",
@@ -906,7 +901,7 @@ Rounds in Vertical Jumps include also specific information about height of the b
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| starting height | (Vertical jumps) The starting height the bar is raised at the start of the round. | [Quantitative Value](#quantitative-values) |
+| starting height | (Vertical jumps) The starting height the bar is raised at the start of the round. | [Distance](#distance) |
 | increasing height | (Vertical jumps) The subsequent heights to which the bar will be raised at the end of each round of trials. | Text |
 
 
@@ -918,7 +913,7 @@ Example:
     "name" : "Heptathlon High Jump - Group A",
     "description" : "Group A within Heptathlon High Jump",
     "date" : "2016-07-08T10:30:00+01:00",
-    "startingHeight": "150cm" ,                     // Also as Quantitative Value
+    "startingHeight": "150 cm" ,
     "increasingHeight": "+3cm after each round" ,     
     "startList" :
         [
@@ -989,7 +984,7 @@ In **Vertical Jumps** the **rounds of trials** include the height the athlete is
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| current height | The target height the bar is raised for this round. | [Quantitative Value](#quantitative-values) |
+| current height | The target height the bar is raised for this round. | [Distance](#distance) |
 
 Example:
 ```javascript
@@ -1001,7 +996,7 @@ Example:
     "order" : 1,
     "bibIdentifier": "13",
     "athlete" : "http://example.com/athlete:29384",
-    "currentHeight" : "1.75",
+    "currentHeight" : "1.75 m",
     "trial" :    // List of attempts
         [
            "http://example.com/trial:HJ11",
@@ -1178,21 +1173,76 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the performance univocally. | Text |
-| value | Official measure of the performance (i.e., distance, height, time) | [Quantitative Value](#quantitative-values) |
-| reaction time | Reaction time of the athlete during a sprint event. | [Quantitative Value](#quantitative-values) |
-| wind assistance | Wind speed at the moment of registering the performance. | [Quantitative Value](#quantitative-values) |
+| wind assistance | Wind speed at the moment of registering the performance (it could be either positive or negative). | Text |
 | record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
 | best(s) | Flags indicating bests achieved after the competition round (e.g., Personal Best, Season Leader, etc.). | [Best](#bests) |
+
+
+There are different types of performance depending on the type of event: **Timed** events with results measured as time; **Lenght** events, measured as distance (Throws, Long Jump and Triple Jump); **Height** events, measured as height (Vertical Jumps); and **Combined** events, measured as score points (Decathlon, Heptathlon, etc.). So, this kind of performances are described by the following sub-classes:
+
+#### Timed Performance
+
+Apart from all properties of the parent class `Perfomance`, this entity includes:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| time | Official measure of the performance expressed as time. | [Date and Time](#date,-time-and-periods) |
+| reaction time | Reaction time of the athlete during a sprint event. | [Date and Time](#date,-time-and-periods) |
+
+Example:
+```javascript
+// 11.21 seconds
+// 12 milliseconds
+{
+    "time" : "T00:00:11.21",
+    "reactionTime" : "T00:00:00.012"
+}                                        
+```
+
+#### Combined Performance
+
+Apart from all properties of the parent class `Perfomance`, this entity includes:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| points | Official measure of the performance expressed as score points. | Number |
 
 Example:
 ```javascript
 {
-    "@id" : "http://example.com/performance:032410",
-    "value" : "11.21"                                   // Should be a Quantitative Value
+    "points" : 18273
 }                                        
 ```
-[More use cases and examples](./examples).
 
+#### Length Performance
+
+Apart from all properties of the parent class `Perfomance`, this entity includes:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| points | Official measure of the performance expressed as distance. | [Distance](#distance) |
+
+Example:
+```javascript
+{
+    "distance" : "56 m"
+}                                        
+```
+
+#### Height Performance
+
+Apart from all properties of the parent class `Perfomance`, this entity includes:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| height | Official measure of the performance expressed as vertical distance. | [Distance](#distance) |
+
+Example:
+```javascript
+{
+    "height" : "2.14 m"
+}                                        
+```
 
 ### Relays Legs
 
@@ -1207,7 +1257,7 @@ Legs are defined by the following properties:
 | identifier | Unique character string to identify the relays leg. | Text |
 | order | Order of this leg in the relays event. | Number |
 | rank | Position achieved by the athlete after the leg. | Number |
-| length | Length of the leg to be covered by the athlete. | [Quantitative Value](#quantitative-values) |
+| length | Length of the leg to be covered by the athlete. | [Distance](#distance) |
 | start point | Place where the leg starts. | Place |
 | finish point | Place where the leg finishes. | Place |
 | course | Track (polygon) where the leg is held. | GeoShape |
@@ -1218,13 +1268,13 @@ Example:
 ```javascript
 {
     "@type" : "RelaysLeg",
-   "order" : 1,
+    "order" : 1,
     "athlete" : "http://example.com/athlete:09822",
     "length" : "400m",
-   "rank" : 1, 
-   "performance" : 
+    "rank" : 1, 
+    "performance" : 
         {
-           "value": "51.56"
+           "time": "51.56"
         }
 }
 ```
@@ -1245,11 +1295,14 @@ Most of the following definitions and values for this set of value schemas are e
 Dates and time will be represented using the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard. 
 
 Examples:
-* Time (`[hh][mm][ss]` or `[hh]:[mm]:[ss]`): `04:45:38` (it can include the timezone `<time>±[hh]:[mm]`)
+* Time (`[hh][mm][ss].sss` or `[hh]:[mm]:[ss].sss`): `04:45:38.000` (it can include the timezone `<time>±[hh]:[mm]`)
 * Date (`[YYYY][MM][DD]` or `[YYYY]-[MM]-[DD]`): 2017-04-07
-* Date and Time (`<date>T<time>`): `2017-04-07T04:45:38+00:00` 
+* Date and Time (`<date>T<time>`): `2017-04-07T04:45:38.000+00:00` 
 
-Please, note that this representation for time is not sufficient for time performances. Sprint competitions are time scaled to 0.01 seconds, so performances need to be measured with better resolution. See [Quantitative Values](#quantitative-values).
+
+### Distance
+
+Measurements of the form `<Number> <Length-unit-of-measure>` (e.g., `7 ft`).
 
 
 ### Quantitative Values
@@ -1304,7 +1357,6 @@ The most used codes are:
 
 Combined events use IAAF Scoring Tables to assign points according to performances. There is no specific code for `points`.
 
-Examples will be provided with recommendations about the use of these quantitative units.
 
 
 ### Gender
