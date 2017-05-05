@@ -1,494 +1,409 @@
-//
-// Description of heptathlon event in the European Championships 2016 (euro_champs.json)
-//
 {
-    '@id' : 'http://example.com/event:EURO2016_Heptathlon',
-    '@type' : 'Event',
-    'name' : 'Heptathlon - European Championships 2016',
-    'description' : 'Women\'s heptathlon at the 2016 European Athletics Championships',
-    'url' : 'http://www.european-athletics.org/link_to_heptathlon_2016',
-    'startDate' : '2016-07-08',
-    'endDate' : '2016-07-09',
-    'location' : 'http://example.com/venue:AMS_OS',  
-    'discipline' : 'discipline:heptathlon',
-    'category' : 
+    "@id": "http://example.com/event:EURO2016_Heptathlon",
+    "@type": "Event",
+    "name": "Heptathlon - European Championships 2016",
+    "description": "Women\"s heptathlon at the 2016 European Athletics Championships",
+    "url": "http://www.european-athletics.org/link_to_heptathlon_2016",
+    "startDate": "2016-07-08",
+    "endDate": "2016-07-09",
+    "location": "http://example.com/venue:AMS_OS",
+    "discipline": "discipline:heptathlon",
+    "category": {
+        "@type": "Category",
+        "name": "Senior Women",
+        "gender": "gender:Women",
+        "ageRange": "age:SEN"
+    },
+    "subEvent": [
         {
-            '@type' :  'Category',
-            'name' : 'Senior Women',
-            'gender' : 'gender:Women',
-            'ageRange' : 'age:SEN'
-        },
-    'subEvent' :       // Hepthatlon is composed of seven subEvents: 
-        [
-            {
-                '@id' : 'http://example.com/event:EURO2016_Heptathlon_100mH',
-                '@type' : 'Event',
-                'name' : 'Heptathlon - 100m Hurdles',
-                'description' : '100 Hurdles at heptathlon as part of the 2016 European Athletics Championships',
-                'url' : 'http://www.european-athletics.org/link_to_heptathlon_2016_100',
-                'startDate' : '2016-07-08',
-                'discipline' : 'discipline:100mH',
-                'round' :      // Split in three heats (1, 2 and 3)
-                    [
-                        {
-                            '@id' : 'http://example.com/round:EURO2016_Heptathlon_100mH_Heat1',
-                            '@type' : 'TimedRound',
-                            'name' : 'Heptathlon 100m Hurdles - Heat 1',
-                            'description' : 'Heat 1 of 3 within Heptathlon 100m Hurdles',
-                            'date' : '2016-07-08T10:30:00+01:00',
-                            'qualificationCriteria': '3 heats without qualification. Assignation  of score points according to performance.' ,
-                            'timekeeping' : 'timekeeping:FAT',        // More information could be specified
-                            'startList' :
-                                [
-                                    {
-                                        'order' : '1',
-                                        'bibIdentifier' : '1',
-                                        'lane' : 2,
-                                        'scorePoints' : 0 ,
-                                        'competitor' : 'http://example.com/athlete:29383'
-                                    },
-                                    {
-                                        'order' : '2',
-                                        'bibIdentifier' : '13',
-                                        'lane' : 3,
-                                        'scorePoints' : 0,
-                                        'competitor' : 'http://example.com/athlete:29384'
-                                    },
-                                    // … all the competitors at the start list
-                                    {
-                                        'order' : '8',
-                                        'bibIdentifier' : '5',
-                                        'lane' : 9,
-                                        'scorePoints' : 0,
-                                        'competitor' : 'http://example.com/athlete:29390'
-                                    }
-                                ],
-                            result : 
-                                [
-                                    {
-                                        '@id' : 'http://example.com/result:234534',
-                                        'rank' : '1',
-                                        'bibIdentifier' : '13',
-                                        'scorePoints' : 4587,
-                                        'competitor' : 'http://example.com/athlete:29384',
-                                        'timestamp' : '2016-10-15T10:31:12+01:00',
-                                        'performance' : 
-                                            {
-                                                '@id' : 'http://example.com/performance:032410',
-                                                'value' : '11.21'
-                                            }                                        
-                                    },
-                                    {
-                                        '@id' : 'http://example.com/result:324324',
-                                        'rank' : '2',
-                                        'bibIdentifier' : '1',
-                                        'scorePoints' : 3948,
-                                        'competitor' : 'http://example.com/athlete:29383',
-                                        'timestamp' : '2016-10-15T10:31:12+01:00',
-                                        'performance' : 
-                                            {
-                                                '@id' : 'http://example.com/performance:034345',
-                                                'value' : '11.24'
-                                            }                                        
-                                    }
-                                    // … and so on, including all results of this heat
-                                ]
-                        },
-                        // The same for heat 2 
-                        {
-                            '@id' : 'http://example.com/round:EURO2016_Heptathlon_100mH_Heat2',
-                            'name' : 'Heptathlon 100m Hurdles - Heat 2',
-                            // … the same structure than in Heat 1
-                        }
-                        // The same for heat 3 
-                        {
-                            '@id' : 'http://example.com/round:EURO2016_Heptathlon_100mH_Heat3',
-                            'name' : 'Heptathlon 100m Hurdles - Heat 3',
-                            // … the same structure than in Heat 1 and 2
-                        }
-                    ],
-                'result' :       // Results of the overall event after rounds
-                    [
-                        {
-                            'rank' : '1',
-                            'bibIdentifier' : '13',
-                            'scorePoints' : 29383,
-                            'competitor' : 'http://example.com/athlete:29384',
-                            'timestamp' : '2016-10-15T10:31:12+01:00',
-                            'performance' : 
-                                {
-                                    '@id' : 'http://example.com/performance:032410',
-                                    'value' : '11.21'
-                                }                                        
-                        },
-                        {
-                            '@id' : 'http://example.com/result:324324',
-                            'rank' : '2',
-                            'bibIdentifier' : '1',
-                            'scorePoints' : 13448,
-                            'competitor' : 'http://example.com/athlete:29383',
-                            'timestamp' : '2016-10-15T10:31:12+01:00',
-                            'performance' : 
-                                {
-                                    '@id' : 'http://example.com/performance:034345',
-                                    'value' : '11.24'
-                                }                                        
-                        }
-                        // … and so on, including all results for this subEvent
-                    ]
-            },
-            //
-            // High Jump sub-event
-            //
-            {
-                '@id' : 'http://example.com/event:EURO2016_Heptathlon_HJ',
-                '@type' : 'Event',
-                'name' : 'Heptathlon - High Jump',
-                'description' : 'High Jump at heptathlon as part of the 2016 European Athletics Championships',
-                'startDate' : '2016-07-08',
-                'discipline' : 'discipline:HJ',
-                'round' :                                    // Grouped in: Group A and Group B
-                    [
-                        {
-                            '@id' : 'http://example.com/round:EURO2016_Heptathlon_HJ_A',
-                            '@type' : 'VerticalJumpRound',
-                            'name' : 'Heptathlon High Jump - Group A',
-                            'description' : 'Group A within Heptathlon High Jump',
-                            'date' : '2016-07-08T10:30:00+01:00',
-                            'qualificationCriteria' : '2 groups without qualification. Assignation of score points according to performance.' ,
-                            'startingHeight': "150cm" ,                     // Defined as Quantitative Value
-                            'increasingHeight': "+3cm after each round" ,     
-                            'startList' :
-                                [
-                                    {
-                                        'order' : '1',
-                                        'bibIdentifier' : '1',
-                                        'scorePoints' : 13448 ,
-                                        'competitor' : 'http://example.com/athlete:29383'
-                                    },
-                                    {
-                                        'order' : '2',
-                                        'bibIdentifier' : '13',
-                                        'scorePoints' : 29383,
-                                        'competitor' : 'http://example.com/athlete:29384'
-                                    }
-                                    // … all the competitors at the start list
-                                ],
-                            // Overall results of 'Group A' round
-                            'results' :     
-                                [
-                                    {
-                                        '@id' : 'http://example.com/result:828282',
-                                        'rank' : '1',
-                                        'bibIdentifier' : '13',
-                                        'scorePoints' : 58383,
-                                        'competitor' : 'http://example.com/athlete:29384',
-                                        'timestamp' : '2016-10-15T10:31:12+01:00',
-                                        'performance' : 
-                                            {
-                                                '@id' : 'http://example.com/performance:083838',
-                                                'value' : '58383'
-                                            }                    
-                                    },
-                                    {
-                                        '@id' : 'http://example.com/result:93933',
-                                        'rank' : '2',
-                                        'bibIdentifier' : '1',
-                                        'scorePoints' : 33454,
-                                        'competitor' : 'http://example.com/athlete:29383',
-                                        'timestamp' : '2016-10-15T10:31:12+01:00',
-                                        'performance' : 
-                                            {
-                                                '@id' : 'http://example.com/performance:034343',
-                                                'value' : '33454'
-                                            }                                        
-                                    }
-                                    // … all results for group A
-                                ],
-                            // Participation of athletes in the competition (in Group A)
-                            'trialsRound' :
-                                [
-                                    {
-                                        '@id' : 'http://example.com/trials-round:029233',
-                                        '@type' : 'VerticalJumpTrialsRound',
-                                        'name' : 'Athlete 13 (Group A), 1st round of trials with bar at 1.75m',
-                                        'roundNumber' : 1,
-                                        'order' : 1,
-                                        'bibIdentifier': '13',
-                                        'athlete' : 'http://example.com/athlete:29384',
-                                        'currentHeight' : '1.75',
-                                        'trial' :    // List of attempts
-                                            [
-                                                {
-                                                    '@id' : 'http://example.com/trial:83733',
-                                                    '@type' : 'Trial',
-                                                    'numberAttempt' : 1,
-                                                    'feature' : 'feature:Failed',
-                                                    'valid' : false
-                                                },
-                                                {
-                                                    '@id' : 'http://example.com/trial:83734',
-                                                    '@type' : 'Trial',
-                                                    'numberAttempt' : 2,
-                                                    'valid' : true,
-                                                    'feature' : 'feature:PassedTrial',
-                                                    'performance' :
-                                                        {
-                                                            '@id' : 'http://example.com/performance:34354',
-                                                            'value' : '1.75'
-                                                        }
-                                                }
-                                            ]                                    
-                                    },
-                                    {
-                                        '@id' : 'http://example.com/trials-round:029234',
-                                        '@type' : 'VerticalJumpTrialsRound',
-                                        'name' : 'Athlete 1 (Group A), 1st round of trials with bar at 1.75m',
-                                        'roundNumber' : 1,
-                                        'order' : 2,
-                                        'bibIdentifier': '1',
-                                        'athlete' : 'http://example.com/athlete:29383',
-                                        'currentHeight' : '1.75',
-                                        'trial' :    // List of attempts
-                                            [
-                                                {
-                                                    '@id' : 'http://example.com/trial:83735',
-                                                    '@type' : 'Trial',
-                                                    'numberAttempt' : 1,
-                                                    'feature' : 'feature:Failed',
-                                                    'valid' : false
-                                                },
-                                                {
-                                                    '@id' : 'http://example.com/trial:83736',
-                                                    '@type' : 'Trial',
-                                                    'numberAttempt' : 2,
-                                                    'feature' : 'feature:Failed',
-                                                    'valid' : false
-                                                },
-                                                {
-                                                    '@id' : 'http://example.com/trial:83737',
-                                                    '@type' : 'Trial',
-                                                    'numberAttempt' : 3,
-                                                    'valid' : true,
-                                                    'feature' : 'feature:PassedTrial',
-                                                    'performance' :
-                                                        {
-                                                            '@id' : 'http://example.com/performance:34357',
-                                                            'value' : '1.75'
-                                                        }
-                                                }
-                                            ]                                    
-                                    },
-                                    // All the rounds of trials for each athlete will be represented in the same way
-                                    // roundNumber, order, currentHeight > trials
-                                ]
-                        },
-                        {
-                            '@id' : 'http://example.com/round:EURO2016_Heptathlon_HJ_B',
-                            '@type' : 'FieldRound',
-                            'name' : 'Heptathlon High Jump - Group B',
-                            'description' : 'Group B within Heptathlon High Jump',
-                            // Same structure as in Group A 
-                            // startList + results + trials
-                        }
-                    ],
-                // Final results for the High Jump event
-                'result' : 
-                    [
-                        {
-                            'rank' : '1',
-                            
-                            'bibIdentifier' : '13',
-                            'scorePoints' : 93838,
-                            'competitor' : 'http://example.com/athlete:29384',
-                            'timestamp' : '2016-10-15T10:31:12+01:00',
-                            'performance' : 
-                                {
-                                    '@id' : 'http://example.com/performance:132410',
-                                    'value' : '93838'
-                                }                                        
-                        }
-                        // and so on. All the results
-                    ]
-            },
-            //
-            // Shot Put in Heptathlon (Javelin Throw and Long Jump have similar descriptions)
-            //
-            {
-                '@id' : 'http://example.com/event:EURO2016_Heptathlon_SP',
-                '@type' : 'Event',
-                'name' : 'Heptathlon - Shot Put',
-                'description' : 'Shot Put at heptathlon as part of the 2016 European Athletics Championships',
-                'startDate' : '2016-07-09',
-                'discipline' : 'discipline:SP',
-                // Information about rounds                
-                'round' :                                    // Grouped in: Group A and Group B
-                    [
-                        {
-                            '@id' : 'http://example.com/round:EURO2016_Heptathlon_SP_A',
-                            '@type' : 'FieldRound',
-                            'name' : 'Heptathlon Shot Put - Group A',
-                            'description' : 'Group A within Heptathlon - Shot Put',
-                            'date' : '2016-07-08T10:30:00+01:00',
-                            'qualificationCriteria' : '2 groups without qualification. Assignation of score points according to performance.' ,
-                            // 'startList' will be similar than in previous cases
-                            'results' :         // Results for this Group A
-                                [
-                                    {
-                                        '@id' : 'http://example.com/result:837364',
-                                        'rank' : '1',
-                                        'bibIdentifier' : '13',
-                                        'scorePoints' : 58383,
-                                        'competitor' : 'http://example.com/athlete:29384',
-                                        'timestamp' : '2016-10-15T10:31:12+01:00',
-                                        'performance' : 
-                                            {
-                                                '@id' : 'http://example.com/performance:083838',
-                                                'value' : '16.52'
-                                            }                    
-                                    },
-                                    {
-                                        '@id' : 'http://example.com/result:846453',
-                                        'rank' : '2',
-                                        'bibIdentifier' : '1',
-                                        'scorePoints' : 33454,
-                                        'competitor' : 'http://example.com/athlete:29383',
-                                        'timestamp' : '2016-10-15T10:31:12+01:00',
-                                        'performance' : 
-                                            {
-                                                '@id' : 'http://example.com/performance:034343',
-                                                'value' : '16.52'
-                                            }                                        
-                                    }
-                                    // … all results for group A
-                                ],
-                            // Trials for this round
-                            // Participation of athletes in the competition (in Group A)
-                            'trialsRound' :
-                                [
-                                    {
-                                        '@id' : 'http://example.com/trials-round:837373',
-                                        '@type' : 'TrialsRound',
-                                        'name' : 'Athlete 13 (Group A), list of attempts',
-                                        'order' : 1,
-                                        'bibIdentifier': '13',
-                                        'athlete' : 'http://example.com/athlete:29384',
-                                        'trial' :    // List of attempts
-                                            [
-                                                {
-                                                    '@id' : 'http://example.com/trial:83733',
-                                                    '@type' : 'Trial',
-                                                    'numberAttempt' : 1,
-                                                    'feature' : 'feature:Failed',
-                                                    'valid' : false
-                                                },
-                                                {
-                                                    '@id' : 'http://example.com/trial:833434',
-                                                    '@type' : 'Trial',
-                                                    'numberAttempt' : 2,
-                                                    'valid' : true,
-                                                    'performance' :
-                                                        {
-                                                            '@id' : 'http://example.com/performance:34322',
-                                                            'value' : '15.34'
-                                                        }
-                                                },
-                                                {
-                                                    '@id' : 'http://example.com/trial:833434',
-                                                    '@type' : 'Trial',
-                                                    'numberAttempt' : 3,
-                                                    'valid' : true,
-                                                    'performance' :
-                                                        {
-                                                            '@id' : 'http://example.com/performance:343344',
-                                                            'value' : '16.34'
-                                                        }
-                                                }
-                                            ]                                    
-                                    }
-                                    // …
-                                    // All the rounds of trials for each athlete will be represented in the same way
-                                    // roundNumber, order > trials
-                                ]
-                        },
-                        // Group B (the second round)
-                        {
-                            '@id' : 'http://example.com/round:EURO2016_Heptathlon_SP_B',
-                            '@type' : 'FieldRound',
-                            'name' : 'Heptathlon Shot Put - Group B',
-                            'description' : 'Group B within Heptathlon - Shot Put',
-                            'date' : '2016-07-08T10:40:00+01:00',
-                            'qualificationCriteria' : '2 groups without qualification. Assignation of score points according to performance.' ,
-                            // This group will be defined in the same way as Group A
-                            // start list, results, trials 
-                        }
-
-                    ],
-                'results' :         // Final results for Shot Put
-                    [
-                        {
-                            '@id' : 'http://example.com/result:837364',
-                            'rank' : '1',
-                            'bibIdentifier' : '13',
-                            'scorePoints' : 58383,
-                            'competitor' : 'http://example.com/athlete:29384',
-                            'timestamp' : '2016-10-15T10:31:12+01:00',
-                            'performance' : 
-                                {
-                                    '@id' : 'http://example.com/performance:083838',
-                                    'value' : '16.52'
-                                }                    
-                        },
-                        {
-                            '@id' : 'http://example.com/result:846453',
-                            'rank' : '2',
-                            'bibIdentifier' : '1',
-                            'scorePoints' : 33454,
-                            'competitor' : 'http://example.com/athlete:29383',
-                            'timestamp' : '2016-10-15T10:31:12+01:00',
-                            'performance' : 
-                                {
-                                    '@id' : 'http://example.com/performance:034343',
-                                    'value' : '16.52'
-                                }                                        
-                        }
-                        // … all results
-                    ]                
-            }
-            // The rest of disciplines (sub-events) will be defined in the same way
-        ],
-        //
-        // The final results for heptathlon
-        //
-        'result' :       // Results of the overall event after rounds
-            [
+            "@id": "http://example.com/event:EURO2016_Heptathlon_100mH",
+            "@type": "Event",
+            "name": "Heptathlon - 100m Hurdles",
+            "description": "100 Hurdles at heptathlon as part of the 2016 European Athletics Championships",
+            "url": "http://www.european-athletics.org/link_to_heptathlon_2016_100",
+            "startDate": "2016-07-08",
+            "discipline": "discipline:100mH",
+            "round": [
                 {
-                    'rank' : '1',
-                    'bibIdentifier' : '13',
-                    'scorePoints' : 293383,
-                    'competitor' : 'http://example.com/athlete:29384',
-                    'performance' : 
+                    "@id": "http://example.com/round:EURO2016_Heptathlon_100mH_Heat1",
+                    "@type": "TimedRound",
+                    "name": "Heptathlon 100m Hurdles - Heat 1",
+                    "description": "Heat 1 of 3 within Heptathlon 100m Hurdles",
+                    "date": "2016-07-08T10:30:00+01:00",
+                    "qualificationCriteria": "3 heats without qualification. Assignation  of score points according to performance.",
+                    "timekeeping": "timekeeping:FAT",
+                    "startList": [
                         {
-                            '@id' : 'http://example.com/performance:032410',
-                            'value' : '293383'
-                        }                                        
+                            "order": "1",
+                            "bibIdentifier": "1",
+                            "lane": 2,
+                            "scorePoints": 0,
+                            "competitor": "http://example.com/athlete:29383"
+                        },
+                        {
+                            "order": "2",
+                            "bibIdentifier": "13",
+                            "lane": 3,
+                            "scorePoints": 0,
+                            "competitor": "http://example.com/athlete:29384"
+                        },
+                        {
+                            "order": "8",
+                            "bibIdentifier": "5",
+                            "lane": 9,
+                            "scorePoints": 0,
+                            "competitor": "http://example.com/athlete:29390"
+                        }
+                    ],
+                    "result": [
+                        {
+                            "@id": "http://example.com/result:234534",
+                            "rank": "1",
+                            "bibIdentifier": "13",
+                            "scorePoints": 4587,
+                            "competitor": "http://example.com/athlete:29384",
+                            "timestamp": "2016-10-15T10:31:12+01:00",
+                            "performance": {
+                                "@id": "http://example.com/performance:032410",
+                                "value": "11.21"
+                            }
+                        },
+                        {
+                            "@id": "http://example.com/result:324324",
+                            "rank": "2",
+                            "bibIdentifier": "1",
+                            "scorePoints": 3948,
+                            "competitor": "http://example.com/athlete:29383",
+                            "timestamp": "2016-10-15T10:31:12+01:00",
+                            "performance": {
+                                "@id": "http://example.com/performance:034345",
+                                "value": "11.24"
+                            }
+                        }
+                    ]
                 },
                 {
-                    '@id' : 'http://example.com/result:324324',
-                    'rank' : '2',
-                    'bibIdentifier' : '1',
-                    'scorePoints' : 133448,
-                    'competitor' : 'http://example.com/athlete:29383',
-                    'performance' : 
-                        {
-                            '@id' : 'http://example.com/performance:034345',
-                            'value' : '133448'
-                        }                                        
+                    "@id": "http://example.com/round:EURO2016_Heptathlon_100mH_Heat2",
+                    "name": "Heptathlon 100m Hurdles - Heat 2"
+                },
+                {
+                    "@id": "http://example.com/round:EURO2016_Heptathlon_100mH_Heat3",
+                    "name": "Heptathlon 100m Hurdles - Heat 3"
                 }
-                // … and so on, including all results for this event
+            ],
+            "result": [
+                {
+                    "rank": "1",
+                    "bibIdentifier": "13",
+                    "scorePoints": 29383,
+                    "competitor": "http://example.com/athlete:29384",
+                    "timestamp": "2016-10-15T10:31:12+01:00",
+                    "performance": {
+                        "@id": "http://example.com/performance:032410",
+                        "value": "11.21"
+                    }
+                },
+                {
+                    "@id": "http://example.com/result:324324",
+                    "rank": "2",
+                    "bibIdentifier": "1",
+                    "scorePoints": 13448,
+                    "competitor": "http://example.com/athlete:29383",
+                    "timestamp": "2016-10-15T10:31:12+01:00",
+                    "performance": {
+                        "@id": "http://example.com/performance:034345",
+                        "value": "11.24"
+                    }
+                }
             ]
+        },
+        {
+            "@id": "http://example.com/event:EURO2016_Heptathlon_HJ",
+            "@type": "Event",
+            "name": "Heptathlon - High Jump",
+            "description": "High Jump at heptathlon as part of the 2016 European Athletics Championships",
+            "startDate": "2016-07-08",
+            "discipline": "discipline:HJ",
+            "round": [
+                {
+                    "@id": "http://example.com/round:EURO2016_Heptathlon_HJ_A",
+                    "@type": "VerticalJumpRound",
+                    "name": "Heptathlon High Jump - Group A",
+                    "description": "Group A within Heptathlon High Jump",
+                    "date": "2016-07-08T10:30:00+01:00",
+                    "qualificationCriteria": "2 groups without qualification. Assignation of score points according to performance.",
+                    "startingHeight": "150cm",
+                    "increasingHeight": "+3cm after each round",
+                    "startList": [
+                        {
+                            "order": "1",
+                            "bibIdentifier": "1",
+                            "scorePoints": 13448,
+                            "competitor": "http://example.com/athlete:29383"
+                        },
+                        {
+                            "order": "2",
+                            "bibIdentifier": "13",
+                            "scorePoints": 29383,
+                            "competitor": "http://example.com/athlete:29384"
+                        }
+                    ],
+                    "results": [
+                        {
+                            "@id": "http://example.com/result:828282",
+                            "rank": "1",
+                            "bibIdentifier": "13",
+                            "scorePoints": 58383,
+                            "competitor": "http://example.com/athlete:29384",
+                            "timestamp": "2016-10-15T10:31:12+01:00",
+                            "performance": {
+                                "@id": "http://example.com/performance:083838",
+                                "value": "58383"
+                            }
+                        },
+                        {
+                            "@id": "http://example.com/result:93933",
+                            "rank": "2",
+                            "bibIdentifier": "1",
+                            "scorePoints": 33454,
+                            "competitor": "http://example.com/athlete:29383",
+                            "timestamp": "2016-10-15T10:31:12+01:00",
+                            "performance": {
+                                "@id": "http://example.com/performance:034343",
+                                "value": "33454"
+                            }
+                        }
+                    ],
+                    "trialsRound": [
+                        {
+                            "@id": "http://example.com/trials-round:029233",
+                            "@type": "VerticalJumpTrialsRound",
+                            "name": "Athlete 13 (Group A), 1st round of trials with bar at 1.75m",
+                            "roundNumber": 1,
+                            "order": 1,
+                            "bibIdentifier": "13",
+                            "athlete": "http://example.com/athlete:29384",
+                            "currentHeight": "1.75",
+                            "trial": [
+                                {
+                                    "@id": "http://example.com/trial:83733",
+                                    "@type": "Trial",
+                                    "numberAttempt": 1,
+                                    "feature": "feature:Failed",
+                                    "valid": false
+                                },
+                                {
+                                    "@id": "http://example.com/trial:83734",
+                                    "@type": "Trial",
+                                    "numberAttempt": 2,
+                                    "valid": true,
+                                    "feature": "feature:PassedTrial",
+                                    "performance": {
+                                        "@id": "http://example.com/performance:34354",
+                                        "value": "1.75"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "@id": "http://example.com/trials-round:029234",
+                            "@type": "VerticalJumpTrialsRound",
+                            "name": "Athlete 1 (Group A), 1st round of trials with bar at 1.75m",
+                            "roundNumber": 1,
+                            "order": 2,
+                            "bibIdentifier": "1",
+                            "athlete": "http://example.com/athlete:29383",
+                            "currentHeight": "1.75",
+                            "trial": [
+                                {
+                                    "@id": "http://example.com/trial:83735",
+                                    "@type": "Trial",
+                                    "numberAttempt": 1,
+                                    "feature": "feature:Failed",
+                                    "valid": false
+                                },
+                                {
+                                    "@id": "http://example.com/trial:83736",
+                                    "@type": "Trial",
+                                    "numberAttempt": 2,
+                                    "feature": "feature:Failed",
+                                    "valid": false
+                                },
+                                {
+                                    "@id": "http://example.com/trial:83737",
+                                    "@type": "Trial",
+                                    "numberAttempt": 3,
+                                    "valid": true,
+                                    "feature": "feature:PassedTrial",
+                                    "performance": {
+                                        "@id": "http://example.com/performance:34357",
+                                        "value": "1.75"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.com/round:EURO2016_Heptathlon_HJ_B",
+                    "@type": "FieldRound",
+                    "name": "Heptathlon High Jump - Group B",
+                    "description": "Group B within Heptathlon High Jump"
+                }
+            ],
+            "result": [
+                {
+                    "rank": "1",
+                    "bibIdentifier": "13",
+                    "scorePoints": 93838,
+                    "competitor": "http://example.com/athlete:29384",
+                    "timestamp": "2016-10-15T10:31:12+01:00",
+                    "performance": {
+                        "@id": "http://example.com/performance:132410",
+                        "value": "93838"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "http://example.com/event:EURO2016_Heptathlon_SP",
+            "@type": "Event",
+            "name": "Heptathlon - Shot Put",
+            "description": "Shot Put at heptathlon as part of the 2016 European Athletics Championships",
+            "startDate": "2016-07-09",
+            "discipline": "discipline:SP",
+            "round": [
+                {
+                    "@id": "http://example.com/round:EURO2016_Heptathlon_SP_A",
+                    "@type": "FieldRound",
+                    "name": "Heptathlon Shot Put - Group A",
+                    "description": "Group A within Heptathlon - Shot Put",
+                    "date": "2016-07-08T10:30:00+01:00",
+                    "qualificationCriteria": "2 groups without qualification. Assignation of score points according to performance.",
+                    "results": [
+                        {
+                            "@id": "http://example.com/result:837364",
+                            "rank": "1",
+                            "bibIdentifier": "13",
+                            "scorePoints": 58383,
+                            "competitor": "http://example.com/athlete:29384",
+                            "timestamp": "2016-10-15T10:31:12+01:00",
+                            "performance": {
+                                "@id": "http://example.com/performance:083838",
+                                "value": "16.52"
+                            }
+                        },
+                        {
+                            "@id": "http://example.com/result:846453",
+                            "rank": "2",
+                            "bibIdentifier": "1",
+                            "scorePoints": 33454,
+                            "competitor": "http://example.com/athlete:29383",
+                            "timestamp": "2016-10-15T10:31:12+01:00",
+                            "performance": {
+                                "@id": "http://example.com/performance:034343",
+                                "value": "16.52"
+                            }
+                        }
+                    ],
+                    "trialsRound": [
+                        {
+                            "@id": "http://example.com/trials-round:837373",
+                            "@type": "TrialsRound",
+                            "name": "Athlete 13 (Group A), list of attempts",
+                            "order": 1,
+                            "bibIdentifier": "13",
+                            "athlete": "http://example.com/athlete:29384",
+                            "trial": [
+                                {
+                                    "@id": "http://example.com/trial:83733",
+                                    "@type": "Trial",
+                                    "numberAttempt": 1,
+                                    "feature": "feature:Failed",
+                                    "valid": false
+                                },
+                                {
+                                    "@id": "http://example.com/trial:833434",
+                                    "@type": "Trial",
+                                    "numberAttempt": 2,
+                                    "valid": true,
+                                    "performance": {
+                                        "@id": "http://example.com/performance:34322",
+                                        "value": "15.34"
+                                    }
+                                },
+                                {
+                                    "@id": "http://example.com/trial:833434",
+                                    "@type": "Trial",
+                                    "numberAttempt": 3,
+                                    "valid": true,
+                                    "performance": {
+                                        "@id": "http://example.com/performance:343344",
+                                        "value": "16.34"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.com/round:EURO2016_Heptathlon_SP_B",
+                    "@type": "FieldRound",
+                    "name": "Heptathlon Shot Put - Group B",
+                    "description": "Group B within Heptathlon - Shot Put",
+                    "date": "2016-07-08T10:40:00+01:00",
+                    "qualificationCriteria": "2 groups without qualification. Assignation of score points according to performance."
+                }
+            ],
+            "results": [
+                {
+                    "@id": "http://example.com/result:837364",
+                    "rank": "1",
+                    "bibIdentifier": "13",
+                    "scorePoints": 58383,
+                    "competitor": "http://example.com/athlete:29384",
+                    "timestamp": "2016-10-15T10:31:12+01:00",
+                    "performance": {
+                        "@id": "http://example.com/performance:083838",
+                        "value": "16.52"
+                    }
+                },
+                {
+                    "@id": "http://example.com/result:846453",
+                    "rank": "2",
+                    "bibIdentifier": "1",
+                    "scorePoints": 33454,
+                    "competitor": "http://example.com/athlete:29383",
+                    "timestamp": "2016-10-15T10:31:12+01:00",
+                    "performance": {
+                        "@id": "http://example.com/performance:034343",
+                        "value": "16.52"
+                    }
+                }
+            ]
+        }
+    ],
+    "result": [
+        {
+            "rank": "1",
+            "bibIdentifier": "13",
+            "scorePoints": 293383,
+            "competitor": "http://example.com/athlete:29384",
+            "performance": {
+                "@id": "http://example.com/performance:032410",
+                "value": "293383"
+            }
+        },
+        {
+            "@id": "http://example.com/result:324324",
+            "rank": "2",
+            "bibIdentifier": "1",
+            "scorePoints": 133448,
+            "competitor": "http://example.com/athlete:29383",
+            "performance": {
+                "@id": "http://example.com/performance:034345",
+                "value": "133448"
+            }
+        }
+    ]
 }
-            
-            
-
-

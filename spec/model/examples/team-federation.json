@@ -1,0 +1,15 @@
+{
+    "@id": "http://example.com/team:JAP2017",
+    "@type": "Team",
+    "name": "Japan Team - Marathon 2017",
+    "alternateName": "JAP",
+    "image": "http://example.org/image.png",
+    "logo": "http://example.org/logo.png",
+    "captain": "http://example.com/athlete:122838",
+    "athlete": [
+        "http://example.com/athlete:122838",
+        "http://example.com/athlete:122839",
+        "http://example.com/athlete:122840"
+    ],
+    "federation": "http://example.com/federation:JAP"
+}
