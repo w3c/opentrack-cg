@@ -38,7 +38,7 @@
 * [Classification schemas and data types](#classification-schemas-and-data-types)
     * [Date, Time and Periods](#date-time-and-periods)
     * [Distance](#distance)
-    * [Quantitative Values](#quantitative-values)
+    * [Mass](#mass)
     * [Gender](#gender)
     * [Start Lists and Results](#start-lists-and-results)
     * [Age Range](#age-range)
@@ -112,7 +112,7 @@ The UML diagram represents three main aspects of Athletics:
     * **[Start List](#start-list)**. Ordered set of competitors (athletes or teams) qualified to compete in a specific competition round. Start list contains information about competitors, the order of competition, and other competition information provided by judges. 
     * **[Results](#results)**. Ordered list of competitors with their **performances** after an event or a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
 
-* **[Performances](#performances)**. Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed).
+* **[Performances](#performances)**. Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed). 
 
 * **[Trials Rounds](#trials-rounds)**. Rounds of Field Events include one of several rounds of [Trials](#field-trials), where athletes have different attempts to achieve their best performance in the competition.  
 
@@ -1304,59 +1304,9 @@ Examples:
 
 Measurements of the form `<Number> <Length-unit-of-measure>` (e.g., `7 ft`).
 
+### Mass
 
-### Quantitative Values
-
-This entity could serve to represent the official measurement for distance, height, weight, speed (of wind), and others. Basically, the representation will be a pair value-unit. Units will use the normative list of [UN/CEFACT](https://www.unece.org/cefact/) [Common Codes for Units of Measurement](http://www.unece.org/fileadmin/DAM/cefact/recommendations/rec20/rec20_Rev9e_2014.xls).
-
-Some Athletics disciplines (i.e., throwing events and jumps) measure performances as distance. IAAF specifies measures in whole centimetres. Also, distance describes the event in the case of races (e.g., 200m, 3000m steeplechase, length of cross-country course, etc.). In this case, distance is usually measured in meters (kilometers) or miles. 
-
-So, when possible, measurements must be described using the following properties:
-
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| value | The value of the measurement | Number |
-| unit code | UN/CEFACT Common Code (3 characters) | Text |
-
-The most used codes are: 
-
-#### Time Unit Codes
-
-| UN/CEFACT Common Code | Unit of Measurement |
-| --------------------- | ------------------- |
-| `C26` | millisecond |
-| `SEC` | second |
-| `MIN` | minute |
-| `HUR` | hour |
-
-#### Distance Unit Codes
-
-| UN/CEFACT Common Code | Unit of Measurement |
-| --------------------- | ------------------- |
-| `MMT` | millimetre |
-| `CMT` | centimetre |
-| `MTR` | metre |
-| `KTM` | kilometre |
-| `INH` |	inch |
-| `M7` |	micro-inch |
-| `FOT` |	foot |
-| `YRD` |	yard |
-| `SMI` |	mile (statute mile) |
-
-
-#### Speed Unit Codes
-
-| UN/CEFACT Common Code | Unit of Measurement |
-| --------------------- | ------------------- |
-| `MTS` |	metre per second |
-| `KNT` |	knot |
-| `KMH` |	kilometre per hour |
-
-#### Scoring Points 
-
-Combined events use IAAF Scoring Tables to assign points according to performances. There is no specific code for `points`.
-
+Measurements of the form `<Number> <Mass-unit-of-measure>` (e.g., `75.3 kg`).
 
 
 ### Gender
