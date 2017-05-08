@@ -44,7 +44,7 @@ This is a work in progress. No section should be considered final, and the absen
       * [Combined Performance](#combined-performance)
       * [Length Performance](#length-performance)
       * [Height Performance](#height-performance)
-    * [Relays Legs](#relays-legs)    
+    * [Relays Legs](#relays-legs)
 * [Classification schemas and data types](#classification-schemas-and-data-types)
     * [Date, Time and Periods](#date-time-and-periods)
     * [Distance](#distance)
@@ -210,7 +210,7 @@ Athletics events may be described by the following attributes:
 | category | The specific category for this event competition. | [Category](#category) |
 | timekeeping | Type of timekeeping used to control the competition.  | [Timekeeping](#timekeeping) |
 | entryRequirements | Requirements to take part in the event.  | Text |
-| results | List with the results after the celebration of all rounds of the event.  | **[Results](#results)** |
+| results | List with the results after the celebration of all rounds of the event.  | **[Results List](#results-lists)** |
 
 Example:
 ```
@@ -744,7 +744,7 @@ Rounds may be described by the following properties:
 | status | Status of the event (scheduled, completed, etc.) | [Event Status](#event-status) |
 | qualification criteria | Details what a competitor has to do to get to the next round. | [Qualification Criteria](#qualification-criteria) |
 | start list | List of competitors qualified to take part in the round and/or heat. | **[Start List](#start-list)** |
-| results | List with the results after the celebration of the round.  | **[Results](#results)** |
+| results | List with the results after the celebration of the round.  | **[Results List](#results-lists)** |
 | heat(s) | Heat that is part of a round. | **[Competition Round](#competition-rounds)** |
 
 
@@ -1085,7 +1085,7 @@ In either a track or field  event, if an athlete makes an immediate oral protest
 _Example of start list of Final round in 100m Women event:_
 ![Example of start list](images/example_start_list.png)
 
-Each entry of the start list may include the following properties:
+Each *Entry* of the [Start List](#start-lists) may include the following properties:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
@@ -1132,9 +1132,9 @@ _Results of a timed competition for National teams:_
 
 _Results of a field competition:_
 
-![Example of results for dicus throw competition](images/results_discus.png)
+![Example of results for discus throw competition](images/results_discus.png)
 
-Each entry of the results may include the following properties:
+Each entry of the results list may include the following properties:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
