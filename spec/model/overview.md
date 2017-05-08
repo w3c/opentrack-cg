@@ -1,11 +1,13 @@
 # OpenTrack Abstract Model 
 
 **Latest published version:**
-    https://w3c.github.io/opentrack-cg/spec/model/overview
+  * https://w3c.github.io/opentrack-cg/spec/model/overview
+
 **Latest editor's draft:**
-    https://github.com/w3c/opentrack-cg/blob/master/spec/model/overview.md
+  * https://github.com/w3c/opentrack-cg/blob/master/spec/model/overview.md
+
 **Participate:**
-    https://www.w3.org/community/opentrack/
+  * https://www.w3.org/community/opentrack/
     
 ## Introduction
 
