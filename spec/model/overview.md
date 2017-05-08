@@ -1,8 +1,15 @@
 # OpenTrack Abstract Model 
 
+**Latest published version:**
+    https://w3c.github.io/opentrack-cg/spec/model/overview
+**Latest editor's draft:**
+    https://github.com/w3c/opentrack-cg/blob/master/spec/model/overview.md
+**Participate:**
+    https://www.w3.org/community/opentrack/
+    
 ## Introduction
 
-This section describes the conceptual model for OpenTrack. As described in [the charter](https://w3c.github.io/opentrack-cg/charter.html),  this model describes data related to Athletics competitions including: Track and Field; Road Running; Race Walking; Cross-Country Running; Mountain Running; and trail Running disciplines.
+This section describes the conceptual model for OpenTrack. As described in [the charter](https://w3c.github.io/opentrack-cg/charter.html), this model describes data related to Athletics competitions including: Track and Field; Road Running; Race Walking; Cross-Country Running; Mountain Running; and trail Running disciplines.
 
 This model will be focus on Athletics competitions, having into account: events; athletes and teams; results; performances; management of start lists; results; and facilities. 
 
