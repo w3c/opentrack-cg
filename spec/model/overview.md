@@ -9,6 +9,9 @@
 **Participate:**
   * https://www.w3.org/community/opentrack/
     
+
+<mark>Please, note that this is a draft in development.</mark>
+
 ## Introduction
 
 This section describes the conceptual model for OpenTrack. As described in [the charter](https://w3c.github.io/opentrack-cg/charter.html), this model describes data related to Athletics competitions including: Track and Field; Road Running; Race Walking; Cross-Country Running; Mountain Running; and trail Running disciplines.
