@@ -26,6 +26,7 @@ This is a work in progress. No section should be considered final, and the absen
 * [Overview of the model](#overview-of-the-model)
 * [Schedule, Venues of Events](#schedule,-venues-of-events)
   * [Athletics Competitions](#athletics-competitions)
+    * [Recurring Competitions](#recurring-competitions)
   * [Athletics Events](#athletics-events)
   * [Category](#category)
   * [Venues](#venues)
@@ -99,7 +100,7 @@ The UML diagram represents three main aspects of Athletics:
 
 **Schedule and venues of Athletics events:**
 
-* **[Athletics Competitions](#athletics-competitions)**. Organized occasion where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fundraising road races, etc.). Athletics events may include one or several [Athletics Events](#athletics-events) (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women).
+* **[Athletics Competitions](#athletics-competitions)**. Organized occasion where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These competions can be organized periodically ([Recurring Competitions](#recurring-competitions)), such as the Summer Olympic Games. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fundraising road races, etc.). Athletics events may include one or several [Athletics Events](#athletics-events) (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women).
 
 * **[Athletics Events](#athletics-events)**. Competition events corresponding to specific disciplines and categories where competitors take part (e.g., 100m Men). Events may be composed of several sub-events (e.g., Combined events such as Decathlon).
 
@@ -133,7 +134,7 @@ The UML diagram represents three main aspects of Athletics:
 
 ### Athletics Competitions
 
-Events where Athletics competitions are planed and held. These competitions take place at a specific location during a concrete period of time. Athletics events may include one or several [Athletics Events](#athletics-events) of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fundraising road races or school races are also considered Athletics competitions.
+Events where Athletics competitions are planed and held. These competitions, that can be part of a [Recurring Competition](#recurring-competitions), take place at a specific location during a concrete period of time. Athletics events may include one or several [Athletics Events](#athletics-events) of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fundraising road races or school races are also considered Athletics competitions.
 
 _Examples of Athletics competitions are: [IAAF World Championships London 2017](http://www.iaafworldchampionships.com), [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/), [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/), [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx), and [Summer Olympic Games Rio 2016](https://www.olympic.org/rio-2016/athletics)._ 
 
@@ -156,6 +157,7 @@ Competitions may be described by the following attributes:
 | contributor(s) | Person(s) or organization(s) that collaborates in the organization of the event. | [Person](#persons) or [Organization](#organizations) |
 | sponsor(s) | Person(s) or organization(s) that sponsors the event. | [Person](#persons) or [Organization](#organizations) |
 | attendee(s) | Person(s) who attends the event. | [Person](#persons) |
+| recurring competition | Recurring competition related to this. | [Recurring Competition](#recurring-competitions) |
 | event(s) | Competition events that are part of the main event. | **[Athletics Event](#athletics-events)** |
 
 
@@ -173,6 +175,7 @@ Example:
     "endDate" : "2016-06-10",    
     "status" : "status:completed",
     "organizer" : "http://example.com/federation:EA" ,
+    "recurringCompetition" : "http://example.com/competition:EuroChamps",        
     "event" :     // List of events within the overall competition
         [
            "http://example.com/event:EURO2016_100_metres_Men",
@@ -195,6 +198,20 @@ Example:
 ```
 
 [More use cases and examples](./examples).
+
+### Recurring Competitions
+
+Athletics competitions that are held periodically, such as the Summer Olympic Games.
+
+Recurring Competitions may be described by the following attributes:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify the recurring competition. | Text |
+| name | Descriptive name of the recurring competition. | Text |
+| alternate name | An alias to name the recurring competition. | Text |
+| description | About the recurring competition. | Text |
+
 
 ### Athletics Events
 
@@ -233,7 +250,7 @@ Example:
     "endDate" : "2016-07-09",
     "location" : "http://example.com/venue:0001",  
     "discipline" : "discipline:heptathlon",
-    "category" : "http://example.com/category:SeniorWomen"
+    "category" : "http://example.com/category:SeniorWomen",
     "subEvent" :       // Hepthatlon is composed of seven subEvents: 
         [
             {
