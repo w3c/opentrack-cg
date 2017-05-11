@@ -1450,11 +1450,18 @@ Athletics events may have a property to represent the states that they may be in
 | Code | Record Type |
 | ---- | ----------- |
 | `WR` | World Record |
+| `PR` | Paralympic Record |
+| `AF` | African Record |
+| `AS` | Asian Record |
+| `ER` | European Record |
+| `AM` | American Record |
+| `OC` | Oceania Record |
+| `AR` | Area (or continental) Record |
+| `NR` | National Record (for a specific country) |
+| `RR` | Regional Record |
 | `OR` | Olympic Record |
 | `CR` | Championship Record |
 | `GR` | Games Record |
-| `AR` | Area (or continental) Record |
-| `NR` | National Record (for a specific country) |
 | `MR` | Meet Record |
 | `DLR` | Diamond League Record |
 | `WJR` | World Junior Record |
@@ -1476,7 +1483,7 @@ The concept of 'best' refers to athlete's personal achievements, without setting
 | `WYB` | World Youth Best (the best mark achieved by an athlete in the youth age category) |
 | `WB` | World Best (the best mark recorded for a non-IAAF world record event) |
 | `PB` | Personal Best (the best mark achieved by an athlete on a personal level) |
-| `SB` | Season's Best (the best mark achieved by an athlete on a personal level within a given season) |
+| `SB` | Seasonal Best (the best mark achieved by an athlete on a personal level within a given season) |
 | `WL` | World Leader (the best mark achieved worldwide within a given season) |
 
 
