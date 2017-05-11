@@ -70,6 +70,7 @@ This is a work in progress. No section should be considered final, and the absen
     * [Records](#records)
     * [Bests](#bests)
     * [Disciplines](#disciplines)
+    * [Roles](#roles)
     
     
 ## Background and References
@@ -1493,3 +1494,15 @@ We can identify several categories for Athletics events, depending on gender, ag
 
 See a [taxonomy of disciplines](./disciplines.md).
 
+### Roles
+
+Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/common_codes/common_codes.htm). 
+
+| Code | Role |
+| ---- | ---- |
+| A | Athlete |
+| C | Coach |
+| G | Guide (Paralympics only) |
+| J | Judge |
+| S | Technical Offical (not Judge) |
+| T | Team Official (not Coach) |
