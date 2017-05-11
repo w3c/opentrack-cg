@@ -38,5 +38,6 @@ If you have never used Github, please have a look at [this guide on how to use G
 
 ## References
 
+* IOC [ODF](http://odf.olympictech.org/2016-Rio/rio_2016_OG.htm)
 * IPTC [SportsML](https://iptc.org/standards/sportsml-g2/). Vocabularies for sharing content (e.g., news) about sports in general. There are some specific vocabularies for concrete sports. Athletics is missing.
 * BBC [Sport Ontology](http://www.bbc.co.uk/ontologies/sport#). Lightweight ontology for publishing data about competitive sports events. 
