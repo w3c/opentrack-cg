@@ -104,9 +104,7 @@ The UML diagram represents three main aspects of Athletics:
 
 **Schedule and venues of Athletics events:**
 
-* **[Athletics Competitions](#athletics-competitions)**. Organized occasion where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These competions can be organized periodically ([Recurring Competitions](#recurring-competitions)), such as the Summer Olympic Games. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fundraising road races, etc.). Athletics events may include one or several [Athletics Events](#athletics-events) (e.g., [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women).
-
-* **[Athletics Events](#athletics-events)**. Competition events corresponding to specific disciplines and categories where competitors take part (e.g., 100m Men). Events may be composed of several sub-events (e.g., Combined events such as Decathlon).
+* **[Athletics Competitions](#athletics-competitions)**. Organized occasion where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These competions can be organized periodically ([Recurring Competitions](#recurring-competitions)), such as the Summer Olympic Games. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fundraising road races, etc.). Athletics competitions may divided in several [Competitions](#athletics-competitions) ([Divisional Competition](#divisional-competitions) such as [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women); they may include several stages ([Multi Stage Competitions](#multi-stage-competitions) like the Diamond League); also competitions may be composed of several disciplines ([Multi Discipline Competitions](#multidiscipline-competitions) are combined events such as Decathlon).
 
 * **[Venues](#venues)**. Location where events and competitions are held.
 
@@ -138,7 +136,7 @@ The UML diagram represents three main aspects of Athletics:
 
 ### Athletics Competitions
 
-Events where Athletics competitions are planed and held. These competitions, that can be part of a [Recurring Competition](#recurring-competitions), take place at a specific location during a concrete period of time. Athletics events may include one or several [Athletics Events](#athletics-events) of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fundraising road races or school races are also considered Athletics competitions.
+Events where Athletics competitions are planed and held. These competitions, that can be part of a [Recurring Competition](#recurring-competitions), take place at a specific location during a concrete period of time. Athletics events may include one or several [Athletics Competitions](#athletics-competitions) of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fundraising road races or school races are also considered Athletics competitions.
 
 _Examples of Athletics competitions are: [IAAF World Championships London 2017](http://www.iaafworldchampionships.com), [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/), [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/), [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx), and [Summer Olympic Games Rio 2016](https://www.olympic.org/rio-2016/athletics)._ 
 
@@ -162,46 +160,72 @@ Competitions may be described by the following attributes:
 | sponsor(s) | Person(s) or organization(s) that sponsors the event. | [Person](#persons) or [Organization](#organizations) |
 | attendee(s) | Person(s) who attends the event. | [Person](#persons) |
 | recurring competition | Recurring competition related to this. | [Recurring Competition](#recurring-competitions) |
-| event(s) | Competition events that are part of the main event. | **[Athletics Event](#athletics-events)** |
+| discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
+| category | The specific category for this event competition. | [Category](#category) |
+| entry requirements | Requirements to take part in the event.  | Text |
+| results | List with the results after the celebration of all rounds of the event.  | **[Results List](#results-lists)** |
 
 
-Example:
-```
-{
-    "@id" : "http://example.com/competition:0001",
-    "@type" :  "Competition",
-    "name" : "2016 European Athletics Championships",
-    "alternateName" : "Amsterdam Euro 2016",        
-    "url" : "http://www.european-athletics.org/competitions/european-athletics-championships/2016/events/",
-    "image" : "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Amsterdam2016logo.png",
-    "location" : "http://example.com/venue:0001",
-    "startDate" : "2016-06-06",  
-    "endDate" : "2016-06-10",    
-    "status" : "status:completed",
-    "organizer" : "http://example.com/federation:EA" ,
-    "recurringCompetition" : "http://example.com/competition:EuroChamps",        
-    "event" :     // List of events within the overall competition
-        [
-           "http://example.com/event:EURO2016_100_metres_Men",
-           "http://example.com/event:EURO2016_100_metres_Women",
-           "http://example.com/event:EURO2016_200_metres_Men",
-           "http://example.com/event:EURO2016_200_metres_Women",
-           "http://example.com/event:EURO2016_400_metres_Men",
-           "http://example.com/event:EURO2016_400_metres_Women",
-            // …
-           "http://example.com/event:EURO2016_400x100_metres_Men",
-           "http://example.com/event:EURO2016_400x100_metres_Women",
-           "http://example.com/event:EURO2016_LJ_Men",
-           "http://example.com/event:EURO2016_LJ_Women",
-           "http://example.com/event:EURO2016_Marathon_Men",
-           "http://example.com/event:EURO2016_Marathon_Women",
-           "http://example.com/event:EURO2016_Heptathlon",
-           "http://example.com/event:EURO2016_Decathlon"
-        ]
-}
-```
 
-[More use cases and examples](./examples).
+
+Depending on the kind of competition and discipline, competitions may be of different types.
+
+#### Multi Stage Competitions
+
+A multi stage competition is an athletic event organised as a set of stages. 
+
+_Examples of multi stage competition are: The Diamond League, and the Surrey Cross Country League._
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| first stage | First stage of the multi stage competition. | [Athletics Competition](#athletics-competitions) |
+| last stage | Last stage of the multi stage competition. | [Athletics Competition](#athletics-competitions) |
+| stage | Stage of the multi stage competition. | [Athletics Competition](#athletics-competitions) |
+
+
+#### Multi Round Competitions
+
+A multi round competition is an athletic event organised as a sequence of qualification rounds.
+
+_Examples of multi round competition are field events._
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| first round | First round in the multi round competition. | [Competition Rounds](#competition-rounds) |
+| last round | Last round in the multi round competition. | [Competition Rounds](#competition-rounds) |
+| round | Round in the multi round competition. | [Competition Rounds](#competition-rounds) |
+
+
+#### Divisional Competitions
+
+A Divisional Competition is a competition that is divided into a number of competitions. 
+
+_Examples of multi stage competition are: London Summer Olympic Games 2012, and European Championships 2016._
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| division | Division of the competition. | [Athletics Competition](#athletics-competitions) |
+
+
+#### Multidiscipline Competitions
+
+A Multidiscipline Competition is a competition that incorporates a number of different event disciplines.
+
+_Examples of multi stage competition are: London Summer Olympic Games 2012, and European Championships 2016._
+
+
+#### Timed Competitions
+
+A Timed Competition is a competition where performances are measured as time. Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race.
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| start point | Place where the competition starts.  | [Place] |
+| finish point | Place where the competition finishes.  | [Place] |
+| course | Track of the competition.  | [GeoShape] |
+| timekeeping | Type of timekeeping used to control the competition.  | [Timekeeping](#timekeeping) |
+
+
 
 ### Recurring Competitions
 
@@ -216,135 +240,6 @@ Recurring Competitions may be described by the following attributes:
 | alternate name | An alias to name the recurring competition. | Text |
 | description | About the recurring competition. | Text |
 
-
-### Athletics Events
-
-Athletics events are those events that correspond to specific disciplines where competitors take part (e.g., 100m Men). These events may be part or broader Athletics competitions (e.g., 110m Hurdles at Summer Olympic Games). Athletics events are composed of one or more rounds, at least the final. 
-
-_Examples of Athletics events are: **110m Hurdles Men** at Summer Olympic Games, **Senior Women Race** at Cross Country World Championships, and **Javelin Throw Men** at European Throwing Cup._   
-
-Athletics events may be described by the following attributes: 
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the event. | Text |
-| name | Descriptive name of the event (e.g., `1-1-2-4 Medley Relay Men`). | Text |
-| description | Descriptive name of the event (e.g., `Medley Relay 800 meters Men: two times 100 meters legs, a 200 meters leg and a 400 meters leg`). | Text |
-| start date | Date and time when the event starts. | [Date and Time](#date,-time-and-periods) |
-| end date | Date and time when the event ends. | [Date and Time](#date,-time-and-periods) |
-| location | Venue where this competition is held (for instance, Main Outdoor Track at Berlin Olympic Stadium). | [Venue](#venues) or Text |
-| round(s) | Round(s) performed as part of the competition (preliminary heats, semifinals, final, mass start waves in road races, etc.).  | **[Competition Round](#competition-rounds)** |
-| sub event(s) | Sub-events included as part of the main competition. For instance, in case of Combined Events such as Pentathlon, Heptathlon and Decathlon that are composed of several independent events. | **[Athletics Event](#athletics-events)** |
-| status | Status of the event (scheduled, completed, etc.) | [Event Status](#event-status) |
-| discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
-| category | The specific category for this event competition. | [Category](#category) |
-| timekeeping | Type of timekeeping used to control the competition.  | [Timekeeping](#timekeeping) |
-| entryRequirements | Requirements to take part in the event.  | Text |
-| results | List with the results after the celebration of all rounds of the event.  | **[Results List](#results-lists)** |
-
-Example:
-```
-{
-    "@id" : "http://example.com/event:EURO2016_Heptathlon",
-    "@type" : "Event",
-    "name" : "Heptathlon - European Championships 2016",
-    "description" : "Women\'s heptathlon at the 2016 European Athletics Championships",
-    "url" : "http://www.european-athletics.org/link_to_heptathlon_2016",
-    "startDate" : "2016-07-08",
-    "endDate" : "2016-07-09",
-    "location" : "http://example.com/venue:0001",  
-    "discipline" : "discipline:heptathlon",
-    "category" : "http://example.com/category:SeniorWomen",
-    "subEvent" :       // Hepthatlon is composed of seven subEvents: 
-        [
-            {
-                "@id" : "http://example.com/event:EURO2016_Heptathlon_100mH",
-                "@type" : "Event",
-                "name" : "Heptathlon - 100m Hurdles",
-                "description" : "100 Hurdles at heptathlon as part of the 2016 European Athletics Championships",
-                "url" : "http://www.european-athletics.org/link_to_heptathlon_2016_100",
-                "startDate" : "2016-07-08",
-                "discipline" : "discipline:100mH",
-                "round" :       // Split in three heats (1, 2 and 3)
-                    [
-                       "http://example.com/round:EURO2016_Heptathlon_100mH_Heat1",
-                       "http://example.com/round:EURO2016_Heptathlon_100mH_Heat2",
-                       "http://example.com/round:EURO2016_Heptathlon_100mH_Heat3"
-                    ],
-                "result" :       // Results of the overall event after rounds
-                    [
-                       "http://example.com/result:00001",
-                       "http://example.com/result:00002"
-                        // … and so on, including results for all athletes
-                    ]
-            },
-            {
-                "@id" : "http://example.com/event:EURO2016_Heptathlon_HJ",
-                "@type" : "Event",
-                "name" : "Heptathlon - High Jump",
-                "description" : "High Jump at heptathlon as part of the 2016 European Athletics Championships",
-                "startDate" : "2016-07-08",
-                "discipline" : "discipline:HJ",
-                "round" :                                    // Grouped in: Group A and Group B
-                    [
-                       "http://example.com/round:EURO2016_Heptathlon_HJ_A",
-                       "http://example.com/round:EURO2016_Heptathlon_HJ_B"
-                    ],
-                "result" :       
-                    [
-                       "http://example.com/result:00101",
-                       "http://example.com/result:00102"
-                        // … and so on, including results for all athletes
-                    ]
-            },
-            {
-                "@id" : "http://example.com/event:EURO2016_Heptathlon_SP",
-                "@type" : "Event",
-                "name" : "Heptathlon - Shot Put",
-                "description" : "Shot Put at heptathlon as part of the 2016 European Athletics Championships",
-                "startDate" : "2016-07-09",
-                "discipline" : "discipline:SP",
-                // Information about rounds                
-                "round" :                                    // Grouped in: Group A and Group B
-                    [
-                       "http://example.com/round:EURO2016_Heptathlon_SP_A",
-                       "http://example.com/round:EURO2016_Heptathlon_SP_B"
-                    ],
-                "results" :         // Final results for Shot Put
-                    [
-                       "http://example.com/result:00201",
-                       "http://example.com/result:00202"
-                        // … and so on, including results for all athletes
-                    ]                
-            }
-            // …
-            // The rest of disciplines (sub-events for heptathlon) will be defined in the same way
-            // …
-        ],
-        // The final results for heptathlon
-        "result" : 
-            [
-               "http://example.com/result:01201",
-               "http://example.com/result:01202",
-               "http://example.com/result:01203"
-                // … and so on, including results for all athletes
-            ]
-}
-
-```
-
-[More use cases and examples](./examples).
-
-
-### Timed Events
-
-Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race.
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| start point | Place where the timed event starts. | Place |
-| finish point | Place where the timed event finishes. | Place |
-| course | Track (polygon) where the timed competition will be held. | GeoShape |
 
 
 
