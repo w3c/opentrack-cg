@@ -168,7 +168,7 @@ Competitions may be described by the following attributes:
 | category | The specific category for this event competition. | [Category](#category) |
 | entry requirements | Requirements to take part in the event.  | Text |
 | results | List with the results after the celebration of all rounds of the event.  | **[Results List](#results-lists)** |
-
+| start list | List of competitors qualified to take part in competition. | **[Start List](#start-list)** |
 
 Depending on the kind of competition and discipline, competitions may be of different types.
 
