@@ -170,8 +170,6 @@ Competitions may be described by the following attributes:
 | results | List with the results after the celebration of all rounds of the event.  | **[Results List](#results-lists)** |
 
 
-
-
 Depending on the kind of competition and discipline, competitions may be of different types.
 
 #### Multi Stage Competitions
@@ -231,7 +229,7 @@ A Timed Competition is a competition where performances are measured as time. Ti
 
 
 
-### Recurring Competitions
+#### Recurring Competitions
 
 Athletics competitions that are held periodically, such as the Summer Olympic Games.
 
@@ -245,6 +243,13 @@ Recurring Competitions may be described by the following attributes:
 | description | About the recurring competition. | Text |
 
 
+_Example of competition model: 2016 European Championships, 100m Men._
+
+![Model of a 100m competition within the European Championships](images/instances_competition_european_champs_100.png)
+
+_Example of competition model: 2016 European Championships Heptathlon (simplified with only five combined events)._
+
+![Model of a heptathlon competition within the European Championships](images/instances_competition_european_champs_heptathlon.png)
 
 
 ### Category
