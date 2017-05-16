@@ -21,6 +21,11 @@ Disciplines are described by specific features (i.e., throws disciplines, such a
 
 ![Taxonomy for Athletics Disciplines](images/disciplines.png)
 
+
+_Example of an instance of Master Female indoor Pentathlon using the current model:_
+
+![Example of model of indoor pentathlon](images/instances_disciplines_pentathlon.png)
+
 In brackets, the code [used by Athlib](http://opentrack.run/athlib/build/html/eventcodes.html).
 
 * Timed Disciplines
