@@ -81,10 +81,10 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="30.0" width="137.44295612009233" x="411.27852193995386" y="1365.0"/>
+          <y:Geometry height="30.0" width="137.44295612009233" x="411.27852193995386" y="1275.0"/>
           <y:Fill color="#CCFFCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="46.54833984375" x="45.44730813817117" y="3.0">Jumps<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="115.8076171875" x="10.817669466296167" y="3.0">Horizonal Jumps<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -102,7 +102,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="50.0" width="137.44295612009228" x="411.27852193995386" y="1067.5"/>
+          <y:Geometry height="50.0" width="137.44295612009228" x="411.27852193995386" y="1052.5"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="54.2861328125" x="41.57841165379614" y="3.0">Throws<y:LabelModel>
@@ -124,7 +124,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="50.0" width="151.44295612009233" x="711.7785219399539" y="1005.0"/>
+          <y:Geometry height="50.0" width="151.44295612009233" x="711.7785219399539" y="990.0"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="95.9140625" x="27.764446810046167" y="3.0">Discus Throw<y:LabelModel>
@@ -146,7 +146,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="30.0" width="151.44295612009233" x="711.7785219399537" y="961.75"/>
+          <y:Geometry height="30.0" width="151.44295612009233" x="711.7785219399537" y="946.75"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="59.59912109375" x="45.92191751317117" y="3.0">Shot Put<y:LabelModel>
@@ -167,7 +167,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="50.0" width="151.44295612009233" x="711.7785219399539" y="1067.5"/>
+          <y:Geometry height="50.0" width="151.44295612009233" x="711.7785219399539" y="1052.5"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="107.74609375" x="21.848431185046167" y="3.0">Hammer Throw<y:LabelModel>
@@ -189,7 +189,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="50.0" width="151.44295612009233" x="711.7785219399539" y="1130.0"/>
+          <y:Geometry height="50.0" width="151.44295612009233" x="711.7785219399539" y="1115.0"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="96.625" x="27.408978060046167" y="3.0">Javelin Throw<y:LabelModel>
@@ -211,7 +211,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="30.0" width="151.44295612009233" x="711.7785219399539" y="1192.5"/>
+          <y:Geometry height="30.0" width="151.44295612009233" x="711.7785219399539" y="1177.5"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="97.1962890625" x="27.123333528796167" y="3.0">Weight Throw<y:LabelModel>
@@ -232,7 +232,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="50.0" width="151.44295612009233" x="711.7785219399537" y="1257.25"/>
+          <y:Geometry height="50.0" width="151.44295612009233" x="711.7785219399537" y="1237.5"/>
           <y:Fill color="#CCFFCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="76.45849609375" x="37.49223001317117" y="3.0">Long Jump<y:LabelModel>
@@ -253,7 +253,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="50.0" width="151.44295612009233" x="711.7785219399539" y="1382.25"/>
+          <y:Geometry height="50.0" width="151.44295612009233" x="711.7785219399539" y="1300.0"/>
           <y:Fill color="#CCFFCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="83.04736328125" x="34.19779641942117" y="3.0">Triple Jump<y:LabelModel>
@@ -274,7 +274,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="50.0" width="151.44295612009233" x="711.7785219399539" y="1319.75"/>
+          <y:Geometry height="50.0" width="151.44295612009233" x="711.7785219399539" y="1380.0"/>
           <y:Fill color="#CCFFCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="74.966796875" x="38.23807962254617" y="3.0">High Jump<y:LabelModel>
@@ -295,7 +295,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="30.0" width="151.44295612009233" x="711.7785219399539" y="1444.75"/>
+          <y:Geometry height="30.0" width="151.44295612009233" x="711.7785219399539" y="1442.75"/>
           <y:Fill color="#CCFFCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="71.16455078125" x="40.13920266942117" y="3.0">Pole Vault<y:LabelModel>
@@ -405,7 +405,7 @@ descent: Distance</y:AttributeLabel>
           <y:Geometry height="63.0" width="219.41103027045284" x="370.98912956096297" y="678.5"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="122.4853515625" x="48.46283935397642" y="3.0">Timed Discripline<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="42.49853515625" x="88.45624755710142" y="3.0">Races<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -744,6 +744,27 @@ competitionType: CompetitionType
           <y:Fill color="#CCCCCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="113.96044921875" x="18.741253450671167" y="3.0">OutdoorStadium<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel/>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n35">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="30.0" width="137.44295612009233" x="415.02852193995386" y="1413.5"/>
+          <y:Fill color="#CCFFCC" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="2.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="101.728515625" x="17.857220247546167" y="3.0">Vertical Jumps<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1103,8 +1124,8 @@ competitionType: CompetitionType
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="2.0999999999999996" tx="68.68910219399538" ty="0.0">
-            <y:Point x="630.0" y="978.85"/>
-            <y:Point x="630.0" y="1092.5"/>
+            <y:Point x="630.0" y="963.85"/>
+            <y:Point x="630.0" y="1077.5"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="white_delta"/>
@@ -1117,8 +1138,8 @@ competitionType: CompetitionType
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-4.0" tx="68.68910219399538" ty="0.0">
-            <y:Point x="630.0" y="1026.0"/>
-            <y:Point x="630.0" y="1092.5"/>
+            <y:Point x="630.0" y="1011.0"/>
+            <y:Point x="630.0" y="1077.5"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="white_delta"/>
@@ -1142,8 +1163,8 @@ competitionType: CompetitionType
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-9.5" tx="68.68910219399538" ty="0.0">
-            <y:Point x="630.0" y="1145.5"/>
-            <y:Point x="630.0" y="1092.5"/>
+            <y:Point x="630.0" y="1130.5"/>
+            <y:Point x="630.0" y="1077.5"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="white_delta"/>
@@ -1156,8 +1177,8 @@ competitionType: CompetitionType
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="68.68910219399538" ty="0.0">
-            <y:Point x="630.0" y="1207.5"/>
-            <y:Point x="630.0" y="1092.5"/>
+            <y:Point x="630.0" y="1192.5"/>
+            <y:Point x="630.0" y="1077.5"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="white_delta"/>
@@ -1207,7 +1228,7 @@ competitionType: CompetitionType
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="4.5" tx="56.31762998884278" ty="0.0">
-            <y:Point x="330.0" y="1097.0"/>
+            <y:Point x="330.0" y="1082.0"/>
             <y:Point x="330.0" y="1140.0"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -1221,7 +1242,7 @@ competitionType: CompetitionType
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="2.4" tx="38.5997239249372" ty="0.0">
-            <y:Point x="330.0" y="1382.4"/>
+            <y:Point x="330.0" y="1292.4"/>
             <y:Point x="330.0" y="1140.0"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -1304,7 +1325,6 @@ competitionType: CompetitionType
     </edge>
     <edge id="e51" source="n29" target="n28">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1319,7 +1339,6 @@ competitionType: CompetitionType
     </edge>
     <edge id="e52" source="n30" target="n28">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1331,7 +1350,6 @@ competitionType: CompetitionType
     </edge>
     <edge id="e53" source="n31" target="n28">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="68.6891021939953" ty="0.0">
@@ -1373,7 +1391,6 @@ competitionType: CompetitionType
     </edge>
     <edge id="e57" source="n34" target="n32">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-8.0617919670442" tx="60.00000000000003" ty="-4.25">
@@ -1388,7 +1405,6 @@ competitionType: CompetitionType
     </edge>
     <edge id="e58" source="n33" target="n32">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-3.822605561276987" tx="60.00000000000003" ty="-4.25">
@@ -1403,12 +1419,11 @@ competitionType: CompetitionType
     </edge>
     <edge id="e59" source="n10" target="n3">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="7.33805355303798" tx="68.68910219399538" ty="0.0">
-            <y:Point x="630.0" y="1289.588053553038"/>
-            <y:Point x="630.0" y="1380.0"/>
+            <y:Point x="630.0" y="1269.838053553038"/>
+            <y:Point x="630.0" y="1290.0"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="white_delta"/>
@@ -1416,29 +1431,13 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e60" source="n12" target="n3">
+    <edge id="e60" source="n11" target="n3">
       <data key="d8"/>
-      <data key="d9"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="68.68910219399538" ty="0.0">
-            <y:Point x="630.0" y="1344.75"/>
-            <y:Point x="630.0" y="1380.0"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e61" source="n11" target="n3">
-      <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-7.908084449021544" tx="68.68910219399538" ty="0.0">
-            <y:Point x="630.0" y="1399.3419155509785"/>
-            <y:Point x="630.0" y="1380.0"/>
+            <y:Point x="630.0" y="1317.0919155509785"/>
+            <y:Point x="630.0" y="1290.0"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="white_delta"/>
@@ -1446,24 +1445,8 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e62" source="n13" target="n3">
+    <edge id="e61" source="n24" target="n15">
       <data key="d8"/>
-      <data key="d9"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="-4.836508753862063" tx="68.68910219399538" ty="0.0">
-            <y:Point x="630.0" y="1454.913491246138"/>
-            <y:Point x="630.0" y="1380.0"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e63" source="n24" target="n15">
-      <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="68.68910219399538" ty="0.0">
@@ -1476,9 +1459,8 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e64" source="n25" target="n15">
+    <edge id="e62" source="n25" target="n15">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="7.660144181256555" tx="68.68910219399538" ty="0.0">
@@ -1491,9 +1473,8 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e65" source="n26" target="n15">
+    <edge id="e63" source="n26" target="n15">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="68.68910219399538" ty="0.0">
@@ -1506,14 +1487,67 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e66" source="n27" target="n15">
+    <edge id="e64" source="n27" target="n15">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="68.68910219399538" ty="0.0">
             <y:Point x="630.0" y="1650.0"/>
             <y:Point x="630.0" y="1587.15"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="2.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e65" source="n35" target="n35">
+      <data key="d10">
+        <y:QuadCurveEdge straightness="0.1">
+          <y:Path sx="46.13469855779326" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+        </y:QuadCurveEdge>
+      </data>
+    </edge>
+    <edge id="e66" source="n12" target="n35">
+      <data key="d8"/>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="5.0" tx="68.68910219399538" ty="0.0">
+            <y:Point x="630.0" y="1410.0"/>
+            <y:Point x="630.0" y="1428.5"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="2.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e67" source="n13" target="n35">
+      <data key="d8"/>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="68.68910219399538" ty="0.0">
+            <y:Point x="630.0" y="1457.75"/>
+            <y:Point x="630.0" y="1428.5"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="2.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e68" source="n35" target="n23">
+      <data key="d8"/>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="78.75000000000006" ty="0.0">
+            <y:Point x="330.0" y="1428.5"/>
+            <y:Point x="330.0" y="1140.0"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="white_delta"/>
