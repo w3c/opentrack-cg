@@ -942,7 +942,7 @@ Federations will have the properties of [Organizations](#organizations), adding 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | spatial | Spatial coverage of the federation, usually one or more administrative areas (city, region, country, etc.) | [Territory and Country](#territories-and-countries) | 
-| memberOf | Higher-level federation(s) to which this federation is attached. | [Athletics Federation](#athletics-federations) | 
+| member of | Higher-level federation(s) to which this federation is attached. | [Athletics Federation](#athletics-federations) | 
 | member(s) | Lower level organization(s) attached to this federation. | [Organization](#organization) | 
 
 Example:
@@ -1096,7 +1096,7 @@ According to IAAF Rule 132.4, there are official standard abbreviations and symb
 | `NM` | No Mark |
 | `NH` | No Height |
 | `h` | Hand-timing |
-| `a` | automatic timing with no hundredths of a secondmeasured |
+| `a` | automatic timing with no hundredths of a second measured |
 | `A` | performance achieved at altitude |
 | `OT` | Oversized Track |
 
@@ -1207,7 +1207,7 @@ Athletics events may have a property to represent the states that they may be in
 | `=MR` | Equal Meet Record |
 | `DLR` | Diamond League Record |
 | `=DLR` | Equal Diamond League Record |
-| `#` | indicates a record has not been accepted. The same mark is also used to indicate some sort of irregularity with a result |
+| `#` | indicates a record has not been accepted. The same mark is also used to indicate some sort of irregularity with a result. |
 | `X` | indicates the athlete has been disqualified after the performance |
 | `ClubR` | Club Record |
 
@@ -1269,7 +1269,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `C` | Coach |
 | `G` | Guide (Paralympics only) |
 | `J` | Judge |
-| `S` | Technical Offical (not Judge) |
+| `S` | Technical Official (not Judge) |
 | `T` | Team Official (not Coach) |
 
 
@@ -1279,7 +1279,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | ---- | ------ |
 | `START_LIST` | Before competition, Start List	|
 | `LIVE` | For live updates during competition |
-| `INTERMEDIATE` | When competition is stopped, usued at pre-defined points |
+| `INTERMEDIATE` | When competition is stopped, used at pre-defined points |
 | `UNCONFIRMED` | When the unit is over but not yet unofficial or official.	Only used if other statuses do not come quickly.  |
 | `UNOFFICIAL` | Results of the competition released as soon as the event is over, not waiting any official decision of the International Federation. The correctness of data must be assured.  |
 | `OFFICIAL` | Results of the competition released as soon as the event is officially confirmed taking into account the resolution of the protests, etc.  |
