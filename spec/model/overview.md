@@ -1169,7 +1169,6 @@ Athletics events may have a property to represent the states that they may be in
 | `Getting Ready` | The start of the competition is imminent |
 | `Finished` | Competition is over and no more action will happen on the field of play (last competitor finished). |
 | `Cancelled` | Competition will not take place |
-| `Completed` | <mark>???</mark> |
 
 
 ### Records 
