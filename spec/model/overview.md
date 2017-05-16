@@ -1112,27 +1112,31 @@ NOTE: Competition is divided into men’s and women’s classifications, but the
 
 According to IAAF Rule 132.4, there are official standard abbreviations and symbols used in the preparation of start lists and results:
 
-| Issue/feature | Code |
+| Code | Issue/feature |
 | ------------- | ---- |
-| Did not start | `DNS` |
-| Did not finish | `DNF` |
-| No valid trial recorded | `NM` |
-| Disqualified | `DQ` |
-| valid trial in High Jump and Pole vault | `O` |
-| Failed trial in Field events | `X` |
-| Passed trial in Field events | `–` |
-| Retired from competition | `r` |
-| Qualified by place in track events | `Q` |
-| Qualified by time in track events | `q` |
-| Qualified by standard in field events | `Q` |
-| Qualified without standard in field events | `q` |
-| Advanced to next round by Referee | `qR` |
-| Advanced to next round by Jury of Appeal | `qJ` |
-| Bent knee (Race walking) | `>` |
-| loss of contact (Race walking) | `~` |
-| yellow Card | `yC` |
-| Second yellow Card | `yRC` |
-| Red Card | `RC` |
+| `DNS` | Did Not Start |
+| `DNF` | Did Not Finish |
+| `DQ` | Disqualified |
+| `R` | Retired from competition |
+| `Q` | Qualified by place (track) or standard (field) |
+| `q` | Qualified by performance (time in timed events and rank in field events) |
+| `qR` | Advanced to next round by Referee |
+| `qJ` | Advanced to next round by Jury of Appeal |
+| `>` | Bent knee (Race walking) |
+| `~` | loss of contact (Race walking) |
+| `yC` | yellow Card |
+| `yRC` | Second yellow Card |
+| `RC` | Red Card |
+| `Fn` | False Start |
+| `o` | Clearance (valid trial in Height Events) |
+| `-` | Pass (passed trial in field events) |
+| `x` | Failure (failed trial in field events) |
+| `NM` | No Mark |
+| `NH` | No Height |
+| `h` | Hand-timing |
+| `a` | automatic timing with no hundredths of a secondmeasured |
+| `A` | performance achieved at altitude |
+| `OT` | Oversized Track |
 
 
 ### Age Range
@@ -1191,45 +1195,76 @@ Territories may be local/regional. In this case, it should include the normalize
 
 Athletics events may have a property to represent the states that they may be in:
 
-* `Cancelled`
-* `Postponed`
-* `Rescheduled`
-* `Scheduled`
-* `Started`
-* `Finished`
-* `Completed`
+| Code | Status |
+| ---- | ------ |
+| `Unscheduled` | Competition is not confirmed. |
+| `Scheduled` | Competition is scheduled. |
+| `Postponed` | Competition will be postponed without being rescheduled yet. |
+| `Rescheduled` | Competition is rescheduled. |
+| `Scheduled Break` | Competition has a scheduled break. |
+| `Running` | Competition in progress. | 
+| `Interrupted` | Competition interrupted once in progress. | 
+| `Getting Ready` | The start of the competition is imminent |
+| `Finished` | Competition is over and no more action will happen on the field of play (last competitor finished). |
+| `Cancelled` | Competition will not take place |
+| `Completed` | <mark>???</mark> |
 
 
 ### Records 
 
 [Performances](#performances), if validated in competition [Results](#Results) can set records of different type:
 
-
 | Code | Record Type |
 | ---- | ----------- |
 | `WR` | World Record |
+| `=WR` | Equal World Record |
 | `PR` | Paralympic Record |
 | `AF` | African Record |
+| `=AF` | Equal African Record |
 | `AS` | Asian Record |
+| `=AS` | Equal Asian Record |
 | `ER` | European Record |
+| `=ER` | Equal European Record |
 | `AM` | American Record |
+| `=AM` | Equal American Record |
 | `OC` | Oceania Record |
+| `=OC` | Equal Oceania Record |
 | `AR` | Area (or continental) Record |
+| `=AR` | Equal Area (or continental) Record |
 | `NR` | National Record (for a specific country) |
+| `=NR` | Equal National Record |
 | `RR` | Regional Record |
+| `=RR` | Equal Regional Record |
 | `OR` | Olympic Record |
+| `=OR` | Equal Olympic Record |
 | `CR` | Championship Record |
+| `=CR` | Equal Championship Record |
 | `GR` | Games Record |
+| `=GR` | Equal Games Record |
 | `MR` | Meet Record |
+| `=MR` | Equal Meet Record |
 | `DLR` | Diamond League Record |
-| `WJR` | World Junior Record |
-| `AJR` | Area (or continental) Junior Record |
-| `NJR` | National Junior Record (for a specific country) |
+| `=DLR` | Equal Diamond League Record |
 | `#` | indicates a record has not been accepted. The same mark is also used to indicate some sort of irregularity with a result |
 | `X` | indicates the athlete has been disqualified after the performance |
 | `ClubR` | Club Record |
 
 Records will be described by the type of record and the age-range category.
+
+| Code | Record Type |
+| ---- | ----------- |
+| `AJR` | Area (or continental) Junior Record |
+| `=AJR` | Equal Area (or continental) Junior Record |
+| `EUR` | European U23 Record |
+| `=EUR` | Equal European U23 Record |
+| `WJR` | World Junior Record |
+| `=WJR` | Equal World Junior Record |
+| `EJR` | European Junior Record |
+| `=EJR` | Equal European Junior Record |
+| `NUR` | National U23 Record |
+| `=NUR` | Equal National U23 Record |
+| `NJR` | National Junior Record |
+| `=NJR` | Equal National Junior Record |
 
 
 ### Bests 
@@ -1239,10 +1274,21 @@ The concept of 'best' refers to athlete's personal achievements, without setting
 | Code | Best Type |
 | ---- | ----------- |
 | `WYB` | World Youth Best (the best mark achieved by an athlete in the youth age category) |
+| `=WYB` | Equal World Youth Best |
 | `WB` | World Best (the best mark recorded for a non-IAAF world record event) |
+| `=WB` | Equal World Best |
 | `PB` | Personal Best (the best mark achieved by an athlete on a personal level) |
+| `=PB` | Equal Personal Best |
 | `SB` | Seasonal Best (the best mark achieved by an athlete on a personal level within a given season) |
+| `=SB` | Equal Seasonal Best |
 | `WL` | World Leader (the best mark achieved worldwide within a given season) |
+| `=WL` | Equal World Lead |
+| `EL` | European Lead |
+| `=EL` | Equal European Lead |
+| `EB` | European Best |
+| `=EB` | Equal European Best |
+| `CB` | Championship Best Performance |
+| `=CB` | Equal Championship Best Performance |
 
 
 ### Disciplines
@@ -1257,9 +1303,43 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 
 | Code | Role |
 | ---- | ---- |
-| A | Athlete |
-| C | Coach |
-| G | Guide (Paralympics only) |
-| J | Judge |
-| S | Technical Offical (not Judge) |
-| T | Team Official (not Coach) |
+| `A` | Athlete |
+| `C` | Coach |
+| `G` | Guide (Paralympics only) |
+| `J` | Judge |
+| `S` | Technical Offical (not Judge) |
+| `T` | Team Official (not Coach) |
+
+
+### Result Statuses
+
+| Code | Status |
+| ---- | ------ |
+| `START_LIST` | Before competition, Start List	|
+| `LIVE` | For live updates during competition |
+| `INTERMEDIATE` | When competition is stopped, usued at pre-defined points |
+| `UNCONFIRMED` | When the unit is over but not yet unofficial or official.	Only used if other statuses do not come quickly.  |
+| `UNOFFICIAL` | Results of the competition released as soon as the event is over, not waiting any official decision of the International Federation. The correctness of data must be assured.  |
+| `OFFICIAL` | Results of the competition released as soon as the event is officially confirmed taking into account the resolution of the protests, etc.  |
+| `PARTIAL` | Incomplete list, Final Ranking. |
+| `PROTESTED` | After the competition is no longer LIVE and a protest has been lodged	After all decisions on the protest are made the ResultStatus will change to UNOFFICIAL or OFFICIAL as appropriate.  |
+
+
+### Wind Units
+
+| Code | Unit |
+| ---- | ---- |
+| `KMH` | Kilometres per hour |
+| `MPH` | Miles per hour |
+| `MS` | Metres per second |
+
+
+### Protest Statuses
+
+
+| Code | Unit |
+| ---- | ---- |
+| `CLS` | Closed | 
+| `OPN`	| Open | 
+| `PND` | Pending |  
+| `ROPN` | Re Open | 
