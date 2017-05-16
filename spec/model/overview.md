@@ -881,6 +881,14 @@ Teams may be described using the following attributes:
 | best(s) | Best performances of the team (e.g., relay competitions). | [Best](#bests) |  
 | athlete(s) | Athlete(s) affiliated to the team. | **[Athlete](#athletes)** |
 
+
+_Example of definition of a national team as competitor in a 4x100:_
+![Netherlands national team as 4x100 competitor](images/instances_national_team.png)
+
+_Example of definition of a club forming a team for Ekiden:_
+![Team of a club with several athletes](images/instances_club_team.png)
+
+
 Examples:
 ```
 {
