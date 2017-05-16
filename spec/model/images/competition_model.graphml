@@ -347,7 +347,7 @@ competitor: Competitor</y:AttributeLabel>
           <y:Geometry height="64.75" width="159.75" x="1348.4768960809104" y="197.37833466342033"/>
           <y:Fill color="#FF9999" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="130.4580078125" x="14.64599609375" y="3.0">TimedPerformance<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="121.84423828125" x="18.952880859375" y="3.0">TimePerformance<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -369,7 +369,7 @@ reactionTime: Duration</y:AttributeLabel>
           <y:Geometry height="52.5" width="159.75" x="1348.4768960809104" y="96.90529771191922"/>
           <y:Fill color="#FF9999" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="134.5205078125" x="12.61474609375" y="3.0">LengthPerformance<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="146.29541015625" x="6.727294921875" y="3.0">DistancePerformance<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -390,7 +390,7 @@ reactionTime: Duration</y:AttributeLabel>
           <y:Geometry height="52.5" width="159.75" x="1348.4768960809104" y="-3.567739239581897"/>
           <y:Fill color="#FF9999" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="156.2041015625" x="1.77294921875" y="3.0">CombinedPerformance<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="130.08349609375" x="14.833251953125" y="3.0">PointsPerformance<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -405,27 +405,6 @@ reactionTime: Duration</y:AttributeLabel>
       </data>
     </node>
     <node id="n16">
-      <data key="d4"/>
-      <data key="d6">
-        <y:UMLClassNode>
-          <y:Geometry height="52.5" width="159.75" x="1348.4768960809104" y="306.9052977119192"/>
-          <y:Fill color="#FF9999" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="132.7939453125" x="13.47802734375" y="3.0">HeightPerformance<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-            <y:AttributeLabel>height: Distance</y:AttributeLabel>
-            <y:MethodLabel/>
-          </y:UML>
-        </y:UMLClassNode>
-      </data>
-    </node>
-    <node id="n17">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -453,7 +432,7 @@ athlete: Athlete</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n18">
+    <node id="n17">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -480,7 +459,7 @@ competitor: Competitor</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n19">
+    <node id="n18">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -503,7 +482,7 @@ record: Record</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n20">
+    <node id="n19">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -525,7 +504,7 @@ lane: Number</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n21">
+    <node id="n20">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -546,7 +525,7 @@ lane: Number</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n22">
+    <node id="n21">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -567,7 +546,7 @@ lane: Number</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n23">
+    <node id="n22">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -589,7 +568,7 @@ increasingHeight: Text</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n24">
+    <node id="n23">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -615,7 +594,7 @@ athlete: Athlete</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n25">
+    <node id="n24">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -636,7 +615,7 @@ athlete: Athlete</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n26">
+    <node id="n25">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -660,7 +639,7 @@ athlete: Athlete</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n27">
+    <node id="n26">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -681,7 +660,7 @@ athlete: Athlete</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n28">
+    <node id="n27">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -702,7 +681,7 @@ athlete: Athlete</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n29">
+    <node id="n28">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -723,7 +702,7 @@ athlete: Athlete</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n30">
+    <node id="n29">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -744,7 +723,7 @@ athlete: Athlete</y:AttributeLabel>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n31">
+    <node id="n30">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -1042,22 +1021,13 @@ lastRound<y:LabelModel>
     <edge id="e20" source="n16" target="n16">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="53.62237762237762" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="standard"/>
-        </y:QuadCurveEdge>
-      </data>
-    </edge>
-    <edge id="e21" source="n17" target="n17">
-      <data key="d10">
-        <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="53.370629370629416" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e22" source="n17" target="n17">
+    <edge id="e21" source="n16" target="n16">
       <data key="d10">
         <y:BezierEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1069,7 +1039,7 @@ lastRound<y:LabelModel>
         </y:BezierEdge>
       </data>
     </edge>
-    <edge id="e23" source="n18" target="n18">
+    <edge id="e22" source="n17" target="n17">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="60.41958041958041" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1078,7 +1048,7 @@ lastRound<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e24" source="n19" target="n19">
+    <edge id="e23" source="n18" target="n18">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="53.62237762237762" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1087,7 +1057,7 @@ lastRound<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e25" source="n20" target="n20">
+    <edge id="e24" source="n19" target="n19">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="53.62237762237761" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1096,7 +1066,7 @@ lastRound<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e26" source="n20" target="n20">
+    <edge id="e25" source="n19" target="n19">
       <data key="d10">
         <y:BezierEdge>
           <y:Path sx="0.0" sy="25.866454965357974" tx="0.0" ty="0.0"/>
@@ -1105,26 +1075,26 @@ lastRound<y:LabelModel>
         </y:BezierEdge>
       </data>
     </edge>
-    <edge id="e27" source="n21" target="n21">
+    <edge id="e26" source="n20" target="n20">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="53.62237762237761" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
         </y:QuadCurveEdge>
+      </data>
+    </edge>
+    <edge id="e27" source="n20" target="n20">
+      <data key="d10">
+        <y:BezierEdge>
+          <y:Path sx="0.0" sy="20.972801323263223" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+        </y:BezierEdge>
       </data>
     </edge>
     <edge id="e28" source="n21" target="n21">
       <data key="d10">
-        <y:BezierEdge>
-          <y:Path sx="0.0" sy="20.972801323263223" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="standard"/>
-        </y:BezierEdge>
-      </data>
-    </edge>
-    <edge id="e29" source="n22" target="n22">
-      <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="53.62237762237761" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -1132,7 +1102,7 @@ lastRound<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e30" source="n22" target="n22">
+    <edge id="e29" source="n21" target="n21">
       <data key="d10">
         <y:BezierEdge>
           <y:Path sx="0.0" sy="20.972801323263223" tx="0.0" ty="0.0"/>
@@ -1141,7 +1111,7 @@ lastRound<y:LabelModel>
         </y:BezierEdge>
       </data>
     </edge>
-    <edge id="e31" source="n5" target="n7">
+    <edge id="e30" source="n5" target="n7">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.28974451501153453" sy="-137.348767748367" tx="0.0" ty="0.0"/>
@@ -1159,7 +1129,7 @@ lastRound<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e32" source="n21" target="n20">
+    <edge id="e31" source="n20" target="n19">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="14.789514773730275"/>
@@ -1177,7 +1147,7 @@ lastRound<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e33" source="n22" target="n19">
+    <edge id="e32" source="n21" target="n18">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-40.211433226545296" ty="31.429756421327426">
@@ -1197,7 +1167,7 @@ lastRound<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e34" source="n20" target="n18">
+    <edge id="e33" source="n19" target="n17">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1219,7 +1189,7 @@ lastRound<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e35" source="n18" target="n17">
+    <edge id="e34" source="n17" target="n16">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="11.10687838179524" sy="-10.995184721748728" tx="-17.076512768647262" ty="-20.46613633709478"/>
@@ -1237,7 +1207,7 @@ lastRound<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e36" source="n19" target="n12">
+    <edge id="e35" source="n18" target="n12">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-27.75864121365362" ty="-33.15529771191922"/>
@@ -1255,7 +1225,7 @@ lastRound<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e37" source="n17" target="n12">
+    <edge id="e36" source="n16" target="n12">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="19.0107706700378" sy="-3.276963048498857" tx="60.0" ty="-36.58800343856122">
@@ -1275,9 +1245,8 @@ lastRound<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e38" source="n19" target="n18">
+    <edge id="e37" source="n18" target="n17">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1290,8 +1259,7 @@ lastRound<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e39" source="n5" target="n21">
-      <data key="d9"/>
+    <edge id="e38" source="n5" target="n20">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-5.648874954015014" sy="54.10915286277685" tx="-60.0" ty="2.0711457060946827"/>
@@ -1309,8 +1277,7 @@ lastRound<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e40" source="n5" target="n22">
-      <data key="d9"/>
+    <edge id="e39" source="n5" target="n21">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="2.304917207805488" sy="119.72334471711858" tx="-57.8346417193427" ty="-7.877613067804958"/>
@@ -1328,7 +1295,7 @@ lastRound<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e41" source="n23" target="n23">
+    <edge id="e40" source="n22" target="n22">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="53.622377622377655" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1337,7 +1304,7 @@ lastRound<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e42" source="n23" target="n23">
+    <edge id="e41" source="n22" target="n22">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="0.0" sy="31.375" tx="0.0" ty="0.0"/>
@@ -1346,7 +1313,7 @@ lastRound<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e43" source="n24" target="n24">
+    <edge id="e42" source="n23" target="n23">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="60.41958041958044" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1355,7 +1322,7 @@ lastRound<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e44" source="n25" target="n25">
+    <edge id="e43" source="n24" target="n24">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="60.419580419580456" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1364,7 +1331,7 @@ lastRound<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e45" source="n25" target="n25">
+    <edge id="e44" source="n24" target="n24">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="4.5" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1373,7 +1340,7 @@ lastRound<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e46" source="n26" target="n26">
+    <edge id="e45" source="n25" target="n25">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="60.41958041958044" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1382,7 +1349,7 @@ lastRound<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e47" source="n24" target="n26">
+    <edge id="e46" source="n23" target="n25">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1403,7 +1370,7 @@ lastTrial<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e48" source="n27" target="n27">
+    <edge id="e47" source="n26" target="n26">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="48.00000000000003" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1412,7 +1379,7 @@ lastTrial<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e49" source="n27" target="n27">
+    <edge id="e48" source="n26" target="n26">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="0.0" sy="18.897683397683398" tx="0.0" ty="0.0"/>
@@ -1421,7 +1388,7 @@ lastTrial<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e50" source="n28" target="n28">
+    <edge id="e49" source="n27" target="n27">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="60.419580419580456" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1430,7 +1397,7 @@ lastTrial<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e51" source="n28" target="n28">
+    <edge id="e50" source="n27" target="n27">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="4.5" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1439,9 +1406,8 @@ lastTrial<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e52" source="n28" target="n24">
+    <edge id="e51" source="n27" target="n23">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1462,9 +1428,8 @@ lastTrial<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e53" source="n25" target="n24">
+    <edge id="e52" source="n24" target="n23">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1475,6 +1440,15 @@ lastTrial<y:LabelModel>
           <y:Arrows source="none" target="white_delta"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e53" source="n28" target="n28">
+      <data key="d10">
+        <y:QuadCurveEdge straightness="0.1">
+          <y:Path sx="36.92307692307694" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
+        </y:QuadCurveEdge>
       </data>
     </edge>
     <edge id="e54" source="n29" target="n29">
@@ -1489,22 +1463,13 @@ lastTrial<y:LabelModel>
     <edge id="e55" source="n30" target="n30">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="36.92307692307694" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="standard"/>
-        </y:QuadCurveEdge>
-      </data>
-    </edge>
-    <edge id="e56" source="n31" target="n31">
-      <data key="d10">
-        <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="53.622377622377655" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e57" source="n31" target="n31">
+    <edge id="e56" source="n30" target="n30">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="0.0" sy="18.897683397683394" tx="0.0" ty="0.0"/>
@@ -1513,9 +1478,8 @@ lastTrial<y:LabelModel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e58" source="n23" target="n31">
+    <edge id="e57" source="n22" target="n30">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="5.486553982300848" sy="-30.46875" tx="0.0" ty="0.0">
@@ -1528,9 +1492,8 @@ lastTrial<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e59" source="n27" target="n31">
+    <edge id="e58" source="n26" target="n30">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-7.197209875978842" sy="-0.2238179519595178" tx="0.0" ty="18.5">
@@ -1543,8 +1506,7 @@ lastTrial<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e60" source="n26" target="n26">
-      <data key="d9"/>
+    <edge id="e59" source="n25" target="n25">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="70.12042334096122" sy="46.485249661353464" tx="51.262261867635516" ty="28.123295371048293">
@@ -1567,9 +1529,8 @@ previousTrial<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e61" source="n29" target="n26">
+    <edge id="e60" source="n28" target="n25">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="12.0" ty="0.0">
@@ -1582,9 +1543,8 @@ previousTrial<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e62" source="n30" target="n26">
+    <edge id="e61" source="n29" target="n25">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="12.0" ty="42.31279620853082">
@@ -1597,9 +1557,8 @@ previousTrial<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e63" source="n31" target="n8">
+    <edge id="e62" source="n30" target="n8">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="-10.543636805943606" sy="-1.1420201237286847" tx="64.69013822667478" ty="13.966290970211162"/>
@@ -1617,9 +1576,8 @@ previousTrial<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e64" source="n24" target="n1">
+    <edge id="e63" source="n23" target="n1">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="5.313847614033193" ty="0.0">
@@ -1632,9 +1590,8 @@ previousTrial<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e65" source="n31" target="n1">
+    <edge id="e64" source="n30" target="n1">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="54.617499809353944" sy="0.0" tx="5.313847614033193" ty="50.69653295169633">
@@ -1655,24 +1612,8 @@ previousTrial<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e66" source="n16" target="n12">
+    <edge id="e65" source="n13" target="n12">
       <data key="d8"/>
-      <data key="d9"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="41.25" ty="52.75319747155501">
-            <y:Point x="1428.3518960809104" y="291.9457382067842"/>
-            <y:Point x="1560.0" y="291.9457382067842"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e67" source="n13" target="n12">
-      <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="41.25" ty="46.85776586599238">
@@ -1685,9 +1626,8 @@ previousTrial<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e68" source="n14" target="n12">
+    <edge id="e66" source="n14" target="n12">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="41.25" ty="29.99999999999997">
@@ -1700,9 +1640,8 @@ previousTrial<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e69" source="n15" target="n12">
+    <edge id="e67" source="n15" target="n12">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="41.25" ty="42.1429643489254">
@@ -1723,8 +1662,7 @@ previousTrial<y:LabelModel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e70" source="n26" target="n12">
-      <data key="d9"/>
+    <edge id="e68" source="n25" target="n12">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="29.966084450063363" sy="-0.3459897823886422" tx="-84.33625941845753" ty="26.844702288080754">
