@@ -21,60 +21,6 @@ This model will be focus on Athletics competitions, having into account: events;
 This document specifies the model in an abstract way, not the implementation of the final vocabulary.  
 
 This is a work in progress. No section should be considered final, and the absence of any content does not imply that such content is out of scope, or may not appear in the future. If you feel something should be covered, please [tell us](https://github.com/w3c/opentrack-cg/issues).
-
-
-## Contents
-
-* [Background and References](#background-and-references)
-* [Overview of the model](#overview-of-the-model)
-* [Schedule, Venues of Events](#schedule,-venues-of-events)
-  * [Athletics Competitions](#athletics-competitions)
-    * [Multi Stage Competitions](#multi-stage-competitions)  
-    * [Multi Round Competitions](#multi-round-competitions)  
-    * [Divisional Competitions](#divisional-competitions)  
-    * [Multidiscipline Competitions](#multidiscipline-competitions)  
-    * [Timed Competitions](#timed-competitions)  
-    * [Recurring Competitions](#recurring-competitions)
-  * [Category](#category)
-  * [Venues](#venues)
-  * [Postal Addresses](#postal-addresses)
-* [Competition Management](#competition-management)
-    * [Competition Rounds](#competition-rounds)
-        * [Timed Events Rounds](#timed-events-rounds)
-        * [Field Events Rounds](#field-events-rounds)
-    * [Trials Rounds](#trials-rounds)
-        * [Vertical Jumps Trials Rounds](#vertical-jumps-trials-rounds)
-    * [Field Trials](#field-trials)
-    * [Event Participation](#participation)
-        * [Start Lists](#start-lists)
-            * [Start Lists in Timed Events](#start-lists-in-timed-events)
-        * [Results](#results)
-    * [Performances](#performances)
-      * [Timed Performance](#timed-performance)
-      * [Combined Performance](#combined-performance)
-      * [Length Performance](#length-performance)
-      * [Height Performance](#height-performance)
-    * [Relays Legs](#relays-legs)
-* [Competitors and Affiliation](#competitors-and-affiliation)
-    * [Athletes](#athletes)
-    * [Clubs](#clubs)
-    * [Teams](#teams)
-    * [Athletics Federations](#athletics-federations)
-    * [Persons](#persons)
-    * [Organizations](#organizations)
-* [Classification schemas and data types](#classification-schemas-and-data-types)
-    * [Date, Time and Periods](#date-time-and-periods)
-    * [Distance](#distance)
-    * [Mass](#mass)
-    * [Gender](#gender)
-    * [Start Lists and Results](#start-lists-and-results)
-    * [Age Range](#age-range)
-    * [Territories and countries](#territories-and-countries)
-    * [Event Status](#event-status)
-    * [Records](#records)
-    * [Bests](#bests)
-    * [Disciplines](#disciplines)
-    * [Roles](#roles)
     
     
 ## Background and References
@@ -271,7 +217,7 @@ Categories will be described by these following properties:
 | name | Name of the category (i.e., `Under 23 Men`, `Teachers`) | Text |
 | alternate name | Alternate name of the category (i.e., `M35`, `W35`) | Text |
 | description | Description and notes about the category. | Text |
-| gender | Gender of athletes involved this category. In case of mixed competitions, more than a gender may be indicated. | [Gender](#gender) |
+| gender | Gender of athletes involved this category.  | [Competition Gender](#competition-gender) |
 | age range | Athletes' range of age to be eligible for this category.  | [Age Range](#age-range) or Text |
 | ruledBy | Federation that rules this specific category.  | [Federation](#federations) |
 
@@ -593,6 +539,7 @@ Each *Entry* of the [Start List](#start-lists) may include the following propert
 | startingOrder | Competitor's order in the start list. | Number |
 | lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
 | relays legs | List of consecutive legs in the case of a team relays event. | [Relays Legs](#relays-legs) |
+| in competition | Competition related to this start list. | [Athletics Competition](#athletics-competitions) |
 
 
 Example:
@@ -643,6 +590,8 @@ Each entry of the results list may include the following properties:
 | timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-time-and-periods) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
 | relays legs | List of consecutive legs in the case of a team relays event with individual results. | [Relays Legs](#relays-legs) |
+| status | Status of results. | [Result Status](#result-status) |
+| in competition | Competition related to the results. | [Athletics Competition](#athletics-competitions) |
 
 Example:
 ```
@@ -1102,11 +1051,21 @@ Measurements of the form `<Number> <Mass-unit-of-measure>` (e.g., `75.3 kg`).
 
 Enumeration of genders with two values: 
 
-- `Male`
-- `Female`
+| Code | Gender Type |
+| ---- | ----------- |
+| `Male` | Men and/or boys. |
+| `Female` | Women and/or girls. |
 
-NOTE: Competition is divided into men’s and women’s classifications, but there are mixed competitions. Although mixed competitions are not frequent, **mixed stadium competition*** in field events and in races of 5000m or longer are permitted.
 
+### Competition Gender
+
+Enumeration of genders with two values: 
+
+| Code | Gender Type |
+| ---- | ----------- |
+| `Male` | Men and/or boys. |
+| `Female` | Women and/or girls. |
+| `Mixed` | Both Male and Female. |
 
 ### Start Lists and Results
 
@@ -1334,7 +1293,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `MS` | Metres per second |
 
 
-### Protest Statuses
+### Protest Status
 
 
 | Code | Unit |
