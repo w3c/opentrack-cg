@@ -761,7 +761,7 @@ competitionType: CompetitionType
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="30.0" width="137.44295612009233" x="415.02852193995386" y="1413.5"/>
+          <y:Geometry height="30.0" width="137.44295612009233" x="411.27852193995386" y="1413.5"/>
           <y:Fill color="#CCFFCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="101.728515625" x="17.857220247546167" y="3.0">Vertical Jumps<y:LabelModel>
