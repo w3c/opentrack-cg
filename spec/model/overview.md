@@ -337,16 +337,16 @@ Requirements for the competitor to pass the round. Qualification may be based on
 |:-------- |:----------- |:---------- |
 | timekeeping | Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
 | description | Descriptive text of the qualification criteria. | Text |
-| byPosition | Number of competitors that are qualified in a round by their position. | Text |
-| byTime | Number of competitors that are qualified in a round by best time. | Text |
+| byPlaceOrStandard | Number of competitors that are qualified in a round by rank (track events) or standard (field events). | Text |
+| byPerformance | Number of competitors that are qualified in a round by best performance. | Text |
 
 Example:
 ```
 { 
     "@type" : "QualificationCriteria",
     "description" : "First 3 in each heat (Q) and 2 best performers (q) advance to the Final",
-    "byPosition" : 3,
-    "byTime" : 2
+    "byPlaceOrStandard" : 3,
+    "byPerformance" : 2
 }
 ```
 
@@ -452,11 +452,6 @@ In **Vertical Jumps** the **rounds of trials** include the height the athlete is
 **Field events** are composed of **rounds of trials**, where the number of trials is variable. Except for Vertical Jumps, each competitor only will have no more than one trial recorded in any one round of trials of the competition. Anyway, all trials belonging to rounds of trials will have the same structure, independently of the discipline.
 
 Except in Vertical Jumps, a valid trial shall be indicated by the measurement taken. For the standard abbreviations and symbols to be used in all other cases see [Start lists and results](#Start lists and results). A *´substitute´* trial is given in case an athlete is hampered in a trial or it cannot be correctly recorded.
-
-Results of trials in vertical jumps:
-* `O` = Cleared
-* `X` = Failed
-* `–` = Did not jump
 
 Trials may be described by the following properties:
 
