@@ -761,7 +761,7 @@ competitionType: CompetitionType
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="30.0" width="137.44295612009233" x="411.27852193995386" y="1413.5"/>
+          <y:Geometry height="30.0" width="137.44295612009233" x="415.02852193995386" y="1413.5"/>
           <y:Fill color="#CCFFCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="101.728515625" x="17.857220247546167" y="3.0">Vertical Jumps<y:LabelModel>
@@ -1041,18 +1041,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e27" source="n16" target="n18">
-      <data key="d8"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="3.25" tx="109.74702945416058" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e28" source="n2" target="n18">
+    <edge id="e27" source="n2" target="n18">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1066,7 +1055,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e29" source="n17" target="n18">
+    <edge id="e28" source="n17" target="n18">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1080,7 +1069,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e30" source="n22" target="n18">
+    <edge id="e29" source="n22" target="n18">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1094,7 +1083,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e31" source="n19" target="n18">
+    <edge id="e30" source="n19" target="n18">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1108,7 +1097,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e32" source="n21" target="n1">
+    <edge id="e31" source="n21" target="n1">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1119,7 +1108,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e33" source="n6" target="n4">
+    <edge id="e32" source="n6" target="n4">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1133,7 +1122,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e34" source="n5" target="n4">
+    <edge id="e33" source="n5" target="n4">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1147,7 +1136,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e35" source="n7" target="n4">
+    <edge id="e34" source="n7" target="n4">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1158,7 +1147,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e36" source="n8" target="n4">
+    <edge id="e35" source="n8" target="n4">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1172,7 +1161,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e37" source="n9" target="n4">
+    <edge id="e36" source="n9" target="n4">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1186,7 +1175,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e38" source="n23" target="n23">
+    <edge id="e37" source="n23" target="n23">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="58.38644680954151" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1195,7 +1184,7 @@ competitionType: CompetitionType
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e39" source="n18" target="n23">
+    <edge id="e38" source="n18" target="n23">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1209,7 +1198,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e40" source="n15" target="n23">
+    <edge id="e39" source="n15" target="n23">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1223,7 +1212,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e41" source="n4" target="n23">
+    <edge id="e40" source="n4" target="n23">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1237,7 +1226,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e42" source="n3" target="n23">
+    <edge id="e41" source="n3" target="n23">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1251,7 +1240,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e43" source="n24" target="n24">
+    <edge id="e42" source="n24" target="n24">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="50.833999257093936" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1260,7 +1249,7 @@ competitionType: CompetitionType
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e44" source="n25" target="n25">
+    <edge id="e43" source="n25" target="n25">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="50.833999257093936" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1269,7 +1258,7 @@ competitionType: CompetitionType
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e45" source="n26" target="n26">
+    <edge id="e44" source="n26" target="n26">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="50.833999257093936" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1278,7 +1267,7 @@ competitionType: CompetitionType
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e46" source="n27" target="n27">
+    <edge id="e45" source="n27" target="n27">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="50.833999257093936" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1287,7 +1276,7 @@ competitionType: CompetitionType
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e47" source="n28" target="n28">
+    <edge id="e46" source="n28" target="n28">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="46.134698557793214" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1296,7 +1285,7 @@ competitionType: CompetitionType
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e48" source="n29" target="n29">
+    <edge id="e47" source="n29" target="n29">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="50.83399925709396" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1305,7 +1294,7 @@ competitionType: CompetitionType
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e49" source="n30" target="n30">
+    <edge id="e48" source="n30" target="n30">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="50.83399925709396" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1314,7 +1303,7 @@ competitionType: CompetitionType
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e50" source="n31" target="n31">
+    <edge id="e49" source="n31" target="n31">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="50.83399925709396" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1323,7 +1312,7 @@ competitionType: CompetitionType
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e51" source="n29" target="n28">
+    <edge id="e50" source="n29" target="n28">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1337,7 +1326,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e52" source="n30" target="n28">
+    <edge id="e51" source="n30" target="n28">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1348,7 +1337,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e53" source="n31" target="n28">
+    <edge id="e52" source="n31" target="n28">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1362,7 +1351,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e54" source="n32" target="n32">
+    <edge id="e53" source="n32" target="n32">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="46.134698557793214" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1371,7 +1360,7 @@ competitionType: CompetitionType
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e55" source="n33" target="n33">
+    <edge id="e54" source="n33" target="n33">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="50.83399925709396" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1380,7 +1369,7 @@ competitionType: CompetitionType
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e56" source="n34" target="n34">
+    <edge id="e55" source="n34" target="n34">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="50.83399925709396" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1389,7 +1378,7 @@ competitionType: CompetitionType
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e57" source="n34" target="n32">
+    <edge id="e56" source="n34" target="n32">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1403,7 +1392,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e58" source="n33" target="n32">
+    <edge id="e57" source="n33" target="n32">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1417,7 +1406,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e59" source="n10" target="n3">
+    <edge id="e58" source="n10" target="n3">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1431,7 +1420,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e60" source="n11" target="n3">
+    <edge id="e59" source="n11" target="n3">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1445,7 +1434,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e61" source="n24" target="n15">
+    <edge id="e60" source="n24" target="n15">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1459,7 +1448,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e62" source="n25" target="n15">
+    <edge id="e61" source="n25" target="n15">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1473,7 +1462,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e63" source="n26" target="n15">
+    <edge id="e62" source="n26" target="n15">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1487,7 +1476,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e64" source="n27" target="n15">
+    <edge id="e63" source="n27" target="n15">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1501,7 +1490,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e65" source="n35" target="n35">
+    <edge id="e64" source="n35" target="n35">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="46.13469855779326" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1510,7 +1499,7 @@ competitionType: CompetitionType
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e66" source="n12" target="n35">
+    <edge id="e65" source="n12" target="n35">
       <data key="d8"/>
       <data key="d9"/>
       <data key="d10">
@@ -1525,7 +1514,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e67" source="n13" target="n35">
+    <edge id="e66" source="n13" target="n35">
       <data key="d8"/>
       <data key="d9"/>
       <data key="d10">
@@ -1540,7 +1529,7 @@ competitionType: CompetitionType
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e68" source="n35" target="n23">
+    <edge id="e67" source="n35" target="n23">
       <data key="d8"/>
       <data key="d9"/>
       <data key="d10">
@@ -1549,6 +1538,18 @@ competitionType: CompetitionType
             <y:Point x="330.0" y="1428.5"/>
             <y:Point x="330.0" y="1140.0"/>
           </y:Path>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e68" source="n16" target="n18">
+      <data key="d8"/>
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="white_delta"/>
           <y:BendStyle smoothed="false"/>
