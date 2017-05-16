@@ -272,10 +272,10 @@ course: GeoShape</y:AttributeLabel>
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="76.4714780600462" width="159.75" x="910.125" y="306.9052977119192"/>
+          <y:Geometry height="77.7482837528604" width="180.0" x="910.125" y="306.9052977119193"/>
           <y:Fill color="#FFCC99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="139.92236328125" x="9.913818359375" y="3.0">QualificationCriteria<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="139.92236328125" x="20.038818359375" y="3.0">QualificationCriteria<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -284,8 +284,8 @@ course: GeoShape</y:AttributeLabel>
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>description: Text
-byPosition: Number
-byTime: Number</y:AttributeLabel>
+byPlaceOrStandard: Number
+byPerformance: Number</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
@@ -923,7 +923,7 @@ lastRound<y:LabelModel>
     <edge id="e11" source="n10" target="n10">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="53.62237762237761" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:Path sx="60.41958041958042" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
         </y:QuadCurveEdge>
@@ -932,7 +932,7 @@ lastRound<y:LabelModel>
     <edge id="e12" source="n10" target="n10">
       <data key="d10">
         <y:BezierEdge>
-          <y:Path sx="0.0" sy="30.54897364285013" tx="0.0" ty="0.0"/>
+          <y:Path sx="0.0" sy="31.059034445208297" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
         </y:BezierEdge>
@@ -941,10 +941,13 @@ lastRound<y:LabelModel>
     <edge id="e13" source="n1" target="n10">
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="45.11601398571463" sy="-24.16243030636133" tx="0.0" ty="0.0"/>
+          <y:Path sx="45.11601398571463" sy="-24.16243030636133" tx="0.0" ty="0.0">
+            <y:Point x="901.1227953223768" y="345.14103674194234"/>
+            <y:Point x="901.1227953223768" y="345.7794395883495"/>
+          </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="118.85546875" x="-15.36077978627361" y="-59.64364882099119">qualificationCriteria<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.1328125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="118.85546875" x="22.17712031743838" y="-59.005245974584">qualificationCriteria<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
