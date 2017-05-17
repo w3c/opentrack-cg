@@ -751,6 +751,7 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | nationality | Athlete's nationality. | [Country](#countries) |
 | date of birth | Date of birth. | [Date and Time](#date,-time-and-periods) |
 | date of death | Date of death. | [Date and Time](#date,-time-and-periods) |
+| date of death | Date of death. | [Date and Time](#date,-time-and-periods) |
 | birth place | Locality and country of birt (e.g. "Tallinn, Estonia") | Text |
 | federation(s) | Federation(s) which the athlete is attached to. | [Athletics Federation](#athletics-federations) |
 | coach(es) | Athlete's main coach(es). | [Person](#persons) |
@@ -1171,12 +1172,13 @@ Athletics events may have a property to represent the states that they may be in
 | `Scheduled` | Competition is scheduled. |
 | `Postponed` | Competition will be postponed without being rescheduled yet. |
 | `Rescheduled` | Competition is rescheduled. |
-| `Scheduled Break` | Competition has a scheduled break. |
-| `Running` | Competition in progress. | 
-| `Interrupted` | Competition interrupted once in progress. | 
+| `Delayed` | An event is held up, for example by inclement weather. Can happen before or during an event.
+| `Scheduled Break` | Competition has a scheduled break (`intermission` in SportsML). |
+| `Running` | Competition in progress (`mid-event` in SportsML). | 
+| `Interrupted` | Competition interrupted once in progress (`halted` in SportsML). | 
 | `Getting Ready` | The start of the competition is imminent |
-| `Finished` | Competition is over and no more action will happen on the field of play (last competitor finished). |
-| `Cancelled` | Competition will not take place |
+| `Finished` | Competition is over and no more action will happen on the field of play (last competitor finished). (`post-event` in SportsML) |
+| `Cancelled` | Competition will not take place (`suspended`, `canceled`, `discarded` in SportsML) |
 
 
 ### Records 
