@@ -829,6 +829,8 @@ Clubs may be described using the following attributes:
 | telephone | Telephone number(s) of the club | Text |
 | fax | Fax number(s) of the club | Text |
 | url | Club homepage URL. | URL |
+| dissolved | Date (and time) when the team was dissolved. | [Date and Time](#date,-time-and-periods) |
+| established | Date (and time) when the team was established. | [Date and Time](#date,-time-and-periods) |
 | federation(s) | Federation(s) which the club is attached to. | [Athletics Federation](#athletics-federations) |
 | sponsor(s) | Sponsor(s) of the club. | [Person](#persons) or [Organization](#organizations) |
 | team(s) | Teams(s) attached to this club. | **[Team](#teams)** |
