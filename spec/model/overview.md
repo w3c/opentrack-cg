@@ -43,7 +43,8 @@ Some of the entities referred in this document, are named using abbreviations. T
 
 There are other vocabularies modeling sports:
 * BBC [Sports Ontology](http://www.bbc.co.uk/ontologies/sport#).
-* IPTC [SportsML](http://dev.iptc.org/SportsML) ([Example](http://dev.iptc.org/files/SportsML-Examples/sportsml-tournament-olympic.xml))
+* IPTC [SportsML](http://dev.iptc.org/SportsML) ([Example](http://dev.iptc.org/files/SportsML-Examples/sportsml-tournament-olympic.xml)).
+* [Schema.org](http://schema.org/SportsEvent).
 * Wikipedia [infobox template](https://en.wikipedia.org/wiki/Template:Infobox_sports_competition_event) for Wikipedia articles about Athletics results.
 
 
