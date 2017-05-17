@@ -49,25 +49,32 @@ There are other vocabularies modeling sports:
 
 ## Overview of the model
 
-The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish information related to the following main entities.
+The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish Athletics information. 
+
+In order to illustrate the model 
 
 The following UML diagram represents competition management in Athletics: 
 
 ![Competition Conceptual Model](images/competition_model.png)
 
-**Schedule and venues of Athletics events:**
+The following UML diagram represents competitors: 
 
-* **[Athletics Competitions](#athletics-competitions)**. Organized occasion where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These competions can be organized periodically ([Recurring Competitions](#recurring-competitions)), such as the Summer Olympic Games. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fundraising road races, etc.). Athletics competitions may divided in several [Competitions](#athletics-competitions) ([Divisional Competition](#divisional-competitions) such as [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women); they may include several stages ([Multi Stage Competitions](#multi-stage-competitions) like the Diamond League); also competitions may be composed of several disciplines ([Multi Discipline Competitions](#multidiscipline-competitions) are combined events such as Decathlon).
+![Competitor Conceptual Model](images/competitor_model.png)
+
+
+### Schedule and structure of Athletics events
+
+* **[Athletics Competitions](#athletics-competitions)**. Organized occasions where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These competions can be organized periodically ([Recurring Competitions](#recurring-competitions)), such as the Summer Olympic Games. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fundraising road races, etc.). Athletics competitions may divided in several [Competitions](#athletics-competitions) ([Divisional Competition](#divisional-competitions) such as [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women); they may include several stages ([Multi Stage Competitions](#multi-stage-competitions) like the Diamond League); also competitions may be composed of several disciplines ([Multi Discipline Competitions](#multidiscipline-competitions) are combined events such as Decathlon).
 
 * **[Venues](#venues)**. Location where events and competitions are held.
 
 * **[Category](#category)**. Specific category of an event (e.g., Senior Men, U18 Women, etc.).
 
-**Competition management:**
+### Stages of competition
 
-* **[Competition Rounds](#competition-rounds)**. Stages of Athletics competitions (e.g., Heats, Finals, etc.) where competitors are distributed in groups. Rounds depend on the competition rules for each discipline, so there is a difference between rounds within timed events, and rounds in field events. Vertical jumps have different rules regarding rounds in field events.  
+* **[Rounds](#rounds)**. Stages of Athletics competitions (e.g., Heats, Finals, etc.) where competitors are distributed in groups. Rounds depend on the competition rules for each discipline, so there is a difference between rounds within timed events, and rounds in field events. Vertical jumps have different rules regarding rounds in field events.  
 
-* **[Timekeeping](#timekeeping)**. Method or system used for timekeeping in timed events.
+* **[Trials Rounds](#trials-rounds)**. Rounds of Field Events include one of several rounds of [Trials](#field-trials), where athletes have different attempts to achieve their best performance in the competition.  
 
 * **[Participation](#participation)**. Stages within the process of taking part in an Athletics event, from entries in the **[Start List](#start-list)** to [Results](#results) after the competition. 
     * **[Start List](#start-list)**. Ordered set of competitors (athletes or teams) qualified to compete in a specific competition round. Start list contains information about competitors, the order of competition, and other competition information provided by judges. 
@@ -75,22 +82,16 @@ The following UML diagram represents competition management in Athletics:
 
 * **[Performances](#performances)**. Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed). 
 
-* **[Trials Rounds](#trials-rounds)**. Rounds of Field Events include one of several rounds of [Trials](#field-trials), where athletes have different attempts to achieve their best performance in the competition.  
-
 * **[Field Trials](#field-trials)**. Each one of the attempts performed by athletes within a round of trials ([Trial Round](#trials-rounds)).  
 
-**Competitors and affiliation:**
-
-![Competitor Conceptual Model](images/competitor_model.png)
-
-The UML diagram represents competitors: 
+### Competitors and affiliation
 
 * **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics events. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information. Both athletes and teams can be attached to [Clubs](#clubs) as organizations.
 
 * **[Athletics Federations](#athletics-federations)**. Sports organizations in charge of governing and rule Athletics in specific territories. [Athletics Federations](#athletics-federations) may be attached to other higher-level federations. **[Athletes](#athletes)**, **[Teams](#teams)**, and **[Clubs](#clubs) may be attached to federations. 
 
 
-## Schedule, Venues of Events
+## Schedule and structure of Athletics events
 
 ### Athletics Competitions
 
@@ -180,7 +181,6 @@ A Timed Competition is a competition where performances are measured as time. Ti
 | finish point | Place where the competition finishes.  | [Place] |
 | course | Track of the competition.  | [GeoShape] |
 | timekeeping | Type of timekeeping used to control the competition.  | [Timekeeping](#timekeeping) |
-
 
 
 #### Recurring Competitions
@@ -281,9 +281,8 @@ Example:
 ```
 [More use cases and examples](./examples).
 
-
-
 See [RunTrack Directory](http://www.runtrackdir.com/details.asp?track=london-nh)
+
 
 ### Postal Addresses
 
@@ -314,7 +313,7 @@ Example:
 [More use cases and examples](./examples).
 
 
-## Competition Management
+## Structure of Competition
 
 ### Competition Rounds
 
@@ -331,6 +330,9 @@ Rounds are competitions that may be described also by the following properties:
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | qualification criteria | Details what a competitor has to do to get to the next round. | [Qualification Criteria](#qualification-criteria) |
+
+_Example of model for competition rounds at 100m Men - European Championships:_
+![Example of model for competition (100m at European Championships)](images/instances_competition_european_champs_100.png)
 
 #### Qualification Criteria
 
@@ -381,12 +383,7 @@ Example:
 ```
 [More use cases and examples](./examples).
 
-
-_Example of model for competition rounds at 100m Men - European Championships:_
-![Example of model for competition (100m at European Championships)](images/instances_competition_european_champs_100.png)
-
-
-#### Field Events Rounds
+#### Field Rounds
 
 Competition in field events has a specific structure based on rounds of trials. Field Events are subclasses of [Round](#competition-rounds)  and [Multi Round Competitions](#multi-round-competitions). 
 
@@ -425,7 +422,9 @@ _Example of model of rounds for the distance card shown in the previous example 
 
 ### Trials Rounds
 
-**Field events** rounds are composed of **rounds of trials** that are performed by each athlete. 
+**Field events** rounds are composed of **rounds of trials** that are performed by each athlete. Rounds of trials a subclass of [Competition Rounds](#competition-rounds).
+
+Instances of this entity are described by the following properties:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
@@ -468,7 +467,8 @@ Trials may be described by the following properties:
 | attempt | Number indicating the correlative number of the attempt. | Number |
 | performance | Performance achieved in case the trial was valid. | [Performance](#performances) |
 | valid | Flag indicating if the trial was valid or not (failure) | Boolean |
-| isSubstitute | Flag indicating if the trial is a *substitute* trial. | Boolean |
+| is substitute | Flag indicating if the trial is a *substitute* trial. | Boolean |
+| in round | Field round where the trial belongs to . | [Trials Rounds](#trials-rounds) |
 
 Examples:
 ```
@@ -491,8 +491,6 @@ Examples:
 
 ```
 [More use cases and examples](./examples).
-
-
 
 
 ### Participation
@@ -565,14 +563,6 @@ _Example of results after the Final round in 100m Women event:_
 
 ![Example of results](images/example_results.png)
 
-_Results of a timed competition for National teams:_
-
-![Example of results for teams](images/results_final_teams.png)
-
-_Results of a field competition:_
-
-![Example of results for discus throw competition](images/results_discus.png)
-
 Each entry of the results list may include the following properties:
 
 | Property | Description | Value Type |
@@ -642,7 +632,7 @@ Example:
 }                                        
 ```
 
-#### Combined Performance
+#### Points Performance
 
 Apart from all properties of the parent class `Perfomance`, this entity includes:
 
@@ -657,7 +647,7 @@ Example:
 }                                        
 ```
 
-#### Length Performance
+#### Distance Performance
 
 Apart from all properties of the parent class `Perfomance`, this entity includes:
 
@@ -669,21 +659,6 @@ Example:
 ```
 {
     "distance" : "56 m"
-}                                        
-```
-
-#### Height Performance
-
-Apart from all properties of the parent class `Perfomance`, this entity includes:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| height | Official measure of the performance expressed as vertical distance. | [Distance](#distance) |
-
-Example:
-```
-{
-    "height" : "2.14 m"
 }                                        
 ```
 
@@ -751,7 +726,6 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | nationality | Athlete's nationality. | [Country](#countries) |
 | date of birth | Date of birth. | [Date and Time](#date,-time-and-periods) |
 | date of death | Date of death. | [Date and Time](#date,-time-and-periods) |
-| date of death | Date of death. | [Date and Time](#date,-time-and-periods) |
 | birth place | Locality and country of birt (e.g. "Tallinn, Estonia") | Text |
 | federation(s) | Federation(s) which the athlete is attached to. | [Athletics Federation](#athletics-federations) |
 | coach(es) | Athlete's main coach(es). | [Person](#persons) |
@@ -769,7 +743,7 @@ Example:
     "name" : "Mohamed Muktar Jama Farah",
     "familyName" : "Farah",
     "givenName" : "Mohamed Muktar Jama",
-    "alternateName" : "Mo Farah",                // How they are known
+    "alternateName" : "Mo Farah",               
     "url" : "http://www.mofarah.com",
     "gender" : "gender:Male" ,
     "image" : "https://example.com/260px-MoPodiumRio2016.png",
@@ -791,7 +765,7 @@ Example:
             "name" : "Nike Oregon Project",
             "url" : "https://nikeoregonproject.com"            
         },
-    "club" :                                  // Zero or more clubs
+    "club" :                              
         [ 
            "http://example.com/club:NEB",
            "http://example.com/club:NOP"
@@ -801,13 +775,12 @@ Example:
            "http://example.com/federation:England_Athletics", 
            "http://example.com/federation:USATF" 
         ],
-    "bests" :                                 // Lists to best performances
+    "bests" :
         [
            "http://example.com/performance:0000122",
            "http://example.com/performance:0000124",
            "http://example.com/performance:0002122",
            "http://example.com/performance:0000234"
-            // … and so on 
         ]
 }
 ```
@@ -844,21 +817,20 @@ Example:
     "@id" : "http://example.com/club:NEB",
     "@type" : "Club",
     "name" : "Newham & Essex Beagles",
-    "alternateName" : "BeaglesAC",                       // Alias, acronym, etc.
+    "alternateName" : "BeaglesAC",                      
     "url" : "http://www.newhamandessexbeagles.co.uk/",
     "image" : "http://example.org/image.png",
-    "logo" : "http://example.org/logo.png",               // Logo, flag, etc.
+    "logo" : "http://example.org/logo.png",             
     "telephone" : "(+44) 020 7511 6463",                  
     "fax" : "(+44) 020 7511 4477",
     "email" : "fakeemail@example.org",
     "address" : "http://example.org/postaladdress:0004",
     "sponsor" : "Asics",
-    "athlete" :                                           // List of athletes affiliated to the club
+    "athlete" :                                    
         [
            "http://example.com/athlete:082838",
            "http://example.com/athlete:082839",
            "http://example.com/athlete:082840"
-            // … and so on
         ],
     
     "memberOf" :"http://example.com/federation:England_Athletics"
@@ -904,16 +876,15 @@ Examples:
     "@id" : "http://example.com/team:KEN001",
     "@type" : "Team",
     "name" : "Kent Athletic Club – Cross Country 2017 Team",
-    "alternateName" : "KEN",                              // Alias, acronym, etc.
+    "alternateName" : "KEN",                  
     "image" : "http://example.org/image.png",
-    "logo" : "http://example.org/logo.png",               // Logo, flag, etc.
+    "logo" : "http://example.org/logo.png",   
     "captain" : "http://example.com/athlete:092838",
-    "athlete" :                                           // List of athletes composing the team
+    "athlete" :                               
         [
            "http://example.com/athlete:092838",
            "http://example.com/athlete:092839",
            "http://example.com/athlete:092840"
-            // … and so on
         ],
     "club" : "http://example.com/club:KEN"
 }
@@ -927,14 +898,13 @@ Examples:
     "name" : "Japan Team - Marathon 2017",
     "alternateName" : "JAP",
     "image" : "http://example.org/image.png",
-    "logo" : "http://example.org/logo.png",               // Logo, flag, etc.
+    "logo" : "http://example.org/logo.png",   
     "captain" : "http://example.com/athlete:122838",
-    "athlete" :                                           // List of athletes composing the team
+    "athlete" :                               
         [
            "http://example.com/athlete:122838",
            "http://example.com/athlete:122839",
            "http://example.com/athlete:122840"
-            // … and so on
         ],
     "federation" : "http://example.com/federation:JAP"
 }
@@ -964,12 +934,11 @@ Example:
     "faxNumber" : "(+44) 0121 347 65439",
     "telephone" : "(+44) 0121 347 65423",
     "address" : "http://example.org/postaladdress:00012",
-    "memberOf" : "http://example.com/federation:UK",    // Member of Federation
-    "member" :                                          // Members attached to this federation
+    "memberOf" : "http://example.com/federation:UK",  
+    "member" :                                        
         [
            "http://example.com/club:NEB",
-           "http://example.com/club:THH"
-            
+           "http://example.com/club:THH"            
         ]
 }
 ```
