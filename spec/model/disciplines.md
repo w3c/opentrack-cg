@@ -17,14 +17,42 @@ _Example of an instance of Master Female indoor Pentathlon using the current mod
 ![Example of model of indoor pentathlon](images/instances_disciplines_pentathlon.png)
 
 
-## Discipline
 
-Children: 
-* [Race](#race)
-* [Throws](#throws)
-* [Horizontal Jumps](#horizontal-jumps)
-* [Vertical Jumps](#vertical-jumps)
-* [Combined Event](#combined-event)  
+## Classes
+
+* [Discipline](#discipline)
+  * [Race](#race)
+    * [Middle Or Long Distance](#middle-or-long-distance)
+      * [Steeplechase](#steeplechase)
+    * [Hurdles](#hurdles)
+    * [Sprints](#sprints)
+    * [Race Walking](#race-walking)
+    * [Cross Country](#cross-country)
+    * [Road Running](#road-running)
+    * [Mountain Running](#mountain-running)
+    * [Track Relays](#track-relays)
+    * [Ultra Running](#ultra-running)
+  * [Throws](#throws)
+    * [Shot Put](#shot-put)
+    * [Discus Throw](#discus-throw)
+    * [Hammer Throw](#hammer-throw)
+    * [Javelin Throw](#javelin-throw)
+    * [Weight Throw](#weight-throw) 
+  * [Horizontal Jumps](#horizontal-jumps)
+    * [Long Jump](#long-jump)
+    * [Triple Jump](#triple-jump)
+  * [Vertical Jumps](#vertical-jumps)
+    * [High Jump](#high-jump)
+    * [Pole Vault](#pole-vault)
+  * [Combined Event](#combined-event)  
+    * [Pentathlon](#pentathlon)
+    * [Heptathlon](Heptathlon)
+    * [Decathlon](#decathlon)
+    * [Throws Pentathlon](#throws-pentathlon) 
+
+### Discipline
+
+Children: [Race](#race), [Throws](#throws), [Horizontal Jumps](#horizontal-jumps), [Vertical Jumps](#vertical-jumps), [Combined Event](#combined-event)  
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
@@ -33,182 +61,154 @@ Children:
 
 ### Race
 
-Parent: [Discipline](#discipline)
-
-Children: 
-* [Middle Or Long Distance](#middle-or-long-distance)
-* [Hurdles](#hurdles)
-* [Sprints](#sprints)
-* [Race Walking](#race-walking)
-* [Cross Country](#cross-country)
-* [Road Running](#road-running)
-* [Mountain Running](#mountain-running)
-* [Track Relays](#track-relays)
-* [Ultra Running](#ultra-running)
+* Parent: [Discipline](#discipline)
+* Children: [Middle Or Long Distance](#middle-or-long-distance), [Hurdles](#hurdles), [Sprints](#sprints), [Race Walking](#race-walking), [Cross Country](#cross-country), [Road Running](#road-running), [Mountain Running](#mountain-running), [Track Relays](#track-relays), [Ultra Running](#ultra-running)
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | lenght | Distance of the race. | Distance |
 | competition type | Type of competition (time trial, relays, etc.). | Competition Type |
 
-#### Middle Or Long Distance
+### Middle Or Long Distance
 
-Parent: [Race](#race)
-
-Children: [Steeplechase](#steeplechase)
+* Parent: [Race](#race)
+* Children: [Steeplechase](#steeplechase)
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | time | Time in case of being a time-fixed competition (i.e., one hour, one day, etc.). | Time |
 
-##### Steeplechase
+### Steeplechase
 
-Parent: [Middle Or Long Distance](#middle-or-long-distance)
+* Parent: [Middle Or Long Distance](#middle-or-long-distance)
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | height | Obstacle height. | Distance |
 
-#### Hurdles
+### Hurdles
 
-Parent: [Race](#race)
+* Parent: [Race](#race)
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | height | Hurdles height. | Distance |
 | spacing | Horizontal distance between hurdles. | Distance |
 
-#### Sprints
+### Sprints
 
-Parent: [Race](#race)
+* Parent: [Race](#race)
 
-#### Race Walking
+### Race Walking
 
-Parent: [Race](#race)
+* Parent: [Race](#race)
 
-#### Cross Country
+### Cross Country
 
-Parent: [Race](#race)
+* Parent: [Race](#race)
 
-#### Road Running
+### Road Running
 
-Parent: [Race](#race)
+* Parent: [Race](#race)
 
-#### Mountain Running
+### Mountain Running
 
-Parent: [Race](#race)
+* Parent: [Race](#race)
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | ascent | Total vertical ascent of the race course. | Distance |
 | descent | Total vertical descent of the race course. | Distance |
 
-#### Track Relays
+### Track Relays
 
-Parent: [Race](#race)
+* Parent: [Race](#race)
 
-#### Ultra Running
+### Ultra Running
 
-Parent: [Race](#race)
+* Parent: [Race](#race)
 
 ### Throws
 
-Parent: [Discipline](#discipline)
-
-Children: 
-* [Shot Put](#shot-put)
-* [Discus Throw](#discus-throw)
-* [Hammer Throw](#hammer-throw)
-* [Javelin Throw](#javelin-throw)
-* [Weight Throw](#weight-throw) 
+* Parent: [Discipline](#discipline)
+* Children: [Shot Put](#shot-put), [Discus Throw](#discus-throw), [Hammer Throw](#hammer-throw), [Javelin Throw](#javelin-throw), [Weight Throw](#weight-throw) 
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | weight | Weight of the throwing object. | Weight |
 
-#### Shot Put
+### Shot Put
 
-Parent: [Throws](#throws)
+* Parent: [Throws](#throws)
 
-#### Discus Throw
+### Discus Throw
 
-Parent: [Throws](#throws)
+* Parent: [Throws](#throws)
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | diameter | Discus diameter. | Distance |
 
-#### Hammer Throw
+### Hammer Throw
 
-Parent: [Throws](#throws)
+* Parent: [Throws](#throws)
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | length | Hammer length. | Distance |
 
-#### Javelin Throw
+### Javelin Throw
 
-Parent: [Throws](#throws)
+* Parent: [Throws](#throws)
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | length | Javelin length. | Distance |
 
-#### Weight Throw
+### Weight Throw
 
-Parent: [Throws](#throws)
+* Parent: [Throws](#throws)
 
 ### Horizontal Jumps
 
-Parent: [Discipline](#discipline)
-
-Children: 
-* [Long Jump](#long-jump)
-* [Triple Jump](#triple-jump)
+* Parent: [Discipline](#discipline)
+* Children: [Long Jump](#long-jump), [Triple Jump](#triple-jump)
 
 ### Vertical Jumps
 
-Parent: [Discipline](#discipline)
+* Parent: [Discipline](#discipline)
+* Children: [High Jump](#high-jump), [Pole Vault](#pole-vault)
 
-Children: 
-* [High Jump](#high-jump)
-* [Pole Vault](#pole-vault)
+### High Jump
 
-#### High Jump
+* Parent: [Vertical Jumps](#vertical-jumps)
 
-Parent: [Vertical Jumps](#vertical-jumps)
+### Pole Vault
 
-#### Pole Vault
-
-Parent: [Vertical Jumps](#vertical-jumps)
+* Parent: [Vertical Jumps](#vertical-jumps)
 
 ### Combined Event
 
-Parent: [Discipline](#discipline)
-
-Children: 
-* [Pentathlon](#pentathlon)
-* [Heptathlon](Heptathlon)
-* [Decathlon](#decathlon)
-* [Throws Pentathlon](#throws-pentathlon) 
+* Parent: [Discipline](#discipline)
+* Children: [Pentathlon](#pentathlon), [Heptathlon](Heptathlon), [Decathlon](#decathlon), [Throws Pentathlon](#throws-pentathlon) 
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | disciplines | Combined disciplines for this event. | [Discipline](#discipline) |
 
-#### Pentathlon
+### Pentathlon
 
-Parent: [Combined Event](#combined-event)
+* Parent: [Combined Event](#combined-event)
 
-#### Heptathlon
+### Heptathlon
 
-Parent: [Combined Event](#combined-event)
+* Parent: [Combined Event](#combined-event)
 
-#### Decathlon
+### Decathlon
 
-Parent: [Combined Event](#combined-event)
+* Parent: [Combined Event](#combined-event)
 
-#### Throws Pentathlon
+### Throws Pentathlon
 
-Parent: [Combined Event](#combined-event)
+* Parent: [Combined Event](#combined-event)
 
