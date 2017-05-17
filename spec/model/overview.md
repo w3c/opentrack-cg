@@ -829,6 +829,7 @@ Clubs may be described using the following attributes:
 | telephone | Telephone number(s) of the club | Text |
 | fax | Fax number(s) of the club | Text |
 | url | Club homepage URL. | URL |
+| nationality | Club's nationality. | [Country](#countries) |
 | dissolved | Date (and time) when the team was dissolved. | [Date and Time](#date,-time-and-periods) |
 | established | Date (and time) when the team was established. | [Date and Time](#date,-time-and-periods) |
 | federation(s) | Federation(s) which the club is attached to. | [Athletics Federation](#athletics-federations) |
@@ -880,6 +881,7 @@ Teams may be described using the following attributes:
 | logo | Logo or flag of the team. | URL |
 | url | Webpage URL about the team. | URL |
 | federation(s) | Federation(s) which the team is attached to. | [Athletics Federation](#athletics-federations) |
+| nationality | Teams's nationality. | [Country](#countries) |
 | sponsor(s) | Sponsor(s) of the team. | [Person](#persons) or [Organization](#organizations) |
 | captain(s) | Athlete(s) who represents the team. | **[Athlete](#athletes)** |
 | coach(es) | Person(s) who acts as coach for the team. | **[Person](#persons)** |
