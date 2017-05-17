@@ -750,6 +750,7 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | weight | Athlete's weight. | [Mass](#mass) |
 | nationality | Athlete's nationality. | [Country](#countries) |
 | date of birth | Date of birth. | [Date and Time](#date,-time-and-periods) |
+| date of death | Date of death. | [Date and Time](#date,-time-and-periods) |
 | birth place | Locality and country of birt (e.g. "Tallinn, Estonia") | Text |
 | federation(s) | Federation(s) which the athlete is attached to. | [Athletics Federation](#athletics-federations) |
 | coach(es) | Athlete's main coach(es). | [Person](#persons) |
