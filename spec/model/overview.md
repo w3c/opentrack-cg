@@ -850,7 +850,7 @@ _Example of definition of a club forming a team for Ekiden:_
 ![Team of a club with several athletes](images/instances_club_team.png)
 
 
-Examples:
+Example of cross country team composed of club members:
 ```
 {
     "@id" : "http://example.com/team:KEN001",
@@ -868,10 +868,9 @@ Examples:
         ],
     "club" : "http://example.com/club:KEN"
 }
-
-//
-// Example of National Team
-//
+```
+Example of national team:
+```
 {
     "@id" : "http://example.com/team:JAP2017",
     "@type" : "Team",
@@ -889,8 +888,6 @@ Examples:
     "federation" : "http://example.com/federation:JAP"
 }
 ```
-[More use cases and examples](./examples).
-
 
 ### Athletics Federations
 
