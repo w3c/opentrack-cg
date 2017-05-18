@@ -513,7 +513,6 @@ Participation of athletes may be described by the following properties:
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | transponder identifier | Text or code identifying the competitor by a transponder. | Text |
 | score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
-| relays legs | List of consecutive legs in the case of a relays event. | [Relays Legs](#relays-legs) |
 
 
 
@@ -539,7 +538,6 @@ Each *Entry* of the [Start List](#start-lists) may include the following propert
 | score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
 | startingOrder | Competitor's order in the start list. | Number |
 | lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
-| relays legs | List of consecutive legs in the case of a team relays event. | [Relays Legs](#relays-legs) |
 | in competition | Competition related to this start list. | [Athletics Competition](#athletics-competitions) |
 
 
@@ -582,7 +580,6 @@ Each entry of the results list may include the following properties:
 | record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
 | timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-time-and-periods) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
-| relays legs | List of consecutive legs in the case of a team relays event with individual results. | [Relays Legs](#relays-legs) |
 | status | Status of results. | [Result Status](#result-status) |
 | in competition | Competition related to the results. | [Athletics Competition](#athletics-competitions) |
 
@@ -666,42 +663,6 @@ Example:
     "distance" : "56 m"
 }                                        
 ```
-
-### Relays Legs
-
-Relays events are competitions between two or more [Teams](#teams) where [Athletes](#athletes) of each team does part of the race and then another member continues. So Teams' [Participation](#participation) may include two or more consecutive legs with independent performances that will aggregated for the overall team results.
-
-_For instance, 4×400 metres relay is a discipline for teams of four runners, who each complete a leg of 400 metres._
-
-Legs are defined by the following properties:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the relays leg. | Text |
-| order | Order of this leg in the relays event. | Number |
-| rank | Position achieved by the athlete after the leg. | Number |
-| length | Length of the leg to be covered by the athlete. | [Distance](#distance) |
-| start point | Place where the leg starts. | Place |
-| finish point | Place where the leg finishes. | Place |
-| course | Track (polygon) where the leg is held. | GeoShape |
-| athlete | Person competing in this event. | [Athlete](#athletes) |
-| performance | Measure to quantify the performance of the athlete after the leg.  | **[Performance](#performances)** |
-
-Example:
-```
-{
-    "@type" : "RelaysLeg",
-    "order" : 1,
-    "athlete" : "http://example.com/athlete:09822",
-    "length" : "400m",
-    "rank" : 1, 
-    "performance" : 
-        {
-           "time": "51.56"
-        }
-}
-```
-[More use cases and examples](./examples).
 
 
 ## Competitors and Affiliation
