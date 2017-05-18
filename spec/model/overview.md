@@ -581,6 +581,7 @@ Each entry of the results list may include the following properties:
 | timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-time-and-periods) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
 | status | Status of results. | [Result Status](#result-status) |
+| award | Award related to the result. | [Award](#awards) |
 | in competition | Competition related to the results. | [Athletics Competition](#athletics-competitions) |
 
 Example:
@@ -626,8 +627,6 @@ Apart from all properties of the parent class `Perfomance`, this entity includes
 
 Example:
 ```
-// 11.21 seconds
-// 12 milliseconds
 {
     "time" : "T00:00:11.21",
     "reactionTime" : "T00:00:00.012"
@@ -661,6 +660,21 @@ Example:
 ```
 {
     "distance" : "56 m"
+}                                        
+```
+
+#### Awards
+
+Prize or other mark of recognition given for achieving a result.
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| name | Name of the award received. | Text |
+
+Example:
+```
+{
+    "name" : "Gold Medal"
 }                                        
 ```
 
