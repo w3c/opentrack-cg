@@ -140,7 +140,6 @@ _Examples of multi stage competition are: The Diamond League, and the Surrey Cro
 | last stage | Last stage of the multi stage competition. | [Athletics Competition](#athletics-competitions) |
 | stage | Stage of the multi stage competition. | [Athletics Competition](#athletics-competitions) |
 
-
 #### Multi Round Competitions
 
 A multi round competition is an athletic event organised as a sequence of qualification rounds.
@@ -198,6 +197,8 @@ Recurring Competitions may be described by the following attributes:
 | description | About the recurring competition. | Text |
 
 
+#### Examples:
+
 _Example of competition model: 2016 European Championships, 100m Men._
 
 ![Model of a 100m competition within the European Championships](images/instances_competition_european_champs_100.png)
@@ -205,6 +206,9 @@ _Example of competition model: 2016 European Championships, 100m Men._
 _Example of competition model: 2016 European Championships Heptathlon (simplified with only five combined events)._
 
 ![Model of a heptathlon competition within the European Championships](images/instances_competition_european_champs_heptathlon.png)
+
+_Example of instances of the [Jaffa Ekiden Relay Race](http://events.ipswichjaffa.org.uk/ekiden-relays/), representing two different categories (senior and junior), including individual results for each relay leg and the overall results (for teams):_
+![Ekiden race instances with two categories](images/instances_relays_ekiden.png)
 
 
 ### Category
@@ -314,7 +318,7 @@ Example:
 [More use cases and examples](./examples).
 
 
-## Structure of Competition
+## Inside Competition
 
 ### Competition Rounds
 
