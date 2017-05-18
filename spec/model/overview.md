@@ -436,7 +436,7 @@ Instances of this entity are described by the following properties:
 | identifier | Unique character string to identify the round of trials. | Text |
 | athlete | Athlete competing in this round of trials. | [Athlete](#athletes) or [Team](#teams) |
 | feature(s) | Set of features and notes included by officials for this round of trials  (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
-| under protest | Flag indicating the competitor will take part in the round of trials. | Boolean |
+| protest status | Status of the protest action of the competitor. | [Protest Status](#protest-status) |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | transponder identifier | (Timed events) Text or code identifying the competitor by a transponder. | Text |
 | order | Competitor's order in the start list of this round. | Number |
@@ -467,7 +467,7 @@ Trials may be described by the following properties:
 | identifier | Unique character string to identify the trial. | Text |
 | athlete | Athlete or team competing in this trials. | [Athlete](#athletes) or [Team](#teams) |
 | feature(s) | Set of features and notes included by officials for this attempt  (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
-| under protest | Flag indicating the competitor will take part in the round of trials. | Boolean |
+| protest status | Status of the protest action of the competitor. | [Protest Status](#protest-status) |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | attempt | Number indicating the correlative number of the attempt. | Number |
 | performance | Performance achieved in case the trial was valid. | [Performance](#performances) |
@@ -1252,7 +1252,6 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 
 
 ### Protest Status
-
 
 | Code | Unit |
 | ---- | ---- |
