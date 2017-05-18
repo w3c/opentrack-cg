@@ -507,13 +507,12 @@ Participation of athletes may be described by the following properties:
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the entry in the list. | Text |
-| competitor | Athlete or team competing in this round. | [Athlete](#athletes) or [Team](#teams) |
-| feature(s) | Set of features and notes included by officials in the starting list (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
-| under protest | Flag indicating the competitor will take part in the round and/or heat competing 'under protest'. | Boolean |
+| competitor | Athlete or team competing in this event. | [Athlete](#athletes) or [Team](#teams) |
+| feature(s) | Set of features and notes included by officials in the starting list or results (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
+| protest status | Status of the protest action of the competitor. | [Protest Status](#protest-status) |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | transponder identifier | Text or code identifying the competitor by a transponder. | Text |
-| score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
-
+| in competition | Competition in which the competitor takes part. | [Athletics Competition](#athletics-competitions) |
 
 
 #### Start Lists
@@ -525,20 +524,12 @@ In either a track or field  event, if an athlete makes an immediate oral protest
 _Example of start list of Final round in 100m Women event:_
 ![Example of start list](images/example_start_list.png)
 
-Each *Entry* of the [Start List](#start-lists) may include the following properties:
+In addition to [Participation](#participation) properties, the *entries* of the [Start List](#start-lists) may include the following ones:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the entry in the list. | Text |
-| competitor | Athlete or team competing in this round. | [Athlete](#athletes) or [Team](#teams) |
-| feature(s) | Set of features and notes included by officials in the starting list (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
-| under protest | Flag indicating the competitor will take part in the round and/or heat competing 'under protest'. | Boolean |
-| bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
-| transponder identifier | Text or code identifying the competitor by a transponder. | Text |
-| score points | Score points accumulated by the competitor at the start of the round and/or heat, in case of Combined Events such as Decathlon and Heptathlon. | Number |
 | startingOrder | Competitor's order in the start list. | Number |
 | lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
-| in competition | Competition related to this start list. | [Athletics Competition](#athletics-competitions) |
 
 
 Example:
@@ -566,23 +557,15 @@ _Example of results after the Final round in 100m Women event:_
 
 ![Example of results](images/example_results.png)
 
-Each entry of the results list may include the following properties:
+In addition to [Participation](#participation) properties, each *entry* of the results list may include the following ones:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the entry in the list. | Text |
-| competitor | Athlete or team competing in this round. | [Athlete](#athletes) or [Team](#teams) |
-| feature(s) | Set of features and notes included by officials in the starting list (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
-| under protest | Flag indicating the competitor will take part in the round and/or heat competing 'under protest'. | Boolean |
-| bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
-| transponder identifier | Text or code identifying the competitor by a transponder. | Text |
-| score points | Score points earned by the competitor in a specific round and/or heat in case of Combined Events (i.e., Decathlon, Heptathlon) and other team competitions (e.g. team competitions using score age grading). | Number |
 | record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
 | timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-time-and-periods) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
 | status | Status of results. | [Result Status](#result-status) |
 | award | Award related to the result. | [Award](#awards) |
-| in competition | Competition related to the results. | [Athletics Competition](#athletics-competitions) |
 
 Example:
 ```
