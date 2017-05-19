@@ -409,31 +409,26 @@ Example:
 ```
 [More use cases and examples](./examples).
 
-#### Field Rounds
 
-Competition in field events has a specific structure based on rounds of trials. Field Events are subclasses of [Round](#competition-rounds)  and [Multi Round Competitions](#multi-round-competitions). 
+### Unit Field Competitions
+
+Unit Competitions in field events have a specific structure based on rounds of trials. 
 
 
 Field rounds and trails highlighted on a control card for Distance Field Events:
 ![Example of distance card](images/example_distance_card_concepts.png)
 
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| trials rounds(s) | Rounds of trials corresponding to a field event. | [Trials Round](#trials-rounds) |
-
-
 _Example of representation of the previous example of Javelin Throw Competition:_
 ![Rounds of trials for a heat within a Javelin Throw competition](images/instances_field_rounds_javelin.png)
 
 
-##### Vertical Jumps Rounds
+#### Vertical Jumps Rounds
 
 Field rounds and trails highlighted on a control card for Vertical Jumps Events:
 ![Example of height card](images/example_height_card_concepts.png)
 
 
-Rounds in Vertical Jumps include also specific information about height of the bar.
+Rounds of trials in Unit Vertical Jumps (height) Competitions include also specific information about height of the bar.
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
@@ -443,7 +438,6 @@ Rounds in Vertical Jumps include also specific information about height of the b
 
 _Example of model of rounds for the distance card shown in the previous example (High Jump):_
 ![Rounds of trials for a heat within a High Jump competition](images/instances_field_rounds_highjump.png)
-
 
 
 ### Trials Rounds
@@ -461,7 +455,6 @@ Instances of this entity are described by the following properties:
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | transponder identifier | (Timed events) Text or code identifying the competitor by a transponder. | Text |
 | order | Competitor's order in the start list of this round. | Number |
-| score points | Score points accumulated by the competitor at the start of the round in case of Combined Events such as Decathlon and Heptathlon. | Number |
 | round number | Number of the round of trials. | Number |
 | trial(s) | Athlete's attempt in this round of trials. | [Field Trial](#field-trials) |
 
