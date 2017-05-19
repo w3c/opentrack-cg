@@ -124,6 +124,7 @@ Competitions may be described by the following attributes:
 | category | The specific category for this event competition. | [Category](#category) |
 | entry requirements | Requirements to take part in the event.  | Text |
 | results | List with the results after the celebration of all rounds of the event.  | **[Results List](#results-lists)** |
+| unit Competition | Unit competition part of this parent competition.  | **[Unit Competition](#unit-competitions)** |
 | start list | List of competitors qualified to take part in competition. | **[Start List](#start-list)** |
 
 Depending on the kind of competition and discipline, competitions may be of different types.
@@ -171,9 +172,29 @@ A Multidiscipline Competition is a competition that incorporates a number of dif
 _Examples of multi stage competition are: London Summer Olympic Games 2012, and European Championships 2016._
 
 
-#### Timed Competitions
+#### Unit Competitions
 
-A Timed Competition is a competition where performances are measured as time. Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race.
+A Unit Competition is a unit of competition defined by a competition discipline rules. 
+
+_Examples of unit competition are specific could be: 100m Women Race in Heat 1 at Semifinals round._
+
+There are two subtypes of unit Competitions: [Unit Field Competition](#unit-field-competition), [Unit Field Competition](#unit-timed-competition).
+
+
+#### Unit Field Competitions
+
+Unit competitions in field events. 
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| trial round | A round of field trials within a unit competition. | [Trial Round](#trial-rounds) |
+| first trial round | The first round of field trials within a unit competition. | [Trial Round](#trial-rounds) |
+| last trial round | The last round of field trials within a unit competition. | [Trial Round](#trial-rounds) |
+
+
+#### Unit Timed Competitions
+
+Anit competition where performances are measured as time. Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race.
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
