@@ -111,7 +111,6 @@ Competitions may be described by the following attributes:
 | location | Venue where the event is held (for instance, Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | url | Webpage URL about the event. | URL |
 | image | Picture about the event. | URL |
-| logo | Logo of the event. | URL |
 | start date | Date and time when the event starts. | [Date and Time](#date,-time-and-periods) |
 | end date | Date and time when the event ends. | [Date and Time](#date,-time-and-periods) |
 | status | Status of the event (scheduled, completed, etc.) | [Event Status](#event-status) |
@@ -343,7 +342,7 @@ Example:
 
 ### Competition Rounds
 
-[Multi Stage Competitions](#multi-stage-competitions) are composed of several stages or rounds. Those stages in Athletics events can be also composed of different rounds (e.g., heats, finals, throwing trials) where competitors are distributed. Number and type of rounds depend on the competition rules for each discipline. For instance, track sprint competitions with many participants may have various heats at preliminary round, several heats at first round, two semifinals, and a final.
+[Multi Round Competitions](#multi-round-competitions) are composed of several rounds. Rounds in Athletics events can be also composed of unit competitions (e.g., heat, final race, throwing trials) where competitors are distributed. Number and type of rounds depend on the competition rules for each discipline. For instance, track sprint competitions with many participants may have various heats at preliminary round, several heats at first round, two semifinals, and a final.
 
 Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races.
 
