@@ -574,7 +574,7 @@ In addition to [Participation](#participation) properties, each *entry* of the r
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
+| recordf(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
 | timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-time-and-periods) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
 | status | Status of results. | [Result Status](#result-status) |
@@ -606,8 +606,7 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify the performance univocally. | Text |
 | wind assistance | Wind speed at the moment of registering the performance (it could be either positive or negative). | Text |
-| record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
-| best(s) | Flags indicating bests achieved after the competition round (e.g., Personal Best, Season Leader, etc.). | [Best](#bests) |
+| record(s) | Flags indicating records and bests achieved after the competition round (e.g., World Record, National Record, Personal Best, Season Leader, etc.). | [Record](#records) |
 
 
 There are different types of performance depending on the type of event: **Timed** events with results measured as time; **Lenght** events, measured as distance (Throws, Long Jump and Triple Jump); **Height** events, measured as height (Vertical Jumps); and **Combined** events, measured as score points (Decathlon, Heptathlon, etc.). So, this kind of performances are described by the following sub-classes:
@@ -708,7 +707,7 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | sponsor(s) | Athlete's sponsor(s). | [Person](#persons) or [Organization](#organizations) |
 | club(s) | Club(s) which the athlete is affiliated to. | **[Club](#club)** |
 | team(s) | Team(s) which the athlete is part of (for instance, a National Team). | **[Team](#teams)** |
-| best(s) | Athlete's best performances. | [Best](#bests) |  
+| records(s) | Athlete's records and best performances. | [Record](#records) |  
 
 
 Example:
@@ -751,7 +750,7 @@ Example:
            "http://example.com/federation:England_Athletics", 
            "http://example.com/federation:USATF" 
         ],
-    "bests" :
+    "records" :
         [
            "http://example.com/performance:0000122",
            "http://example.com/performance:0000124",
@@ -835,7 +834,7 @@ Teams may be described using the following attributes:
 | sponsor(s) | Sponsor(s) of the team. | [Person](#persons) or [Organization](#organizations) |
 | captain(s) | Athlete(s) who represents the team. | **[Athlete](#athletes)** |
 | coach(es) | Person(s) who acts as coach for the team. | **[Person](#persons)** |
-| best(s) | Best performances of the team (e.g., relay competitions). | [Best](#bests) |  
+| records(s) | Records and best performances of the team (e.g., relay competitions). | [Record](#record) |  
 | athlete(s) | Athlete(s) affiliated to the team. | **[Athlete](#athletes)** |
 
 
@@ -1180,7 +1179,7 @@ Records will be described by the type of record and the age-range category.
 | `=NJR` | Equal National Junior Record |
 
 
-### Bests 
+#### Bests 
 
 The concept of 'best' refers to athlete's personal achievements, without setting official records with the [Performances](#performances).
 
