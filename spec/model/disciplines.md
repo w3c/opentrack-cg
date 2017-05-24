@@ -76,7 +76,7 @@ Children: [Race](#race), [Throws](#throws), [Horizontal Jumps](#horizontal-jumps
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| time | Time in case of being a time-fixed competition (i.e., one hour, one day, etc.). | Time |
+| duration | Time in case of being a time-fixed competition (i.e., one hour, one day, etc.). | Time |
 
 ### Steeplechase
 
@@ -147,7 +147,7 @@ Children: [Race](#race), [Throws](#throws), [Horizontal Jumps](#horizontal-jumps
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| diameter | Discus diameter. | Distance |
+| discus diameter | Discus diameter. | Distance |
 
 ### Hammer Throw
 
@@ -155,7 +155,7 @@ Children: [Race](#race), [Throws](#throws), [Horizontal Jumps](#horizontal-jumps
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| length | Hammer length. | Distance |
+| hammer wire length | Hammer length. | Distance |
 
 ### Javelin Throw
 
@@ -163,7 +163,7 @@ Children: [Race](#race), [Throws](#throws), [Horizontal Jumps](#horizontal-jumps
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| length | Javelin length. | Distance |
+| javelin length | Javelin length. | Distance |
 
 ### Weight Throw
 
@@ -194,7 +194,7 @@ Children: [Race](#race), [Throws](#throws), [Horizontal Jumps](#horizontal-jumps
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| disciplines | Combined disciplines for this event. | [Discipline](#discipline) |
+| discipline | Combined disciplines for this event. | [Discipline](#discipline) |
 
 ### Pentathlon
 
