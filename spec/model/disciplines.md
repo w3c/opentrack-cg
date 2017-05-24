@@ -56,7 +56,7 @@ Children: [Race](#race), [Throws](#throws), [Horizontal Jumps](#horizontal-jumps
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| stadium type | Type of the stadium (indoor/outdoor). | Stadium Type |
+| venue type | Type of the stadium (indoor/outdoor). | Stadium Type |
 | name | Descriptive name of the discipline. | Text |
 
 ### Race
