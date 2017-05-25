@@ -61,7 +61,7 @@ In order to represent properly the model, the work was divided in two parts:
 
 * **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics events. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information. Both athletes and teams can be attached to [Clubs](#clubs) as organizations.
 
-* **[Athletics Federations](#athletics-federations)**. Sports governing bodies in charge of governing and rule Athletics in specific territories. [Athletics Federations](#athletics-federations) may be attached to other higher-level federations. **[Athletes](#athletes)**, **[Teams](#teams)**, and **[Clubs](#clubs) may be attached to federations. 
+* **[Athletics Federations](#athletics-federations)**. Sports governing bodies in charge of governing and rule Athletics in specific territories. [Athletics Federations](#athletics-federations) may be attached to other higher-level federations. **[Athletes](#athletes)**, **[Teams](#teams)**, and **[Clubs](#clubs)** may be attached to federations. 
 
 ### Athletics Competitions
 
@@ -82,7 +82,7 @@ The following UML diagram represents competition management in Athletics:
 
 * **[Performances](#performances)**. Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed). 
 
-* **[Field Trials](#field-trials)**. Each one of the attempts performed by athletes within a round of trials ([Trial Round](#trials-rounds)).  
+* **[Field Trials](#field-trials)**. Each one of the attempts performed by athletes within a round of trials ([Field Trials Round](#field-trials-rounds)).  
 
 
 ## Entities 
@@ -110,8 +110,8 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | height | Athlete's height. | [Distance](#distance) |
 | weight | Athlete's weight. | [Mass](#mass) |
 | nationality | Athlete's nationality. | [Country](#countries) |
-| date of birth | Date of birth. | [Date and Time](#date,-time-and-periods) |
-| date of death | Date of death. | [Date and Time](#date,-time-and-periods) |
+| date of birth | Date of birth. | [Date](#dates-and-time) |
+| date of death | Date of death. | [Date](#dates-and-time) |
 | birth place | Locality and country of birt (e.g. "Tallinn, Estonia") | Text |
 | federation(s) | Federation(s) which the athlete is attached to. | [Athletics Federation](#athletics-federations) |
 | coach(es) | Athlete's main coach(es). | [Person](#persons) |
@@ -190,8 +190,8 @@ Clubs may be described using the following attributes:
 | fax | Fax number(s) of the club | Text |
 | url | Club homepage URL. | URL |
 | nationality | Club's nationality. | [Country](#countries) |
-| dissolved | Date (and time) when the team was dissolved. | [Date and Time](#date,-time-and-periods) |
-| established | Date (and time) when the team was established. | [Date and Time](#date,-time-and-periods) |
+| dissolved | Date (and time) when the team was dissolved. | [Date](#dates-and-time) |
+| established | Date (and time) when the team was established. | [Date](#dates-and-time) |
 | federation(s) | Federation(s) which the club is attached to. | [Athletics Federation](#athletics-federations) |
 | sponsor(s) | Sponsor(s) of the club. | [Person](#persons) or [Organization](#organizations) |
 | team(s) | Teams(s) attached to this club. | **[Team](#teams)** |
@@ -396,8 +396,8 @@ Competitions may be described by the following attributes:
 | location | Venue where the event is held (for instance, Berlin Olympic Stadium). | [Venue](#venues) or Text |
 | url | Webpage URL about the event. | URL |
 | image | Picture about the event. | URL |
-| start date | Date and time when the event starts. | [Date and Time](#date,-time-and-periods) |
-| end date | Date and time when the event ends. | [Date and Time](#date,-time-and-periods) |
+| start date | Date and time when the event starts. | [Date](#dates-and-time) |
+| end date | Date and time when the event ends. | [Date](#dates-and-time) |
 | status | Status of the event (scheduled, completed, etc.) | [Event Status](#event-status) |
 | organizer(s) | Person(s) or organization(s) that organizes the event. | [Person](#persons) or [Organization](#organizations) |
 | contributor(s) | Person(s) or organization(s) that collaborates in the organization of the event. | [Person](#persons) or [Organization](#organizations) |
@@ -823,7 +823,7 @@ In addition to [Participation](#participation) properties, each *entry* of the r
 |:-------- |:----------- |:---------- |
 | rank | Position in the ranking. | Integer |
 | record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
-| timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-time-and-periods) |
+| timestamp | Exact date and time when the results were produced. | [Date and Time](#dates-and-time) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
 | status | Status of results. | [Result Status](#result-status) |
 | award | Award related to the result. | [Award](#awards) |
@@ -864,8 +864,8 @@ Apart from all properties of the parent class `Perfomance`, this entity includes
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| time | Official measure of the performance expressed as time. | [Date and Time](#date,-time-and-periods) |
-| reaction time | Reaction time of the athlete during a sprint event. | [Date and Time](#date,-time-and-periods) |
+| time | Official measure of the performance expressed as time. | [Time](#dates-and-time) |
+| reaction time | Reaction time of the athlete during a sprint event. | [Time](#dates-and-time) |
 
 Example:
 ```
@@ -913,7 +913,7 @@ Example:
 Most of the following definitions and values for this set of value schemas are extracted from the official [Technical Competition Rules](https://www.iaaf.org/about-iaaf/documents/rules-regulations) published by IAAF.
 
 
-### Date, Time and Periods
+### Dates and Time
 
 Dates and time will be represented using the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard. 
 
