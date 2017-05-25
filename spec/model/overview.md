@@ -1135,7 +1135,7 @@ The concept of 'best' refers to athlete's personal achievements, without setting
 
 We can identify several categories for Athletics events, depending on gender, age, type of venue, distance and type of event (e.g., 100m Hurdles Women and 110m Hurdles Men). Although events rules may vary for the same type of discipline (i.e., differences of shot weight depending on gender and/or age).
 
-See a [taxonomy of disciplines](./disciplines.md).
+Disciplines are modeled according to this [Athletics Disciplines](./disciplines.md) model.
 
 ### Roles
 
