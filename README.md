@@ -1,5 +1,7 @@
 # OpenTrack – Open Tools for Athletics
 
+![OpenTrack(&field)](spec/logo/opentrack_logo.svg)
+
 This is the repository for the [W3C OpenTrack Community Group](https://www.w3.org/community/opentrack/) to develop and document specifications and code related to **OpenTrack**, a set of tools to increase interoperability among systems managing information on athletics and sports in general. OpenTrack includes schemas and vocabularies to describe sports, as well as open source software that helps managing that kind of information.
 
 Through OpenTrack athletics entities around the world (sport clubs, federations, private event organizers, etc.) will be able to open the data contributing towards open data in sports. This will bring new business opportunities to third parties (developers, public bodies, private companies, citizens, academia). 
