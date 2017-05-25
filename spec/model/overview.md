@@ -511,9 +511,9 @@ Examples:
 [More use cases and examples](./examples).
 
 
-### Participation
+### Participation in Competition
 
-This entity models stages of the process of athletes taking part in events, from entries in [Start Lists](#start-lists) to [Results](#results).
+This entity models stages of the process of athletes taking part in events, from entries in [Results](#results) (and starting lists before the competition) to the participation in other stages of the competition such as rounds of trials.
 
 Participation of athletes may be described by the following properties:
 
@@ -526,43 +526,13 @@ Participation of athletes may be described by the following properties:
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | transponder identifier | Text or code identifying the competitor by a transponder. | Text |
 | in competition | Competition in which the competitor takes part. | [Athletics Competition](#athletics-competitions) |
-
-
-#### Start Lists
-
-Rounds of competitions have **start lists**. These lists are provided by officials and include an ordered set of competitors (athletes or teams) qualified to compete in the related heat or round. 
-
-In either a track or field  event, if an athlete makes an immediate oral protest against having been charged with a false start or a failure trial, the athlete may continue competing `under protest`.
-
-_Example of start list of Final round in 100m Women event:_
-![Example of start list](images/example_start_list.png)
-
-In addition to [Participation](#participation) properties, the *entries* of the [Start List](#start-lists) may include the following ones:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| startingOrder | Competitor's order in the start list. | Number |
-| lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
-
-
-Example:
-```
-{
-    "@id" : "http://example.org/entry:000211",
-    "@type" : "Entry",
-    "order" : "1",
-    "bibIdentifier" : "1",
-    "transponderIdentifier" : "1",
-    "lane" : 2,
-    "competitor" : "http://example.com/athlete:29383"
-}
-```
-[More use cases and examples](./examples).
+| starting order | Competitor's order in the start list. | Number |
+| track lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
 
 
 #### Results
 
-'Results' is an ordered list collecting the performances achieved by competitors after a concrete round or at the end of the event. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.). 
+'Results' is an ordered list of competitors and their achieved performances, before (start list), during, and after the event. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.). 
 
 In Combined Events, scores are calculated according to *Combined events scoring tables*.
 
@@ -574,7 +544,8 @@ In addition to [Participation](#participation) properties, each *entry* of the r
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| recordf(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
+| rank | Position in the ranking. | Integer |
+| record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
 | timestamp | Exact date and time when the results were produced. | [Date and Time](#date,-time-and-periods) |
 | performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
 | status | Status of results. | [Result Status](#result-status) |
