@@ -303,13 +303,12 @@ Federations are subclasses of [Organizations](#organizations), adding the follow
 | name | Name of a federation. | Text |
 | alternate name | An alias to name a federation. | Text |
 | address | Postal address where a federation is located. | [Postal Address](#postal-addresses) or Text |
-| logo | Logo of a federation. | URL |
 | email | Main email address of a federation. | Text |
 | url | Webpage URL about a federation. | URL |
 | telephone(s) | Main telephone number(s) of a federation. | Text |
-| area served | Spatial coverage of the federation, usually administrative areas (city, region, country, etc.) | [Territory and Country](#territories-and-countries) | 
-| member of | Higher-level federation(s) to which this federation is attached. | [Athletics Federation](#athletics-federations) | 
-| member(s) | Lower level organization(s) attached to this federation. | [Organization](#organization) | 
+| area served | Spatial coverage of a federation, usually administrative areas (city, region, country, etc.) | [Territory and Country](#territories-and-countries) | 
+| member of | Organization(s), such as higher-level federation(s), to which a federation is attached to. | [Organization](#organizations) | 
+| member(s) | Person(s) or organization(s) attached to a federation. | [Person](#persons) or [Organization](#organization) | 
 
 Example:
 ```
