@@ -37,7 +37,7 @@ url: URL
 nationality: Country
 coach: Person
 sponsor: Agent
-best: Performance</y:AttributeLabel>
+record: Performance</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>

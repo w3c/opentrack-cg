@@ -95,17 +95,18 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the person as athlete. | Text |
+| identifier | Unique character string to identify a person as an athlete. | Text |
 | name | Athlete's full name. | Text |
 | family name | Athlete's family name; surname. | Text |
 | given name | Athlete's given name; first name. | Text |
-| previous family name | Athlete's family name; surname. | Text |
-| previous given name | Athlete's given name; first name. | Text |
-| alternate name | An alias to name the athlete. | Text |
-| address | Main residence address of the athlete. | [Postal Address](#postal-addresses) or Text |
-| image | Picture of the athlete. | URL |
+| previous family name | Athlete's former family name; surname. | Text |
+| previous given name | Athlete's former given name; first name. | Text |
+| alternate name | An alias to name an athlete. | Text |
+| address | Main residence address of an athlete. | [Postal Address](#postal-addresses) or Text |
+| image | Picture of an athlete. | URL |
 | email | Email address. | Text |
-| url | Webpage URL about the athlete. | URL |
+| url | Webpage URL about an athlete. | URL |
+| award(s) | Award(s) and prize(s) given to an athlete. | Text |
 | gender | Athlete's gender. | [Gender](#gender) |
 | height | Athlete's height. | [Distance](#distance) |
 | weight | Athlete's weight. | [Mass](#mass) |
@@ -113,11 +114,11 @@ Athletes are **[Persons](#persons)** who participate in Athletics events. Athlet
 | date of birth | Date of birth. | [Date](#dates-and-time) |
 | date of death | Date of death. | [Date](#dates-and-time) |
 | birth place | Locality and country of birt (e.g. "Tallinn, Estonia") | Text |
-| federation(s) | Federation(s) which the athlete is attached to. | [Athletics Federation](#athletics-federations) |
+| federation(s) | Federation(s) which an athlete is attached to. | [Athletics Federation](#athletics-federations) |
 | coach(es) | Athlete's main coach(es). | [Person](#persons) |
 | sponsor(s) | Athlete's sponsor(s). | [Person](#persons) or [Organization](#organizations) |
-| club(s) | Club(s) which the athlete is affiliated to. | **[Club](#club)** |
-| team(s) | Team(s) which the athlete is part of (for instance, a National Team). | **[Team](#teams)** |
+| club(s) | Club(s) which the athlete is affiliated to. | [Club](#clubs) |
+| team(s) | Team(s) which the athlete is part of (for instance, a National Team). | [Team](#teams) |
 | records(s) | Athlete's records and best performances. | [Record](#records) |  
 
 
@@ -173,17 +174,17 @@ Example:
 
 ### Clubs
 
-An [Organization](#organizations) for [Athletes](#athletes). Clubs can create different [Teams](#teams) for specific competitions, such as leagues, relays, etc.  
+A **sports club**, **sport club** or **athletics club**, is an [Organization](#organizations) for [Athletes](#athletes) formed for the purpose of playing sports. Clubs may have different [Teams](#teams) created for specific competitions, such as leagues, relay races, etc. 
 
 Clubs may be described using the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the club. | Text |
-| name | Descriptive name of the club. | Text |
-| alternate name | An alias to name the club. | Text |
-| address | Main postal address where the club is registered or located. | [Postal Address](#postal-addresses) or Text |
-| image | Picture of the club. | URL |
+| identifier | Unique character string to identify a club. | Text |
+| name | Descriptive name of a club. | Text |
+| alternate name | An alias to name a club. | Text |
+| address | Main postal address where a club is registered or located. | [Postal Address](#postal-addresses) or Text |
+| image | Picture of a club. | URL |
 | logo | Logo or flag of the club. | URL |
 | email | Main email address of the club. | Text |
 | telephone | Telephone number(s) of the club | Text |
@@ -231,7 +232,7 @@ Teams may be described using the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the team. | Text |
+| identifier | Unique character string to identify a team. | Text |
 | name | Descriptive name of the team. | Text |
 | alternate name | An alias to name the team. | Text |
 | address | Main postal address where the team is registered or located. | [Postal Address](#postal-addresses) or Text |
@@ -333,7 +334,7 @@ There are some properties that will be used commonly to represent people:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the person. | Text |
+| identifier | Unique character string to identify a person. | Text |
 | name | Person's full name. | Text |
 | family name | Person's family name; surname. | Text |
 | given name | Person's given name; first name. | Text |
@@ -360,7 +361,7 @@ Organizations can be represented by the following properties:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the organization. | Text |
+| identifier | Unique character string to identify a organization. | Text |
 | name | Organization name. | Text |
 | alternate name | An alias to name the organization. | Text |
 | address | Postal address where the organization is located. | [Postal Address](#postal-addresses) or Text |
@@ -389,7 +390,7 @@ Competitions may be described by the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the competition. | Text |
+| identifier | Unique character string to identify a competition. | Text |
 | name | Descriptive name of the competition. | Text |
 | alternate name | An alias to name the competition. | Text |
 | description | About the competition. | Text |
@@ -498,7 +499,7 @@ Recurring Competitions may be described by the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the recurring competition. | Text |
+| identifier | Unique character string to identify a recurring competition. | Text |
 | name | Descriptive name of the recurring competition. | Text |
 | alternate name | An alias to name the recurring competition. | Text |
 | description | About the recurring competition. | Text |
@@ -527,7 +528,7 @@ Categories will be described by these following properties:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the category. | Text |
+| identifier | Unique character string to identify a category. | Text |
 | name | Name of the category (i.e., `Under 23 Men`, `Teachers`) | Text |
 | alternate name | Alternate name of the category (i.e., `M35`, `W35`) | Text |
 | description | Description and notes about the category. | Text |
@@ -561,7 +562,7 @@ Venues can be described by the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the venue. | Text |
+| identifier | Unique character string to identify a venue. | Text |
 | name | Descriptive name of the venue. | Text |
 | description | Descriptive text about the place. | Text |
 | address | Postal address related to the venue. | [Postal Address](#postal-addresses) or Text |
@@ -598,7 +599,7 @@ A postal address may be represented by some common properties:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the postal address. | Text |
+| identifier | Unique character string to identify a postal address. | Text |
 | name | Descriptive name of the place (e.g., Helsinki Olympic Stadium). | Text |
 | street address | The street address (e.g., Paavo Nurmen tie 1).  | Text |
 | locality | The locality (e.g., Helsinki). | Text |
@@ -671,7 +672,7 @@ Sometimes may be of interest gathering and representing information about device
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the timekeeping method. | Text |
+| identifier | Unique character string to identify a timekeeping method. | Text |
 | name | Name of the method used for timekeeping (i.e., `Hand Timing`, `Fully Automatic` or `Transponder System Timing`) | Text |
 | description | Description and notes about the method used for timekeeping. | Text |
 | device | Brand, model and features of the device/system used for timekeeping. | Text |
@@ -725,14 +726,14 @@ Instances of this entity are described by the following properties:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the round of trials. | Text |
+| identifier | Unique character string to identify a round of trials. | Text |
 | athlete | Athlete competing in this round of trials. | [Athlete](#athletes) or [Team](#teams) |
 | feature(s) | Set of features and notes included by officials for this round of trials  (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
 | protest status | Status of the protest action of the competitor. | [Protest Status](#protest-status) |
 | bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
 | transponder identifier | (Timed events) Text or code identifying the competitor by a transponder. | Text |
 | order | Competitor's order in the start list of this round. | Number |
-| round number | Number of the round of trials. | Number |
+| trials round number | Number identifying a round of trials in the competition (Rou) . | Number |
 | trial(s) | Athlete's attempt in this round of trials. | [Field Trial](#field-trials) |
 
 
@@ -755,7 +756,7 @@ Trials may be described by the following properties:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the trial. | Text |
+| identifier | Unique character string to identify a trial. | Text |
 | athlete | Athlete or team competing in this trials. | [Athlete](#athletes) or [Team](#teams) |
 | feature(s) | Set of features and notes included by officials for this attempt  (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
 | protest status | Status of the protest action of the competitor. | [Protest Status](#protest-status) |
@@ -796,7 +797,7 @@ Participation of athletes may be described by the following properties:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the entry in the list. | Text |
+| identifier | Unique character string to identify a entry in the list. | Text |
 | competitor | Athlete or team competing in this event. | [Athlete](#athletes) or [Team](#teams) |
 | feature(s) | Set of features and notes included by officials in the starting list or results (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
 | protest status | Status of the protest action of the competitor. | [Protest Status](#protest-status) |
@@ -851,7 +852,7 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify the performance univocally. | Text |
+| identifier | Unique character string to identify a performance univocally. | Text |
 | wind assistance | Wind speed at the moment of registering the performance (it could be either positive or negative). | Text |
 | record(s) | Flags indicating records and bests achieved after the competition round (e.g., World Record, National Record, Personal Best, Season Leader, etc.). | [Record](#records) |
 
