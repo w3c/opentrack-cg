@@ -61,7 +61,7 @@ In order to represent properly the model, the work was divided in two parts:
 
 * **[Competitors](#competitors)**. **[Athletes](#athletes)** or **[Teams](#teams)** that takes part in Athletics events. Athletes are defined by gender, age, nationality, affiliation to club and/or federation, and other personal information. Both athletes and teams can be attached to [Clubs](#clubs) as organizations.
 
-* **[Athletics Federations](#athletics-federations)**. Sports governing bodies in charge of governing and rule Athletics in specific territories. [Athletics Federations](#athletics-federations) may be attached to other higher-level federations. **[Athletes](#athletes)**, **[Teams](#teams)**, and **[Clubs](#clubs)** may be attached to federations. 
+* **[Federations](#federations)**. Sports governing bodies in charge of governing and rule Athletics in specific territories. [Federations](#federations) may be attached to other higher-level federations. **[Athletes](#athletes)**, **[Teams](#teams)**, and **[Clubs](#clubs)** may be attached to federations. 
 
 ### Athletics Competitions
 
@@ -114,7 +114,7 @@ An **Athlete** is a **[Person](#persons)** who participates in Athletics events.
 | date of birth | Date of birth. | [Date](#dates-and-time) |
 | date of death | Date of death. | [Date](#dates-and-time) |
 | birth place | Locality and country of birt (e.g. "Tallinn, Estonia") | Text |
-| federation(s) | Federation(s) which an athlete is attached to. | [Athletics Federation](#athletics-federations) |
+| federation(s) | Federation(s) which an athlete is attached to. | [Federation](#federations) |
 | coach(es) | Athlete's main coach(es). | [Person](#persons) |
 | sponsor(s) | Athlete's sponsor(s). | [Person](#persons) or [Organization](#organizations) |
 | club(s) | Club(s) which the athlete is affiliated to. | [Club](#clubs) |
@@ -192,7 +192,7 @@ Clubs may be described using the following attributes:
 | url | Club's homepage. | URL |
 | dissolved | Date when a team was dissolved. | [Date](#dates-and-time) |
 | established | Date when a team was established. | [Date](#dates-and-time) |
-| federation(s) | Federation(s) which a club is attached to. | [Athletics Federation](#athletics-federations) |
+| federation(s) | Federation(s) which a club is attached to. | [Federation](#federations) |
 | sponsor(s) | Sponsor(s) of a club. | [Person](#persons) or [Organization](#organizations) |
 | athlete(s) | Athlete(s) members of a club. | **[Athlete](#athletes)** |
 | team(s) | Teams(s) attached to a club. | **[Team](#teams)** |
@@ -236,7 +236,7 @@ Teams are considered as competitors and may be described using the following att
 | image | Picture of a team. | URL |
 | logo | Logo or flag of a team. | URL |
 | url | Webpage URL about a team. | URL |
-| federation(s) | Federation(s) which a team is attached to. | [Athletics Federation](#athletics-federations) |
+| federation(s) | Federation(s) which a team is attached to. | [Federation](#federations) |
 | nationality | Teams's nationality. | [Country](#countries) |
 | sponsor(s) | Sponsor(s) of a team. | [Person](#persons) or [Organization](#organizations) |
 | coach(es) | Person(s) who acts as coach for a team. | **[Person](#persons)** |
@@ -291,9 +291,9 @@ Example of national team:
 }
 ```
 
-### Athletics Federations
+### Federations
 
-A **Federation** is a special type of organization in charge of governing and rule the sport of athletics. These sports governing bodies may be attached to other higher-level federations, and have other sports organizations (clubs or other governing bodies) attached to them. 
+A **Federation** is a special type of organization in charge of governing and rule the sport of athletics. These **sports governing bodies** may be attached to other higher-level federations, and have other sports organizations (clubs or other governing bodies) attached to them. 
 
 Federations are subclasses of [Organizations](#organizations), adding the following:
 
@@ -329,10 +329,9 @@ Example:
 }
 ```
 
-
 ### Persons
 
-Person is a basic entity to represent any person (i.e., athlete, coach, organizer, etc.). 
+**Person** is a basic entity to represent any person. Every person may play one or more roles (i.e., athlete, coach, organizer, etc.). 
 
 There are some properties that will be used commonly to represent people:
 
@@ -342,11 +341,11 @@ There are some properties that will be used commonly to represent people:
 | name | Person's full name. | Text |
 | family name | Person's family name; surname. | Text |
 | given name | Person's given name; first name. | Text |
-| alternate name | An alias to name the person. | Text |
-| address | Main residence address. | [Postal Address](#postal-addresses) or Text |
-| image | Picture of the person. | URL |
-| email | Email address. | Text |
-| url | Webpage URL about him/her. | URL |
+| alternate name | An alias to name a person. | Text |
+| address | Main residence address of a person. | [Postal Address](#postal-addresses) or Text |
+| image | Picture of a person. | URL |
+| email | Email address of a person. | Text |
+| url | Webpage URL about a person. | URL |
 
 Example:
 ```
@@ -359,20 +358,20 @@ Example:
 
 ### Organizations
 
-This entity may represent any type of organization (i.e., private company, public body, association, etc.). 
+**Organization** is a basic entity to represent any type of organization (i.e., private company, public body, association, etc.). 
 
 Organizations can be represented by the following properties:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify a organization. | Text |
+| identifier | Unique character string to identify an organization. | Text |
 | name | Organization name. | Text |
-| alternate name | An alias to name the organization. | Text |
-| address | Postal address where the organization is located. | [Postal Address](#postal-addresses) or Text |
-| logo | Logo of the organization. | URL |
-| email | Main email address. | Text |
-| url | Webpage URL about the organization. | URL |
-| telephone(s) | Main telephone number(s) of the organization. | Text |
+| alternate name | An alias to name an organization. | Text |
+| address | Postal address where an organization is located. | [Postal Address](#postal-addresses) or Text |
+| logo | Logo of an organization. | URL |
+| email | Main email address of an organization. | Text |
+| url | Webpage URL about an organization. | URL |
+| telephone(s) | Main telephone number(s) of an organization. | Text |
 
 Example:
 ```
@@ -386,37 +385,42 @@ Example:
 
 ### Competitions
 
-Events where Athletics competitions are planed and held. These competitions, that can be part of a [Recurring Competition](#recurring-competitions), take place at a specific location during a concrete period of time. Athletics events may include one or several [Competitions](#competitions) of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fundraising road races or school races are also considered Athletics competitions.
+A **Sport Competition** is an event in which [Athletes](#athletes) take part in order to find out who is best at a particular sports activity.
 
-_Examples of Athletics competitions are: [IAAF World Championships London 2017](http://www.iaafworldchampionships.com), [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/), [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/), [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx), and [Summer Olympic Games Rio 2016](https://www.olympic.org/rio-2016/athletics)._ 
+Athletics [Competitions](#competitions) may be of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fundraising road races or school races are also considered as [Competitions](#competitions).
+
+Types of competitions:
+* [Recurring Competitions](#recurring-competitions). Series of competitions that have events periodically (e.g., [2016 Summer Olympic Games in Rio](https://www.olympic.org/rio-2016/athletics) as part of the Olympic Games held every four years);
+* [Multi Stage Competitions](#multi-stage-competitions), composed of a set of stages (e.g. leagues or tournaments such as [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/) and the [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/));
+* [Multi Round Competitions](multi-round-competitions), divided in a sequence of qualification rounds (e.g. 100m events that are divided in qualifying rounds, semifinals, final, etc.);
+* [Divisional Competitions](#divisional-competitions), split in different divisions (e.g., [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx) divided in different categories by gender and age range.);
+* [Multidiscipline Competitions](#multidiscipline-Competitions), composed of different disciplines (e.g., [IAAF World Championships London 2017](http://www.iaafworldchampionships.com)).
 
 Competitions may be described by the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify a competition. | Text |
-| name | Descriptive name of the competition. | Text |
+| name | Descriptive name of a competition. | Text |
 | alternate name | An alias to name the competition. | Text |
-| description | About the competition. | Text |
-| location | Venue where the event is held (for instance, Berlin Olympic Stadium). | [Venue](#venues) or Text |
-| url | Webpage URL about the event. | URL |
-| image | Picture about the event. | URL |
-| start date | Date and time when the event starts. | [Date](#dates-and-time) |
-| end date | Date and time when the event ends. | [Date](#dates-and-time) |
-| status | Status of the event (scheduled, completed, etc.) | [Event Status](#event-status) |
-| organizer(s) | Person(s) or organization(s) that organizes the event. | [Person](#persons) or [Organization](#organizations) |
-| contributor(s) | Person(s) or organization(s) that collaborates in the organization of the event. | [Person](#persons) or [Organization](#organizations) |
-| sponsor(s) | Person(s) or organization(s) that sponsors the event. | [Person](#persons) or [Organization](#organizations) |
-| attendee(s) | Person(s) who attends the event. | [Person](#persons) |
-| recurring competition | Recurring competition related to this. | [Recurring Competition](#recurring-competitions) |
-| discipline | Type of the Athletics event according to a defined taxonomy (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
-| category | The specific category for this event competition. | [Category](#category) |
-| entry requirements | Requirements to take part in the event.  | Text |
-| results | List with the results after the celebration of all rounds of the event.  | **[Results List](#results-lists)** |
-| unit Competition | Unit competition part of this parent competition.  | **[Unit Competition](#unit-competitions)** |
-| start list | List of competitors qualified to take part in competition. | **[Start List](#start-list)** |
-
-Depending on the kind of competition and discipline, competitions may be of different types.
+| description | Descriptive text about a competition. | Text |
+| location | Venue where a competition is held (for instance, Berlin Olympic Stadium). | [Place](#places) or Text |
+| url | Webpage URL about a competition. | URL |
+| image | Picture about a competition. | URL |
+| start date | Date and time when a competition starts. | [DateTime](#dates-and-time) |
+| end date | Date and time when a competition ends. | [DateTime](#dates-and-time) |
+| status | Status of a competition according to a enumeration of potential values (i.e., scheduled, completed, etc.) | [Event Status](#event-status) |
+| organizer(s) | Person(s) or organization(s) that organizes a competition. | [Person](#persons) or [Organization](#organizations) |
+| contributor(s) | Person(s) or organization(s) that collaborates in the organization of a competition. | [Person](#persons) or [Organization](#organizations) |
+| sponsor(s) | Person(s) or organization(s) that sponsors a competition. | [Person](#persons) or [Organization](#organizations) |
+| attendee(s) | Person(s) who attends a competition. | [Person](#persons) |
+| discipline | Type of an Athletics completition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
+| category | The specific category for a competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Category](#category) |
+| entry requirements | Requirements to take part in a competition.  | Text |
+| results | List with the results of the participation in a competition. There may be different results during the competition (start list, interemediate results, partial results, final results, etc.) .  | [Results List](#results-lists) |
+| unit competition | Unit competition that is part of a parent competition (e.g. every heat of a semifinal round in a 200m event).  | [Unit Competition](#unit-competitions) |
+| previous stage | Competition that is the previous stage of this event, within a [Multi Stage Competition](#multi-stage-competitions) (e.g. previous match in a league).  | [Competition](#competitions) |
+| next stage | Competition that is the next stage of this event, within a [Multi Stage Competition](#multi-stage-competitions) (e.g. next match in a league).  | [Competition](#competitions) |
 
 
 #### Multi Stage Competitions
@@ -495,7 +499,7 @@ Anit competition where performances are measured as time. Timed events have spec
 | timekeeping | Type of timekeeping used to control the competition.  | [Timekeeping](#timekeeping) |
 
 
-#### Recurring Competitions
+#### Recurring Competition
 
 Athletics competitions that are held periodically, such as the Summer Olympic Games.
 
@@ -507,6 +511,8 @@ Recurring Competitions may be described by the following attributes:
 | name | Descriptive name of the recurring competition. | Text |
 | alternate name | An alias to name the recurring competition. | Text |
 | description | About the recurring competition. | Text |
+| recurring competition | A competition that happens as a recurring event within a series of competitions (e.g., *London 2012*  *Olympic Games*) | [Competition](#competitions) |
+
 
 
 
