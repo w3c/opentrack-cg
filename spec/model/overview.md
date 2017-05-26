@@ -187,15 +187,14 @@ Clubs may be described using the following attributes:
 | image | Picture of a club. | URL |
 | logo | Logo or flag of the club. | URL |
 | email | Main email address of the club. | Text |
-| telephone | Telephone number(s) of the club | Text |
-| fax | Fax number(s) of the club | Text |
-| url | Club homepage URL. | URL |
-| nationality | Club's nationality. | [Country](#countries) |
-| dissolved | Date (and time) when the team was dissolved. | [Date](#dates-and-time) |
-| established | Date (and time) when the team was established. | [Date](#dates-and-time) |
-| federation(s) | Federation(s) which the club is attached to. | [Athletics Federation](#athletics-federations) |
-| sponsor(s) | Sponsor(s) of the club. | [Person](#persons) or [Organization](#organizations) |
-| team(s) | Teams(s) attached to this club. | **[Team](#teams)** |
+| telephone | Telephone number of a club | Text |
+| fax | Fax number of a club | Text |
+| url | Club's homepage. | URL |
+| dissolved | Date when a team was dissolved. | [Date](#dates-and-time) |
+| established | Date when a team was established. | [Date](#dates-and-time) |
+| federation(s) | Federation(s) which a club is attached to. | [Athletics Federation](#athletics-federations) |
+| sponsor(s) | Sponsor(s) of a club. | [Person](#persons) or [Organization](#organizations) |
+| team(s) | Teams(s) attached to a club. | **[Team](#teams)** |
 
 Example:
 ```
@@ -222,7 +221,6 @@ Example:
     "memberOf" :"http://example.com/federation:England_Athletics"
 }
 ```
-
 
 ### Teams
 
