@@ -68,7 +68,7 @@ In order to represent properly the model, the work was divided in two parts:
 The following UML diagram represents competition management in Athletics: 
 ![Competition Conceptual Model](images/competition_model.png)
 
-* **[Competitions](#competitions)**. Organized occasions where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These competions can be organized periodically ([Recurring Competitions](#recurring-competitions)), such as the Summer Olympic Games. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fundraising road races, etc.). Athletics competitions may divided in several [Competitions](#athletics-competitions) ([Divisional Competition](#divisional-competitions) such as [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women); they may include several stages ([Multi Stage Competitions](#multi-stage-competitions) like the Diamond League); also competitions may be composed of several disciplines ([Multi Discipline Competitions](#multidiscipline-competitions) are combined events such as Decathlon).
+* **[Competitions](#competitions)**. Organized occasions where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These competitions can be organized periodically ([Recurring Competitions](#recurring-competitions)), such as the Summer Olympic Games. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fund-raising road races, etc.). Athletics competitions may divided in several [Competitions](#athletics-competitions) ([Divisional Competition](#divisional-competitions) such as [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women); they may include several stages ([Multi Stage Competitions](#multi-stage-competitions) like the Diamond League); also competitions may be composed of several disciplines ([Multi Discipline Competitions](#multidiscipline-competitions) are combined events such as Decathlon).
 
 * **[Rounds](#rounds)**. Stages of Athletics competitions (e.g., qualifying rounds, semifinals, final, etc.) where competitors are distributed in groups. Rounds depend on the competition rules for each discipline, so there is a difference between rounds within timed events, and rounds in field events. Vertical jumps have different rules regarding rounds in field events.  
 
@@ -113,7 +113,7 @@ An **Athlete** is a **[Person](#persons)** who participates in Athletics events.
 | nationality | Athlete's nationality. | [Country](#countries) |
 | date of birth | Date of birth. | [Date](#dates-and-time) |
 | date of death | Date of death. | [Date](#dates-and-time) |
-| birth place | Locality and country of birt (e.g. "Tallinn, Estonia") | Text |
+| birth place | Locality and country of birth (e.g. "Tallinn, Estonia") | Text |
 | federation(s) | Federation(s) which an athlete is attached to. | [Federation](#federations) |
 | coach(es) | Athlete's main coach(es). | [Person](#persons) |
 | sponsor(s) | Athlete's sponsor(s). | [Person](#persons) or [Organization](#organizations) |
@@ -194,8 +194,8 @@ Clubs may be described using the following attributes:
 | established | Date when a team was established. | [Date](#dates-and-time) |
 | federation(s) | Federation(s) which a club is attached to. | [Federation](#federations) |
 | sponsor(s) | Sponsor(s) of a club. | [Person](#persons) or [Organization](#organizations) |
-| athlete(s) | Athlete(s) members of a club. | **[Athlete](#athletes)** |
-| team(s) | Teams(s) attached to a club. | **[Team](#teams)** |
+| athlete(s) | Athlete(s) members of a club. | [Athlete](#athletes) |
+| team(s) | Teams(s) attached to a club. | [Team](#teams) |
 
 Example:
 ```
@@ -239,10 +239,10 @@ Teams are considered as competitors and may be described using the following att
 | federation(s) | Federation(s) which a team is attached to. | [Federation](#federations) |
 | nationality | Teams's nationality. | [Country](#countries) |
 | sponsor(s) | Sponsor(s) of a team. | [Person](#persons) or [Organization](#organizations) |
-| coach(es) | Person(s) who acts as coach for a team. | **[Person](#persons)** |
+| coach(es) | Person(s) who acts as coach for a team. | [Person](#persons) |
 | records(s) | Records and best performances of a team (e.g., relay competitions). | [Record](#record) |  
-| captain(s) | Athlete(s) in charge of a team. | **[Athlete](#athletes)** |
-| athlete(s) | Athlete(s) affiliated to a team. | **[Athlete](#athletes)** |
+| captain(s) | Athlete(s) in charge of a team. | [Athlete](#athletes) |
+| athlete(s) | Athlete(s) affiliated to a team. | [Athlete](#athletes) |
 
 
 _Example of definition of a national team as competitor in a 4x100:_
@@ -382,6 +382,49 @@ Example:
 }
 ```
 
+### Category
+
+**Category** is a division that marks the competition of athletes and teams in sports events. Categories describe the potential **audience** of a sports event. Categories may include restrictions of gender, age range and other specific rules depending of the sports discipline. Examples of categories in Athletics are: *M35* (Men aged 35-39), *U23* (Under 23) Men, or *ad hoc* categories for non-official competitions such as *teachers* and *parents* in school sports. There is a predefined list of [standard categories](#age-and-sex-categories) recognized by international federations.
+
+Categories may be described by these following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify a category. | Text |
+| name | Name of a category (i.e., `Under 23 Men`, `Teachers`) | Text |
+| alternate name | Code used to identify a category (i.e., `M35`, `W35`) | Text |
+| description | Description and notes about a category. | Text |
+| gender | Gender of athletes involved in a category.  | [Competition Gender](#competition-gender) |
+| age range | Athletes' range of age to be eligible for a category.  | [Age Range](#age-range) or Text |
+| ruled by | Governing body that recognizes and rule the specific category.  | [Federation](#federations) |
+
+Example:
+```
+{
+    "@type" :  "Category",
+    "name" : "U18 Male",
+    "description" : "Boys under 18",
+    "gender" : "gender:Male",
+    "ageRange" : "age:U18",
+    "ruledBy" : "federation:IAAF"
+}
+
+```
+
+#### Recurring Competition
+
+A **Recurring Competition** is a series of competitions that are held periodically (for instance, the Summer Olympic Games have recurring events organized every four years).
+
+Recurring Competitions may be described by the following attributes:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify a recurring competition. | Text |
+| name | Descriptive name of a recurring competition. | Text |
+| alternate name | An alias to name a recurring competition. | Text |
+| description | About a recurring competition. | Text |
+| recurring competition | A competition that happens as a recurring event within a series of competitions (e.g., *London 2012*  *Olympic Games*) | [Competition](#competitions) |
+
 
 ### Competitions
 
@@ -414,10 +457,10 @@ Competitions may be described by the following attributes:
 | contributor(s) | Person(s) or organization(s) that collaborates in the organization of a competition. | [Person](#persons) or [Organization](#organizations) |
 | sponsor(s) | Person(s) or organization(s) that sponsors a competition. | [Person](#persons) or [Organization](#organizations) |
 | attendee(s) | Person(s) who attends a competition. | [Person](#persons) |
-| discipline | Type of an Athletics completition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
+| discipline | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
 | category | The specific category for a competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Category](#category) |
 | entry requirements | Requirements to take part in a competition.  | Text |
-| results | List with the results of the participation in a competition. There may be different results during the competition (start list, interemediate results, partial results, final results, etc.) .  | [Results List](#results-lists) |
+| results | List with the results of the participation in a competition. There may be different results during the competition (start list, intermediate results, partial results, final results, etc.) .  | [Results List](#results-lists) |
 | unit competition | Unit competition that is part of a parent competition (e.g. every heat of a semifinal round in a 200m event).  | [Unit Competition](#unit-competitions) |
 | previous stage | Competition that is the previous stage of this event, within a [Multi Stage Competition](#multi-stage-competitions) (e.g. previous match in a league).  | [Competition](#competitions) |
 | next stage | Competition that is the next stage of this event, within a [Multi Stage Competition](#multi-stage-competitions) (e.g. next match in a league).  | [Competition](#competitions) |
@@ -425,96 +468,89 @@ Competitions may be described by the following attributes:
 
 #### Multi Stage Competitions
 
-A multi stage competition is an athletic event organised as a set of stages. 
+Subclass of [Competition](#competitions).
 
-_Examples of multi stage competition are: The Diamond League, and the Surrey Cross Country League._
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| first stage | First stage of the multi stage competition. | [Competition](#competitions) |
-| last stage | Last stage of the multi stage competition. | [Competition](#competitions) |
-| stage | Stage of the multi stage competition. | [Competition](#competitions) |
-
-
-#### Multi Round Competitions
-
-A multi round competition is an athletic event organised as a sequence of qualification rounds.
-
-_Examples of multi round competition are field events._
+A **Multi Stage Competition** is an athletic event organised as a set of stages. For instance, The *Diamond League* and the *Surrey Cross Country League*.
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| first round | First round in the multi round competition. | [Competition Rounds](#competition-rounds) |
-| last round | Last round in the multi round competition. | [Competition Rounds](#competition-rounds) |
-| round | Round in the multi round competition. | [Competition Rounds](#competition-rounds) |
+| first stage | First stage of a multi stage competition. | [Competition](#competitions) |
+| last stage | Last stage of a multi stage competition. | [Competition](#competitions) |
+| stage | A stage within a multi stage competition. | [Competition](#competitions) |
 
 
 #### Divisional Competitions
 
-A Divisional Competition is a competition that is divided into a number of competitions. 
+Subclass of [Competition](#competitions).
 
-_Examples of multi stage competition are: London Summer Olympic Games 2012, and European Championships 2016._
+A **Divisional Competition** is a competition that is divided into a number of competitions. For instace, The Boston Marathon is divided in [two divisions](http://www.baa.org/races/boston-marathon/event-information/prize-money-and-awards.aspx): *Open/overall* division and *Masters* division.
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| division | Division of the competition. | [Competition](#competitions) |
+| division | Division of a competition. | [Competition](#competitions) |
 
 
 #### Multidiscipline Competitions
 
-A Multidiscipline Competition is a competition that incorporates a number of different event disciplines.
+Subclass of [Competition](#competitions).
 
-_Examples of multi stage competition are: London Summer Olympic Games 2012, and European Championships 2016._
+A **Multidiscipline Competition** is a competition that incorporates a number of different event disciplines. For instance, the 2012 London Summer Olympic Games 2012, and the 2016 European Athletics Championships.
+
+
+#### Multi Round Competitions
+
+Subclass of [Competition](#competitions).
+
+A **Multi Round Competition** is an athletic event organised as a sequence of rounds. For instance, track and field events are usually structured in qualification rounds (i.e, preliminary rounds, qualification rounds, semifinals and final).
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| first round | First round in a multi round competition. | [Competition Round](#competition-rounds) |
+| last round | Last round in a multi round competition. | [Competition Round](#competition-rounds) |
+| round | Round in a multi round competition. | [Competition Round](#competition-rounds) |
+
+
+#### Competition Rounds
+
+Subclass of [Competition](#competitions).
+
+A **Competition Round** is each sub-event of a [Multi Round Competition](#multi-round-competitions). Rounds in competitions have one of more [Unit Competitions](#unit-competitions) (e.g., a heat in a qualifying round, the race in the 200m final round) where competitors are distributed. The number and type of rounds depend on the competition rules for each discipline. For instance, track sprint competitions with many participants may have various heats at preliminary round, several heats at first round, two semifinals, and a final.
+
+Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races. Examples of **Competition Rounds**: 110m Hurdles Men **Preliminary Round Heat 1**, 10,000m Men **Final**, and 110 Hurdles Man **Semifinal 1**.
+
+Rounds are competitions that may be described also by the following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| qualification criteria | Requirements for a competitor to get to the next round in a [Multi Round Competition](#multi-round-competitions) (e.g., a preliminary round of qualification in track events may select a number of athletes by their performance and others by heat ranking). | [Qualification Criteria](#qualification-criteria) |
 
 
 #### Unit Competitions
 
-A Unit Competition is a unit of competition defined by a competition discipline rules. 
+Subclass of [Competition](#competitions).
 
-_Examples of unit competition are specific could be: 100m Women Race in Heat 1 at Semifinals round._
+A **Unit Competition** is a unitary competition defined by specific sports rules (for instance, the Heat 1 race at the semifinals of 100m event in the Olympic Games). [Competition Rounds](#competition-rounds) have one o more [Unit Competitions](#unit-competitions). 
 
-There are two subtypes of unit Competitions: [Unit Field Competition](#unit-field-competition), [Unit Field Competition](#unit-timed-competition).
-
-
-#### Unit Field Competitions
-
-Unit competitions in field events. 
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| trial round | A round of field trials within a unit competition. | [Field Trial Round](#field-trial-rounds) |
-| first trial round | The first round of field trials within a unit competition. | [Field Trial Round](#field-trial-rounds) |
-| last trial round | The last round of field trials within a unit competition. | [Field Trial Round](#field-trial-rounds) |
-
+There are two unit competition subtypes: 
+* [Unit Field Competition](#unit-field-competition), and
+* [Unit Timed Competition](#unit-timed-competition)
 
 #### Unit Timed Competitions
 
-Anit competition where performances are measured as time. Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race.
+Subclass of [Unit Competition](#unit-competitions).
+
+A **Unit Timed Competition** is a competitive event where performances are measured as time (i.e., races and legs in relay races). Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race.
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| start point | Place where the competition starts.  | [Place] |
-| finish point | Place where the competition finishes.  | [Place] |
-| course | Track of the competition.  | [GeoShape] |
-| timekeeping | Type of timekeeping used to control the competition.  | [Timekeeping](#timekeeping) |
-
-
-#### Recurring Competition
-
-Athletics competitions that are held periodically, such as the Summer Olympic Games.
-
-Recurring Competitions may be described by the following attributes:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify a recurring competition. | Text |
-| name | Descriptive name of the recurring competition. | Text |
-| alternate name | An alias to name the recurring competition. | Text |
-| description | About the recurring competition. | Text |
-| recurring competition | A competition that happens as a recurring event within a series of competitions (e.g., *London 2012*  *Olympic Games*) | [Competition](#competitions) |
+| start point | Place where a competition starts.  | [Place](#places) |
+| finish point | Place where a competition finishes.  | [Place](#places) |
+| course | Track with the course of a competition.  | GeoShape |
+| timekeeping | Type of timekeeping used to control a competition.  | [Timekeeping](#timekeeping) |
 
 
 
+**Examples of competitions:**
 
 _Example of competition model: 2016 European Championships, 100m Men._
 
@@ -527,238 +563,129 @@ _Example of competition model: 2016 European Championships Heptathlon (simplifie
 _Example of instances of the [Jaffa Ekiden Relay Race](http://events.ipswichjaffa.org.uk/ekiden-relays/), representing two different categories (senior and junior), including individual results for each relay leg and the overall results (for teams):_
 ![Ekiden race instances with two categories](images/instances_relays_ekiden.png)
 
-
-### Category
-
-Division that marks the competition of athletes and teams in events. Categories may include gender, age range and specific rules depending of the event.  
-
-_Examples of categories are: *M35* (Men aged 35-39), *U23* (Under 23) Men, or *ad hoc* categories for non-official competitions such as *teachers* and *parents* in school sports._     
-
-Categories will be described by these following properties:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify a category. | Text |
-| name | Name of the category (i.e., `Under 23 Men`, `Teachers`) | Text |
-| alternate name | Alternate name of the category (i.e., `M35`, `W35`) | Text |
-| description | Description and notes about the category. | Text |
-| gender | Gender of athletes involved this category.  | [Competition Gender](#competition-gender) |
-| age range | Athletes' range of age to be eligible for this category.  | [Age Range](#age-range) or Text |
-| ruled by | Federation that rules this specific category.  | [Federation](#federations) |
-
-
-Example:
-```
-{
-    "@type" :  "Category",
-    "name" : "U18 Male",
-    "description" : "Boys under 18",
-    "gender" : "gender:Male",
-    "ageRange" : "age:U18",
-    "ruledBy" : "federation:IAAF"
-}
-
-```
-
-There is a predefined list of [standard categories](#age-and-sex-categories).
-
-
-### Venues
-
-**Places** where events and competitions are held. Events may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). 
-
-
-Venues can be described by the following attributes:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify a venue. | Text |
-| name | Descriptive name of the venue. | Text |
-| description | Descriptive text about the place. | Text |
-| address | Postal address related to the venue. | [Postal Address](#postal-addresses) or Text |
-| url | Webpage URL about the venue. | URL |
-| image | Picture about the venue. | URL |
-| geo | Coordinates of the venue. | Text |
-| map | URL to a map pointing to the venue. | URL |
-| telephone(s) | Telephone number(s) of the venue. | Text |
-| fax number | Fax number of the venue. | Text |
-| type | Type of the venue. | **[Venue Type](#venue-type)** |
-
-Example:
-```
-{
-    "@id" : "http://example.com/venue:0001",
-    "@type" : "Venue",                
-    "name" : "Olympic Stadium Amsterdam",
-    "geo" : 
-        {
-            "latitude" : "52.343417",
-            "longitude" : "4.854192"
-        },
-    "map" : "http://example.org/map",
-    "address" : "http://example.org/postaladdress:0001"
-}
-```
-
-See [RunTrack Directory](http://www.runtrackdir.com/details.asp?track=london-nh)
-
-
-### Postal Addresses
-
-A postal address may be represented by some common properties:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify a postal address. | Text |
-| name | Descriptive name of the place (e.g., Helsinki Olympic Stadium). | Text |
-| street address | The street address (e.g., Paavo Nurmen tie 1).  | Text |
-| locality | The locality (e.g., Helsinki). | Text |
-| post office box number | The post office box number for PO box addresses. | Text |
-| postal code | The postal code (e.g., 00250)| Text |
-| country | The country (e.g., Finland). | [Country](#countries) |
-
-
-Example:
-```
-{
-    "@id" : "http://example.org/postaladdress:0001",
-    "@type" : "PostalAddress",
-    "streetAddress" : "Olympisch Stadion 2",
-    "addressLocality" : "Amsterdam",
-    "postalCode" : "1076 DE",
-    "addressCountry" : "country:NL"
-}
-```
-
-
-### Competition Rounds
-
-[Multi Round Competitions](#multi-round-competitions) are composed of several rounds. Rounds in Athletics events can be also composed of unit competitions (e.g., heat, final race, throwing trials) where competitors are distributed. Number and type of rounds depend on the competition rules for each discipline. For instance, track sprint competitions with many participants may have various heats at preliminary round, several heats at first round, two semifinals, and a final.
-
-Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races.
-
-_Examples of Competition rounds are: 110m Hurdles Men **Preliminary Round Heat 1**, 10,000m Men **Final**, and 110 Hurdles Man **Semifinal 1**._  
-
-Rounds in **Field events** include [Field Trials Rounds](#field-trials-rounds), where each athlete have several attempts to achieve the best performance. Depending on the discipline and the number of competitors, the number of trials varies. Athletes will be credited with their best valid performances after the rounds of trials. 
-
-Rounds are competitions that may be described also by the following properties:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| qualification criteria | Details what a competitor has to do to get to the next round. | [Qualification Criteria](#qualification-criteria) |
-
 _Example of model for competition rounds at 100m Men - European Championships:_
 ![Example of model for competition (100m at European Championships)](images/instances_competition_european_champs_100.png)
 
-#### Qualification Criteria
 
-Requirements for the competitor to pass the round. Qualification may be based on the *finishing position* or by *best time*.
+#### Unit Field Competitions
 
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| timekeeping | Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
-| description | Descriptive text of the qualification criteria. | Text |
-| by place or standard | Number of competitors that are qualified in a round by rank (track events) or standard (field events). | Text |
-| by performance | Number of competitors that are qualified in a round by best performance. | Text |
+Subclass of [Unit Competition](#unit-competitions).
 
-Example:
-```
-{ 
-    "@type" : "QualificationCriteria",
-    "description" : "First 3 in each heat (Q) and 2 best performers (q) advance to the Final",
-    "byPlaceOrStandard" : 3,
-    "byPerformance" : 2
-}
-```
-
-##### Timekeeping
-
-There are three alternative methods of timekeeping, recognised as official by IAAF:
-- **Hand Timing** (`HT`) – Hand Timing is usually given to 0.1 seconds (average the different timekeepers and rounded up);
-- **Fully Automatic Timing** (`FAT`), obtained from a Photo Finish System (FAT usually given to 0.01 seconds);
-- **Transponder System Timing**. Automatic timing provided by radio signal devices. Road races use a variety of chip timing systems, precision is less important than recording thousands of people easily in the right order. 
-
-Sometimes may be of interest gathering and representing information about devices and the specific conditions of timekeeping. Thus, timekeeping is represented by the following properties:
+A **Unit Field Competition** is a unitary competition in field events (for instance, one group of the semifinals in a High Jump event).
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify a timekeeping method. | Text |
-| name | Name of the method used for timekeeping (i.e., `Hand Timing`, `Fully Automatic` or `Transponder System Timing`) | Text |
-| description | Description and notes about the method used for timekeeping. | Text |
-| device | Brand, model and features of the device/system used for timekeeping. | Text |
-
-Example:
-```
-{
-    "@id" :  "http://example.com/timekeeping:0001",
-    "@type" :  "Timekeeping",
-    "name" : "Transponder Based System",
-    "description" : "Fully automatic timekeeping system based on RFID transponders",
-    "device" : "RFID System – Brand and model"
-}
-```
+| trial round | A round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-rounds) |
+| first trials round | The first round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-rounds) |
+| last trials round | The last round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-rounds) |
 
 
-### Unit Field Competitions
+#### Unit Field Competitions
 
-Unit Competitions in field events have a specific structure based on rounds of trials. 
+Subclass of [Unit Competition](#unit-competitions).
 
-Field rounds and trails highlighted on a control card for Distance Field Events:
+**Unit Field Competitions** are unitary competitions for field disciplines. These competitions have a specific structure based on rounds of trials or attempts ([Field Trials Rounds](#field-trials-rounds)). 
+
+There are two different types of Unit Field Competitions:
+
+* [Unit Height Competition](#unit-height-competition); and
+* [Unit Distance Competition](#unit-distance-competition).
+
+
+##### Unit Height Competition
+
+Subclass of [Unit Field Competition](#unit-field-competitions).
+
+A **Unit Height Competition** is a unitary competition for height disciplines (**Vertical Jumps**). 
+
+_Example of rounds of trials and attempts highlighted on a control card for a Height Competition (High Jump):_
+![Example of height card](images/example_height_card_concepts.png)
+
+Unit Height Competitions must specify specific information about the height of the bar before the competition starts.
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| starting height | The starting height the bar is raised at the start of a vertical jumps unit competition. | [Distance](#distance) |
+| increasing height | The subsequent heights to which the bar will be raised at the end of each round of trials within a vertical jumps unit competition. | Text |
+
+_Example of model of rounds for the distance card shown in the previous example (High Jump):_
+![Rounds of trials for a heat within a High Jump competition](images/instances_field_rounds_highjump.png)
+
+
+##### Unit Distance Competition
+
+Subclass of [Unit Field Competition](#unit-field-competitions).
+
+A **Unit Distance Competition** is a unitary competition for distance field disciplines (**Horizontal Jumps and Throws**). 
+
+_Example of field rounds and trials highlighted on a control card for Distance Field Events (a Javelin Throw Competition):_
 ![Example of distance card](images/example_distance_card_concepts.png)
 
 _Example of representation of the previous example of Javelin Throw Competition:_
 ![Rounds of trials for a heat within a Javelin Throw competition](images/instances_field_rounds_javelin.png)
 
 
-#### Vertical Jumps Rounds
-
-Field rounds and trails highlighted on a control card for Vertical Jumps Events:
-![Example of height card](images/example_height_card_concepts.png)
-
-
-Rounds of trials in Unit Vertical Jumps (height) Competitions include also specific information about height of the bar.
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| starting height | (Vertical jumps) The starting height the bar is raised at the start of the round. | [Distance](#distance) |
-| increasing height | (Vertical jumps) The subsequent heights to which the bar will be raised at the end of each round of trials. | Text |
-
-
-_Example of model of rounds for the distance card shown in the previous example (High Jump):_
-![Rounds of trials for a heat within a High Jump competition](images/instances_field_rounds_highjump.png)
-
-
 ### Field Trials Rounds
 
-**Field events** rounds are composed of **rounds of trials** that are performed by each athlete. Rounds of trials a subclass of [Competition Rounds](#competition-rounds).
+Subclass of [Participation](#participation).
 
-Instances of this entity are described by the following properties:
+**Field Trials Rounds** are rounds of attempts ([Trials](#trials)) performed by each athlete in a unit competition. 
+
+Instances of Field Trials Rounds are described by the following properties:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify a round of trials. | Text |
-| athlete | Athlete competing in this round of trials. | [Athlete](#athletes) or [Team](#teams) |
-| feature(s) | Set of features and notes included by officials for this round of trials  (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
-| protest status | Status of the protest action of the competitor. | [Protest Status](#protest-status) |
-| bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
-| transponder identifier | (Timed events) Text or code identifying the competitor by a transponder. | Text |
-| order | Competitor's order in the start list of this round. | Number |
-| trials round number | Number identifying a round of trials in the competition (Rou) . | Number |
-| trial(s) | Athlete's attempt in this round of trials. | [Field Trial](#field-trials) |
+| trials round number | Correlative integer identifying a round of trials in the competition. | Number |
+| competitor | Athlete competing in a round of trials. | [Athlete](#athletes) |
+| feature(s) | Set of features and notes included by officials for a round of trials  (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | [Start Lists and Results](#start-lists-and-results) |
+| protest status | Status of the protest action of the competitor during the competition. | [Protest Status](#protest-status) |
+| bib identifier | Text or number identifying the participation of a competitor, printed on the bib. | Text |
+| transponder identifier | Text or code identifying a competitor by a transponder during the participation in the competition. | Text |
+| starting order | Competitor's order in the start list of a round or trials. | Number |
+| trial(s) | Athlete's attempt(s) in a round of trials. | [Field Trial](#field-trials) |
+| first trial | Athlete's first attempt in a round of trials. | [Field Trial](#field-trials) |
+| last trial | Athlete's last attempt in a round of trials. | [Field Trial](#field-trials) |
+| next trials round | The next round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-rounds) |
+| previous trials round | The previous round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-rounds) |
+
+Field Trials Rounds have two subclasses:
+
+* [Height Trial Round](#height-trial-rounds) (for Vertical Jumps), and
+* [Distance Trial Round](#distance-trial-rounds) (for Horizontal Jumps and Throws).
 
 
-#### Vertical Jumps Trials Rounds
+#### Height Trials Rounds
 
-In **Vertical Jumps** the **rounds of trials** include the height the athlete is attempting. 
+Subclass of [Field Trial Round](#field-trial-rounds).
+
+A **Height Trials Round** is a round of athlete's attempts in **Vertical Jumps**. In this type of rounds, athletes attempt jumping or vaulting a specific height. 
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| current height | The target height the bar is raised for this round. | [Distance](#distance) |
+| height | The target height the bar is raised in a round. | [Distance](#distance) |
+| trial round | A round of field trials within a height trials round. | [Height Trials Round](#height-trials-rounds) |
+| first trials round | The first round of field trials within a height trials round. | [Field Trials Round](#field-trials-rounds) |
+| last trials round | The last round of field trials within a height trials round. | [Field Trials Round](#field-trials-rounds) |
+
+
+#### Distance Trials Rounds
+
+Subclass of [Field Trial Round](#field-trial-rounds).
+
+A **Distance Trials Round** is a round of attempts for each competitor in a distance field competition (Horizontal Jumps and Throws).
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| height | The target height the bar is raised for a trials round. | [Distance](#distance) |
 
 
 ### Field Trials
 
-**Field events** are composed of **rounds of trials**, where the number of trials is variable. Except for Vertical Jumps, each competitor only will have no more than one trial recorded in any one round of trials of the competition. Anyway, all trials belonging to rounds of trials will have the same structure, independently of the discipline.
+
+A **Field Trial** is an individual unitary attempt in field competitions. 
+
+Except for Vertical Jumps, each competitor only will have no more than one trial recorded in any one round of trials of the competition. Anyway, all trials belonging to rounds of trials will have the same structure, independently of the discipline.
 
 Except in Vertical Jumps, a valid trial shall be indicated by the measurement taken. For the standard abbreviations and symbols to be used in all other cases see [Start lists and results](#Start lists and results). A *´substitute´* trial is given in case an athlete is hampered in a trial or it cannot be correctly recorded.
 
@@ -767,15 +694,11 @@ Trials may be described by the following properties:
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify a trial. | Text |
-| athlete | Athlete or team competing in this trials. | [Athlete](#athletes) or [Team](#teams) |
-| feature(s) | Set of features and notes included by officials for this attempt  (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
-| protest status | Status of the protest action of the competitor. | [Protest Status](#protest-status) |
-| bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
-| attempt | Number indicating the correlative number of the attempt. | Number |
-| performance | Performance achieved in case the trial was valid. | [Performance](#performances) |
+| attempt | Number indicating the correlative number of attempts in a round of trials. | Number |
+| performance | Performance achieved in case a trial was valid. | [Performance](#performances) |
 | valid | Flag indicating if the trial was valid or not (failure) | Boolean |
 | is substitute | Flag indicating if the trial is a *substitute* trial. | Boolean |
-| in round | Field round where the trial belongs to . | [Field Trials Rounds](#field-trials-rounds) |
+| in round | Field round where a trial belongs to . | [Field Trials Rounds](#field-trials-rounds) |
 
 Examples:
 ```
@@ -799,45 +722,40 @@ Examples:
 ```
 
 
-### Participation in Competition
+### Participation
 
-This entity models stages of the process of athletes taking part in events, from entries in [Results](#results) (and starting lists before the competition) to the participation in other stages of the competition such as rounds of trials.
 
-Participation of athletes may be described by the following properties:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify a entry in the list. | Text |
-| competitor | Athlete or team competing in this event. | [Athlete](#athletes) or [Team](#teams) |
-| feature(s) | Set of features and notes included by officials in the starting list or results (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
-| protest status | Status of the protest action of the competitor. | [Protest Status](#protest-status) |
-| bib identifier | Text or number identifying the competitor, printed on the bib. | Text |
-| transponder identifier | Text or code identifying the competitor by a transponder. | Text |
-| in competition | Competition in which the competitor takes part. | [Competition](#competitions) |
-| starting order | Competitor's order in the start list. | Number |
-| track lane | Track lane number assigned to the competitor in case of certain track disciplines. | Number |
+**Participation** models stages of the process of athletes taking part in events, from entries in [Results](#results) (and starting lists before the competition) to the participation in other stages of the competition such as rounds of trials.
 
 
 #### Results
 
-'Results' is an ordered list of competitors and their achieved performances, before (start list), during, and after the event. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.). 
+**Results** is an ordered list of competitors and their achieved performances, before (start list), during, and after the event. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.). 
 
-In Combined Events, scores are calculated according to *Combined events scoring tables*.
+In *Combined Events*, scores are calculated according to *combined events scoring tables*.
 
 _Example of results after the Final round in 100m Women event:_
-
 ![Example of results](images/example_results.png)
 
-In addition to [Participation](#participation) properties, each *entry* of the results list may include the following ones:
+Each *entry* of the results list may include the following properties:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| rank | Position in the ranking. | Integer |
-| record(s) | Flags indicating records achieved after the competition round (e.g., World Record, National Record, etc.). | [Record](#records) |
+| identifier | Unique character string to identify an entry in the list of results. | Text |
+| competitor | Athlete or team competing in an event. | [Athlete](#athletes) or [Team](#teams) |
+| feature(s) | Set of features and notes included by officials in a starting list or results (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
+| protest status | Status of the protest action of the competitor at a stage of the competition. | [Protest Status](#protest-status) |
+| bib identifier | Text or number printed on the bib, identifying a competitor during the competition. | Text |
+| transponder identifier | Text or code identifying a competitor by a transponder. | Text |
+| in competition | Competition in which a competitor takes part. | [Competition](#competitions) |
+| starting order | Competitor's order in the start list of a competition stage. | Number |
+| track lane | Track lane number assigned to a competitor in case of certain track disciplines. | Number |
+| rank | Position in the ranking of results. | Integer |
+| record(s) | Flags indicating records or best performances achieved after the competition competition (e.g., World Record, National Record, etc.). | [Record](#records) |
 | timestamp | Exact date and time when the results were produced. | [Date and Time](#dates-and-time) |
-| performance | Measure to quantify the performance of the competitor after the round and/or heat.  | **[Performance](#performances)** |
-| status | Status of results. | [Result Status](#result-status) |
-| award | Award related to the result. | [Award](#awards) |
+| performance | Measure to quantify the performance of the competitor after a competition stage.  | [Performance](#performances) |
+| status | Status of results (e.g., official, intermediate, etc.). | [Result Status](#result-status) |
+| award | Award related to the result achieved by the athlete. | [Award](#awards) |
 
 Example:
 ```
@@ -855,28 +773,31 @@ Example:
 
 ### Performances
 
-Performance represent the resulting competitor's accomplishment measured and recognized by officials after a competition round/heat. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind assistance).
+**Performance** represents the resulting competitor's accomplishment measured and recognized by officials after a competition. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind assistance).
 
 _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performance is: **11.09 (seconds), +0.6 (m/s wind assistance), setting a new CR record** at 100m Women Final._  
 
-
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify a performance univocally. | Text |
+| identifier | Unique character string to identify a performance. | Text |
 | wind assistance | Wind speed at the moment of registering the performance (it could be either positive or negative). | Text |
 | record(s) | Flags indicating records and bests achieved after the competition round (e.g., World Record, National Record, Personal Best, Season Leader, etc.). | [Record](#records) |
+| competitor | Athlete or team that achieved the performance. | [Athlete](#athletes) or [Team](#teams) |
 
+There are different types of performance depending on the type of event: **Timed** events with results measured as time; **Lenght** events, measured as distance (Throws, Long Jump and Triple Jump); **Height** events, measured as height (Vertical Jumps); and **Combined** events, measured as score points (Decathlon, Heptathlon, etc.). So, performances are described by the following sub-classes:
 
-There are different types of performance depending on the type of event: **Timed** events with results measured as time; **Lenght** events, measured as distance (Throws, Long Jump and Triple Jump); **Height** events, measured as height (Vertical Jumps); and **Combined** events, measured as score points (Decathlon, Heptathlon, etc.). So, this kind of performances are described by the following sub-classes:
+* [Time Performance](#time-performance),
+* [Points Performance](#points-performance), and
+* [Distance Performance](#distance-performance).
 
 #### Time Performance
 
-Apart from all properties of the parent class `Perfomance`, this entity includes:
+Apart from all properties of the parent class `Performance`, this entity includes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| time | Official measure of the performance expressed as time. | [Time](#dates-and-time) |
-| reaction time | Reaction time of the athlete during a sprint event. | [Time](#dates-and-time) |
+| time | Official measure of a performance expressed as time. | [Time](#dates-and-time) |
+| reaction time | Reaction time of an athlete during a sprint event. | [Time](#dates-and-time) |
 
 Example:
 ```
@@ -888,11 +809,11 @@ Example:
 
 #### Points Performance
 
-Apart from all properties of the parent class `Perfomance`, this entity includes:
+Apart from all properties of the parent class `Performance`, this entity includes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| points | Official measure of the performance expressed as score points. | Number |
+| points | Official measure of a performance expressed as score points. | Number |
 
 Example:
 ```
@@ -903,17 +824,133 @@ Example:
 
 #### Distance Performance
 
-Apart from all properties of the parent class `Perfomance`, this entity includes:
+Apart from all properties of the parent class `Performance`, this entity includes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| points | Official measure of the performance expressed as distance. | [Distance](#distance) |
+| points | Official measure of a performance expressed as distance. | [Distance](#distance) |
 
 Example:
 ```
 {
     "distance" : "56 m"
 }                                        
+```
+
+### Qualification Criteria
+
+**Qualification Criteria** are the requirements for the competitor to pass the round. Qualification may be based on the *finishing position* or by *best time*.
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| timekeeping | Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
+| description | Descriptive text of the qualification criteria. | Text |
+| by place or standard | Number of competitors that are qualified in a round by rank (track events) or standard (field events). | Text |
+| by performance | Number of competitors that are qualified in a round by best performance. | Text |
+
+Example:
+```
+{ 
+    "@type" : "QualificationCriteria",
+    "description" : "First 3 in each heat (Q) and 2 best performers (q) advance to the Final",
+    "byPlaceOrStandard" : 3,
+    "byPerformance" : 2
+}
+```
+
+
+### Timekeeping
+
+**Timekeeping** is the process and mechanism of timing events. 
+
+There are three alternative methods of timekeeping, recognised as official by IAAF:
+- **Hand Timing** (`HT`) – Hand Timing is usually given to 0.1 seconds (average the different timekeepers and rounded up);
+- **Fully Automatic Timing** (`FAT`), obtained from a Photo Finish System (FAT usually given to 0.01 seconds);
+- **Transponder System Timing**. Automatic timing provided by radio signal devices. Road races use a variety of chip timing systems, precision is less important than recording thousands of people easily in the right order. 
+
+Sometimes may be of interest gathering and representing information about devices and the specific conditions of timekeeping. Thus, timekeeping is represented by the following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify a timekeeping method. | Text |
+| name | Name of a method used for timekeeping (i.e., `Hand Timing`, `Fully Automatic` or `Transponder System Timing`) | Text |
+| description | Description and notes about the method used for timekeeping. | Text |
+| device | Brand, model and features of the device/system used for timekeeping. | Text |
+
+Example:
+```
+{
+    "@id" :  "http://example.com/timekeeping:0001",
+    "@type" :  "Timekeeping",
+    "name" : "Transponder Based System",
+    "description" : "Fully automatic timekeeping system based on RFID transponders",
+    "device" : "RFID System – Brand and model"
+}
+```
+
+### Places
+
+**Places** are those venues of territories where events are held. Events may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). Federations may cover specific Administrative Areas.
+
+
+Venues can be described by the following attributes:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify a venue. | Text |
+| name | Descriptive name of a venue. | Text |
+| description | Descriptive text about a place. | Text |
+| address | Postal address related to a venue. | [Postal Address](#postal-addresses) or Text |
+| url | Webpage URL about a venue. | URL |
+| image | Picture about a venue. | URL |
+| geo | Coordinates of a venue. | Text |
+| map | URL to a map pointing to a venue. | URL |
+| telephone(s) | Telephone number(s) of a venue. | Text |
+| fax number | Fax number of a venue. | Text |
+
+Example:
+```
+{
+    "@id" : "http://example.com/venue:0001",
+    "@type" : "Place",                
+    "name" : "Olympic Stadium Amsterdam",
+    "geo" : 
+        {
+            "latitude" : "52.343417",
+            "longitude" : "4.854192"
+        },
+    "map" : "http://example.org/map",
+    "address" : "http://example.org/postaladdress:0001"
+}
+```
+
+See [RunTrack Directory](http://www.runtrackdir.com/details.asp?track=london-nh).
+
+
+### Postal Addresses
+
+A postal address may be represented by some common properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify a postal address. | Text |
+| name | Descriptive name of the place (e.g., Helsinki Olympic Stadium). | Text |
+| street address | The street address (e.g., Paavo Nurmen tie 1).  | Text |
+| locality | The locality (e.g., Helsinki). | Text |
+| post office box number | The post office box number for PO box addresses. | Text |
+| postal code | The postal code (e.g., 00250)| Text |
+| country | The country (e.g., Finland). | [Country](#countries) |
+
+Example:
+```
+{
+    "@id" : "http://example.org/postaladdress:0001",
+    "@type" : "PostalAddress",
+    "streetAddress" : "Olympisch Stadion 2",
+    "addressLocality" : "Amsterdam",
+    "postalCode" : "1076 DE",
+    "addressCountry" : "country:NL"
+}
 ```
 
 *******
@@ -1058,7 +1095,7 @@ Athletics events may have a property to represent the states that they may be in
 | `Interrupted` | Competition interrupted once in progress (`halted` in SportsML). | 
 | `Getting Ready` | The start of the competition is imminent |
 | `Finished` | Competition is over and no more action will happen on the field of play (last competitor finished). (`post-event` in SportsML) |
-| `Cancelled` | Competition will not take place (`suspended`, `canceled`, `discarded` in SportsML) |
+| `Cancelled` | Competition will not take place (`suspended`, `cancelled`, `discarded` in SportsML) |
 
 
 ### Records 
@@ -1146,7 +1183,7 @@ The concept of 'best' refers to athlete's personal achievements, without setting
 
 We can identify several categories for Athletics events, depending on gender, age, type of venue, distance and type of event (e.g., 100m Hurdles Women and 110m Hurdles Men). Although events rules may vary for the same type of discipline (i.e., differences of shot weight depending on gender and/or age).
 
-Disciplines are modeled according to this [Athletics Disciplines](./disciplines.md) model.
+Disciplines are modelled according to this [Athletics Disciplines](./disciplines.md) model.
 
 ### Roles
 
