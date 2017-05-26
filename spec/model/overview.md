@@ -87,11 +87,11 @@ The following UML diagram represents competition management in Athletics:
 
 ## Entities 
 
-Competitor is an agent that takes part in Athletics events. Depending on the type of event, either for individuals or for teams, agent is either an **[Athlete](#athletes)** or a **[Team](#teams)**, respectively. 
+A **Competitor** is an agent that takes part in Athletics events. Depending on the type of event, either for individuals or for teams, agent is either an **[Athlete](#athletes)** or a **[Team](#teams)**, respectively. 
 
 ### Athletes
 
-Athletes are **[Persons](#persons)** who participate in Athletics events. Athletes may be described using the following attributes:
+An **Athlete** is a **[Person](#persons)** who participates in Athletics events. Athletes may be described using the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
@@ -194,6 +194,7 @@ Clubs may be described using the following attributes:
 | established | Date when a team was established. | [Date](#dates-and-time) |
 | federation(s) | Federation(s) which a club is attached to. | [Athletics Federation](#athletics-federations) |
 | sponsor(s) | Sponsor(s) of a club. | [Person](#persons) or [Organization](#organizations) |
+| athlete(s) | Athlete(s) members of a club. | **[Athlete](#athletes)** |
 | team(s) | Teams(s) attached to a club. | **[Team](#teams)** |
 
 Example:
@@ -217,33 +218,31 @@ Example:
            "http://example.com/athlete:082839",
            "http://example.com/athlete:082840"
         ],
-    
     "memberOf" :"http://example.com/federation:England_Athletics"
 }
 ```
 
 ### Teams
 
-In certain events, such as relay races, competitors are groups of athletes or teams. These teams could be clubs, national teams, or just a joint of several athletes. 
+**Team** is a group of [Athletes](#athletes) who play a particular sport or game together against other similar groups of people. In Athletics there are certain events designed for teams competition (e.g., relay races). Teams in those competitions may be composed of [Athletes](#athletes) of the same club, representing a federation (national, regional team), or just a joint of athletes. 
 
-Teams may be described using the following attributes:
+Teams are considered as competitors and may be described using the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify a team. | Text |
-| name | Descriptive name of the team. | Text |
-| alternate name | An alias to name the team. | Text |
-| address | Main postal address where the team is registered or located. | [Postal Address](#postal-addresses) or Text |
-| image | Picture of the team. | URL |
-| logo | Logo or flag of the team. | URL |
-| url | Webpage URL about the team. | URL |
-| federation(s) | Federation(s) which the team is attached to. | [Athletics Federation](#athletics-federations) |
+| name | Descriptive name of a team. | Text |
+| alternate name | An alias to name a team. | Text |
+| image | Picture of a team. | URL |
+| logo | Logo or flag of a team. | URL |
+| url | Webpage URL about a team. | URL |
+| federation(s) | Federation(s) which a team is attached to. | [Athletics Federation](#athletics-federations) |
 | nationality | Teams's nationality. | [Country](#countries) |
-| sponsor(s) | Sponsor(s) of the team. | [Person](#persons) or [Organization](#organizations) |
-| captain(s) | Athlete(s) who represents the team. | **[Athlete](#athletes)** |
-| coach(es) | Person(s) who acts as coach for the team. | **[Person](#persons)** |
-| records(s) | Records and best performances of the team (e.g., relay competitions). | [Record](#record) |  
-| athlete(s) | Athlete(s) affiliated to the team. | **[Athlete](#athletes)** |
+| sponsor(s) | Sponsor(s) of a team. | [Person](#persons) or [Organization](#organizations) |
+| coach(es) | Person(s) who acts as coach for a team. | **[Person](#persons)** |
+| records(s) | Records and best performances of a team (e.g., relay competitions). | [Record](#record) |  
+| captain(s) | Athlete(s) in charge of a team. | **[Athlete](#athletes)** |
+| athlete(s) | Athlete(s) affiliated to a team. | **[Athlete](#athletes)** |
 
 
 _Example of definition of a national team as competitor in a 4x100:_
