@@ -293,13 +293,21 @@ Example of national team:
 
 ### Athletics Federations
 
-Federation is a special type of organization in charge of governing and rule the sport of athletics. Federations may be attached to other higher-level federations.
+A **Federation** is a special type of organization in charge of governing and rule the sport of athletics. These sports governing bodies may be attached to other higher-level federations, and have other sports organizations (clubs or other governing bodies) attached to them. 
 
-Federations will have the properties of [Organizations](#organizations), adding the following:
+Federations are subclasses of [Organizations](#organizations), adding the following:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| spatial | Spatial coverage of the federation, usually one or more administrative areas (city, region, country, etc.) | [Territory and Country](#territories-and-countries) | 
+| identifier | Unique character string to identify a federation. | Text |
+| name | Name of a federation. | Text |
+| alternate name | An alias to name a federation. | Text |
+| address | Postal address where a federation is located. | [Postal Address](#postal-addresses) or Text |
+| logo | Logo of a federation. | URL |
+| email | Main email address of a federation. | Text |
+| url | Webpage URL about a federation. | URL |
+| telephone(s) | Main telephone number(s) of a federation. | Text |
+| area served | Spatial coverage of the federation, usually administrative areas (city, region, country, etc.) | [Territory and Country](#territories-and-countries) | 
 | member of | Higher-level federation(s) to which this federation is attached. | [Athletics Federation](#athletics-federations) | 
 | member(s) | Lower level organization(s) attached to this federation. | [Organization](#organization) | 
 

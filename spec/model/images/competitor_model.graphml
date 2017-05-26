@@ -123,8 +123,8 @@ telephone: Text
 fax: Text
 address: Location
 sponsor: Agent
-dissolved: DateTime
-established: DateTime</y:AttributeLabel>
+dissolved: Date
+established: Date</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
@@ -151,7 +151,7 @@ alternateName: Text
 image: URL
 email: Text
 url: URL
-spatial: Territory
+areaServed: Place
 address: Location</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
