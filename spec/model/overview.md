@@ -823,7 +823,7 @@ Apart from all properties of the parent class `Performance`, this entity include
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| points | Official measure of a performance expressed as distance. | [Distance](#distance) |
+| distance | Official measure of a performance expressed as distance. | [Distance](#distance) |
 
 Example:
 ```
