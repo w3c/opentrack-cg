@@ -20,7 +20,7 @@
           <y:Geometry height="230.49758617957713" width="401.19952514671536" x="1148.6754748532846" y="-236.38038086456112"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="dashed" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="198.59976257335757" y="113.24879308978859">
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="198.5997625733578" y="113.24879308978856">
             <y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -644,7 +644,7 @@ stage: Competition</y:AttributeLabel>
           <y:Geometry height="88.0" width="185.93255185153203" x="117.03372407423399" y="509.55583814692864"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="155.8740234375" x="15.029264207016013" y="3.0">UnitTimedCompetition<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="62.75390625" x="61.58932280076601" y="3.0">UnitRace<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1458,7 +1458,6 @@ trialsRound<y:LabelModel>
     </edge>
     <edge id="e50" source="n26" target="n20">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-29.710255484988465" ty="131.48499439575238">
@@ -1474,7 +1473,6 @@ trialsRound<y:LabelModel>
     </edge>
     <edge id="e51" source="n16" target="n20">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-29.710255484988465" ty="127.70558876545626">
@@ -1490,7 +1488,6 @@ trialsRound<y:LabelModel>
     </edge>
     <edge id="e52" source="n18" target="n20">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-29.710255484988465" ty="125.48987615166435">
@@ -1506,7 +1503,6 @@ trialsRound<y:LabelModel>
     </edge>
     <edge id="e53" source="n23" target="n20">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-29.710255484988465" ty="129.92130137924818">
@@ -1522,7 +1518,6 @@ trialsRound<y:LabelModel>
     </edge>
     <edge id="e54" source="n17" target="n20">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-29.710255484988465" ty="117.6871305501157">
@@ -1538,7 +1533,6 @@ trialsRound<y:LabelModel>
     </edge>
     <edge id="e55" source="n28" target="n20">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-29.710255484988465" ty="126.96701789419232">
@@ -1560,7 +1554,6 @@ trialsRound<y:LabelModel>
       </data>
     </edge>
     <edge id="e56" source="n20" target="n28">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -1600,7 +1593,6 @@ trialsRound<y:LabelModel>
     </edge>
     <edge id="e59" source="n29" target="n25">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-5.105282909930793" ty="13.971356821624795">

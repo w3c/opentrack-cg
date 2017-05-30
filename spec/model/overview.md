@@ -533,13 +533,13 @@ A **Unit Competition** is a unitary competition defined by specific sports rules
 
 There are two unit competition subtypes: 
 * [Unit Field Competition](#unit-field-competition), and
-* [Unit Timed Competition](#unit-timed-competition)
+* [Unit Race](#unit-races)
 
-#### Unit Timed Competitions
+#### Unit Races
 
 Subclass of [Unit Competition](#unit-competitions).
 
-A **Unit Timed Competition** is a competitive event where performances are measured as time (i.e., races and legs in relay races). Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race.
+A **Unit Race** is a competitive event where performances are measured as time (i.e., races and legs in relay races). Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race.
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
@@ -578,11 +578,6 @@ A **Unit Field Competition** is a unitary competition in field events (for insta
 | trial round | A round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-rounds) |
 | first trials round | The first round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-rounds) |
 | last trials round | The last round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-rounds) |
-
-
-#### Unit Field Competitions
-
-Subclass of [Unit Competition](#unit-competitions).
 
 **Unit Field Competitions** are unitary competitions for field disciplines. These competitions have a specific structure based on rounds of trials or attempts ([Field Trials Rounds](#field-trials-rounds)). 
 
