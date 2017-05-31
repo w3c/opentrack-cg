@@ -39,9 +39,6 @@
     "captainOf" : { "@id": "ath:captainOf", "@type": "schema:SportsTeam" },
     
     
-    
-    "Male" : "http://schema.org/Male",
-    "Female" : "http://schema.org/Female",
     "country": "http://example.org/@@@"
 
   }
