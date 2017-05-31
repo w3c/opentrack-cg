@@ -4,25 +4,31 @@
     "foaf": "http://xmlns.com/foaf/0.1/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "http://schema.org/",
+    "ath": "http://w3c.github.io/opentrack-cg/ns#",
     
     "Athlete" : "http://schema.org/Athlete",
     "Organization" : "http://schema.org/Organization",
     "Person" : "http://schema.org/Person",
-    
-    
-    "ath": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld#",
+    "Club" : "http://schema.org/SportsClub",
+    "Team" : "http://schema.org/SportsTeam",
+    "Federation" : "http://w3c.github.io/opentrack-cg/ns#SportsGoverningBody",
+    "Category" : "http://w3c.github.io/opentrack-cg/ns#Category",
     
     "identifier" : "http://schema.org/identifier",
     "name" : "http://schema.org/name",
+    "alternateName" : "http://schema.org/alternateName",
+    "address" : { "@id": "schema:address", "@type": "schema:PostalAddress" },
+    "image" : { "@id": "schema:image", "@type": "@id" },
+    "logo" : { "@id": "schema:logo", "@type": "@id" },
+    "email" : "http://schema.org/email",
+    "telephone" : "http://schema.org/telephone",
+    "faxNumber" : "http://schema.org/faxNumber",
+    "url" : { "@id": "schema:url", "@type": "@id" },
+
     "familyName" : "http://schema.org/familyName",
     "givenName" : "http://schema.org/givenName",
     "prevFamilyName" : "ath:prevFamilyName",
     "prevGivenName" : "ath:prevGivenName",
-    "alternateName" : "http://schema.org/alternateName",
-    "address" : "http://schema.org/address",
-    "image" : { "@id": "schema:image", "@type": "@id" },
-    "email" : "http://schema.org/email",
-    "url" : { "@id": "schema:url", "@type": "@id" },
     "award" : "http://schema.org/award",
     "gender" : { "@id": "schema:gender", "@type": "@id" },
     "height" : "http://schema.org/height",
@@ -31,15 +37,27 @@
     "birthDate" : { "@id": "schema:birthDate", "@type": "xsd:date" },
     "deathDate" : { "@id": "schema:deathDate", "@type": "xsd:date" },
     "birthPlace" : "http://schema.org/birthPlace",
-    "federation" : { "@id": "schema:affiliation", "@type": "ath:SportsGoverningBody" },
+    "federation" : { "@id": "schema:memberOf", "@type": "ath:SportsGoverningBody" },
     "coach" : { "@id": "schema:coach", "@type": "schema:Person" },
     "sponsor" : "http://schema.org/sponsor",
     "club" : { "@id": "schema:affiliation", "@type": "schema:SportsClub" },
     "team" : { "@id": "schema:memberOf", "@type": "schema:SportsTeam" },
     "bestPerformance" : { "@id": "ath:bestPerformance", "@type": "ath:Performance" },
     "captainOf" : { "@id": "ath:captainOf", "@type": "schema:SportsTeam" },
-    
-    
+    "dissolutionDate" : { "@id": "schema:dissolutionDate", "@type": "xsd:date" },
+    "foundingDate" : { "@id": "schema:foundingDate", "@type": "xsd:date" },
+    "athlete" : { "@id": "schema:athlete", "@type": "schema:Athlete" },
+    "captain" : { "@id": "ath:captain", "@type": "schema:Athlete" },
+    "location" : "http://schema.org/location", 
+    "areaServed" : "http://schema.org/areaServed",
+    "member" : "http://schema.org/member",
+    "memberOf" : "http://schema.org/memberOf",
+    "requiredMinAge" : { "@id": "schema:requiredMinAge", "@type": "xsd:integer" },
+    "requiredMaxAge" : { "@id": "schema:requiredMaxAge", "@type": "xsd:integer" },
+    "requiredGender" : { "@id": "schema:requiredGender", "@type": "xsd:integer" },
+    "recognizingAuthority" : { "@id": "schema:requiredGender", "@type": "Federation" },
+
+
     "country": "http://example.org/@@@"
 
   }
