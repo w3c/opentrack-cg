@@ -68,7 +68,7 @@ In order to represent properly the model, the work was divided in two parts:
 The following UML diagram represents competition management in Athletics: 
 ![Competition Conceptual Model](images/competition_model.png)
 
-* **[Competitions](#competitions)**. Organized occasions where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These competitions can be organized periodically ([Recurring Competitions](#recurring-competitions)), such as the Summer Olympic Games. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fund-raising road races, etc.). Athletics competitions may divided in several [Competitions](#athletics-competitions) ([Divisional Competition](#divisional-competitions) such as [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women); they may include several stages ([Multi Stage Competitions](#multi-stage-competitions) like the Diamond League); also competitions may be composed of several disciplines ([Multi Discipline Competitions](#multidiscipline-competitions) are combined events such as Decathlon).
+* **[Competitions](#competitions)**. Organized occasions where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These competitions can be organized periodically ([Competition Series](#competition-series)), such as the Summer Olympic Games. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fund-raising road races, etc.). Athletics competitions may divided in several [Competitions](#athletics-competitions) ([Divisional Competition](#divisional-competitions) such as [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women); they may include several stages ([Multi Stage Competitions](#multi-stage-competitions) like the Diamond League); also competitions may be composed of several disciplines ([Multi Discipline Competitions](#multidiscipline-competitions) are combined events such as Decathlon).
 
 * **[Rounds](#rounds)**. Stages of Athletics competitions (e.g., qualifying rounds, semifinals, final, etc.) where competitors are distributed in groups. Rounds depend on the competition rules for each discipline, so there is a difference between rounds within timed events, and rounds in field events. Vertical jumps have different rules regarding rounds in field events.  
 
@@ -411,19 +411,19 @@ Example:
 
 ```
 
-#### Recurring Competition
+#### Competition Series
 
-A **Recurring Competition** is a series of competitions that are held periodically (for instance, the Summer Olympic Games have recurring events organized every four years).
+**Competition Series** are competitive events that are held periodically (for instance, the Summer Olympic Games have recurring events organized every four years).
 
-Recurring Competitions may be described by the following attributes:
+Competition Series may be described by the following attributes:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify a recurring competition. | Text |
-| name | Descriptive name of a recurring competition. | Text |
-| alternate name | An alias to name a recurring competition. | Text |
-| description | About a recurring competition. | Text |
-| recurring competition | A competition that happens as a recurring event within a series of competitions (e.g., *London 2012*  *Olympic Games*) | [Competition](#competitions) |
+| identifier | Unique character string to identify a series of competitions. | Text |
+| name | Descriptive name of a competition series. | Text |
+| alternate name | An alias to name a competition series. | Text |
+| description | About a competition series. | Text |
+| recurring competition | A competition that happens as a recurring event within a series of competitions (e.g., *London 2012* Olympic Games) | [Competition](#competitions) |
 
 
 ### Competitions
@@ -433,7 +433,7 @@ A **Sport Competition** is an event in which [Athletes](#athletes) take part in 
 Athletics [Competitions](#competitions) may be of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fundraising road races or school races are also considered as [Competitions](#competitions).
 
 Types of competitions:
-* [Recurring Competitions](#recurring-competitions). Series of competitions that have events periodically (e.g., [2016 Summer Olympic Games in Rio](https://www.olympic.org/rio-2016/athletics) as part of the Olympic Games held every four years);
+* [Competition Series](#competition-series). Series of competitions that have events periodically (e.g., [2016 Summer Olympic Games in Rio](https://www.olympic.org/rio-2016/athletics) as part of the Olympic Games held every four years);
 * [Multi Stage Competitions](#multi-stage-competitions), composed of a set of stages (e.g. leagues or tournaments such as [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/) and the [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/));
 * [Multi Round Competitions](multi-round-competitions), divided in a sequence of qualification rounds (e.g. 100m events that are divided in qualifying rounds, semifinals, final, etc.);
 * [Divisional Competitions](#divisional-competitions), split in different divisions (e.g., [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx) divided in different categories by gender and age range.);
