@@ -1,10 +1,50 @@
-// OpenTrack Context
-
 {
   "@context":
   {
     "foaf": "http://xmlns.com/foaf/0.1/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-    // TO complete
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "http://schema.org/",
+    
+    "Organization" : "http://schema.org/Organization",
+    "Person" : "http://schema.org/Person",
+    
+    
+    "ath": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld#",
+    
+    "identifier" : "http://schema.org/identifier",
+    "name" : "http://schema.org/name",
+    "familyName" : "http://schema.org/familyName",
+    "givenName" : "http://schema.org/givenName",
+    "prevFamilyName" : "ath:prevFamilyName",
+    "prevGivenName" : "ath:prevGivenName",
+    "alternateName" : "http://schema.org/alternateName",
+    "address" : "http://schema.org/address",
+    "image" : { "@id": "schema:image", "@type": "@id" },
+    "email" : "http://schema.org/email",
+    "url" : { "@id": "schema:url", "@type": "@id" },
+    "award" : "http://schema.org/award",
+    "gender" : "http://schema.org/gender",
+    "height" : "http://schema.org/height",
+    "weight" : "http://schema.org/weight",
+    "nationality" : "http://schema.org/nationality",
+    "birthDate" : { "@id": "schema:birthDate", "@type": "xsd:date" },
+    "deathDate" : { "@id": "schema:deathDate", "@type": "xsd:date" },
+    "birthPlace" : "http://schema.org/birthPlace",
+    "federation" : { "@id": "schema:affiliation", "@type": "ath:SportsGoverningBody" },
+    "coach" : { "@id": "schema:coach", "@type": "schema:Person" },
+    "sponsor" : "http://schema.org/sponsor",
+    "club" : { "@id": "schema:affiliation", "@type": "schema:SportsClub" },
+    "team" : { "@id": "schema:memberOf", "@type": "schema:SportsTeam" },
+    "bestPerformance" : { "@id": "ath:bestPerformance", "@type": "ath:Performance" },
+    "captainOf" : { "@id": "ath:captainOf", "@type": "schema:SportsTeam" },
+    
+    
+    
+    "Male" : "http://schema.org/Male",
+    "Female" : "http://schema.org/Female",
+    "country": "http://example.org/@@@"
+
   }
 }
+
+
