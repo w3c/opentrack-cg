@@ -460,6 +460,7 @@ Competitions may be described by the following attributes:
 | discipline | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
 | category | The specific category for a competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Category](#category) |
 | entry requirements | Requirements to take part in a competition.  | Text |
+| starter(s) | Athletes(s) or teams(s) registered for the competition at the begining of the event. | [Ahtlete](#athletes) or [Team](#teams) |
 | results | List with the results of the participation in a competition. There may be different results during the competition (start list, intermediate results, partial results, final results, etc.) .  | [Results List](#results-lists) |
 | unit competition | Unit competition that is part of a parent competition (e.g. every heat of a semifinal round in a 200m event).  | [Unit Competition](#unit-competitions) |
 | previous stage | Competition that is the previous stage of this event, within a [Multi Stage Competition](#multi-stage-competitions) (e.g. previous match in a league).  | [Competition](#competitions) |
@@ -838,7 +839,6 @@ Example:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| timekeeping | Type of time keeping used to control athletes' performances (manual, automatic, etc.).  | [Timekeeping](#timekeeping) |
 | description | Descriptive text of the qualification criteria. | Text |
 | by place or standard | Number of competitors that are qualified in a round by rank (track events) or standard (field events). | Text |
 | by performance | Number of competitors that are qualified in a round by best performance. | Text |
