@@ -1,0 +1,12 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/team/GBR2012",
+    "@type" : "Team",
+    
+    "name" : "Great Britain National Team - Olympic Games 2012",
+    "alternateName" : "GBR",               
+    "location" : "UK",                       
+    "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR"
+}
+
+

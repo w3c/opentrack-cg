@@ -840,8 +840,8 @@ Example:
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | description | Descriptive text of the qualification criteria. | Text |
-| by place or standard | Number of competitors that are qualified in a round by rank (track events) or standard (field events). | Text |
-| by performance | Number of competitors that are qualified in a round by best performance. | Text |
+| by place or standard | Number of competitors that are qualified in a round by rank (track events) or standard (field events). | Number |
+| by performance | Number of competitors that are qualified in a round by best performance. | Number |
 
 Example:
 ```
@@ -1210,7 +1210,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 
 ### Protest Status
 
-| Code | Unit |
+| Code | Status |
 | ---- | ---- |
 | `CLS` | Closed | 
 | `OPN`	| Open | 

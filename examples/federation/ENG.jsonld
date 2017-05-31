@@ -1,0 +1,22 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/ENG",
+    "@type": "Federation",
+    "name": "England Athletics",
+    "email": "ea@example.com",
+    "faxNumber": "(+44) 0121 347 65439",
+    "telephone": "(+44) 0121 347 65439",
+    "address": {
+        "name": "Athletics House, Alexander Stadium",
+        "streetAddress": "Walsall Road",
+        "addressLocality": "Birmingham",
+        "postalCode": "B42 2BE",
+        "addressCountry": "UK"
+    },
+    "areaServed" : "England",
+    "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/GBR",
+    "member": [
+        "http://w3c.github.io/opentrack-cg/examples/club/NEB",
+        "http://w3c.github.io/opentrack-cg/examples/club/THH"
+    ]
+}

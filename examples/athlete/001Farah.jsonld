@@ -1,0 +1,47 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah",
+    "@type" : "Athlete",
+    
+    "name" : "Mohamed Muktar Jama Farah",
+    "familyName" : "Farah",
+    "givenName" : "Mohamed Muktar Jama",
+    "alternateName" : "Mo Farah",               
+    "url" : "http://www.mofarah.com",
+    "gender" : "Male" ,
+    "image" : "https://example.com/260px-MoPodiumRio2016.png",
+    "nationality" : "UK",                       
+    "email" : "fakeemail@example.com",
+    "height" : "175 cm",
+    "weight" : "65 Kg",   
+    "birthPlace" : "Mogadishu, Somalia" ,
+    "birthDate" : "1983-04-23",
+    "coach" : { 
+        "name" : "Alberto Salazar" 
+    },
+    "sponsor" : {
+        "@type" : "Organization",
+        "name" : "Nike Oregon Project",
+        "url" : "https://nikeoregonproject.com"            
+    },
+    "club" : [ 
+           "http://w3c.github.io/opentrack-cg/examples/club/NEB",
+           "http://w3c.github.io/opentrack-cg/examples/club/NOP"
+        ],
+    "team" : [ 
+           "http://w3c.github.io/opentrack-cg/examples/team/GBR2012",
+           "http://w3c.github.io/opentrack-cg/examples/team/GBR2016"
+        ],
+    "federation" :
+        [ 
+           "http://w3c.github.io/opentrack-cg/examples/federation/GBR", 
+           "http://w3c.github.io/opentrack-cg/examples/federation/USATF" 
+        ],
+    "bestPerformance" :
+        [
+           "http://w3c.github.io/opentrack-cg/examples/performance/Farah001",
+           "http://w3c.github.io/opentrack-cg/examples/performance/Farah002",
+           "http://w3c.github.io/opentrack-cg/examples/performance/Farah003"
+        ]
+}
+

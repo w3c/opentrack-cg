@@ -1,0 +1,17 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/team/GBR2016",
+    "@type" : "Team",
+    
+    "name" : "Great Britain National Team - Olympic Games 2016",
+    "alternateName" : "GBR",               
+    "location" : "UK",                       
+    "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR",
+    "athlete" : [
+        "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/002Butchart"
+    ],
+    "captain" :  "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah"
+}
+
+

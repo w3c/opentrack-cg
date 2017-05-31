@@ -66,7 +66,7 @@ Children: [Race](#race), [Throws](#throws), [Horizontal Jumps](#horizontal-jumps
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| lenght | Distance of the race. | Distance |
+| distance | Distance of the race. | Distance |
 | competition type | Type of competition (time trial, relays, etc.). | Competition Type |
 
 ### Middle Or Long Distance

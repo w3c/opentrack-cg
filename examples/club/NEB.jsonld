@@ -1,0 +1,28 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB",
+    "@type" : "Club",
+
+    "name": "Newham & Essex Beagles",
+    "alternateName": "BeaglesAC",
+    "url": "http://www.newhamandessexbeagles.co.uk/",
+    "image": "http://example.org/image.png",
+    "logo": "http://example.org/logo.png",
+    "telephone": "(+44) 020 7511 6463",
+    "faxNumber": "(+44) 020 7511 4477",
+    "email": "fakeemail@example.org",
+    "address": {
+        "name": "Terence McMillan Stadium - Newham Leisure Centre",
+        "streetAddress": "281 Prince Regent Lane",
+        "addressLocality": "London",
+        "postalCode": "E13 8SD",
+        "addressCountry": "UK"
+    },
+    "sponsor": "Asics",
+    "athlete": [
+        "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/002Athlete2",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/002Athlete3"
+    ],
+    "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR" 
+}
