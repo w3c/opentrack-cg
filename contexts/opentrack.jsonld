@@ -23,7 +23,7 @@
     "email" : "http://schema.org/email",
     "url" : { "@id": "schema:url", "@type": "@id" },
     "award" : "http://schema.org/award",
-    "gender" : "http://schema.org/gender",
+    "gender" : { "@id": "schema:gender", "@type": "@id" },
     "height" : "http://schema.org/height",
     "weight" : "http://schema.org/weight",
     "nationality" : "http://schema.org/nationality",
