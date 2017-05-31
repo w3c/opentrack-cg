@@ -5,6 +5,7 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "http://schema.org/",
     
+    "Athlete" : "http://schema.org/Athlete",
     "Organization" : "http://schema.org/Organization",
     "Person" : "http://schema.org/Person",
     
