@@ -457,7 +457,7 @@ Competitions may be described by the following attributes:
 | contributor(s) | Person(s) or organization(s) that collaborates in the organization of a competition. | [Person](#persons) or [Organization](#organizations) |
 | sponsor(s) | Person(s) or organization(s) that sponsors a competition. | [Person](#persons) or [Organization](#organizations) |
 | attendee(s) | Person(s) who attends a competition. | [Person](#persons) |
-| discipline | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Disciplines](#disciplines) |
+| discipline | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#disciplines) |
 | category | The specific category for a competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Category](#category) |
 | entry requirements | Requirements to take part in a competition.  | Text |
 | starter(s) | Athletes(s) or teams(s) registered for the competition at the begining of the event. | [Ahtlete](#athletes) or [Team](#teams) |
@@ -778,6 +778,8 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 | identifier | Unique character string to identify a performance. | Text |
 | wind assistance | Wind speed at the moment of registering the performance (it could be either positive or negative). | Text |
 | record(s) | Flags indicating records and bests achieved after the competition round (e.g., World Record, National Record, Personal Best, Season Leader, etc.). | [Record](#records) |
+| discipline | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#disciplines) |
+| date | Date when the athlete achieved a performance. | [Date](#dates-and-time) |
 | competitor | Athlete or team that achieved the performance. | [Athlete](#athletes) or [Team](#teams) |
 
 There are different types of performance depending on the type of event: **Timed** events with results measured as time; **Lenght** events, measured as distance (Throws, Long Jump and Triple Jump); **Height** events, measured as height (Vertical Jumps); and **Combined** events, measured as score points (Decathlon, Heptathlon, etc.). So, performances are described by the following sub-classes:
@@ -868,18 +870,20 @@ Sometimes may be of interest gathering and representing information about device
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify a timekeeping method. | Text |
+| timekeeping type | Type of the system used. | [Timekeeping Type](#timekeeping-type) |
 | name | Name of a method used for timekeeping (i.e., `Hand Timing`, `Fully Automatic` or `Transponder System Timing`) | Text |
 | description | Description and notes about the method used for timekeeping. | Text |
-| device | Brand, model and features of the device/system used for timekeeping. | Text |
+| timingDevice | Brand, model and features of the device/system used for timekeeping. | Text |
 
 Example:
 ```
 {
     "@id" :  "http://example.com/timekeeping:0001",
     "@type" :  "Timekeeping",
+    "timekeepingType" : "TST",
     "name" : "Transponder Based System",
     "description" : "Fully automatic timekeeping system based on RFID transponders",
-    "device" : "RFID System – Brand and model"
+    "timingDevice" : "RFID System – Brand and model"
 }
 ```
 
@@ -1216,3 +1220,12 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `OPN`	| Open | 
 | `PND` | Pending |  
 | `ROPN` | Re Open | 
+
+
+### Timekeeping Type
+
+| Code | Type |
+| ---- | ---- |
+| `HT` | Hand Timing | 
+| `FAT`	| Fully Automatic | 
+| `TST` | Transponder System Timing | 
