@@ -1,0 +1,10 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/discipline/100m",
+    "@type": "Sprint",    
+    "name": "100 metres",
+    "alternateName": "100-metre dash",
+    "raceCompetitionType": "RaceIndividual",
+    "venueType": "VenueOutdoor",
+    "distance": "100 m",
+}

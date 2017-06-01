@@ -1,0 +1,8 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT",
+
+    "@type" :  "Timekeeping",
+    "timekeepingType" : "FAT",
+    "name" : "Generic Fully Automated System"
+}

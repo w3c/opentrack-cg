@@ -39,9 +39,9 @@
         ],
     "bestPerformance" :
         [
-           "http://w3c.github.io/opentrack-cg/examples/performance/Farah001",
-           "http://w3c.github.io/opentrack-cg/examples/performance/Farah002",
-           "http://w3c.github.io/opentrack-cg/examples/performance/Farah003"
+           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah#HMarathon",
+           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah#1500m",
+           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah#3000m"
         ]
 }
 
