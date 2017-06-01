@@ -112,7 +112,7 @@
                                     "rank": 1,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H1_100Haase",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.230"
@@ -129,7 +129,7 @@
                                     "rank": 2,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H1_101Papaioannou",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/101Papaioannou",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.360"
@@ -146,7 +146,7 @@
                                     "rank": 2,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H1_102Sedney",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/102Sedney",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.360",
@@ -164,7 +164,7 @@
                                     "rank": 4,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H1_103Eftimova",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/103Eftimova",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.390"
@@ -181,7 +181,7 @@
                                     "rank": 5,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H1_104Kora",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.450",
@@ -199,7 +199,7 @@
                                     "rank": 6,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H1_105Siragusa",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/105Siragusa",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.550"
@@ -216,7 +216,7 @@
                                     "rank": 7,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H1_106Belibasaki",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/106Belibasaki",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.550"
@@ -232,7 +232,7 @@
                                     "rank": 8,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H1_107Wingfield",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/107Wingfield",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.900"
@@ -257,7 +257,7 @@
                                     "rank": 1,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H2_122Povh",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/122Povh",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.370"
@@ -274,7 +274,7 @@
                                     "rank": 2,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H2_108Mihalinec",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/108Mihalinec",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.410"
@@ -291,7 +291,7 @@
                                     "rank": 2,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H2_109Foster",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/109Foster",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.570"
@@ -308,7 +308,7 @@
                                     "rank": 4,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H2_110Galais",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/110Galais",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.640"
@@ -324,7 +324,7 @@
                                     "rank": 5,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H2_111Bezeková",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/111Bezeková",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.710"
@@ -340,7 +340,7 @@
                                     "rank": 6,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H2_112Ograzeanu",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/112Ograzeanu",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.730"
@@ -356,7 +356,7 @@
                                     "rank": 7,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H2_113Lavanchy",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/113Lavanchy",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.890"
@@ -381,7 +381,7 @@
                                     "rank": 1,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H3_114Hooper",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/114Hooper",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.400"
@@ -398,7 +398,7 @@
                                     "rank": 2,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H3_115DorcasBazolo",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/115DorcasBazolo",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.440"
@@ -415,7 +415,7 @@
                                     "rank": 2,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H3_116Okparaebo",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/116Okparaebo",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.450"
@@ -432,7 +432,7 @@
                                     "rank": 4,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H3_117PopowiczDrapała",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/117PopowiczDrapała",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.610"
@@ -448,7 +448,7 @@
                                     "rank": 5,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H3_118García",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/118García",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.640"
@@ -464,7 +464,7 @@
                                     "rank": 6,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H3_119Nguyen",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/119Nguyen",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.660",
@@ -481,7 +481,7 @@
                                     "rank": 7,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H3_120GrinčikaitėSamuolė",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/120GrinčikaitėSamuolė",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.770"
@@ -520,7 +520,7 @@
                                     "rank": 1,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH1_121Schippers",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/121Schippers",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:10.960"
@@ -537,7 +537,7 @@
                                     "rank": 2,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH1_122Philip",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/122Philip",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.370"
@@ -553,7 +553,7 @@
                                     "rank": 3,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH1_100Haase",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.460"
@@ -569,7 +569,7 @@
                                     "rank": 4,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH1_101Papaioannou",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/101Papaioannou",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.550"
@@ -585,7 +585,7 @@
                                     "rank": 5,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH1_108Mihalinec",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/108Mihalinec",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.550"
@@ -601,7 +601,7 @@
                                     "rank": 6,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH1_106Belibasaki",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/106Belibasaki",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.620"
@@ -617,7 +617,7 @@
                                     "rank": 7,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH1_103Eftimova",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/103Eftimova",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.850"
@@ -651,7 +651,7 @@
                                     "rank": 1,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH2_124LalovaCollio",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/124LalovaCollio",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.260"
@@ -668,7 +668,7 @@
                                     "rank": 2,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH2_125Pinto",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/125Pinto",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.270"
@@ -685,7 +685,7 @@
                                     "rank": 2,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH2_126Pohrebnyak",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/126Pohrebnyak",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.270"
@@ -701,7 +701,7 @@
                                     "rank": 4,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH2_114Hooper",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/114Hooper",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.480"
@@ -717,7 +717,7 @@
                                     "rank": 5,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH2_127DorcasBazolo",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/127DorcasBazolo",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.570"
@@ -733,7 +733,7 @@
                                     "rank": 6,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH2_110Galais",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/110Galais",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.620"
@@ -749,7 +749,7 @@
                                     "rank": 7,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH2_104Kora",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.650"
@@ -765,7 +765,7 @@
                                     "rank": 8,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH2_117PopowiczDrapała",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/117PopowiczDrapała",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.680"
@@ -790,7 +790,7 @@
                                     "rank": 1,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH3_128Henry",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/128Henry",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.090"
@@ -807,7 +807,7 @@
                                     "rank": 2,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH3_129Kambundji",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/129Kambundji",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.230"
@@ -824,7 +824,7 @@
                                     "rank": 3,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH3_130Gnafoua",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/130Gnafoua",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.320"
@@ -840,7 +840,7 @@
                                     "rank": 4,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH3_107Povh",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/107Povh",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.350"
@@ -856,7 +856,7 @@
                                     "rank": 5,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH3_116Okparaebo",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/116Okparaebo",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.440"
@@ -872,7 +872,7 @@
                                     "rank": 6,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH3_102Sedney",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/102Sedney",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.440"
@@ -888,7 +888,7 @@
                                     "rank": 7,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH3_109Foster",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/109Foster",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.620"
@@ -904,7 +904,7 @@
                                     "rank": 8,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH3_105Siragusa",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/105Siragusa",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.780"
@@ -937,7 +937,7 @@
                                     "rank": 1,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_Final_121Schippers",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/121Schippers",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:10.900"
@@ -954,7 +954,7 @@
                                     "rank": 2,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_Final_124LalovaCollio",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/124LalovaCollio",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.200"
@@ -970,7 +970,7 @@
                                     "rank": 3,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_Final_129Kambundji",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/129Kambundji",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.250"
@@ -986,7 +986,7 @@
                                     "rank": 4,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_Final_122Philip",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/122Philip",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.270"
@@ -1002,7 +1002,7 @@
                                     "rank": 5,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_Final_126Pohrebnyak",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/126Pohrebnyak",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.280"
@@ -1018,7 +1018,7 @@
                                     "rank": 6,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_Final_125Pinto",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/125Pinto",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.330"
@@ -1034,7 +1034,7 @@
                                     "rank": 7,
                                     "performance": {
                                         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_Final_130Gnafoua",
-                                        "@type" : "Performance",
+                                        "@type" : "TimePerformance",
                                         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/130Gnafoua",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.360"
