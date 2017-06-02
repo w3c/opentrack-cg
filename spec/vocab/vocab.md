@@ -181,7 +181,7 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 ### Competition
 
 * class: `ath:Competition`
-* subClassOf: `schema:Event`
+* subClassOf: `schema:SportsEvent`
 
 | Metadata | Property | Description | Value Type |
 |:-------- |:-------- |:----------- |:---------- |
@@ -232,7 +232,7 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 
 ### MultidisciplineCompetition
 
-* class: `ath:MultidisciplineCompetitions`
+* class: `ath:MultidisciplineCompetition`
 * subClassOf: `[ath:Competition](#competition)`
 
 
