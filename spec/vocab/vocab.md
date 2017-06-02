@@ -211,7 +211,7 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 ### MultiStageCompetition
 
 * class: `ath:MultiStageCompetition`
-* subClassOf: `[ath:Competition](#competition)`
+* subClassOf: `ath:Competition`
 
 | Metadata | Property | Description | Value Type |
 |:-------- |:-------- |:----------- |:---------- |
@@ -223,7 +223,7 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 ### DivisionalCompetition
 
 * class: `ath:DivisionalCompetition`
-* subClassOf: `[ath:Competition](#competition)`
+* subClassOf: `ath:Competition`
 
 | Metadata | Property | Description | Value Type |
 |:-------- |:-------- |:----------- |:---------- |
@@ -233,13 +233,13 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 ### MultidisciplineCompetition
 
 * class: `ath:MultidisciplineCompetition`
-* subClassOf: `[ath:Competition](#competition)`
+* subClassOf: `ath:Competition`
 
 
 ### MultiRoundCompetition
 
 * class: `[ath:MultiRoundCompetition](#multiroundcompetition)`
-* subClassOf: `[ath:Competition](#competition)`
+* subClassOf: `ath:Competition`
 
 | Metadata | Property | Description | Value Type |
 |:-------- |:-------- |:----------- |:---------- |
@@ -251,7 +251,7 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 ### CompetitionRound
 
 * class: `ath:CompetitionRound`
-* subClassOf: `[ath:Competition](#competition)`
+* subClassOf: `ath:Competition`
 
 | Metadata | Property | Description | Value Type |
 |:-------- |:-------- |:----------- |:---------- |
@@ -261,13 +261,13 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 ### UnitCompetition
 
 * class: `ath:UnitCompetition`
-* subClassOf: `[ath:Competition](#competition)`
+* subClassOf: `ath:Competition`
 
 
 ### UnitRace
 
 * class: `ath:UnitRace`
-* subClassOf: `[ath:UnitCompetition](#unitcompetition)`
+* subClassOf: `ath:UnitCompetition`
 
 | Metadata | Property | Description | Value Type |
 |:-------- |:-------- |:----------- |:---------- |
@@ -280,7 +280,7 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 ### UnitFieldCompetition
 
 * class: `ath:UnitFieldCompetition`
-* subClassOf: `[ath:UnitCompetition](#unitcompetition)`
+* subClassOf: `ath:UnitCompetition`
 
 | Metadata | Property | Description | Value Type |
 |:-------- |:-------- |:----------- |:---------- |
@@ -291,7 +291,7 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 ### UnitHeightCompetition
 
 * class: `ath:UnitFieldCompetition`
-* subClassOf: `[ath:UnitFieldCompetition](#unitfieldcompetition)`
+* subClassOf: `ath:UnitFieldCompetition`
 
 | Metadata | Property | Description | Value Type |
 |:-------- |:-------- |:----------- |:---------- |
@@ -300,8 +300,8 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 
 ### UnitDistanceCompetition
 
-* class: `[ath:UnitDistanceCompetition](#unitdistancecompetition)`
-* subClassOf: `[ath:UnitFieldCompetition](#unitfieldcompetition)`
+* class: `ath:UnitDistanceCompetition`
+* subClassOf: `ath:UnitFieldCompetition`
 
 
 ### Result
@@ -342,7 +342,7 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 ### TimePerformance
 
 * class: `ath:TimePerformance`
-* subClassOf: `[ath:Performance](#performance)`
+* subClassOf: `ath:Performance`
 
 | Metadata | Property | Description | Value Type |
 |:-------- |:-------- |:----------- |:---------- |
@@ -352,7 +352,7 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 ### PointsPerformance
 
 * class: `ath:PointsPerformance`
-* subClassOf: `[ath:Performance](#performance)`
+* subClassOf: `ath:Performance`
 
 | Metadata | Property | Description | Value Type |
 |:-------- |:-------- |:----------- |:---------- |
@@ -361,7 +361,7 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 ### DistancePerformance
 
 * class: `ath:DistancePerformance`
-* subClassOf: `[ath:Performance](#performance)`
+* subClassOf: `ath:Performance`
 
 | Metadata | Property | Description | Value Type |
 |:-------- |:-------- |:----------- |:---------- |

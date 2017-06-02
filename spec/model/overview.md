@@ -837,7 +837,7 @@ Example:
 
 ### Qualification Criteria
 
-**Qualification Criteria** are the requirements for the competitor to pass the round. Qualification may be based on the *finishing position* or by *best time*.
+**Qualification Criteria** are the requirements for the competitor to pass a qualification round. Qualification may be based on the *finishing position* or by *performance*.
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
@@ -858,7 +858,7 @@ Example:
 
 ### Timekeeping
 
-**Timekeeping** is the process and mechanism of timing events. 
+**Timekeeping** is a process and/or mechanism of timing competitions.
 
 There are three alternative methods of timekeeping, recognised as official by IAAF:
 - **Hand Timing** (`HT`) – Hand Timing is usually given to 0.1 seconds (average the different timekeepers and rounded up);
