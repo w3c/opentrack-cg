@@ -97,7 +97,7 @@
                     "unitCompetition": [
                         {
                             "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H1",
-                            "@type": "UnitCompetition",
+                            "@type": "UnitRace",
                             "name": "100m Women - Round 1 - Heat 1",
                             "timekeeping" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT",
                             "results": [
@@ -242,7 +242,7 @@
                         },
                         {
                             "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H2",
-                            "@type": "UnitCompetition",
+                            "@type": "UnitRace",
                             "name": "100m Women - Round 1 - Heat 2",
                             "timekeeping" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT",
                             "results": [
@@ -366,7 +366,7 @@
                         },
                         {
                             "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_R1H3",
-                            "@type": "UnitCompetition",
+                            "@type": "UnitRace",
                             "name": "100m Women - Round 1 - Heat 3",
                             "timekeeping" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT",
                             "results": [
@@ -505,7 +505,7 @@
                     "unitCompetition": [
                         {
                             "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH1",
-                            "@type": "UnitCompetition",
+                            "@type": "UnitRace",
                             "name": "100m Women - Semifinals - Heat 1",
                             "timekeeping" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT",
                             "results": [
@@ -636,7 +636,7 @@
                         },
                         {
                             "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH2",
-                            "@type": "UnitCompetition",
+                            "@type": "UnitRace",
                             "name": "100m Women - Semifinals - Heat 2",
                             "timekeeping" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT",
                             "results": [
@@ -775,7 +775,7 @@
                         },
                         {
                             "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_SemisH3",
-                            "@type": "UnitCompetition",
+                            "@type": "UnitRace",
                             "name": "100m Women - Semifinals - Heat 3",
                             "timekeeping" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT",
                             "results": [
@@ -922,7 +922,7 @@
                     "unitCompetition": 
                         {
                             "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016#100W_Final",
-                            "@type": "UnitCompetition",
+                            "@type": "UnitRace",
                             "name": "100m Women - Final",
                             "timekeeping" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT",
                             "results": [
