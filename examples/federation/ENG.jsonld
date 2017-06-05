@@ -1,6 +1,6 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/ENG",
+    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/ENG.jsonld",
     "@type": "Federation",
     "name": "England Athletics",
     "email": "ea@example.com",
@@ -14,9 +14,9 @@
         "addressCountry": "UK"
     },
     "areaServed" : "England",
-    "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/GBR",
+    "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld",
     "member": [
-        "http://w3c.github.io/opentrack-cg/examples/club/NEB",
-        "http://w3c.github.io/opentrack-cg/examples/club/THH"
+        "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/club/THH.jsonld"
     ]
 }

@@ -1,10 +1,10 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NOP",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld",
     "@type" : "Club",
 
     "name": "Nike Oregon Project",
     "url": "https://nikeoregonproject.com/",
-    "athlete": "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah",
-    "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/USATF" 
+    "athlete": "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+    "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld" 
 }

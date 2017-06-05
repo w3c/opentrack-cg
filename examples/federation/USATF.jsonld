@@ -1,6 +1,6 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/USATF",
+    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld",
     "@type": "Federation",
     
     "name": "USA Track & Field",

@@ -1,6 +1,6 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.json",
 
     "@type" :  "Timekeeping",
     "timekeepingType" : "FAT",

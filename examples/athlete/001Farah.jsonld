@@ -1,6 +1,6 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
     "@type" : "Athlete",
     
     "name" : "Mohamed Muktar Jama Farah",
@@ -25,23 +25,23 @@
         "url" : "https://nikeoregonproject.com"            
     },
     "club" : [ 
-           "http://w3c.github.io/opentrack-cg/examples/club/NEB",
-           "http://w3c.github.io/opentrack-cg/examples/club/NOP"
+           "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
+           "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
         ],
     "team" : [ 
-           "http://w3c.github.io/opentrack-cg/examples/team/GBR2012",
-           "http://w3c.github.io/opentrack-cg/examples/team/GBR2016"
+           "http://w3c.github.io/opentrack-cg/examples/team/GBR2012.jsonld",
+           "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld"
         ],
     "federation" :
         [ 
-           "http://w3c.github.io/opentrack-cg/examples/federation/GBR", 
-           "http://w3c.github.io/opentrack-cg/examples/federation/USATF" 
+           "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld", 
+           "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld" 
         ],
     "bestPerformance" :
         [
-           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah#HMarathon",
-           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah#1500m",
-           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah#3000m"
+           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon",
+           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m",
+           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m"
         ]
 }
 

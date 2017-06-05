@@ -1,6 +1,6 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
     "@type" : "Club",
 
     "name": "Newham & Essex Beagles",
@@ -20,9 +20,9 @@
     },
     "sponsor": "Asics",
     "athlete": [
-        "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah",
-        "http://w3c.github.io/opentrack-cg/examples/athlete/002Athlete2",
-        "http://w3c.github.io/opentrack-cg/examples/athlete/002Athlete3"
+        "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/002Athlete2.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/002Athlete3.jsonld"
     ],
-    "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR" 
+    "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" 
 }

@@ -1,6 +1,6 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/discipline/100m",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/discipline/100m.jsonld",
     "@type": "Sprint",    
     "name": "100 metres",
     "alternateName": "100-metre dash",
