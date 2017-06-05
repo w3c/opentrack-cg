@@ -1,6 +1,6 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld",
     "@type": "DivisionalCompetition",
     
     "name": "2016 European Athletics Championships",
@@ -30,7 +30,7 @@
     "category": "@id": "http://w3c.github.io/opentrack-cg/examples/category/SEN.jsonld",
     "division": [
         {
-            "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W",
+            "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W",
             "@type": "MultiRoundCompetition",
             "name": "2016 European Championships - 100m Women",
             "discipline": "@id": "http://w3c.github.io/opentrack-cg/examples/discipline/100m.jsonld",
@@ -39,52 +39,212 @@
             "endDate": "2016-06-08",
             "status": "Finished",
             "starter": [
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/101Papaioannou.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/102Sedney.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/103Eftimova.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/105Siragusa.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/106Belibasaki.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/107Wingfield.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/122Povh.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/108Mihalinec.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/109Foster.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/110Galais.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/111Bezeková.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/112Ograzeanu.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/113Lavanchy.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/114Hooper.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/115DorcasBazolo.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/116Okparaebo.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/117PopowiczDrapała.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/118García.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/119Nguyen.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/120GrinčikaitėSamuolė.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/121Schippers.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/122Philip.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/123Akakpo.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/124LalovaCollio.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/125Pinto.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/126Pohrebnyak.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/127DorcasBazolo.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/128Henry.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/129Kambundji.jsonld",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/130Gnafoua.jsonld"                
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_100Haase"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "100"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_101Papaioannou"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/101Papaioannou.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "101"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_102Sedney"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/102Sedney.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "102"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_103Eftimova"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/103Eftimova.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "103"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_104Kora"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "104"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_105Siragusa"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/105Siragusa.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "105"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_106Belibasaki"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/106Belibasaki.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "106"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_107Wingfield"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/107Wingfield.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "107"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_122Povh"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/122Povh.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "122"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_108Mihalinec"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/108Mihalinec.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "108"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_109Foster"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/109Foster.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "109"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_110Galais"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/110Galais.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "110"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_111Bezeková"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/111Bezeková.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "111"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_112Ograzeanu"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/112Ograzeanu.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "112"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_113Lavanchy"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/113Lavanchy.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "113"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_114Hooper"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/114Hooper.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "114"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_115DorcasBazolo"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/115DorcasBazolo.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "115"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_116Okparaebo"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/116Okparaebo.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "116"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_117PopowiczDrapała"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/117PopowiczDrapała.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "117"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_118García"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/118García.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "118"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_119Nguyen"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/119Nguyen.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "119"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_120GrinčikaitėSamuolė"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/120GrinčikaitėSamuolė.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "120"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_121Schippers"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/121Schippers.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "121"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_122Philip"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/122Philip.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "122"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_123Akakpo"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/123Akakpo.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "123"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_124LalovaCollio"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/124LalovaCollio.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "124"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_125Pinto"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/125Pinto.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "125"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_126Pohrebnyak"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/126Pohrebnyak.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "126"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_127DorcasBazolo"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/127DorcasBazolo.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "127"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_128Henry"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/128Henry.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "128"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_129Kambundji"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/129Kambundji.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "129"
+                },
+                "competitionEntry" : {
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_130Gnafoua"
+                    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/130Gnafoua.jsonld",
+                    "@type" : "CompetitionEntry",
+                    "bibIdentifier" : "130"
+                }            
             ],
             "results":[
-                "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_1",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_2",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_3",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_4",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_5",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_6",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_7",
-                "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_8"
+                "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_1",
+                "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_2",
+                "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_3",
+                "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_4",
+                "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_5",
+                "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_6",
+                "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_7",
+                "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_8"
             ],
             "round": [
                 {
-                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1",
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1",
                     "@type": "CompetitionRound",
                     "name": "100m Women - Round 1",
                     "startDate": "2016-06-07T12:45:00+02:00",
@@ -96,144 +256,136 @@
                     },
                     "unitCompetition": [
                         {
-                            "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1",
+                            "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1",
                             "@type": "UnitRace",
                             "name": "100m Women - Round 1 - Heat 1",
                             "timekeeping" : "@id": "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.jsonld",
                             "results": [
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_1",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_1",
                                     "@type": "Result",
                                     "name": "1st Position - 100m Women - Round 1 - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_100Haase",
                                     "trackLane": 1,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "100",
                                     "rank": 1,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_100Haase",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_100Haase",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase.jsonld",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.230"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_2",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_2",
                                     "@type": "Result",
                                     "name": "2nd Position - 100m Women - Round 1 - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/101Papaioannou.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_101Papaioannou",
                                     "trackLane": 6,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "101",
                                     "rank": 2,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_101Papaioannou",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_101Papaioannou",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/101Papaioannou.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/101Papaioannou.jsonld",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.360"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_2b",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_2b",
                                     "@type": "Result",
                                     "name": "2nd Position - 100m Women - Round 1 - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/102Sedney.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_102Sedney",
                                     "trackLane": 4,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "102",
                                     "rank": 2,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_102Sedney",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_102Sedney",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/102Sedney.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/102Sedney.jsonld",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.360",
                                         "record" : "SB"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_4",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_4",
                                     "@type": "Result",
                                     "name": "4th Position - 100m Women - Round 1 - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/103Eftimova.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_103Eftimova",
                                     "trackLane": 3,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "103",
                                     "rank": 4,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_103Eftimova",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_103Eftimova",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/103Eftimova.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/103Eftimova.jsonld",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.390"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_5",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_5",
                                     "@type": "Result",
                                     "name": "5th Position - 100m Women - Round 1 - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_104Kora",
                                     "trackLane": 8,
                                     "competitionFeature": "q",
-                                    "bibIdentifier": "104",
                                     "rank": 5,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_104Kora",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_104Kora",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora.jsonld",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.450",
                                         "record" : "SB"
                                     }
                                 },                                
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_6",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_6",
                                     "@type": "Result",
                                     "name": "6th Position - 100m Women - Round 1 - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/105Siragusa.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_105Siragusa",
                                     "trackLane": 7,
                                     "competitionFeature": "q",
-                                    "bibIdentifier": "105",
                                     "rank": 6,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_105Siragusa",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_105Siragusa",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/105Siragusa.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/105Siragusa.jsonld",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.550"
                                     }
                                 },                                  
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_7",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_7",
                                     "@type": "Result",
                                     "name": "7th Position - 100m Women - Round 1 - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/106Belibasaki.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_106Belibasaki",
                                     "trackLane": 2,
                                     "competitionFeature": "q",
-                                    "bibIdentifier": "106",
                                     "rank": 7,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_106Belibasaki",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_106Belibasaki",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/106Belibasaki.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/106Belibasaki.jsonld",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.550"
                                     }
                                 },                                  
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_8",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_8",
                                     "@type": "Result",
                                     "name": "8th Position - 100m Women - Round 1 - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/107Wingfield.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_107Wingfield",
                                     "trackLane": 5,
-                                    "bibIdentifier": "107",
                                     "rank": 8,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_107Wingfield",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_107Wingfield",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/107Wingfield.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/107Wingfield.jsonld",
                                         "windAssistance" : "-0.5 m/s",
                                         "time" : "00:00:11.900"
                                     }
@@ -241,123 +393,116 @@
                             ]
                         },
                         {
-                            "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2",
+                            "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2",
                             "@type": "UnitRace",
                             "name": "100m Women - Round 1 - Heat 2",
                             "timekeeping" : "@id": "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.jsonld",
                             "results": [
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_1",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_1",
                                     "@type": "Result",
                                     "name": "1st Position - 100m Women - Round 1 - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/122Povh.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_122Povh",
                                     "trackLane": 4,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "122",
                                     "rank": 1,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_122Povh",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_122Povh",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/122Povh.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/122Povh.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.370"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_2",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_2",
                                     "@type": "Result",
                                     "name": "2nd Position - 100m Women - Round 1 - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/108Mihalinec.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_108Mihalinec",
                                     "trackLane": 8,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "108",
                                     "rank": 2,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_108Mihalinec",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_108Mihalinec",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/108Mihalinec.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/108Mihalinec.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.410"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_3",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_3",
                                     "@type": "Result",
                                     "name": "3rd Position - 100m Women - Round 1 - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/109Foster.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_109Foster",
                                     "trackLane": 5,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "109",
                                     "rank": 2,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_109Foster",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_109Foster",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/109Foster.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/109Foster.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.570"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_4",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_4",
                                     "@type": "Result",
                                     "name": "4th Position - 100m Women - Round 1 - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/110Galais.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_110Galais",
                                     "trackLane": 2,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "110",
                                     "rank": 4,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_110Galais",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_110Galais",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/110Galais.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/110Galais.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.640"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_5",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_5",
                                     "@type": "Result",
                                     "name": "5th Position - 100m Women - Round 1 - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/111Bezeková.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_111Bezeková",
                                     "trackLane": 7,
-                                    "bibIdentifier": "111",
                                     "rank": 5,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_111Bezeková",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_111Bezeková",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/111Bezeková.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/111Bezeková.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.710"
                                     }
                                 },                                
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_6",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_6",
                                     "@type": "Result",
                                     "name": "6th Position - 100m Women - Round 1 - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/112Ograzeanu.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_112Ograzeanu",
                                     "trackLane": 3,
-                                    "bibIdentifier": "112",
                                     "rank": 6,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_112Ograzeanu",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_112Ograzeanu",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/112Ograzeanu.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/112Ograzeanu.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.730"
                                     }
                                 },                                  
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_7",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_7",
                                     "@type": "Result",
                                     "name": "7th Position - 100m Women - Round 1 - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/113Lavanchy.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_113Lavanchy",
                                     "trackLane": 6,
-                                    "bibIdentifier": "113",
                                     "rank": 7,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_113Lavanchy",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H2_113Lavanchy",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/113Lavanchy.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/113Lavanchy.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.890"
                                     }
@@ -365,124 +510,117 @@
                             ]
                         },
                         {
-                            "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3",
+                            "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3",
                             "@type": "UnitRace",
                             "name": "100m Women - Round 1 - Heat 3",
                             "timekeeping" : "@id": "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.jsonld",
                             "results": [
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_1",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_1",
                                     "@type": "Result",
                                     "name": "1st Position - 100m Women - Round 1 - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/114Hooper.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_114Hooper",
                                     "trackLane": 2,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "114",
                                     "rank": 1,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_114Hooper",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_114Hooper",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/114Hooper.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/114Hooper.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.400"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_2",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_2",
                                     "@type": "Result",
                                     "name": "2nd Position - 100m Women - Round 1 - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/115DorcasBazolo.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_115DorcasBazolo",
                                     "trackLane": 8,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "115",
                                     "rank": 2,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_115DorcasBazolo",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_115DorcasBazolo",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/115DorcasBazolo.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/115DorcasBazolo.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.440"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_3",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_3",
                                     "@type": "Result",
                                     "name": "3rd Position - 100m Women - Round 1 - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/116Okparaebo.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_116Okparaebo",
                                     "trackLane": 3,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "116",
                                     "rank": 2,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_116Okparaebo",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_116Okparaebo",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/116Okparaebo.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/116Okparaebo.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.450"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_4",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_4",
                                     "@type": "Result",
                                     "name": "4th Position - 100m Women - Round 1 - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/117PopowiczDrapała.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_117PopowiczDrapała",
                                     "trackLane": 5,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "117",
                                     "rank": 4,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_117PopowiczDrapała",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_117PopowiczDrapała",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/117PopowiczDrapała.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/117PopowiczDrapała.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.610"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_5",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_5",
                                     "@type": "Result",
                                     "name": "5th Position - 100m Women - Round 1 - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/118García.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_118García",
                                     "trackLane": 7,
-                                    "bibIdentifier": "118",
                                     "rank": 5,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_118García",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_118García",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/118García.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/118García.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.640"
                                     }
                                 },                                
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_6",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_6",
                                     "@type": "Result",
                                     "name": "6th Position - 100m Women - Round 1 - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/119Nguyen.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_119Nguyen",
                                     "trackLane": 6,
-                                    "bibIdentifier": "119",
                                     "rank": 6,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_119Nguyen",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_119Nguyen",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/119Nguyen.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/119Nguyen.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.660",
                                         "record" : "SB"
                                     }
                                 },                                  
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_7",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_7",
                                     "@type": "Result",
                                     "name": "7th Position - 100m Women - Round 1 - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/120GrinčikaitėSamuolė.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_120GrinčikaitėSamuolė",
                                     "trackLane": 4,
-                                    "bibIdentifier": "120",
                                     "rank": 7,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_120GrinčikaitėSamuolė",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_120GrinčikaitėSamuolė",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/120GrinčikaitėSamuolė.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/120GrinčikaitėSamuolė.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.770"
                                     }
@@ -492,7 +630,7 @@
                     ]
                 },
                 {
-                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Semis",
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Semis",
                     "@type": "CompetitionRound",
                     "name": "100m Women - Semifinals",
                     "startDate": "2016-06-08T19:15:00+02:00",
@@ -504,130 +642,123 @@
                     },
                     "unitCompetition": [
                         {
-                            "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1",
+                            "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1",
                             "@type": "UnitRace",
                             "name": "100m Women - Semifinals - Heat 1",
                             "timekeeping" : "@id": "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.jsonld",
                             "results": [
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_1",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_1",
                                     "@type": "Result",
                                     "name": "1st Position - 100m Women - Semifinals - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/121Schippers.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_121Schippers",
                                     "trackLane": 5,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "121",
                                     "rank": 1,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_121Schippers",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_121Schippers",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/121Schippers.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/121Schippers.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:10.960"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_2",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_2",
                                     "@type": "Result",
                                     "name": "2nd Position - 100m Women - Semifinals - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/122Philip.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_122Philip",
                                     "trackLane": 6,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "122",
                                     "rank": 2,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_122Philip",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_122Philip",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/122Philip.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/122Philip.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.370"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_3",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_3",
                                     "@type": "Result",
                                     "name": "3rd Position - 100m Women - Semifinals - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_100Haase",
                                     "trackLane": 7,
-                                    "bibIdentifier": "100",
                                     "rank": 3,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_100Haase",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_100Haase",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.460"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_4",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_4",
                                     "@type": "Result",
                                     "name": "4th Position - 100m Women - Semifinals - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/101Papaioannou.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_101Papaioannou",
                                     "trackLane": 9,
-                                    "bibIdentifier": "101",
                                     "rank": 4,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_101Papaioannou",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_101Papaioannou",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/101Papaioannou.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/101Papaioannou.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.550"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_5",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_5",
                                     "@type": "Result",
                                     "name": "5th Position - 100m Women - Semifinals - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/108Mihalinec.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_108Mihalinec",
                                     "trackLane": 8,
-                                    "bibIdentifier": "108",
                                     "rank": 5,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_108Mihalinec",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_108Mihalinec",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/108Mihalinec.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/108Mihalinec.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.550"
                                     }
                                 },                                
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_6",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_6",
                                     "@type": "Result",
                                     "name": "6th Position - 100m Women - Semifinals - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/106Belibasaki.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_106Belibasaki",
                                     "trackLane": 3,
-                                    "bibIdentifier": "106",
                                     "rank": 6,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_106Belibasaki",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_106Belibasaki",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/106Belibasaki.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/106Belibasaki.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.620"
                                     }
                                 },                                  
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_7",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_7",
                                     "@type": "Result",
                                     "name": "7th Position - 100m Women - Semifinals - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/103Eftimova.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_103Eftimova",
                                     "trackLane": 2,
-                                    "bibIdentifier": "103",
                                     "rank": 7,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_103Eftimova",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_103Eftimova",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/103Eftimova.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/103Eftimova.jsonld",
                                         "windAssistance" : "-1.0 m/s",
                                         "time" : "00:00:11.850"
                                     }
                                 },       
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_8",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH1_8",
                                     "@type": "Result",
                                     "name": "8th Position - 100m Women - Semifinals - Heat 1",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/123Akakpo.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_123Akakpo",
                                     "trackLane": 4,
                                     "bibIdentifier": "123",
                                     "competitionFeature": "DQ"
@@ -635,138 +766,130 @@
                             ]
                         },
                         {
-                            "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2",
+                            "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2",
                             "@type": "UnitRace",
                             "name": "100m Women - Semifinals - Heat 2",
                             "timekeeping" : "@id": "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.jsonld",
                             "results": [
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_1",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_1",
                                     "@type": "Result",
                                     "name": "1st Position - 100m Women - Semifinals - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/124LalovaCollio.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_124LalovaCollio",
                                     "trackLane": 5,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "124",
                                     "rank": 1,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_124LalovaCollio",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_124LalovaCollio",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/124LalovaCollio.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/124LalovaCollio.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.260"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_2",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_2",
                                     "@type": "Result",
                                     "name": "2nd Position - 100m Women - Semifinals - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/125Pinto.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_125Pinto",
                                     "trackLane": 4,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "125",
                                     "rank": 2,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_125Pinto",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_125Pinto",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/125Pinto.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/125Pinto.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.270"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_2b",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_2b",
                                     "@type": "Result",
                                     "name": "2nd Position - 100m Women - Semifinals - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/126Pohrebnyak.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_126Pohrebnyak",
                                     "trackLane": 6,
                                     "competitionFeature": "q",
-                                    "bibIdentifier": "126",
                                     "rank": 2,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_126Pohrebnyak",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_126Pohrebnyak",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/126Pohrebnyak.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/126Pohrebnyak.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.270"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_4",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_4",
                                     "@type": "Result",
                                     "name": "4th Position - 100m Women - Semifinals - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/114Hooper.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_114Hooper",
                                     "trackLane": 8,
-                                    "bibIdentifier": "114",
                                     "rank": 4,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_114Hooper",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_114Hooper",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/114Hooper.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/114Hooper.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.480"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_5",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_5",
                                     "@type": "Result",
                                     "name": "5th Position - 100m Women - Semifinals - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/127DorcasBazolo.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_127DorcasBazolo",
                                     "trackLane": 7,
-                                    "bibIdentifier": "127",
                                     "rank": 5,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_127DorcasBazolo",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_127DorcasBazolo",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/127DorcasBazolo.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/127DorcasBazolo.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.570"
                                     }
                                 },                                
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_6",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_6",
                                     "@type": "Result",
                                     "name": "6th Position - 100m Women - Semifinals - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/110Galais.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_110Galais",
                                     "trackLane": 9,
-                                    "bibIdentifier": "110",
                                     "rank": 6,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_110Galais",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_110Galais",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/110Galais.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/110Galais.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.620"
                                     }
                                 },                                  
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_7",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_7",
                                     "@type": "Result",
                                     "name": "7th Position - 100m Women - Semifinals - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_104Kora",
                                     "trackLane": 3,
-                                    "bibIdentifier": "104",
                                     "rank": 7,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_104Kora",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_104Kora",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.650"
                                     }
                                 },                                  
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_8",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_8",
                                     "@type": "Result",
                                     "name": "8th Position - 100m Women - Semifinals - Heat 2",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/117PopowiczDrapała.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_117PopowiczDrapała",
                                     "trackLane": 2,
-                                    "bibIdentifier": "117",
                                     "rank": 8,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_117PopowiczDrapała",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH2_117PopowiczDrapała",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/117PopowiczDrapała.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/117PopowiczDrapała.jsonld",
                                         "windAssistance" : "-0.4 m/s",
                                         "time" : "00:00:11.680"
                                     }
@@ -774,138 +897,130 @@
                             ]
                         },
                         {
-                            "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3",
+                            "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3",
                             "@type": "UnitRace",
                             "name": "100m Women - Semifinals - Heat 3",
                             "timekeeping" : "@id": "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.jsonld",
                             "results": [
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_1",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_1",
                                     "@type": "Result",
                                     "name": "1st Position - 100m Women - Semifinals - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/128Henry.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_128Henry",
                                     "trackLane": 4,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "128",
                                     "rank": 1,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_128Henry",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_128Henry",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/128Henry.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/128Henry.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.090"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_2",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_2",
                                     "@type": "Result",
                                     "name": "2nd Position - 100m Women - Semifinals - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/129Kambundji.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_129Kambundji",
                                     "trackLane": 7,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "129",
                                     "rank": 2,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_129Kambundji",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_129Kambundji",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/129Kambundji.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/129Kambundji.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.230"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_3",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_3",
                                     "@type": "Result",
                                     "name": "2nd Position - 100m Women - Semifinals - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/130Gnafoua.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_130Gnafoua",
                                     "trackLane": 5,
                                     "competitionFeature": "q",
-                                    "bibIdentifier": "130",
                                     "rank": 3,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_130Gnafoua",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_130Gnafoua",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/130Gnafoua.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/130Gnafoua.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.320"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_4",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_4",
                                     "@type": "Result",
                                     "name": "4th Position - 100m Women - Semifinals - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/107Povh.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_107Povh",
                                     "trackLane": 6,
-                                    "bibIdentifier": "107",
                                     "rank": 4,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_107Povh",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_107Povh",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/107Povh.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/107Povh.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.350"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_5",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_5",
                                     "@type": "Result",
                                     "name": "5th Position - 100m Women - Semifinals - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/116Okparaebo.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_116Okparaebo",
                                     "trackLane": 9,
-                                    "bibIdentifier": "116",
                                     "rank": 5,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_116Okparaebo",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_116Okparaebo",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/116Okparaebo.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/116Okparaebo.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.440"
                                     }
                                 },                                
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_6",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_6",
                                     "@type": "Result",
                                     "name": "6th Position - 100m Women - Semifinals - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/102Sedney.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_102Sedney",
                                     "trackLane": 8,
-                                    "bibIdentifier": "102",
                                     "rank": 6,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_102Sedney",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_102Sedney",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/102Sedney.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/102Sedney.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.440"
                                     }
                                 },                                  
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_7",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_7",
                                     "@type": "Result",
                                     "name": "7th Position - 100m Women - Semifinals - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/109Foster.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_109Foster",
                                     "trackLane": 3,
-                                    "bibIdentifier": "109",
                                     "rank": 7,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_109Foster",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_109Foster",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/109Foster.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/109Foster.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.620"
                                     }
                                 },                                  
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_8",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_8",
                                     "@type": "Result",
                                     "name": "8th Position - 100m Women - Semifinals - Heat 3",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/105Siragusa.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_105Siragusa",
                                     "trackLane": 2,
-                                    "bibIdentifier": "105",
                                     "rank": 8,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_105Siragusa",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_SemisH3_105Siragusa",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/105Siragusa.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/105Siragusa.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.780"
                                     }
@@ -915,136 +1030,129 @@
                     ]
                 },
                 {
-                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final",
+                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final",
                     "@type": "CompetitionRound",
                     "name": "100m Women - Final",
                     "startDate": "2016-06-08T21:45:00+02:00",
                     "unitCompetition": 
                         {
-                            "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final",
+                            "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final",
                             "@type": "UnitRace",
                             "name": "100m Women - Final",
                             "timekeeping" : "@id": "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.jsonld",
                             "results": [
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_1",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_1",
                                     "@type": "Result",
                                     "name": "1st Position - 100m Women - Final",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/121Schippers.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_121Schippers",
                                     "trackLane": 7,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "121",
                                     "rank": 1,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_121Schippers",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_121Schippers",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/121Schippers.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/121Schippers.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:10.900"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_2",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_2",
                                     "@type": "Result",
                                     "name": "2nd Position - 100m Women - Final",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/124LalovaCollio.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_124LalovaCollio",
                                     "trackLane": 6,
                                     "competitionFeature": "Q",
-                                    "bibIdentifier": "124",
                                     "rank": 2,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_124LalovaCollio",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_124LalovaCollio",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/124LalovaCollio.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/124LalovaCollio.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.200"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_3",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_3",
                                     "@type": "Result",
                                     "name": "3rd Position - 100m Women - Final",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/129Kambundji.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_129Kambundji",
                                     "trackLane": 4,
-                                    "bibIdentifier": "129",
                                     "rank": 3,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_129Kambundji",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_129Kambundji",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/129Kambundji.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/129Kambundji.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.250"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_4",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_4",
                                     "@type": "Result",
                                     "name": "4th Position - 100m Women - Final",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/122Philip.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_122Philip",
                                     "trackLane": 9,
-                                    "bibIdentifier": "122",
                                     "rank": 4,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_122Philip",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_122Philip",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/122Philip.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/122Philip.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.270"
                                     }
                                 },
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_5",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_5",
                                     "@type": "Result",
                                     "name": "5th Position - 100m Women - Final",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/126Pohrebnyak.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_126Pohrebnyak",
                                     "trackLane": 2,
-                                    "bibIdentifier": "126",
                                     "rank": 5,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_126Pohrebnyak",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_126Pohrebnyak",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/126Pohrebnyak.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/126Pohrebnyak.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.280"
                                     }
                                 },                                
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_6",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_6",
                                     "@type": "Result",
                                     "name": "6th Position - 100m Women - Final",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/125Pinto.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_125Pinto",
                                     "trackLane": 8,
-                                    "bibIdentifier": "125",
                                     "rank": 6,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_125Pinto",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_125Pinto",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/125Pinto.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/125Pinto.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.330"
                                     }
                                 },                                  
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_7",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_7",
                                     "@type": "Result",
                                     "name": "7th Position - 100m Women - Final",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/130Gnafoua.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_130Gnafoua",
                                     "trackLane": 3,
-                                    "bibIdentifier": "130",
                                     "rank": 7,
                                     "performance": {
-                                        "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_130Gnafoua",
+                                        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_130Gnafoua",
                                         "@type" : "TimePerformance",
-                                        "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/130Gnafoua.jsonld",
+                                        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/130Gnafoua.jsonld",
                                         "windAssistance" : "-0.2 m/s",
                                         "time" : "00:00:11.360"
                                     }
                                 },       
                                 {
-                                    "@id" : "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_8",
+                                    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_Final_8",
                                     "@type": "Result",
                                     "name": "DNF - 100m Women - Final",
-                                    "competitor" : "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/128Henry.jsonld",
+                                    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_128Henry",
                                     "trackLane": 5,
                                     "bibIdentifier": "128",
                                     "competitionFeature": "DNF"

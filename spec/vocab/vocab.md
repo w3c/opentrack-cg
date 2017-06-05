@@ -304,6 +304,22 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 * subClassOf: `ath:UnitFieldCompetition`
 
 
+### CompetitionEntry
+
+* class: `ath:CompetitionEntry`
+
+| Metadata | Property | Description | Value Type |
+|:-------- |:-------- |:----------- |:---------- |
+| identifier | `schema:identifier` | Unique character string to identify an entry in the competition. | Text |
+| competitor | `ath:competitor` | Athlete or team competing in an event. | [Athlete](#athletes) or [Team](#teams) |
+| protest status | `ath:protestStatus` | Status of the protest action of the competitor during a competition. | [Protest Status](#protest-status) |
+| bibIdentifier | `ath:bibIdentifier` | Text or number printed on the bib, identifying a competitor during the competition. | Text |
+| transponderIdentifier | `ath:transponderIdentifier` | Text or code identifying a competitor by a transponder. | Text |
+| category | `ath:category` | The specific category where a this entry is included in the competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Category](#category) |
+| in competition | `ath:inCompetition` | Competition in which a competitor takes part. | [Competition](#competitions) |
+| best performance | `ath:best` | Best performance for the discipline related to the competition. | [Performance](#performances) |
+
+
 ### Result
 
 * class: `ath:Result`
@@ -311,11 +327,9 @@ Athletics: `http://dbpedia.org/resource/Sport_of_athletics`
 | Metadata | Property | Description | Value Type |
 |:-------- |:-------- |:----------- |:---------- |
 | identifier | `schema:identifier` | Unique character string to identify an entry in the list of results. | Text |
-| competitor | `ath:competitor` | Athlete or team competing in an event. | [Athlete](#athlete) or [Team](#team) |
+| competitionEntry | `ath:competitionEntry` | Athlete or team participating in the event. | [CompetitionEntry](#competitionentry) |
 | competitionFeature | `ath:competitionFeature` |Set of features and notes included by officials in a starting list or results (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | [CompetitionFeatureType](#competitionfeaturetype) |
 | protestStatus | `ath:protestStatus` | Status of the protest action of the competitor at a stage of the competition. | [ProtestStatusType](#proteststatustype) |
-| bibIdentifier | `ath:bibIdentifier` | Text or number printed on the bib, identifying a competitor during the competition. | Text |
-| transponderIdentifier | `ath:transponderIdentifier` | Text or code identifying a competitor by a transponder. | Text |
 | inCompetition | `ath:inCompetition` |Competition in which a competitor takes part. | [Competition](#competitions) |
 | startingOrder | `ath:startingOrder` | Competitor's order in the start list of a competition stage. | Integer |
 | trackLane | `ath:trackLane` | Track lane number assigned to a competitor in case of certain track disciplines. | Integer |

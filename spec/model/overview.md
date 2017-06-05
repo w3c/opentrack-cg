@@ -78,7 +78,9 @@ The following UML diagram represents competition management in Athletics:
 
 * **[Field Trials Rounds](#field-trials-rounds)**. Rounds of Field Events include one of several rounds of [Trials](#field-trials), where athletes have different attempts to achieve their best performance in the competition.  
 
-* **[Participation](#participation)**. Stages within the process of taking part in an Athletics event, from entering the competition to complete the competition, achieving a specific performance, being reflected on the **[Results](#results)** —list of competitors with their **performances** after an event or a concrete round— It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
+* **[Competition Entries](#competition-entries)** are those athletes or teams that take part in an Athletics event, identified by specific information such as bib number, and best performance for the specific discipline of the event. This entry information is relative to the competition and relevant for **[Results](#results)**.
+
+* **[Results](#results)** is a list of competitors (entries in the competition) with their **performances** after an event or a concrete round— It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
 
 * **[Performances](#performances)**. Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed). 
 
@@ -623,8 +625,6 @@ _Example of representation of the previous example of Javelin Throw Competition:
 
 ### Field Trials Rounds
 
-Subclass of [Participation](#participation).
-
 **Field Trials Rounds** are rounds of attempts ([Trials](#trials)) performed by each athlete in a unit competition. 
 
 Instances of Field Trials Rounds are described by the following properties:
@@ -633,12 +633,7 @@ Instances of Field Trials Rounds are described by the following properties:
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify a round of trials. | Text |
 | trials round number | Correlative integer identifying a round of trials in the competition. | Number |
-| competitor | Athlete competing in a round of trials. | [Athlete](#athletes) |
-| feature(s) | Set of features and notes included by officials for a round of trials  (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | [Start Lists and Results](#start-lists-and-results) |
-| protest status | Status of the protest action of the competitor during the competition. | [Protest Status](#protest-status) |
-| bib identifier | Text or number identifying the participation of a competitor, printed on the bib. | Text |
-| transponder identifier | Text or code identifying a competitor by a transponder during the participation in the competition. | Text |
-| starting order | Competitor's order in the start list of a round or trials. | Number |
+| competition entry | Entry about the participation of an Athlete or Team competing in a competition. | [Competition Entry](#competition-entries) |
 | trial(s) | Athlete's attempt(s) in a round of trials. | [Field Trial](#field-trials) |
 | first trial | Athlete's first attempt in a round of trials. | [Field Trial](#field-trials) |
 | last trial | Athlete's last attempt in a round of trials. | [Field Trial](#field-trials) |
@@ -718,13 +713,26 @@ Examples:
 ```
 
 
-### Participation
+### Competition Entries
 
 
-**Participation** models stages of the process of athletes taking part in events, from entries in [Results](#results) (and starting lists before the competition) to the participation in other stages of the competition such as rounds of trials.
+**Competition Entry** models the participation of competitors (teams or athletes) taking part in events. Each competitor will be identified unequivocally in the competition. These entries will be reflected in [Results](#results) (and starting lists before the competition) and in other stages of the competition such as rounds of trials.
+
+Each *entry* of the results list may include the following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify an entry in the list of results. | Text |
+| competitor | Athlete or team competing in an event. | [Athlete](#athletes) or [Team](#teams) |
+| protest status | Status of the protest action of the competitor at a stage of the competition. | [Protest Status](#protest-status) |
+| bib identifier | Text or number printed on the bib, identifying a competitor during the competition. | Text |
+| transponder identifier | Text or code identifying a competitor by a transponder. | Text |
+| category | The specific category where a this entry is included in the competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Category](#category) |
+| in competition | Competition in which a competitor takes part. | [Competition](#competitions) |
+| best performance | Best performance for the discipline related to the competition. | [Performance](#performances) |
 
 
-#### Results
+### Results
 
 **Results** is an ordered list of competitors and their achieved performances, before (start list), during, and after the event. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.). 
 
@@ -738,11 +746,9 @@ Each *entry* of the results list may include the following properties:
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
 | identifier | Unique character string to identify an entry in the list of results. | Text |
-| competitor | Athlete or team competing in an event. | [Athlete](#athletes) or [Team](#teams) |
+| competition entry | Entry about the participation of an Athlete or Team competing in a competition. | [Competition Entry](#competition-entries) |
 | feature(s) | Set of features and notes included by officials in a starting list or results (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | **[Start Lists and Results](#start-lists-and-results)** |
 | protest status | Status of the protest action of the competitor at a stage of the competition. | [Protest Status](#protest-status) |
-| bib identifier | Text or number printed on the bib, identifying a competitor during the competition. | Text |
-| transponder identifier | Text or code identifying a competitor by a transponder. | Text |
 | in competition | Competition in which a competitor takes part. | [Competition](#competitions) |
 | starting order | Competitor's order in the start list of a competition stage. | Number |
 | track lane | Track lane number assigned to a competitor in case of certain track disciplines. | Number |
