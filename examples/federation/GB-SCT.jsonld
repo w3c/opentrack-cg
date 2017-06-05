@@ -1,0 +1,19 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GB-SCT.jsonld",
+    "@type": "Federation",
+    "name": "Scottish Athletics Ltd",
+    "email": "stc@example.com",
+    "url": "http://www.scottishathletics.org.uk",
+    "telephone": "(+44) 0131 539 7320",
+    "faxNumber": "(+44) 0131 539 7321",
+    "address": {
+        "name": "Athletics House",
+        "streetAddress": "Old Coach Road",
+        "addressLocality": "Belfast",
+        "postalCode": "BT9 5PR",
+        "addressCountry": "UK"
+    },
+    "areaServed" : "Scotland",
+    "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+}

@@ -1,0 +1,18 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GB-WLS.jsonld",
+    "@type": "Federation",
+    "name": "Welsh Athletics",
+    "url": "http://www.welshathletics.org",
+    "email": "nir@example.com",
+    "telephone": "(+44) 029 2064 4870",
+    "address": {
+        "name": "Cardiff International Sports Stadium",
+        "streetAddress": "Leckwith Road",
+        "addressLocality": "Cardiff",
+        "postalCode": "CF11 8AZ",
+        "addressCountry": "UK"
+    },
+    "areaServed" : "Welsh",
+    "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+}

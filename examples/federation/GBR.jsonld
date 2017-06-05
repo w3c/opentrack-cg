@@ -1,0 +1,29 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld",
+    "@type": "Federation",
+    "alternateName": "United Kingdom Athletics",
+    "name": "British Athletics",
+    "email": "ba@example.com",
+    "url": "http://www.britishathletics.org.uk/",
+    "faxNumber": "(+44) 0121 3047 34449",
+    "telephone": "(+44) 0121 3407 21439",
+    "address": {
+        "name": "UK Athletics Limited, Athletics House, Alexander Stadium",
+        "streetAddress": "Walsall Road",
+        "addressLocality": "Birmingham",
+        "postalCode": "B42 2BE",
+        "addressCountry": "UK"
+    },
+    "areaServed" : "UK",
+    "memberOf": [
+        "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld"
+    ],
+    "member": [
+        "http://w3c.github.io/opentrack-cg/examples/federation/GB-ENG.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/GB-NIR.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/GB-SCT.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/GB-WLS.jsonld"
+    ]
+}

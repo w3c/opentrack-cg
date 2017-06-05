@@ -1,6 +1,6 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/ENG.jsonld",
+    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GB-ENG.jsonld",
     "@type": "Federation",
     "name": "England Athletics",
     "email": "ea@example.com",

@@ -1,0 +1,18 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GB-NIR.jsonld",
+    "@type": "Federation",
+    "name": "Athletics Northern Ireland",
+    "email": "nir@example.com",
+    "url": "http://www.athleticsni.org",
+    "telephone": "(+44) 028 9060 2707",
+    "address": {
+        "name": "Athletics House",
+        "streetAddress": "Old Coach Road",
+        "addressLocality": "Belfast",
+        "postalCode": "BT9 5PR",
+        "addressCountry": "UK"
+    },
+    "areaServed" : "Northern Ireland",
+    "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+}
