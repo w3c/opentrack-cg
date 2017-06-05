@@ -1,0 +1,7 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/003Athlete3.jsonld",
+    "@type" : "Athlete",
+    
+    "name" : "Sample athlete"
+}
