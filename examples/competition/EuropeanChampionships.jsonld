@@ -1,0 +1,13 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/EuropeanChampionships.jsonld",
+    "@type": "CompetitionSeries",
+    
+    "name": "European Athletics Championships",
+    "description": "The European Athletics Championships is a recurring event organized by European Athletics, that is held every two years. This championship gathers together the best athletes and national teams in Europe.",
+    "organizer": "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld",
+    "recurringEvent" : [
+        "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/competition/Euro2018.jsonld"
+    ]
+}

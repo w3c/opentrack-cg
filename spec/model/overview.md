@@ -127,49 +127,49 @@ An **Athlete** is a **[Person](#persons)** who participates in Athletics events.
 Example:
 ```
 {
-    "@id" : "http://example.com/athlete:000021", 
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
     "@type" : "Athlete",
+    
     "name" : "Mohamed Muktar Jama Farah",
     "familyName" : "Farah",
     "givenName" : "Mohamed Muktar Jama",
     "alternateName" : "Mo Farah",               
     "url" : "http://www.mofarah.com",
-    "gender" : "gender:Male" ,
+    "gender" : "Male" ,
     "image" : "https://example.com/260px-MoPodiumRio2016.png",
-    "nationality" : "country:UK",                       
+    "nationality" : "UK",                       
     "email" : "fakeemail@example.com",
     "height" : "175 cm",
     "weight" : "65 Kg",   
     "birthPlace" : "Mogadishu, Somalia" ,
-    "birthDate" : "1983-04-23",             
-    "address" : "http://example.org/postaladdress:00002",
-    "coach" : 
-        { 
-            "@type" : "Person",
-            "name" : "Alberto Salazar" 
-        },
-    "sponsor" : 
-        {
-            "@type" : "Organization",
-            "name" : "Nike Oregon Project",
-            "url" : "https://nikeoregonproject.com"            
-        },
-    "club" :                              
-        [ 
-           "http://example.com/club:NEB",
-           "http://example.com/club:NOP"
+    "birthDate" : "1983-04-23",
+    "coach" : { 
+        "name" : "Alberto Salazar" 
+    },
+    "sponsor" : {
+        "@type" : "Organization",
+        "name" : "Nike Oregon Project",
+        "url" : "https://nikeoregonproject.com"            
+    },
+    "club" : [ 
+           "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
+           "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
+        ],
+    "team" : [ 
+           "http://w3c.github.io/opentrack-cg/examples/team/GBR2012.jsonld",
+           "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld"
         ],
     "federation" :
         [ 
-           "http://example.com/federation:England_Athletics", 
-           "http://example.com/federation:USATF" 
+           "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld", 
+           "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld" 
         ],
-    "records" :
+    "bestPerformance" :
         [
-           "http://example.com/performance:0000122",
-           "http://example.com/performance:0000124",
-           "http://example.com/performance:0002122",
-           "http://example.com/performance:0000234"
+           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon",
+           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m",
+           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m"
         ]
 }
 ```
@@ -202,25 +202,32 @@ Clubs may be described using the following attributes:
 Example:
 ```
 {
-    "@id" : "http://example.com/club:NEB",
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
     "@type" : "Club",
-    "name" : "Newham & Essex Beagles",
-    "alternateName" : "BeaglesAC",                      
-    "url" : "http://www.newhamandessexbeagles.co.uk/",
-    "image" : "http://example.org/image.png",
-    "logo" : "http://example.org/logo.png",             
-    "telephone" : "(+44) 020 7511 6463",                  
-    "fax" : "(+44) 020 7511 4477",
-    "email" : "fakeemail@example.org",
-    "address" : "http://example.org/postaladdress:0004",
-    "sponsor" : "Asics",
-    "athlete" :                                    
-        [
-           "http://example.com/athlete:082838",
-           "http://example.com/athlete:082839",
-           "http://example.com/athlete:082840"
-        ],
-    "memberOf" :"http://example.com/federation:England_Athletics"
+
+    "name": "Newham & Essex Beagles",
+    "alternateName": "BeaglesAC",
+    "url": "http://www.newhamandessexbeagles.co.uk/",
+    "image": "http://example.org/image.png",
+    "logo": "http://example.org/logo.png",
+    "telephone": "(+44) 020 7511 6463",
+    "faxNumber": "(+44) 020 7511 4477",
+    "email": "fakeemail@example.org",
+    "address": {
+        "name": "Terence McMillan Stadium - Newham Leisure Centre",
+        "streetAddress": "281 Prince Regent Lane",
+        "addressLocality": "London",
+        "postalCode": "E13 8SD",
+        "addressCountry": "UK"
+    },
+    "sponsor": "Asics",
+    "athlete": [
+        "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/002Athlete2.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/003Athlete3.jsonld"
+    ],
+    "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" 
 }
 ```
 
@@ -253,43 +260,22 @@ _Example of definition of a national team as competitor in a 4x100:_
 _Example of definition of a club forming a team for Ekiden:_
 ![Team of a club with several athletes](images/instances_club_team.png)
 
-
-Example of cross country team composed of club members:
+Example of a national team:
 ```
 {
-    "@id" : "http://example.com/team:KEN001",
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld",
     "@type" : "Team",
-    "name" : "Kent Athletic Club – Cross Country 2017 Team",
-    "alternateName" : "KEN",                  
-    "image" : "http://example.org/image.png",
-    "logo" : "http://example.org/logo.png",   
-    "captain" : "http://example.com/athlete:092838",
-    "athlete" :                               
-        [
-           "http://example.com/athlete:092838",
-           "http://example.com/athlete:092839",
-           "http://example.com/athlete:092840"
-        ],
-    "club" : "http://example.com/club:KEN"
-}
-```
-Example of national team:
-```
-{
-    "@id" : "http://example.com/team:JAP2017",
-    "@type" : "Team",
-    "name" : "Japan Team - Marathon 2017",
-    "alternateName" : "JAP",
-    "image" : "http://example.org/image.png",
-    "logo" : "http://example.org/logo.png",   
-    "captain" : "http://example.com/athlete:122838",
-    "athlete" :                               
-        [
-           "http://example.com/athlete:122838",
-           "http://example.com/athlete:122839",
-           "http://example.com/athlete:122840"
-        ],
-    "federation" : "http://example.com/federation:JAP"
+    
+    "name" : "Great Britain National Team - Olympic Games 2016",
+    "alternateName" : "GBR",               
+    "location" : "UK",                       
+    "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld",
+    "athlete" : [
+        "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/002Butchart.jsonld"
+    ],
+    "captain" :  "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
 }
 ```
 
@@ -312,22 +298,51 @@ Federations are subclasses of [Organizations](#organizations), adding the follow
 | member of | Organization(s), such as higher-level federation(s), to which a federation is attached to. | [Organization](#organizations) | 
 | member(s) | Person(s) or organization(s) attached to a federation. | [Person](#persons) or [Organization](#organization) | 
 
-Example:
+Example of description of *European Athletics*:
 ```
 {
-    "@id" : "http://example.com/federation:England_Athletics",
-    "@type" : "Federation",
-    "name" : "England Athletics",
-    "email" : "ea@example.com",
-    "faxNumber" : "(+44) 0121 347 65439",
-    "telephone" : "(+44) 0121 347 65423",
-    "address" : "http://example.org/postaladdress:00012",
-    "memberOf" : "http://example.com/federation:UK",  
-    "member" :                                        
-        [
-           "http://example.com/club:NEB",
-           "http://example.com/club:THH"            
-        ]
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld",
+    "@type": "Federation",
+    "name": "European Athletics",
+    "alternateName": "European Athletic Association",
+    "email": "office@european-athletics.org",
+    "url": "http://www.european-athletics.org",
+    "faxNumber": "(41 21) 313 43 51",
+    "telephone": "(41 21) 313 43 50",
+    "address": {
+        "name": "European Athletic Association",
+        "streetAddress": "Avenue Louis-Ruchonnet 16",
+        "addressLocality": "Lausanne",
+        "postalCode": "CH-1003",
+        "addressCountry": "CHE"
+    },
+    "areaServed" : "Europe",
+    "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld",
+    "member": [
+        "http://w3c.github.io/opentrack-cg/examples/federation/ALB.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/AND.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/ARM.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/AUT.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/AZE.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BLR.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BEL.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BIH.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BUL.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/CRO.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/CYP.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/ALB.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/AND.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/ARM.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/AUT.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/AZE.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BLR.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BEL.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BIH.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BUL.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/CRO.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/CYP.jsonld"
+    ]
 }
 ```
 
@@ -400,20 +415,21 @@ Categories may be described by these following properties:
 | age range | Athletes' range of age to be eligible for a category.  | [Age Range](#age-range) or Text |
 | ruled by | Governing body that recognizes and rule the specific category.  | [Federation](#federations) |
 
-Example:
+Example of category description (Senior Women):
 ```
 {
-    "@type" :  "Category",
-    "name" : "U18 Male",
-    "description" : "Boys under 18",
-    "gender" : "gender:Male",
-    "ageRange" : "age:U18",
-    "ruledBy" : "federation:IAAF"
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/category/SENF.jsonld",
+    "@type": "Category",
+    "name": "Senior (Female)",
+    "description": "Open class with no upper age limit but some limitations on younger people competing in endurance events. Female gender.",
+    "requiredMinAge" : 16,
+    "requiredGender" : "Female",
+    "recognizingAuthority" : "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld"
 }
-
 ```
 
-#### Competition Series
+### Competition Series
 
 **Competition Series** are competitive events that are held periodically (for instance, the Summer Olympic Games have recurring events organized every four years).
 
@@ -427,6 +443,23 @@ Competition Series may be described by the following attributes:
 | description | About a competition series. | Text |
 | recurring competition | A competition that happens as a recurring event within a series of competitions (e.g., *London 2012* Olympic Games) | [Competition](#competitions) |
 
+
+Example of series of events:
+```
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/EuropeanChampionships.jsonld",
+    "@type": "CompetitionSeries",
+    
+    "name": "European Athletics Championships",
+    "description": "The European Athletics Championships is a recurring event organized by European Athletics, that is held every two years. This championship gathers together the best athletes and national teams in Europe.",
+    "organizer": "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld",
+    "recurringEvent" : [
+        "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/competition/Euro2018.jsonld"
+    ]
+}
+```
 
 ### Competitions
 
@@ -552,7 +585,6 @@ A **Unit Race** is a competitive event where performances are measured as time (
 | timekeeping | Type of timekeeping used to control a competition.  | [Timekeeping](#timekeeping) |
 
 
-
 **Examples of competitions:**
 
 _Example of competition model: 2016 European Championships, 100m Men._
@@ -569,6 +601,7 @@ _Example of instances of the [Jaffa Ekiden Relay Race](http://events.ipswichjaff
 _Example of model for competition rounds at 100m Men - European Championships:_
 ![Example of model for competition (100m at European Championships)](images/instances_competition_european_champs_100.png)
 
+See a complete [example of divisional competition (European Championships with detail of 100m event)](http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld).
 
 #### Unit Field Competitions
 
@@ -732,6 +765,16 @@ Each *entry* of the results list may include the following properties:
 | best performance | Best performance for the discipline related to the competition. | [Performance](#performances) |
 
 
+Example of entry in a competition:
+```
+{
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_100Haase"
+    "@type" : "CompetitionEntry",    
+    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase.jsonld",
+    "bibIdentifier" : "100"
+}
+```
+
 ### Results
 
 **Results** is an ordered list of competitors and their achieved performances, before (start list), during, and after the event. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.). 
@@ -762,13 +805,21 @@ Each *entry* of the results list may include the following properties:
 Example:
 ```
 {
-    "@id" : "http://example.com/result:234534",
-    "rank" : "1",
-    "bibIdentifier" : "13",
-    "scorePoints" : 4587,
-    "competitor" : "http://example.com/athlete:29384",
-    "timestamp" : "2016-10-15T10:31:12+01:00",
-    "performance" : "http://example.com/performance:032410"
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_5",
+    "@type": "Result",
+    "name": "5th Position - 100m Women - Round 1 - Heat 1",
+    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_104Kora",
+    "trackLane": 8,
+    "competitionFeature": "q",
+    "rank": 5,
+    "performance": {
+        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_104Kora",
+        "@type" : "TimePerformance",
+        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora.jsonld",
+        "windAssistance" : "-0.5 m/s",
+        "time" : "00:00:11.450",
+        "record" : "SB"
+    }
 }
 ```
 
@@ -794,6 +845,7 @@ There are different types of performance depending on the type of event: **Timed
 * [Points Performance](#points-performance), and
 * [Distance Performance](#distance-performance).
 
+
 #### Time Performance
 
 Apart from all properties of the parent class `Performance`, this entity includes:
@@ -803,13 +855,18 @@ Apart from all properties of the parent class `Performance`, this entity include
 | time | Official measure of a performance expressed as time. | [Time](#dates-and-time) |
 | reaction time | Reaction time of an athlete during a sprint event. | [Time](#dates-and-time) |
 
-Example:
+
+Example of performance in a sprint event:
 ```
 {
-    "time" : "T00:00:11.21",
-    "reactionTime" : "T00:00:00.012"
-}                                        
-```
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_119Nguyen",
+    "@type" : "TimePerformance",
+    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/119Nguyen.jsonld",
+    "windAssistance" : "-1.0 m/s",
+    "time" : "00:00:11.660",
+    "record" : "SB"
+}
+```                                    
 
 #### Points Performance
 
@@ -853,12 +910,13 @@ Example:
 
 Example:
 ```
-{ 
-    "@type" : "QualificationCriteria",
-    "description" : "First 3 in each heat (Q) and 2 best performers (q) advance to the Final",
-    "byPlaceOrStandard" : 3,
-    "byPerformance" : 2
-}
+{
+    "@type": "QualificationCriteria",
+    "description": "First 2 in each heat (Q) and the next 2 fastest (q) advance to the final",
+    "byPlaceOrStandard": 6,
+    "byPerformance": 2
+},
+
 ```
 
 
@@ -884,12 +942,10 @@ Sometimes may be of interest gathering and representing information about device
 Example:
 ```
 {
-    "@id" :  "http://example.com/timekeeping:0001",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.json",
     "@type" :  "Timekeeping",
-    "timekeepingType" : "TST",
-    "name" : "Transponder Based System",
-    "description" : "Fully automatic timekeeping system based on RFID transponders",
-    "timingDevice" : "RFID System – Brand and model"
+    "timekeepingType" : "FAT",
+    "name" : "Generic Fully Automated System"
 }
 ```
 
@@ -916,21 +972,22 @@ Venues can be described by the following attributes:
 Example:
 ```
 {
-    "@id" : "http://example.com/venue:0001",
-    "@type" : "Place",                
-    "name" : "Olympic Stadium Amsterdam",
-    "geo" : 
-        {
-            "latitude" : "52.343417",
-            "longitude" : "4.854192"
-        },
-    "map" : "http://example.org/map",
-    "address" : "http://example.org/postaladdress:0001"
+    "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#venue",
+    "@type": "schema:StadiumOrArena",
+    "name": "Olympic Stadium Amsterdam",
+    "geo": {
+        "latitude": "52.343417",
+        "longitude": "4.854192"
+    },
+    "map": "http://example.org/map",
+    "address": {
+        "streetAddress": "Olympisch Stadion 2",
+        "addressLocality": "Amsterdam",
+        "postalCode": "1076 DE",
+        "addressCountry": "NL"
+    }
 }
 ```
-
-See [RunTrack Directory](http://www.runtrackdir.com/details.asp?track=london-nh).
-
 
 ### Postal Addresses
 
@@ -949,12 +1006,10 @@ A postal address may be represented by some common properties:
 Example:
 ```
 {
-    "@id" : "http://example.org/postaladdress:0001",
-    "@type" : "PostalAddress",
-    "streetAddress" : "Olympisch Stadion 2",
-    "addressLocality" : "Amsterdam",
-    "postalCode" : "1076 DE",
-    "addressCountry" : "country:NL"
+    "streetAddress": "Olympisch Stadion 2",
+    "addressLocality": "Amsterdam",
+    "postalCode": "1076 DE",
+    "addressCountry": "NL"
 }
 ```
 

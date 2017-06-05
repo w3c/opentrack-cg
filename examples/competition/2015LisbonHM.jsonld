@@ -16,7 +16,7 @@
     "url": "http://www.maratonaclubedeportugal.com/corrida/edp-lisbon-half-marathon/",
     "image": "http://www.maratonaclubedeportugal.com/generated_files/corridas/logotipo/EDP%20Meia%20Maratona%20de%20Lisboa%202017.jpg",
     "location": {
-        "@id": http://w3c.github.io/opentrack-cg/examples/competition/2015LisbonHM.jsonld#venue",
+        "@id": "http://w3c.github.io/opentrack-cg/examples/competition/2015LisbonHM.jsonld#venue",
         "@type": "Place",
         "name": "Parque das Nações, Meo Arena, Sala Tejo",
         "map": "http://www.maratonaclubedeportugal.com/generated_files/images/percursos/Percurso-MML-2017.jpg",
