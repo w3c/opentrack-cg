@@ -8,7 +8,12 @@
 
 **Participate:**
   * [https://www.w3.org/community/opentrack/](https://www.w3.org/community/opentrack/)
-    
+
+
+## Content
+* [Introduction](#introduction)
+* [Classes and Properties](#classes-and-properties)
+* [Schemas and DataTypes](#schemas-and-dataTypes)
 
 ## Introduction
 
@@ -204,7 +209,7 @@ The property will include information about the textual information using a comp
 
 ```
 {
-    "@type"        : "Place",
+    "@type" : "Place",
     "name" : {
         "@value": "Berlin Olympic Stadium",
         "@language": "en"
