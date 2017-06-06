@@ -801,7 +801,8 @@ Each *entry* of the results list may include the following properties:
 | track lane | Track lane number assigned to a competitor in case of certain track disciplines. | Number |
 | rank | Position in the ranking of results. | Integer |
 | record(s) | Flags indicating records or best performances achieved after the competition competition (e.g., World Record, National Record, etc.). | [Record](#records) |
-| timestamp | Exact date and time when the results were produced. | [Date and Time](#dates-and-time) |
+| created | Exact date and time when the results were produced. | [Date and Time](#dates-and-time) |
+| modified | Exact date and time when the results were modified. | [Date and Time](#dates-and-time) |
 | performance | Measure to quantify the performance of the competitor after a competition stage.  | [Performance](#performances) |
 | status | Status of results (e.g., official, intermediate, etc.). | [Result Status](#result-status) |
 | award | Award related to the result achieved by the athlete. | [Award](#awards) |
@@ -1263,7 +1264,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `T` | Team Official (not Coach) |
 
 
-### Result Statuses
+### Result Status
 
 | Code | Status |
 | ---- | ------ |
@@ -1274,7 +1275,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `UNOFFICIAL` | Results of the competition released as soon as the event is over, not waiting any official decision of the International Federation. The correctness of data must be assured.  |
 | `OFFICIAL` | Results of the competition released as soon as the event is officially confirmed taking into account the resolution of the protests, etc.  |
 | `PARTIAL` | Incomplete list, Final Ranking. |
-| `PROTESTED` | After the competition is no longer LIVE and a protest has been lodged	After all decisions on the protest are made the ResultStatus will change to UNOFFICIAL or OFFICIAL as appropriate.  |
+| `PROTESTED` | After the competition is no longer LIVE and a protest has been lodged. After all decisions on the protest are made the ResultStatus will change to UNOFFICIAL or OFFICIAL as appropriate.  |
 
 
 ### Protest Status

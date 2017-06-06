@@ -565,6 +565,7 @@ The list of results is expressed through a sequence (`rdf:Seq`) —an ordered li
 | `rank` | `ath:rank` | Position in the ranking of results. | Integer |
 | `record` | `ath:record` | Flags indicating records or best performances achieved after the competition competition (e.g., World Record, National Record, etc.). | [Record](#record) |
 | `created` | `dc:created` | Exact date and time when the results were produced. | [DateTime](#datetime) |
+| `modified` | `dc:modified` | Exact date and time when the results were updated. | [DateTime](#datetime) |
 | `performance` | `ath:performance` | Measure to quantify the performance of the competitor after a competition stage.  | [Performance](#performance) |
 | `award` | `ath:award` | Award related to the result achieved by the athlete. | Text |
 

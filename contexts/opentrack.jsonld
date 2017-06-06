@@ -153,6 +153,7 @@
     "rank"              : { "@id" : "ath:rank", "@type": "xsd:integer"  },
     "record"            : { "@id" : "ath:record"},
     "created"           : { "@id" : "dcterms:created", "@type": "xsd:datetime"  },
+    "modified"          : { "@id" : "dcterms:modified", "@type": "xsd:datetime"  },
     "performance"       : "ath:performance" ,
     "award"             : "ath:award" ,
     "windAssistance"    : "ath:windAssistance" ,
