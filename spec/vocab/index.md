@@ -48,18 +48,18 @@ To illustrate the basic concepts of this Opentrack JSON-LD representation we wil
 
 ```
 {
-    "@context"		: "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" 			: "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
-    "@type" 		: "Athlete",
-    "name" 			: "Mohamed Muktar Jama Farah",
-    "familyName"	: "Farah",
-    "givenName" 	: "Mohamed Muktar Jama",
+    "@context" : "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+    "@type" : "Athlete",
+    "name" : "Mohamed Muktar Jama Farah",
+    "familyName" : "Farah",
+    "givenName" : "Mohamed Muktar Jama",
     "alternateName" : "Mo Farah",               
-    "url" 			: "http://www.mofarah.com",
-    "gender" 		: "Male" ,
-    "birthDate" 	: "1983-04-23",
-    "image" 		: "https://example.com/260px-MoPodiumRio2016.png",
-    "club" 			: "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
+    "url" : "http://www.mofarah.com",
+    "gender" : "Male" ,
+    "birthDate" : "1983-04-23",
+    "image" : "https://example.com/260px-MoPodiumRio2016.png",
+    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
 } 
 ```
 
@@ -73,7 +73,7 @@ RDF resources (concepts, classes, properties, etc.) are identified by IRIs. For 
 
 By specifying 
 ```
-	"@context" : "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld"
+    "@context" : "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld"
 ```
 we indicate the context of the document, that is defined in [the linked document](http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld). So we can use the keys of the context as a simplification for the representation. 
 
@@ -104,7 +104,7 @@ This example describes an `Athlete` that is identified as [http://w3c.github.io/
 Using this mechanism, we can enrich descriptions just linking our descriptions with other IRIs that already identify resources. For instance, the athlete is affiliated to a club:
 
 ```
-	"club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
+    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
 ```
 
 That club (identified by [http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld](http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld)) is described in the same way.
@@ -122,17 +122,17 @@ Some properties only may have **Literals** as value:
 
 Texts:
 ```
-	"alternateName" : "Mo Farah"
+    "alternateName" : "Mo Farah"
 ```
 
 Dates:
 ```
-	"birthDate" : "1983-04-23",
+    "birthDate" : "1983-04-23",
 ```
 
 Integers:
 ```
-	"age" : 25
+    "age" : 25
 ```
 
 ###### Predefined Values (enumerations)
@@ -141,7 +141,7 @@ Some properties may have **Enumerations** as value:
 
 For instance, `gender` should only take one possible value (either `Male` or `Female`).
 ```
-	"gender" : "Male"
+    "gender" : "Male"
 ```
 
 In this case, the potential values are expressed in the context as aliases, so we can use `Male` instead of `http://schema.org/Male`.
@@ -153,27 +153,27 @@ As shown above, a resource identified by an IRI may be used as value of a proper
 
 In case [the resource](http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld) is already identified (and described) we can link it directly:
 ```
-	"club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
+    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
 ```
 
 Otherwise we can describe that resource nested in the main object:
 ```
-	"club" : {
-		"@type": "Club",
-		"name": "Newham & Essex Beagles",
-		"alternateName": "BeaglesAC",
-		"url": "http://www.newhamandessexbeagles.co.uk/",
-		"logo": "http://example.org/logo.png",
-		"telephone": "(+44) 020 7511 6463",
-		"faxNumber": "(+44) 020 7511 4477",
-		"address": {
-			"name": "Terence McMillan Stadium - Newham Leisure Centre",
-			"streetAddress": "281 Prince Regent Lane",
-			"addressLocality": "London",
-			"postalCode": "E13 8SD",
-			"addressCountry": "UK"
-		}
-	}
+    "club" : {
+        "@type": "Club",
+        "name": "Newham & Essex Beagles",
+        "alternateName": "BeaglesAC",
+        "url": "http://www.newhamandessexbeagles.co.uk/",
+        "logo": "http://example.org/logo.png",
+        "telephone": "(+44) 020 7511 6463",
+        "faxNumber": "(+44) 020 7511 4477",
+        "address": {
+            "name": "Terence McMillan Stadium - Newham Leisure Centre",
+            "streetAddress": "281 Prince Regent Lane",
+            "addressLocality": "London",
+            "postalCode": "E13 8SD",
+            "addressCountry": "UK"
+        }
+    }
 ```
 
 See in the previous example that we can include descriptions of other entities nested (i.e., postal address).
@@ -184,13 +184,13 @@ Most of the properties may be repeated to describe the same resource. For instan
 
 ```
     "club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
-	"club" : "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
+    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
 ```
 Or: 
 ```
     "club" : [ 
-		"http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
-		"http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
+        "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
     ]
 ```
 
@@ -204,15 +204,15 @@ The property will include information about the textual information using a comp
 
 ```
 {
-	"@type"		: "Place",
-	"name" : {
-		"@value": "Berlin Olympic Stadium",
-		"@language": "en"
-	},
-	"name": {
-		"@value": "Olympiastadion Berlin",
-		"@language": "de"
-	}
+    "@type"        : "Place",
+    "name" : {
+        "@value": "Berlin Olympic Stadium",
+        "@language": "en"
+    },
+    "name": {
+        "@value": "Olympiastadion Berlin",
+        "@language": "de"
+    }
 }
 ```
 
@@ -1144,14 +1144,14 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 
 | `Code` | Status |
 | ---- | ------ |
-| `results:startList` | Before competition, Start List	|
+| `results:startList` | Before competition, Start List    |
 | `results:live` | For live updates during competition |
 | `results:intermediate` | When competition is stopped, used at pre-defined points |
-| `results:unconfirmed` | When the unit is over but not yet unofficial or official.	Only used if other statuses do not come quickly.  |
+| `results:unconfirmed` | When the unit is over but not yet unofficial or official.    Only used if other statuses do not come quickly.  |
 | `results:unofficial` | Results of the competition released as soon as the event is over, not waiting any official decision of the International Federation. The correctness of data must be assured.  |
 | `results:official` | Results of the competition released as soon as the event is officially confirmed taking into account the resolution of the protests, etc.  |
 | `results:partial` | Incomplete list, Final Ranking. |
-| `results:protested` | After the competition is no longer LIVE and a protest has been lodged	After all decisions on the protest are made the ResultStatus will change to UNOFFICIAL or OFFICIAL as appropriate.  |
+| `results:protested` | After the competition is no longer LIVE and a protest has been lodged    After all decisions on the protest are made the ResultStatus will change to UNOFFICIAL or OFFICIAL as appropriate.  |
 
 
 ### ProtestStatusType
@@ -1159,7 +1159,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `Code` | Status |
 | ---- | ---- |
 | `protest:CLS` | Closed | 
-| `protest:OPN`	| Open | 
+| `protest:OPN`    | Open | 
 | `protest:PND` | Pending |  
 | `protest:ROPN` | Re Open | 
 
@@ -1168,15 +1168,15 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `Code` | Type |
 | ---- | ---- |
 | `race:RaceIndividual` | Individual Race | 
-| `race:RaceRelays`	| Relay Race | 
-| `race:RaceTimeTrial`	| Time Trial | 
+| `race:RaceRelays`    | Relay Race | 
+| `race:RaceTimeTrial`    | Time Trial | 
 
 ### VenueType
 
 | `Code` | Type |
 | ---- | ---- |
 | `venue:VenueIndoor` | Indoor venue | 
-| `venue:VenueOutdoor`	| Outdoor venue | 
+| `venue:VenueOutdoor`    | Outdoor venue | 
 
 
 ### TimekeepingType
@@ -1184,7 +1184,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `Code` | Type |
 | ---- | ---- |
 | `timekeeping:HT` | Hand Timing | 
-| `timekeeping:FAT`	| Fully Automatic | 
+| `timekeeping:FAT`    | Fully Automatic | 
 | `timekeeping:TST` | Transponder System Timing | 
 
 

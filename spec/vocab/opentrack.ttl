@@ -13,139 +13,139 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 
 ath:
-	a owl:Ontology ;
-	rdfs:label "Opentrack Ontology"@en ;
-	owl:versionInfo "0.1" ;
-	dct:creator "Martin Alvarez-Espinar" ;
-	dct:issued "2017-06-10"^^xsd:date ;
-	dct:contributor "W3C Opentrack Community Group" ;
-	dct:description "The OpenTrack (&Field) Vocabulary defines a set of concepts and terms (the vocabulary) and encoding mechanism (the expression) for describing competitions in Athletics (events, competitors, and management)."@en ;
-	rdfs:comment "This is the RDF ontology for Opentrack version 0.1 (working draft)."@en ;
-	dct:license <https://www.w3.org/Consortium/Legal/2002/ipr-notice-20021231#Copyright/> .
+    a owl:Ontology ;
+    rdfs:label "Opentrack Ontology"@en ;
+    owl:versionInfo "0.1" ;
+    dct:creator "Martin Alvarez-Espinar" ;
+    dct:issued "2017-06-10"^^xsd:date ;
+    dct:contributor "W3C Opentrack Community Group" ;
+    dct:description "The OpenTrack (&Field) Vocabulary defines a set of concepts and terms (the vocabulary) and encoding mechanism (the expression) for describing competitions in Athletics (events, competitors, and management)."@en ;
+    rdfs:comment "This is the RDF ontology for Opentrack version 0.1 (working draft)."@en ;
+    dct:license <https://www.w3.org/Consortium/Legal/2002/ipr-notice-20021231#Copyright/> .
 
 
 ## Classes
 
 :Athlete
-	a rdfs:Class ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "Athlete"@en ;
-	skos:definition "An Athlete is a Person who participates in Athletics events."@en ;
-	rdfs:subClassOf schema:Person, foaf:Person.
-
-:SportsGoverningBody	
     a rdfs:Class ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "Sports Governing Body"@en ;
-	skos:definition "Sports Governing Body is an organization in charge of governing and rule sports. These sports governing bodies may be attached to other higher-level organizations (clubs or federations) attached to them."@en ;
-	rdfs:subClassOf schema:SportsOrganization, foaf:Organization .
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "Athlete"@en ;
+    skos:definition "An Athlete is a Person who participates in Athletics events."@en ;
+    rdfs:subClassOf schema:Person, foaf:Person.
+
+:SportsGoverningBody    
+    a rdfs:Class ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "Sports Governing Body"@en ;
+    skos:definition "Sports Governing Body is an organization in charge of governing and rule sports. These sports governing bodies may be attached to other higher-level organizations (clubs or federations) attached to them."@en ;
+    rdfs:subClassOf schema:SportsOrganization, foaf:Organization .
 
 :CompetitiveAudience
     a rdfs:Class ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "Competitive Audience"@en ;
-	skos:definition "Competitive Audience is the potential audience to take part in the competition of athletes and teams in sports events. This marks the categories of the competition."@en ,
-	rdfs:subClassOf schema:PeopleAudience .
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "Competitive Audience"@en ;
+    skos:definition "Competitive Audience is the potential audience to take part in the competition of athletes and teams in sports events. This marks the categories of the competition."@en ,
+    rdfs:subClassOf schema:PeopleAudience .
 
 
 :Competition
     a rdfs:Class ;
-	rdfs:subClassOf schema:SportsEvent ;
+    rdfs:subClassOf schema:SportsEvent ;
     rdfs:isDefinedBy ath: ;
     owl:sameAs bbc:Competition ;
-	rdfs:label "Competition"@en ;
-	skos:definition "A Competition is an event in which Athletes take part in order to find out who is best at a particular sports activity."@en .
+    rdfs:label "Competition"@en ;
+    skos:definition "A Competition is an event in which Athletes take part in order to find out who is best at a particular sports activity."@en .
 
 :DivisionalCompetition
     a rdfs:Class ;
-	rdfs:subClassOf ath:Competition ;
+    rdfs:subClassOf ath:Competition ;
     rdfs:isDefinedBy ath: ;
     owl:sameAs bbc:DivisionalCompetition ;
-	rdfs:label "Divisional Competition"@en ;
-	skos:definition "A Divisional Competition is a competition that is divided into a number of competitions. For instace, The Boston Marathon is divided in two divisions: Open/overall division and Masters division."@en .
+    rdfs:label "Divisional Competition"@en ;
+    skos:definition "A Divisional Competition is a competition that is divided into a number of competitions. For instace, The Boston Marathon is divided in two divisions: Open/overall division and Masters division."@en .
 
 :MultiStageCompetition
     a rdfs:Class ;
-	rdfs:subClassOf ath:Competition ;
+    rdfs:subClassOf ath:Competition ;
     rdfs:isDefinedBy ath: ;
     owl:sameAs bbc:MultiStageCompetition ;
-	rdfs:label "Multi Stage Competition"@en ;
-	skos:definition "A Multi Stage Competition is an athletic event organised as a set of stages. For instance, The Diamond League and the Surrey Cross Country League."@en .
+    rdfs:label "Multi Stage Competition"@en ;
+    skos:definition "A Multi Stage Competition is an athletic event organised as a set of stages. For instance, The Diamond League and the Surrey Cross Country League."@en .
 
 :MultidisciplineCompetition
     a rdfs:Class ;
-	rdfs:subClassOf ath:Competition ;
+    rdfs:subClassOf ath:Competition ;
     rdfs:isDefinedBy ath: ;
     owl:sameAs bbc:MultidisciplineCompetition ;
-	rdfs:label "Multi Discipline Competition"@en ;
-	skos:definition "A Multidiscipline Competition is a competition that incorporates a number of different event disciplines. For instance, the 2012 London Summer Olympic Games 2012, and the 2016 European Athletics Championships."@en .
+    rdfs:label "Multi Discipline Competition"@en ;
+    skos:definition "A Multidiscipline Competition is a competition that incorporates a number of different event disciplines. For instance, the 2012 London Summer Olympic Games 2012, and the 2016 European Athletics Championships."@en .
 
 :MultiRoundCompetition
     a rdfs:Class ;
-	rdfs:subClassOf ath:Competition ;
+    rdfs:subClassOf ath:Competition ;
     rdfs:isDefinedBy ath: ;
     owl:sameAs bbc:MultiRoundCompetition ;
-	rdfs:label "Multi Round Competition"@en ;
-	skos:definition "A Multi Round Competition is an athletic event organised as a sequence of rounds. For instance, track and field events are usually structured in qualification rounds (i.e, preliminary rounds, qualification rounds, semifinals and final)."@en .
+    rdfs:label "Multi Round Competition"@en ;
+    skos:definition "A Multi Round Competition is an athletic event organised as a sequence of rounds. For instance, track and field events are usually structured in qualification rounds (i.e, preliminary rounds, qualification rounds, semifinals and final)."@en .
 
 :CompetitionSeries
     a rdfs:Class ;
-	rdfs:subClassOf schema:EventSeries ;
+    rdfs:subClassOf schema:EventSeries ;
     rdfs:isDefinedBy ath: ;
     owl:sameAs bbc:RecurringCompetition ;
-	rdfs:label "Competition Series"@en ;
-	skos:definition "Competition Series are competitive events that are held periodically (for instance, the Summer Olympic Games have recurring events organized every four years)."@en .
+    rdfs:label "Competition Series"@en ;
+    skos:definition "Competition Series are competitive events that are held periodically (for instance, the Summer Olympic Games have recurring events organized every four years)."@en .
 
 :CompetitionRound
     a rdfs:Class ;
-	rdfs:subClassOf ath:Competition ;
+    rdfs:subClassOf ath:Competition ;
     rdfs:isDefinedBy ath: ;
     owl:sameAs bbc:Round ;
-	rdfs:label "Competition Round"@en ;
-	skos:definition "A Competition Round is each sub-event of a Multi Round Competition. Rounds in competitions have one of more Unit Competitions (e.g., a heat in a qualifying round, the race in the 200m final round) where competitors are distributed. The number and type of rounds depend on the competition rules for each discipline. For instance, track sprint competitions with many participants may have various heats at preliminary round, several heats at first round, two semifinals, and a final."@en .
+    rdfs:label "Competition Round"@en ;
+    skos:definition "A Competition Round is each sub-event of a Multi Round Competition. Rounds in competitions have one of more Unit Competitions (e.g., a heat in a qualifying round, the race in the 200m final round) where competitors are distributed. The number and type of rounds depend on the competition rules for each discipline. For instance, track sprint competitions with many participants may have various heats at preliminary round, several heats at first round, two semifinals, and a final."@en .
 
 :UnitCompetition
     a rdfs:Class ;
-	rdfs:subClassOf ath:Competition ;
+    rdfs:subClassOf ath:Competition ;
     rdfs:isDefinedBy ath: ;
     owl:sameAs bbc:UnitCompetition ;
-	rdfs:label "Unit Competition"@en ;
-	skos:definition "A Unit Competition is a unitary competition defined by specific sports rules (for instance, the Heat 1 race at the semifinals of 100m event in the Olympic Games). Competition Rounds have one o more Unit Competitions."@en .
+    rdfs:label "Unit Competition"@en ;
+    skos:definition "A Unit Competition is a unitary competition defined by specific sports rules (for instance, the Heat 1 race at the semifinals of 100m event in the Olympic Games). Competition Rounds have one o more Unit Competitions."@en .
 
 :UnitRace
     a rdfs:Class ;
-	rdfs:subClassOf ath:UnitCompetition ;
+    rdfs:subClassOf ath:UnitCompetition ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Unit Race"@en ;
-	skos:definition "A Unit Race is a competitive event where performances are measured as time (i.e., races and legs in relay races). Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race."@en .
+    rdfs:label "Unit Race"@en ;
+    skos:definition "A Unit Race is a competitive event where performances are measured as time (i.e., races and legs in relay races). Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race."@en .
 
 :UnitRace
     a rdfs:Class ;
-	rdfs:subClassOf ath:UnitCompetition ;
+    rdfs:subClassOf ath:UnitCompetition ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Unit Race"@en ;
-	skos:definition "A Unit Race is a competitive event where performances are measured as time (i.e., races and legs in relay races). Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race."@en .
+    rdfs:label "Unit Race"@en ;
+    skos:definition "A Unit Race is a competitive event where performances are measured as time (i.e., races and legs in relay races). Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race."@en .
 
 :UnitFieldCompetition
     a rdfs:Class ;
-	rdfs:subClassOf ath:UnitCompetition ;
+    rdfs:subClassOf ath:UnitCompetition ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Unit Field Competition"@en ;
-	skos:definition "A Unit Field Competition is a unitary competition in field events (for instance, one group of the semifinals in a High Jump event)."@en .
+    rdfs:label "Unit Field Competition"@en ;
+    skos:definition "A Unit Field Competition is a unitary competition in field events (for instance, one group of the semifinals in a High Jump event)."@en .
 
 :UnitHeightCompetition
     a rdfs:Class ;
-	rdfs:subClassOf ath:UnitFieldCompetition ;
+    rdfs:subClassOf ath:UnitFieldCompetition ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Unit Height Competition"@en ;
-	skos:definition "A Unit Height Competition is a unitary competition for height disciplines (Vertical Jumps)."@en .
+    rdfs:label "Unit Height Competition"@en ;
+    skos:definition "A Unit Height Competition is a unitary competition for height disciplines (Vertical Jumps)."@en .
 
 :UnitHeightCompetition
     a rdfs:Class ;
-	rdfs:subClassOf ath:UnitFieldCompetition ;
+    rdfs:subClassOf ath:UnitFieldCompetition ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Unit Distance Competition"@en ;
-	skos:definition "A Unit Distance Competition is a unitary competition for distance field disciplines (Horizontal Jumps and Throws)."@en .
+    rdfs:label "Unit Distance Competition"@en ;
+    skos:definition "A Unit Distance Competition is a unitary competition for distance field disciplines (Horizontal Jumps and Throws)."@en .
 
 :CompetitionEntry
     a rdfs:Class ;
@@ -156,47 +156,47 @@ ath:
 :Result
     a rdfs:Class ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Result"@en ;
-	skos:definition "Result is a competitor's achievent before (start list), during and after the competition. Result items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition ‘under protest’, etc.)."@en .
+    rdfs:label "Result"@en ;
+    skos:definition "Result is a competitor's achievent before (start list), during and after the competition. Result items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition ‘under protest’, etc.)."@en .
 
 :Performance
     a rdfs:Class ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Performance"@en ;
-	skos:definition "Performance represents the resulting competitor’s accomplishment measured and recognized by officials after a competition. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind assistance)."@en .
+    rdfs:label "Performance"@en ;
+    skos:definition "Performance represents the resulting competitor’s accomplishment measured and recognized by officials after a competition. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind assistance)."@en .
 
 :TimePerformance
     a rdfs:Class ;
-	rdfs:subClassOf ath:Performance ;
+    rdfs:subClassOf ath:Performance ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "TimePerformance"@en ;
-	skos:definition "Performance measured as time"@en .
+    rdfs:label "TimePerformance"@en ;
+    skos:definition "Performance measured as time"@en .
 
 :PointsPerformance
     a rdfs:Class ;
-	rdfs:subClassOf ath:Performance ;
+    rdfs:subClassOf ath:Performance ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "PointsPerformance"@en ;
-	skos:definition "Performance measured as points"@en .
+    rdfs:label "PointsPerformance"@en ;
+    skos:definition "Performance measured as points"@en .
 
 :DistancePerformance
     a rdfs:Class ;
-	rdfs:subClassOf ath:Performance ;
+    rdfs:subClassOf ath:Performance ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Distance Performance"@en ;
-	skos:definition "Performance measured as distance"@en .
+    rdfs:label "Distance Performance"@en ;
+    skos:definition "Performance measured as distance"@en .
 
 :QualificationCriteria
     a rdfs:Class ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Qualification Criteria"@en ;
-	skos:definition "Qualification Criteria are the requirements for the competitor to pass a competition round. Qualification may be based on the finishing position or by best time."@en .
+    rdfs:label "Qualification Criteria"@en ;
+    skos:definition "Qualification Criteria are the requirements for the competitor to pass a competition round. Qualification may be based on the finishing position or by best time."@en .
 
 :Timekeeping
     a rdfs:Class ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Timekeeping"@en ;
-	skos:definition "Timekeeping is a process and/or mechanism of timing competitions."@en .
+    rdfs:label "Timekeeping"@en ;
+    skos:definition "Timekeeping is a process and/or mechanism of timing competitions."@en .
 
 
 ## DISCIPLINES
@@ -204,17 +204,17 @@ ath:
 :AthleticsDiscipline
     a rdfs:Class ;
     rdfs:isDefinedBy ath: ;
-	rdfs:subClassOf skos:Concept ;
-	rdfs:label "Athletics Discipline"@en ;
-	skos:definition "Athletics discipline is a particular Athletics type of event practiced under specific rules."@en .
+    rdfs:subClassOf skos:Concept ;
+    rdfs:label "Athletics Discipline"@en ;
+    skos:definition "Athletics discipline is a particular Athletics type of event practiced under specific rules."@en .
 
 :Race
     a rdfs:Class ;
     rdfs:subClassOf ath:AthleticsDiscipline ;
     skos:broader :AthleticsDiscipline ;    
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Race"@en ;
-	skos:definition "A type of competition to see who is the fastest, including running or race-waking."@en ;
+    rdfs:label "Race"@en ;
+    skos:definition "A type of competition to see who is the fastest, including running or race-waking."@en ;
     skos:narrower :MiddleOrLongDistanceRace ;
     skos:narrower :Steeplechase ;
     skos:narrower :Hurdles ;
@@ -230,8 +230,8 @@ ath:
     rdfs:subClassOf :Race ;
     skos:broader :Race ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Middle Or Long Distance Race"@en ;
-	skos:definition "Middle-distance or Long-distance running event, over a distance longer than sprints (over 800m and up to Marathon 42.195 Km)."@en ;
+    rdfs:label "Middle Or Long Distance Race"@en ;
+    skos:definition "Middle-distance or Long-distance running event, over a distance longer than sprints (over 800m and up to Marathon 42.195 Km)."@en ;
     skos:narrower :Steeplechase .
 
 :Steeplechase
@@ -239,150 +239,150 @@ ath:
     rdfs:subClassOf ath:Race ;
     skos:broader :MiddleOrLongDistanceRace ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Steeplechase"@en ;
-	skos:definition "Steeplechase is a long distance running event where runners must clear obstacles and water jumps."@en .
+    rdfs:label "Steeplechase"@en ;
+    skos:definition "Steeplechase is a long distance running event where runners must clear obstacles and water jumps."@en .
 
 :Hurdles
     a rdfs:Class ;
     rdfs:subClassOf ath:Race ;
     skos:broader :Race ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Hurdles"@en ;
-	skos:definition "Hurdles is a running event where athletes jump over hurdles at speed."@en .
+    rdfs:label "Hurdles"@en ;
+    skos:definition "Hurdles is a running event where athletes jump over hurdles at speed."@en .
 
 :Sprint
     a rdfs:Class ;
     rdfs:subClassOf ath:Race ;
     skos:broader :Race ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Sprint"@en ;
-	skos:definition "Sprints are running events over a short distance (less than 800m)."@en .
+    rdfs:label "Sprint"@en ;
+    skos:definition "Sprints are running events over a short distance (less than 800m)."@en .
 
 :RaceWalking
     a rdfs:Class ;
     rdfs:subClassOf ath:Race ;
     skos:broader :Race ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Race Walking"@en ;
-	skos:definition "Racewalking, or race walking, is a long-distance discipline where one foot must appear to be in contact with the ground at all times."@en .
+    rdfs:label "Race Walking"@en ;
+    skos:definition "Racewalking, or race walking, is a long-distance discipline where one foot must appear to be in contact with the ground at all times."@en .
 
 :RoadRunning
     a rdfs:Class ;
     rdfs:subClassOf ath:Race ;
     skos:broader :Race ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Road Running"@en ;
-	skos:definition "Road running is an Athletics discipline on a measured course over an established road."@en .
+    rdfs:label "Road Running"@en ;
+    skos:definition "Road running is an Athletics discipline on a measured course over an established road."@en .
 
 :CrossCountry
     a rdfs:Class ;
     rdfs:subClassOf ath:Race ;
     skos:broader :Race ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Cross Country"@en ;
-	skos:definition "Cross country is a running discipline in which teams and individuals run a race on open-air courses over natural terrain such as dirt or grass."@en .
+    rdfs:label "Cross Country"@en ;
+    skos:definition "Cross country is a running discipline in which teams and individuals run a race on open-air courses over natural terrain such as dirt or grass."@en .
 
 :MountainRunning
     a rdfs:Class ;
     rdfs:subClassOf ath:Race ;
     skos:broader :Race ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Mountain Running"@en ;
-	skos:definition "Mountain running is a Athletics discipline that takes place on terrain that is mainly off-road and which course may gain elevation."@en .
+    rdfs:label "Mountain Running"@en ;
+    skos:definition "Mountain running is a Athletics discipline that takes place on terrain that is mainly off-road and which course may gain elevation."@en .
 
 :TrackRelays
     a rdfs:Class ;
     rdfs:subClassOf ath:Race ;
     skos:broader :Race ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Track Relays"@en ;
-	skos:definition "Relays or relay race is a track race between two or more teams where each member of the team runs one leg of the race."@en .
+    rdfs:label "Track Relays"@en ;
+    skos:definition "Relays or relay race is a track race between two or more teams where each member of the team runs one leg of the race."@en .
 
 :UltraRunning
     a rdfs:Class ;
     rdfs:subClassOf ath:Race ;
     skos:broader :Race ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Ultra Running"@en ;
-	skos:definition "Ultra running, ultra distance or ultramarathon, is a footrace longer than the traditional marathon length (42.195 Km)."@en .
+    rdfs:label "Ultra Running"@en ;
+    skos:definition "Ultra running, ultra distance or ultramarathon, is a footrace longer than the traditional marathon length (42.195 Km)."@en .
 
 :Throws
     a rdfs:Class ;
     rdfs:subClassOf ath:AthleticsDiscipline ;
     skos:broader :AthleticsDiscipline ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Throws"@en ;
-	skos:definition "Throws are types of field events in which athletes throws heavy objects in an attempt to mark a farther distance than their competitors."@en ;
+    rdfs:label "Throws"@en ;
+    skos:definition "Throws are types of field events in which athletes throws heavy objects in an attempt to mark a farther distance than their competitors."@en ;
     skos:narrower :ShotPut, :DiscusThrow, :HammerThrow, :JavelinThrow, :WeightThrow .
 
 :ShotPut
     a rdfs:Class ;
     rdfs:subClassOf ath:Throws ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Shot Put"@en ;
-	skos:definition "Shot Put is a track and field event involving throwing/putting (throwing in a pushing motion) a heavy spherical object (the shot) as far as possible. The size of the ball, and the legth of the wire varies depending on the competition rules."@en .
+    rdfs:label "Shot Put"@en ;
+    skos:definition "Shot Put is a track and field event involving throwing/putting (throwing in a pushing motion) a heavy spherical object (the shot) as far as possible. The size of the ball, and the legth of the wire varies depending on the competition rules."@en .
 
 :DiscusThrow
     a rdfs:Class ;
     rdfs:subClassOf ath:Throws ;
     skos:broader :Throws ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Discus Throw"@en ;
-	skos:definition "The Discus Throw is a track and field event in which an athlete throws a heavy disc (the discus) in an attempt to mark a farther distance than their competitors. The diameter and weight of the discus varies depending on the competition rules."@en .
+    rdfs:label "Discus Throw"@en ;
+    skos:definition "The Discus Throw is a track and field event in which an athlete throws a heavy disc (the discus) in an attempt to mark a farther distance than their competitors. The diameter and weight of the discus varies depending on the competition rules."@en .
 
 :HammerThrow
     a rdfs:Class ;
     rdfs:subClassOf ath:Throws ;
     skos:broader :Throws ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Hammer Throw"@en ;
-	skos:definition "Hammer Throw The discus throw is a track and field event in which an athlete throws a metal ball attached by a steel wire to a grip (the hammer). The size of the ball, and the length of the wire varies depending on the competition rules."@en .
+    rdfs:label "Hammer Throw"@en ;
+    skos:definition "Hammer Throw The discus throw is a track and field event in which an athlete throws a metal ball attached by a steel wire to a grip (the hammer). The size of the ball, and the length of the wire varies depending on the competition rules."@en .
 
 :JavelinThrow
     a rdfs:Class ;
     rdfs:subClassOf ath:Throws ;
     skos:broader :Throws ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Javelin Throw"@en ;
-	skos:definition "The Javelin Throw is a track and field event where the javelin, a spear about 2.5 m (8 ft 2 in) in length, is thrown. Lenght and weight of javelin may vary depending on the rules of the competition."@en .
+    rdfs:label "Javelin Throw"@en ;
+    skos:definition "The Javelin Throw is a track and field event where the javelin, a spear about 2.5 m (8 ft 2 in) in length, is thrown. Lenght and weight of javelin may vary depending on the rules of the competition."@en .
 
 :WeightThrow
     a rdfs:Class ;
     rdfs:subClassOf ath:Throws ;
     skos:broader :Throws ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Weight Throw"@en ;
-	skos:definition "Weight Throw is a track and field event usually play indoors which is equivalent to the hammer throw event, which can only be held outdoors. Ball weight may vary depending on the rules of the competition."@en .
+    rdfs:label "Weight Throw"@en ;
+    skos:definition "Weight Throw is a track and field event usually play indoors which is equivalent to the hammer throw event, which can only be held outdoors. Ball weight may vary depending on the rules of the competition."@en .
 
 :HorizontalJumps
     a rdfs:Class ;
     rdfs:subClassOf ath:AthleticsDiscipline ;
     skos:broader :AthleticsDiscipline ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Horizontal Jumps"@en ;
-	skos:definition "Horizontal Jumps are track and field events in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point. Horizontal jumps include: long jump and triple jump."@en ;
+    rdfs:label "Horizontal Jumps"@en ;
+    skos:definition "Horizontal Jumps are track and field events in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point. Horizontal jumps include: long jump and triple jump."@en ;
     skos:narrower :LongJump, :TripleJump .
 
 :LongJump
     a rdfs:Class ;
     rdfs:subClassOf ath:HorizontalJumps ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Long Jumps"@en ;
-	skos:definition "Long Jump (or broad jump) is a track and field event in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point."@en .
+    rdfs:label "Long Jumps"@en ;
+    skos:definition "Long Jump (or broad jump) is a track and field event in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point."@en .
 
 :TripleJump
     a rdfs:Class ;
     rdfs:subClassOf ath:HorizontalJumps ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Triple Jump"@en ;
-	skos:definition "Triple Jump (sometimes referred to as the hop, step and jump or the hop, skip and jump), is a track and field event, where competitors run down the track and perform a hop, a bound and then a jump into the sand pit."@en .
+    rdfs:label "Triple Jump"@en ;
+    skos:definition "Triple Jump (sometimes referred to as the hop, step and jump or the hop, skip and jump), is a track and field event, where competitors run down the track and perform a hop, a bound and then a jump into the sand pit."@en .
 
 :VerticalJumps
     a rdfs:Class ;
     rdfs:subClassOf ath:AthleticsDiscipline ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Vertical Jumps"@en ;
-	skos:definition "Vertical Jumps are track and field events in which competitors must jump or vault over a horizontal bar placed at measured heights without dislodging it."@en ;
+    rdfs:label "Vertical Jumps"@en ;
+    skos:definition "Vertical Jumps are track and field events in which competitors must jump or vault over a horizontal bar placed at measured heights without dislodging it."@en ;
     skos:narrower :HighJump, :PoleVault .
 
 :HighJump
@@ -390,24 +390,24 @@ ath:
     rdfs:subClassOf ath:VerticalJumps ;
     skos:broader :VerticalJumps ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "High Jump"@en ;
-	skos:definition "High Jump is a track and field event in which competitors must jump unaided over a horizontal bar placed at measured heights without dislodging it."@en .
+    rdfs:label "High Jump"@en ;
+    skos:definition "High Jump is a track and field event in which competitors must jump unaided over a horizontal bar placed at measured heights without dislodging it."@en .
 
 :PoleVault
     a rdfs:Class ;
     rdfs:subClassOf ath:VerticalJumps ;
     skos:broader :VerticalJumps ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Pole Vault"@en ;
-	skos:definition "Pole vault is a track and field event in which a person uses a long, flexible pole as an aid to jump over a bar."@en .
+    rdfs:label "Pole Vault"@en ;
+    skos:definition "Pole vault is a track and field event in which a person uses a long, flexible pole as an aid to jump over a bar."@en .
 
 :CombinedEvent
     a rdfs:Class ;
     rdfs:subClassOf ath:AthleticsDiscipline ;
     skos:broader :AthleticsDiscipline ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Combined Event"@en ;
-	skos:definition "Combined Events are competitions in which athletes participate in a number of track and field events, earning points for their performance in each event, which adds to a total points score."@en ;
+    rdfs:label "Combined Event"@en ;
+    skos:definition "Combined Events are competitions in which athletes participate in a number of track and field events, earning points for their performance in each event, which adds to a total points score."@en ;
     skos:narrower :Pentathlon, :Heptathlon, :Decathlon, :ThrowsPentathlon .
 
 :Pentathlon
@@ -415,268 +415,268 @@ ath:
     rdfs:subClassOf ath:CombinedEvent ;
     skos:broader :CombinedEvent ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Pentathlon"@en ;
-	skos:definition "Pentathlon is a competition in which athletes participate in five track and field combined events, earning points for their performance in each event, which adds to a total points score."@en .
+    rdfs:label "Pentathlon"@en ;
+    skos:definition "Pentathlon is a competition in which athletes participate in five track and field combined events, earning points for their performance in each event, which adds to a total points score."@en .
 
 :Heptathlon
     a rdfs:Class ;
     rdfs:subClassOf ath:CombinedEvent ;
     skos:broader :CombinedEvent ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Heptathlon"@en ;
-	skos:definition "Heptathlon is a competition in which athletes participate in seven track and field combined events, earning points for their performance in each event, which adds to a total points score. "@en .
+    rdfs:label "Heptathlon"@en ;
+    skos:definition "Heptathlon is a competition in which athletes participate in seven track and field combined events, earning points for their performance in each event, which adds to a total points score. "@en .
 
 :Decathlon
     a rdfs:Class ;
     rdfs:subClassOf ath:CombinedEvent ;
     skos:broader :CombinedEvent ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Decathlon"@en ;
-	skos:definition "Decathlon is a competition in which athletes participate in ten track and field combined events, earning points for their performance in each event, which adds to a total points score."@en .
+    rdfs:label "Decathlon"@en ;
+    skos:definition "Decathlon is a competition in which athletes participate in ten track and field combined events, earning points for their performance in each event, which adds to a total points score."@en .
 
 :ThrowsPentathlon
     a rdfs:Class ;
     rdfs:subClassOf ath:CombinedEvent ;
     skos:broader :CombinedEvent ;
     rdfs:isDefinedBy ath: ;
-	rdfs:label "Throws Pentathlon"@en ;
-	skos:definition "Throws Pentathlon is a competition in which athletes participate in five combined throwing events, earning points for their performance in each event, which adds to a total points score."@en .
+    rdfs:label "Throws Pentathlon"@en ;
+    skos:definition "Throws Pentathlon is a competition in which athletes participate in five combined throwing events, earning points for their performance in each event, which adds to a total points score."@en .
 
 
 ## SKOS Timekeeping
 
 :timekeepingTypes
-	a skos:Collection ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "Types of Timekeeping Systems"@en ;
+    a skos:Collection ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "Types of Timekeeping Systems"@en ;
     skos:prefLabel "Types of Timekeeping Systems"@en ;
-	skos:member :tst ;
+    skos:member :tst ;
     skos:member :fat ;
     skos:member :ht .
 
 :tst
-	a skos:Concept ;
-	rdfs:isDefinedBy ath: ;
+    a skos:Concept ;
+    rdfs:isDefinedBy ath: ;
     skos:prefLabel "(TST) Transponder System Timing"@en ;
-	rdfs:label "(TST) Transponder System Timing"@en .
+    rdfs:label "(TST) Transponder System Timing"@en .
 
 :fat
-	a skos:Concept ;
-	rdfs:isDefinedBy ath: ;
+    a skos:Concept ;
+    rdfs:isDefinedBy ath: ;
     skos:prefLabel "(FAT) Fully Automatic Timing"@en ;
-	rdfs:label "(FAT) Fully Automatic Timing"@en .
+    rdfs:label "(FAT) Fully Automatic Timing"@en .
 
 :ht
-	a skos:Concept ;
-	rdfs:isDefinedBy ath: ;
+    a skos:Concept ;
+    rdfs:isDefinedBy ath: ;
     skos:prefLabel "(HT) Hand Timing"@en ;
-	rdfs:label "(HT) Hand Timing"@en .
+    rdfs:label "(HT) Hand Timing"@en .
 
 
 
 ## SKOS Type of Venues
 
 :trackAndFieldVenueTypes
-	a skos:Collection ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "Types of venues for Track & Field events"@en ;
+    a skos:Collection ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "Types of venues for Track & Field events"@en ;
     skos:prefLabel "Types of venues for Track & Field events"@en ;
-	skos:member :indoorVenue ;
+    skos:member :indoorVenue ;
     skos:member :outdoorVenue .
 
 :indoorVenue
-	a skos:Concept ;
-	rdfs:isDefinedBy ath: ;
+    a skos:Concept ;
+    rdfs:isDefinedBy ath: ;
     skos:prefLabel "Indoor Track and Field Venue"@en ;
-	rdfs:label "Indoor Track and Field Venue"@en .
+    rdfs:label "Indoor Track and Field Venue"@en .
 
 :outdoorVenue
-	a skos:Concept ;
-	rdfs:isDefinedBy ath: ;
+    a skos:Concept ;
+    rdfs:isDefinedBy ath: ;
     skos:prefLabel "Outdoor Track and Field Venue"@en ;
-	rdfs:label "Outdoor Track and Field Venue"@en .
+    rdfs:label "Outdoor Track and Field Venue"@en .
 
 
 ## SKOS Types of competitions
 
 :raceCompetitionTypes
-	a skos:Collection ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "Types of Competition in Races"@en ;
+    a skos:Collection ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "Types of Competition in Races"@en ;
     skos:prefLabel "Types of Competition in Races"@en ;
-	skos:member :individualRace ;
+    skos:member :individualRace ;
     skos:member :relayRace ;
     skos:member :timeTrialRace .
 
 :individualRace
-	a skos:Concept ;
-	rdfs:isDefinedBy ath: ;
+    a skos:Concept ;
+    rdfs:isDefinedBy ath: ;
     skos:prefLabel "Individual Race"@en ;
-	rdfs:label "Individual Race"@en .
+    rdfs:label "Individual Race"@en .
 
 :relayRace
-	a skos:Concept ;
-	rdfs:isDefinedBy ath: ;
+    a skos:Concept ;
+    rdfs:isDefinedBy ath: ;
     skos:prefLabel "Relays Race"@en ;
-	rdfs:label "Relays Race"@en .
+    rdfs:label "Relays Race"@en .
 
 :timeTrialRace
-	a skos:Concept ;
-	rdfs:isDefinedBy ath: ;
+    a skos:Concept ;
+    rdfs:isDefinedBy ath: ;
     skos:prefLabel "Time Trial"@en ;
-	rdfs:label "Time Trial"@en .
+    rdfs:label "Time Trial"@en .
 
 
 ## Datatype properties
 
 :previousFamilyName
-	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "previous family name"@en ;
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "previous family name"@en ;
     rdfs:range rdfs:Literal ;
     rdfs:domain foaf:Person ;
-	skos:definition "Previous family name of a person."@en .
+    skos:definition "Previous family name of a person."@en .
 
 :previousGivenName
-	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "previous given name"@en ;
+    a rdf:Property , owl:DatatypeProperty ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "previous given name"@en ;
     rdfs:range rdfs:Literal ;
     rdfs:domain foaf:Person ;
-	skos:definition "Previous given name of a person."@en .
+    skos:definition "Previous given name of a person."@en .
 
 :entryRequirements 
-	a rdf:Property , owl:DataProperty ;
-	rdfs:isDefinedBy ath: ;
+    a rdf:Property , owl:DataProperty ;
+    rdfs:isDefinedBy ath: ;
     rdfs:range rdfs:Literal ;
     rdfs:domain :Competition ;
-	rdfs:label "entry requirements"@en ;
-	skos:definition "Requirements to register in the competition."@en .
+    rdfs:label "entry requirements"@en ;
+    skos:definition "Requirements to register in the competition."@en .
 
 :byPlaceOrStandard 
-	a rdf:Property , owl:DataProperty ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "by place or standard"@en ;
+    a rdf:Property , owl:DataProperty ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "by place or standard"@en ;
     rdfs:range xsd:integer ;
     rdfs:domain :Result ;
-	skos:definition "Number of competitors that are qualified in a round by rank (track events) or standard (field events)."@en .
+    skos:definition "Number of competitors that are qualified in a round by rank (track events) or standard (field events)."@en .
 
 :byPerformance 
-	a rdf:Property , owl:DataProperty ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "by performance"@en ;
+    a rdf:Property , owl:DataProperty ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "by performance"@en ;
     rdfs:range xsd:integer ;
     rdfs:domain :QualificationCriteria ;
-	skos:definition "Number of competitors that are qualified in a round by best performance."@en .
+    skos:definition "Number of competitors that are qualified in a round by best performance."@en .
 
 :bibIdentifier
-	a rdf:Property , owl:DataProperty ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "bib identifier"@en ;
+    a rdf:Property , owl:DataProperty ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "bib identifier"@en ;
     rdfs:domain ath:CompetitionEntry;
     rdfs:range rdfs:Literal ;
-	skos:definition "Text or number identifying the competitor, printed on competitor's bib."@en .
+    skos:definition "Text or number identifying the competitor, printed on competitor's bib."@en .
 
 :transponderIdentifier
-	a rdf:Property , owl:DataProperty ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "transponder identifier"@en ;
+    a rdf:Property , owl:DataProperty ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "transponder identifier"@en ;
     rdfs:domain ath:CompetitionEntry;
     rdfs:range rdfs:Literal ;
-	skos:definition "Text or code identifying the competitor by a transponder system."@en .
+    skos:definition "Text or code identifying the competitor by a transponder system."@en .
 
 :startingOrder
-	a rdf:Property , owl:DataProperty ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "starting order"@en ;
+    a rdf:Property , owl:DataProperty ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "starting order"@en ;
     rdfs:range xsd:integer ;
-	skos:definition "Competitor's order in the start list."@en .
+    skos:definition "Competitor's order in the start list."@en .
 
 :trackLane
-	a rdf:Property , owl:DataProperty ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "track lane"@en ;
+    a rdf:Property , owl:DataProperty ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "track lane"@en ;
     rdfs:range rdfs:Literal ;
-	skos:definition "Track lane number assigned to a competitor in case of certain track disciplines."@en .
+    skos:definition "Track lane number assigned to a competitor in case of certain track disciplines."@en .
 
 :rank
-	a rdf:Property , owl:DataProperty ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "rank"@en ;
+    a rdf:Property , owl:DataProperty ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "rank"@en ;
     rdfs:range xsd:integer ;
-	skos:definition "Position in the ranking (there may be several competitors with the same rank)."@en .
+    skos:definition "Position in the ranking (there may be several competitors with the same rank)."@en .
 
 :time
-	a rdf:Property , owl:DataProperty ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "time"@en ;
+    a rdf:Property , owl:DataProperty ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "time"@en ;
     rdfs:range xsd:time ;
     rdfs:domain skos:TimePerformance ;
-	skos:definition "Performance accomplished in a timed competition, expressed as ISO 8601 duration format (e.g., 04:45:38.000 for 4 hours, 45 minutes and 38.000 seconds)."@en .
+    skos:definition "Performance accomplished in a timed competition, expressed as ISO 8601 duration format (e.g., 04:45:38.000 for 4 hours, 45 minutes and 38.000 seconds)."@en .
 
 :reactionTime
-	a rdf:Property , owl:DataProperty ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "reaction time"@en ;
+    a rdf:Property , owl:DataProperty ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "reaction time"@en ;
     rdfs:range xsd:time ;
     rdfs:domain skos:TimePerformance ;
-	skos:definition "Reaction time is the interval time it takes a runner to respond to the start signal and begin leaving the starting blocks. Reaction time should be expressed as ISO 8601 duration format (e.g., 00:00:00.232 for 232 milliseconds)."@en .
+    skos:definition "Reaction time is the interval time it takes a runner to respond to the start signal and begin leaving the starting blocks. Reaction time should be expressed as ISO 8601 duration format (e.g., 00:00:00.232 for 232 milliseconds)."@en .
 
 :points
-	a rdf:Property , owl:DataProperty ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "points"@en ;
+    a rdf:Property , owl:DataProperty ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "points"@en ;
     rdfs:range xsd:decimal ;
     rdfs:domain skos:PointsPerformance ;
-	skos:definition "Score points achieved in a sports competition."@en .
+    skos:definition "Score points achieved in a sports competition."@en .
 
 :distance
-	a rdf:Property , owl:DataProperty ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "distance"@en ;
+    a rdf:Property , owl:DataProperty ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "distance"@en ;
     rdfs:subPropertyOf schema:distance ;
     rdfs:domain skos:DistancePerformance ;
-	skos:definition "The distance achieved in a sports competition."@en .
+    skos:definition "The distance achieved in a sports competition."@en .
 
 ## Object properties
 
 
 :athlete
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "athlete"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "athlete"@en ;
     rdfs:range :Athlete ;
-	skos:definition "A person that takes part in athletics competitions. The can act as member of a sports team or sports club."@en .
+    skos:definition "A person that takes part in athletics competitions. The can act as member of a sports team or sports club."@en .
 
 :captain
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "captain"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "captain"@en ;
     rdfs:domain schema:SportsTeam ;
     rdfs:range :Athlete ;
-	skos:definition "Athlete leading a sports team."@en .
+    skos:definition "Athlete leading a sports team."@en .
 
 :captainOf
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "captain of"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "captain of"@en ;
     rdfs:domain :Athlete ;
     rdfs:range schema:SportsTeam ;
-	skos:definition "Sports team that the athlete is captain of."@en .
+    skos:definition "Sports team that the athlete is captain of."@en .
 
 :bestPerformance
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "best performance"@en ;
-	skos:definition "Best performance achieved by a competitor (athlete or team) in an Athletics competition."@en .
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "best performance"@en ;
+    skos:definition "Best performance achieved by a competitor (athlete or team) in an Athletics competition."@en .
 
 :starter
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "starter"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "starter"@en ;
     rdfs:range :Athlete ;
     rdfs:domain :Competition ;
-	skos:definition "Athlete who is registered in a competition."@en .
+    skos:definition "Athlete who is registered in a competition."@en .
 
 :competitionEntry
     a rdf:Property ;
@@ -686,260 +686,260 @@ ath:
     skos:definition "Entry of competitor taking part in a competition."@en .
 
 :discipline
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "discipline"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "discipline"@en ;
     rdfs:range :AthleticsDiscipline ;
-	skos:definition "Discipline related to a sports activity."@en .
+    skos:definition "Discipline related to a sports activity."@en .
 
 :category 
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "category"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "category"@en ;
     rdfs:range :CompetitiveAudience ;
-	skos:definition "Category of the competition based on the gender and age of the competitors who are elegible to compete."@en .
+    skos:definition "Category of the competition based on the gender and age of the competitors who are elegible to compete."@en .
 
 :results 
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "results"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "results"@en ;
     rdfs:range rdf:Seq ;
-	skos:definition "Results of a competition. The list of results —competitors and their performances."@en .
+    skos:definition "Results of a competition. The list of results —competitors and their performances."@en .
 
 :unitCompetition 
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "unit competition"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "unit competition"@en ;
     rdfs:range :UnitCompetition ;
     rdfs:domain :Competition ;
-	skos:definition "Unitary sports competition that is part of a competition."@en .
+    skos:definition "Unitary sports competition that is part of a competition."@en .
 
 :previousStage 
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "previous stage"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "previous stage"@en ;
     rdfs:range :Competition ;
     rdfs:domain :Competition ;
-	skos:definition "Previous competition stage in a Multi Stage Competition."@en .
+    skos:definition "Previous competition stage in a Multi Stage Competition."@en .
 
 :nextStage 
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "next stage"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "next stage"@en ;
     rdfs:range :Competition ;
     rdfs:domain :Competition ;
-	skos:definition "Next competition stage in a Multi Stage Competition."@en .
+    skos:definition "Next competition stage in a Multi Stage Competition."@en .
 
 :firstStage 
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "first stage"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "first stage"@en ;
     rdfs:range :Competition ;
     rdfs:domain :MultiStageCompetition ;
-	skos:definition "First stage in a Multi Stage Competition."@en .
+    skos:definition "First stage in a Multi Stage Competition."@en .
 
 :lastStage 
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "last stage"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "last stage"@en ;
     rdfs:range :Competition ;
     rdfs:domain :MultiStageCompetition ;
-	skos:definition "Last stage in a Multi Stage Competition."@en .
+    skos:definition "Last stage in a Multi Stage Competition."@en .
 
 :stage 
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "stage"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "stage"@en ;
     rdfs:range :Competition ;
     rdfs:domain :MultiStageCompetition ;
-	skos:definition "Competition stage in a Multi Stage Competition."@en .
+    skos:definition "Competition stage in a Multi Stage Competition."@en .
 
 :division 
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "division"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "division"@en ;
     rdfs:range :Competition ;
     rdfs:domain :MultiDivisionCompetition ;
-	skos:definition "Division of a Multi Division Competition."@en .
+    skos:definition "Division of a Multi Division Competition."@en .
 
 :firstRound 
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "first round"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "first round"@en ;
     rdfs:range :CompetitionRound ;
     rdfs:domain :MultiRoundCompetition ;
-	skos:definition "First round of a Multi Round Competition."@en .
+    skos:definition "First round of a Multi Round Competition."@en .
 
 :lastRound 
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "last round"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "last round"@en ;
     rdfs:range :CompetitionRound ;
     rdfs:domain :MultiRoundCompetition ;
-	skos:definition "Last round of a Multi Round Competition."@en .
+    skos:definition "Last round of a Multi Round Competition."@en .
 
 :round 
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "round"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "round"@en ;
     rdfs:range :CompetitionRound ;
     rdfs:domain :MultiRoundCompetition ;
-	skos:definition "Round part of a Multi Round Competition."@en .
+    skos:definition "Round part of a Multi Round Competition."@en .
 
 :qualificationCriteria 
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "qualification criteria"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "qualification criteria"@en ;
     rdfs:range :QualificationCriteria ;
     rdfs:domain :CompetitionRound ;
-	skos:definition "Qualification Criteria are the details what a competitor has to do to get to the next round in a competition."@en .
+    skos:definition "Qualification Criteria are the details what a competitor has to do to get to the next round in a competition."@en .
 
 :startLocation
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "start location"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "start location"@en ;
     rdfs:subPropertyOf schema:location ;
     rdfs:domain :UnitRace ;
-	skos:definition "Location where a race course starts."@en .
+    skos:definition "Location where a race course starts."@en .
 
 :endLocation
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "end location"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "end location"@en ;
     rdfs:subPropertyOf schema:location ;
     rdfs:domain :UnitRace ;
-	skos:definition "Location where a race course ends."@en .
+    skos:definition "Location where a race course ends."@en .
 
 :raceCourse
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "race course"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "race course"@en ;
     rdfs:subPropertyOf schema:course ;
     rdfs:domain :UnitRace ;
-	skos:definition "Course of a race."@en .
+    skos:definition "Course of a race."@en .
 
 :timekeeping
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "timekeeping"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "timekeeping"@en ;
     rdfs:domain :UnitRace ;
     rdfs:range :Timekeeping ;
-	skos:definition "Timekeeping system used in a race."@en .
+    skos:definition "Timekeeping system used in a race."@en .
 
 :competitor
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "timekeeping"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "timekeeping"@en ;
     rdfs:range foaf:Agent ;
-	skos:definition "Person or Organization taking part in a competition."@en .
+    skos:definition "Person or Organization taking part in a competition."@en .
 
 :competitionFeature
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "competition feature"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "competition feature"@en ;
     rdfs:range skos:Concept ;
-	skos:definition "Competition Feature is every note included by officials in the starting list or results (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee'). Values for this property should be part of the official standard abbreviations and symbols."@en .
+    skos:definition "Competition Feature is every note included by officials in the starting list or results (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee'). Values for this property should be part of the official standard abbreviations and symbols."@en .
 
 :protestStatus
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "protest status"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "protest status"@en ;
     rdfs:range skos:Concept ;
-	skos:definition "Status of a protest action of a competitor within a competition."@en .
+    skos:definition "Status of a protest action of a competitor within a competition."@en .
 
 :inCompetition
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "in competition"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "in competition"@en ;
     rdfs:range :Competition ;
-	skos:definition "Competition which a resource is related to."@en .
+    skos:definition "Competition which a resource is related to."@en .
 
 :record
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "record"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "record"@en ;
     rdfs:range skos:Concept ;
-	skos:definition "A record is the best result that has ever been achieved in a particular sport or activity, for example the fastest time, the furthest distance, or the greatest number of victories."@en .
+    skos:definition "A record is the best result that has ever been achieved in a particular sport or activity, for example the fastest time, the furthest distance, or the greatest number of victories."@en .
 
 :performance
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "performance"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "performance"@en ;
     rdfs:range skos:Performance ;
-	skos:definition "Measure to quantify the performance of the competitor after a competition."@en .
+    skos:definition "Measure to quantify the performance of the competitor after a competition."@en .
 
 :windAssistance
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
     rdfs:domain :TimePerformance ;
-	rdfs:label "wind assistance"@en ;
-	skos:definition "Wind assistance. In track and field, wind assistance is the benefit that an athlete receives during a race or event as registered by a wind gauge. Wind speed is usually measured in meters per second (m/s), and the wind assistance can be expressed with either positive or negative values."@en .
+    rdfs:label "wind assistance"@en ;
+    skos:definition "Wind assistance. In track and field, wind assistance is the benefit that an athlete receives during a race or event as registered by a wind gauge. Wind speed is usually measured in meters per second (m/s), and the wind assistance can be expressed with either positive or negative values."@en .
 
 :windAssistance
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "wind assistance"@en ;
-	skos:definition "Wind assistance. In track and field, wind assistance is the benefit that an athlete receives during a race or event as registered by a wind gauge. Wind speed is usually measured in meters per second (m/s), and the wind assistance can be expressed with either positive or negative values."@en .
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "wind assistance"@en ;
+    skos:definition "Wind assistance. In track and field, wind assistance is the benefit that an athlete receives during a race or event as registered by a wind gauge. Wind speed is usually measured in meters per second (m/s), and the wind assistance can be expressed with either positive or negative values."@en .
 
 :timingDevice
-	a rdf:Property ;
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "timing device"@en ;
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "timing device"@en ;
     rdfs:domain :Timekeeping ;
-	skos:definition "Device required to run the timekeeping system."@en .
+    skos:definition "Device required to run the timekeeping system."@en .
 
 :raceCompetitionType
-	a rdf:Property ;
+    a rdf:Property ;
     rdfs:subClassOf dct:type,
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "race competition type"@en ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "race competition type"@en ;
     rdfs:domain :Race ;
-	skos:definition "Type of competition in the race (classic, time trial, relays, etc.)."@en .
+    skos:definition "Type of competition in the race (classic, time trial, relays, etc.)."@en .
 
 :trackAndFieldVenueType
-	a rdf:Property ;
+    a rdf:Property ;
     rdfs:subClassOf dct:type,
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "track and field venue type"@en ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "track and field venue type"@en ;
     rdfs:domain :Race ;
-	skos:definition "Type of venue that holds Athletics competitions (indoors or outdoors)."@en .
+    skos:definition "Type of venue that holds Athletics competitions (indoors or outdoors)."@en .
 
 :timekeepingType
-	a rdf:Property ;
+    a rdf:Property ;
     rdfs:subClassOf dct:type,
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "timekeeping type"@en ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "timekeeping type"@en ;
     rdfs:domain :Timekeeping ;
     rdfs:range skos:Concept ;
-	skos:definition "Type of timekeeping method used (FAT, HT, TST)."@en .
+    skos:definition "Type of timekeeping method used (FAT, HT, TST)."@en .
 
 :timekeepingType
-	a rdf:Property ;
+    a rdf:Property ;
     rdfs:subClassOf dct:type,
-	rdfs:isDefinedBy ath: ;
-	rdfs:label "timekeeping type"@en ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "timekeeping type"@en ;
     rdfs:domain :Timekeeping ;
     rdfs:range skos:Concept ;
-	skos:definition "Type of timekeeping method used (FAT, HT, TST)."@en .
+    skos:definition "Type of timekeeping method used (FAT, HT, TST)."@en .
 
 
 ## Declaration of external annotation properties 
-	skos:broader a owl:AnnotationProperty .
-	skos:member a owl:AnnotationProperty .
-	skos:prefLabel a owl:AnnotationProperty .
-	skos:definition a owl:AnnotationProperty .
-	dct:contributor a owl:AnnotationProperty .
-	dct:license a owl:AnnotationProperty .
-	dct:issued a owl:AnnotationProperty .
-	dct:subject a owl:AnnotationProperty .
-	dct:creator a owl:AnnotationProperty .
-	dct:description a owl:AnnotationProperty .
-	dct:isVersionOf a owl:AnnotationProperty .
-	dct:format a owl:AnnotationProperty .
+    skos:broader a owl:AnnotationProperty .
+    skos:member a owl:AnnotationProperty .
+    skos:prefLabel a owl:AnnotationProperty .
+    skos:definition a owl:AnnotationProperty .
+    dct:contributor a owl:AnnotationProperty .
+    dct:license a owl:AnnotationProperty .
+    dct:issued a owl:AnnotationProperty .
+    dct:subject a owl:AnnotationProperty .
+    dct:creator a owl:AnnotationProperty .
+    dct:description a owl:AnnotationProperty .
+    dct:isVersionOf a owl:AnnotationProperty .
+    dct:format a owl:AnnotationProperty .
     schema:location a owl:Property .
-	skos:Collection a owl:Class .	
-	skos:Concept a owl:Class .	
-	skos:ConceptScheme a owl:Class .
+    skos:Collection a owl:Class .    
+    skos:Concept a owl:Class .    
+    skos:ConceptScheme a owl:Class .
     schema:Person a owl:Class .
     schema:SportsOrganization a owl:Class .
     foaf:Organization a owl:Class .
