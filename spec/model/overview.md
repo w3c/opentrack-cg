@@ -260,7 +260,7 @@ _Example of definition of a national team as competitor in a 4x100:_
 _Example of definition of a club forming a team for Ekiden:_
 ![Team of a club with several athletes](images/instances_club_team.png)
 
-Example of a national team:
+Example of a national team (with two athletes):
 ```
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
@@ -273,7 +273,11 @@ Example of a national team:
     "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld",
     "athlete" : [
         "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
-        "http://w3c.github.io/opentrack-cg/examples/athlete/002Butchart.jsonld"
+        "http://w3c.github.io/opentrack-cg/examples/athlete/002Butchart.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/004Athlete4.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/005Athlete5.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/006Athlete6.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/006Athlete7.jsonld"
     ],
     "captain" :  "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
 }
