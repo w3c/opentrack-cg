@@ -18,7 +18,9 @@ Participants in this group will contribute with code recipes, libraries, and exa
 
 Currently, we are working on:
 
-* a **[Conceptual Model](./spec/model/overview.md)** to represent Athletics competitions, events, management and participation.
+* a **[Conceptual Model](./spec/model/overview.md)** to define Athletics competitions, events, management and participation in an abstract way.
+
+* a **[Vocabulary](./spec/vocab/index.md)** to describe and represent the abstract model in the real world.
 
 
 ## Formats and standards
