@@ -1036,9 +1036,17 @@ Standard categories are combinations of gender and age-range:
 
 ### Country
 
-Countries may be represented by their [ISO 3166-1](https://en.wikipedia.org/wiki/ISO_3166-1) code 
+Each country should be represented by an IRI that includes a unique three-character *Authority code*. It is recommended using the EU [Named Authority List (NAL) of Countries](http://publications.europa.eu/mdr/authority/country/index.html), that relays on the [ISO 3166-1/alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1) positions in case the country is present in the ISO standard. A traceability of this codes creation is ensured and historical relationships are also offered.
 
-For instance: `ZW` for Zimbabwe, `ZA`for South Africa, `TG` for Togo.
+The IRI of countries will be `http://publications.europa.eu/resource/authority/country/{countrycode}`. The JSON-LD context will enable a `country` prefix to simplify usage, allowing the use of the following form:
+
+```
+    country:{countrycode}
+```
+
+For instance: `country:ZWE` for *Zimbabwe*, `country:ZAF`for *South Africa* and `country:TGO` for *Togo*.
+
+Check the full list of country authority codes at [http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html](http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html).
 
 ### Event Status
 

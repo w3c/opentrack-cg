@@ -6,6 +6,8 @@
     "dcterms"       : "http://purl.org/dc/terms/",
     "schema"        : "http://schema.org/",
     "ath"           : "http://purl.org/athletics/",
+
+    "country"       : "http://publications.europa.eu/resource/authority/country/",
         
     "Organization"  : "schema:Organization",
     "Person"        : "schema:Person",
