@@ -176,7 +176,7 @@ Otherwise we can describe that resource nested in the main object:
             "streetAddress": "281 Prince Regent Lane",
             "addressLocality": "London",
             "postalCode": "E13 8SD",
-            "addressCountry": "UK"
+            "addressCountry": "country:GBR"
         }
     }
 ```

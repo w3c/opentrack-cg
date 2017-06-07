@@ -10,7 +10,7 @@
     "url" : "http://www.mofarah.com",
     "gender" : "Male" ,
     "image" : "https://example.com/260px-MoPodiumRio2016.png",
-    "nationality" : "UK",                       
+    "nationality" : "country:GBR",                       
     "email" : "fakeemail@example.com",
     "height" : "175 cm",
     "weight" : "65 Kg",   

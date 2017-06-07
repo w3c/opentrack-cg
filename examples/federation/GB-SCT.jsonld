@@ -12,7 +12,7 @@
         "streetAddress": "Old Coach Road",
         "addressLocality": "Belfast",
         "postalCode": "BT9 5PR",
-        "addressCountry": "UK"
+        "addressCountry": "country:GBR"
     },
     "areaServed" : "Scotland",
     "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"

@@ -11,7 +11,7 @@
         "streetAddress": "Leckwith Road",
         "addressLocality": "Cardiff",
         "postalCode": "CF11 8AZ",
-        "addressCountry": "UK"
+        "addressCountry": "country:GBR"
     },
     "areaServed" : "Welsh",
     "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"

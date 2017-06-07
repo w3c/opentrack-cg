@@ -219,7 +219,7 @@ Example:
         "streetAddress": "281 Prince Regent Lane",
         "addressLocality": "London",
         "postalCode": "E13 8SD",
-        "addressCountry": "UK"
+        "addressCountry": "country:GBR"
     },
     "sponsor": "Asics",
     "athlete": [
@@ -269,7 +269,7 @@ Example of a national team (with two athletes):
     
     "name" : "Great Britain National Team - Olympic Games 2016",
     "alternateName" : "GBR",               
-    "location" : "UK",                       
+    "location" : "country:GBR",                       
     "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld",
     "athlete" : [
         "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",

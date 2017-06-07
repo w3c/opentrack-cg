@@ -11,7 +11,7 @@
         "streetAddress": "Walsall Road",
         "addressLocality": "Birmingham",
         "postalCode": "B42 2BE",
-        "addressCountry": "UK"
+        "addressCountry": "country:GBR"
     },
     "areaServed" : "England",
     "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld",

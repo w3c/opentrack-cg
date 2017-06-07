@@ -170,7 +170,7 @@
     "locality"          : "schema:addressLocality",
     "postOficeBoxNumber": "schema:postOficeBoxNumber",
     "postalCode"        : "schema:postalCode",
-    "country"           : "schema:addressCountry",
+    "country"           : { "@id" : schema:addressCountry" , "@type" : "@vocab" },
     "timingDevice"      : "ath:timingDevice" ,
     
     "raceCompetitionType"    : { "@id" : "ath:raceCompetitionType", "@type" : "@vocab" },
