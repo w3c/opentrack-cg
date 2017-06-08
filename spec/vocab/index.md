@@ -261,7 +261,7 @@ Classes may be described hierarchically to express differences in the model. For
 | `birthDate` | `schema:birthDate` | Date of birth. | [Date](#date) |
 | `deathDate` | `schema:deathDate` | Date of death. | [Date](#date) |
 | `birthPlace` | `schema:birthPlace` | Locality and country of birth (e.g. "Tallinn, Estonia") | [Place] |
-| `federation` | `schema:memberOf` |  Federation which an athlete is attached to. | [Federation](#federation) |
+| `memberOf` | `schema:memberOf` |  Organization which an athlete is attached to. | [Organization](#organization) |
 | `coach` | `schema:coach` | Athlete's main coach. | [Person](#person) |
 | `sponsor` | `schema:sponsor` | Athlete's sponsor. | [Person](#person) or [Organization](#organizations) |
 | `club` | `schema:affiliation` | Club which an athlete is affiliated to. | [SportsClub](#sportsclub) |
@@ -288,7 +288,7 @@ Classes may be described hierarchically to express differences in the model. For
 | `url` | `schema:url` | Club's homepage. | URL |
 | `dissolutionDate` | `schema:dissolutionDate` | Date when a team was dissolved. | [Date](#date) |
 | `foundingDate` | `schema:foundingDate` | Date when a team was established. | [Date](#date) |
-| `federation` | `schema:memberOf` | Federation(s) which a club is attached to. | [Federation](#federation) |
+| `organization` | `schema:memberOf` | Organization which a club is attached to. | [Organization](#organization) |
 | `sponsor` | `schema:sponsor` | Sponsor of a club. | [Person](#persons) or [Organization](#organization) |
 | `athlete` | `schema:athlete` | Athlete who is affiliated to a club. | [Athlete](#athlete) |
 | `team` | `ath:team` | Teams(s) attached to a club. | [Team](#team) |
@@ -306,32 +306,13 @@ Classes may be described hierarchically to express differences in the model. For
 | `image` | `schema:image` | Picture of a team. | URL |
 | `logo` | `schema:logo` | Logo or flag of a team. | URL |
 | `url` | `schema:url` | Webpage URL about a team. | URL |
-| `federation` | `schema:memberOf` | Federation which a team is attached to. | [Federation](#federation) |
+| `memberOf` | `schema:memberOf` | Organization which a team is attached to. | [Organization](#organization) |
 | `location` | `schema:location` | Teams's nationality. | [Country](#country) |
 | `sponsor` | `schema:sponsor` | Sponsor of a team. | [Person](#persons) or [Organization](#organization) |
 | `coach` | `schema:coach` | Person who acts as coach for a team. | [Person](#person) |
 | `bestPerformance` | `ath:bestPerformance` | Records and best performances of a team (e.g., relay competitions). | [Performance](#performance) |  
 | `captain` | `ath:captain` | Athlete in charge of a team. | [Athlete](#athlete) |
 | `athlete` | `schema:athlete` | Athlete affiliated to a team. | [Athlete](#athlete) |
-
-
-### Federation
-
-* class: `ath:SportsGoverningBody`
-* subClassOf: `schema:SportsOrganization`
-
-| Key | Property | Description | Value Type |
-|:--- |:-------- |:----------- |:---------- |
-| `identifier` | `schema:identifier` | Unique character string to identify a federation. | Text |
-| `name` | `schema:name` | Name of a federation. | Text |
-| `alternateName`  | `schema:altenateName` | An alias to name a federation. | Text |
-| `address` | `schema:address` | Postal address where a federation is located. | [Postal Address](#postal-address) or Text |
-| `email` | `schema:email` | Main email address of a federation. | Text |
-| `url` | `schema:url` | Webpage URL about a federation. | URL |
-| `telephone` | `schema:telephone` |Main telephone number(s) of a federation. | Text |
-| `areaServed` | `schema:areaServed` | Spatial coverage of a federation, usually administrative areas (city, region, country, etc.) | [Place](#place) or [Administrative Area] | 
-| `memberOf` | `schema:memberOf` | Organization, such as higher-level federation(s), to which a federation is attached to. | [Organization](#organization) | 
-| `member` | `schema:member` | Person or organization attached to a federation. | [Person](#person) or [Organization](#organization) | 
 
 
 ### Person
@@ -358,13 +339,20 @@ Classes may be described hierarchically to express differences in the model. For
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
 | `identifier` | `schema:identifier` | Unique character string to identify an organization. | Text |
-| `name` | `schema:name` | Organization name. | Text |
-| `alternateName` | `schema:alternateName` | An alias to name an organization. | Text |
+| `name` | `schema:name` | Name of an organization. | Text |
+| `alternateName`  | `schema:altenateName` | An alias to name an organization. | Text |
 | `address` | `schema:address` | Postal address where an organization is located. | [Postal Address](#postal-address) or Text |
-| `logo` | `schema:logo` | Logo of an organization. | URL |
 | `email` | `schema:email` | Main email address of an organization. | Text |
 | `url` | `schema:url` | Webpage URL about an organization. | URL |
-| `telephone` | `schema:telephone` | Main telephone number of an organization. | Text |
+| `telephone` | `schema:telephone` |Main telephone number(s) of an organization. | Text |
+| `areaServed` | `schema:areaServed` | Spatial coverage of an organization, usually administrative areas (city, region, country, etc.) | [Place](#place) or [Administrative Area] | 
+| `memberOf` | `schema:memberOf` | Organization, such as higher-level federation(s), to which an organization is attached to. | [Organization](#organization) | 
+| `member` | `schema:member` | Person or organization attached to an organization. | [Person](#person) or [Organization](#organization) | 
+
+### Federation
+
+* class: `ath:SportsGoverningBody`
+* subClassOf: `schema:SportsOrganization`
 
 
 ### Category
@@ -382,7 +370,7 @@ Classes may be described hierarchically to express differences in the model. For
 | `requiredGender` | `schema:requiredGender` | Gender of athletes involved in a category.  | [GenderType](#gendertype) |
 | `requiredMinAge` | `schema:requiredMinAge` | Athletes' minumum age to be eligible for a category.  | Integer |
 | `requiredMaxAge` | `schema:requiredMaxAge` | Athletes' maximum age to be eligible for a category.  | Integer |
-| `recognizingAuthority` | `ath:recognizingAuthority` | Governing body that recognizes and rule a specific category.  | [Federation](#federations) |
+| `recognizingAuthority` | `ath:recognizingAuthority` | Governing body that recognizes and rule a specific category.  | [Organization](#organization) |
 
 
 ### CompetitionSeries
@@ -976,7 +964,7 @@ For instance, 7th April 2017 at 4:45 am (UTC+1):
 
 Standard categories are combinations of gender and age-range: 
 
-| `Code` | Age‐group | Gender |
+| Code | Age‐group | Gender |
 | ---- | --------- | ------ |
 | `category:U18` | 16 - 17 | Mixed |
 | `category:U18M` | 16 - 17 | Male |
@@ -1046,7 +1034,7 @@ The IRI of countries will be `http://publications.europa.eu/resource/authority/c
 
 For instance: `country:ZWE` for *Zimbabwe*, `country:ZAF`for *South Africa* and `country:TGO` for *Togo*.
 
-Check the full list of country authority codes at [http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html](http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html).
+Check the full list of authority country codes at [http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html](http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html).
 
 ### Event Status
 

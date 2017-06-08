@@ -116,10 +116,9 @@ An **Athlete** is a **[Person](#persons)** who participates in Athletics events.
 | date of birth | Date of birth. | [Date](#dates-and-time) |
 | date of death | Date of death. | [Date](#dates-and-time) |
 | birth place | Locality and country of birth (e.g. "Tallinn, Estonia") | Text |
-| federation(s) | Federation(s) which an athlete is attached to. | [Federation](#federations) |
+| affiliation(s) | Organization (i.e., federation, club, school or other institution) which an athlete is attached to. | [Organization](#organizations) |
 | coach(es) | Athlete's main coach(es). | [Person](#persons) |
 | sponsor(s) | Athlete's sponsor(s). | [Person](#persons) or [Organization](#organizations) |
-| club(s) | Club(s) which the athlete is affiliated to. | [Club](#clubs) |
 | team(s) | Team(s) which the athlete is part of (for instance, a National Team). | [Team](#teams) |
 | records(s) | Athlete's records and best performances. | [Record](#records) |  
 
@@ -152,7 +151,7 @@ Example:
         "name" : "Nike Oregon Project",
         "url" : "https://nikeoregonproject.com"            
     },
-    "club" : [ 
+    "affiliation" : [ 
            "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
            "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
         ],
@@ -160,7 +159,7 @@ Example:
            "http://w3c.github.io/opentrack-cg/examples/team/GBR2012.jsonld",
            "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld"
         ],
-    "federation" :
+    "affiliation" :
         [ 
            "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld", 
            "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld" 
@@ -194,7 +193,7 @@ Clubs may be described using the following attributes:
 | url | Club's homepage. | URL |
 | dissolved | Date when a team was dissolved. | [Date](#dates-and-time) |
 | established | Date when a team was established. | [Date](#dates-and-time) |
-| federation(s) | Federation(s) which a club is attached to. | [Federation](#federations) |
+| member of | Organization which a club is attached to. | [Organization](#organizations) |
 | sponsor(s) | Sponsor(s) of a club. | [Person](#persons) or [Organization](#organizations) |
 | athlete(s) | Athlete(s) members of a club. | [Athlete](#athletes) |
 | team(s) | Teams(s) attached to a club. | [Team](#teams) |
@@ -227,7 +226,7 @@ Example:
         "http://w3c.github.io/opentrack-cg/examples/athlete/002Athlete2.jsonld",
         "http://w3c.github.io/opentrack-cg/examples/athlete/003Athlete3.jsonld"
     ],
-    "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" 
+    "memberOf" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" 
 }
 ```
 
@@ -245,7 +244,7 @@ Teams are considered as competitors and may be described using the following att
 | image | Picture of a team. | URL |
 | logo | Logo or flag of a team. | URL |
 | url | Webpage URL about a team. | URL |
-| federation(s) | Federation(s) which a team is attached to. | [Federation](#federations) |
+| member of | Organization which a team is attached to. | [Organization](#organizations) |
 | nationality | Teams's nationality. | [Country](#countries) |
 | sponsor(s) | Sponsor(s) of a team. | [Person](#persons) or [Organization](#organizations) |
 | coach(es) | Person(s) who acts as coach for a team. | [Person](#persons) |
@@ -270,7 +269,7 @@ Example of a national team (with two athletes):
     "name" : "Great Britain National Team - Olympic Games 2016",
     "alternateName" : "GBR",               
     "location" : "country:GBR",                       
-    "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld",
+    "memberOf" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld",
     "athlete" : [
         "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
         "http://w3c.github.io/opentrack-cg/examples/athlete/002Butchart.jsonld",
@@ -283,24 +282,57 @@ Example of a national team (with two athletes):
 }
 ```
 
-### Federations
+### Persons
 
-A **Federation** is a special type of organization in charge of governing and rule the sport of athletics. These **sports governing bodies** may be attached to other higher-level federations, and have other sports organizations (clubs or other governing bodies) attached to them. 
+**Person** is a basic entity to represent any person. Every person may play one or more roles (i.e., athlete, coach, organizer, etc.). 
 
-Federations are subclasses of [Organizations](#organizations), adding the following:
+There are some properties that will be used commonly to represent people:
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify a federation. | Text |
-| name | Name of a federation. | Text |
-| alternate name | An alias to name a federation. | Text |
-| address | Postal address where a federation is located. | [Postal Address](#postal-addresses) or Text |
-| email | Main email address of a federation. | Text |
-| url | Webpage URL about a federation. | URL |
-| telephone(s) | Main telephone number(s) of a federation. | Text |
-| area served | Spatial coverage of a federation, usually administrative areas (city, region, country, etc.) | [Territory and Country](#territories-and-countries) | 
-| member of | Organization(s), such as higher-level federation(s), to which a federation is attached to. | [Organization](#organizations) | 
-| member(s) | Person(s) or organization(s) attached to a federation. | [Person](#persons) or [Organization](#organization) | 
+| identifier | Unique character string to identify a person. | Text |
+| name | Person's full name. | Text |
+| family name | Person's family name; surname. | Text |
+| given name | Person's given name; first name. | Text |
+| alternate name | An alias to name a person. | Text |
+| address | Main residence address of a person. | [Postal Address](#postal-addresses) or Text |
+| image | Picture of a person. | URL |
+| email | Email address of a person. | Text |
+| url | Webpage URL about a person. | URL |
+
+
+Example:
+```
+{ 
+    "@type" : "Person",
+    "name" : "Alberto Salazar" 
+}
+```
+
+
+### Organizations
+
+**Organization** is a basic entity to represent any type of organization (i.e., private company, public body, association, etc.). 
+
+Organizations can be represented by the following properties:
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify an organization. | Text |
+| name | Name of an organization. | Text |
+| alternate name | An alias to name an organization. | Text |
+| address | Postal address where an organization is located. | [Postal Address](#postal-addresses) or Text |
+| email | Main email address of an organization. | Text |
+| url | Webpage URL about an organization. | URL |
+| telephone(s) | Main telephone number(s) of an organization. | Text |
+| area served | Spatial coverage of an organization, usually administrative areas (city, region, country, etc.) | [Territory and Country](#territories-and-countries) | 
+| member of | Organization(s), such as higher-level federation(s), to which an organization is attached to. | [Organization](#organizations) | 
+| member(s) | Person(s) or organization(s) attached to an organization. | [Person](#persons) or [Organization](#organizations) | 
+
+
+#### Federations
+
+A **Federation** is a special type of organization in charge of governing and rule the sport of athletics. These **sports governing bodies** may be attached to other higher-level federations, and have other sports organizations (clubs or other governing bodies) attached to them. 
 
 Example of description of *European Athletics*:
 ```
@@ -350,58 +382,6 @@ Example of description of *European Athletics*:
 }
 ```
 
-### Persons
-
-**Person** is a basic entity to represent any person. Every person may play one or more roles (i.e., athlete, coach, organizer, etc.). 
-
-There are some properties that will be used commonly to represent people:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify a person. | Text |
-| name | Person's full name. | Text |
-| family name | Person's family name; surname. | Text |
-| given name | Person's given name; first name. | Text |
-| alternate name | An alias to name a person. | Text |
-| address | Main residence address of a person. | [Postal Address](#postal-addresses) or Text |
-| image | Picture of a person. | URL |
-| email | Email address of a person. | Text |
-| url | Webpage URL about a person. | URL |
-
-Example:
-```
-{ 
-    "@type" : "Person",
-    "name" : "Alberto Salazar" 
-}
-```
-
-
-### Organizations
-
-**Organization** is a basic entity to represent any type of organization (i.e., private company, public body, association, etc.). 
-
-Organizations can be represented by the following properties:
-
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify an organization. | Text |
-| name | Organization name. | Text |
-| alternate name | An alias to name an organization. | Text |
-| address | Postal address where an organization is located. | [Postal Address](#postal-addresses) or Text |
-| logo | Logo of an organization. | URL |
-| email | Main email address of an organization. | Text |
-| url | Webpage URL about an organization. | URL |
-| telephone(s) | Main telephone number(s) of an organization. | Text |
-
-Example:
-```
-{
-    "@type" : "Organization",
-    "name" : "Nike Oregon Project",
-    "url" : "https://nikeoregonproject.com"            
-}
-```
 
 ### Category
 
@@ -417,7 +397,7 @@ Categories may be described by these following properties:
 | description | Description and notes about a category. | Text |
 | gender | Gender of athletes involved in a category.  | [Competition Gender](#competition-gender) |
 | age range | Athletes' range of age to be eligible for a category.  | [Age Range](#age-range) or Text |
-| ruled by | Governing body that recognizes and rule the specific category.  | [Federation](#federations) |
+| ruled by | Governing body or organization that recognizes and rule the specific category.  | [Organization](#organizations) |
 
 Example of category description (Senior Women):
 ```

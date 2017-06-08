@@ -11,5 +11,5 @@
         "http://example.com/athlete:122839",
         "http://example.com/athlete:122840"
     ],
-    "federation": "http://example.com/federation:JAP"
+    "memberOf": "http://example.com/federation:JAP"
 }
