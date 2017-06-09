@@ -927,8 +927,8 @@ For instance, 7th April 2017 at 4:45 am (UTC+1):
 
 | `Code` | Gender Type |
 | ---- | ----------- |
-| `schema:Male` | Men and/or boys. |
-| `schema:Female` | Women and/or girls. |
+| `Male` | Men and/or boys. |
+| `Female` | Women and/or girls. |
 
 
 ### CompetitionFeatureType
@@ -944,7 +944,7 @@ For instance, 7th April 2017 at 4:45 am (UTC+1):
 | `feature:qR` | Advanced to next round by Referee |
 | `feature:qJ` | Advanced to next round by Jury of Appeal |
 | `feature:>` | Bent knee (Race walking) |
-| `feature:~` | loss of contact (Race walking) |
+| `feature:%3E` | Loss of contact (Race walking) |
 | `feature:yC` | yellow Card |
 | `feature:yRC` | Second yellow Card |
 | `feature:RC` | Red Card |
@@ -955,71 +955,35 @@ For instance, 7th April 2017 at 4:45 am (UTC+1):
 | `feature:NM` | No Mark |
 | `feature:NH` | No Height |
 | `feature:h` | Hand-timing |
-| `feature:a` | automatic timing with no hundredths of a second measured |
-| `feature:A` | performance achieved at altitude |
+| `feature:a` | Automatic timing with no hundredths of a second measured |
+| `feature:A` | Performance achieved at altitude |
 | `feature:OT` | Oversized Track |
 
 
 ### CategoryType
 
-Standard categories are combinations of gender and age-range: 
+Standard categories are combinations of gender and age-range. The following categories are recognized by IAAF, European Athletics and/or WMA: 
 
-| Code | Age‐group | Gender |
-| ---- | --------- | ------ |
-| `category:U18` | 16 - 17 | Mixed |
-| `category:U18M` | 16 - 17 | Male |
-| `category:U18F` | 16 - 17 | Female |
-| `category:U20` | 18 - 19 | Mixed |
-| `category:U20M` | 18 - 19 | Male |
-| `category:U20F` | 18 - 19 | Female |
-| `category:U23` | 20 - 22 | Mixed |
-| `category:U23M` | 20 - 22 | Male |
-| `category:U23F` | 20 - 22 | Female |
-| `category:SEN` | 23 - 34 | Mixed |
-| `category:SENM` | 23 - 34 | Male |
-| `category:SENF` | 23 - 34 | Female |
-| `category:V35` | 35 ‐ 39 | Mixed |
-| `category:M35` | 35 ‐ 39 | Male |
-| `category:W35` | 35 ‐ 39 | Female |
-| `category:V40` | 40 ‐ 44 | Mixed |
-| `category:M40` | 40 ‐ 44 | Male |
-| `category:W40` | 40 ‐ 44 | Female |
-| `category:V45` | 45 ‐ 49 | Mixed |
-| `category:M45` | 45 ‐ 49 | Male |
-| `category:W45` | 45 ‐ 49 | Female |
-| `category:V50` | 50 ‐ 54 | Mixed |
-| `category:M50` | 50 ‐ 54 | Male |
-| `category:W50` | 50 ‐ 54 | Female |
-| `category:V55` | 55 ‐ 59 | Mixed |
-| `category:M55` | 55 ‐ 59 | Male |
-| `category:W55` | 55 ‐ 59 | Female |
-| `category:V60` | 60 ‐ 64 | Mixed |
-| `category:M60` | 60 ‐ 64 | Male |
-| `category:W60` | 60 ‐ 64 | Female |
-| `category:V65` | 65 ‐ 69 | Mixed |
-| `category:M65` | 65 ‐ 69 | Male |
-| `category:W65` | 65 ‐ 69 | Female |
-| `category:V70` | 70 ‐ 74 | Mixed |
-| `category:M70` | 70 ‐ 74 | Male |
-| `category:W70` | 70 ‐ 74 | Female |
-| `category:V75` | 75 ‐ 79 | Mixed |
-| `category:M75` | 75 ‐ 79 | Male |
-| `category:W75` | 75 ‐ 79 | Female |
-| `category:V80` | 80 ‐ 84 | Mixed |
-| `category:M80` | 80 ‐ 84 | Male |
-| `category:W80` | 80 ‐ 84 | Female |
-| `category:V85` | 85 ‐ 89 | Mixed |
-| `category:M85` | 85 ‐ 89 | Male |
-| `category:W85` | 85 ‐ 89 | Female |
-| `category:V90` | 90 ‐ 94 | Mixed |
-| `category:M90` | 90 ‐ 94 | Male |
-| `category:W90` | 90 ‐ 94 | Female |
-| `category:V95` | 95 ‐ 99 | Mixed |
-| `category:M95` | 95 ‐ 99 | Male |
-| `category:W95` | 95 ‐ 99 | Female |
-| `category:V100` | 100+ | Mixed |
-| `category:M100` | 100+ | Male |
-| `category:W100` | 100+ | Female |
+| Age Range | Mixed | Male | Female |
+| --------- | ----- | ---- | ------ |
+| 16—17 | `category:U18` | `category:U18M` | `category:U18F` |
+| 18—19 | `category:U20` | `category:U20M` | `category:U20F` |
+| 20—22 | `category:U23` | `category:U23M` | `category:U23F` |
+| 23—34 | `category:SEN` | `category:SENM` | `category:SENF` |
+| 35—39 | `category:V35` | `category:M35` | `category:W35` |
+| 40—44 | `category:V40` | `category:M40` | `category:W40` |
+| 45—49 | `category:V45` | `category:M45` | `category:W45` |
+| 50—54 | `category:V50` | `category:M50` | `category:W50` |
+| 55—59 | `category:V55` | `category:M55` | `category:W55` |
+| 60—64 | `category:V60` | `category:M60` | `category:W60` |
+| 65—69 | `category:V65` | `category:M65` | `category:W65` |
+| 70—74 | `category:V70` | `category:M70` | `category:W70` |
+| 75—79 | `category:V75` | `category:M75` | `category:W75` |
+| 80—84 | `category:V80` | `category:M80` | `category:W80` |
+| 85—89 | `category:V85` | `category:M85` | `category:W85` |
+| 90—94 | `category:V90` | `category:M90` | `category:W90` |
+| 95—99 | `category:V95` | `category:M95` | `category:W95` |
+| 100+ | `category:V100` | `category:M100` | `category:W100` |
 
 
 ### Country
