@@ -19,6 +19,8 @@
 
 Opentrack model contributes to the Semantic Web, identifying, defining and exposing data on the Web. Opentrack vocabulary defines the main concepts and relations about Athletics competitions and competitors, enabling a common representation of information in this realm. Data should be available in a standard format, reachable and manageable by Semantic Web tools. 
 
+The Opentrack schema is very flexible to help developers to adopt it. All examples will be represented in JSON-LD format, with a specific context that will ease the adoption of the vocabulary for those who don not have deep knowledge about the Semantic Web.
+
 * Prefix: `ath`
 * Namespace: `http://purl.org/athletics/`
 
