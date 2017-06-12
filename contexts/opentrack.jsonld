@@ -5,7 +5,11 @@
     "xsd"           : "http://www.w3.org/2001/XMLSchema#",
     "dcterms"       : "http://purl.org/dc/terms/",
     "schema"        : "http://schema.org/",
-    "ath"           : "http://purl.org/athletics/",
+    "ath"           : "http://purl.org/athletics#",
+    "feature"       : "http://purl.org/athletics/feature#",
+    "fed"           : "http://purl.org/athletics/federation#",
+    "category"      : "http://purl.org/athletics/category#",
+    "best"          : "http://purl.org/athletics/best#",
 
     "country"       : "http://publications.europa.eu/resource/authority/country/",
         

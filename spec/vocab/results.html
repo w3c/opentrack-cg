@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenTrack Results Types</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
+    <script type="text/javascript"  src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript"  src="js/jquery.toast.min.js"></script>
+    <script type="text/javascript"  src="js/core.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.toast.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+<body vocab="" prefix="results: http://purl.org/athletics/results# skos: http://www.w3.org/2004/02/skos/core# rdfs: http://www.w3.org/2000/01/rdf-schema#">
+
+<div typeof="skos:Collection" resource="http://purl.org/athletics/results">
+    <h1 property="skos:prefLabel">OpenTrack Results Types</h1>
+    <p property="skos:definition">Collection of types of results for Athletics competitions.</p>
+    <link property="skos:member" href="http://purl.org/athletics/results#startList" />
+    <link property="skos:member" href="http://purl.org/athletics/results#live" />
+    <link property="skos:member" href="http://purl.org/athletics/results#intermediate" />
+    <link property="skos:member" href="http://purl.org/athletics/results#unconfirmed" />
+    <link property="skos:member" href="http://purl.org/athletics/results#unofficial" />
+    <link property="skos:member" href="http://purl.org/athletics/results#official" />
+    <link property="skos:member" href="http://purl.org/athletics/results#partial" />
+    <link property="skos:member" href="http://purl.org/athletics/results#protested" />
+</div>
+
+  <hr/>
+
+  <p>Default schema prefix: <strong>results:</strong></p>
+  <p>IRI: <a href="http://purl.org/athletics/results#">http://purl.org/athletics/results#</a></p>
+  <hr/>
+
+<table>
+<thead>
+  <tr>
+    <th class="key">Opentrack Code</th>
+    <th class="description">Type of Result</th>
+  </tr>
+</thead>
+<tbody>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/results#startList">
+    <td class="key"><span property="skos:prefLabel schema:name" content="startList"></span>results:startList <button class="btn" data-clipboard-text="results:startList" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/results" />
+    </td>
+    <td class="description" property="skos:definition">Before competition, Start List</td>
+  </tr>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/results#live">
+    <td class="key"><span property="skos:prefLabel schema:name" content="live"></span>results:live <button class="btn" data-clipboard-text="results:live" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/results" />
+    </td>
+    <td class="description" property="skos:definition">For live updates during competition</td>
+  </tr>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/results#intermediate">
+    <td class="key"><span property="skos:prefLabel schema:name" content="intermediate"></span>results:intermediate <button class="btn" data-clipboard-text="results:intermediate" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/results" />
+    </td>
+    <td class="description" property="skos:definition">When competition is stopped, used at pre-defined points</td>
+  </tr>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/results#unconfirmed">
+    <td class="key"><span property="skos:prefLabel schema:name" content="unconfirmed"></span>results:unconfirmed <button class="btn" data-clipboard-text="results:unconfirmed" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/results" />
+    </td>
+    <td class="description" property="skos:definition">When the unit is over but not yet unofficial or official. Only used if other statuses do not come quickly.</td>
+  </tr>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/results#unofficial">
+    <td class="key"><span property="skos:prefLabel schema:name" content="unofficial"></span>results:unofficial <button class="btn" data-clipboard-text="results:unofficial" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/results" />
+    </td>
+    <td class="description" property="skos:definition">Results of the competition released as soon as the event is over, not waiting any official decision of the International Federation. The correctness of data must be assured.</td>
+  </tr>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/results#official">
+    <td class="key"><span property="skos:prefLabel schema:name" content="official"></span>results:official <button class="btn" data-clipboard-text="results:official" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/results" />
+    </td>
+    <td class="description" property="skos:definition">Results of the competition released as soon as the event is officially confirmed taking into account the resolution of the protests, etc.</td>
+  </tr>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/results#partial">
+    <td class="key"><span property="skos:prefLabel schema:name" content="partial"></span>results:partial <button class="btn" data-clipboard-text="results:partial" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/results" />
+    </td>
+    <td class="description" property="skos:definition">Incomplete list, Final Ranking.</td>
+  </tr>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/results#protested">
+    <td class="key"><span property="skos:prefLabel schema:name" content="protested"></span>results:protested <button class="btn" data-clipboard-text="results:protested" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/results" />
+    </td>
+    <td class="description" property="skos:definition">After the competition is no longer LIVE and a protest has been lodged After all decisions on the protest are made the ResultStatus will change to UNOFFICIAL or OFFICIAL as appropriate.</td>
+  </tr>
+</tbody>
+</table>
+
+</body>
+</html>

@@ -922,7 +922,7 @@ Time can include the timezone `<time>±[hh]:[mm]`.
 
 For instance, 7th April 2017 at 4:45 am (UTC+1): 
 ```
-`2017-04-07T04:45:00.000+01:00`
+2017-04-07T04:45:00.000+01:00
 ``` 
 
 ### GenderType
@@ -1127,7 +1127,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `Code` | Status |
 | ---- | ---- |
 | `protest:CLS` | Closed | 
-| `protest:OPN`    | Open | 
+| `protest:OPN` | Open | 
 | `protest:PND` | Pending |  
 | `protest:ROPN` | Re Open | 
 

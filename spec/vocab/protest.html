@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenTrack Protest Statuses</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
+    <script type="text/javascript"  src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript"  src="js/jquery.toast.min.js"></script>
+    <script type="text/javascript"  src="js/core.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.toast.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+<body vocab="" prefix="protest: http://purl.org/athletics/protest# skos: http://www.w3.org/2004/02/skos/core# rdfs: http://www.w3.org/2000/01/rdf-schema#">
+
+<div typeof="skos:Collection" resource="http://purl.org/athletics/protest">
+    <h1 property="skos:prefLabel">OpenTrack Protest Statuses</h1>
+    <p property="skos:definition">Collection of statuses of protest actions in Athletics competitions.</p>
+    <link property="skos:member" href="http://purl.org/athletics/protest#closed" />
+    <link property="skos:member" href="http://purl.org/athletics/protest#open" />
+    <link property="skos:member" href="http://purl.org/athletics/protest#pending" />
+    <link property="skos:member" href="http://purl.org/athletics/protest#reopen" />
+</div>
+
+  <hr/>
+
+  <p>Default schema prefix: <strong>protest:</strong></p>
+  <p>IRI: <a href="http://purl.org/athletics/protest#">http://purl.org/athletics/protest#</a></p>
+  <hr/>
+
+<table>
+<thead>
+  <tr>
+    <th class="key">Opentrack Code</th>
+    <th class="description">Status of protest action</th>
+  </tr>
+</thead>
+<tbody>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/protest#closed">
+    <td class="key"><span property="skos:prefLabel schema:name" content="closed"></span>protest:closed <button class="btn" data-clipboard-text="protest:closed" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/protest" />
+    </td>
+    <td class="description" property="skos:definition">Closed</td>
+  </tr>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/protest#open">
+    <td class="key"><span property="skos:prefLabel schema:name" content="open"></span>protest:open <button class="btn" data-clipboard-text="protest:open" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/protest" />
+    </td>
+    <td class="description" property="skos:definition">Open</td>
+  </tr>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/protest#pending">
+    <td class="key"><span property="skos:prefLabel schema:name" content="pending"></span>protest:pending <button class="btn" data-clipboard-text="protest:pending" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/protest" />
+    </td>
+    <td class="description" property="skos:definition">Pending</td>
+  </tr>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/protest#reopen">
+    <td class="key"><span property="skos:prefLabel schema:name" content="reopen"></span>protest:reopen <button class="btn" data-clipboard-text="protest:reopen" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/protest" />
+    </td>
+    <td class="description" property="skos:definition">Re-Open</td>
+  </tr>
+</tbody>
+</table>
+
+</body>
+</html>

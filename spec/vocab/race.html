@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenTrack Competition Type within Races</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
+    <script type="text/javascript"  src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript"  src="js/jquery.toast.min.js"></script>
+    <script type="text/javascript"  src="js/core.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.toast.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+<body vocab="" prefix="race: http://purl.org/athletics/race# skos: http://www.w3.org/2004/02/skos/core# rdfs: http://www.w3.org/2000/01/rdf-schema#">
+
+<div typeof="skos:Collection" resource="http://purl.org/athletics/race">
+    <h1 property="skos:prefLabel">OpenTrack Competition Type within Races</h1>
+    <p property="skos:definition">Collection of competition types in Athletics races.</p>
+    <link property="skos:member" href="http://purl.org/athletics/race#individual" />
+    <link property="skos:member" href="http://purl.org/athletics/race#relays" />
+    <link property="skos:member" href="http://purl.org/athletics/race#timeTrial" />
+</div>
+
+  <hr/>
+
+  <p>Default schema prefix: <strong>race:</strong></p>
+  <p>IRI: <a href="http://purl.org/athletics/race#">http://purl.org/athletics/race#</a></p>
+  <hr/>
+
+<table>
+<thead>
+  <tr>
+    <th class="key">Opentrack Code</th>
+    <th class="description">Status of competition types in races</th>
+  </tr>
+</thead>
+<tbody>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/race#individual">
+    <td class="key"><span property="skos:prefLabel schema:name" content="individual"></span>race:individual <button class="btn" data-clipboard-text="race:individual" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/race" />
+    </td>
+    <td class="description" property="skos:definition">Individual</td>
+  </tr>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/race#relays">
+    <td class="key"><span property="skos:prefLabel schema:name" content="relays"></span>race:relays <button class="btn" data-clipboard-text="race:relays" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/race" />
+    </td>
+    <td class="description" property="skos:definition">Relays</td>
+  </tr>
+  <tr typeof="skos:Concept" resource="http://purl.org/athletics/race#timeTrial">
+    <td class="key"><span property="skos:prefLabel schema:name" content="timeTrial"></span>race:timeTrial <button class="btn" data-clipboard-text="race:timeTrial" title="Copy the code"><img src="img/clipboard.svg" alt="Copy"></button>
+        <link property="rdfs:isDefinedBy" href="http://purl.org/athletics/race" />
+    </td>
+    <td class="description" property="skos:definition">Time Trial</td>
+  </tr>
+</tbody>
+</table>
+
+</body>
+</html>

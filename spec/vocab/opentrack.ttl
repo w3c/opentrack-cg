@@ -473,7 +473,6 @@ ath:
     rdfs:label "(HT) Hand Timing"@en .
 
 
-
 ## SKOS Type of Venues
 
 :trackAndFieldVenueTypes
@@ -924,7 +923,6 @@ ath:
 
 
 ## Declaration of external annotation properties 
-    skos:broader a owl:AnnotationProperty .
     skos:member a owl:AnnotationProperty .
     skos:prefLabel a owl:AnnotationProperty .
     skos:definition a owl:AnnotationProperty .
@@ -936,7 +934,6 @@ ath:
     dct:description a owl:AnnotationProperty .
     dct:isVersionOf a owl:AnnotationProperty .
     dct:format a owl:AnnotationProperty .
-    schema:location a owl:Property .
     skos:Collection a owl:Class .    
     skos:Concept a owl:Class .    
     skos:ConceptScheme a owl:Class .
