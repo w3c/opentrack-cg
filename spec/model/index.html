@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>OpenTrack Data Model</title>
+    <script
+     src='https://www.w3.org/Tools/respec/respec-w3c-common'
+     class='remove'></script>
+    <script class='remove'>
+      var respecConfig = {
+        wg: "OpenTrack Community Group",
+        wgURI: "http://www.w3.org/community/opentrack/",
+        specStatus: "CG-DRAFT",
+        editors: [{
+            w3cid: "37258",
+            name: "Martin Alvarez-Espinar",
+            url: "http://www.w3c.es/Personal/Martin",
+            company: "CTIC Technology Centre",
+            companyURL: "http://fundacionctic.org"
+        }],
+        repoURL: "https://github.com/w3c/opentrack-cg",
+        authors: [
+          ],
+        format: "markdown",
+        maxTocLevel: 3,
+        processVersion: 2017,
+        otherLinks: [{
+            key: "Repository",
+            value: "Github",
+            href: "https://github.com/w3c/opentrack-cg",
+            class: "repo"
+        }, {
+            key: "Issues",
+            href: "https://github.com/w3c/opentrack-cg/issues/"
+        }
+        ],     
+        edDraftURI: "https://github.com/espinr/opentrack-cg/blob/master/spec/model/index.html",
+        logos: [{
+            src: 'https://w3c.github.io/opentrack-cg/spec/logo/opentrack_logo.svg',
+            href: "https://github.com/w3c/opentrack-cg",
+            alt: "OpenTrack (and Field)",
+            width: 400,
+            id: 'logo'
+            }
+        ],
+        localBiblio: {
+            "SCHEMA-ORG": {
+                title: "Schema.org",
+                href: "http://schema.org"
+            },
+            "SPORT-ONT" : {
+                title: "Sport Ontology",
+                href: "http://www.bbc.co.uk/ontologies/sport",
+                publisher: "BBC"
+            },
+            "IAAF-RULES": {
+                title: "IAAF Competition Rules 2016-2017",
+                href: "https://www.iaaf.org/download/download?filename=89ed4cba-6b5e-49fe-a43e-9f5487b77a84.pdf",
+                publisher: "IAAF"
+            },
+            "SPORTSML": {
+                title: "SportsML",
+                href: "http://dev.iptc.org/SportsML",
+                publisher: "IPTC"
+            },
+            "WMA-RULES": {
+                title: "WMA Rules of Competition 2013‐2016",
+                href: "http://www.world-masters-athletics.org/rules/competition/rulesofcompetition.pdf",
+                publisher: "WMA"
+            }
+        },     
+        shortName: "opentrack",
+        wgPublicList: "public-opentrack",
+        alternateFormats: [ {uri: "diff-previous.html", label: "diff to previous version"} ],
+        isNoTrack:    true,
+        issueBase:    "https://github.com/openactive/modelling-opportunity-data/issues/",
+      };
+    </script>
+    <style>
+        table tr:hover {
+            background-color: #C9DAF8;
+        }
+        table th {
+            border-bottom: 2px #C9DAF8 solid;
+        }
+        tr:nth-child(even) {background: #F1F9FF}
+        tr:nth-child(odd) {background: #FFF}
+    </style>
+  </head>
+  <body>
+    <section id='abstract'>
+
+<p>This specification, developed by [W3C OpenTrack Community Group](http://www.w3.org/community/opentrack/), introduces a data model to support the publication of Athletics data on the Web. This document defines the main concepts and relations of Athletics competitions, including competitors and their results, enabling a common representation of information in this sector.</p>
+
+<p>The OpenTrack model is mapped to existing standards, including BBC Sports Ontology [[SPORT-ONT]], Schema.org [[SCHEMA-ORG]] types and properties. The resulting OpenTrack Vocabulary is a lightweight schema aiming at identifying, defining and exposing data on the Web.</p>
+
+    </section>
+    <section id='sotd'>
+      <p>
+        This model and vocabulary is in process of development.
+      </p>
+    </section>
+    <section class="informative">
+## Introduction
+
+This section describes the conceptual model for OpenTrack. As described in [the charter](https://w3c.github.io/opentrack-cg/charter.html), this model describes data related to Athletics competitions including: Track and Field; Road Running; Race Walking; Cross-Country Running; Mountain Running; and trail Running disciplines.
+
+This model will be focus on Athletics competitions, having into account: events; athletes and teams; results; performances; management of start lists; results; and facilities.
+
+This document specifies the model in an abstract way and its implementation using the concrete vocabulary, a lightweight schema, based on RDF Schema [[RDF-SCHEMA]] and Schema.org [[SCHEMA-ORG]]. Opentrack vocabulary defines the main concepts and relations about Athletics competitions and competitors, enabling a common representation of information in this realm. Data should be available in a standard format, reachable and manageable by Semantic Web tools. 
+
+With the objective of a wide use of this model, the schema is very flexible and all examples will be expressed in JSON-LD format. Along with the vocabulary, there is a specific JSON-LD context that will ease the adoption of the vocabulary, even for those who don not have deep knowledge of the Semantic Web.
+
+No section should be considered final, and the absence of any content does not imply that such content is out of scope, or may not appear in the future. If you feel something should be covered, please [tell us](https://github.com/w3c/opentrack-cg/issues).
+
+## Structure of this document
+
+This specification is divided into two main sections:
+
+1. **Introduction** - this introductory part;
+2. **How to** - How to use the model and describe resources using OpenTrack and JSON-LD;
+3. **Concepts** - describes the key entities and their attributes, including the concrete data model;
+4. **Classification Schemas** - lists of taxonomies and value schemas related to Athletics.
+ 
+## Background
+
+OpenTrack descriptions need homogeneous classes, properties and data types to specify values of properties. This work is based [on existing requirements](http://opentrack.run/standards/), and the rules set up by the IAAF [[IAAF-RULES]] and by WMA [[WMA-RULES]].
+
+OpenTrack vocabulary is aligned with other existing schemas and ontologies focused on sports, such as: Sport Ontology [[SPORT-ONT]], IPTC SportsML [[SPORTSML]] and Schema.org [[SCHEMA-ORG]].
+
+</section>
+
+<section id="conformance">
+
+This specification makes use of the compact IRI Syntax; please refer to the [Compact IRIs](http://www.w3.org/TR/json-ld/#compact-iris) from [[JSON-LD]].
+
+List of prefixes used in this specification:
+* `ath` : `http://purl.org/athletics/`
+* `schema` : `http://schema.org/`
+* `skos` : `http://www.w3.org/2004/02/skos/core#`
+* `dct` : `http://purl.org/dc/terms/`
+* `xsd`: `http://www.w3.org/2001/XMLSchema#`
+
+The domain of this specification is Athletics ([http://dbpedia.org/resource/Sport_of_athletics](http://dbpedia.org/resource/Sport_of_athletics)).
+
+</section>
+
+<section>
+## Typographical Conventions
+
+The following typographic conventions are used in this specification:
+
+<dl class="typography">
+<dt>`markup`</dt>
+<dd>Markup (elements, attributes, properties), machine processable values (string, characters, media types), property name, or a file name is in a monospace font.</dd>
+<dt>__*definition*__</dt>
+<dd>A definition of a term, to be used elsewhere in this or other specifications, is in bold and italics.</dd>
+<dt>[hyperlink]()</dt>
+<dd>A hyperlink is underlined and in blue.</dd>
+<dt>[[reference]]()</dt>
+<dd>A document reference (normative or informative) is enclosed in square brackets and links to the references section.</dd>
+</dl>
+
+<div class="note">
+Notes are in light green boxes with a green left border and with a "Note" header in green. Notes are normative or informative depending on the whether they are in a normative or informative section, respectively.
+</div>
+<pre class="example">
+Examples are in light khaki boxes, with khaki left border, and with a
+numbered "Example" header in khaki. Examples are always informative.
+The content of the example is in monospace font and may be syntax colored.
+</pre>
+
+</section>
+
+<section class="informative">
+
+## How to use OpenTrack with JSON-LD
+
+With the objective of a wide use of this model, the schema is very flexible and all examples will be expressed in [[JSON-LD]] format. Along with the vocabulary, there is a specific [[JSON-LD]] context that will ease the adoption of the vocabulary, even for those who don not have deep knowledge of the Semantic Web.
+
+This section includes introductory information for those who are not familiar with the semantic technologies.
+
+The Opentrack model is expressed under the [RDF](https://www.w3.org/RDF/) paradigm (a graph-oriented representation), so there is more than one format to represent (serialize) the graph of information: RDF/XML, turtle, RDFa, etc. Examples will be represented in [JSON-LD](https://www.w3.org/TR/json-ld/), a JSON-based syntax easy to adopt.
+
+In order to ease the adoption of this set of technologies, this document includes several recipes to help developers publish and reuse Athletics information through these mechanisms. 
+
+### Terminology
+
+* **JSON-LD**. JSON-LD is a lightweight Linked Data format. It is easy for humans to read and write. It is based on the already successful JSON format and provides a way to help JSON data interoperate at Web-scale. JSON-LD is an ideal data format for programming environments, REST Web services, and unstructured databases such as CouchDB and MongoDB.
+* **JSON-LD Context**. In JSON-LD, a context is used to map terms, i.e., properties with associated values in an JSON document, to URLs. A term is a short word that expands to a URL. Terms may be defined as any valid JSON string other than a JSON-LD keyword.
+* **Linked Data**. Linked Data is a way to create a network of standards-based machine interpretable data across different documents and Web sites. It allows an application to start at one piece of Linked Data, and follow embedded links to other pieces of Linked Data that are hosted on different sites across the Web.
+* **IRI (Internationalized Resource Identifier)**. An IRI is something like a unique web address (http://example.org/resource001) that serves for identifying resources.
+
+See [JSON-LD Best Practices](https://json-ld.org/spec/latest/json-ld-api-best-practices/#terminology) for more information.
+
+### Filename extension, MIME type and encoding
+
+* Recommended document extension: `.jsonld`
+* MIME Type: `application/ld+json`
+* Encoding: `UTF-8`
+
+
+### Basic JSON-LD concepts
+
+To illustrate the basic concepts of this Opentrack JSON-LD representation we will use a simple example with the description of an athlete:
+
+<pre class="example">
+{
+    "@context" : "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+    "@type" : "Athlete",
+    "name" : "Mohamed Muktar Jama Farah",
+    "familyName" : "Farah",
+    "givenName" : "Mohamed Muktar Jama",
+    "alternateName" : "Mo Farah",
+    "url" : "http://www.mofarah.com",
+    "gender" : "Male" ,
+    "birthDate" : "1983-04-23",
+    "image" : "https://example.com/260px-MoPodiumRio2016.png",
+    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
+} 
+</pre>
+
+There are there keywords that should be always included in our documents: `@context`, `@type` and `@id`. The rest of the **properties are optional**. 
+
+In case a property value is unknown, the pair key:value will be omitted. 
+
+#### @context
+
+RDF resources (concepts, classes, properties, etc.) are identified by IRIs. For instance, the property `name` used in the example above is identified by `http://schema.org/name`. JSON-LD contexts define keys used within the document can have unambigious meaning, as they bind to the IRIs which describe their meaning.
+
+By specifying 
+<pre>
+    "@context" : "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld"
+</pre>
+
+we indicate the context of the document, that is defined in [the linked document](http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld). So we can use the keys of the context as a simplification for the representation. 
+
+#### @type
+
+`@type` indicates the class of the resource being described. In this example, the resource is an `Athlete` (the context maps `Athlete` to the IRI `http://purl.org/athletics#Athlete`, but we don't care about this now).
+
+* We should include always the type to the object we are describing. 
+* In case the resource would have more than a type, several types may be specified within an array:
+
+<pre class="example">
+    "@type" : [ "Athlete", "Coach" ]
+</pre>
+
+#### @id
+
+`@id` is used to uniquely identify entities or resources through IRIs. 
+
+When dereferencing an entity related via a URL, the location should provide a representation of that entity. 
+
+<pre class="example">
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
+</pre>
+
+This example describes an `Athlete` that is identified as [http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld](http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"). The web address will provide information about the entity (the same that is being described in the example). Having these identifiers we will be able to refer this entity from other entity descriptions or documents.
+
+Using this mechanism, we can enrich descriptions just linking our descriptions with other IRIs that already identify resources. For instance, the athlete is affiliated to a club:
+
+<pre class="example">
+    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
+</pre>
+
+That club (identified by [http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld](http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld)) is described in the same way.
+
+There may be exceptions of JSON-LD objects that **do not** have `@id`s associated. We should avoid this case unless we are sure the object defined is useful only in the context of the current description (i.e., no reusable in future descriptions). 
+
+
+#### Property values
+
+Properties that describe resources may have values of different nature:
+
+##### Literals
+
+Some properties only may have **Literals** as value:   
+
+Texts:
+<pre class="example">
+    "alternateName" : "Mo Farah"
+</pre>
+
+Dates:
+<pre class="example">
+    "birthDate" : "1983-04-23"
+</pre>
+
+Integers:
+<pre class="example">
+    "age" : 25
+</pre>
+
+###### Predefined Values (enumerations)
+
+Some properties may have **Enumerations** as value:   
+
+For instance, `gender` should only take one possible value (either `Male` or `Female`).
+<pre class="example">
+    "gender" : "Male"
+</pre>
+
+In this case, the potential values are expressed in the context as aliases, so we can use `Male` instead of `http://schema.org/Male`.
+
+
+##### Objects
+
+As shown above, a resource identified by an IRI may be used as value of a property. 
+
+In case [the resource](http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld) is already identified (and described) we can link it directly:
+<pre class="example">
+    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
+</pre>
+
+Otherwise we can describe that resource nested in the main object:
+<pre class="example">
+    "club" : {
+        "@type": "Club",
+        "name": "Newham &amp; Essex Beagles",
+        "alternateName": "BeaglesAC",
+        "url": "http://www.newhamandessexbeagles.co.uk/",
+        "logo": "http://example.org/logo.png",
+        "telephone": "(+44) 020 7511 6463",
+        "faxNumber": "(+44) 020 7511 4477",
+        "address": {
+            "name": "Terence McMillan Stadium - Newham Leisure Centre",
+            "streetAddress": "281 Prince Regent Lane",
+            "addressLocality": "London",
+            "postalCode": "E13 8SD",
+            "addressCountry": "country:GBR"
+        }
+    }
+</pre>
+
+See in the previous example that we can include descriptions of other entities nested (i.e., postal address).
+
+##### Arrays
+
+Most of the properties may be repeated to describe the same resource. For instance, the athlete may be affiliated to two clubs:
+
+<pre class="example">
+    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
+    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
+</pre>
+Or: 
+<pre class="example">
+    "club" : [ 
+        "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
+    ]
+</pre>
+
+### Multilingual Descriptions
+
+String properties may include information about its language, so we can include several representations of the same information in different languages. 
+
+The property will include information about the textual information using a complex object with two keys: `@value` and `@language`. `@value` contains the string, and `@language` the tag identifying the language (using [Lenguage Tags](https://tools.ietf.org/html/bcp47)).
+
+<pre class="example">
+{
+    "@type" : "Place",
+    "name" : {
+        "@value": "Berlin Olympic Stadium",
+        "@language": "en"
+    },
+    "name": {
+        "@value": "Olympiastadion Berlin",
+        "@language": "de"
+    }
+}
+</pre>
+
+### Typed Objects
+
+All JSON-LD objects should have a `@type` explicitly indicating the class of the resource. The Opentrack vocabulary includes several classes that can be used, but also other external vocabularies may be used. 
+
+Classes may be described hierarchically to express differences in the model. For instance, Opentrack defines different types of competitions, with [Competition](#competition) as the core entity that defines a generic competitive sports event. [Competition](#competition) has several subclasses: [Multi Stage Competition](#multi-stage-competition), [Divisional Competition](#divisional-competition), [Multi Round Competition](#multi-round-competition), [Multidiscipline Competition](#multidiscipline-competition) and [Unit Competition](#unit-competition). This means that instances of these subclasses will be also considered a [Competition](#competition).
+
+* In case the author does not know the nature of the competition, by default they should use the most generic class (i.e., [Competition](#competition)).
+* A competition may categorized with more than a type. For instance 2016 Olympic Games is a [MultidisciplineCompetition](#multidisciplinecompetition) (100m, 200m, Throws, basketball, tennis, etc.) and a [DivisionalCompetition](#divisionalcompetition) (divisions are disciplines and categories).
+
+</section>
+
+<section>
+
+## Overview of the model
+
+The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish Athletics information.
+
+In order to represent properly the model, the work was divided in two parts:
+1. **Competitors**, organizations and stakeholders involved in the competition; and
+2. **Competitions** (scheduling and results).
+
+
+### Competitors and affiliation
+
+<figure>
+    ![Competitor Conceptual Model](images/competitor_model.png)
+    <figcaption>Competitor Conceptual Model</figcaption> 
+</figure>
+
+<dl>
+    <dt>[Competitors](#competitors)</dt>
+    <dd>**[Athletes](#athlete)** or **[Teams](#teams)** that takes part in Athletics events. Athletes are defined by gender, age, nationality, and other personal information. Both athletes and teams can be affiliated to [Organizations](#organizations) such as clubs, schools, university, and/or federations.</dd>
+
+    <dt>[Federations](#federations)</dt>
+    <dd>Sports governing bodies in charge of governing and rule Athletics in specific territories. [Federations](#federations) may be attached to other higher-level federations. **[Athletes](#athlete)**, **[Teams](#teams)**, and **[Clubs](#clubs)** may be attached to federations. </dd>
+</dl>
+
+### Athletics Competitions
+
+<figure>
+    ![Competition Conceptual Model](images/competition_model.png)
+    <figcaption>Athletics competition model</figcaption> 
+</figure>
+
+<dl>
+    <dt>[Competition](#competition)</dt>
+    <dd>Competitions are organized occasions where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition. These competitions can be organized periodically ([Competition Series](#competition-series)), such as the Summer Olympic Games. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fund-raising road races, etc.). Athletics competitions may divided in several [Competitions](#competition) ([Divisional Competition](#divisional-competition) such as [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) include 24 independent event disciplines for men and 23 for women); they may include several stages ([Multi Stage Competitions](#multi-stage-competition) like the Diamond League); also competitions may be composed of several disciplines ([Multi Discipline Competitions](#multidiscipline-competition) are combined events such as Decathlon).</dd>
+
+    <dt>[Rounds](#rounds)</dt>
+    <dd>Stages of Athletics competitions (e.g., qualifying rounds, semifinals, final, etc.) where competitors are distributed in groups. Rounds depend on the competition rules for each discipline, so there is a difference between rounds within timed events, and rounds in field events. Vertical jumps have different rules regarding rounds in field events.</dd>
+
+    <dt>[Venue](#venue)</dt>
+    <dd>Location where events and competitions are held.</dd>
+
+    <dt>[Category](#category)</dt>
+    <dd>Specific category of an event (e.g., Senior Men, U18 Women, etc.).</dd>
+
+    <dt>[Field Trials Round](#field-trials-round)</dt>
+    <dd>Round of Field Events is a set of [Trials](#field-trial), where athletes have different attempts to achieve their best performance in the competition.  </dd>
+
+    <dt>[Competition Entries](#competition-entry)</dt>
+    <dd>Entries in competition are those athletes or teams that take part in an Athletics event, identified by specific information such as bib number, and best performance for the specific discipline of the event. This entry information is relative to the competition and relevant for **[Results](#results)**.</dd>
+
+    <dt>[Results](#results)</dt>
+    <dd>Results is a list of competitors (entries in the competition) with their [Performances](#performance) after an event or a concrete round— It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).</dd>
+
+    <dt>[Performances](#performances)</dt>
+    <dd>Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed). </dd>
+
+    <dt>[Field Trials](#field-trial)</dt>
+    <dd>Each one of the attempts performed by athletes within a round of trials ([Field Trials Round](#field-trials-round)).</dd>
+</dl>
+
+<p>See below all the concepts and their attributes explained in detail, including the specific class and properties that serve to describe Athletics resources. Concepts include examples of implementation. </p>
+
+</section>
+
+<section>
+
+<h2>Concepts</h2>
+
+<h3>Athlete</h3>
+
+An <dfn>Athlete</dfn> is a **[Person](#person)** who participates in Athletics events.
+
+* Class: `ath:Athlete`
+* subClassOf: `schema:Person`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify a person as an athlete. | Text |
+| `name` | `schema:name` | Athlete's full name. | Text |
+| `familyName` | `schema:familyName` | Athlete's family name; surname. | Text |
+| `givenName` | `schema:givenName` |Athlete's given name; first name. | Text |
+| `prevFamilyName` | `ath:prevFamilyName` | Athlete's former family name; surname. | Text |
+| `prevGivenName` | `ath:prevGivenName` | Athlete's former given name; first name. | Text |
+| `alternateName` | `schema:alternateName` | An alias to name an athlete. | Text |
+| `address` | `schema:address` | Main residence address of an athlete. | [Postal Address](#postal-address) or Text |
+| `image` | `schema:image` | Picture of an athlete. | URL |
+| `email` | `schema:email` | Email address. | Text |
+| `url` | `schema:url` | Webpage URL about an athlete. | URL |
+| `award` | `schema:award` |  Award or prize given to an athlete. | Text |
+| `gender` | `schema:gender` | Athlete's gender. | [Gender Type](#gender-type) |
+| `height` | `schema:height` | Athlete's height. | [Distance](#distance) |
+| `weight` | `schema:weight` | Athlete's weight. | [Mass](#mass) |
+| `nationality` | `schema:nationality` | Athlete's nationality. | [Country](#country) |
+| `birthDate` | `schema:birthDate` | Date of birth. | [Date](#date) |
+| `deathDate` | `schema:deathDate` | Date of death. | [Date](#date) |
+| `birthPlace` | `schema:birthPlace` | Locality and country of birth (e.g. "Tallinn, Estonia") | [Place](#place) |
+| `coach` | `schema:coach` | Athlete's main coach. | [Person](#person) |
+| `sponsor` | `schema:sponsor` | Athlete's sponsor. | [Person](#person) or [Organization](#organizations) |
+| `affiliation` | `schema:affiliation` | Organization ([Sports Club](#sports-club), [Federation](#federation), school, university, etc.) which an athlete is affiliated to. | [Organization](#organization) |
+| `memberOf` | `schema:memberOf` | Team which an athlete is part of (for instance, a National Team). | [Team](#team) |
+| `bestPerformance` | `ath:bestPerformance` | Athlete's records and best performances. | [Performance](#performance) |
+| `captainOf` | `ath:captainOf` | Team which an athlete is captain of. | [Team](#team) |
+
+
+<pre class="example">
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+    "@type" : "Athlete",
+ 
+    "name" : "Mohamed Muktar Jama Farah",
+    "familyName" : "Farah",
+    "givenName" : "Mohamed Muktar Jama",
+    "alternateName" : "Mo Farah",
+    "url" : "http://www.mofarah.com",
+    "gender" : "Male" ,
+    "image" : "https://example.com/260px-MoPodiumRio2016.png",
+    "nationality" : "country:GBR",
+    "email" : "fakeemail@example.com",
+    "height" : "175 cm",
+    "weight" : "65 Kg",
+    "birthPlace" : "Mogadishu, Somalia" ,
+    "birthDate" : "1983-04-23",
+    "coach" : {
+        "name" : "Alberto Salazar"
+    },
+    "sponsor" : {
+        "@type" : "Organization",
+        "name" : "Nike Oregon Project",
+        "url" : "https://nikeoregonproject.com"         
+    },
+    "affiliation" : [
+           "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
+           "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
+        ],
+    "memberOf" : [
+           "http://w3c.github.io/opentrack-cg/examples/team/GBR2012.jsonld",
+           "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld"
+        ],
+    "affiliation" :
+        [
+           "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld",
+           "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld"
+        ],
+    "bestPerformance" :
+        [
+           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon",
+           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m",
+           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m"
+        ]
+}
+</pre>
+
+### Team
+
+A <dfn>Team</dfn> is a group of [Athletes](#athlete) who play a particular sport or game together against other similar groups of people. In Athletics there are certain events designed for teams competition (e.g., relay races). Teams in those competitions may be composed of [Athletes](#athlete) of the same club, representing a federation (national, regional team), or just a joint of athletes.
+
+* class: `schema:SportsTeam`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify a team. | Text |
+| `name` | `schema:name` | Descriptive name of a team. | Text |
+| `alternateName` | `schema:alternateName` | An alias to name a team. | Text |
+| `image` | `schema:image` | Picture of a team. | URL |
+| `logo` | `schema:logo` | Logo or flag of a team. | URL |
+| `url` | `schema:url` | Webpage URL about a team. | URL |
+| `memberOf` | `schema:memberOf` | Organization which a team is attached to. | [Organization](#organization) |
+| `nationality` | `schema:location` | Teams's nationality . | [Country](#country) |
+| `sponsor` | `schema:sponsor` | Sponsor of a team. | [Person](#persons) or [Organization](#organization) |
+| `coach` | `schema:coach` | Person who acts as coach for a team. | [Person](#person) |
+| `bestPerformance` | `ath:bestPerformance` | Records and best performances of a team (e.g., relay competitions). | [Performance](#performance) |
+| `captain` | `ath:captain` | Athlete, leader of a team. | [Athlete](#athlete) |
+| `athlete` | `schema:athlete` | Athlete affiliated to a team. | [Athlete](#athlete) |
+
+<figure>
+    ![Netherlands national team as 4x100 competitor](images/instances_national_team.png)
+    <figcaption>Definition of a national team as competitor in a 4x100</figcaption> 
+</figure>
+
+<figure>
+    ![Team of a club with several athletes](images/instances_club_team.png)
+    <figcaption>Definition of a club forming a team for Ekiden</figcaption> 
+</figure>
+
+Description of a national team (with two athletes):
+<pre class="example">
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld",
+    "@type" : "Team",
+ 
+    "name" : "Great Britain National Team - Olympic Games 2016",
+    "alternateName" : "GBR",
+    "nationality" : "country:GBR",
+    "memberOf" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld",
+    "athlete" : [
+        "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/002Butchart.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/004Athlete4.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/005Athlete5.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/006Athlete6.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/006Athlete7.jsonld"
+    ],
+    "captain" :  "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
+}
+</pre>
+
+### Person
+
+A <dfn>Person</dfn> is a basic entity to represent any person. A person may play one or more roles (i.e., athlete, coach, organizer, etc.).
+
+* class: `schema:Person`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify a person. | Text |
+| `name` | `schema:name` | Person's full name. | Text |
+| `familyName` | `schema:familyName` | Person's family name; surname. | Text |
+| `givenName` | `schema:givenName` | Person's given name; first name. | Text |
+| `alternateName` | `schema:identifier` | An alias to name a person. | Text |
+| `address` | `schema:address` | Main residence address of a person. | [Postal Address](#postal-address) or Text |
+| `image` | `schema:image` | Picture of a person. | URL |
+| `email` | `schema:email` | Email address of a person. | Text |
+| `url` | `schema:url` | Webpage URL about a person. | URL |
+
+
+<pre class="example">
+{
+    "@type" : "Person",
+    "name" : "Alberto Salazar"
+}
+</pre>
+
+
+### Organization
+
+An <dfn>Organization</dfn> is a basic entity to represent any type of organization (i.e., private company, public body, association, etc.).
+
+* class: `schema:Organization`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify an organization. | Text |
+| `name` | `schema:name` | Name of an organization. | Text |
+| `alternateName  | `schema:altenateName` | An alias to name an organization. | Text |
+| `address` | `schema:address` | Postal address where an organization is located. | [Postal Address](#postal-address) or Text |
+| `email` | `schema:email` | Main email address of an organization. | Text |
+| `url` | `schema:url` | Webpage URL about an organization. | URL |
+| `telephone` | `schema:telephone` |Main telephone number(s) of an organization. | Text |
+| `areaServed` | `schema:areaServed` | Spatial coverage of an organization, usually administrative areas (city, region, country, etc.) | [Place](#place) or [Administrative Area] |
+| `memberOf` | `schema:memberOf` | Organization, such as higher-level federation(s), to which an organization is attached to. | [Organization](#organization) |
+| `member` | `schema:member` | Person or organization attached to an organization. | [Person](#person) or [Organization](#organization) |
+
+
+#### Sports Club
+
+A <dfn>Sports Club</dfn>, **sport club** or **athletics club**, is an [Organization](#organizations) for [Athletes](#athlete) formed for the purpose of playing sports. Clubs may have different [Teams](#teams) created for specific competitions, such as leagues, relay races, etc.
+
+* Class: `schema:SportsClub`
+* subClassOf: `schema:Organization`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify a club. | Text |
+| `name` | `schema:name` | Descriptive name of a club. | Text |
+| `alternateName` | `schema:alternateName` | An alias to name a club. | Text |
+| `address` | `schema:address` | Main postal address where a club is registered or located. | [Postal Address](#postal-address) or Text |
+| `image` | `schema:image` | Picture of a club. | URL |
+| `logo` | `schema:logo` | Logo or flag of the club. | URL |
+| `email` | `schema:email` | Main email address of the club. | Text |
+| `telephone` | `schema:telephone` | Telephone number of a club | Text |
+| `faxNumber` | `schema:faxNumber` | Fax number of a club | Text |
+| `url` | `schema:url` | Club's homepage. | URL |
+| `dissolutionDate` | `schema:dissolutionDate` | Date when a team was dissolved. | [Date](#date) |
+| `foundingDate` | `schema:foundingDate` | Date when a team was established. | [Date](#date) |
+| `organization` | `schema:memberOf` | Organization which a club is attached to. | [Organization](#organization) |
+| `sponsor` | `schema:sponsor` | Sponsor of a club. | [Person](#persons) or [Organization](#organization) |
+| `athlete` | `schema:athlete` | Athlete who is affiliated to a club. | [Athlete](#athlete) |
+| `team` | `ath:team` | [Team](#team) attached to a club. | [Team](#team) |
+
+
+<pre class="example">
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
+    "@type" : "Club",
+
+    "name": "Newham &amp; Essex Beagles",
+    "alternateName": "BeaglesAC",
+    "url": "http://www.newhamandessexbeagles.co.uk/",
+    "image": "http://example.org/image.png",
+    "logo": "http://example.org/logo.png",
+    "telephone": "(+44) 020 7511 6463",
+    "faxNumber": "(+44) 020 7511 4477",
+    "email": "fakeemail@example.org",
+    "address": {
+        "name": "Terence McMillan Stadium - Newham Leisure Centre",
+        "streetAddress": "281 Prince Regent Lane",
+        "addressLocality": "London",
+        "postalCode": "E13 8SD",
+        "addressCountry": "country:GBR"
+    },
+    "sponsor": "Asics",
+    "athlete": [
+        "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/002Athlete2.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/athlete/003Athlete3.jsonld"
+    ],
+    "memberOf" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+}
+</pre>
+
+
+#### Federation
+
+A <dfn>Federation</dfn> is a special type of organization in charge of governing and rule the sport of athletics. These **sports governing bodies** may be attached to other higher-level federations, and have other sports organizations (clubs or other governing bodies) attached to them.
+
+* class: `ath:SportsGoverningBody`
+* subClassOf: `schema:SportsOrganization`
+
+<pre class="example">
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld",
+    "@type": "Federation",
+    "name": "European Athletics",
+    "alternateName": "European Athletic Association",
+    "email": "office@european-athletics.org",
+    "url": "http://www.european-athletics.org",
+    "faxNumber": "(41 21) 313 43 51",
+    "telephone": "(41 21) 313 43 50",
+    "address": {
+        "name": "European Athletic Association",
+        "streetAddress": "Avenue Louis-Ruchonnet 16",
+        "addressLocality": "Lausanne",
+        "postalCode": "CH-1003",
+        "addressCountry": "CHE"
+    },
+    "areaServed" : "Europe",
+    "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld",
+    "member": [
+        "http://w3c.github.io/opentrack-cg/examples/federation/ALB.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/AND.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/ARM.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/AUT.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/AZE.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BLR.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BEL.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BIH.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BUL.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/CRO.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/CYP.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/ALB.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/AND.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/ARM.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/AUT.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/AZE.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BLR.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BEL.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BIH.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/BUL.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/CRO.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/federation/CYP.jsonld"
+    ]
+}
+</pre>
+
+### Category
+
+<dfn>Category</dfn> is a division that marks the competition of athletes and teams in sports events. Categories describe the potential **audience** of a sports event. Categories may include restrictions of gender, age range and other specific rules depending of the sports discipline.
+
+Examples of categories in Athletics are: *M35* (Men aged 35-39), *U23* (Under 23) Men, or *ad hoc* categories for non-official competitions such as *teachers* and *parents* in school sports. There is a predefined list of [standard categories](#age-and-sex-categories) recognized by international federations.
+
+* class: `ath:CompetitiveAudience`
+* subClassOf: `schema:PeopleAudience`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify a category. | Text |
+| `name` | `schema:name` | Name of a category (i.e., `Under 23 Men`, `Teachers`) | Text |
+| `alternateName` | `schema:alternateName` | Code used to identify a category (i.e., `M35`, `W35`) | Text |
+| `description` | `schema:description` | Description and notes about a category. | Text |
+| `requiredGender` | `schema:requiredGender` | Gender of athletes involved in a category.  | [Gender Type](#gender-type) |
+| `requiredMinAge` | `schema:requiredMinAge` | Athletes' minumum age to be eligible for a category.  | Integer |
+| `requiredMaxAge` | `schema:requiredMaxAge` | Athletes' maximum age to be eligible for a category.  | Integer |
+| `recognizingAuthority` | `ath:recognizingAuthority` | Governing body that recognizes and rule a specific category.  | [Organization](#organization) |
+
+Example of category description (Senior Women):
+<pre class="example">
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/category/SENF.jsonld",
+    "@type": "Category",
+    "name": "Senior (Female)",
+    "description": "Open class with no upper age limit but some limitations on younger people competing in endurance events. Female gender.",
+    "requiredMinAge" : 16,
+    "requiredGender" : "Female",
+    "recognizingAuthority" : "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld"
+}
+</pre>
+
+### Competition
+
+A <dnf>Competition</dnf>, Athletics Competition or Sports Competition is an event in which [Athletes](#athlete) take part in order to find out who is best at a particular sports activity.
+
+Athletics [Competitions](#competition) may be of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fund-raising road races or school races are also considered as [Competitions](#competition).
+
+<ul>
+    <li>class: `ath:Competition`</li>
+    <li>subClassOf: `schema:SportsEvent`</li>
+    <li>superClasses: </li>
+    <ul>
+        <li>`ath:MultiStageCompetition`</li>
+        <li>`ath:DivisionalCompetition`</li>
+        <li>`ath:MultiRoundCompetition`</li>
+        <li>`ath:MultidisciplineCompetition`</li>
+        <li>`ath:UnitCompetition`</li>
+    </ul>
+</ul>
+
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify a competition. | Text |
+| `name` | `schema:name` | Descriptive name of a competition. | Text |
+| `alternateName` | `schema:alternateName` | An alias to name the competition. | Text |
+| `description` | `schema:description`  | Descriptive text about a competition. | Text |
+| `location` | `schema:location` | Venue where a competition is held (for instance, Berlin Olympic Stadium). | [Place](#place) or Text |
+| `url` | `schema:url` | Webpage URL about a competition. | URL |
+| `image` | `schema:image` | Picture about a competition. | URL |
+| `startDate` | `schema:startDate` | Date and time when a competition starts. | [Date](#date) or [DateTime](#datetime) |
+| `endDate` | `schema:endDate` | Date and time when a competition ends. | [Date](#date) or [DateTime](#datetime) |
+| `eventStatus` | `schema:eventStatus` | Status of a competition according to a enumeration of potential values (i.e., scheduled, completed, etc.) | [Event Status Type](#event-status-type) |
+| `organizer` | `schema:organizer` | Person(s) or organization(s) that organizes a competition. | [Person](#persons) or [Organization](#organizations) |
+| `contributor` | `schema:contributor` | Person(s) or organization(s) that collaborates in the organization of a competition. | [Person](#person) or [Organization](#organization) |
+| `starter` | `ath:starter` | Athletes(s) or teams(s) registered for the competition at the beginning of the event. | [Ahtlete](#athlete) or [Team](#team) |
+| `sponsor` | `schema:sponsor` | Person(s) or organization(s) that sponsors a competition. | [Person](#person) or [Organization](#organization) |
+| `attendee` | `schema:attendee` | Person(s) who attends a competition. | [Person](#person) |
+| `discipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#discipline) |
+| `category` | `ath:category` | The specific category for a competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Category](#category) |
+| `entryRequirements` | `ath:entryRequirements` | Requirements to take part in a competition.  | Text |
+| `results` | `ath:results` | List with the results of the participation in a competition. There may be different results during the competition (start list, intermediate results, partial results, final results, etc.) .  | [Results Sequence](#results-sequence) |
+| `unitCompetition` | `ath:unitCompetition` | Unit competition that is part of a parent competition (e.g. every heat of a semifinal round in a 200m event).  | [Unit Competition](#unit-competition) |
+| `previousStage` | `ath:prevStage` | Competition that is the previous stage of this event, within a [Multi Stage Competition](#multi-stage-competition) (e.g. previous match in a league).  | [Competition](#competition) |
+| `nextStage` | `ath:nextStage` | Competition that is the next stage of this event, within a [Multi Stage Competition](#multi-stage-competition) (e.g. next match in a league).  | [Competition](#competition) |
+
+
+There are specific types of competitions:
+* [Competition Series](#competition-series). Series of competitions that have events periodically (e.g., [2016 Summer Olympic Games in Rio](https://www.olympic.org/rio-2016/athletics) as part of the Olympic Games held every four years);
+* [Multi Stage Competitions](#multi-stage-competitions), composed of a set of stages (e.g. leagues or tournaments such as [European Combined Events Team Championships Super League, Tallin 2017](http://www.european-athletics.org/competitions/european-combined-events-team-championships-super-league/) and the [European Throwing Cup, 2017](http://www.european-athletics.org/competitions/european-throwing-cup/));
+* [Multi Round Competitions](multi-round-competitions), divided in a sequence of qualification rounds (e.g. 100m events that are divided in qualifying rounds, semifinals, final, etc.);
+* [Divisional Competitions](#divisional-competition), split in different divisions (e.g., [USATF Cross Country Championships](http://www.usatf.org/Events---Calendar/2017/USATF-Cross-Country-Championships.aspx) divided in different categories by gender and age range.);
+* [Multidiscipline Competitions](#multidiscipline-Competitions), composed of different disciplines (e.g., [IAAF World Championships London 2017](http://www.iaafworldchampionships.com)).
+
+
+#### Competition Series
+
+**Competition Series** are competitive events that are held periodically (for instance, the Summer Olympic Games have recurring events organized every four years).
+
+* class: `schema:CompetitionSeries`
+* subClassOf: `schema:EventSeries`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify a recurring competition. | Text |
+| `name` | `schema:name` | Descriptive name of a recurring competition. | Text |
+| `alternateName` | `schema:alternateName` | An alias to name a recurring competition. | Text |
+| `description` | `schema:description` | About a recurring competition. | Text |
+| `recurringCompetition` | `ath:recurringCompetition` | A competition that happens as a recurring event within a series of competitions (e.g., *London 2012*  *Olympic Games*) | [Competition](#competitions) |
+
+<pre class="example">
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/EuropeanChampionships.jsonld",
+    "@type": "CompetitionSeries",
+ 
+    "name": "European Athletics Championships",
+    "description": "The European Athletics Championships is a recurring event organized by European Athletics, that is held every two years. This championship gathers together the best athletes and national teams in Europe.",
+    "organizer": "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld",
+    "recurringEvent" : [
+        "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld",
+        "http://w3c.github.io/opentrack-cg/examples/competition/Euro2018.jsonld"
+    ]
+}
+</pre>
+
+#### Multi Stage Competition
+
+A <dfn>Multi Stage Competition</dfn> is an athletic event organised as a set of stages. For instance, The *Diamond League* and the *Surrey Cross Country League*.
+
+* class: `ath:MultiStageCompetition`
+* subClassOf: `ath:Competition`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `firstStage` | `ath:firstStage` | First stage of a multi stage competition. | [Competition](#competition) |
+| `lastStage` | `ath:lastStage` | Last stage of a multi stage competition. | [Competition](#competition) |
+| `stage` | `ath:stage` | A stage within a multi stage competition. | [Competition](#competition) |
+
+#### Divisional Competition
+
+A <dfn>Divisional Competition</dfn> is a competition that is divided into a number of competitions. For instace, The Boston Marathon is divided in [two divisions](http://www.baa.org/races/boston-marathon/event-information/prize-money-and-awards.aspx): *Open/overall* division and *Masters* division.
+
+* class: `ath:DivisionalCompetition`
+* subClassOf: `ath:Competition`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `division` | `ath:division` | Division of a competition. | [Competition](#competition) |
+
+
+#### Multidiscipline Competition
+
+A **Multidiscipline Competition** is a competition that incorporates a number of different event disciplines. For instance, the 2012 London Summer Olympic Games 2012, and the 2016 European Athletics Championships.
+
+* class: `ath:MultidisciplineCompetition`
+* subClassOf: `ath:Competition`
+
+#### Multi Round Competition
+
+A **Multi Round Competition** is an athletic event organised as a sequence of rounds. For instance, track and field events are usually structured in qualification rounds (i.e, preliminary rounds, qualification rounds, semifinals and final).
+
+* class: `ath:MultiRoundCompetition`
+* subClassOf: `ath:Competition`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `firstRound` | `ath:firstRound` | First round in a multi round competition. | [Competition Round](#competition-round) |
+| `lastRound` | `ath:lastRound` | Last round in a multi round competition. | [Competition Round](#competition-round) |
+| `round` | `ath:round` | Round in a multi round competition. | [Competition Round](#competition-round) |
+
+
+#### Competition Round
+
+A <dfn>Competition Round</dfn> is each sub-event of a [Multi Round Competition](#multi-round-competition). Rounds in competitions have one of more [Unit Competitions](#unit-competition) (e.g., a heat in a qualifying round, the race in the 200m final round) where competitors are distributed. The number and type of rounds depend on the competition rules for each discipline. For instance, track sprint competitions with many participants may have various heats at preliminary round, several heats at first round, two semifinals, and a final.
+
+Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races. Examples of **Competition Rounds**: 110m Hurdles Men **Preliminary Round Heat 1**, 10,000m Men **Final**, and 110 Hurdles Man **Semifinal 1**.
+
+Rounds are competitions that may be described also by the following properties:
+
+* class: `ath:CompetitionRound`
+* subClassOf: `ath:Competition`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `qualificationCriteria` | `ath:qualificationCriteria` | Requirements for a competitor to get to the next round in a [Multi Round Competition](#multi-round-competition) (e.g., a preliminary round of qualification in track events may select a number of athletes by their performance and others by heat ranking). | [Qualification Criteria](#qualification-criteria) |
+
+#### Unit Competition
+
+A <dfn>Unit Competition</dfn> is a unitary competition defined by specific sports rules (for instance, the Heat 1 race at the semifinals of 100m event in the Olympic Games). [Competition Rounds](#competition-round) have one o more [Unit Competitions](#unit-competition).
+
+<ul>
+    <li>class: `ath:UnitCompetition`</li>
+    <li>subClassOf: `ath:Competition`</li>
+    <li>superclasses:
+        <ul>
+            <li>`ath:UnitRace`</li>
+            <li>`ath:UnitFieldCompetition`</li>
+        </ul>
+    </li>
+</ul>
+
+
+#### Unit Race
+
+A <dfn>Unit Race</dfn> is a competitive event where performances are measured as time (i.e., races and legs in relay races). Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race.
+
+* class: `ath:UnitRace`
+* subClassOf: `ath:UnitCompetition`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `startLocation` | `ath:startLocation` | Place where a competition starts.  | [Place](#place) |
+| `endLocation` | `ath:endLocation` | Place where a competition finishes.  | [Place](#place) |
+| `raceCourse` | `ath:raceCourse` | Track with the course of a competition.  | `schema:GeoShape` |
+| `timekeeping` | `ath:timekeeping` | Type of timekeeping used to control a competition.  | [Timekeeping](#timekeeping) |
+
+
+**Examples of competitions:**
+
+<figure>
+    ![Model of a 100m competition within the European Championships](images/instances_competition_european_champs_100.png)
+    <figcaption>Example of competition model: 2016 European Championships, 100m Men</figcaption> 
+</figure>
+
+<figure>
+    ![Model of a heptathlon competition within the European Championships](images/instances_competition_european_champs_heptathlon.png)
+    <figcaption>Example of competition model: 2016 European Championships Heptathlon (simplified with only five combined events)</figcaption> 
+</figure>
+
+<figure>
+    ![Ekiden race instances with two categories](images/instances_relays_ekiden.png)
+    <figcaption>Example of instances of the [Jaffa Ekiden Relay Race](http://events.ipswichjaffa.org.uk/ekiden-relays/), representing two different categories (senior and junior), including individual results for each relay leg and the overall results (for teams)</figcaption> 
+</figure>
+
+<figure>
+    ![Example of model for competition (100m at European Championships)](images/instances_competition_european_champs_100.png)
+    <figcaption>Example of model for competition rounds at 100m Men - European Championships:</figcaption> 
+</figure>
+
+See a complete [example of divisional competition (European Championships with detail of 100m event)](http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld).
+
+
+#### Unit Field Competition
+
+A <dfn>Unit Field Competition</dfn> is a unitary competition in field events (for instance, one group of the semifinals in a High Jump event).
+
+* class: `ath:UnitFieldCompetition`
+* subClassOf: `ath:UnitCompetition`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `trialsRound` | `ath:trialsRound` | A round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-round) |
+| `firstTrialsRound` | `ath:firstTrialsRound` | The first round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-round) |
+| `lastTrialsRound` | `ath:lastTrialsRound` | The last round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-round) |
+
+**Unit Field Competitions** are unitary competitions for field disciplines. These competitions have a specific structure based on rounds of trials or attempts ([Field Trials Rounds](#field-trials-round)).
+
+There are two different types of Unit Field Competitions:
+
+* [Unit Height Competition](#unit-height-competition); and
+* [Unit Distance Competition](#unit-distance-competition).
+
+
+##### Unit Height Competition
+
+A <dfn>Unit Height Competition</dfn> is a unitary competition for height disciplines (**Vertical Jumps**).
+
+<figure>
+    ![Example of height card](images/example_height_card_concepts.png)
+    <figcaption>Example of rounds of trials and attempts highlighted on a control card for a Height Competition (High Jump)</figcaption> 
+</figure>
+
+Unit Height Competitions must specify specific information about the height of the bar before the competition starts.
+
+* class: `ath:UnitFieldCompetition`
+* subClassOf: `ath:UnitFieldCompetition`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `startingHeight` | `ath:startingHeight` | The starting height the bar is raised at the start of a vertical jumps unit competition. | [Distance](#distance) |
+| `increasingHeight` | `ath:increasingingHeight` | The subsequent heights to which the bar will be raised at the end of each round of trials within a vertical jumps unit competition. | Text |
+
+<figure>
+    ![Rounds of trials for a heat within a High Jump competition](images/instances_field_rounds_highjump.png)
+    <figcaption>Example of model of rounds for the distance card shown in the previous example (High Jump)</figcaption> 
+</figure>
+
+
+##### Unit Distance Competition
+
+A <dfn>Unit Distance Competition</dfn> is a unitary competition for distance field disciplines (**Horizontal Jumps and Throws**).
+
+* class: `ath:UnitDistanceCompetition`
+* subClassOf: `ath:UnitFieldCompetition`
+
+<figure>
+    ![Example of distance card](images/example_distance_card_concepts.png)
+    <figcaption>Example of field rounds and trials highlighted on a control card for Distance Field Events (a Javelin Throw Competition)</figcaption> 
+</figure>
+
+<figure>
+    ![Rounds of trials for a heat within a Javelin Throw competition](images/instances_field_rounds_javelin.png)
+    <figcaption>Example of representation of the previous example of Javelin Throw Competition</figcaption> 
+</figure>
+
+
+### Field Trials Round
+
+A <dfn>Field Trials Rounds</dfn> is a set of attempts ([Trials](#trials)) performed by each athlete in a unit field competition.
+
+<ul>
+    <li>class: `ath:FieldTrialsRound`</li>
+    <li>superClasses:
+        <ul>
+            <li>`ath:HeightTrialsRound`</li>
+            <li>`ath:DistanceTrialsRound`</li>
+        </ul>
+    </li>
+</ul>
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify a round of trials. | Text |
+| trials round number | Correlative integer identifying a round of trials in the competition. | Integer |
+| competition entry | Entry about the participation of an Athlete or Team competing in a competition. | [Competition Entry](#competition-entry) |
+| trial(s) | Athlete's attempt(s) in a round of trials. | [Field Trial](#field-trial) |
+| first trial | Athlete's first attempt in a round of trials. | [Field Trial](#field-trial) |
+| last trial | Athlete's last attempt in a round of trials. | [Field Trial](#field-trial) |
+| next trials round | The next round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-round) |
+| previous trials round | The previous round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-round) |
+
+Field Trials Rounds are specialized in two subclasses:
+
+* [Height Trial Round](#height-trial-round) (for Vertical Jumps), and
+* [Distance Trial Round](#distance-trial-round) (for Horizontal Jumps and Throws).
+
+#### Height Trials Round
+
+A <dfn>Height Trials Round</dfn> is a round of athlete's attempts in **Vertical Jumps**. In this type of rounds, athletes attempt jumping or vaulting a specific height.
+
+
+* class: `ath:HeightTrialsRound`
+* subClassOf: `ath:FieldTrialsRound`
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| height | The target height the bar is raised in a round. | [Distance](#distance) |
+| trial round | A round of field trials within a height trials round. | [Height Trials Round](#height-trials-round) |
+| first trials round | The first round of field trials within a height trials round. | [Field Trials Round](#field-trials-round) |
+| last trials round | The last round of field trials within a height trials round. | [Field Trials Round](#field-trials-round) |
+
+
+#### Distance Trials Round
+
+A <dfn>Distance Trials Round</dfn> is a round of attempts for each competitor in a distance field competition (Horizontal Jumps and Throws).
+
+* class: `ath:DistanceTrialsRound`
+* subClassOf: `ath:FieldTrialsRound`
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| height | The target height the bar is raised for a trials round. | [Distance](#distance) |
+
+
+### Field Trial
+
+A <dfn>Field Trial</dfn> is an individual unitary attempt in field competitions.
+
+Except for Vertical Jumps, each competitor only will have no more than one trial recorded in any one round of trials of the competition. Anyway, all trials belonging to rounds of trials will have the same structure, independently of the discipline.
+
+Except in Vertical Jumps, a valid trial shall be indicated by the measurement taken. For the standard abbreviations and symbols to be used in all other cases see [Start lists and results](#Start lists and results). A *´substitute´* trial is given in case an athlete is hampered in a trial or it cannot be correctly recorded.
+
+* class: `ath:FieldTrial`
+
+| Property | Description | Value Type |
+|:-------- |:----------- |:---------- |
+| identifier | Unique character string to identify a trial. | Text |
+| attempt | Number indicating the correlative number of attempts in a round of trials. | Integer |
+| performance | Performance achieved in case a trial was valid. | [Performance](#performance) |
+| valid | Flag indicating if the trial was valid or not (failure) | Boolean |
+| is substitute | Flag indicating if the trial is a *substitute* trial. | Boolean |
+| in round | Field round where a trial belongs to . | [Field Trials Rounds](#field-trials-round) |
+
+<pre class="example">
+{
+    "@id" : "http://example.com/trial:HJ11",
+    "@type" : "Trial",
+    "numberAttempt" : 1,
+    "feature" : "feature:Failed",
+    "valid" : false
+}
+</pre>
+<pre class="example">
+{
+    "@id" : "http://example.com/trial:HJ12",
+    "@type" : "Trial",
+    "numberAttempt" : 2,
+    "valid" : true,
+    "feature" : "feature:PassedTrial",
+    "performance" : "http://example.com/performance:34354"
+}
+</pre>
+
+
+### Competition Entry
+
+A <dfn>Competition Entry</dfn> represents the participation of competitors (teams or athletes) taking part in events. Each competitor will be identified unequivocally in the competition. These entries will be reflected in [Results](#results) (and starting lists before the competition) and in other stages of the competition such as rounds of trials.
+
+* class: `ath:CompetitionEntry`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify an entry in the competition. | Text |
+| `competitor` | `ath:competitor` | Athlete or team competing in an event. | [Athlete](#athlete) or [Team](#team) |
+| `protestStatus` | `ath:protestStatus` | Status of the protest action of the competitor during a competition. | [Protest Status](#protest-status) |
+| `bibIdentifier` | `ath:bibIdentifier` | Text or number printed on the bib, identifying a competitor during the competition. | Text |
+| `transponderIdentifier` | `ath:transponderIdentifier` | Text or code identifying a competitor by a transponder. | Text |
+| `category` | `ath:category` | The specific category where a this entry is included in the competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Category](#category) |
+| `inCompetition` | `ath:inCompetition` | Competition in which a competitor takes part. | [Competition](#competition) |
+| `bestPerformance` | `ath:bestPerformance` | Best performance for the discipline related to the competition. | [Performance](#performance) |
+
+Example of entry in a competition:
+<pre class="example">
+{
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_100Haase",
+    "@type" : "CompetitionEntry",
+    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase.jsonld",
+    "bibIdentifier" : "100"
+}
+</pre>
+
+### Results
+
+<dfn>Results</dfn> is an ordered list of competitors and their achieved performances, before (start list), during, and after the event. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).
+
+In *Combined Events*, scores are calculated according to *combined events scoring tables*.
+
+<figure>
+    ![Example of results](images/example_results.png)
+    <figcaption>Example of results after the Final round in 100m Women event</figcaption> 
+</figure>
+
+* class: `rdf:Seq`
+
+The list of results is expressed through a sequence (`rdf:Seq`) —an ordered list— of [Result](#result) objects.
+
+#### Result
+
+<dfn>Result</dfn> is an entry in the list of results. It include information about the participation of an athlete or team in a competition. Results may be under different statuses depending on the stage of the competition.
+
+* class: `ath:Result`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify an entry in the list of results. | Text |
+| `competitionEntry` | `ath:competitionEntry` | Athlete or team participating in the event. | [Competition Entry](#competition-entry) |
+| `competitionFeature` | `ath:competitionFeature` |Set of features and notes included by officials in a starting list or results (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | [Competition Feature Type](#competition-feature-type) |
+| `protestStatus` | `ath:protestStatus` | Status of the protest action of the competitor at a stage of the competition. | [Protest Status Type](#protest-status-type) |
+| `inCompetition` | `ath:inCompetition` |Competition in which a competitor takes part. | [Competition](#competitions) |
+| `startingOrder` | `ath:startingOrder` | Competitor's order in the start list of a competition stage. | Integer |
+| `trackLane` | `ath:trackLane` | Track lane number assigned to a competitor in case of certain track disciplines. | Integer |
+| `rank` | `ath:rank` | Position in the ranking of results. | Integer |
+| `record` | `ath:record` | Flags indicating records or best performances achieved after the competition competition (e.g., World Record, National Record, etc.). | [Record](#record) |
+| `created` | `dc:created` | Exact date and time when the results were produced. | [DateTime](#datetime) |
+| `modified` | `dc:modified` | Exact date and time when the results were updated. | [DateTime](#datetime) |
+| `performance` | `ath:performance` | Measure to quantify the performance of the competitor after a competition stage.  | [Performance](#performance) |
+| `award` | `ath:award` | Award related to the result achieved by the athlete. | Text |
+
+<pre class="example">
+{
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_5",
+    "@type": "Result",
+    "name": "5th Position - 100m Women - Round 1 - Heat 1",
+    "competitionEntry" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_104Kora",
+    "trackLane": 8,
+    "competitionFeature": "q",
+    "rank": 5,
+    "performance": {
+        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_104Kora",
+        "@type" : "TimePerformance",
+        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora.jsonld",
+        "windAssistance" : "-0.5 m/s",
+        "time" : "00:00:11.450",
+        "record" : "SB"
+    }
+}
+</pre>
+
+
+### Performance
+
+<dfn>Performance</dfn> represents the resulting competitor's accomplishment measured and recognized by officials after a competition. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind assistance).
+
+_Using the previous example of result list, Shelly-Ann Fraser-Pryce's performance is: **11.09 (seconds), +0.6 (m/s wind assistance), setting a new CR record** at 100m Women Final._
+
+<ul>
+    <li>class: `ath:Performance`</li>
+    <li>superClasses:
+        <ul>
+            <li>`ath:TimePerformance`</li>
+            <li>`ath:PointsPerformance`</li>
+            <li>`ath:DistancePerformance`</li>
+        </ul>
+    </li>
+</ul>
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify a performance. | Text |
+| `windAssistance` | `ath:windAssistance` | Wind speed at the moment of registering the performance (it could be either positive or negative). | Text |
+| `record` | `ath:record` | Flags indicating records and bests achieved after the competition round (e.g., World Record, National Record, Personal Best, Season Leader, etc.). | [Record](#record) |
+| `discipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#discipline) |
+| `date` | `dc:date` | Date when the athlete achieved a performance. | [Date](#date) |
+| `competitor` | `ath:competitor` | Athlete or team that achieved the performance. | [Athlete](#athlete) or [Team](#team) |
+
+There are different types of performance depending on the type of event: **Timed** events with results measured as time; **Lenght** events, measured as distance (Throws, Long Jump and Triple Jump); **Height** events, measured as height (Vertical Jumps); and **Combined** events, measured as score points (Decathlon, Heptathlon, etc.). So, performances are described by the following sub-classes:
+
+* [Time Performance](#time-performance),
+* [Points Performance](#points-performance), and
+* [Distance Performance](#distance-performance).
+
+#### Time Performance
+
+<dfn>Time Performance</dfn> is a performance for timed competitions (i.e., races).
+
+* class: `ath:TimePerformance`
+* subClassOf: `ath:Performance`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `time` | `ath:time` | Official measure of a performance expressed as time. | [Time](#time) |
+| `reactionTime` | `ath:reactionTime` | Reaction time of an athlete during a sprint event. | [Time](#time) |
+
+Example of performance in a sprint event:
+<pre class="example">
+{
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_119Nguyen",
+    "@type" : "TimePerformance",
+    "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/119Nguyen.jsonld",
+    "windAssistance" : "-1.0 m/s",
+    "time" : "00:00:11.660",
+    "record" : "SB"
+}
+</pre>
+
+#### Points Performance
+
+<dfn>Points Performance</dfn> is a performance for competitions based on score points (i.e., combined events).
+
+* class: `ath:PointsPerformance`
+* subClassOf: `ath:Performance`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `points` | `ath:points` | Official measure of a performance expressed as score points. | Number |
+
+
+<pre class="example">
+{
+    "points" : 18273
+}                                     
+</pre>
+
+#### Distance Performance
+
+<dfn>Distance Performance</dfn> is a performance based on distance (i.e., throws, horizontal jumps).
+
+* class: `ath:DistancePerformance`
+* subClassOf: `ath:Performance`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `distance` | `schema:distance` | Official measure of a performance expressed as distance. | [Distance](#distance) |
+
+<pre class="example">
+{
+    "distance" : "56 m"
+}                                     
+</pre>
+
+### Qualification Criteria
+
+<dfn>Qualification Criteria</dfn> are the requirements for the competitor to pass a qualification round. Qualification may be based on the *standard or finishing position*, or by *performance*.
+
+* class: `ath:QualificationCriteria`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `description` | `schema:description` | Descriptive text of the qualification criteria. | Text |
+| `byPlaceOrStandard` | `ath:byPlaceOrStandard` | Number of competitors that are qualified in a round by rank (track events) or standard (field events). | Integer |
+| `byPerformance` | `ath:byPerformance` | Number of competitors that are qualified in a round by best performance. | Integer |
+
+<pre class="example">
+{
+    "@type": "QualificationCriteria",
+    "description": "First 2 in each heat (Q) and the next 2 fastest (q) advance to the final",
+    "byPlaceOrStandard": 6,
+    "byPerformance": 2
+}
+</pre>
+
+
+### Timekeeping
+
+<dfn>Timekeeping</dfn> is a process and/or mechanism of timing competitions.
+
+There are three alternative methods of timekeeping, recognised as official by IAAF:
+- **Hand Timing** (`HT`) – Hand Timing is usually given to 0.1 seconds (average the different timekeepers and rounded up);
+- **Fully Automatic Timing** (`FAT`), obtained from a Photo Finish System (FAT usually given to 0.01 seconds);
+- **Transponder System Timing**. Automatic timing provided by radio signal devices. Road races use a variety of chip timing systems, precision is less important than recording thousands of people easily in the right order.
+
+Sometimes may be of interest gathering and representing information about devices and the specific conditions of timekeeping.
+
+* class: `ath:Timekeeping`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify a timekeeping method. | Text |
+| `timekeepingType` | `dc:type` | Type of the system used. | [TimekeepingType](#timekeepingtype) |
+| `name` | `schema:name` | Name of a method used for timekeeping (i.e., `Hand Timing`, `Fully Automatic` or `Transponder System Timing`) | Text |
+| `description` | `schema:description` | Description and notes about the method used for timekeeping. | Text |
+| `timingDevice` | `ath:timingDevice` | Brand, model and features of the device/system used for timekeeping. | Text |
+
+<pre class="example">
+{
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.json",
+    "@type" :  "Timekeeping",
+    "timekeepingType" : "FAT",
+    "name" : "Generic Fully Automated System"
+}
+</pre>
+
+### Place
+
+A <dfn>Place</dfn> is a location, venue or territories where events are held or organizations are located. Events may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). Federations may cover specific Administrative Areas.
+
+* class: `schema:Place`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify a venue. | Text |
+| `name` | `schema:name` | Descriptive name of a venue. | Text |
+| `description` | `schema:description` | Descriptive text about a place. | Text |
+| `address` | `schema:address` | Postal address related to a venue. | [Postal Address](#postal-address) or Text |
+| `url` | `schema:url` | Webpage URL about a venue. | URL |
+| `image` | `schema:image` | Picture about a venue. | URL |
+| `geo` | `schema:geo` | Coordinates of a venue. | [GeoCoordinates]  or [GeoShape]  |
+| `map` | `schema:hasMap` | URL to a map pointing to a venue. | URL |
+| `telephone` | `schema:telephone` | Telephone number of a venue. | Text |
+| `fax` | `schema:faxNumber` | Fax number of a venue. | Text |
+
+<pre class="example">
+{
+    "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#venue",
+    "@type": "schema:StadiumOrArena",
+    "name": "Olympic Stadium Amsterdam",
+    "geo": {
+        "latitude": "52.343417",
+        "longitude": "4.854192"
+    },
+    "map": "http://example.org/map",
+    "address": {
+        "streetAddress": "Olympisch Stadion 2",
+        "addressLocality": "Amsterdam",
+        "postalCode": "1076 DE",
+        "addressCountry": "NL"
+    }
+}
+</pre>
+
+### Postal Addresses
+
+<dfn>Postal Address</dfn> describes a postal address relative to a place.
+
+* class: `schema:PostalAddress`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify a postal address. | Text |
+| `name` | `schema:name` | Descriptive name of the place (e.g., Helsinki Olympic Stadium). | Text |
+| `streetAddress` | `schema:streetAddress` | The street address (e.g., Paavo Nurmen tie 1).  | Text |
+| `locality` | `schema:addressLocality` | The locality (e.g., Helsinki). | Text |
+| `postOficeBoxNumber` | `schema:postOficeBoxNumber` | The post office box number for PO box addresses. | Text |
+| `postalCode` | `schema:postalCode` | The postal code (e.g., 00250)| Text |
+| `country` | `schema:addressCountry` | The country (e.g., Finland). | [Country](#country) |
+
+<pre class="example">
+{
+    "streetAddress": "Olympisch Stadion 2",
+    "addressLocality": "Amsterdam",
+    "postalCode": "1076 DE",
+    "addressCountry": "NL"
+}
+</pre>
+
+</section>
+
+<section>
+
+## Classification Schemas and Data Types
+
+Most of the following definitions and values for this set of value schemas are extracted from the official [Technical Competition Rules](https://www.iaaf.org/about-iaaf/documents/rules-regulations) published by IAAF.
+
+
+### Date
+
+Date is represented using the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard: `[YYYY][MM][DD]` or `[YYYY]-[MM]-[DD]`
+
+For instance, 7th April 2017:
+<pre class="example">
+2017-04-07
+</pre>
+
+### Time
+
+Time is represented using the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard: `[hh][mm][ss].sss` or `[hh]:[mm]:[ss].sss`
+
+For instance 2 hours 5 minutes 34 seconds:
+<pre class="example">
+02:05:34.000
+</pre>
+
+Example, 10 seconds, 345 milliseconds:
+<pre class="example">
+00:00:10.345
+</pre>
+
+### DateTime
+
+DateTime is represented using the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard: `&lt;date&gt;T&lt;time&gt;`
+
+Time can include the timezone `&lt;time&gt;±[hh]:[mm]`.
+
+For instance, 7th April 2017 at 4:45 am (UTC+1):
+<pre class="example">
+2017-04-07T04:45:00.000+01:00
+</pre>
+
+### Distance
+
+Measurements of the form `&lt;Number> &lt;Length-unit-of-measure&gt;` (e.g., `7 ft`).
+
+### Mass
+
+Measurements of the form `&lt;Number> &lt;Mass-unit-of-measure&gt;` (e.g., `75.3 kg`).
+
+
+### Gender
+
+Enumeration of genders with two values:
+
+| Code | Gender Type |
+| ---- | ----------- |
+| `Male` | Men and/or boys. |
+| `Female` | Women and/or girls. |
+
+
+### Competition Features
+
+According to IAAF Rule 132.4, there are official standard abbreviations and symbols used in the preparation of start lists and results.
+
+EEA also uses other feature codes that will be taken into account.
+
+| Code | Issue/feature |
+| ------------- | ---- |
+| `feature:DNS` | Did Not Start |
+| `feature:DNF` | Did Not Finish |
+| `feature:DQ` | Disqualified |
+| `feature:R` | Retired from competition |
+| `feature:Q` | Qualified by place (track) or standard (field) |
+| `feature:q` | Qualified by performance (time in timed events and rank in field events) |
+| `feature:qR` | Advanced to next round by Referee |
+| `feature:qJ` | Advanced to next round by Jury of Appeal |
+| `feature:>` | Bent knee (Race walking) |
+| `feature:%3E` | Loss of contact (Race walking) |
+| `feature:yC` | yellow Card |
+| `feature:yRC` | Second yellow Card |
+| `feature:RC` | Red Card |
+| `feature:Fn` | False Start |
+| `feature:o` | Clearance (valid trial in Height Events) |
+| `feature:-` | Pass (passed trial in field events) |
+| `feature:x` | Failure (failed trial in field events) |
+| `feature:NM` | No Mark |
+| `feature:NH` | No Height |
+| `feature:h` | Hand-timing |
+| `feature:a` | Automatic timing with no hundredths of a second measured |
+| `feature:A` | Performance achieved at altitude |
+| `feature:OT` | Oversized Track |
+
+
+### Category Types
+
+Standard categories are combinations of gender and age-range. The following predefined categories are recognized by IAAF, European Athletics and/or WMA:
+
+| Age Range | Mixed | Male | Female |
+| --------- | ----- | ---- | ------ |
+| 16—17 | `category:U18` | `category:U18M` | `category:U18F` |
+| 18—19 | `category:U20` | `category:U20M` | `category:U20F` |
+| 20—22 | `category:U23` | `category:U23M` | `category:U23F` |
+| 23—34 | `category:SEN` | `category:SENM` | `category:SENF` |
+| 35—39 | `category:V35` | `category:M35` | `category:W35` |
+| 40—44 | `category:V40` | `category:M40` | `category:W40` |
+| 45—49 | `category:V45` | `category:M45` | `category:W45` |
+| 50—54 | `category:V50` | `category:M50` | `category:W50` |
+| 55—59 | `category:V55` | `category:M55` | `category:W55` |
+| 60—64 | `category:V60` | `category:M60` | `category:W60` |
+| 65—69 | `category:V65` | `category:M65` | `category:W65` |
+| 70—74 | `category:V70` | `category:M70` | `category:W70` |
+| 75—79 | `category:V75` | `category:M75` | `category:W75` |
+| 80—84 | `category:V80` | `category:M80` | `category:W80` |
+| 85—89 | `category:V85` | `category:M85` | `category:W85` |
+| 90—94 | `category:V90` | `category:M90` | `category:W90` |
+| 95—99 | `category:V95` | `category:M95` | `category:W95` |
+| 100+ | `category:V100` | `category:M100` | `category:W100` |
+
+
+### Country
+
+Each country should be represented by an IRI that includes a unique three-character *Authority code*. It is recommended using the EU [Named Authority List (NAL) of Countries](http://publications.europa.eu/mdr/authority/country/index.html), that relays on the [ISO 3166-1/alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1) positions in case the country is present in the ISO standard. A traceability of this codes creation is ensured and historical relationships are also offered.
+
+The IRI of countries will be `http://publications.europa.eu/resource/authority/country/{countrycode}`. The JSON-LD context will enable a `country` prefix to simplify usage, allowing the use of the following form:
+
+<pre class="example">
+    country:{countrycode}
+</pre>
+
+For instance: `country:ZWE` for *Zimbabwe*, `country:ZAF` for *South Africa* and `country:TGO` for *Togo*.
+
+Check the full list of authority country codes at [http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html](http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html).
+
+### Event Status
+
+| Code | Status |
+| ---- | ------ |
+| `event:Unscheduled` | Competition is not confirmed. |
+| `event:Scheduled` | Competition is scheduled. |
+| `event:Postponed` | Competition will be postponed without being rescheduled yet. |
+| `event:Rescheduled` | Competition is rescheduled. |
+| `event:Delayed` | An event is held up, for example by inclement weather. Can happen before or during an event.
+| `event:ScheduledBreak` | Competition has a scheduled break (`intermission` in SportsML). |
+| `event:Running` | Competition in progress (`mid-event` in SportsML). |
+| `event:Interrupted` | Competition interrupted once in progress (`halted` in SportsML). |
+| `event:GettingReady` | The start of the competition is imminent |
+| `event:Finished` | Competition is over and no more action will happen on the field of play (last competitor finished). (`post-event` in SportsML) |
+| `event:Cancelled` | Competition will not take place (`suspended`, `cancelled`, `discarded` in SportsML) |
+
+
+### Records or Bests
+
+| Code | Record Type |
+| ---- | ----------- |
+| `best:WR` | World Record |
+| `best:=WR` | Equal World Record |
+| `best:PR` | Paralympic Record |
+| `best:AF` | African Record |
+| `best:=AF` | Equal African Record |
+| `best:AS` | Asian Record |
+| `best:=AS` | Equal Asian Record |
+| `best:ER` | European Record |
+| `best:=ER` | Equal European Record |
+| `best:AM` | American Record |
+| `best:=AM` | Equal American Record |
+| `best:OC` | Oceania Record |
+| `best:=OC` | Equal Oceania Record |
+| `best:AR` | Area (or continental) Record |
+| `best:=AR` | Equal Area (or continental) Record |
+| `best:NR` | National Record (for a specific country) |
+| `best:=NR` | Equal National Record |
+| `best:RR` | Regional Record |
+| `best:=RR` | Equal Regional Record |
+| `best:OR` | Olympic Record |
+| `best:=OR` | Equal Olympic Record |
+| `best:CR` | Championship Record |
+| `best:=CR` | Equal Championship Record |
+| `best:GR` | Games Record |
+| `best:=GR` | Equal Games Record |
+| `best:MR` | Meet Record |
+| `best:=MR` | Equal Meet Record |
+| `best:DLR` | Diamond League Record |
+| `best:=DLR` | Equal Diamond League Record |
+| `best:#` | indicates a record has not been accepted. The same mark is also used to indicate some sort of irregularity with a result. |
+| `best:X` | indicates the athlete has been disqualified after the performance |
+| `best:ClubR` | Club Record |
+
+Records can be described by the type of record and the age-range category.
+
+| Code | Record Type |
+| ---- | ----------- |
+| `best:AJR` | Area (or continental) Junior Record |
+| `best:=AJR` | Equal Area (or continental) Junior Record |
+| `best:EUR` | European U23 Record |
+| `best:=EUR` | Equal European U23 Record |
+| `best:WJR` | World Junior Record |
+| `best:=WJR` | Equal World Junior Record |
+| `best:EJR` | European Junior Record |
+| `best:=EJR` | Equal European Junior Record |
+| `best:NUR` | National U23 Record |
+| `best:=NUR` | Equal National U23 Record |
+| `best:NJR` | National Junior Record |
+| `best:=NJR` | Equal National Junior Record |
+
+The concept of 'best' refers to athlete's personal achievements, without setting official records.
+
+| Code | Best Type |
+| ---- | ----------- |
+| `best:WYB` | World Youth Best (the best mark achieved by an athlete in the youth age category) |
+| `best:=WYB` | Equal World Youth Best |
+| `best:WB` | World Best (the best mark recorded for a non-IAAF world record event) |
+| `best:=WB` | Equal World Best |
+| `best:PB` | Personal Best (the best mark achieved by an athlete on a personal level) |
+| `best:=PB` | Equal Personal Best |
+| `best:SB` | Seasonal Best (the best mark achieved by an athlete on a personal level within a given season) |
+| `best:=SB` | Equal Seasonal Best |
+| `best:WL` | World Leader (the best mark achieved worldwide within a given season) |
+| `best:=WL` | Equal World Lead |
+| `best:EL` | European Lead |
+| `best:=EL` | Equal European Lead |
+| `best:EB` | European Best |
+| `best:=EB` | Equal European Best |
+| `best:CB` | Championship Best Performance |
+| `best:=CB` | Equal Championship Best Performance |
+
+
+### Role Types
+
+Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/common_codes/common_codes.htm).
+
+| Code | Role |
+| ---- | ---- |
+| `role:A` | Athlete |
+| `role:C` | Coach |
+| `role:G` | Guide (Paralympics only) |
+| `role:J` | Judge |
+| `role:S` | Technical Official (not Judge) |
+| `role:T` | Team Official (not Coach) |
+
+
+### Results Statuses
+
+| Code | Status |
+| ---- | ------ |
+| `results:startList` | Before competition, Start List    |
+| `results:live` | For live updates during competition |
+| `results:intermediate` | When competition is stopped, used at pre-defined points |
+| `results:unconfirmed` | When the unit is over but not yet unofficial or official.    Only used if other statuses do not come quickly.  |
+| `results:unofficial` | Results of the competition released as soon as the event is over, not waiting any official decision of the International Federation. The correctness of data must be assured.  |
+| `results:official` | Results of the competition released as soon as the event is officially confirmed taking into account the resolution of the protests, etc.  |
+| `results:partial` | Incomplete list, Final Ranking. |
+| `results:protested` | After the competition is no longer LIVE and a protest has been lodged    After all decisions on the protest are made the ResultStatus will change to UNOFFICIAL or OFFICIAL as appropriate.  |
+
+
+### Protest Statuses
+
+| Code | Status |
+| ---- | ---- |
+| `protest:CLS` | Closed |
+| `protest:OPN` | Open |
+| `protest:PND` | Pending |
+| `protest:ROPN` | Re Open |
+
+### Race Competition Types
+
+| Code | Type |
+| ---- | ---- |
+| `race:RaceIndividual` | Individual Race |
+| `race:RaceRelays`    | Relay Race |
+| `race:RaceTimeTrial`    | Time Trial |
+
+### Venue Types
+
+| Code | Type |
+| ---- | ---- |
+| `venue:VenueIndoor` | Indoor venue |
+| `venue:VenueOutdoor`    | Outdoor venue |
+
+
+### Timekeeping Types
+
+| Code | Type |
+| ---- | ---- |
+| `timekeeping:HT` | Hand Timing |
+| `timekeeping:FAT`    | Fully Automatic |
+| `timekeeping:TST` | Transponder System Timing |
+
+
+
+
+    </section>
+
+
+  </body>
+</html>
