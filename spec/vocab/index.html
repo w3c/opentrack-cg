@@ -1,29 +1,86 @@
-# OpenTrack Vocabulary [Working Draft]
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>OpenTrack Vocabulary</title>
+    <script 
+     src='https://www.w3.org/Tools/respec/respec-w3c-common' 
+     class='remove'></script>
+    <script class='remove'>
+      var respecConfig = {
+        wg: "OpenTrack Community Group",
+        wgURI: "http://www.w3.org/community/opentrack/",
+        specStatus: "CG-DRAFT",
+        editors: [{
+            w3cid: "37258", 
+            name: "Martin Alvarez-Espinar",
+            url: "http://www.w3c.es/Personal/Martin",
+            company: "CTIC Technology Centre",
+            companyURL: "http://fundacionctic.org"
+        }],
+        repoURL: "https://github.com/w3c/opentrack-cg",
+        authors: [
+          ],
+        format: "markdown",
+        maxTocLevel: 3,
+        processVersion: 2017,
+        otherLinks: [{
+            key: "Repository",
+            value: "Github",
+            href: "https://github.com/w3c/opentrack-cg",
+            class: "repo"
+        }, {
+            key: "Issues",
+            href: "https://github.com/w3c/opentrack-cg/issues/"
+        }
+        ],        
+        edDraftURI: "https://github.com/espinr/opentrack-cg/blob/master/spec/vocab/index.html",
+        logos: [{
+            src: 'https://w3c.github.io/opentrack-cg/spec/logo/opentrack_logo.svg',
+            href: "https://github.com/w3c/opentrack-cg",
+            alt: "OpenTrack (and Field)",
+            width: 400,
+            id: 'logo'
+            }
+        ],        
+        shortName: "opentrack",
+        wgPublicList: "public-opentrack",
+        alternateFormats: [ {uri: "diff-previous.html", label: "diff to previous version"} ],
+        isNoTrack:    true,
+        issueBase:    "https://github.com/openactive/modelling-opportunity-data/issues/",
+      };
+    </script>
+    <style>
+        table tr:hover { 
+            background-color: #C9DAF8; 
+        }
+        table th {
+            border-bottom: 2px #C9DAF8 solid;
+        }  
+        tr:nth-child(even) {background: #F1F9FF}
+        tr:nth-child(odd) {background: #FFF}
+    </style>
+  </head>
+  <body>
+    <section id='abstract'>
+      <p>
+        The Opentrack Vocabulary is a lightweight schema developed by the W3C [Opentrack Community Group](https://www.w3.org/community/opentrack/) aiming at identifying, defining and exposing data on the Web. It defines the main concepts and relations about Athletics competitions and competitors, enabling a common representation of information in this realm. Data should be available in a standard format, reachable and manageable by Semantic Web tools.
+      </p>
+    </section>
+    <section id='sotd'>
+      <p>
+        This is required.
+      </p>
+    </section>
+    <section class="informative">
+      <h2>Introduction</h2>
 
-**Latest published draft:**
-  * [https://w3c.github.io/opentrack-cg/spec/vocab](https://w3c.github.io/opentrack-cg/spec/vocab)
+Opentrack Vocabulary is a lightweight schema developed by the [Opentrack Community Group](https://www.w3.org/community/opentrack/) aiming at identifying, defining and exposing data on the Web. Opentrack vocabulary defines the main concepts and relations about Athletics competitions and competitors, enabling a common representation of information in this realm. Data should be available in a standard format, reachable and manageable by Semantic Web tools. 
 
-**Latest editor's draft:**
-  * [https://github.com/w3c/opentrack-cg/blob/master/spec/vocab/index.md](https://github.com/w3c/opentrack-cg/blob/master/spec/vocab/index.md)
-
-**Participate:**
-  * [https://www.w3.org/community/opentrack/](https://www.w3.org/community/opentrack/)
-
-
-## Content
-* [Introduction](#introduction)
-* [Classes and Properties](#classes-and-properties)
-* [Schemas and DataTypes](#schemas-and-dataTypes)
-
-## Introduction
-
-Opentrack model contributes to the Semantic Web, identifying, defining and exposing data on the Web. Opentrack vocabulary defines the main concepts and relations about Athletics competitions and competitors, enabling a common representation of information in this realm. Data should be available in a standard format, reachable and manageable by Semantic Web tools. 
-
-The Opentrack schema is very flexible to help developers to adopt it. All examples will be represented in JSON-LD format, with a specific context that will ease the adoption of the vocabulary for those who don not have deep knowledge about the Semantic Web.
+The Opentrack schema is very flexible to help developers to adopt it. All examples will be represented in JSON-LD format, with a specific context that will ease the adoption of the vocabulary for those who don not have deep knowledge of the Semantic Web.
 
 * Prefix: `ath`
 * Namespace: `http://purl.org/athletics/`
-
 * Concept of Athletics: [http://dbpedia.org/resource/Sport_of_athletics](http://dbpedia.org/resource/Sport_of_athletics)
 
 ### Representation in JSON-LD
@@ -61,7 +118,7 @@ To illustrate the basic concepts of this Opentrack JSON-LD representation we wil
     "name" : "Mohamed Muktar Jama Farah",
     "familyName" : "Farah",
     "givenName" : "Mohamed Muktar Jama",
-    "alternateName" : "Mo Farah",               
+    "alternateName" : "Mo Farah",
     "url" : "http://www.mofarah.com",
     "gender" : "Male" ,
     "birthDate" : "1983-04-23",
@@ -134,7 +191,7 @@ Texts:
 
 Dates:
 ```
-    "birthDate" : "1983-04-23",
+    "birthDate" : "1983-04-23"
 ```
 
 Integers:
@@ -167,7 +224,7 @@ Otherwise we can describe that resource nested in the main object:
 ```
     "club" : {
         "@type": "Club",
-        "name": "Newham & Essex Beagles",
+        "name": "Newham &amp; Essex Beagles",
         "alternateName": "BeaglesAC",
         "url": "http://www.newhamandessexbeagles.co.uk/",
         "logo": "http://example.org/logo.png",
@@ -232,10 +289,10 @@ Classes may be described hierarchically to express differences in the model. For
 * In case the author does not know the nature of the competition, by default they should use the most generic class (i.e., [Competition](#competition)).
 * A competition may categorized with more than a type. For instance 2016 Olympic Games is a [MultidisciplineCompetition](#multidisciplinecompetition) (100m, 200m, Throws, basketball, tennis, etc.) and a [DivisionalCompetition](#divisionalcompetition) (divisions are disciplines and categories).
 
+</section>
+<section>
 
----------------
-
-## Classes and Properties
+## Classes
 
 ### Athlete
 
@@ -1094,7 +1151,7 @@ The concept of 'best' refers to athlete's personal achievements, without setting
 | `best:=CB` | Equal Championship Best Performance |
 
 
-## RoleType
+### RoleType
 
 Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/common_codes/common_codes.htm). 
 
@@ -1156,8 +1213,8 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `timekeeping:TST` | Transponder System Timing | 
 
 
---------------------
+    </section>
 
 
-
-
+  </body>
+</html>
