@@ -35,7 +35,7 @@
         }
         ],     
         edDraftURI: "https://github.com/espinr/opentrack-cg/blob/master/spec/model/index.html",
-        logos: [{
+/*        logos: [{
             src: 'https://w3c.github.io/opentrack-cg/spec/logo/opentrack_logo.svg',
             href: "https://github.com/w3c/opentrack-cg",
             alt: "OpenTrack (and Field)",
@@ -43,6 +43,7 @@
             id: 'logo'
             }
         ],
+*/        
         localBiblio: {
             "SCHEMA-ORG": {
                 title: "Schema.org",
@@ -67,6 +68,11 @@
                 title: "WMA Rules of Competition 2013‐2016",
                 href: "http://www.world-masters-athletics.org/rules/competition/rulesofcompetition.pdf",
                 publisher: "WMA"
+            },
+            "IOC-ODF": {
+                title: "Olympic Data Feed",
+                href: "http://odf.olympictech.org/",
+                publisher: "IOC"
             }
         },     
         shortName: "opentrack",
@@ -1442,6 +1448,343 @@ A <dfn>Place</dfn> is a location, venue or territories where events are held or 
 }
 </pre>
 
+
+### Discipline
+
+A <dfn>Discipline</dfn> is a particular type of Athletics event defined by specific rules. 
+
+[According to IAAF](https://www.iaaf.org/disciplines), Athletics events may be classified into: _Sprints_, _Middle/long distance_, _Hurdles_, _Road Running_, _Jumps_, _Throws_, _Combined Events_, _Race Walks_, _Relays_, _Cross Country_, _Mountain Running_ and _Ultra Running_. IOC ODF [[IOC-ODF]] uses: _Races (track and road) and relays_, _Throws_, _Horizontal Jumps_ and _Vertical Jumps_. [Athlib proposes codes](http://opentrack.run/athlib/build/html/eventcodes.html) to represent disciplines.
+
+Disciplines are described by specific features (i.e., throws disciplines, such as shot put, are defined by *weight*). So, having into account the features related to the competition, disciplines are modelled in this taxonomy of concepts:
+
+<figure>
+    ![Taxonomy for Athletics Disciplines](images/disciplines.png)
+    <figcaption>Athletics Discipline Taxonomy</figcaption>
+</figure>
+
+This hierarchical taxonomy enables the definition of any type of Athletic event.
+
+<figure>
+    ![Example of model of indoor pentathlon](images/instances_disciplines_pentathlon.png)
+    <figcaption>Example of an instance of Master Female indoor Pentathlon using the current model</figcaption>
+</figure>
+
+
+<ul>
+    <li>class: `ath:AthleticsDiscipline`</li>
+    <li>superClasses: 
+        <ul>
+            <li>`ath:Race`</li>
+            <li>`ath:Throws`</li>
+            <li>`ath:HorizontalJumps`</li>
+            <li>`ath:VerticalJumps`</li>
+            <li>`ath:CombinedEvent`</li>
+        </ul>
+    </li>
+</ul>
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `venueType` | `ath:venueType` | Type of the stadium (indoor/outdoor). | [Venue Type](#venue-type) |
+| `name` | `schema:name` | Descriptive name of the discipline. | Text |
+
+#### Race
+
+<dfn>Race</dfn> is a type of competition to see who is the fastest, including running or race-waking.
+
+<ul>
+    <li>class: `ath:Race`</li>
+    <li>subClassOf: `ath:AthleticsDiscipline`</li>
+    <li>superClasses: 
+        <ul>
+            <li>`ath:MiddleOrLongDistanceRace`</li>
+            <li>`ath:Hurdles`</li>
+            <li>`ath:Sprints`</li>
+            <li>`ath:RaceWalking`</li>
+            <li>`ath:CrossCountry`</li>
+            <li>`ath:RoadRunning`</li>
+            <li>`ath:MountainRunning`</li>
+            <li>`ath:TrackRelays`</li>
+            <li>`ath:UltraRunning`</li>
+        </ul>
+    </li>
+</ul>
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `distance` | `schema:distance` | Distance of the race. | [Distance](#distance) |
+| `raceCompetitionType` | `ath:raceCompetitionType` | Type of competition (time trial, relays, etc.). | [Race Competition Type](#race-competition-type) |
+
+##### Middle Or Long Distance Race
+
+A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance running event, over a distance longer than sprints. Range of distances includes 800 <abbr title="meters">m</abbr>, up to Marathon 42.195 <abbr title="Kilometers">Km</abbr>.
+
+* class: `ath:MiddleOrLongDistanceRace`
+* subClassOf: `ath:Race`
+* superClass: `ath:Steeplechase`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `maxDuration` | `ath:maxDuration` | Maximum duration of the race in case of being a time-fixed competition (i.e., one hour, one day, etc.). | [Time](#time) |
+
+###### Steeplechase
+
+<dfn>Steeplechase</dfn> is a long distance running event where runners must clear obstacles and water jumps.
+
+* class: `ath:Steeplechase`
+* subClassOf: `ath:MiddleOrLongDistanceRace`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `height` | `schema:height` | Obstacle height. | [Distance](#distance) |
+
+##### Hurdles
+
+<dfn>Hurdles</dfn> is a running event where athletes jump over hurdles at speed.
+
+* class: `ath:Hurdles`
+* subClassOf: `ath:Race`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `hurdlesHeight` | `ath:hurdlesHeight` | Hurdles height. | [Distance](#distance) |
+| `hurdlesSpacing` | `ath:hurdlesSpacing` | Horizontal distance between hurdles. | [Distance](#distance) |
+
+##### Sprints
+
+<dfn>Sprints</dfn> are running events over a short distance (less than 800m).
+
+* class: `ath:Sprints`
+* subClassOf: `ath:Race`
+
+##### Race-walking
+
+<dfn>Race-walking</dfn>, or race walking, is a long-distance discipline where one foot must appear to be in contact with the ground at all times.
+
+* class: `ath:RaceWalking`
+* subClassOf: `ath:Race`
+
+##### Cross Country
+
+<dfn>Cross Country</dfn> is a running discipline in which teams and individuals run a race on open-air courses over natural terrain such as dirt or grass.
+
+* class: `ath:CrossCountry`
+* subClassOf: `ath:Race`
+
+##### Road Running
+
+<dfn>Road Running</dfn> is an Athletics discipline on a measured course over an established road.
+
+* class: `ath:RoadRunning`
+* subClassOf: `ath:Race`
+
+##### Mountain Running
+
+<dfn>Mountain Running</dfn> is a Athletics discipline that takes place on terrain that is mainly off-road and which course may gain elevation.
+
+* class: `ath:MountainRunning`
+* subClassOf: `ath:Race`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `ascent` | `ath:ascent` | Total vertical ascent of the race course. | [Distance](#distance) |
+| `descent` | `ath:descent` | Total vertical descent of the race course. | [Distance](#distance) |
+
+##### Track Relays
+
+<dfb>Relays</dfb>, relays race or relay race, is a track race between two or more teams where each member of the team runs one leg of the race.
+
+* class: `ath:TrackRelays`
+* subClassOf: `ath:Race`
+
+
+##### Ultra Running
+
+<dfn>Ultra running</dfn>, ultra distance or ultramarathon, is a road race longer than the traditional marathon length (42.195 Km). 
+
+* class: `ath:UltraRunning`
+* subClassOf: `ath:Race`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `maxDuration` | `ath:maxDuration` | Maximum duration of the race in case of being a time-fixed competition (i.e., one hour, one day, etc.). | [Time](#time) |
+
+#### Throws
+
+<dfn>Throws</dfn> are types of field events in which athletes throws heavy objects in an attempt to mark a farther distance than their competitors.
+
+<ul>
+    <li>class: `ath:Throws`</li>
+    <li>subClassOf: `ath:AthleticsDiscipline`</li>
+    <li>superClasses:
+        <ul>
+            <li>`ath:ShotPut`</li>
+            <li>`ath:DiscusThrow`</li>
+            <li>`ath:HammerThrow`</li>
+            <li>`ath:JavelinThrow`</li>
+            <li>`ath:WeightThrow`</li>
+        </ul>
+    </li>
+</ul>
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `weight` | `schema:weight` | Weight of the throwing object. | [Weight](#weight) |
+
+##### Shot Put
+
+<dfn>Shot Put</dfn> is a track and field event involving throwing/putting (throwing in a pushing motion) a heavy spherical object (the shot) as far as possible. The size of the ball, and the length of the wire varies depending on the competition rules.
+
+* class: `ath:ShotPut`
+* subClassOf: `ath:Throws`
+
+##### Discus Throw
+
+<dfn>Discus Throw</dfn> is a track and field event in which an athlete throws a heavy disc (the discus) in an attempt to mark a farther distance than their competitors. The diameter and weight of the discus varies depending on the competition rules.
+
+* class: `ath:DiscusThrow`
+* subClassOf: `ath:Throws`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `discusDiameter` | `ath:discusDiameter` | Discus diameter. | [Distance](#distance) |
+
+##### Hammer Throw
+
+<dfn>Hammer Throw</dfn> is a track and field event in which an athlete throws a metal ball attached by a steel wire to a grip (the hammer). The size of the ball, and the length of the wire varies depending on the competition rules.
+
+* class: `ath:HammerThrow`
+* subClassOf: `ath:Throws`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `hammerLength` | `ath:hammerLength` | Hammer wire length. | [Distance](#distance) |
+
+##### Javelin Throw
+
+<dfn>Javelin Throw</dfn> is a track and field event where the javelin, a spear about 2.5 m (8 ft 2 in) in length, is thrown. Lenght and weight of javelin may vary depending on the rules of the competition.
+
+* class: `ath:JavelinThrow`
+* subClassOf: `ath:Throws`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `javelinLength` | `ath:javelinLength` | Javelin length. | [Distance](#distance) |
+
+##### Weight Throw
+
+<dfn>Weight Throw</dfn> is a track and field event usually play indoors which is equivalent to the hammer throw event, which can only be held outdoors. Ball weight may vary depending on the rules of the competition.
+
+* class: `ath:WeightThrow`
+* subClassOf: `ath:Throws`
+
+#### Horizontal Jumps
+
+<dfn>Horizontal Jumps</dfn> are track and field events in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point. Horizontal jumps include: long jump and triple jump.
+
+<ul>
+    <li>class: `ath:HorizontalJumps`</li>
+    <li>subClassOf: `ath:AthleticsDiscipline`</li>
+    <li>superClasses:
+        <ul>
+            <li>`ath:LongJump`</li>
+            <li>`ath:TripleJump`</li>
+        </ul>
+    </li>
+</ul>
+
+##### Long Jump
+
+<dfn>Long Jump</dfn> (or broad jump) is a track and field event in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point.
+
+* class: `ath:LongJump`
+* subClassOf: `ath:HorizontalJumps`
+
+##### Triple Jump
+
+<dfn>Triple Jump</dfn> (sometimes referred to as the hop, step and jump or the hop, skip and jump), is a track and field event, where competitors run down the track and perform a hop, a bound and then a jump into the sand pit.
+
+* class: `ath:TripleJump`
+* subClassOf: `ath:HorizontalJumps`
+
+#### VerticalJumps
+
+<dfn>Vertical Jumps</dfn> are track and field events in which competitors must jump or vault over a horizontal bar placed at measured heights without dislodging it.
+
+<ul>
+    <li>class: `ath:VerticalJumps`</li>
+    <li>subClassOf: `ath:AthleticsDiscipline`</li>
+    <li>superClasses:
+        <ul>
+            <li>`ath:HighJump`</li>
+            <li>`ath:PoleVault`</li>
+        </ul>
+    </li>
+</ul>
+
+##### High Jump
+
+<dfn>High Jump</dfn> is a track and field event in which competitors must jump unaided over a horizontal bar placed at measured heights without dislodging it.
+
+* class: `ath:HighJump`
+* subClassOf: `ath:VerticalJumps`
+
+##### Pole Vault
+
+<dfn>Pole Vault</dfn> is a track and field event in which a person uses a long, flexible pole as an aid to jump over a bar.
+
+* class: `ath:PoleVault`
+* subClassOf: `ath:VerticalJumps`
+
+#### Combined Event
+
+<dfn>Combined Events</dfn> are competitions in which athletes participate in a number of track and field events, earning points for their performance in each event, which adds to a total points score.
+
+<ul>
+    <li>class: `ath:CombinedEvent`</li>
+    <li>subClassOf: `ath:AthleticsDiscipline`</li>
+    <li>superClasses:
+        <ul>
+            <li>`ath:Pentathlon`</li>
+            <li>`ath:Heptathlon`</li>
+            <li>`ath:Decathlon`</li>
+            <li>`ath:ThrowsPentathlon`</li>
+        </ul>
+    </li>
+</ul>
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `discipline` | `ath:discipline` | Combined sub-disciplines for this event. | [Discipline](#discipline) |
+
+##### Pentathlon
+
+<dfn>Pentathlon</dfn> is a competition in which athletes participate in five track and field combined events, earning points for their performance in each event, which adds to a total points score.
+
+* class: `ath:Pentathlon`
+* subClassOf: `ath:CombinedEvent`
+
+##### Heptathlon
+
+<dfn>Heptathlon</dfn> is a competition in which athletes participate in seven track and field combined events, earning points for their performance in each event, which adds to a total points score.
+
+* class: `ath:Heptathlon`
+* subClassOf: `ath:CombinedEvent`
+
+##### Decathlon
+
+<dfn>Decathlon</dfn> is a competition in which athletes participate in ten track and field combined events, earning points for their performance in each event, which adds to a total points score.
+
+* class: `ath:Decathlon`
+* subClassOf: `ath:CombinedEvent`
+
+##### ThrowsPentathlon
+
+<dfn>Throws Pentathlon</dfn> is a competition in which athletes participate in five combined throwing events, earning points for their performance in each event, which adds to a total points score.
+
+* class: `ath:ThrowsPentathlon`
+* subClassOf: `ath:CombinedEvent`
+
 </section>
 
 <section>
@@ -1504,7 +1847,7 @@ Enumeration of genders with two values:
 | `Female` | Women and/or girls. |
 
 
-### Competition Features
+### Competition Feature
 
 According to IAAF Rule 132.4, there are official standard abbreviations and symbols used in the preparation of start lists and results.
 
@@ -1537,7 +1880,7 @@ EEA also uses other feature codes that will be taken into account.
 | `feature:OT` | Oversized Track |
 
 
-### Category Types
+### Category Type
 
 Standard categories are combinations of gender and age-range. The following predefined categories are recognized by IAAF, European Athletics and/or WMA:
 
@@ -1594,7 +1937,7 @@ Check the full list of authority country codes at [http://publications.europa.eu
 | `event:Cancelled` | Competition will not take place (`suspended`, `cancelled`, `discarded` in SportsML) |
 
 
-### Records or Bests
+### Record or Best
 
 | Code | Record Type |
 | ---- | ----------- |
@@ -1670,7 +2013,7 @@ The concept of 'best' refers to athlete's personal achievements, without setting
 | `best:=CB` | Equal Championship Best Performance |
 
 
-### Role Types
+### Role Type
 
 Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/common_codes/common_codes.htm).
 
@@ -1683,8 +2026,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `role:S` | Technical Official (not Judge) |
 | `role:T` | Team Official (not Coach) |
 
-
-### Results Statuses
+### Results Status
 
 | Code | Status |
 | ---- | ------ |
@@ -1698,7 +2040,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `results:protested` | After the competition is no longer LIVE and a protest has been lodged    After all decisions on the protest are made the ResultStatus will change to UNOFFICIAL or OFFICIAL as appropriate.  |
 
 
-### Protest Statuses
+### Protest Status
 
 | Code | Status |
 | ---- | ---- |
@@ -1707,7 +2049,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `protest:PND` | Pending |
 | `protest:ROPN` | Re Open |
 
-### Race Competition Types
+### Race Competition Type
 
 | Code | Type |
 | ---- | ---- |
@@ -1715,7 +2057,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `race:RaceRelays`    | Relay Race |
 | `race:RaceTimeTrial`    | Time Trial |
 
-### Venue Types
+### Venue Type
 
 | Code | Type |
 | ---- | ---- |
@@ -1723,7 +2065,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `venue:VenueOutdoor`    | Outdoor venue |
 
 
-### Timekeeping Types
+### Timekeeping Type
 
 | Code | Type |
 | ---- | ---- |
