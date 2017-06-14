@@ -175,6 +175,9 @@
     "postalCode"        : "schema:postalCode",
     "country"           : { "@id" : schema:addressCountry" , "@type" : "@vocab" },
     "timingDevice"      : "ath:timingDevice" ,
+    "maxDuration"       : "ath:maxDuration" ,
+    "hurdlesSpacing"    : "ath:hurdlesSpacing" ,
+    "hurdlesHeight"     : "ath:hurdlesHeight" ,
     
     "raceCompetitionType"    : { "@id" : "ath:raceCompetitionType", "@type" : "@vocab" },
     "trackAndFieldVenueType" : { "@id" : "ath:trackAndFieldVenueType", "@type" : "@vocab" },
