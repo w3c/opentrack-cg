@@ -5,6 +5,11 @@ A <dfn>Sports Official</dfn> is a person involved in a competitive athletic or s
 
 In athletics, officials may be classified using the following list of roles. This list includes the description of roles and what of them are required for each type of competitions.
 
+Legend: 
+* Generally required for this type of competition (one): **Y**
+* Generally required for this type of competition (multiple): **Y+**
+* Not generally required: **N**
+
 | Role | Description | Track &amp; Field | Road Racing | Cross-Country | Sportshall |
 | :--- | :---------- | :-----------: | :---------: | :-----------: | :--------: |
 | Meeting Manager |  | Y | N | N | Y |
@@ -37,6 +42,4 @@ In athletics, officials may be classified using the following list of roles. Thi
 | Chief Seeding Officer |  | Y | N | N | N |
 | Seeding Officer |  | Y+ | N | N | N |                    
                     
-* Generally required for this type of competition (one): **Y**
-* Generally required for this type of competition (multiple): **Y+**
-* Not generally required: **N**
+
