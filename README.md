@@ -1,6 +1,11 @@
 # OpenTrack – Open Tools for Athletics
 
-![OpenTrack(&field)](spec/logo/opentrack_l.png)
+Quick links:
+* [Conceptual Model and Vocabulary](https://w3c.github.io/opentrack-cg/spec/model/)
+* [Community Group](https://www.w3.org/community/)
+* [Open Issues](https://github.com/w3c/opentrack-cg/issues)
+
+## About OpenTrack
 
 This is the repository for the [W3C OpenTrack Community Group](https://www.w3.org/community/opentrack/) to develop and document specifications and code related to **OpenTrack**, a set of tools to increase interoperability among systems managing information on athletics and sports in general. OpenTrack includes schemas and vocabularies to describe sports, as well as open source software that helps managing that kind of information.
 
@@ -16,12 +21,7 @@ The main component of OpenTrack is a set of vocabularies and taxonomies that wil
 
 Participants in this group will contribute with code recipes, libraries, and examples about the use of athletics information.
 
-Currently, we are working on:
-
-* a **[Conceptual Model](./spec/model/overview.md)** to define Athletics competitions, events, management and participation in an abstract way.
-
-* a **[Vocabulary](./spec/vocab/index.md)** to describe and represent the abstract model in the real world.
-
+Currently, we are working on a **[Conceptual Model and Vocabulary](https://w3c.github.io/opentrack-cg/spec/model/)** to define Athletics competitions, events, management and participation in an abstract way.
 
 ## Formats and standards
 
