@@ -250,12 +250,12 @@ ath:
     rdfs:label "Hurdles"@en ;
     skos:definition "Hurdles is a running event where athletes jump over hurdles at speed."@en .
 
-:Sprint
+:Sprints
     a rdfs:Class ;
     rdfs:subClassOf ath:Race ;
     skos:broader :Race ;
     rdfs:isDefinedBy ath: ;
-    rdfs:label "Sprint"@en ;
+    rdfs:label "Sprints"@en ;
     skos:definition "Sprints are running events over a short distance (less than 800m)."@en .
 
 :RaceWalking
@@ -336,7 +336,7 @@ ath:
     skos:broader :Throws ;
     rdfs:isDefinedBy ath: ;
     rdfs:label "Hammer Throw"@en ;
-    skos:definition "Hammer Throw The discus throw is a track and field event in which an athlete throws a metal ball attached by a steel wire to a grip (the hammer). The size of the ball, and the length of the wire varies depending on the competition rules."@en .
+    skos:definition "Hammer Throw is a track and field event in which an athlete throws a metal ball attached by a steel wire to a grip (the hammer). The size of the ball, and the length of the wire varies depending on the competition rules."@en .
 
 :JavelinThrow
     a rdfs:Class ;
@@ -886,6 +886,27 @@ ath:
     rdfs:label "timing device"@en ;
     rdfs:domain :Timekeeping ;
     skos:definition "Device required to run the timekeeping system."@en .
+
+:maxDuration
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "maximum duration"@en ;
+    rdfs:subPropertyOf schema:duration ;
+    skos:definition "Maximum duration of the race in case of being a time-fixed competition (i.e., one hour, one day, etc.)."@en .
+
+:hurdlesHeight
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "hurdhles height"@en ;
+    rdfs:subPropertyOf schema:height ;
+    skos:definition "Height of hurdles"@en .
+
+:hurdlesSpacing
+    a rdf:Property ;
+    rdfs:isDefinedBy ath: ;
+    rdfs:label "hurdles spacing"@en ;
+    rdfs:subPropertyOf schema:distance ;
+    skos:definition "Space between two hurdles"@en .
 
 :raceCompetitionType
     a rdf:Property ;
