@@ -998,18 +998,21 @@ A <dfn>Unit Race</dfn> is a competitive event where performances are measured as
 | `raceCourse` | `ath:raceCourse` | Track with the course of a competition.  | `schema:GeoShape` |
 | `timekeeping` | `ath:timekeeping` | Type of timekeeping used to control a competition.  | [Timekeeping](#timekeeping) |
 
+
 ##### Unit Field Competition
 
-A <dfn>Unit Field Competition</dfn> is a unitary competition in field events (for instance, one group of the semifinals in a High Jump event). These competitions have a specific structure based on rounds of trials or attempts ([Field Trials Rounds](#field-trials-round)).
+A <dfn>Unit Field Competition</dfn> is a unitary competition in field events (for instance, one group of the semifinals in a High Jump event). These competitions have a specific structure based on rounds of trials or attempts. Depending on the type of the field event trials are performed in a different way.
 
-* class: `ath:UnitFieldCompetition`
-* subClassOf: `ath:UnitCompetition`
-
-| Key | Property | Description | Value Type |
-|:--- |:-------- |:----------- |:---------- |
-| `trialsRound` | `ath:trialsRound` | A round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-round) |
-| `firstTrialsRound` | `ath:firstTrialsRound` | The first round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-round) |
-| `lastTrialsRound` | `ath:lastTrialsRound` | The last round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-round) |
+<ul>
+    <li>class: `ath:UnitFieldCompetition`</li>
+    <li>subClassOf: `ath:UnitCompetition`</li>
+    <li>superclasses:
+        <ul>
+            <li>`ath:UnitHeightCompetition`</li>
+            <li>`ath:UnitDistanceCompetition`</li>
+        </ul>
+    </li>
+</ul>
 
 There are two different types of Unit Field Competitions depending on the nature of the field event:
 
@@ -1025,13 +1028,14 @@ A <dfn>Unit Height Competition</dfn> is a unitary competition for height discipl
     <figcaption>Example of rounds of trials and attempts highlighted on a control card for a Height Competition (High Jump)</figcaption> 
 </figure>
 
-* class: `ath:UnitFieldCompetition`
+* class: `ath:UnitHeightCompetition`
 * subClassOf: `ath:UnitFieldCompetition`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
 | `startingHeight` | `ath:startingHeight` | The starting height the bar is raised at the start of a vertical jumps unit competition. | [Distance](#distance) |
 | `increasingHeight` | `ath:increasingingHeight` | The subsequent heights to which the bar will be raised at the end of each round of trials within a vertical jumps unit competition. | Text |
+| `competitorHeightTrials` | `ath:competitorHeightTrials` | List of a competitor's height trials corresponding to a vertical jumps competition. | [Competitor Height Trials](#competitor-height-trials) |
 
 <figure>
     ![Rounds of trials for a heat within a High Jump competition](images/instances_field_rounds_highjump.png)
@@ -1056,99 +1060,87 @@ A <dfn>Unit Distance Competition</dfn> is a unitary competition for distance fie
 </figure>
 
 
-### Field Trials Round
+### Competitor Height Trials
 
-A <dfn>Field Trials Round</dfn> is a set of attempts ([Trials](#trials)) performed by each athlete in a unit field competition.
+<dfn>Competitor Height Trials</dfn> is a list of ([Height Trials](#height-trial)) performed by an athlete in a Vertical Jumps unit competition. In this type of rounds, athletes attempt jumping or vaulting a specific height.
 
-<ul>
-    <li>class: `ath:FieldTrialsRound`</li>
-    <li>superClasses:
-        <ul>
-            <li>`ath:HeightTrialsRound`</li>
-            <li>`ath:DistanceTrialsRound`</li>
-        </ul>
-    </li>
-</ul>
+* class: `ath:CompetitorHeightTrials`
 
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify a round of trials. | Text |
-| trials round number | Correlative integer identifying a round of trials in the competition. | Integer |
-| competition entry | Entry about the participation of an Athlete or Team competing in a competition. | [Competitor](#competitor) |
-| trial(s) | Athlete's attempt(s) in a round of trials. | [Field Trial](#field-trial) |
-| first trial | Athlete's first attempt in a round of trials. | [Field Trial](#field-trial) |
-| last trial | Athlete's last attempt in a round of trials. | [Field Trial](#field-trial) |
-| next trials round | The next round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-round) |
-| previous trials round | The previous round of field trials within a unit competition in a field event. | [Field Trials Round](#field-trials-round) |
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `competitor`| `ath:competitor` | A competitor who performs height trials. | [Competitor](#competitor) |
+| `trialsAtHeight` | `ath:trialsAtHeight` | A round of athlete's attempts to clear a specific height during a Vertical Jumps event. | [Trials at Height](#trials-at-height) |
+| `firstTrialsAtHeight` | `ath:firstTrialsAtHeight` | The first round of an athlete's attempts to clear a specific height during a Vertical Jumps event. | [Trials at Height](#trials-at-height) |
+| `lastTrialsAtHeight` | `ath:lastTrialsAtHeight` | The last round of an athlete's attempts to clear a specific height during a Vertical Jumps event. | [Trials at Height](#trials-at-height) |
 
-Field Trials Rounds are specialized in two subclasses:
+### Trials at Height
 
-* [Height Trial Round](#height-trial-round) (for Vertical Jumps), and
-* [Distance Trial Round](#distance-trial-round) (for Horizontal Jumps and Throws).
+<dfn>Trials at Height</dfn> is a list of consecutive attempts ([Height Trials](#height-trial)) performed by an athlete over a specific height in a Vertical Jumps unit competition.
 
-#### Height Trials Round
-
-A <dfn>Height Trials Round</dfn> is a round of athlete's attempts in **Vertical Jumps**. In this type of rounds, athletes attempt jumping or vaulting a specific height.
-
-
-* class: `ath:HeightTrialsRound`
-* subClassOf: `ath:FieldTrialsRound`
+* class: `ath:TrialsAtHeight`
 
 | Property | Description | Value Type |
 |:-------- |:----------- |:---------- |
-| height | The target height the bar is raised in a round. | [Distance](#distance) |
-| trial round | A round of field trials within a height trials round. | [Height Trials Round](#height-trials-round) |
-| first trials round | The first round of field trials within a height trials round. | [Field Trials Round](#field-trials-round) |
-| last trials round | The last round of field trials within a height trials round. | [Field Trials Round](#field-trials-round) |
+| `height`| `schema:height` | The target height the bar is raised during a round of attempts. | [Distance](#distance) |
+| `nextTrialsAtHeight` | `ath:nextTrialsAtHeight` | The next round of an athlete's attempts after clear a height during a Vertical Jumps event. | [Trials at Height](#trials-at-height) |
+| `prevTrialsAtHeight` | `ath:prevTrialsAtHeight` | The previous round of an athlete's attempts after clear a height during a Vertical Jumps event. | [Trials at Height](#trials-at-height) |
+| `fieldTrial` | `ath:fieldTrial` | Athlete's attempt during a round of trials. | [Field Trial](#field-trial) |
+| `firstFieldTrial` | `ath:firstFieldTrial` | First athlete's attempt during a round of trials. | [Field Trial](#field-trial) |
+| `lastFieldTrial` | `ath:lastFieldTrial` | Last athlete's attempt during a round of trials. | [Field Trial](#field-trial) |
 
 
-#### Distance Trials Round
+### Competitor Distance Trials
 
-A <dfn>Distance Trials Round</dfn> is a round of attempts for each competitor in a distance field competition (Horizontal Jumps and Throws).
+<dfn>Competitor Distance Trials</dfn> is a list of the ([Distance Trials](#distance-trial)) performed by an athlete in a Unit Distance Competition (Horizontal Jumps and Throws).
 
-* class: `ath:DistanceTrialsRound`
-* subClassOf: `ath:FieldTrialsRound`
+* class: `ath:CompetitorDistanceTrials`
 
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| height | The target height the bar is raised for a trials round. | [Distance](#distance) |
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `competitor`| `ath:competitor` | A competitor who performs distance trials. | [Competitor](#competitor) |
+| `fieldTrial` | `ath:fieldTrial` | Athlete's attempt during a round of trials. | [Field Trial](#field-trial) |
+| `firstFieldTrial` | `ath:firstFieldTrial` | First athlete's attempt during a round of trials. | [Field Trial](#field-trial) |
+| `lastFieldTrial` | `ath:lastFieldTrial` | Last athlete's attempt during a round of trials. | [Field Trial](#field-trial) |
 
 
 ### Field Trial
 
-A <dfn>Field Trial</dfn> is an individual unitary attempt in field competitions.
+A <dfn>Field Trial</dfn> is an individual, unitary athlete's attempt in a field competition.
 
-Except for Vertical Jumps, each competitor only will have no more than one trial recorded in any one round of trials of the competition. Anyway, all trials belonging to rounds of trials will have the same structure, independently of the discipline.
+Except for Vertical Jumps, each athlete only will have no more than one trial recorded in any one round of trials of the competition. Anyway, all trials belonging to rounds of trials will have the same structure, independently of the discipline.
 
-Except in Vertical Jumps, a valid trial shall be indicated by the measurement taken. For the standard abbreviations and symbols to be used in all other cases see [Start lists and results](#Start lists and results). A *´substitute´* trial is given in case an athlete is hampered in a trial or it cannot be correctly recorded.
+Except in Vertical Jumps, a valid trial shall be indicated by the measurement taken. For the standard abbreviations and symbols to be used in all other cases see the possible [Competition Features](#competition-feature). A *substitute* trial is given in case an athlete is hampered in a trial or it cannot be correctly recorded.
 
 * class: `ath:FieldTrial`
 
-| Property | Description | Value Type |
-|:-------- |:----------- |:---------- |
-| identifier | Unique character string to identify a trial. | Text |
-| attempt | Number indicating the correlative number of attempts in a round of trials. | Integer |
-| performance | Performance achieved in case a trial was valid. | [Performance](#performance) |
-| valid | Flag indicating if the trial was valid or not (failure) | Boolean |
-| is substitute | Flag indicating if the trial is a *substitute* trial. | Boolean |
-| in round | Field round where a trial belongs to . | [Field Trials Rounds](#field-trials-round) |
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify an attempt. | Text |
+| `competitionFeature` | `ath:competitionFeature` | Feature or note included by officials in the result of a field trial (e.g., 'Passed', 'clear') | [Competition Feature Type](#competition-feature-type) |
+| `attemptNumber` | `ath:attemptNumber` | Integer indicating the correlative number of an athlete's attempts in a round of trials. | Integer |
+| `performance` | `ath:performance` | Performance achieved in case a trial was valid. | [Performance](#performance) |
+| `isValidTrial` | `ath:isValidTrial` | Flag indicating if the trial was valid or not (failure) | Boolean |
+| `isSubstituteTrial` | `ath:isSubstituteTrial` | Flag indicating if the trial is a *substitute* trial. | Boolean |
+| `nextFieldTrial` | `ath:nextFieldTrial` | Next field trial in a round of attempts. | [Field Trial](#field-trial) |
+| `prevFieldTrial` | `ath:prevFieldTrial` | Previous field trial in a round of attempts. | [Field Trial](#field-trial) |
+
 
 <pre class="example">
 {
     "@id" : "http://example.com/trial:HJ11",
     "@type" : "Trial",
-    "numberAttempt" : 1,
-    "feature" : "feature:Failed",
-    "valid" : false
+    "attemptNumber" : 1,
+    "competitionFeature" : "feature:Failed",
+    "isValid" : false
 }
 </pre>
 <pre class="example">
 {
     "@id" : "http://example.com/trial:HJ12",
     "@type" : "Trial",
-    "numberAttempt" : 2,
-    "valid" : true,
-    "feature" : "feature:PassedTrial",
+    "attemptNumber" : 2,
+    "isValid" : true,
+    "competitionFeature" : "feature:PassedTrial",
     "performance" : "http://example.com/performance:34354"
 }
 </pre>
