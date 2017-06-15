@@ -3,7 +3,7 @@
         "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
         "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon",
         "@type": "TimePerformance",
-        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+        "agent" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
         "discipline" : "http://w3c.github.io/opentrack-cg/examples/discipline/HMarathon.jsonld",
         "date" : "2015-03-22",
         "inCompetition" : "http://w3c.github.io/opentrack-cg/examples/competition/2015LisbonHM.jsonld",
@@ -14,7 +14,7 @@
         "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
         "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m",
         "@type": "TimePerformance",
-        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+        "agent" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
         "discipline" : "http://w3c.github.io/opentrack-cg/examples/discipline/1500m.jsonld",
         "time" : "00:03:28.810",
         "record" : [ "AR", "ER" ]
@@ -23,7 +23,7 @@
         "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
         "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m",
         "@type": "TimePerformance",
-        "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+        "agent" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
         "discipline" : "http://w3c.github.io/opentrack-cg/examples/discipline/3000m.jsonld",
         "time" : "00:07:32.620",
         "record" : "NR"

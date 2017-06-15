@@ -147,11 +147,11 @@ ath:
     rdfs:label "Unit Distance Competition"@en ;
     skos:definition "A Unit Distance Competition is a unitary competition for distance field disciplines (Horizontal Jumps and Throws)."@en .
 
-:CompetitionEntry
+:Competitor
     a rdfs:Class ;
     rdfs:isDefinedBy ath: ;
-    rdfs:label "Competition Entry"@en ;
-    skos:definition "Entry in a competition. Athlete or team registered and taking part in a competition. "@en .
+    rdfs:label "Competitor"@en ;
+    skos:definition "Competitor or entry in a competition. Athlete or team registered and taking part in a competition. "@en .
 
 :Result
     a rdfs:Class ;
@@ -572,7 +572,7 @@ ath:
     a rdf:Property , owl:DataProperty ;
     rdfs:isDefinedBy ath: ;
     rdfs:label "bib identifier"@en ;
-    rdfs:domain ath:CompetitionEntry;
+    rdfs:domain ath:Competitor;
     rdfs:range rdfs:Literal ;
     skos:definition "Text or number identifying the competitor, printed on competitor's bib."@en .
 
@@ -580,7 +580,7 @@ ath:
     a rdf:Property , owl:DataProperty ;
     rdfs:isDefinedBy ath: ;
     rdfs:label "transponder identifier"@en ;
-    rdfs:domain ath:CompetitionEntry;
+    rdfs:domain ath:Competitor;
     rdfs:range rdfs:Literal ;
     skos:definition "Text or code identifying the competitor by a transponder system."@en .
 
@@ -677,12 +677,12 @@ ath:
     rdfs:domain :Competition ;
     skos:definition "Athlete who is registered in a competition."@en .
 
-:competitionEntry
+:competitor
     a rdf:Property ;
     rdfs:isDefinedBy ath: ;
-    rdfs:label "competition entry"@en ;
-    rdfs:range :CompetitionEntry ;
-    skos:definition "Entry of competitor taking part in a competition."@en .
+    rdfs:label "competitor"@en ;
+    rdfs:range :Competitor ;
+    skos:definition "Entry of a competitor taking part in a competition."@en .
 
 :discipline
     a rdf:Property ;
@@ -853,12 +853,12 @@ ath:
     rdfs:range :Competition ;
     skos:definition "Competition which a resource is related to."@en .
 
-:record
+:recordOrBest
     a rdf:Property ;
     rdfs:isDefinedBy ath: ;
-    rdfs:label "record"@en ;
+    rdfs:label "recordOrBest"@en ;
     rdfs:range skos:Concept ;
-    skos:definition "A record is the best result that has ever been achieved in a particular sport or activity, for example the fastest time, the furthest distance, or the greatest number of victories."@en .
+    skos:definition "A record or best is the best result that has ever been achieved in a particular sport or activity, for example the fastest time, the furthest distance, or the greatest number of victories."@en .
 
 :performance
     a rdf:Property ;
