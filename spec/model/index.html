@@ -1059,7 +1059,7 @@ Example of description of height card, simplified with the participation of only
             "agent" : {
               "@type" : "Athlete",
               "name" : "Joshua Ilyk",
-              "affiliation" : "Notts AC" 
+              "affiliation" : "Notts AC"
             }
           },
           "trialsAtHeight" : [
@@ -1369,21 +1369,19 @@ Except in Vertical Jumps, a valid trial shall be indicated by the measurement ta
 
 <pre class="example">
 {
-    "@id" : "http://example.com/trial:HJ11",
-    "@type" : "Trial",
-    "attemptNumber" : 1,
-    "competitionFeature" : "feature:Failed",
-    "isValid" : false
+  "@type" : "FieldTrial",
+  "attemptNumber" : 1,
+  "competitionFeature" : "feature:x"
 }
 </pre>
 <pre class="example">
 {
-    "@id" : "http://example.com/trial:HJ12",
-    "@type" : "Trial",
-    "attemptNumber" : 2,
-    "isValid" : true,
-    "competitionFeature" : "feature:PassedTrial",
-    "performance" : "http://example.com/performance:34354"
+  "@type" : "FieldTrial",
+  "attemptNumber" : 1,
+  "performance" : {
+    "@type" : "DistancePerformance",
+    "distance" : "48.05 m"
+  }
 }
 </pre>
 
