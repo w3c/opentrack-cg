@@ -1,0 +1,127 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/field-trials/U17DiscusThrow.jsonld",
+    "@type" : "UnitDistanceCompetition",
+    
+    "name" : "EA U17 Men Discus – Final",
+    "competitorDistanceTrials" : [ 
+       {
+          "@type" : "CompetitorDistanceTrials",
+          "competitor" : {
+            "bibIdentifier" : "549",
+            "category" : "U17M",
+            "agent" : {
+              "@type" : "Athlete",
+              "name" : "Matt Blandford",
+              "affiliation" : "Tonbridge AC" 
+            }
+          },
+          "fieldTrial" : [
+            {
+              "@type" : "FieldTrial",
+              "attemptNumber" : 1,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : "48.05 m"
+              }
+            },
+            {
+              "@type" : "FieldTrial",
+              "attemptNumber" : 2,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : "55.69 m"
+              }
+            },
+            {
+              "@type" : "FieldTrial",
+              "attemptNumber" : 3,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : "57.69 m"
+              }
+            },
+            {
+              "@type" : "FieldTrial",
+              "attemptNumber" : 4,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : "53.28 m"
+              }
+            },
+            {
+              "@type" : "FieldTrial",
+              "attemptNumber" : 5,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : "59.76 m"
+              }
+            },
+            {
+              "@type" : "FieldTrial",
+              "attemptNumber" : 6,
+              "competitionFeature" : "feature:NM"
+            }
+          ]
+       },
+       {
+          "@type" : "CompetitorDistanceTrials",
+          "competitor" : {
+            "bibIdentifier" : "792",
+            "category" : "U17M",
+            "agent" : {
+              "@type" : "Athlete",
+              "name" : "Gurtal Randhawa",
+              "affiliation" : "Windsor Slough Eton & H"  
+            }
+          },
+          "fieldTrial" : [
+            {
+              "@type" : "FieldTrial",
+              "attemptNumber" : 1,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : "43.30 m"
+              }
+            },
+            {
+              "@type" : "FieldTrial",
+              "attemptNumber" : 2,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : "42.46 m"
+              }
+            },
+            {
+              "@type" : "FieldTrial",
+              "attemptNumber" : 3,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : "42.70 m"
+              }
+            },
+            {
+              "@type" : "FieldTrial",
+              "attemptNumber" : 4,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : "45.08 m"
+              }
+            },
+            {
+              "@type" : "FieldTrial",
+              "attemptNumber" : 5,
+              "competitionFeature" : "feature:NM"
+            },
+            {
+              "@type" : "FieldTrial",
+              "attemptNumber" : 6,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : "44.33 m"
+              }
+            }
+          ]
+       }           
+    ]
+}

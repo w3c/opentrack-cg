@@ -1,0 +1,105 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/field-trials/U15PoleVault.jsonld",
+    "@type" : "UnitHeightCompetition",
+
+    
+    "name" : "EA U15 Boys Pole Vault – Final",
+    "startingHeight" : "2.50 m",
+    "increasingHeight" : "2.70, 2.90, 3.00 increasing 10 cms.",
+    "competitorHeightTrials" : [ 
+       {
+          "@type" : "CompetitorHeightTrials",
+          "competitor" : {
+            "bibIdentifier" : "678",
+            "category" : "U15B",
+            "agent" : {
+              "@type" : "Athlete",
+              "name" : "Joshua Ilyk",
+              "affiliation" : "Notts AC" 
+            }
+          },
+          "trialsAtHeight" : [
+            {
+              "@type" : "TrialsAtHeight",
+              "height" : "2.50 m",
+              "competitionFeature" : "feature:NH"
+            },
+            {
+              "@type" : "TrialsAtHeight",
+              "height" : "2.70 m",
+              "competitionFeature" : "feature:NH"
+            },
+            {
+              "@type" : "TrialsAtHeight",
+              "height" : "2.90 m",
+              "competitionFeature" : "feature:NH"
+            },
+            {
+              "@type" : "TrialsAtHeight",
+              "height" : "3.00 m",
+              "fieldTrial" : [
+                {
+                  "@type" : "FieldTrial",
+                  "attemptNumber" : 1,
+                  "competitionFeature" : "feature:x"
+                },
+                {
+                  "@type" : "FieldTrial",
+                  "attemptNumber" : 2,
+                  "competitionFeature" : "feature:o"
+                }
+              ]
+            },
+            {
+              "@type" : "TrialsAtHeight",
+              "height" : "3.10 m",
+              "fieldTrial" : [
+                {
+                  "@type" : "FieldTrial",
+                  "attemptNumber" : 1,
+                  "competitionFeature" : "feature:o"
+                }
+              ]
+            },
+            {
+              "@type" : "TrialsAtHeight",
+              "height" : "3.20 m",
+              "fieldTrial" : [
+                {
+                  "@type" : "FieldTrial",
+                  "attemptNumber" : 1,
+                  "competitionFeature" : "feature:x"
+                },
+                {
+                  "@type" : "FieldTrial",
+                  "attemptNumber" : 2,
+                  "competitionFeature" : "feature:o"
+                }
+              ]
+            },
+            {
+              "@type" : "TrialsAtHeight",
+              "height" : "3.30 m",
+              "fieldTrial" : [
+                {
+                  "@type" : "FieldTrial",
+                  "attemptNumber" : 1,
+                  "competitionFeature" : "feature:x"
+                },
+                {
+                  "@type" : "FieldTrial",
+                  "attemptNumber" : 2,
+                  "competitionFeature" : "feature:x"
+                },
+                {
+                  "@type" : "FieldTrial",
+                  "attemptNumber" : 3,
+                  "competitionFeature" : "feature:x"
+                }
+              ]
+            }         
+          ]
+       }        
+    ]
+}
