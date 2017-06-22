@@ -22,22 +22,22 @@
           "trialsAtHeight" : [
             {
               "@type" : "TrialsAtHeight",
-              "height" : "2.50 m",
+              "targetHeight" : "2.50 m",
               "competitionFeature" : "feature:NH"
             },
             {
               "@type" : "TrialsAtHeight",
-              "height" : "2.70 m",
+              "targetHeight" : "2.70 m",
               "competitionFeature" : "feature:NH"
             },
             {
               "@type" : "TrialsAtHeight",
-              "height" : "2.90 m",
+              "targetHeight" : "2.90 m",
               "competitionFeature" : "feature:NH"
             },
             {
               "@type" : "TrialsAtHeight",
-              "height" : "3.00 m",
+              "targetHeight" : "3.00 m",
               "fieldTrial" : [
                 {
                   "@type" : "FieldTrial",
@@ -53,7 +53,7 @@
             },
             {
               "@type" : "TrialsAtHeight",
-              "height" : "3.10 m",
+              "targetHeight" : "3.10 m",
               "fieldTrial" : [
                 {
                   "@type" : "FieldTrial",
@@ -64,7 +64,7 @@
             },
             {
               "@type" : "TrialsAtHeight",
-              "height" : "3.20 m",
+              "targetHeight" : "3.20 m",
               "fieldTrial" : [
                 {
                   "@type" : "FieldTrial",
@@ -80,7 +80,7 @@
             },
             {
               "@type" : "TrialsAtHeight",
-              "height" : "3.30 m",
+              "targetHeight" : "3.30 m",
               "fieldTrial" : [
                 {
                   "@type" : "FieldTrial",
