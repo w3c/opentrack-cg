@@ -181,7 +181,7 @@
     "created"           : { "@id" : "dcterms:created", "@type": "xsd:datetime"  },
     "modified"          : { "@id" : "dcterms:modified", "@type": "xsd:datetime"  },
     "performance"       : "ath:performance" ,
-    "award"             : "ath:award" ,
+    "award"             : "schema:award" ,
     "windAssistance"    : "ath:windAssistance" ,
     "time"              : { "@id" : "ath:time", "@type": "xsd:time"  },
     "reactionTime"      : { "@id" : "ath:reactionTime", "@type": "xsd:time"  },
