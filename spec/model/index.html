@@ -773,7 +773,7 @@ See a common predefined [list of the main categories](#category-type) recognized
 | `requiredGender` | `schema:requiredGender` | Gender of athletes involved in a category.  | [Gender Type](#gender-type) |
 | `requiredMinAge` | `schema:requiredMinAge` | Athletes' minumum age to be eligible for a category.  | Integer |
 | `requiredMaxAge` | `schema:requiredMaxAge` | Athletes' maximum age to be eligible for a category.  | Integer |
-| `recognizingAuthority` | `ath:recognizingAuthority` | Governing body or organization that recognizes and rule a specific category.  | [Organization](#organization) |
+| `recognizingAuthority` | `ath:recognizingAuthority` | Governing body or organization that recognizes and rule a specific category.  | [Person](#person) or [Organization](#organization) |
 
 Example of category description (Senior Women):
 <pre class="example">
@@ -826,7 +826,7 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `starter` | `ath:starter` | Athletes(s) or teams(s) registered for the competition at the beginning of the event. | [Ahtlete](#athlete) or [Sports Team](#sports-team) |
 | `sponsor` | `schema:sponsor` | Person(s) or organization(s) that sponsors a competition. | [Person](#person) or [Organization](#organization) |
 | `attendee` | `schema:attendee` | Person(s) who attends a competition. | [Person](#person) |
-| `discipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#discipline) |
+| `sportsDiscipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#discipline) |
 | `category` | `ath:category` | The specific category for a competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Category](#category) |
 | `entryRequirements` | `ath:entryRequirements` | Requirements to take part in a competition.  | Text |
 | `results` | `ath:results` | List with the results of the participation in a competition. There may be different results during the competition (start list, intermediate results, partial results, final results, etc.) .  | [Results List](#results-list) |
@@ -1487,7 +1487,7 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 | `identifier` | `schema:identifier` | Unique character string to identify a performance. | Text |
 | `windAssistance` | `ath:windAssistance` | Wind speed at the moment of registering the performance (it could be either positive or negative). | Text |
 | `recordOrBest` | `ath:recordOrBest` | Type of record or best performance related to a result in a competition (e.g., World Record, National Record, Personal Best, etc.). | [Record or Best Type](#record-or-best-type) |
-| `discipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#discipline) |
+| `sportsDiscipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#discipline) |
 | `date` | `dc:date` | Date when the athlete achieved a performance. | [Date](#date) |
 | `agent` | `schema:agent` | Athlete or team that achieved the performance. | [Athlete](#athlete) or [Sports Team](#sports-team) |
 
@@ -1658,7 +1658,7 @@ A <dfn>Place</dfn> is a location, venue or territories where events are held or 
 | `name` | `schema:name` | Descriptive name of the place (e.g., Helsinki Olympic Stadium). | Text |
 | `streetAddress` | `schema:streetAddress` | The street address (e.g., Paavo Nurmen tie 1).  | Text |
 | `locality` | `schema:addressLocality` | The locality (e.g., Helsinki). | Text |
-| `postOficeBoxNumber` | `schema:postOficeBoxNumber` | The post office box number for PO box addresses. | Text |
+| `postOfficeBoxNumber` | `schema:postOfficeBoxNumber` | The post office box number for PO box addresses. | Text |
 | `postalCode` | `schema:postalCode` | The postal code (e.g., 00250)| Text |
 | `country` | `schema:addressCountry` | The country (e.g., Finland). | [Country](#country) |
 
@@ -1737,6 +1737,8 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
 |:--- |:-------- |:----------- |:---------- |
 | `distance` | `schema:distance` | Distance of the race. | [Distance](#distance) |
 | `raceCompetitionType` | `ath:raceCompetitionType` | Type of competition (time trial, relays, etc.). | [Race Competition Type](#race-competition-type) |
+| `maxDuration` | `ath:maxDuration` | Maximum duration of the race in case of being a time-fixed competition (i.e., one hour, one day, etc.). | [Time](#time) |
+
 
 ##### Middle Or Long Distance Race
 
@@ -1746,9 +1748,6 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 * subClassOf: `ath:Race`
 * superClass: `ath:Steeplechase`
 
-| Key | Property | Description | Value Type |
-|:--- |:-------- |:----------- |:---------- |
-| `maxDuration` | `ath:maxDuration` | Maximum duration of the race in case of being a time-fixed competition (i.e., one hour, one day, etc.). | [Time](#time) |
 
 ###### Steeplechase
 
@@ -1759,7 +1758,7 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
-| `height` | `schema:height` | Obstacle height. | [Distance](#distance) |
+| `obstacleHeight` | `ath:obstacleHeight` | Obstacle height. | [Distance](#distance) |
 
 ##### Hurdles
 
@@ -1808,10 +1807,6 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 * class: `ath:MountainRunning`
 * subClassOf: `ath:Race`
 
-| Key | Property | Description | Value Type |
-|:--- |:-------- |:----------- |:---------- |
-| `ascent` | `ath:ascent` | Total vertical ascent of the race course. | [Distance](#distance) |
-| `descent` | `ath:descent` | Total vertical descent of the race course. | [Distance](#distance) |
 
 ##### Track Relays
 
@@ -1827,10 +1822,6 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 * class: `ath:UltraRunning`
 * subClassOf: `ath:Race`
-
-| Key | Property | Description | Value Type |
-|:--- |:-------- |:----------- |:---------- |
-| `maxDuration` | `ath:maxDuration` | Maximum duration of the race in case of being a time-fixed competition (i.e., one hour, one day, etc.). | [Time](#time) |
 
 #### Throws
 
@@ -1978,7 +1969,7 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
-| `discipline` | `ath:discipline` | Combined sub-disciplines for this event. | [Discipline](#discipline) |
+| `sportsDiscipline` | `ath:sportsDiscipline` | Combined sub-disciplines for this event. | [Discipline](#discipline) |
 
 ##### Pentathlon
 
