@@ -195,7 +195,7 @@
     "locality"          : "schema:addressLocality",
     "postOfficeBoxNumber": "schema:postOfficeBoxNumber",
     "postalCode"        : "schema:postalCode",
-    "country"           : { "@id" : schema:addressCountry" , "@type" : "@vocab" },
+    "country"           : { "@id" : "schema:addressCountry" , "@type" : "@vocab" },
     "timingDevice"      : "ath:timingDevice" ,
     "maxDuration"       : "ath:maxDuration" ,
     "hurdlesSpacing"    : "ath:hurdlesSpacing" ,
