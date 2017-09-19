@@ -8,10 +8,9 @@
     "ath"           : "http://purl.org/athletics#",
     "feature"       : "http://purl.org/athletics/feature#",
     "fed"           : "http://purl.org/athletics/federation#",
-    "category"      : "http://purl.org/athletics/category#",
     "best"          : "http://purl.org/athletics/best#",
 
-    "country"       : "http://publications.europa.eu/resource/authority/country/",
+    "countrycode"       : "http://publications.europa.eu/resource/authority/country/",
         
     "Organization"  : "schema:Organization",
     "Person"        : "schema:Person",
@@ -47,8 +46,7 @@
     "CompetitorHeightTrials": "ath:CompetitorHeightTrials",
     "TrialsAtHeight"        : "ath:TrialsAtHeight",
     "FieldTrial"            : "ath:FieldTrial",
-    
-    "SportsDiscipline"      : "ath:SportsDiscipline",
+
     "AthleticsDiscipline"   : "ath:AthleticsDiscipline",    
     "Race"                  : "ath:Race",
     "MiddleOrLongDistanceRace" : "ath:MiddleOrLongDistanceRace",
@@ -113,7 +111,7 @@
     "foundingDate"      : { "@id": "schema:foundingDate", "@type": "xsd:date" },
     "athlete"           : "ath:athlete" ,
     "captain"           : "ath:captain" ,
-    "nationality"       : "schema:location" , 
+    "location"          : "schema:location" , 
     "areaServed"        : "schema:areaServed" ,
     "member"            : "schema:member",
     "requiredMinAge"    : { "@id": "schema:requiredMinAge", "@type": "xsd:integer" },
@@ -122,7 +120,6 @@
     "recognizingAuthority" : "schema:recognizingAuthority",
 
     "startDate"         : { "@id": "schema:startDate", "@type": "xsd:date" },
-    "endDate"           : { "@id": "schema:endDate", "@type": "xsd:date" },
     "endDate"           : { "@id": "schema:endDate", "@type": "xsd:date" },
     "eventStatus"       : "schema:eventStatus",
     "organizer"         : "schema:organizer",
@@ -182,7 +179,6 @@
     "created"           : { "@id" : "dcterms:created", "@type": "xsd:datetime"  },
     "modified"          : { "@id" : "dcterms:modified", "@type": "xsd:datetime"  },
     "performance"       : "ath:performance" ,
-    "award"             : "schema:award" ,
     "windAssistance"    : "ath:windAssistance" ,
     "time"              : { "@id" : "ath:time", "@type": "xsd:time"  },
     "reactionTime"      : { "@id" : "ath:reactionTime", "@type": "xsd:time"  },
@@ -190,7 +186,6 @@
     "distance"          : "ath:distance",
     "geo"               : "schema:geo",
     "map"               : "schema:hasMap",
-    "telephone"         : "schema:telephone",
     "fax"               : "schema:faxNumber",
     "locality"          : "schema:addressLocality",
     "postOfficeBoxNumber": "schema:postOfficeBoxNumber",
