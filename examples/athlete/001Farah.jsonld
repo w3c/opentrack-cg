@@ -24,11 +24,11 @@
         "name" : "Nike Oregon Project",
         "url" : "https://nikeoregonproject.com"            
     },
-    "club" : [ 
+    "affiliation" : [ 
            "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
            "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
         ],
-    "team" : [ 
+    "memberOf" : [ 
            "http://w3c.github.io/opentrack-cg/examples/team/GBR2012.jsonld",
            "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld"
         ],
