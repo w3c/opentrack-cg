@@ -32,7 +32,7 @@
            "http://w3c.github.io/opentrack-cg/examples/team/GBR2012.jsonld",
            "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld"
         ],
-    "federation" :
+    "affiliation" :
         [ 
            "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld", 
            "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld" 
