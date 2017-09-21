@@ -26,16 +26,13 @@
     },
     "affiliation" : [ 
            "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
-           "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
+           "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld",
+           "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld", 
+           "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld"            
         ],
     "memberOf" : [ 
            "http://w3c.github.io/opentrack-cg/examples/team/GBR2012.jsonld",
            "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld"
-        ],
-    "affiliation" :
-        [ 
-           "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld", 
-           "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld" 
         ],
     "bestPerformance" :
         [
