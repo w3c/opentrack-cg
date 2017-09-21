@@ -4,6 +4,7 @@
     "@type" : "Club",
 
     "name": "Nike Oregon Project",
+    "logo" : "https://w3c.github.io/opentrack-cg/examples/images/club/logo7.svg",
     "url": "https://nikeoregonproject.com/",
     "athlete": "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
     "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld" 
