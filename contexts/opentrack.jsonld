@@ -96,7 +96,7 @@
     "height"            : "schema:height",
     "targetHeight"      : "ath:targetHeight",
     "weight"            : "schema:weight",
-    "nationality"       : "schema:nationality",
+    "nationality"       : { "@id": "schema:nationality", "@type": "@vocab" },
     "birthDate"         : { "@id": "schema:birthDate", "@type": "xsd:date" },
     "deathDate"         : { "@id": "schema:deathDate", "@type": "xsd:date" },
     "birthPlace"        : "schema:birthPlace",
