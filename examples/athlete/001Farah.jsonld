@@ -39,6 +39,7 @@
            "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon",
            "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m",
            "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m"
-        ]
+        ],
+    "owl:sameAs" : "http://dbpedia.org/resource/Mo_Farah"
 }
 
