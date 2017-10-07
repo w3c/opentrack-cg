@@ -66,6 +66,11 @@
                 title: "Olympic Data Feed",
                 href: "http://odf.olympictech.org/",
                 publisher: "IOC"
+            }, 
+            "QUDT-SPACETIME" : {
+                title: "",
+                href: "http://qudt.org/doc/2017/DOC_VOCAB-UNITS-SPACE-AND-TIME.html",
+                publisher: "QUDT.org"
             }
         },     
         shortName: "opentrack",
@@ -91,7 +96,7 @@
 
 <p>This specification, developed by [W3C OpenTrack Community Group](http://www.w3.org/community/opentrack/), introduces a data model to support the publication of Athletics data on the Web. This document defines the main concepts and relations of Athletics competitions, including competitors and their results, enabling a common representation of information in this sector.</p>
 
-<p>The OpenTrack model is mapped to existing standards, including BBC Sports Ontology [[SPORT-ONT]], Schema.org [[SCHEMA-ORG]] types and properties. The resulting OpenTrack Vocabulary is a lightweight schema aiming at identifying, defining and exposing data on the Web.</p>
+<p>The OpenTrack model is mapped to existing standards, including BBC Sports Ontology [[SPORT-ONT]], Schema.org [[SCHEMA-ORG]], [[QUDT-SPACETIME]] types and properties. The resulting OpenTrack Vocabulary is a lightweight schema aiming at identifying, defining and exposing data on the Web.</p>
 
     </section>
     <section id='sotd'>
@@ -142,6 +147,7 @@ This specification makes use of the following namespaces:
 * `skos` : `http://www.w3.org/2004/02/skos/core#`
 * `dct` : `http://purl.org/dc/terms/`
 * `xsd`: `http://www.w3.org/2001/XMLSchema#`
+* `unit` : `http://qudt.org/vocab/unit/`
 
 The domain of this specification is Athletics ([http://dbpedia.org/resource/Sport_of_athletics](http://dbpedia.org/resource/Sport_of_athletics)).
 
@@ -2047,7 +2053,14 @@ For instance, 7th April 2017 at 4:45 am (UTC+1):
 
 ### Distance
 
-Measurements of the form `&lt;Number> &lt;Length-unit-of-measure&gt;` (e.g., `7 ft`).
+Distance will be represented by the value and the measurement unit. Values will be expressed as a number (decimal or integer). In order to represent units, it is recommended using codes from the Space and Time Units Vocabulary [[QUDT-SPACETIME]], that covers the Imperial, SI and US Customary systems of measure for space and time.
+
+* Centimetre: unit:CM
+* Metre: unit:M
+* Kilometre: unit:KM
+
+Other unit codes (e.g., inch, foot, etc.) can be used if needed. Check and select the correspondent code from the [Space and Time Units Vocabulary](http://qudt.org/doc/2017/DOC_VOCAB-QUANTITYKINDS-SPACE-AND-TIME.html).
+
 
 ### Mass
 
@@ -2289,6 +2302,7 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `timekeeping:HT` | Hand Timing |
 | `timekeeping:FAT`    | Fully Automatic |
 | `timekeeping:TST` | Transponder System Timing |
+
 
     </section>
 
