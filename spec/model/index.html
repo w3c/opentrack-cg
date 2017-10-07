@@ -331,7 +331,7 @@ Otherwise we can describe that resource nested in the main object:
             "streetAddress": "281 Prince Regent Lane",
             "addressLocality": "London",
             "postalCode": "E13 8SD",
-            "addressCountry": "country:GBR"
+            "addressCountry": "countrycode:GBR"
         }
     }
 </pre>
@@ -507,7 +507,7 @@ An <dfn>Athlete</dfn> is a **[Person](#person)** who participates in Athletics e
     "url" : "http://www.mofarah.com",
     "gender" : "Male" ,
     "image" : "https://example.com/260px-MoPodiumRio2016.png",
-    "nationality" : "country:GBR",
+    "nationality" : "countrycode:GBR",
     "email" : "fakeemail@example.com",
     "height" : "175 cm",
     "weight" : "65 Kg",
@@ -584,7 +584,7 @@ Description of a national team:
  
     "name" : "Great Britain National Team - Olympic Games 2016",
     "alternateName" : "GBR",
-    "nationality" : "country:GBR",
+    "nationality" : "countrycode:GBR",
     "memberOf" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld",
     "athlete" : [
         "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
@@ -689,7 +689,7 @@ A <dfn>Sports Club</dfn>, **sport club** or **athletics club**, is an [Organizat
         "streetAddress": "281 Prince Regent Lane",
         "addressLocality": "London",
         "postalCode": "E13 8SD",
-        "addressCountry": "country:GBR"
+        "addressCountry": "countrycode:GBR"
     },
     "sponsor": "Asics",
     "athlete": [
@@ -2130,10 +2130,10 @@ Each country should be represented by an IRI that includes a unique three-charac
 The IRI of countries will be `http://publications.europa.eu/resource/authority/country/{countrycode}`. The JSON-LD context will enable a `country` prefix to simplify usage, allowing the use of the following form:
 
 <pre class="example">
-    country:{countrycode}
+    countrycode:{countrycode}
 </pre>
 
-For instance: `country:ZWE` for *Zimbabwe*, `country:ZAF` for *South Africa* and `country:TGO` for *Togo*.
+For instance: `countrycode:ZWE` for *Zimbabwe*, `countrycode:ZAF` for *South Africa* and `countrycode:TGO` for *Togo*.
 
 Check the full list of authority country codes at [http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html](http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html).
 
