@@ -2031,7 +2031,7 @@ For instance, 7th April 2017:
 
 Time is represented using the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) standard: `[hh][mm][ss].sss` or `[hh]:[mm]:[ss].sss`
 
-For instance 2 hours 5 minutes 34 seconds:
+Example, 2 hours 5 minutes 34 seconds:
 <pre class="example">
 02:05:34.000
 </pre>
@@ -2040,6 +2040,22 @@ Example, 10 seconds, 345 milliseconds:
 <pre class="example">
 00:00:10.345
 </pre>
+
+
+#### High Resolution Time
+
+Milliseconds should be enough to represent all time measurements in Athletics according to IAAF's rules [[IAAF-RULES]]. In the case of timing systems capturing higher resolution of time, values must be represented as quantified values using the Space and Time Units Vocabulary [[QUDT-SPACETIME]]. Editors may indicate the magnitude as a numeric value and the kind of the quantity (unit). Any unit of measurement may be used (hour, second, millisecond, etc.), but *it is recommended using the 'second'* (s), as it is the base unit of time in the International System of Units (SI).
+
+
+Example, 10 seconds, 3454 microseconds:
+<pre class="example">
+{
+    "@type" : "qudt:QuantityValue",
+    "qudt:numericValue" : "10.3454",
+    "qudt:unit" : "unit:SEC" 
+}
+</pre>
+
 
 ### DateTime
 
@@ -2065,6 +2081,7 @@ Distances and heights must be represented by a quantified value, expressing the 
     "@type" : "qudt:QuantityValue",
     "qudt:numericValue" : "2.20",
     "qudt:unit" : "unit:M" 
+}
 </pre>
 
 Other unit codes (e.g., inch, foot, etc.) can be used if needed. Check and select the correspondent code from the [Space and Time Units Vocabulary](http://qudt.org/doc/2017/DOC_VOCAB-QUANTITYKINDS-SPACE-AND-TIME.html).
@@ -2323,6 +2340,7 @@ Likely distance, wind speed must be represented by a quantified value, expressin
     "@type" : "qudt:QuantityValue",
     "qudt:numericValue" : "0.2",
     "qudt:unit" : "unit:M-PER-SEC" 
+}
 </pre>
 
 Other unit codes, such as knot (`unit:KN`) can be used if needed. Check and select the correspondent code from the [Space and Time Units Vocabulary](http://qudt.org/doc/2017/DOC_VOCAB-QUANTITYKINDS-SPACE-AND-TIME.html).
