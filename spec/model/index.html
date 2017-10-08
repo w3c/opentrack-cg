@@ -147,6 +147,7 @@ This specification makes use of the following namespaces:
 * `skos` : `http://www.w3.org/2004/02/skos/core#`
 * `dct` : `http://purl.org/dc/terms/`
 * `xsd`: `http://www.w3.org/2001/XMLSchema#`
+* `qudt` : `http://qudt.org/2.0/schema/qudt`
 * `unit` : `http://qudt.org/vocab/unit/`
 
 The domain of this specification is Athletics ([http://dbpedia.org/resource/Sport_of_athletics](http://dbpedia.org/resource/Sport_of_athletics)).
@@ -2053,11 +2054,18 @@ For instance, 7th April 2017 at 4:45 am (UTC+1):
 
 ### Distance
 
-Distance will be represented by the value and the measurement unit. Values will be expressed as a number (decimal or integer). In order to represent units, it is recommended using codes from the Space and Time Units Vocabulary [[QUDT-SPACETIME]], that covers the Imperial, SI and US Customary systems of measure for space and time.
+Distances and heights must be represented by a quantified value, expressing the magnitude and kind of a quantity (unit). alues will be expressed as a numeric value (decimal or integer) and a measurement unit code from the Space and Time Units Vocabulary [[QUDT-SPACETIME]], that covers the Imperial, SI and US Customary systems of measure for space and time.
 
 * Centimetre: unit:CM
 * Metre: unit:M
 * Kilometre: unit:KM
+
+<pre class="example">
+{
+    "@type" : "qudt:QuantityValue",
+    "qudt:numericValue" : "2.20",
+    "qudt:unit" : "unit:M" 
+</pre>
 
 Other unit codes (e.g., inch, foot, etc.) can be used if needed. Check and select the correspondent code from the [Space and Time Units Vocabulary](http://qudt.org/doc/2017/DOC_VOCAB-QUANTITYKINDS-SPACE-AND-TIME.html).
 
@@ -2302,6 +2310,22 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `timekeeping:HT` | Hand Timing |
 | `timekeeping:FAT`    | Fully Automatic |
 | `timekeeping:TST` | Transponder System Timing |
+
+
+### Wind Speed
+
+Likely distance, wind speed must be represented by a quantified value, expressing the magnitude and kind of a quantity (unit). Values will be expressed as a numeric value (decimal or integer) and a measurement unit code from the Space and Time Units Vocabulary [[QUDT-SPACETIME]]. Typically, in Athletics wind speed assistance is represented in metres per second (m/s). 
+
+* Metre per second (m/s): `unit:M-PER-SEC`
+
+<pre class="example">
+{
+    "@type" : "qudt:QuantityValue",
+    "qudt:numericValue" : "0.2",
+    "qudt:unit" : "unit:M-PER-SEC" 
+</pre>
+
+Other unit codes, such as knot (`unit:KN`) can be used if needed. Check and select the correspondent code from the [Space and Time Units Vocabulary](http://qudt.org/doc/2017/DOC_VOCAB-QUANTITYKINDS-SPACE-AND-TIME.html).
 
 
     </section>
