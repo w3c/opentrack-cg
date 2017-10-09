@@ -2090,12 +2090,26 @@ Distances and heights must be represented by a quantified value, expressing the 
 }
 </pre>
 
-Other unit codes can be used if needed. Check and select the correspondent code from the [UN/CEFACT Common Codes](../references/rec20_Rev9e_2014.xls).
+Other unit codes may be used if needed. Check and select the correspondent code from the [UN/CEFACT Common Codes](../references/rec20_Rev9e_2014.xls).
 
 
 ### Mass
 
-Measurements of the form `&lt;Number> &lt;Mass-unit-of-measure&gt;` (e.g., `75.3 kg`).
+Mass must be represented by a quantified value, expressing the magnitude and kind of a quantity (unit). Values will be expressed as a numeric value (decimal or integer) and a measurement code. It is recommended using the UN/CEFACT Common Codes [[UNECE-CODES]] for Codes for Units of Measurement used in the International Trade. 
+
+*It is recommended using the 'kilogram'* (kg), as it is the base unit of mass in the International System of Units (SI).
+
+* Kilogram: `KGM`
+
+<pre class="example">
+{
+    "@type" : "QuantitativeValue",
+    "value" : "56.3",
+    "unitCode" : "KGM"
+}
+</pre>
+
+Other unit codes may be used if needed. Check and select the correspondent code from the [UN/CEFACT Common Codes](../references/rec20_Rev9e_2014.xls).
 
 
 ### Gender
