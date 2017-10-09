@@ -1528,7 +1528,11 @@ Results may be under different statuses depending on the stage of the competitio
         "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_104Kora",
         "@type" : "TimePerformance",
         "competitor" : "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora.jsonld",
-        "windAssistance" : "-0.5 m/s",
+        "windAssistance" : {
+            "@type" : "QuantitativeValue",
+            "value" : "-1.5",
+            "unitCode" : "MTS"
+        },
         "time" : "00:00:11.450",
         "recordOrBest" : "SB"
     }
@@ -1585,7 +1589,11 @@ Example of performance in a sprint event:
     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_119Nguyen",
     "@type" : "TimePerformance",
     "agent" : "http://w3c.github.io/opentrack-cg/examples/athlete/119Nguyen.jsonld",
-    "windAssistance" : "-1.0 m/s",
+    "windAssistance" : {
+        "@type" : "QuantitativeValue",
+        "value" : "1.0",
+        "unitCode" : "MTS"
+    },
     "time" : "00:00:11.660",
     "record" : "SB"
 }
@@ -1676,12 +1684,13 @@ Sometimes may be of interest gathering and representing information about device
 
 <pre class="example">
 {
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.json",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.jsonld",
     "@type" :  "Timekeeping",
-    "timekeepingType" : "FAT",
+    "timekeepingType" : "timekeeping:FAT",
     "name" : "Generic Fully Automated System"
 }
 </pre>
+
 
 ### Place
 
@@ -2188,7 +2197,6 @@ Enumeration of genders with two values:
 
 According to IAAF Rule 132.4, there are official standard abbreviations and symbols used in the preparation of start lists and results.
 
-EEA also uses other feature codes that will be taken into account.
 
 | Code | Issue/feature |
 | ------------- | ---- |
@@ -2278,6 +2286,8 @@ Status of a competition.
 
 ### Record or Best Type
 
+Types of record of best achieved by competitors in competitions.
+
 | Code | Record Type |
 | ---- | ----------- |
 | `best:WR` | World Record |
@@ -2352,20 +2362,6 @@ The concept of 'best' refers to athlete's personal achievements, without setting
 | `best:=CB` | Equal Championship Best Performance |
 
 
-### Person Roles
-
-Roles of persons involved in a competition, according to the IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/common_codes/common_codes.htm).
-
-| Code | Role |
-| ---- | ---- |
-| `role:A` | Athlete |
-| `role:C` | Coach |
-| `role:G` | Guide (Paralympics only) |
-| `role:J` | Judge |
-| `role:S` | Technical Official (not Judge) |
-| `role:T` | Team Official (not Coach) |
-
-
 ### Results Status
 
 Possible status types for results within a competition.
@@ -2425,7 +2421,6 @@ Timekeeping mechanism types.
 | `timekeeping:FAT`    | Fully Automatic |
 | `timekeeping:TST` | Transponder System Timing |
 
-
 ### Wind Speed
 
 Like distance, wind speed must be represented by a quantified value, expressing the magnitude and kind of a quantity (unit). Values will be expressed as a numeric value (decimal or integer) and a measurement code. It is recommended using the UN/CEFACT Common Codes [[UNECE-CODES]] for Codes for Units of Measurement used in the International Trade. Typically, in Athletics wind speed assistance is represented in *metres per second (m/s)*, recognized by the International System of Units (SI). 
@@ -2441,6 +2436,20 @@ Like distance, wind speed must be represented by a quantified value, expressing 
 </pre>
 
 Other unit codes, such as knot (`KNT`) can be used if needed. Check and select the correspondent code from the [UN/CEFACT Common Codes](../references/rec20_Rev9e_2014.xls) list.
+
+
+### Person Roles
+
+Roles of persons involved in a competition, according to the IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/common_codes/common_codes.htm).
+
+| Code | Role |
+| ---- | ---- |
+| `role:A` | Athlete |
+| `role:C` | Coach |
+| `role:G` | Guide (Paralympics only) |
+| `role:J` | Judge |
+| `role:S` | Technical Official (not Judge) |
+| `role:T` | Team Official (not Coach) |
 
     </section>
 
