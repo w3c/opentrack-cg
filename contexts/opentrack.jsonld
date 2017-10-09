@@ -159,7 +159,7 @@
     "fieldTrial"                : "ath:fieldTrial",
     "firstFieldTrial"           : "ath:firstFieldTrial",
     "lastFieldTrial"            : "ath:lastFieldTrial",
-    "attemptNumber"             : "ath:attemptNumber",
+    "attemptNumber"             : { "@id" : "ath:attemptNumber" , "@type": "xsd:integer" },
     "nextFieldTrial"            : "ath:nextFieldTrial",
     "prevFieldTrial"            : "ath:prevFieldTrial",
     "startingHeight"            : "ath:startingHeight",
