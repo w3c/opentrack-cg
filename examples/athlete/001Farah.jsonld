@@ -32,22 +32,26 @@
         "name" : "Nike Oregon Project",
         "url" : "https://nikeoregonproject.com"            
     },
-    "affiliation" : [ 
-           "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
-           "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld",
-           "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld", 
-           "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld"            
+    "affiliation" : 
+        [
+            { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld" },
+            { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld" }
         ],
-    "memberOf" : [ 
-           "http://w3c.github.io/opentrack-cg/examples/team/GBR2012.jsonld",
-           "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld"
+    "memberOf" : 
+        [
+            { "@id" : "http://w3c.github.io/opentrack-cg/examples/team/GBR2012.jsonld" },
+            { "@id" : "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld" }
+        ],
+    "affiliation" :
+        [
+           { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" },
+           { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld" }
         ],
     "bestPerformance" :
         [
-           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon",
-           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m",
-           "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m"
+           { "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon" },
+           { "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m" },
+           { "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m" }
         ],
     "owl:sameAs" : "http://dbpedia.org/resource/Mo_Farah"
 }
-

@@ -205,7 +205,7 @@
     "hammerLength"      : "ath:hammerLength" ,
 
     "QuantitativeValue" : "schema:QuantitativeValue",
-    "value"             : "schema:value",
+    "value"             : { "schema:value", "@type" : "xsd:double" },
     "unitCode"          : "schema:unitCode",
     
     "raceCompetitionType"    : { "@id" : "ath:raceCompetitionType", "@type" : "@vocab" },

@@ -276,7 +276,7 @@ This example describes an `Athlete` that is identified as [http://w3c.github.io/
 Using this mechanism, we can enrich descriptions just linking our descriptions with other IRIs that already identify resources. For instance, the athlete is affiliated to a club:
 
 <pre class="example">
-    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
+    "club" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld" }
 </pre>
 
 That club (identified by [http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld](http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld)) is described in the same way.
@@ -325,12 +325,13 @@ As shown above, a resource identified by an IRI may be used as value of a proper
 
 In case [the resource](http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld) is already identified (and described) we can link it directly:
 <pre class="example">
-    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
+    "club" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld" }
 </pre>
 
 Otherwise we can describe that resource nested in the main object:
 <pre class="example">
     "club" : {
+        "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
         "@type": "Club",
         "name": "Newham &amp; Essex Beagles",
         "alternateName": "BeaglesAC",
@@ -355,15 +356,16 @@ See in the previous example that we can include descriptions of other entities n
 Most of the properties may be repeated to describe the same resource. For instance, the athlete may be affiliated to two clubs:
 
 <pre class="example">
-    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
-    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
+    "club" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld" },
+    "club" : { "@id" : http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld" }
 </pre>
 Or: 
 <pre class="example">
-    "club" : [ 
-        "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
-        "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
-    ]
+    "club" : 
+        [ 
+            { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld" },
+            { "@id" : http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld" }
+        ]
 </pre>
 
 ### Multilingual Descriptions
