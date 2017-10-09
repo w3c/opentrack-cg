@@ -202,6 +202,10 @@
     "obstacleHeight"    : "ath:obstacleHeight" ,
     "discusDiameter"    : "ath:discusDiameter" ,
     "hammerLength"      : "ath:hammerLength" ,
+
+    "QuantitativeValue" : "schema:QuantitativeValue",
+    "value"             : "schema:value",
+    "unitCode"          : "schema:unitCode",
     
     "raceCompetitionType"    : { "@id" : "ath:raceCompetitionType", "@type" : "@vocab" },
     "trackAndFieldVenueType" : { "@id" : "ath:trackAndFieldVenueType", "@type" : "@vocab" },

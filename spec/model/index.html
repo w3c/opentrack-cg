@@ -68,10 +68,15 @@
                 publisher: "IOC"
             }, 
             "QUDT-SPACETIME" : {
-                title: "",
+                title: "Space and Time Units Ontology Version 2.0",
                 href: "http://qudt.org/doc/2017/DOC_VOCAB-UNITS-SPACE-AND-TIME.html",
                 publisher: "QUDT.org"
-            }
+            },
+            "UNECE-CODES" : {
+                title: "United Nations Economic Commission for Europe - Codes for Trade",
+                href: "https://www.unece.org/cefact/codesfortrade/codes_index.html",
+                publisher: "QUDT.org"
+            }            
         },     
         shortName: "opentrack",
         wgPublicList: "public-opentrack",
@@ -2050,7 +2055,7 @@ Milliseconds should be enough to represent all time measurements in Athletics ac
 Example, 10 seconds, 3454 microseconds:
 <pre class="example">
 {
-    "@type" : "qudt:QuantityValue",
+    "@type" : "QuantitativeValue",
     "qudt:numericValue" : "10.3454",
     "qudt:unit" : "unit:SEC" 
 }
@@ -2070,21 +2075,22 @@ For instance, 7th April 2017 at 4:45 am (UTC+1):
 
 ### Distance
 
-Distances and heights must be represented by a quantified value, expressing the magnitude and kind of a quantity (unit). alues will be expressed as a numeric value (decimal or integer) and a measurement unit code from the Space and Time Units Vocabulary [[QUDT-SPACETIME]], that covers the Imperial, SI and US Customary systems of measure for space and time.
+Distances and heights must be represented by a quantified value, expressing the magnitude and kind of a quantity (unit). Values will be expressed as a numeric value (decimal or integer) and a measurement code. It is recommended using the UN/CEFACT Common Codes [[UNECE-CODES]] for Codes for Units of Measurement used in the International Trade. 
 
-* Centimetre: unit:CM
-* Metre: unit:M
-* Kilometre: unit:KM
+*It is recommended using the 'metre'* (m), as it is the base unit of time in the International System of Units (SI). Exceptionally, distance and height may be also represented using other units such as 'mile' (statute mile).
+
+* Metre: `MTR`
+* Mile: `SMI`
 
 <pre class="example">
 {
-    "@type" : "qudt:QuantityValue",
-    "qudt:numericValue" : "2.20",
-    "qudt:unit" : "unit:M" 
+    "@type" : "QuantitativeValue",
+    "value" : "2.20",
+    "unitCode" : "MTR"
 }
 </pre>
 
-Other unit codes (e.g., inch, foot, etc.) can be used if needed. Check and select the correspondent code from the [Space and Time Units Vocabulary](http://qudt.org/doc/2017/DOC_VOCAB-QUANTITYKINDS-SPACE-AND-TIME.html).
+Other unit codes can be used if needed. Check and select the correspondent code from the [UN/CEFACT Common Codes](../references/rec20_Rev9e_2014.xls).
 
 
 ### Mass
@@ -2331,20 +2337,19 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 
 ### Wind Speed
 
-Likely distance, wind speed must be represented by a quantified value, expressing the magnitude and kind of a quantity (unit). Values will be expressed as a numeric value (decimal or integer) and a measurement unit code from the Space and Time Units Vocabulary [[QUDT-SPACETIME]]. Typically, in Athletics wind speed assistance is represented in metres per second (m/s). 
+Like distance, wind speed must be represented by a quantified value, expressing the magnitude and kind of a quantity (unit). Values will be expressed as a numeric value (decimal or integer) and a measurement code. It is recommended using the UN/CEFACT Common Codes [[UNECE-CODES]] for Codes for Units of Measurement used in the International Trade. Typically, in Athletics wind speed assistance is represented in *metres per second (m/s)*, recognized by the International System of Units (SI). 
 
-* Metre per second (m/s): `unit:M-PER-SEC`
+* Metre per second (m/s): `MTS`
 
 <pre class="example">
 {
-    "@type" : "qudt:QuantityValue",
-    "qudt:numericValue" : "0.2",
-    "qudt:unit" : "unit:M-PER-SEC" 
+    "@type" : "QuantitativeValue",
+    "value" : "0.22",
+    "unitCode" : "MTS"
 }
 </pre>
 
-Other unit codes, such as knot (`unit:KN`) can be used if needed. Check and select the correspondent code from the [Space and Time Units Vocabulary](http://qudt.org/doc/2017/DOC_VOCAB-QUANTITYKINDS-SPACE-AND-TIME.html).
-
+Other unit codes, such as knot (`KNT`) can be used if needed. Check and select the correspondent code from the [UN/CEFACT Common Codes](../references/rec20_Rev9e_2014.xls) list.
 
     </section>
 
