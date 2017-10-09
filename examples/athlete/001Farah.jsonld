@@ -12,8 +12,16 @@
     "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/MoPodiumRio2016.png/800px-MoPodiumRio2016.png",
     "nationality" : "countrycode:GBR",                       
     "email" : "fakeemail@example.com",
-    "height" : "175 cm",
-    "weight" : "65 Kg",   
+    "height" : {
+        "@type" : "QuantitativeValue",
+        "value" : "1.75",
+        "unitCode" : "MTR"
+    },
+    "weight" : {
+        "@type" : "QuantitativeValue",
+        "value" : "65.0",
+        "unitCode" : "KGM"
+    },
     "birthPlace" : "Mogadishu, Somalia" ,
     "birthDate" : "1983-04-23",
     "coach" : { 
