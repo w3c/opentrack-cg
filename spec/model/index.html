@@ -835,7 +835,7 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `image` | `schema:image` | Picture about a competition. | URL |
 | `startDate` | `schema:startDate` | Date and time when a competition starts. | [Date](#date) or [DateTime](#datetime) |
 | `endDate` | `schema:endDate` | Date and time when a competition ends. | [Date](#date) or [DateTime](#datetime) |
-| `eventStatus` | `schema:eventStatus` | Status of a competition according to a enumeration of potential values (i.e., scheduled, completed, etc.) | [Event Status Type](#event-status-type) |
+| `eventStatus` | `schema:eventStatus` | Status of a competition according to a enumeration of potential values (i.e., scheduled, completed, etc.) | [Event Status Type](#competition-status) |
 | `organizer` | `schema:organizer` | Person(s) or organization(s) that organizes a competition. | [Person](#persons) or [Organization](#organizations) |
 | `contributor` | `schema:contributor` | Person(s) or organization(s) that collaborates in the organization of a competition. | [Person](#person) or [Organization](#organization) |
 | `starter` | `ath:starter` | Athletes(s) or teams(s) registered for the competition at the beginning of the event. | [Ahtlete](#athlete) or [Sports Team](#sports-team) |
@@ -2016,6 +2016,8 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 </section>
 
+<hr>
+
 <section>
 
 ## Classification Schemas and Data Types
@@ -2195,7 +2197,9 @@ For instance: `countrycode:ZWE` for *Zimbabwe*, `countrycode:ZAF` for *South Afr
 
 Check the full list of authority country codes at [http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html](http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html).
 
-### Event Status
+### Competition Status
+
+Status of a competition. 
 
 | Code | Status |
 | ---- | ------ |
@@ -2288,9 +2292,9 @@ The concept of 'best' refers to athlete's personal achievements, without setting
 | `best:=CB` | Equal Championship Best Performance |
 
 
-### Role Type
+### Person Roles
 
-Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/common_codes/common_codes.htm).
+Roles of persons involved in a competition, according to the IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/common_codes/common_codes.htm).
 
 | Code | Role |
 | ---- | ---- |
@@ -2301,7 +2305,10 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 | `role:S` | Technical Official (not Judge) |
 | `role:T` | Team Official (not Coach) |
 
+
 ### Results Status
+
+Possible statuses of results within a competition.
 
 | Code | Status |
 | ---- | ------ |
@@ -2317,6 +2324,8 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 
 ### Protest Status
 
+Status of a protest process in a competition.
+
 | Code | Status |
 | ---- | ---- |
 | `protest:CLS` | Closed |
@@ -2326,13 +2335,19 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 
 ### Race Competition Type
 
+Type of competition in races, defined by the way of how competitors take part in the competition (against the clock, relays or individual).
+
 | Code | Type |
 | ---- | ---- |
 | `race:RaceIndividual` | Individual Race |
 | `race:RaceRelays`    | Relay Race |
 | `race:RaceTimeTrial`    | Time Trial |
 
+Multiple types can be specified (e.g., relays time trial races).
+
 ### Venue Type
+
+Type of stadium, track and/or field where a competition take places. 
 
 | Code | Type |
 | ---- | ---- |
@@ -2341,6 +2356,8 @@ Roles specified by IOC [ODF](http://odf.olympictech.org/2016-Rio/codes/HTML/comm
 
 
 ### Timekeeping Type
+
+Timekeeping mechanism types.
 
 | Code | Type |
 | ---- | ---- |
