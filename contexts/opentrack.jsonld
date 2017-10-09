@@ -11,6 +11,8 @@
     "feature"       : "http://purl.org/athletics/feature#",
     "fed"           : "http://purl.org/athletics/federation#",
     "best"          : "http://purl.org/athletics/best#",
+    "qudt"          : "http://qudt.org/schema/qudt/",
+    "unit"          : "http://qudt.org/vocab/unit/",
 
     "countrycode"       : "http://publications.europa.eu/resource/authority/country/",
         
