@@ -53,5 +53,5 @@
            { "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m" },
            { "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m" }
         ],
-    "owl:sameAs" : "http://dbpedia.org/resource/Mo_Farah"
+    "owl:sameAs" : { "@id" : "http://dbpedia.org/resource/Mo_Farah" }
 }
