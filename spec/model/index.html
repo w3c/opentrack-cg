@@ -521,8 +521,16 @@ An <dfn>Athlete</dfn> is a **[Person](#person)** who participates in Athletics e
     "image" : "https://example.com/260px-MoPodiumRio2016.png",
     "nationality" : "countrycode:GBR",
     "email" : "fakeemail@example.com",
-    "height" : "175 cm",
-    "weight" : "65 Kg",
+    "height" : {
+        "@type" : "QuantitativeValue",
+        "value" : "1.75",
+        "unitCode" : "MTR"
+    },
+    "weight" : {
+        "@type" : "QuantitativeValue",
+        "value" : "65.0",
+        "unitCode" : "KGM"
+    },
     "birthPlace" : "Mogadishu, Somalia" ,
     "birthDate" : "1983-04-23",
     "coach" : {
@@ -1057,7 +1065,11 @@ Example of description of height card, simplified with the participation of only
     "@id" : "http://w3c.github.io/opentrack-cg/examples/field-trials/U15PoleVault.jsonld",
     "@type" : "UnitHeightCompetition",    
     "name" : "EA U15 Boys Pole Vault – Final",
-    "startingHeight" : "2.50 m",
+    "startingHeight" : {
+        "@type" : "QuantitativeValue",
+        "value" : "1.25",
+        "unitCode" : "MTR"
+        },
     "increasingHeight" : "2.70, 2.90, 3.00 increasing 10 cms.",
     "competitorHeightTrials" : [ 
        {
@@ -1074,22 +1086,22 @@ Example of description of height card, simplified with the participation of only
           "trialsAtHeight" : [
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "2.50 m",
+              "targetHeight" : { "value" : "2.50", "unitCode" : "MTR" },
               "competitionFeature" : "feature:NH"
             },
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "2.70 m",
+              "targetHeight" : { "value" : "2.70", "unitCode" : "MTR" },
               "competitionFeature" : "feature:NH"
             },
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "2.90 m",
+              "targetHeight" : { "value" : "2.90", "unitCode" : "MTR" },
               "competitionFeature" : "feature:NH"
             },
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "3.00 m",
+              "targetHeight" : { "value" : "3.00", "unitCode" : "MTR" },
               "fieldTrial" : [
                 {
                   "@type" : "FieldTrial",
@@ -1105,7 +1117,7 @@ Example of description of height card, simplified with the participation of only
             },
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "3.10 m",
+              "targetHeight" : { "value" : "3.10", "unitCode" : "MTR" },
               "fieldTrial" : [
                 {
                   "@type" : "FieldTrial",
@@ -1116,7 +1128,7 @@ Example of description of height card, simplified with the participation of only
             },
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "3.20 m",
+              "targetHeight" : { "value" : "3.20", "unitCode" : "MTR" },
               "fieldTrial" : [
                 {
                   "@type" : "FieldTrial",
@@ -1132,7 +1144,7 @@ Example of description of height card, simplified with the participation of only
             },
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "3.30 m",
+              "targetHeight" : { "value" : "3.30", "unitCode" : "MTR" },
               "fieldTrial" : [
                 {
                   "@type" : "FieldTrial",
@@ -1205,15 +1217,22 @@ Description of distance card simplified with information about two competitors
               "attemptNumber" : 1,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "48.05 m"
-              }
+                "distance" : { 
+                  "@type" : "QuantitativeValue",
+                  "value" : "48.05",
+                  "unitCode" : "MTR"
+                }
             },
             {
               "@type" : "FieldTrial",
               "attemptNumber" : 2,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "55.69 m"
+                "distance" : { 
+                  "@type" : "QuantitativeValue",
+                  "value" : "55.69",
+                  "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -1221,7 +1240,11 @@ Description of distance card simplified with information about two competitors
               "attemptNumber" : 3,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "57.69 m"
+                "distance" : { 
+                  "@type" : "QuantitativeValue",
+                  "value" : "49.03",
+                  "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -1229,7 +1252,11 @@ Description of distance card simplified with information about two competitors
               "attemptNumber" : 4,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "53.28 m"
+                "distance" : { 
+                  "@type" : "QuantitativeValue",
+                  "value" : "53.28",
+                  "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -1237,7 +1264,11 @@ Description of distance card simplified with information about two competitors
               "attemptNumber" : 5,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "59.76 m"
+                "distance" : { 
+                  "@type" : "QuantitativeValue",
+                  "value" : "59.76",
+                  "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -1264,7 +1295,11 @@ Description of distance card simplified with information about two competitors
               "attemptNumber" : 1,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "43.30 m"
+                "distance" : { 
+                  "@type" : "QuantitativeValue",
+                  "value" : "43.30",
+                  "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -1272,7 +1307,11 @@ Description of distance card simplified with information about two competitors
               "attemptNumber" : 2,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "42.46 m"
+                "distance" : { 
+                  "@type" : "QuantitativeValue",
+                  "value" : "42.46",
+                  "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -1280,7 +1319,11 @@ Description of distance card simplified with information about two competitors
               "attemptNumber" : 3,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "42.70 m"
+                "distance" : { 
+                  "@type" : "QuantitativeValue",
+                  "value" : "42.70",
+                  "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -1288,7 +1331,11 @@ Description of distance card simplified with information about two competitors
               "attemptNumber" : 4,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "45.08 m"
+                "distance" : { 
+                  "@type" : "QuantitativeValue",
+                  "value" : "45.08",
+                  "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -1301,7 +1348,11 @@ Description of distance card simplified with information about two competitors
               "attemptNumber" : 6,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "44.33 m"
+                "distance" : { 
+                  "@type" : "QuantitativeValue",
+                  "value" : "44.33",
+                  "unitCode" : "MTR"
+                }
               }
             }
           ]
@@ -1388,7 +1439,11 @@ Except in Vertical Jumps, a valid trial shall be indicated by the measurement ta
   "attemptNumber" : 1,
   "performance" : {
     "@type" : "DistancePerformance",
-    "distance" : "48.05 m"
+    "distance" : {
+      "@type" : "QuantitativeValue",
+      "value" : "48.43",
+      "unitCode" : "MTR"
+    }
   }
 }
 </pre>
@@ -1567,7 +1622,12 @@ Example of performance in a sprint event:
 
 <pre class="example">
 {
-    "distance" : "56 m"
+    "distance" : {
+        "@type" : "QuantitativeValue",
+        "value" : "62.21",
+        "unitCode" : "MTR"
+    }
+}
 }                                     
 </pre>
 
@@ -2308,7 +2368,7 @@ Roles of persons involved in a competition, according to the IOC [ODF](http://od
 
 ### Results Status
 
-Possible statuses of results within a competition.
+Possible status types for results within a competition.
 
 | Code | Status |
 | ---- | ------ |
