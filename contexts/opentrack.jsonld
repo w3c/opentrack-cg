@@ -84,6 +84,8 @@
     "name"              : "schema:name",
     "alternateName"     : "schema:alternateName",
     "address"           : { "@id": "schema:address", "@type": "schema:PostalAddress" },
+    "streetAddress"     : "schema:streetAddress",
+    "addressLocality"   : "schema:addressLocality",
     "image"             : { "@id": "schema:image", "@type": "@id" },
     "logo"              : { "@id": "schema:logo", "@type": "@id" },
     "email"             : "schema:email",
