@@ -5,5 +5,5 @@
     
     "name": "USA Track & Field",
     "email": "usatf@example.com",
-    "areaServed" : "USA"
+    "areaServed" : "countrycode:USA"
 }

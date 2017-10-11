@@ -13,7 +13,7 @@
         "streetAddress": "Avenue Louis-Ruchonnet 16",
         "addressLocality": "Lausanne",
         "postalCode": "CH-1003",
-        "addressCountry": "CHE"
+        "addressCountry": "countrycode:CHE"
     },
     "areaServed" : "Europe",
     "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld",
