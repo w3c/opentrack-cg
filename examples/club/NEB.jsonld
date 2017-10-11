@@ -16,7 +16,7 @@
         "streetAddress": "281 Prince Regent Lane",
         "addressLocality": "London",
         "postalCode": "E13 8SD",
-        "addressCountry": "country:GBR"
+        "addressCountry": "countrycode:GBR"
     },
     "sponsor": "Asics",
     "athlete": [

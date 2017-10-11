@@ -122,7 +122,7 @@
     "athlete"           : "ath:athlete" ,
     "captain"           : "ath:captain" ,
     "location"          : "schema:location" , 
-    "areaServed"        : "schema:areaServed" ,
+    "areaServed"        : { "schema:areaServed" , "@type": "@vocab" },
     "member"            : "schema:member",
     "requiredMinAge"    : { "@id": "schema:requiredMinAge", "@type": "xsd:integer" },
     "requiredMaxAge"    : { "@id": "schema:requiredMaxAge", "@type": "xsd:integer" },
