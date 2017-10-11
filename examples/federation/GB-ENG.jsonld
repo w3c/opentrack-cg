@@ -14,9 +14,9 @@
         "addressCountry": "countrycode:GBR"
     },
     "areaServed" : "England",
-    "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld",
+    "memberOf": { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" },
     "member": [
-        "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
-        "http://w3c.github.io/opentrack-cg/examples/club/THH.jsonld"
+        { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld" },
+        { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/THH.jsonld" }
     ]
 }

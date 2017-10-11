@@ -14,5 +14,5 @@
         "addressCountry": "countrycode:GBR"
     },
     "areaServed" : "Northern Ireland",
-    "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+    "memberOf": { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" }
 }
