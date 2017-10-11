@@ -5,7 +5,7 @@
     
     "name" : "Great Britain National Team - Olympic Games 2012",
     "alternateName" : "GBR",               
-    "nationality" : "country:GBR",                       
+    "nationality" : "countrycode:GBR",                       
     "federation" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" }
 }
 
