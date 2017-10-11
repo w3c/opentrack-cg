@@ -11,6 +11,7 @@
     "feature"       : "http://purl.org/athletics/feature#",
     "fed"           : "http://purl.org/athletics/federation#",
     "best"          : "http://purl.org/athletics/best#",
+    "timekeeping"   : "http://purl.org/athletics/timekeeping#",
     "qudt"          : "http://qudt.org/schema/qudt/",
     "unit"          : "http://qudt.org/vocab/unit/",
 

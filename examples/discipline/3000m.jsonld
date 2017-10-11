@@ -5,5 +5,9 @@
     "name": "3000 metres",
     "descriptition": "Track race of 3000 m distance",
     "raceCompetitionType": "RaceIndividual",
-    "distance": "3000 m"
+    "distance" : {
+        "@type" : "QuantitativeValue",
+        "value" : "3000",
+        "unitCode" : "MTR"
+    }
 }
