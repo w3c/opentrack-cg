@@ -15,7 +15,7 @@
         "postalCode": "CH-1003",
         "addressCountry": "countrycode:CHE"
     },
-    "areaServed" : "Europe",
+    "areaServed" : "continent:EUROPE",
     "memberOf": { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld" },
     "member": [
         { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/ALB.jsonld" },

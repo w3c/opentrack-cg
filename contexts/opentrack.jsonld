@@ -15,7 +15,8 @@
     "qudt"          : "http://qudt.org/schema/qudt/",
     "unit"          : "http://qudt.org/vocab/unit/",
 
-    "countrycode"       : "http://publications.europa.eu/resource/authority/country/",
+    "countrycode"   : "http://publications.europa.eu/resource/authority/country/",
+    "continent"     : "http://publications.europa.eu/resource/authority/continent/",
         
     "Organization"  : "schema:Organization",
     "Person"        : "schema:Person",

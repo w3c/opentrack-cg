@@ -22,12 +22,12 @@
             "streetAddress": "Olympisch Stadion 2",
             "addressLocality": "Amsterdam",
             "postalCode": "1076 DE",
-            "addressCountry": "NL"
+            "addressCountry": "countrycode:NDL"
         }
     },
     "startDate": "2016-06-06",
     "endDate": "2016-06-10",
-    "status": "Finished",
+    "status": "event:Finished",
     "organizer": { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld" },
     "category": { "@id" : "http://w3c.github.io/opentrack-cg/examples/category/SEN.jsonld" },
     "division": [

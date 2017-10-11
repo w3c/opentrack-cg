@@ -2259,7 +2259,7 @@ Standard categories are combinations of gender and age-range. The following pred
 
 Each country should be represented by an IRI that includes a unique three-character *Authority code*. It is recommended using the EU [Named Authority List (NAL) of Countries](http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html), that relays on the [ISO 3166-1/alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1) positions in case the country is present in the ISO standard. A traceability of this codes creation is ensured and historical relationships are also offered.
 
-The IRI of countries will be `http://publications.europa.eu/resource/authority/country/{countrycode}`. The JSON-LD context will enable a `country` prefix to simplify usage, allowing the use of the following form:
+The IRI scheme of countries is `http://publications.europa.eu/resource/authority/country/{countrycode}`. The JSON-LD context enables a `countrycode` prefix to simplify usage, allowing the use of the following form:
 
 <pre class="example">
     countrycode:{countrycode}
@@ -2268,6 +2268,20 @@ The IRI of countries will be `http://publications.europa.eu/resource/authority/c
 For instance: `countrycode:ZWE` for *Zimbabwe*, `countrycode:ZAF` for *South Africa* and `countrycode:TGO` for *Togo*.
 
 Check the full list of authority country codes at [http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html](http://publications.europa.eu/mdr/resource/authority/country/html/countries-eng.html).
+
+
+### Continent
+
+If we need to represent a supranational spatial coverage (for instance, when defining the `areaServed` of organisations), it is recommended using the EU [Named Authority List (NAL) of Continents](http://publications.europa.eu/mdr/resource/authority/continent/html/continents-eng.html). These are be represented in a similar way than countries.
+
+The IRI scheme of continents is `http://publications.europa.eu/resource/authority/continent/{continentcode}`. The JSON-LD context enables a `continent` prefix to simplify usage, allowing the use of the following form:
+
+<pre class="example">
+    continent:{continentcode}
+</pre>
+
+Examples: `continent:AFRICA` for *Africa*, `continent:AMERICA` for *America*, `continent:ANTARCTICA` for *Antarctica*, `continent:ASIA` for *Asia*, `continent:EUROPE` for *Europe* and `continent:OCEANIA` for *Oceania*.
+
 
 ### Competition Status
 
