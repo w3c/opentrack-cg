@@ -5,14 +5,18 @@
 
     
     "name" : "EA U15 Boys Pole Vault – Final",
-    "startingHeight" : "2.50 m",
+    "startingHeight" : {
+        "@type" : "QuantitativeValue",
+        "value" : "2.50",
+        "unitCode" : "MTR"
+    },
     "increasingHeight" : "2.70, 2.90, 3.00 increasing 10 cms.",
     "competitorHeightTrials" : [ 
        {
           "@type" : "CompetitorHeightTrials",
           "competitor" : {
             "bibIdentifier" : "678",
-            "category" : "U15B",
+            "category" : { "name" : "U15B" },
             "agent" : {
               "@type" : "Athlete",
               "name" : "Joshua Ilyk",
@@ -22,22 +26,38 @@
           "trialsAtHeight" : [
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "2.50 m",
+              "targetHeight" : {
+                  "@type" : "QuantitativeValue",
+                  "value" : "2.50",
+                  "unitCode" : "MTR"
+              },
               "competitionFeature" : "feature:NH"
             },
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "2.70 m",
+              "targetHeight" : {
+                  "@type" : "QuantitativeValue",
+                  "value" : "2.70",
+                  "unitCode" : "MTR"
+              },
               "competitionFeature" : "feature:NH"
             },
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "2.90 m",
+              "targetHeight" : {
+                  "@type" : "QuantitativeValue",
+                  "value" : "2.90",
+                  "unitCode" : "MTR"
+              } ,
               "competitionFeature" : "feature:NH"
             },
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "3.00 m",
+              "targetHeight" : {
+                  "@type" : "QuantitativeValue",
+                  "value" : "3.00",
+                  "unitCode" : "MTR"
+              },
               "fieldTrial" : [
                 {
                   "@type" : "FieldTrial",
@@ -53,7 +73,11 @@
             },
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "3.10 m",
+              "targetHeight" : {
+                  "@type" : "QuantitativeValue",
+                  "value" : "3.10",
+                  "unitCode" : "MTR"
+              },
               "fieldTrial" : [
                 {
                   "@type" : "FieldTrial",
@@ -64,7 +88,11 @@
             },
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "3.20 m",
+              "targetHeight" : {
+                  "@type" : "QuantitativeValue",
+                  "value" : "3.20",
+                  "unitCode" : "MTR"
+              },
               "fieldTrial" : [
                 {
                   "@type" : "FieldTrial",
@@ -80,7 +108,11 @@
             },
             {
               "@type" : "TrialsAtHeight",
-              "targetHeight" : "3.30 m",
+              "targetHeight" : {
+                  "@type" : "QuantitativeValue",
+                  "value" : "3.30",
+                  "unitCode" : "MTR"
+              },
               "fieldTrial" : [
                 {
                   "@type" : "FieldTrial",

@@ -3,6 +3,6 @@
     "@id" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.json",
 
     "@type" :  "Timekeeping",
-    "timekeepingType" : "FAT",
+    "timekeepingType" : "timekeeping:FAT",
     "name" : "Generic Fully Automated System"
 }

@@ -9,7 +9,7 @@
           "@type" : "CompetitorDistanceTrials",
           "competitor" : {
             "bibIdentifier" : "549",
-            "category" : "U17M",
+            "category" : { "name" : "U17M" },
             "agent" : {
               "@type" : "Athlete",
               "name" : "Matt Blandford",
@@ -22,7 +22,11 @@
               "attemptNumber" : 1,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "48.05 m"
+                "distance" : {
+                    "@type" : "QuantitativeValue",
+                    "value" : "48.05",
+                    "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -30,7 +34,11 @@
               "attemptNumber" : 2,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "55.69 m"
+                "distance" : {
+                    "@type" : "QuantitativeValue",
+                    "value" : "55.69",
+                    "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -38,7 +46,11 @@
               "attemptNumber" : 3,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "57.69 m"
+                "distance" : {
+                    "@type" : "QuantitativeValue",
+                    "value" : "57.69",
+                    "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -46,7 +58,11 @@
               "attemptNumber" : 4,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "53.28 m"
+                "distance" : {
+                    "@type" : "QuantitativeValue",
+                    "value" : "53.28",
+                    "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -54,7 +70,11 @@
               "attemptNumber" : 5,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "59.76 m"
+                "distance" : {
+                    "@type" : "QuantitativeValue",
+                    "value" : "59.76",
+                    "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -68,7 +88,7 @@
           "@type" : "CompetitorDistanceTrials",
           "competitor" : {
             "bibIdentifier" : "792",
-            "category" : "U17M",
+            "category" : { "name" : "U17M" },
             "agent" : {
               "@type" : "Athlete",
               "name" : "Gurtal Randhawa",
@@ -81,7 +101,11 @@
               "attemptNumber" : 1,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "43.30 m"
+                "distance" : {
+                    "@type" : "QuantitativeValue",
+                    "value" : "43.30",
+                    "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -89,7 +113,11 @@
               "attemptNumber" : 2,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "42.46 m"
+                "distance" : {
+                    "@type" : "QuantitativeValue",
+                    "value" : "42.46",
+                    "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -97,7 +125,11 @@
               "attemptNumber" : 3,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "42.70 m"
+                "distance" : {
+                    "@type" : "QuantitativeValue",
+                    "value" : "42.70",
+                    "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -105,7 +137,11 @@
               "attemptNumber" : 4,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "45.08 m"
+                "distance" : {
+                    "@type" : "QuantitativeValue",
+                    "value" : "45.08",
+                    "unitCode" : "MTR"
+                }
               }
             },
             {
@@ -118,7 +154,11 @@
               "attemptNumber" : 6,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : "44.33 m"
+                "distance" : {
+                    "@type" : "QuantitativeValue",
+                    "value" : "44.33",
+                    "unitCode" : "MTR"
+                }
               }
             }
           ]
