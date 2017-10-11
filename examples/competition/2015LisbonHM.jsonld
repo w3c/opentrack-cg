@@ -24,10 +24,10 @@
             "streetAddress": "Rossio dos Olivais, Lote 2.13.01A",
             "addressLocality": "Lisbon",
             "postalCode": "1990-231",
-            "addressCountry": "PT"
+            "addressCountry": "countrycode:PT"
         }
     },
     "startDate": "2017-04-17",
     "endDate": "2017-04-17",
-    "status": "Finished"
+    "status": "event:Finished"
 }

@@ -6,5 +6,5 @@
     "description": "Open class with no upper age limit but some limitations on younger people competing in endurance events. Female gender.",
     "requiredMinAge" : 16,
     "requiredGender" : "Female",
-    "recognizingAuthority" : "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld"
+    "recognizingAuthority" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld" }
 }

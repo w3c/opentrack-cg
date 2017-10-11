@@ -20,9 +20,9 @@
     },
     "sponsor": "Asics",
     "athlete": [
-        "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
-        "http://w3c.github.io/opentrack-cg/examples/athlete/002Athlete2.jsonld",
-        "http://w3c.github.io/opentrack-cg/examples/athlete/003Athlete3.jsonld"
+        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld" },
+        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/002Athlete2.jsonld" },
+        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/003Athlete3.jsonld" }
     ],
-    "federation" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" 
+    "federation" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" }
 }
