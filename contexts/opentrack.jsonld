@@ -220,7 +220,6 @@
     "raceCompetitionType"    : { "@id" : "ath:raceCompetitionType", "@type" : "@vocab" },
     "trackAndFieldVenueType" : { "@id" : "ath:trackAndFieldVenueType", "@type" : "@vocab" },
     "timekeepingType"        : { "@id" : "ath:timekeepingType", "@type" : "@vocab" },
-    "recordOrBestType"       : { "@id" : "ath:recordOrBestType", "@type" : "@vocab" },
 
     "Individual"        : "ath:individualRace",
     "Relays"            : "ath:relayRace",
