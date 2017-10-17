@@ -1514,7 +1514,7 @@ Results may be under different statuses depending on the stage of the competitio
 | `startingOrder` | `ath:startingOrder` | Competitor's order in the start list of a competition stage. | Integer |
 | `trackLane` | `ath:trackLane` | Track lane number assigned to a competitor in case of certain track disciplines. | Integer |
 | `rank` | `ath:rank` | Position in the ranking of results. | Integer |
-| `recordOrBest` | `ath:recordOrBest` | Type of record or best performance related to a result (e.g., World Record, National Record, Personal Best, etc.). | [Record or Best Type](#record-or-best-type) |
+| `recordOrBest` | `ath:recordOrBest` | Type of record or best performance related to a result (e.g., World Record, National Record, Personal Best, etc.). | [Record or Best](#record-or-best) |
 | `created` | `dc:created` | Exact date and time when the results were produced. | [DateTime](#datetime) |
 | `modified` | `dc:modified` | Exact date and time when the results were updated. | [DateTime](#datetime) |
 | `performance` | `ath:performance` | Measure to quantify the performance of the competitor after a competition stage linked to results.  | [Performance](#performance) |
@@ -1565,7 +1565,7 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 |:--- |:-------- |:----------- |:---------- |
 | `identifier` | `schema:identifier` | Unique character string to identify a performance. | Text |
 | `windAssistance` | `ath:windAssistance` | Wind speed at the moment of registering the performance (it could be either positive or negative). | Text |
-| `recordOrBest` | `ath:recordOrBest` | Type of record or best performance related to a result in a competition (e.g., World Record, National Record, Personal Best, etc.). | [Record or Best Type](#record-or-best-type) |
+| `recordOrBest` | `ath:recordOrBest` | Type of record or best performance related to a result in a competition (e.g., World Record, National Record, Personal Best, etc.). | [Record or Best](#record-or-best) |
 | `sportsDiscipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#discipline) |
 | `date` | `dc:date` | Date when the athlete achieved a performance. | [Date](#date) |
 | `agent` | `schema:agent` | Athlete or team that achieved the performance. | [Athlete](#athlete) or [Sports Team](#sports-team) |
@@ -1642,6 +1642,40 @@ Example of performance in a sprint event:
     }
 }                                     
 </pre>
+
+
+### Record or Best
+
+<dfn>Record or Best</dfn> is an athlete's best performance according to specific criteria set by a [Sports Governing Body](#sports-governing-body). For instance, World Records are ratified by the IAAF.
+
+Both official and unofficial records may be kept by statisticians. 
+
+* class: `ath:RecordOrBest`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `name` | `schema:name` | Descriptive text naming a record or best. | Text |
+| `identifier` | `schema:identifier` | Unique character string to identify a record or best. | Text |
+| `spatial` | `dct:spatial` | Spatial coverage of the record or best (e.g. in the case of area records, the country, continent or region). | [Country](#country), [Continent](#continent) or [AdministrativeArea](http://schema.org/AdministrativeArea)  |
+| `temporal` | `dct:temporal` | Temporal coverage of the record or best (e.g., a 2016-2017 season best) | [PeriodOfTime](http://purl.org/dc/terms/PeriodOfTime) |
+| `recognizingAuthority` | `ath:recognizingAuthority` | Governing body or organization that recognizes a record.  | [Person](#person) or [Organization](#organization) |
+| `category` | `ath:category` | The specific category for this record or best (e.g., *M35*, *U18 Male*,  etc). | [Category](#category) |
+
+<pre class="example">
+{
+    "recordOrBest" : {
+        "@type" : "RecordOrBest",
+        "name" : "European Record",
+        "identifier" : "ER",
+        "spatial" : "continent:Europe",
+        "recordOrBestType" : "best:AR",
+        "recognizingAuthority" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld" }
+    }
+}                                     
+</pre>
+
+Records or bests can be defined on demand. There is a predefined list of [common record or best types](#record-or-best-type).
+
 
 ### Qualification Criteria
 
