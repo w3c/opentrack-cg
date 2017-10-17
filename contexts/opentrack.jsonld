@@ -42,6 +42,7 @@
     "UnitRace"              : "ath:UnitRace",    
     "Result"                : "ath:Result",
     "Performance"           : "ath:Performance",
+    "RecordOrBest"          : "ath:RecordOrBest",
     "DistancePerformance"   : "ath:DistancePerformance",
     "PointsPerformance"     : "ath:PointsPerformance",
     "TimePerformance"       : "ath:TimePerformance",    
@@ -219,6 +220,7 @@
     "raceCompetitionType"    : { "@id" : "ath:raceCompetitionType", "@type" : "@vocab" },
     "trackAndFieldVenueType" : { "@id" : "ath:trackAndFieldVenueType", "@type" : "@vocab" },
     "timekeepingType"        : { "@id" : "ath:timekeepingType", "@type" : "@vocab" },
+    "recordOrBestType"       : { "@id" : "ath:recordOrBestType", "@type" : "@vocab" },
 
     "Individual"        : "ath:individualRace",
     "Relays"            : "ath:relayRace",
