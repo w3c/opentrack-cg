@@ -634,6 +634,11 @@ schema:location rdf:type owl:ObjectProperty .
                rdfs:range rdfs:Literal .
 
 
+###  http://purl.org/athletics#disqualificationReason
+:disqualificationReason rdf:type owl:DatatypeProperty ;
+               rdfs:range rdfs:Literal .
+
+
 ###  http://purl.org/athletics#byPerformance
 :byPerformance rdf:type owl:DatatypeProperty ;
                rdfs:domain :QualificationCriteria ;

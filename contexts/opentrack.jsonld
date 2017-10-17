@@ -213,6 +213,7 @@
     "obstacleHeight"    : { "@id" : "ath:obstacleHeight" , "@type": "xsd:decimal" },
     "discusDiameter"    : { "@id" : "ath:discusDiameter" , "@type": "xsd:decimal" },
     "hammerLength"      : { "@id" : "ath:hammerLength" , "@type": "xsd:decimal" },
+    "disqualificationReason" : "ath:disqualificationReason" ,
 
     "value"             : { "@id" : "schema:value", "@type": "xsd:decimal" },
     "unitCode"          : "schema:unitCode",

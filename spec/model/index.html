@@ -1470,6 +1470,7 @@ A <dfn>Competitor</dfn> represents the participation of competitors (teams or at
 | `category` | `ath:category` | The specific category where a this entry is included in the competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Category](#category) |
 | `inCompetition` | `ath:inCompetition` | Competition in which a competitor takes part. | [Competition](#competition) |
 | `bestPerformance` | `ath:bestPerformance` | Best performance for the discipline related to the competition. | [Performance](#performance) |
+| `disqualificationReason` | `ath:disqualificationReason` | Rule article number or text with reasons for an athlete's disqualification. | Text |
 
 Example of entry in a competition:
 <pre class="example">
@@ -1519,6 +1520,8 @@ Results may be under different statuses depending on the stage of the competitio
 | `modified` | `dc:modified` | Exact date and time when the results were updated. | [DateTime](#datetime) |
 | `performance` | `ath:performance` | Measure to quantify the performance of the competitor after a competition stage linked to results.  | [Performance](#performance) |
 | `award` | `schema:award` | Award related to the result achieved by the athlete. | Text |
+| `disqualificationReason` | `ath:disqualificationReason` | Rule article number or text with reasons for an athlete's disqualification. | Text |
+
 
 <pre class="example">
 {
