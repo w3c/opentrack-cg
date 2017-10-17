@@ -187,6 +187,7 @@
     "trackLane"         : { "@id" : "ath:trackLane", "@type": "xsd:integer"  },
     "rank"              : { "@id" : "ath:rank", "@type": "xsd:integer"  },
     "recordOrBest"      : { "@id" : "ath:recordOrBest" , "@type" : "@vocab" },
+    "spatial"           : { "@id" : "dcterms:spatial" , "@type" : "@vocab" },
     "created"           : { "@id" : "dcterms:created", "@type": "xsd:datetime"  },
     "modified"          : { "@id" : "dcterms:modified", "@type": "xsd:datetime"  },
     "performance"       : "ath:performance" ,
