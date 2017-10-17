@@ -543,14 +543,6 @@ xsd:time rdf:type rdfs:Datatype .
                  skos:definition "Type of timekeeping method used (FAT, HT, TST)."@en .
 
 
-###  http://purl.org/athletics#timingDevice
-:timingDevice rdf:type owl:ObjectProperty ;
-              rdfs:domain :Timekeeping ;
-              rdfs:isDefinedBy <http://purl.org/athletics#> ;
-              rdfs:label "timing device"@en ;
-              skos:definition "Device required to run the timekeeping system."@en .
-
-
 ###  http://purl.org/athletics#trackAndFieldVenueType
 :trackAndFieldVenueType rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf dct:type ;
