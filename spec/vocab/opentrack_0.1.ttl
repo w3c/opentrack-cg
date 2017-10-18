@@ -1,7 +1,7 @@
 @prefix : <http://purl.org/athletics#> .
+@prefix bbc: <http://www.bbc.co.uk/ontologies/sport/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix bbc: <http://www.bbc.co.uk/ontologies/sport/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -11,18 +11,18 @@
 @base <http://purl.org/athletics#> .
 
 <http://purl.org/athletics#> rdf:type owl:Ontology ;
-                              owl:versionIRI <http://purl.org/athletics/0.0.1#> ;
+                              owl:versionIRI <http://purl.org/athletics/0.1#> ;
                               dct:description "The OpenTrack (&Field) Vocabulary defines a set of concepts and terms for describing competitions in Athletics. This vocabulary includes classes and terms related to competitions (events), competitors, and competition management (results, participation, etc.)."@en ;
                               dct:issued "2017-06-10"^^xsd:date ;
                               dct:creator "Martin Alvarez-Espinar" ;
-                              <http://purl.org/vocab/vann/example> :Asset ;
                               dct:license <https://www.w3.org/community/about/agreements/final/> ;
                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "ath" ;
                               rdfs:label "Opentrack Ontology"@en ;
                               owl:versionInfo "0.1" ;
                               dct:contributor "W3C Opentrack Community Group" ;
                               rdfs:comment "This is the RDF ontology for Opentrack version 0.1 (working draft)."@en ;
-                              <http://purl.org/vocab/vann/preferredNamespaceUri> <http://purl.org/athletics#> .
+                              <http://purl.org/vocab/vann/preferredNamespaceUri> <http://purl.org/athletics#> ;
+                              <http://purl.org/vocab/vann/example> :Athlete .
 
 #################################################################
 #    Annotation properties
@@ -169,12 +169,6 @@ xsd:time rdf:type rdfs:Datatype .
                 skos:definition "Diameter of a throwing discus"@en .
 
 
-###  http://purl.org/athletics#distance
-:distance rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf schema:distance ;
-          rdfs:domain :DistancePerformance .
-
-
 ###  http://purl.org/athletics#division
 :division rdf:type owl:ObjectProperty ;
           rdfs:range :Competition ;
@@ -272,10 +266,7 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://purl.org/athletics#increasingHeight
 :increasingHeight rdf:type owl:ObjectProperty ;
-                  rdfs:domain :UnitHeightCompetition ;
-                  rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                  rdfs:label "increasing height"@en ;
-                  skos:definition "The subsequent heights to which the bar will be raised at the end of each round of trials within a vertical jumps unit competition."@en .
+                  rdfs:domain :UnitHeightCompetition .
 
 
 ###  http://purl.org/athletics#javelinLength
@@ -595,6 +586,10 @@ dct:date rdf:type owl:ObjectProperty .
 dct:type rdf:type owl:ObjectProperty .
 
 
+###  http://schema.org/agent
+schema:agent rdf:type owl:ObjectProperty .
+
+
 ###  http://schema.org/distance
 schema:distance rdf:type owl:ObjectProperty .
 
@@ -607,12 +602,32 @@ schema:duration rdf:type owl:ObjectProperty .
 schema:exerciseCourse rdf:type owl:ObjectProperty .
 
 
+###  http://schema.org/gender
+schema:gender rdf:type owl:ObjectProperty .
+
+
 ###  http://schema.org/height
 schema:height rdf:type owl:ObjectProperty .
 
 
 ###  http://schema.org/location
 schema:location rdf:type owl:ObjectProperty .
+
+
+###  http://schema.org/member
+schema:member rdf:type owl:ObjectProperty .
+
+
+###  http://schema.org/memberOf
+schema:memberOf rdf:type owl:ObjectProperty .
+
+
+###  http://schema.org/nationality
+schema:nationality rdf:type owl:ObjectProperty .
+
+
+###  http://schema.org/weight
+schema:weight rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -631,30 +646,46 @@ schema:location rdf:type owl:ObjectProperty .
 ###  http://purl.org/athletics#bibIdentifier
 :bibIdentifier rdf:type owl:DatatypeProperty ;
                rdfs:domain :Competitor ;
-               rdfs:range rdfs:Literal .
-
-
-###  http://purl.org/athletics#disqualificationReason
-:disqualificationReason rdf:type owl:DatatypeProperty ;
-               rdfs:range rdfs:Literal .
+               rdfs:range rdfs:Literal ;
+               rdfs:isDefinedBy <http://purl.org/athletics#> ;
+               rdfs:label "bib identifier"@en ;
+               skos:definition "Text or number identifying the competitor, printed on competitor's bib."@en .
 
 
 ###  http://purl.org/athletics#byPerformance
 :byPerformance rdf:type owl:DatatypeProperty ;
                rdfs:domain :QualificationCriteria ;
-               rdfs:range xsd:integer .
+               rdfs:range xsd:integer ;
+               rdfs:isDefinedBy <http://purl.org/athletics#> ;
+               rdfs:label "by performance"@en ;
+               skos:definition "Number of competitors that are qualified in a round by best performance."@en .
 
 
 ###  http://purl.org/athletics#byPlaceOrStandard
 :byPlaceOrStandard rdf:type owl:DatatypeProperty ;
                    rdfs:domain :QualificationCriteria ;
-                   rdfs:range xsd:integer .
+                   rdfs:range xsd:integer ;
+                   rdfs:isDefinedBy <http://purl.org/athletics#> ;
+                   rdfs:label "by place or standard"@en ;
+                   skos:definition "Number of competitors that are qualified in a round by rank (track events) or standard (field events)."@en .
+
+
+###  http://purl.org/athletics#disqualificationReason
+:disqualificationReason rdf:type owl:DatatypeProperty ;
+                        rdfs:range rdfs:Literal .
 
 
 ###  http://purl.org/athletics#entryRequirements
 :entryRequirements rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Competition ;
-                   rdfs:range rdfs:Literal .
+                   rdfs:range rdfs:Literal ;
+                   rdfs:isDefinedBy <http://purl.org/athletics#> ;
+                   rdfs:label "entry requirements"@en ;
+                   skos:definition "Requirements to register in the competition."@en .
+
+
+###  http://purl.org/athletics#increasingHeight
+:increasingHeight rdf:type owl:DatatypeProperty .
 
 
 ###  http://purl.org/athletics#isSubstituteTrial
@@ -669,7 +700,10 @@ schema:location rdf:type owl:ObjectProperty .
 ###  http://purl.org/athletics#points
 :points rdf:type owl:DatatypeProperty ;
         rdfs:domain :PointsPerformance ;
-        rdfs:range xsd:decimal .
+        rdfs:range xsd:decimal ;
+        rdfs:isDefinedBy <http://purl.org/athletics#/> ;
+        rdfs:label "points"@en ;
+        skos:definition "Score points achieved in a sports competition."@en .
 
 
 ###  http://purl.org/athletics#previousFamilyName
@@ -693,37 +727,55 @@ schema:location rdf:type owl:ObjectProperty .
 ###  http://purl.org/athletics#rank
 :rank rdf:type owl:DatatypeProperty ;
       rdfs:domain :Result ;
-      rdfs:range xsd:integer .
+      rdfs:range xsd:integer ;
+      rdfs:isDefinedBy <http://purl.org/athletics#> ;
+      rdfs:label "rank"@en ;
+      skos:definition "Position in the ranking (there may be several competitors with the same rank)."@en .
 
 
 ###  http://purl.org/athletics#reactionTime
 :reactionTime rdf:type owl:DatatypeProperty ;
               rdfs:domain :TimePerformance ;
-              rdfs:range xsd:time .
+              rdfs:range xsd:time ;
+              rdfs:isDefinedBy <http://purl.org/athletics#> ;
+              rdfs:label "reaction time"@en ;
+              skos:definition "Reaction time is the interval time it takes a runner to respond to the start signal and begin leaving the starting blocks. Reaction time should be expressed as ISO 8601 duration format (e.g., 00:00:00.232 for 232 milliseconds)."@en .
 
 
 ###  http://purl.org/athletics#startingOrder
 :startingOrder rdf:type owl:DatatypeProperty ;
                rdfs:domain :Result ;
-               rdfs:range xsd:integer .
+               rdfs:range xsd:integer ;
+               rdfs:isDefinedBy <http://purl.org/athletics#> ;
+               rdfs:label "starting order"@en ;
+               skos:definition "Competitor's order in the start list."@en .
 
 
 ###  http://purl.org/athletics#time
 :time rdf:type owl:DatatypeProperty ;
       rdfs:domain :TimePerformance ;
-      rdfs:range xsd:time .
+      rdfs:range xsd:time ;
+      rdfs:isDefinedBy <http://purl.org/athletics#> ;
+      rdfs:label "time"@en ;
+      skos:definition "Performance accomplished in a timed competition, expressed as ISO 8601 duration format (e.g., 04:45:38.000 for 4 hours, 45 minutes and 38.000 seconds)."@en .
 
 
 ###  http://purl.org/athletics#trackLane
 :trackLane rdf:type owl:DatatypeProperty ;
            rdfs:domain :Result ;
-           rdfs:range rdfs:Literal .
+           rdfs:range rdfs:Literal ;
+           rdfs:isDefinedBy <http://purl.org/athletics#> ;
+           rdfs:label "track lane"@en ;
+           skos:definition "Track lane number assigned to a competitor in case of certain track disciplines."@en .
 
 
 ###  http://purl.org/athletics#transponderIdentifier
 :transponderIdentifier rdf:type owl:DatatypeProperty ;
                        rdfs:domain :Competitor ;
-                       rdfs:range rdfs:Literal .
+                       rdfs:range rdfs:Literal ;
+                       rdfs:isDefinedBy <http://purl.org/athletics#/> ;
+                       rdfs:label "transponder identifier"@en ;
+                       skos:definition "Text or code identifying the competitor by a transponder system."@en .
 
 
 ###  http://purl.org/dc/terms/created
@@ -770,17 +822,25 @@ dct:modified rdf:type owl:DatatypeProperty .
 
 ###  http://purl.org/athletics#Competition
 :Competition rdf:type owl:Class ;
-             rdfs:subClassOf schema:SportsEvent .
+             rdfs:subClassOf schema:SportsEvent ;
+             dct:description "A Competition, Athletics Competition or Sports Competition is an event in which Athletes or Teams take part in order to find out who is best at a particular sports activity."@en ;
+             rdfs:isDefinedBy <http://purl.org/athletics#> ;
+             rdfs:label "Competition"@en .
 
 
 ###  http://purl.org/athletics#CompetitionRound
 :CompetitionRound rdf:type owl:Class ;
-                  rdfs:subClassOf :Competition .
+                  rdfs:subClassOf :Competition ;
+                  dct:description "A Competition Round is each sub-event of a Multi Round Competition. Rounds in competitions have one of more Unit Competitions (e.g., a heat in a qualifying round, the race in the 200m final round) where competitors are distributed. The number and type of rounds depend on the competition rules for each discipline. For instance, track sprint competitions with many participants may have various heats at preliminary round, several heats at first round, two semifinals, and a final. Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races. Examples of Competition Rounds: 110m Hurdles Men Preliminary Round Heat 1, 10,000m Men Final, and 110 Hurdles Man Semifinal 1."@en ;
+                  rdfs:isDefinedBy <http://purl.org/athletics#> ;
+                  rdfs:label "Competition Round"@en .
 
 
 ###  http://purl.org/athletics#CompetitionSeries
 :CompetitionSeries rdf:type owl:Class ;
-                   rdfs:subClassOf schema:EventSeries .
+                   rdfs:subClassOf schema:EventSeries ;
+                   dct:description "Competition Series are competitive events held periodically (for instance, the Summer Olympic Games have recurring events organized every four years)."@en ;
+                   rdfs:label "Competition Series"@en .
 
 
 ###  http://purl.org/athletics#CompetitiveAudience
@@ -849,7 +909,10 @@ dct:modified rdf:type owl:DatatypeProperty .
 
 ###  http://purl.org/athletics#DivisionalCompetition
 :DivisionalCompetition rdf:type owl:Class ;
-                       rdfs:subClassOf :Competition .
+                       rdfs:subClassOf :Competition ;
+                       dct:description "A Divisional Competition is a competition that is divided into a number of competitions. For instace, The Boston Marathon is divided in two divisions: Open/overall division and Masters division."@en ;
+                       rdfs:isDefinedBy <http://purl.org/athletics#> ;
+                       rdfs:label "Divisional Competition"@en .
 
 
 ###  http://purl.org/athletics#FieldTrial
@@ -944,17 +1007,26 @@ dct:modified rdf:type owl:DatatypeProperty .
 
 ###  http://purl.org/athletics#MultiRoundCompetition
 :MultiRoundCompetition rdf:type owl:Class ;
-                       rdfs:subClassOf :Competition .
+                       rdfs:subClassOf :Competition ;
+                       dct:description "A Multi Round Competition is an athletic event organised as a sequence of rounds. For instance, track and field events are usually structured in qualification rounds (i.e, preliminary rounds, qualification rounds, semifinals and final)."@en ;
+                       rdfs:isDefinedBy <http://purl.org/athletics#> ;
+                       rdfs:label "Multi Round Competition"@en .
 
 
 ###  http://purl.org/athletics#MultiStageCompetition
 :MultiStageCompetition rdf:type owl:Class ;
-                       rdfs:subClassOf :Competition .
+                       rdfs:subClassOf :Competition ;
+                       dct:description "A Multi Stage Competition is an athletic event organised as a set of stages. For instance, The Diamond League and the Surrey Cross Country League."@en ;
+                       rdfs:isDefinedBy <http://purl.org/athletics#> ;
+                       rdfs:label "MultiStage Competition"@en .
 
 
 ###  http://purl.org/athletics#MultidisciplineCompetition
 :MultidisciplineCompetition rdf:type owl:Class ;
-                            rdfs:subClassOf :Competition .
+                            rdfs:subClassOf :Competition ;
+                            dct:description "A Multidiscipline Competition is a competition that incorporates a number of different event disciplines. For instance, the 2012 London Summer Olympic Games 2012, and the 2016 European Athletics Championships."@en ;
+                            rdfs:isDefinedBy <http://purl.org/athletics#> ;
+                            rdfs:label "Multidiscipline Competition"@en .
 
 
 ###  http://purl.org/athletics#Pentathlon
@@ -1022,6 +1094,13 @@ dct:modified rdf:type owl:DatatypeProperty .
              rdfs:label "Race Walking"@en ;
              skos:broader :Race ;
              skos:definition "Racewalking, or race walking, is a long-distance discipline where one foot must appear to be in contact with the ground at all times."@en .
+
+
+###  http://purl.org/athletics#RecordOrBest
+:RecordOrBest rdf:type owl:Class ;
+              dct:description "Record or Best is an athlete's best performance according to specific criteria set by a Sports Governing Body. For instance, World Records are ratified by the IAAF."@en ;
+              rdfs:isDefinedBy <http://purl.org/athletics#> ;
+              rdfs:label "Record or Best"@en .
 
 
 ###  http://purl.org/athletics#Result
@@ -1156,12 +1235,16 @@ dct:modified rdf:type owl:DatatypeProperty .
 
 ###  http://purl.org/athletics#UnitCompetition
 :UnitCompetition rdf:type owl:Class ;
-                 rdfs:subClassOf :Competition .
+                 rdfs:subClassOf :Competition ;
+                 dct:description "A Unit Competition is a unitary competition defined by specific sports rules (for instance, the Heat 1 race at the semifinals of 100m event in the Olympic Games). Competition Rounds have one or more Unit Competitions."@en ;
+                 rdfs:isDefinedBy <http://purl.org/athletics#> ;
+                 rdfs:label "Competition Round"@en .
 
 
 ###  http://purl.org/athletics#UnitDistanceCompetition
 :UnitDistanceCompetition rdf:type owl:Class ;
                          rdfs:subClassOf :UnitFieldCompetition ;
+                         rdfs:isDefinedBy <http://purl.org/athletics#> ;
                          rdfs:label "Unit Distance Competition"@en ;
                          skos:definition "A Unit Distance Competition is a unitary competition for distance field disciplines (Horizontal Jumps and Throws)."@en .
 
@@ -1229,6 +1312,10 @@ schema:PeopleAudience rdf:type owl:Class .
 schema:Person rdf:type owl:Class .
 
 
+###  http://schema.org/Place
+schema:Place rdf:type owl:Class .
+
+
 ###  http://schema.org/PostalAddress
 schema:PostalAddress rdf:type owl:Class .
 
@@ -1273,10 +1360,6 @@ skos:Concept rdf:type owl:Class .
 skos:ConceptScheme rdf:type owl:Class .
 
 
-###  http://www.w3.org/2004/02/skos/core#DistancePerformance
-skos:DistancePerformance rdf:type owl:Class .
-
-
 ###  http://xmlns.com/foaf/0.1/Agent
 <http://xmlns.com/foaf/0.1/Agent> rdf:type owl:Class .
 
@@ -1293,359 +1376,253 @@ skos:DistancePerformance rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  http://purl.org/athletics#bibIdentifier
-:bibIdentifier rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/athletics#byPerformance
-:byPerformance rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/athletics#byPlaceOrStandard
-:byPlaceOrStandard rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/athletics#distance
-:distance rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/athletics#entryRequirements
-:entryRequirements rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/athletics#points
-:points rdf:type owl:DatatypeProperty .
-
-
-
-###  http://purl.org/athletics#rank
-:rank rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/athletics#reactionTime
-:reactionTime rdf:type owl:DatatypeProperty .
-
-
-
-###  http://purl.org/athletics#startingOrder
-:startingOrder rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/athletics#time
-:time rdf:type owl:DatatypeProperty .
-
-
-
-###  http://purl.org/athletics#trackLane
-:trackLane rdf:type owl:DatatypeProperty .
-
-
-###  http://purl.org/athletics#transponderIdentifier
-:transponderIdentifier rdf:type owl:DatatypeProperty .
-
-
 ###  http://purl.org/dc/terms/type
-dct:type rdf:type rdfs:Property .
-
+dct:type rdf:type owl:NamedIndividual ,
+                  rdfs:Property .
 
 
 ###  http://schema.org/address
-schema:address rdf:type rdfs:Property .
-
+schema:address rdf:type owl:NamedIndividual ,
+                        rdfs:Property .
 
 
 ###  http://schema.org/addressCountry
-schema:addressCountry rdf:type rdfs:Property .
-
+schema:addressCountry rdf:type owl:NamedIndividual ,
+                               rdfs:Property .
 
 
 ###  http://schema.org/addressLocality
-schema:addressLocality rdf:type rdfs:Property .
-
+schema:addressLocality rdf:type owl:NamedIndividual ,
+                                rdfs:Property .
 
 
 ###  http://schema.org/affiliation
-schema:affiliation rdf:type rdfs:Property .
-
+schema:affiliation rdf:type owl:NamedIndividual ,
+                            rdfs:Property .
 
 
 ###  http://schema.org/agent
-schema:agent rdf:type rdfs:Property .
-
+schema:agent rdf:type owl:NamedIndividual ,
+                      rdfs:Property .
 
 
 ###  http://schema.org/alternateName
-schema:alternateName rdf:type rdfs:Property .
-
+schema:alternateName rdf:type owl:NamedIndividual ,
+                              rdfs:Property .
 
 
 ###  http://schema.org/areaServed
-schema:areaServed rdf:type rdfs:Property .
-
+schema:areaServed rdf:type owl:NamedIndividual ,
+                           rdfs:Property .
 
 
 ###  http://schema.org/athlete
-schema:athlete rdf:type rdfs:Property .
-
+schema:athlete rdf:type owl:NamedIndividual ,
+                        rdfs:Property .
 
 
 ###  http://schema.org/attendee
-schema:attendee rdf:type rdfs:Property .
-
+schema:attendee rdf:type owl:NamedIndividual ,
+                         rdfs:Property .
 
 
 ###  http://schema.org/award
-schema:award rdf:type rdfs:Property .
-
+schema:award rdf:type owl:NamedIndividual ,
+                      rdfs:Property .
 
 
 ###  http://schema.org/birthDate
-schema:birthDate rdf:type rdfs:Property .
-
+schema:birthDate rdf:type owl:NamedIndividual ,
+                          rdfs:Property .
 
 
 ###  http://schema.org/birthPlace
-schema:birthPlace rdf:type rdfs:Property .
-
+schema:birthPlace rdf:type owl:NamedIndividual ,
+                           rdfs:Property .
 
 
 ###  http://schema.org/coach
-schema:coach rdf:type rdfs:Property .
-
+schema:coach rdf:type owl:NamedIndividual ,
+                      rdfs:Property .
 
 
 ###  http://schema.org/contributor
-schema:contributor rdf:type rdfs:Property .
-
+schema:contributor rdf:type owl:NamedIndividual ,
+                            rdfs:Property .
 
 
 ###  http://schema.org/description
-schema:description rdf:type rdfs:Property .
-
+schema:description rdf:type owl:NamedIndividual ,
+                            rdfs:Property .
 
 
 ###  http://schema.org/dissolutionDate
-schema:dissolutionDate rdf:type rdfs:Property .
-
+schema:dissolutionDate rdf:type owl:NamedIndividual ,
+                                rdfs:Property .
 
 
 ###  http://schema.org/distance
-schema:distance rdf:type rdfs:Property .
-
+schema:distance rdf:type owl:NamedIndividual ,
+                         rdfs:Property .
 
 
 ###  http://schema.org/duration
-schema:duration rdf:type rdfs:Property .
-
+schema:duration rdf:type owl:NamedIndividual ,
+                         rdfs:Property .
 
 
 ###  http://schema.org/endDate
-schema:endDate rdf:type rdfs:Property .
-
+schema:endDate rdf:type owl:NamedIndividual ,
+                        rdfs:Property .
 
 
 ###  http://schema.org/eventStatus
-schema:eventStatus rdf:type rdfs:Property .
-
+schema:eventStatus rdf:type owl:NamedIndividual ,
+                            rdfs:Property .
 
 
 ###  http://schema.org/exerciseCourse
-schema:exerciseCourse rdf:type rdfs:Property .
-
+schema:exerciseCourse rdf:type owl:NamedIndividual ,
+                               rdfs:Property .
 
 
 ###  http://schema.org/familyName
-schema:familyName rdf:type rdfs:Property .
-
+schema:familyName rdf:type owl:NamedIndividual ,
+                           rdfs:Property .
 
 
 ###  http://schema.org/faxNumber
-schema:faxNumber rdf:type rdfs:Property .
-
+schema:faxNumber rdf:type owl:NamedIndividual ,
+                          rdfs:Property .
 
 
 ###  http://schema.org/foundingDate
-schema:foundingDate rdf:type rdfs:Property .
-
+schema:foundingDate rdf:type owl:NamedIndividual ,
+                             rdfs:Property .
 
 
 ###  http://schema.org/gender
-schema:gender rdf:type rdfs:Property .
-
+schema:gender rdf:type owl:NamedIndividual ,
+                       rdfs:Property .
 
 
 ###  http://schema.org/geo
-schema:geo rdf:type rdfs:Property .
-
+schema:geo rdf:type owl:NamedIndividual ,
+                    rdfs:Property .
 
 
 ###  http://schema.org/givenName
-schema:givenName rdf:type rdfs:Property .
-
+schema:givenName rdf:type owl:NamedIndividual ,
+                          rdfs:Property .
 
 
 ###  http://schema.org/height
-schema:height rdf:type rdfs:Property .
-
+schema:height rdf:type owl:NamedIndividual ,
+                       rdfs:Property .
 
 
 ###  http://schema.org/identifier
-schema:identifier rdf:type rdfs:Property .
-
+schema:identifier rdf:type owl:NamedIndividual ,
+                           rdfs:Property .
 
 
 ###  http://schema.org/image
-schema:image rdf:type rdfs:Property .
-
+schema:image rdf:type owl:NamedIndividual ,
+                      rdfs:Property .
 
 
 ###  http://schema.org/location
-schema:location rdf:type rdfs:Property .
-
+schema:location rdf:type owl:NamedIndividual ,
+                         rdfs:Property .
 
 
 ###  http://schema.org/logo
-schema:logo rdf:type rdfs:Property .
-
+schema:logo rdf:type owl:NamedIndividual ,
+                     rdfs:Property .
 
 
 ###  http://schema.org/memberOf
-schema:memberOf rdf:type rdfs:Property .
-
+schema:memberOf rdf:type owl:NamedIndividual ,
+                         rdfs:Property .
 
 
 ###  http://schema.org/name
-schema:name rdf:type rdfs:Property .
-
+schema:name rdf:type owl:NamedIndividual ,
+                     rdfs:Property .
 
 
 ###  http://schema.org/nationality
-schema:nationality rdf:type rdfs:Property .
-
+schema:nationality rdf:type owl:NamedIndividual ,
+                            rdfs:Property .
 
 
 ###  http://schema.org/organizer
-schema:organizer rdf:type rdfs:Property .
-
+schema:organizer rdf:type owl:NamedIndividual ,
+                          rdfs:Property .
 
 
 ###  http://schema.org/postOfficeBoxNumber
-schema:postOfficeBoxNumber rdf:type rdfs:Property .
-
+schema:postOfficeBoxNumber rdf:type owl:NamedIndividual ,
+                                    rdfs:Property .
 
 
 ###  http://schema.org/postalCode
-schema:postalCode rdf:type rdfs:Property .
-
+schema:postalCode rdf:type owl:NamedIndividual ,
+                           rdfs:Property .
 
 
 ###  http://schema.org/requiredGender
-schema:requiredGender rdf:type rdfs:Property .
-
+schema:requiredGender rdf:type owl:NamedIndividual ,
+                               rdfs:Property .
 
 
 ###  http://schema.org/requiredMaxAge
-schema:requiredMaxAge rdf:type rdfs:Property .
-
+schema:requiredMaxAge rdf:type owl:NamedIndividual ,
+                               rdfs:Property .
 
 
 ###  http://schema.org/requiredMinAge
-schema:requiredMinAge rdf:type rdfs:Property .
-
+schema:requiredMinAge rdf:type owl:NamedIndividual ,
+                               rdfs:Property .
 
 
 ###  http://schema.org/sponsor
-schema:sponsor rdf:type rdfs:Property .
-
+schema:sponsor rdf:type owl:NamedIndividual ,
+                        rdfs:Property .
 
 
 ###  http://schema.org/startDate
-schema:startDate rdf:type rdfs:Property .
-
+schema:startDate rdf:type owl:NamedIndividual ,
+                          rdfs:Property .
 
 
 ###  http://schema.org/streetAddress
-schema:streetAddress rdf:type rdfs:Property .
-
+schema:streetAddress rdf:type owl:NamedIndividual ,
+                              rdfs:Property .
 
 
 ###  http://schema.org/telephone
-schema:telephone rdf:type rdfs:Property .
-
+schema:telephone rdf:type owl:NamedIndividual ,
+                          rdfs:Property .
 
 
 ###  http://schema.org/url
-schema:url rdf:type rdfs:Property .
-
+schema:url rdf:type owl:NamedIndividual ,
+                    rdfs:Property .
 
 
 ###  http://schema.org/weight
-schema:weight rdf:type rdfs:Property .
-
+schema:weight rdf:type owl:NamedIndividual ,
+                       rdfs:Property .
 
 
 #################################################################
 #    Annotations
 #################################################################
 
-:bibIdentifier skos:definition "Text or number identifying the competitor, printed on competitor's bib."@en ;
-               rdfs:isDefinedBy <http://purl.org/athletics#> ;
-               rdfs:label "bib identifier"@en .
-
-
-:byPerformance rdfs:isDefinedBy <http://purl.org/athletics#> ;
-               skos:definition "Number of competitors that are qualified in a round by best performance."@en ;
-               rdfs:label "by performance"@en .
-
-
-:byPlaceOrStandard skos:definition "Number of competitors that are qualified in a round by rank (track events) or standard (field events)."@en ;
-                   rdfs:label "by place or standard"@en ;
-                   rdfs:isDefinedBy <http://purl.org/athletics#> .
-
-
-:distance skos:definition "The distance achieved in a sports competition."@en ;
-          rdfs:label "distance"@en ;
-          rdfs:isDefinedBy <http://purl.org/athletics#> .
-
-
-:entryRequirements skos:definition "Requirements to register in the competition."@en ;
-                   rdfs:label "entry requirements"@en ;
-                   rdfs:isDefinedBy <http://purl.org/athletics#> .
-
-
-:points rdfs:isDefinedBy <http://purl.org/athletics#/> ;
-        skos:definition "Score points achieved in a sports competition."@en ;
-        rdfs:label "points"@en .
-
-
-:rank rdfs:isDefinedBy <http://purl.org/athletics#> ;
-      skos:definition "Position in the ranking (there may be several competitors with the same rank)."@en ;
-      rdfs:label "rank"@en .
-
-
-:reactionTime rdfs:isDefinedBy <http://purl.org/athletics#> ;
-              skos:definition "Reaction time is the interval time it takes a runner to respond to the start signal and begin leaving the starting blocks. Reaction time should be expressed as ISO 8601 duration format (e.g., 00:00:00.232 for 232 milliseconds)."@en ;
-              rdfs:label "reaction time"@en .
-
-
-:startingOrder rdfs:label "starting order"@en ;
-               skos:definition "Competitor's order in the start list."@en ;
-               rdfs:isDefinedBy <http://purl.org/athletics#> .
-
-
-:time skos:definition "Performance accomplished in a timed competition, expressed as ISO 8601 duration format (e.g., 04:45:38.000 for 4 hours, 45 minutes and 38.000 seconds)."@en ;
-      rdfs:label "time"@en ;
-      rdfs:isDefinedBy <http://purl.org/athletics#> .
-
-
-:trackLane rdfs:label "track lane"@en ;
-           rdfs:isDefinedBy <http://purl.org/athletics#> ;
-           skos:definition "Track lane number assigned to a competitor in case of certain track disciplines."@en .
-
-
-:transponderIdentifier skos:definition "Text or code identifying the competitor by a transponder system."@en ;
-                       rdfs:isDefinedBy <http://purl.org/athletics#/> ;
-                       rdfs:label "transponder identifier"@en .
+:increasingHeight rdfs:isDefinedBy <http://purl.org/athletics#> ;
+                  rdfs:label "increasing height"@en ;
+                  skos:definition "The subsequent heights to which the bar will be raised at the end of each round of trials within a vertical jumps unit competition."@en .
 
 
 <http://purl.org/athletics#/bestPerformance> rdfs:label "best performance"@en ;
