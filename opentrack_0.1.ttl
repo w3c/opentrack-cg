@@ -645,6 +645,7 @@ schema:weight rdf:type owl:ObjectProperty .
 
 ###  http://purl.org/athletics#bibIdentifier
 :bibIdentifier rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf schema:identifier ;
                rdfs:domain :Competitor ;
                rdfs:range rdfs:Literal ;
                rdfs:isDefinedBy <http://purl.org/athletics#> ;
@@ -771,6 +772,7 @@ schema:weight rdf:type owl:ObjectProperty .
 
 ###  http://purl.org/athletics#transponderIdentifier
 :transponderIdentifier rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf schema:identifier ;
                        rdfs:domain :Competitor ;
                        rdfs:range rdfs:Literal ;
                        rdfs:isDefinedBy <http://purl.org/athletics#/> ;
@@ -784,6 +786,10 @@ dct:created rdf:type owl:DatatypeProperty .
 
 ###  http://purl.org/dc/terms/modified
 dct:modified rdf:type owl:DatatypeProperty .
+
+
+###  http://schema.org/identifier
+schema:identifier rdf:type owl:DatatypeProperty .
 
 
 #################################################################
