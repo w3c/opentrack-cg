@@ -443,19 +443,16 @@ In order to represent properly the model, the work was divided in two parts:
     <dd>Place or location where events and competitions are held.</dd>
 
     <dt>[Category](#category)</dt>
-    <dd>Specific category of an event (e.g., Senior Men, U18 Women, etc.).</dd>
+    <dd>Specific category, or intended competitive audience, within an event (e.g., Senior Men, U18 Women, etc.).</dd>
 
     <dt>[Competitor](#competitor)</dt>
-    <dd>Competitor is each participant in a competition. Competitor is either an athletes or a team that take part in an Athletics event, identified by specific information such as bib number, and best performance for the specific discipline of the event. This entry information is relative to the competition and relevant for **[Results](#results)**.</dd>
+    <dd>Competitor is the action of taking part in a competition. Competitor is either an athletes or a team that take part in an Athletics event, identified by specific information such as bib number, and best performance for the specific discipline of the event. This entry information is relative to the competition and relevant for **[Results](#results)**.</dd>
 
     <dt>[Results](#results)</dt>
     <dd>Results is a list of competitors (entries in the competition) with their [Performances](#performance) after an event or a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).</dd>
 
     <dt>[Performance](#performance)</dt>
     <dd>Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed). </dd>
-
-    <dt>[Unit Field Competition](#unit-field-competition)</dt>
-    <dd>Unitary competitions in field events are structured in rounds Round of attempts ([Trials](#field-trial)) performed by athletes. Each athlete in a Unit Field Competition has different attempts to achieve their best performance in the competition. Depending on the type of field event —either distance or height discipline— rules of competitions are different.</dd>
 
 </dl>
 
@@ -653,7 +650,7 @@ An <dfn>Organization</dfn> is a basic entity to represent a organized group of p
 |:--- |:-------- |:----------- |:---------- |
 | `identifier` | `schema:identifier` | Unique character string to identify an organization. | Text |
 | `name` | `schema:name` | Name of an organization. | Text |
-| `alternateName  | `schema:altenateName` | An alias to name an organization. | Text |
+| `alternateName`  | `schema:altenateName` | An alias to name an organization. | Text |
 | `address` | `schema:address` | Postal address where an organization is located. | [Postal Address](#postal-address) or Text |
 | `email` | `schema:email` | Main email address of an organization. | Text |
 | `url` | `schema:url` | Webpage URL about an organization. | URL |
