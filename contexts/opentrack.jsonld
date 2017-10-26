@@ -104,7 +104,7 @@
     "datePublished"     : { "@id": "schema:datePublished", "@type": "xsd:date" },
     "birthPlace"        : "schema:birthPlace",
     "memberOf"          : "schema:memberOf" ,
-    "team"              : "ath:team" ,
+    "team"              : "schema:member" ,
     "coach"             : "schema:coach" ,
     "sponsor"           : "schema:sponsor",
     "affiliation"       : "schema:affiliation" ,
