@@ -1,136 +1,88 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
     "@id" : "http://w3c.github.io/opentrack-cg/examples/field-trials/U15PoleVault.jsonld",
-    "@type" : "UnitHeightCompetition",
-
-    
+    "@type" : "UnitHeightCompetition",    
     "name" : "EA U15 Boys Pole Vault – Final",
+    "category" : { "name" : "U15B" },
     "startingHeight" : {
         "@type" : "QuantitativeValue",
-        "value" : "2.50",
+        "value" : "1.25",
         "unitCode" : "MTR"
-    },
+        },
     "increasingHeight" : "2.70, 2.90, 3.00 increasing 10 cms.",
-    "competitorHeightTrials" : [ 
+    "participation" : [ 
        {
-          "@type" : "CompetitorHeightTrials",
-          "competitor" : {
-            "bibIdentifier" : "678",
-            "category" : { "name" : "U15B" },
-            "agent" : {
-              "@type" : "Athlete",
-              "name" : "Joshua Ilyk",
-              "affiliation" : "Notts AC" 
-            }
+          "@type" : "Competitor",
+          "agent" : {
+            "@type" : "Athlete",
+            "name" : "Joshua Ilyk",
+            "affiliation" : "Notts AC"
           },
-          "trialsAtHeight" : [
+          "bibIdentifier" : "678",
+          "trial" : [
             {
-              "@type" : "TrialsAtHeight",
-              "targetHeight" : {
-                  "@type" : "QuantitativeValue",
-                  "value" : "2.50",
-                  "unitCode" : "MTR"
-              },
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "2.50", "unitCode" : "MTR" },
               "competitionFeature" : "feature:NH"
             },
             {
-              "@type" : "TrialsAtHeight",
-              "targetHeight" : {
-                  "@type" : "QuantitativeValue",
-                  "value" : "2.70",
-                  "unitCode" : "MTR"
-              },
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "2.70", "unitCode" : "MTR" },
               "competitionFeature" : "feature:NH"
             },
             {
-              "@type" : "TrialsAtHeight",
-              "targetHeight" : {
-                  "@type" : "QuantitativeValue",
-                  "value" : "2.90",
-                  "unitCode" : "MTR"
-              } ,
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "2.90", "unitCode" : "MTR" },
               "competitionFeature" : "feature:NH"
             },
             {
-              "@type" : "TrialsAtHeight",
-              "targetHeight" : {
-                  "@type" : "QuantitativeValue",
-                  "value" : "3.00",
-                  "unitCode" : "MTR"
-              },
-              "fieldTrial" : [
-                {
-                  "@type" : "FieldTrial",
-                  "attemptNumber" : 1,
-                  "competitionFeature" : "feature:x"
-                },
-                {
-                  "@type" : "FieldTrial",
-                  "attemptNumber" : 2,
-                  "competitionFeature" : "feature:o"
-                }
-              ]
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.00", "unitCode" : "MTR" },
+              "attemptNumber" : 1,
+              "competitionFeature" : "feature:x"
             },
             {
-              "@type" : "TrialsAtHeight",
-              "targetHeight" : {
-                  "@type" : "QuantitativeValue",
-                  "value" : "3.10",
-                  "unitCode" : "MTR"
-              },
-              "fieldTrial" : [
-                {
-                  "@type" : "FieldTrial",
-                  "attemptNumber" : 1,
-                  "competitionFeature" : "feature:o"
-                }
-              ]
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.00", "unitCode" : "MTR" },
+              "attemptNumber" : 2,
+              "competitionFeature" : "feature:o"
             },
             {
-              "@type" : "TrialsAtHeight",
-              "targetHeight" : {
-                  "@type" : "QuantitativeValue",
-                  "value" : "3.20",
-                  "unitCode" : "MTR"
-              },
-              "fieldTrial" : [
-                {
-                  "@type" : "FieldTrial",
-                  "attemptNumber" : 1,
-                  "competitionFeature" : "feature:x"
-                },
-                {
-                  "@type" : "FieldTrial",
-                  "attemptNumber" : 2,
-                  "competitionFeature" : "feature:o"
-                }
-              ]
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.10", "unitCode" : "MTR" },
+              "attemptNumber" : 1,
+              "competitionFeature" : "feature:o"
             },
             {
-              "@type" : "TrialsAtHeight",
-              "targetHeight" : {
-                  "@type" : "QuantitativeValue",
-                  "value" : "3.30",
-                  "unitCode" : "MTR"
-              },
-              "fieldTrial" : [
-                {
-                  "@type" : "FieldTrial",
-                  "attemptNumber" : 1,
-                  "competitionFeature" : "feature:x"
-                },
-                {
-                  "@type" : "FieldTrial",
-                  "attemptNumber" : 2,
-                  "competitionFeature" : "feature:x"
-                },
-                {
-                  "@type" : "FieldTrial",
-                  "attemptNumber" : 3,
-                  "competitionFeature" : "feature:x"
-                }
-              ]
-            }         
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.20", "unitCode" : "MTR" },
+              "attemptNumber" : 1,
+              "competitionFeature" : "feature:x"
+            },
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.20", "unitCode" : "MTR" },
+              "attemptNumber" : 2,
+              "competitionFeature" : "feature:o"
+            },
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.30", "unitCode" : "MTR" },
+              "attemptNumber" : 1,
+              "competitionFeature" : "feature:x"
+            },
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.30", "unitCode" : "MTR" },
+              "attemptNumber" : 2,
+              "competitionFeature" : "feature:x"
+            },            
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.30", "unitCode" : "MTR" },
+              "attemptNumber" : 3,
+              "competitionFeature" : "feature:o"
+            }
           ]
        }        
     ]

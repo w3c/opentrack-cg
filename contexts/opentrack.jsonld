@@ -45,6 +45,11 @@
     "TimePerformance"       : "ath:TimePerformance",    
     "Timekeeping"           : "ath:TimekeepingAction",
     "UnitFieldCompetition"  : "ath:UnitFieldCompetition",
+    "UnitHeightCompetition" : "ath:UnitHeightCompetition",
+    "UnitDistanceCompetition" : "ath:UnitDistanceCompetition",
+    "Trial"                 : "ath:FieldTrial",
+    "DistanceTrial"         : "ath:DistanceTrial",
+    "HeightTrial"           : "ath:HeightTrial",
 
     "AthleticsDiscipline"   : "ath:AthleticsDiscipline",    
     "Race"                  : "ath:Race",
@@ -96,7 +101,6 @@
     "agent"             : "schema:agent",
     "gender"            : { "@id": "schema:gender", "@type": "@vocab" },
     "height"            : "schema:height",
-    "targetHeight"      : "ath:targetHeight",
     "weight"            : "schema:weight",
     "nationality"       : { "@id": "schema:nationality", "@type": "@vocab" },
     "birthDate"         : { "@id": "schema:birthDate", "@type": "xsd:date" },
@@ -126,6 +130,8 @@
 
     "startDate"         : { "@id": "schema:startDate", "@type": "xsd:date" },
     "endDate"           : { "@id": "schema:endDate", "@type": "xsd:date" },
+    "startTime"         : { "@id": "schema:startTime", "@type": "xsd:datetime" },
+    "endTime"           : { "@id": "schema:endTime", "@type": "xsd:datetime" },
     "eventStatus"       : { "@id": "schema:eventStatus", "@type": "@vocab" },
     "organizer"         : "schema:organizer",
     "contributor"       : "schema:contributor",
@@ -142,6 +148,12 @@
     "qualificationCriteria" : "ath:qualificationCriteria",
     "byPlaceOrStandard" : { "@id" : "ath:byPlaceOrStandard", "@type": "xsd:integer"  },
     "byPerformance"     : { "@id" : "ath:byPerformance", "@type": "xsd:integer" },
+
+    "increasingHeight"  : "ath:increasingHeight",
+    "startingHeight"    : "ath:startingHeight",
+    "targetHeight"      : "schema:height",
+    "attemptNumber"     : "ath:attemptNumber",
+    "trialFeature"      : "ath:trialFeature",
     
     "subEvent"          : "schema:subEvent",
     "superEvent"        : "schema:superEvent",

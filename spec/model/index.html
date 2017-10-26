@@ -951,8 +951,342 @@ A <dfn>Unit Field Competition</dfn> is a unitary competition in field events (fo
 <ul>
     <li>class: `UnitFieldCompetition` (`ath:UnitFieldCompetition`)</li>
     <li>subClassOf: `ath:UnitCompetition`</li>
+    <li>superclasses:
+        <ul>
+            <li>´ath:UnitHeightCompetition´</li>
+            <li>´ath:UnitDistanceCompetition´</li>
+        </ul>
+    </li>
 </ul>
 
+
+There are two different types of Unit Field Competitions depending on the nature of the field event:
+
+* [Unit Height Competition](#unit-height-competition); and
+* [Unit Distance Competition](#unit-distance-competition).
+
+
+###### Unit Height Competition
+
+A <dfn>Unit Height Competition</dfn> is a unitary competition for height disciplines (**Vertical Jumps**). Officials in Unit Height Competitions must specify specific information about the height of the bar before the competition starts.
+
+<figure>
+    ![Example of height card](images/example_height_card_concepts.png)
+    <figcaption>Example of rounds of trials and attempts highlighted on a control card for a Height Competition (Pole Vault)</figcaption> 
+</figure>
+
+* class: `UnitHeightCompetition` (`ath:UnitHeightCompetition`)
+* subClassOf: `ath:UnitFieldCompetition`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `startingHeight` | `ath:startingHeight` | The starting height the bar is raised at the start of a vertical jumps unit competition. | [Distance](#distance) |
+| `increasingHeight` | `ath:increasingHeight` | The subsequent heights to which the bar will be raised at the end of each round of trials within a vertical jumps unit competition. | Text |
+
+
+Example of description of height card, simplified with an athlete's participation:
+<pre class="example">
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/field-trials/U15PoleVault.jsonld",
+    "@type" : "UnitHeightCompetition",    
+    "name" : "EA U15 Boys Pole Vault – Final",
+    "category" : { "name" : "U15B" },
+    "startingHeight" : {
+        "@type" : "QuantitativeValue",
+        "value" : "1.25",
+        "unitCode" : "MTR"
+        },
+    "increasingHeight" : "2.70, 2.90, 3.00 increasing 10 cms.",
+    "participation" : [ 
+       {
+          "@type" : "Competitor",
+          "agent" : {
+            "@type" : "Athlete",
+            "name" : "Joshua Ilyk",
+            "affiliation" : "Notts AC"
+          },
+          "bibIdentifier" : "678",
+          "trial" : [
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "2.50", "unitCode" : "MTR" },
+              "competitionFeature" : "feature:NH"
+            },
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "2.70", "unitCode" : "MTR" },
+              "competitionFeature" : "feature:NH"
+            },
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "2.90", "unitCode" : "MTR" },
+              "competitionFeature" : "feature:NH"
+            },
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.00", "unitCode" : "MTR" },
+              "attemptNumber" : 1,
+              "competitionFeature" : "feature:x"
+            },
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.00", "unitCode" : "MTR" },
+              "attemptNumber" : 2,
+              "competitionFeature" : "feature:o"
+            },
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.10", "unitCode" : "MTR" },
+              "attemptNumber" : 1,
+              "competitionFeature" : "feature:o"
+            },
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.20", "unitCode" : "MTR" },
+              "attemptNumber" : 1,
+              "competitionFeature" : "feature:x"
+            },
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.20", "unitCode" : "MTR" },
+              "attemptNumber" : 2,
+              "competitionFeature" : "feature:o"
+            },
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.30", "unitCode" : "MTR" },
+              "attemptNumber" : 1,
+              "competitionFeature" : "feature:x"
+            },
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.30", "unitCode" : "MTR" },
+              "attemptNumber" : 2,
+              "competitionFeature" : "feature:x"
+            },            
+            {
+              "@type" : "HeightTrial",
+              "targetHeight" : { "value" : "3.30", "unitCode" : "MTR" },
+              "attemptNumber" : 3,
+              "competitionFeature" : "feature:o"
+            }
+          ]
+       }        
+    ]
+}
+</pre>
+
+
+###### Unit Distance Competition
+
+A <dfn>Unit Distance Competition</dfn> is a unitary competition for distance field disciplines (**Horizontal Jumps and Throws**).
+
+* class: `UnitDistanceCompetition` (`ath:UnitDistanceCompetition`)
+* subClassOf: `ath:UnitFieldCompetition`
+
+<figure>
+    ![Example of distance card](images/example_distance_card_concepts.png)
+    <figcaption>Example of field rounds and trials highlighted on a control card for Distance Field Events (a Javelin Throw Competition)</figcaption> 
+</figure>
+
+Description of distance card simplified with information of two competitors:
+<pre class="example">
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/field-trials/U17DiscusThrow.jsonld",
+    "@type" : "UnitDistanceCompetition",
+    
+    "name" : "EA U17 Men Discus – Final",
+    "category" : { "name" : "U17M" },
+    "participation" : [ 
+       {
+          "@type" : "Competitor",
+          "agent" : {
+            "@type" : "Athlete",
+            "name" : "Matt Blandford",
+            "affiliation" : "Tonbridge AC" 
+          },
+          "bibIdentifier" : "549",
+          "trial" : [
+            {
+              "@type" : "DistanceTrial",
+              "attemptNumber" : 1,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : { "value" : "48.05", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
+              }
+            },
+            {
+              "@type" : "DistanceTrial",
+              "attemptNumber" : 2,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : { "value" : "55.69", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
+              }
+            },
+            {
+              "@type" : "DistanceTrial",
+              "attemptNumber" : 3,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : { "value" : "57.69", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
+              }
+            },
+            {
+              "@type" : "DistanceTrial",
+              "attemptNumber" : 4,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : { "value" : "53.28", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
+              }
+            },
+            {
+              "@type" : "DistanceTrial",
+              "attemptNumber" : 5,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : { "value" : "59.76", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
+              }
+            },
+            {
+              "@type" : "DistanceTrial",
+              "attemptNumber" : 6,
+              "competitionFeature" : "feature:NM"
+            }
+          ]
+       },
+       {
+          "@type" : "Competitor",
+          "agent" : {
+            "@type" : "Athlete",
+            "name" : "Gurtal Randhawa",
+            "affiliation" : "Windsor Slough Eton &amp; H"  
+          },
+          "bibIdentifier" : "792",
+          "trial" : [
+            {
+              "@type" : "DistanceTrial",
+              "attemptNumber" : 1,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : { "value" : "43.30", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
+              }
+            },
+            {
+              "@type" : "DistanceTrial",
+              "attemptNumber" : 2,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : { "value" : "42.46", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
+              }
+            },
+            {
+              "@type" : "DistanceTrial",
+              "attemptNumber" : 3,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : { "value" : "42.70", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
+              }
+            },
+            {
+              "@type" : "DistanceTrial",
+              "attemptNumber" : 4,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : { "value" : "45.08", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
+              }
+            },
+            {
+              "@type" : "DistanceTrial",
+              "attemptNumber" : 5,
+              "competitionFeature" : "feature:NM"
+            },
+            {
+              "@type" : "DistanceTrial",
+              "attemptNumber" : 6,
+              "performance" : {
+                "@type" : "DistancePerformance",
+                "distance" : { "value" : "44.33", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
+              }
+            }
+          ]
+       }
+    ]
+}
+</pre>
+
+
+### Field Trial
+
+A <dfn>Field Trial</dfn> is an individual, unitary athlete's attempt in a field competition.
+
+Except for Vertical Jumps, each athlete only will have no more than one trial recorded in any one round of trials of the competition. Anyway, all trials belonging to rounds of trials will have the same structure, independently of the discipline.
+
+Except in Vertical Jumps, a valid trial shall be indicated by the measurement taken. For the standard abbreviations and symbols to be used in all other cases see the possible [Competition Features](#competition-feature-type). A *substitute* trial is given in case an athlete is hampered in a trial or it cannot be correctly recorded.
+
+* class: `Trial` (`ath:FieldTrial`)
+* superclasses: 
+  * `ath:DistanceTrial`
+  * `ath:HeighTrial`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `identifier` | `schema:identifier` | Unique character string to identify an attempt. | Text |
+| `competitionFeature` | `ath:competitionFeature` | Feature or note included by officials in the result of a field trial (e.g., 'Passed', 'clear') | [Competition Feature Type](#competition-feature-type) |
+| `attemptNumber` | `ath:attemptNumber` | Integer indicating the correlative number of an athlete's attempts in a round of trials. | Integer |
+| `performance` | `ath:performance` | Performance achieved in case a trial was valid. | [Performance](#performance) |
+| `startTime` | `schema:startTime` | Time and date when a trial starts. |  [DateTime](#datetime) |
+| `endTime` | `schema:endTime` | Time and date when a trial ends. |  [DateTime](#datetime) |
+| `trialFeature` | `ath:trialFeature` | Feature of a trial (i.e. if it is a substitute trial, if it is valid, etc.). |  [Trial Feature Type](#trial-feature-type) |
+
+
+There are two specific classes depending on the nature of the field event:
+
+*  [Distance Trial](#distance-trial); and
+*  [Height Trial](#height-trial)
+
+
+#### Distance Trial
+
+A <dfn>Distance Trial</dfn> is an individual, unitary athlete's attempt in a distance field competition (i.e., Throws and Horizontal Jumps).
+
+* class: `DistanceTrial` (`ath:DistanceTrial`)
+* subClassOf: `ath:FieldTrial`
+
+Example of trial in a throws event:
+<pre class="example">
+{
+  "@type" : "DistanceTrial",
+  "attemptNumber" : 3,
+  "performance" : {
+    "@type" : "DistancePerformance",
+    "distance" : { "value" : "42.70", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
+  }
+}
+</pre>
+
+#### Height Trial
+
+A <dfn>Height Trial</dfn> is an individual, unitary athlete's attempt in a height field competition (i.e., Vertical Jumps).
+
+* class: `HeightTrial` (`ath:HeightTrial`)
+* subClassOf: `ath:FieldTrial`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `targetHeight`| `schema:height` | The target height the bar is raised during an attempt. | [Distance](#distance) |
+
+
+Example of trial in a pole vault event:
+<pre class="example">
+{
+  "@type" : "HeightTrial",
+  "targetHeight" : { "value" : "3.20", "unitCode" : "MTR", "@type" : "QuantitativeValue" },
+  "attemptNumber" : 1,
+  "competitionFeature" : "feature:x"
+}
+</pre>
 
 
 ### Competitor
@@ -1730,7 +2064,6 @@ Enumeration of genders with two values:
 
 According to IAAF Rule 132.4, there are official standard abbreviations and symbols used in the preparation of start lists and results.
 
-
 | Code | Issue/feature |
 | ------------- | ---- |
 | `feature:DNS` | Did Not Start |
@@ -1982,6 +2315,16 @@ Like distance, wind speed must be represented by a quantified value, expressing 
 </pre>
 
 Other unit codes, such as knot (`KNT`) can be used if needed. Check and select the correspondent code from the [UN/CEFACT Common Codes](../references/rec20_Rev9e_2014.xls) list.
+
+
+### Trial Feature Type
+
+Types of features related to field trials.
+
+| Code | Issue/feature |
+| ------------- | ---- |
+| `trial:valid` | Trial is valid |
+| `trial:substitute` | Substitute trial |
 
 
 ### Person Roles
