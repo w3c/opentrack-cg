@@ -357,7 +357,7 @@ Most of the properties may be repeated to describe the same resource. For instan
 
 <pre class="example">
     "club" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld" },
-    "club" : { "@id" : http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld" }
+    "club" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld" }
 </pre>
 Or: 
 <pre class="example">
@@ -413,7 +413,7 @@ In order to represent properly the model, the work was divided in two parts:
 ### Competitors
 
 <figure>
-    ![Competitor Conceptual Model](images/competitor_model.png)
+    ![Competitor Conceptual Model](images/competitor_model.svg)
     <figcaption>Competitor Conceptual Model</figcaption> 
 </figure>
 
@@ -601,7 +601,7 @@ Description of a national team:
     "name" : "Great Britain National Team - Olympic Games 2016",
     "alternateName" : "GBR",
     "nationality" : "countrycode:GBR",
-    "memberOf" : { "@id" : http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" },
+    "memberOf" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" },
     "athlete" : [
         { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld" },
         { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/002Butchart.jsonld" },
@@ -1317,7 +1317,7 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
             <li>`ath:Throws`</li>
             <li>`ath:HorizontalJumps`</li>
             <li>`ath:VerticalJumps`</li>
-            <li>`ath:CombinedEvent`</li>
+            <li>`ath:CombinedDiscipline`</li>
         </ul>
     </li>
 </ul>
@@ -1566,9 +1566,9 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 * class: `PoleVault` (`ath:PoleVault`)
 * subClassOf: `ath:VerticalJumps`
 
-#### Combined Event
+#### Combined Discipline
 
-<dfn>Combined Event</dfn> is a competition where athletes participate in a number of track and field events, earning points for their performance in each event, which adds to a total points score.
+<dfn>Combined Discipline</dfn> is a competition where athletes participate in a number of track and field events, earning points for their performance in each event, which adds to a total points score.
 
 <ul>
     <li>class: `CombinedDiscipline` (`ath:CombinedDiscipline`)</li>
