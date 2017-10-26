@@ -468,7 +468,7 @@ In order to represent properly the model, the work was divided in two parts:
 
 An <dfn>Athlete</dfn> is a **[Person](#person)** who participates in Athletics events.
 
-* Class: `ath:Athlete`
+* Class: `Athlete` (`ath:Athlete`)
 * subClassOf: `schema:Person`
 
 | Key | Property | Description | Value Type |
@@ -563,7 +563,7 @@ An <dfn>Athlete</dfn> is a **[Person](#person)** who participates in Athletics e
 
 A <dfn>Sports Team</dfn> is a group of [Athletes](#athlete) who play a particular sport or game together against other similar groups of people. In Athletics there are certain events designed for teams competition (e.g., relay races). Teams in those competitions may be composed of [Athletes](#athlete) affiliated to the same or different organization, representing a federation (national, regional team), or just a joint of independent athletes.
 
-* class: `schema:SportsTeam`
+* class: `Team` (`schema:SportsTeam`)
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -618,7 +618,7 @@ Description of a national team:
 
 A <dfn>Person</dfn> is a basic entity to represent a human. A person may play one or more roles (i.e., athlete, coach, organizer, official, etc.).
 
-* class: `schema:Person`
+* class: `Person` (`schema:Person`)
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -644,7 +644,7 @@ A <dfn>Person</dfn> is a basic entity to represent a human. A person may play on
 
 An <dfn>Organization</dfn> is a basic entity to represent a organized group of people with a particular purpose (i.e., private company, public body, association, etc.).
 
-* class: `schema:Organization`
+* class: `Organization` (`schema:Organization`)
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -663,7 +663,7 @@ An <dfn>Organization</dfn> is a basic entity to represent a organized group of p
 
 A <dfn>Sports Club</dfn>, **sport club** or **athletics club**, is an [Organization](#organizations) for [Athletes](#athlete) formed for the purpose of playing sports. Clubs may have different [Teams](#teams) created for specific competitions, such as leagues, relay races, etc.
 
-* Class: `schema:SportsClub`
+* Class: `Club` (`schema:SportsClub`)
 * subClassOf: `schema:Organization`
 
 | Key | Property | Description | Value Type |
@@ -707,7 +707,7 @@ A <dfn>Sports Club</dfn>, **sport club** or **athletics club**, is an [Organizat
         "postalCode": "E13 8SD",
         "addressCountry": "countrycode:GBR"
     },
-    "sponsor": "Asics",
+    "sponsor": { "name" : "Asics" } ,
     "athlete": [
         { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld" },
         { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/002Athlete2.jsonld" },
@@ -722,7 +722,7 @@ A <dfn>Sports Club</dfn>, **sport club** or **athletics club**, is an [Organizat
 
 A <dfn>Sports Governing Body</dfn> is a special type of organization in charge of governing and rule the sport of athletics. These **sports governing bodies**, sometimes referred as Federations, may be attached to other higher-level federations, and have other sports organizations (clubs or other governing bodies) attached to them.
 
-* class: `ath:SportsGoverningBody`
+* class: `Federation` (`ath:SportsGoverningBody`)
 * subClassOf: `schema:SportsOrganization`
 
 <pre class="example">
@@ -848,7 +848,7 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `sportsDiscipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#discipline) |
 | `category` | `ath:sportsCategory` | The specific category for a competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Category](#category) |
 | `entryRequirements` | `ath:entryRequirements` | Requirements to take part in a competition.  | Text |
-| `results` | `pending:resultDecision` | List with the results of the participation in a competition. There may be different results during the competition (start list, intermediate results, partial results, final results, etc.) .  | [Results List](#results-list) |
+| `results` | `pending:resultDecision` | List with the results of the participation in a competition. There may be different results during the competition (start list, intermediate results, partial results, final results, etc.) .  | [Results](#results) |
 | `unitCompetition` | `ath:unitCompetition` | Unit competition that is part of a parent competition (e.g. every heat of a semifinal round in a 200m event).  | [Unit Competition](#unit-competition) |
 | `stage` | `ath:stage` | A stage within a multi stage competition. | [Competition](#competition) |
 | `round` | `ath:round` | Round in an athletic event organised as a sequence of rounds. For instance, track and field events are usually structured in qualification rounds (i.e, preliminary rounds, qualification rounds, semifinals and final). Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races. Examples of Competition Rounds: 110m Hurdles Men Preliminary Round Heat 1, 10,000m Men Final, and 110 Hurdles Man Semifinal 1. | [Competition](#competition) |
@@ -914,7 +914,7 @@ See a complete [example of divisional competition (European Championships with d
 A <dfn>Unit Competition</dfn> is a unitary competition defined by specific sports rules (for instance, the Heat 1 race at the semifinals of 100m event in the Olympic Games). [Competition Rounds](#competition-round) have one or more [Unit Competitions](#unit-competition).
 
 <ul>
-    <li>class: `ath:UnitCompetition`</li>
+    <li>class: `UnitCompetition` (`ath:UnitCompetition`)</li>
     <li>subClassOf: `ath:Competition`</li>
     <li>superclasses:
         <ul>
@@ -933,7 +933,7 @@ Unit Competitions may vary, depending on the type of the Athletics event:
 
 A <dfn>Unit Race</dfn> is a competitive event where performances are measured as time (i.e., races and legs in relay races). Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race.
 
-* class: `ath:UnitRace`
+* class: `UnitRace` (`ath:UnitRace`)
 * subClassOf: `ath:UnitCompetition`
 
 | Key | Property | Description | Value Type |
@@ -949,7 +949,7 @@ A <dfn>Unit Race</dfn> is a competitive event where performances are measured as
 A <dfn>Unit Field Competition</dfn> is a unitary competition in field events (for instance, one group of the semifinals in a High Jump event). These competitions have a specific structure based on rounds of trials or attempts. Depending on the type of the field event trials are performed in a different way.
 
 <ul>
-    <li>class: `ath:UnitFieldCompetition`</li>
+    <li>class: `UnitFieldCompetition` (`ath:UnitFieldCompetition`)</li>
     <li>subClassOf: `ath:UnitCompetition`</li>
 </ul>
 
@@ -983,24 +983,10 @@ Example of entry in a competition:
 }
 </pre>
 
-### Results List
 
-<dfn>Results List</dfn> is an sequence of competitors and their status in the competition. Results list may include competitor's achieved performances, entries before (start list), during, and after the event. It serves as ranking for each stage of the competition.
+#### Results
 
-Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.). In *Combined Events*, scores are calculated according to *scoring tables*.
-
-<figure>
-    ![Example of results](images/example_results.png)
-    <figcaption>Example of results after the Final round in 100m Women event</figcaption> 
-</figure>
-
-* class: `rdf:Seq`
-
-The list of results is expressed through a sequence (`rdf:Seq`) —an ordered list— of [Result](#result) objects.
-
-#### Result
-
-<dfn>Result</dfn> is an entry in the list of results ([Results List](#results-list)). Each entry include information about the participation of an athlete or team in a competition.
+A <dfn>Result</dfn> is the information obtained after the performance of competitors (athletes or teams) in a competition. The collection of results serves as ranking for each stage of the competition.
 
 Results may be under different statuses depending on the stage of the competition.
 
@@ -1086,7 +1072,7 @@ There are different types of performance depending on the type of event: **Timed
 
 <dfn>Time Performance</dfn> is a performance for timed competitions (i.e., races).
 
-* class: `ath:TimePerformance`
+* class: `TimePerformance` (`ath:TimePerformance`)
 * subClassOf: `ath:Performance`
 
 | Key | Property | Description | Value Type |
@@ -1114,7 +1100,7 @@ Example of performance in a sprint event:
 
 <dfn>Points Performance</dfn> is a performance for competitions based on score points (i.e., combined events).
 
-* class: `ath:PointsPerformance`
+* class: `PointsPerformance` (`ath:PointsPerformance`)
 * subClassOf: `ath:Performance`
 
 | Key | Property | Description | Value Type |
@@ -1132,7 +1118,7 @@ Example of performance in a sprint event:
 
 <dfn>Distance Performance</dfn> is a performance based on distance (i.e., throws, horizontal jumps).
 
-* class: `ath:DistancePerformance`
+* class: `DistancePerformance` (`ath:DistancePerformance`)
 * subClassOf: `ath:Performance`
 
 | Key | Property | Description | Value Type |
@@ -1157,13 +1143,14 @@ Example of performance in a sprint event:
 Both official and unofficial records may be kept by statisticians. 
 
 * class: `ath:RecordOrBest`
+* subClassOf: `schema:Intangible`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
 | `name` | `schema:name` | Descriptive text naming a record or best. | Text |
 | `identifier` | `schema:identifier` | Unique character string to identify a record or best. | Text |
-| `spatial` | `dct:spatial` | Spatial coverage of the record or best (e.g. in the case of area records, the country, continent or region). | [Country](#country), [Continent](#continent) or [AdministrativeArea](http://schema.org/AdministrativeArea)  |
-| `temporal` | `dct:temporal` | Temporal coverage of the record or best (e.g., a 2016-2017 season best) | [PeriodOfTime](http://purl.org/dc/terms/PeriodOfTime) |
+| `spatialCoverage` | `schema:spatialCoverage` | Spatial coverage of the record or best (e.g. in the case of area records, the country, continent or region). | [Country](#country), [Continent](#continent) or [AdministrativeArea](http://schema.org/AdministrativeArea)  |
+| `temporalCoverage` | `schema:temporalCoverage` | Temporal coverage of the record or best (e.g., a 2016-2017 season best) | [PeriodOfTime](http://purl.org/dc/terms/PeriodOfTime) |
 | `recognizingAuthority` | `ath:recognizingAuthority` | Governing body or organization that recognizes a record.  | [Person](#person) or [Organization](#organization) |
 | `category` | `ath:sportsCategory` | The specific category for this record or best (e.g., *M35*, *U18 Male*,  etc). | [Category](#category) |
 
@@ -1309,7 +1296,7 @@ A <dfn>Discipline</dfn> is a particular type of Athletics event defined by speci
 Disciplines are described by specific features (i.e., throws disciplines, such as shot put, are defined by *weight*). So, having into account the features related to the competition, disciplines are modelled in this taxonomy of concepts:
 
 <figure>
-    ![Taxonomy for Athletics Disciplines](images/disciplines.png)
+    ![Taxonomy for Athletics Disciplines](images/disciplines.svg)
     <figcaption>Athletics Discipline Taxonomy</figcaption>
 </figure>
 
@@ -1322,7 +1309,8 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
 
 
 <ul>
-    <li>class: `ath:AthleticsDiscipline`</li>
+    <li>class: `Discipline` (`ath:AthleticsDiscipline`)</li>
+    <li>subClassOf: `ath:SportsDiscipline`</li>
     <li>superClasses: 
         <ul>
             <li>`ath:Race`</li>
@@ -1344,7 +1332,7 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
 <dfn>Race</dfn> is a type of competition to see who is the fastest, including running or race-waking.
 
 <ul>
-    <li>class: `ath:Race`</li>
+    <li>class: `Race` (`ath:Race`)</li>
     <li>subClassOf: `ath:AthleticsDiscipline`</li>
     <li>superClasses: 
         <ul>
@@ -1372,7 +1360,7 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
 
 A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance running event, over a distance longer than sprints. Range of distances includes 800 <abbr title="meters">m</abbr>, up to Marathon 42.195 <abbr title="Kilometers">Km</abbr>.
 
-* class: `ath:MiddleOrLongDistanceRace`
+* class: `MiddleOrLongDistanceRace` (`ath:MiddleOrLongDistanceRace`)
 * subClassOf: `ath:Race`
 * superClass: `ath:Steeplechase`
 
@@ -1381,7 +1369,7 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Steeplechase</dfn> is a long distance running event where runners must clear obstacles and water jumps.
 
-* class: `ath:Steeplechase`
+* class: `Steeplechase` (`ath:Steeplechase`)
 * subClassOf: `ath:MiddleOrLongDistanceRace`
 
 | Key | Property | Description | Value Type |
@@ -1392,7 +1380,7 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Hurdles</dfn> is a running event where athletes jump over hurdles at speed.
 
-* class: `ath:Hurdles`
+* class: `Hurdles` (`ath:Hurdles`)
 * subClassOf: `ath:Race`
 
 | Key | Property | Description | Value Type |
@@ -1404,35 +1392,35 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Sprints</dfn> are running events over a short distance (less than 800m).
 
-* class: `ath:Sprints`
+* class: `Sprints` (`ath:Sprints`)
 * subClassOf: `ath:Race`
 
 ##### Race-walking
 
 <dfn>Race-walking</dfn>, or race walking, is a long-distance discipline where one foot must appear to be in contact with the ground at all times.
 
-* class: `ath:RaceWalking`
+* class: `RaceWalking` (`ath:RaceWalking`)
 * subClassOf: `ath:Race`
 
 ##### Cross Country
 
 <dfn>Cross Country</dfn> is a running discipline in which teams and individuals run a race on open-air courses over natural terrain such as dirt or grass.
 
-* class: `ath:CrossCountry`
+* class: `CrossCountry` (`ath:CrossCountry`)
 * subClassOf: `ath:Race`
 
 ##### Road Running
 
 <dfn>Road Running</dfn> is an Athletics discipline on a measured course over an established road.
 
-* class: `ath:RoadRunning`
+* class: `RoadRunning` (`ath:RoadRunning`)
 * subClassOf: `ath:Race`
 
 ##### Mountain Running
 
 <dfn>Mountain Running</dfn> is a Athletics discipline that takes place on terrain that is mainly off-road and which course may gain elevation.
 
-* class: `ath:MountainRunning`
+* class: `MountainRunning` (`ath:MountainRunning`)
 * subClassOf: `ath:Race`
 
 
@@ -1440,7 +1428,7 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfb>Relays</dfb>, relays race or relay race, is a track race between two or more teams where each member of the team runs one leg of the race.
 
-* class: `ath:TrackRelays`
+* class: `TrackRelays` (`ath:TrackRelays`)
 * subClassOf: `ath:Race`
 
 
@@ -1448,7 +1436,7 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Ultra running</dfn>, ultra distance or ultramarathon, is a road race longer than the traditional marathon length (42.195 Km). 
 
-* class: `ath:UltraRunning`
+* class: `UltraRunning` (`ath:UltraRunning`)
 * subClassOf: `ath:Race`
 
 #### Throws
@@ -1456,7 +1444,7 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 <dfn>Throws</dfn> are types of field events in which athletes throws heavy objects in an attempt to mark a farther distance than their competitors.
 
 <ul>
-    <li>class: `ath:Throws`</li>
+    <li>class: `Throws` (`ath:Throws`)</li>
     <li>subClassOf: `ath:AthleticsDiscipline`</li>
     <li>superClasses:
         <ul>
@@ -1477,14 +1465,14 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Shot Put</dfn> is a track and field event involving throwing/putting (throwing in a pushing motion) a heavy spherical object (the shot) as far as possible. The size of the ball, and the length of the wire varies depending on the competition rules.
 
-* class: `ath:ShotPut`
+* class: `ShotPut` (`ath:ShotPut`)
 * subClassOf: `ath:Throws`
 
 ##### Discus Throw
 
 <dfn>Discus Throw</dfn> is a track and field event in which an athlete throws a heavy disc (the discus) in an attempt to mark a farther distance than their competitors. The diameter and weight of the discus varies depending on the competition rules.
 
-* class: `ath:DiscusThrow`
+* class: `DiscusThrow` (`ath:DiscusThrow`)
 * subClassOf: `ath:Throws`
 
 | Key | Property | Description | Value Type |
@@ -1495,7 +1483,7 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Hammer Throw</dfn> is a track and field event in which an athlete throws a metal ball attached by a steel wire to a grip (the hammer). The size of the ball, and the length of the wire varies depending on the competition rules.
 
-* class: `ath:HammerThrow`
+* class: `HammerThrow` (`ath:HammerThrow`)
 * subClassOf: `ath:Throws`
 
 | Key | Property | Description | Value Type |
@@ -1506,7 +1494,7 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Javelin Throw</dfn> is a track and field event where the javelin, a spear about 2.5 m (8 ft 2 in) in length, is thrown. Lenght and weight of javelin may vary depending on the rules of the competition.
 
-* class: `ath:JavelinThrow`
+* class: `JavelinThrow` (`ath:JavelinThrow`)
 * subClassOf: `ath:Throws`
 
 | Key | Property | Description | Value Type |
@@ -1517,7 +1505,7 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Weight Throw</dfn> is a track and field event usually play indoors which is equivalent to the hammer throw event, which can only be held outdoors. Ball weight may vary depending on the rules of the competition.
 
-* class: `ath:WeightThrow`
+* class: `WeightThrow` (`ath:WeightThrow`)
 * subClassOf: `ath:Throws`
 
 #### Horizontal Jumps
@@ -1525,7 +1513,7 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 <dfn>Horizontal Jumps</dfn> are track and field events in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point. Horizontal jumps include: long jump and triple jump.
 
 <ul>
-    <li>class: `ath:HorizontalJumps`</li>
+    <li>class: `HorizontalJumps` (`ath:HorizontalJumps`)</li>
     <li>subClassOf: `ath:AthleticsDiscipline`</li>
     <li>superClasses:
         <ul>
@@ -1539,14 +1527,14 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Long Jump</dfn> (or broad jump) is a track and field event in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point.
 
-* class: `ath:LongJump`
+* class: `LongJump` (`ath:LongJump`)
 * subClassOf: `ath:HorizontalJumps`
 
 ##### Triple Jump
 
 <dfn>Triple Jump</dfn> (sometimes referred to as the hop, step and jump or the hop, skip and jump), is a track and field event, where competitors run down the track and perform a hop, a bound and then a jump into the sand pit.
 
-* class: `ath:TripleJump`
+* class: `TripleJump` (`ath:TripleJump`)
 * subClassOf: `ath:HorizontalJumps`
 
 #### VerticalJumps
@@ -1554,7 +1542,7 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 <dfn>Vertical Jumps</dfn> are track and field events in which competitors must jump or vault over a horizontal bar placed at measured heights without dislodging it.
 
 <ul>
-    <li>class: `ath:VerticalJumps`</li>
+    <li>class: `VerticalJumps` (`ath:VerticalJumps`)</li>
     <li>subClassOf: `ath:AthleticsDiscipline`</li>
     <li>superClasses:
         <ul>
@@ -1568,22 +1556,22 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>High Jump</dfn> is a track and field event in which competitors must jump unaided over a horizontal bar placed at measured heights without dislodging it.
 
-* class: `ath:HighJump`
+* class: `HighJump` (`ath:HighJump`)
 * subClassOf: `ath:VerticalJumps`
 
 ##### Pole Vault
 
 <dfn>Pole Vault</dfn> is a track and field event in which a person uses a long, flexible pole as an aid to jump over a bar.
 
-* class: `ath:PoleVault`
+* class: `PoleVault` (`ath:PoleVault`)
 * subClassOf: `ath:VerticalJumps`
 
 #### Combined Event
 
-<dfn>Combined Events</dfn> are competitions in which athletes participate in a number of track and field events, earning points for their performance in each event, which adds to a total points score.
+<dfn>Combined Event</dfn> is a competition where athletes participate in a number of track and field events, earning points for their performance in each event, which adds to a total points score.
 
 <ul>
-    <li>class: `ath:CombinedEvent`</li>
+    <li>class: `CombinedDiscipline` (`ath:CombinedDiscipline`)</li>
     <li>subClassOf: `ath:AthleticsDiscipline`</li>
     <li>superClasses:
         <ul>
@@ -1598,34 +1586,35 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
 | `sportsDiscipline` | `ath:sportsDiscipline` | Combined sub-disciplines for this event. | [Discipline](#discipline) |
+| `scorePointsReference` | `ath:scorePointsReference` | Reference to the score table used for this competition. | URL |
 
 ##### Pentathlon
 
 <dfn>Pentathlon</dfn> is a competition in which athletes participate in five track and field combined events, earning points for their performance in each event, which adds to a total points score.
 
-* class: `ath:Pentathlon`
-* subClassOf: `ath:CombinedEvent`
+* class: `Pentathlon` (`ath:Pentathlon`)
+* subClassOf: `ath:CombinedDiscipline`
 
 ##### Heptathlon
 
 <dfn>Heptathlon</dfn> is a competition in which athletes participate in seven track and field combined events, earning points for their performance in each event, which adds to a total points score.
 
-* class: `ath:Heptathlon`
-* subClassOf: `ath:CombinedEvent`
+* class: `Heptathlon` (`ath:Heptathlon`)
+* subClassOf: `ath:CombinedDiscipline`
 
 ##### Decathlon
 
 <dfn>Decathlon</dfn> is a competition in which athletes participate in ten track and field combined events, earning points for their performance in each event, which adds to a total points score.
 
-* class: `ath:Decathlon`
-* subClassOf: `ath:CombinedEvent`
+* class: `Decathlon` (`ath:Decathlon`)
+* subClassOf: `ath:CombinedDiscipline`
 
 ##### ThrowsPentathlon
 
 <dfn>Throws Pentathlon</dfn> is a competition in which athletes participate in five combined throwing events, earning points for their performance in each event, which adds to a total points score.
 
-* class: `ath:ThrowsPentathlon`
-* subClassOf: `ath:CombinedEvent`
+* class: `ThrowsPentathlon` (`ath:ThrowsPentathlon`)
+* subClassOf: `ath:CombinedDiscipline`
 
 </section>
 
@@ -1933,8 +1922,7 @@ Possible status types for results within a competition.
 | `results:unofficial` | Results of the competition released as soon as the event is over, not waiting any official decision of the International Federation. The correctness of data must be assured.  |
 | `results:official` | Results of the competition released as soon as the event is officially confirmed taking into account the resolution of the protests, etc.  |
 | `results:partial` | Incomplete list, Final Ranking. |
-| `results:protested` | After the competition is no longer LIVE and a protest has been lodged    After all decisions on the protest are made the ResultStatus will change to UNOFFICIAL or OFFICIAL as appropriate.  |
-
+| `results:protested` | After the competition is no longer LIVE and a protest has been lodged.  |
 
 ### Protest Status
 
