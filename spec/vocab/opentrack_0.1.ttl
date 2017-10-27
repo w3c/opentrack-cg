@@ -94,7 +94,7 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://purl.org/athletics#bestPerformance
 :bestPerformance rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Competitor ;
+                 rdfs:domain :CompetitionAction ;
                  rdfs:range :Performance ;
                  skos:definition "Best performance achieved by an athlete or team for the discipline related to the competition."@en .
 
@@ -136,28 +136,10 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://purl.org/athletics#competitor
 :competitor rdf:type owl:ObjectProperty ;
-            rdfs:range :Competitor ;
+            rdfs:range :CompetitionAction ;
             rdfs:isDefinedBy <http://purl.org/athletics#> ;
             rdfs:label "competitor"@en ;
             skos:definition "Entry of a competitor (person or organization) taking part in a competition."@en .
-
-
-###  http://purl.org/athletics#competitorDistanceTrials
-:competitorDistanceTrials rdf:type owl:ObjectProperty ;
-                          rdfs:domain :UnitDistanceCompetition ;
-                          rdfs:range :CompetitorDistanceTrials ;
-                          rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                          rdfs:label "competitor distance trials"@en ;
-                          skos:definition "List of a competitor's distance trials corresponding to a distance (throws or horizontal jumps) competition."@en .
-
-
-###  http://purl.org/athletics#competitorHeightTrials
-:competitorHeightTrials rdf:type owl:ObjectProperty ;
-                        rdfs:domain :UnitHeightCompetition ;
-                        rdfs:range :CompetitorHeightTrials ;
-                        rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                        rdfs:label "competitor height trials"@en ;
-                        skos:definition "List of a competitor's height trials corresponding to a vertical jumps competition."@en .
 
 
 ###  http://purl.org/athletics#discusDiameter
@@ -175,58 +157,6 @@ xsd:time rdf:type rdfs:Datatype .
           rdfs:isDefinedBy <http://purl.org/athletics#> ;
           rdfs:label "division"@en ;
           skos:definition "Division of a Multi Division Competition."@en .
-
-
-###  http://purl.org/athletics#endLocation
-:endLocation rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf schema:location ;
-             rdfs:domain :UnitRace ;
-             rdfs:isDefinedBy <http://purl.org/athletics#> ;
-             rdfs:label "end location"@en ;
-             skos:definition "Location where a race course ends."@en .
-
-
-###  http://purl.org/athletics#fieldTrial
-:fieldTrial rdf:type owl:ObjectProperty ;
-            rdfs:range :FieldTrial ;
-            rdfs:isDefinedBy <http://purl.org/athletics#> ;
-            rdfs:label "field trial"@en ;
-            skos:definition "Athlete's attempt during a round of trials."@en .
-
-
-###  http://purl.org/athletics#firstFieldTrial
-:firstFieldTrial rdf:type owl:ObjectProperty ;
-                 rdfs:range :FieldTrial ;
-                 rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                 rdfs:label "first field trial"@en ;
-                 skos:definition "Athlete's first attempt during a round of trials."@en .
-
-
-###  http://purl.org/athletics#firstRound
-:firstRound rdf:type owl:ObjectProperty ;
-            rdfs:domain :MultiRoundCompetition ;
-            rdfs:range :CompetitionRound ;
-            rdfs:isDefinedBy <http://purl.org/athletics#> ;
-            rdfs:label "first round"@en ;
-            skos:definition "First round of a Multi Round Competition."@en .
-
-
-###  http://purl.org/athletics#firstStage
-:firstStage rdf:type owl:ObjectProperty ;
-            rdfs:domain :MultiStageCompetition ;
-            rdfs:range :Competition ;
-            rdfs:isDefinedBy <http://purl.org/athletics#> ;
-            rdfs:label "first stage"@en ;
-            skos:definition "First stage in a Multi Stage Competition."@en .
-
-
-###  http://purl.org/athletics#firstTrialsAtHeight
-:firstTrialsAtHeight rdf:type owl:ObjectProperty ;
-                     rdfs:domain :CompetitorHeightTrials ;
-                     rdfs:range :TrialsAtHeight ;
-                     rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                     rdfs:label "first trials at height"@en ;
-                     skos:definition "The first round of an athlete's attempts to clear a specific height during a Vertical Jumps event."@en .
 
 
 ###  http://purl.org/athletics#hammerLength
@@ -256,19 +186,6 @@ xsd:time rdf:type rdfs:Datatype .
                 skos:definition "Space between two hurdles"@en .
 
 
-###  http://purl.org/athletics#inCompetition
-:inCompetition rdf:type owl:ObjectProperty ;
-               rdfs:range :Competition ;
-               rdfs:isDefinedBy <http://purl.org/athletics#> ;
-               rdfs:label "in competition"@en ;
-               skos:definition "Competition which a resource is related to."@en .
-
-
-###  http://purl.org/athletics#increasingHeight
-:increasingHeight rdf:type owl:ObjectProperty ;
-                  rdfs:domain :UnitHeightCompetition .
-
-
 ###  http://purl.org/athletics#javelinLength
 :javelinLength rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf schema:distance ;
@@ -278,41 +195,6 @@ xsd:time rdf:type rdfs:Datatype .
                skos:definition "Lenght of the throwing javelin"@en .
 
 
-###  http://purl.org/athletics#lastFieldTrial
-:lastFieldTrial rdf:type owl:ObjectProperty ;
-                rdfs:range :FieldTrial ;
-                rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                rdfs:label "last field trial"@en ;
-                skos:definition "Athlete's last attempt during a round of trials."@en .
-
-
-###  http://purl.org/athletics#lastRound
-:lastRound rdf:type owl:ObjectProperty ;
-           rdfs:domain :MultiRoundCompetition ;
-           rdfs:range :CompetitionRound ;
-           rdfs:isDefinedBy <http://purl.org/athletics#> ;
-           rdfs:label "last round"@en ;
-           skos:definition "Last round of a Multi Round Competition."@en .
-
-
-###  http://purl.org/athletics#lastStage
-:lastStage rdf:type owl:ObjectProperty ;
-           rdfs:domain :MultiStageCompetition ;
-           rdfs:range :Competition ;
-           rdfs:isDefinedBy <http://purl.org/athletics#> ;
-           rdfs:label "last stage"@en ;
-           skos:definition "Last stage in a Multi Stage Competition."@en .
-
-
-###  http://purl.org/athletics#lastTrialsAtHeight
-:lastTrialsAtHeight rdf:type owl:ObjectProperty ;
-                    rdfs:domain :CompetitorHeightTrials ;
-                    rdfs:range :TrialsAtHeight ;
-                    rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                    rdfs:label "last trials at height"@en ;
-                    skos:definition "The last round of an athlete's attempts to clear a specific height during a Vertical Jumps event."@en .
-
-
 ###  http://purl.org/athletics#maxDuration
 :maxDuration rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf schema:duration ;
@@ -320,33 +202,6 @@ xsd:time rdf:type rdfs:Datatype .
              rdfs:isDefinedBy <http://purl.org/athletics#> ;
              rdfs:label "max duration"@en ;
              skos:definition "Maximum duration of the race in case of being a time-fixed competition (i.e., one hour, one day, etc.)."@en .
-
-
-###  http://purl.org/athletics#nextFieldTrial
-:nextFieldTrial rdf:type owl:ObjectProperty ;
-                rdfs:domain :FieldTrial ;
-                rdfs:range :FieldTrial ;
-                rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                rdfs:label "next field trial"@en ;
-                skos:definition "Next field trial in a round of attempts."@en .
-
-
-###  http://purl.org/athletics#nextStage
-:nextStage rdf:type owl:ObjectProperty ;
-           rdfs:domain :Competition ;
-           rdfs:range :Competition ;
-           rdfs:isDefinedBy <http://purl.org/athletics#> ;
-           rdfs:label "next stage"@en ;
-           skos:definition "Next competition stage in a Multi Stage Competition."@en .
-
-
-###  http://purl.org/athletics#nextTrialsAtHeight
-:nextTrialsAtHeight rdf:type owl:ObjectProperty ;
-                    rdfs:domain :TrialsAtHeight ;
-                    rdfs:range :TrialsAtHeight ;
-                    rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                    rdfs:label "next trials at height"@en ;
-                    skos:definition "The next round of an athlete's attempts after clear a height during a Vertical Jumps event."@en .
 
 
 ###  http://purl.org/athletics#obstaclesHeight
@@ -364,33 +219,6 @@ xsd:time rdf:type rdfs:Datatype .
              rdfs:isDefinedBy <http://purl.org/athletics#> ;
              rdfs:label "performance"@en ;
              skos:definition "Measure to quantify the performance of the competitor after a competition."@en .
-
-
-###  http://purl.org/athletics#prevFieldTrial
-:prevFieldTrial rdf:type owl:ObjectProperty ;
-                rdfs:domain :FieldTrial ;
-                rdfs:range :FieldTrial ;
-                rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                rdfs:label "prev field trial"@en ;
-                skos:definition "Previous field trial in a round of attempts."@en .
-
-
-###  http://purl.org/athletics#prevTrialsAtHeight
-:prevTrialsAtHeight rdf:type owl:ObjectProperty ;
-                    rdfs:domain :TrialsAtHeight ;
-                    rdfs:range :TrialsAtHeight ;
-                    rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                    rdfs:label "prev trials at height"@en ;
-                    skos:definition "The previous round of an athlete's attempts after clear a height during a Vertical Jumps event."@en .
-
-
-###  http://purl.org/athletics#previousStage
-:previousStage rdf:type owl:ObjectProperty ;
-               rdfs:domain :Competition ;
-               rdfs:range :Competition ;
-               rdfs:isDefinedBy <http://purl.org/athletics#> ;
-               rdfs:label "previous stage"@en ;
-               skos:definition "Previous competition stage in a Multi Stage Competition."@en .
 
 
 ###  http://purl.org/athletics#protestStatus
@@ -456,7 +284,6 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://purl.org/athletics#round
 :round rdf:type owl:ObjectProperty ;
-       rdfs:domain :MultiRoundCompetition ;
        rdfs:range :CompetitionRound ;
        rdfs:isDefinedBy <http://purl.org/athletics#> ;
        rdfs:label "round"@en ;
@@ -473,28 +300,10 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://purl.org/athletics#stage
 :stage rdf:type owl:ObjectProperty ;
-       rdfs:domain :MultiStageCompetition ;
        rdfs:range :Competition ;
        rdfs:isDefinedBy <http://purl.org/athletics#> ;
        rdfs:label "stage"@en ;
        skos:definition "Competition stage in a Multi Stage Competition."@en .
-
-
-###  http://purl.org/athletics#startLocation
-:startLocation rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf schema:location ;
-               rdfs:domain :UnitRace ;
-               rdfs:isDefinedBy <http://purl.org/athletics#> ;
-               rdfs:label "start location"@en ;
-               skos:definition "Location where a race course starts."@en .
-
-
-###  http://purl.org/athletics#starter
-:starter rdf:type owl:ObjectProperty ;
-         rdfs:domain :Competition ;
-         rdfs:isDefinedBy <http://purl.org/athletics#> ;
-         rdfs:label "starter"@en ;
-         skos:definition "Athlete who is registered in a competition."@en .
 
 
 ###  http://purl.org/athletics#startingHeight
@@ -509,7 +318,6 @@ xsd:time rdf:type rdfs:Datatype .
 ###  http://purl.org/athletics#targetHeight
 :targetHeight rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf schema:height ;
-              rdfs:domain :TrialsAtHeight ;
               rdfs:isDefinedBy <http://purl.org/athletics#> ;
               rdfs:label "target height"@en ;
               skos:definition "The target height the bar is raised during a round of attempts."@en .
@@ -542,15 +350,6 @@ xsd:time rdf:type rdfs:Datatype .
                         rdfs:isDefinedBy <http://purl.org/athletics#> ;
                         rdfs:label "track and field venue type"@en ;
                         skos:definition "Type of venue that holds Athletics competitions (indoors or outdoors)."@en .
-
-
-###  http://purl.org/athletics#trialsAtHeight
-:trialsAtHeight rdf:type owl:ObjectProperty ;
-                rdfs:domain :CompetitorHeightTrials ;
-                rdfs:range :TrialsAtHeight ;
-                rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                rdfs:label "trials at height"@en ;
-                skos:definition "A round of athlete's attempts to clear a specific height during a Vertical Jumps event."@en .
 
 
 ###  http://purl.org/athletics#unitCompetition
@@ -602,6 +401,10 @@ schema:duration rdf:type owl:ObjectProperty .
 schema:exerciseCourse rdf:type owl:ObjectProperty .
 
 
+###  http://schema.org/fromLocation
+schema:fromLocation rdf:type owl:ObjectProperty .
+
+
 ###  http://schema.org/gender
 schema:gender rdf:type owl:ObjectProperty .
 
@@ -626,6 +429,22 @@ schema:memberOf rdf:type owl:ObjectProperty .
 schema:nationality rdf:type owl:ObjectProperty .
 
 
+###  http://schema.org/potentialAction
+schema:potentialAction rdf:type owl:ObjectProperty .
+
+
+###  http://schema.org/subEvent
+schema:subEvent rdf:type owl:ObjectProperty .
+
+
+###  http://schema.org/superEvent
+schema:superEvent rdf:type owl:ObjectProperty .
+
+
+###  http://schema.org/toLocation
+schema:toLocation rdf:type owl:ObjectProperty .
+
+
 ###  http://schema.org/weight
 schema:weight rdf:type owl:ObjectProperty .
 
@@ -636,7 +455,6 @@ schema:weight rdf:type owl:ObjectProperty .
 
 ###  http://purl.org/athletics#attemptNumber
 :attemptNumber rdf:type owl:DatatypeProperty ;
-               rdfs:domain :FieldTrial ;
                rdfs:range xsd:integer ;
                rdfs:isDefinedBy <http://purl.org/athletics#> ;
                rdfs:label "attempt number"@en ;
@@ -645,7 +463,7 @@ schema:weight rdf:type owl:ObjectProperty .
 
 ###  http://purl.org/athletics#bibIdentifier
 :bibIdentifier rdf:type owl:DatatypeProperty ;
-               rdfs:domain :Competitor ;
+               rdfs:domain :CompetitionAction ;
                rdfs:range rdfs:Literal ;
                rdfs:isDefinedBy <http://purl.org/athletics#> ;
                rdfs:label "bib identifier"@en ;
@@ -690,7 +508,6 @@ schema:weight rdf:type owl:ObjectProperty .
 
 ###  http://purl.org/athletics#isSubstituteTrial
 :isSubstituteTrial rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :FieldTrial ;
                    rdfs:range xsd:boolean ;
                    rdfs:isDefinedBy <http://purl.org/athletics#> ;
                    rdfs:label "is substitute trial"@en ;
@@ -702,7 +519,7 @@ schema:weight rdf:type owl:ObjectProperty .
         rdfs:domain :PointsPerformance ;
         rdfs:range xsd:decimal ;
         rdfs:isDefinedBy <http://purl.org/athletics#/> ;
-        rdfs:label "points"@en ;
+        rdfs:label "score points"@en ;
         skos:definition "Score points achieved in a sports competition."@en .
 
 
@@ -722,15 +539,6 @@ schema:weight rdf:type owl:ObjectProperty .
                    rdfs:isDefinedBy <http://purl.org/athletics#> ;
                    rdfs:label "previous given name"@en ;
                    skos:definition "Previous given name of a person."@en .
-
-
-###  http://purl.org/athletics#rank
-:rank rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Result ;
-      rdfs:range xsd:integer ;
-      rdfs:isDefinedBy <http://purl.org/athletics#> ;
-      rdfs:label "rank"@en ;
-      skos:definition "Position in the ranking (there may be several competitors with the same rank)."@en .
 
 
 ###  http://purl.org/athletics#reactionTime
@@ -771,7 +579,7 @@ schema:weight rdf:type owl:ObjectProperty .
 
 ###  http://purl.org/athletics#transponderIdentifier
 :transponderIdentifier rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :Competitor ;
+                       rdfs:domain :CompetitionAction ;
                        rdfs:range rdfs:Literal ;
                        rdfs:isDefinedBy <http://purl.org/athletics#/> ;
                        rdfs:label "transponder identifier"@en ;
@@ -828,6 +636,14 @@ dct:modified rdf:type owl:DatatypeProperty .
              rdfs:label "Competition"@en .
 
 
+###  http://purl.org/athletics#CompetitionAction
+:CompetitionAction rdf:type owl:Class ;
+                   rdfs:subClassOf schema:ExerciseAction ;
+                   rdfs:isDefinedBy <http://purl.org/athletics#> ;
+                   rdfs:label "Competition Action"@en ;
+                   skos:definition "Competitor or entry in a competition. Athlete or team registered and taking part in a competition. "@en .
+
+
 ###  http://purl.org/athletics#CompetitionRound
 :CompetitionRound rdf:type owl:Class ;
                   rdfs:subClassOf :Competition ;
@@ -836,40 +652,12 @@ dct:modified rdf:type owl:DatatypeProperty .
                   rdfs:label "Competition Round"@en .
 
 
-###  http://purl.org/athletics#CompetitionSeries
-:CompetitionSeries rdf:type owl:Class ;
-                   rdfs:subClassOf schema:EventSeries ;
-                   dct:description "Competition Series are competitive events held periodically (for instance, the Summer Olympic Games have recurring events organized every four years)."@en ;
-                   rdfs:label "Competition Series"@en .
-
-
 ###  http://purl.org/athletics#CompetitiveAudience
 :CompetitiveAudience rdf:type owl:Class ;
                      rdfs:subClassOf schema:PeopleAudience ;
                      rdfs:isDefinedBy <http://purl.org/athletics#> ;
                      rdfs:label "Competitive Audience"@en ;
                      skos:definition "Competitive Audience is the potential audience to take part in the competition of athletes and teams in sports events. This marks the categories of the competition."@en .
-
-
-###  http://purl.org/athletics#Competitor
-:Competitor rdf:type owl:Class ;
-            rdfs:isDefinedBy <http://purl.org/athletics#> ;
-            rdfs:label "Competitor"@en ;
-            skos:definition "Competitor or entry in a competition. Athlete or team registered and taking part in a competition. "@en .
-
-
-###  http://purl.org/athletics#CompetitorDistanceTrials
-:CompetitorDistanceTrials rdf:type owl:Class ;
-                          rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                          rdfs:label "Competitor Distance Trials"@en ;
-                          skos:definition "Competitor Distance Trials is a list of the (Distance Trials) performed by an athlete in a Unit Distance Competition (Horizontal Jumps and Throws)."@en .
-
-
-###  http://purl.org/athletics#CompetitorHeightTrials
-:CompetitorHeightTrials rdf:type owl:Class ;
-                        rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                        rdfs:label "Competitor Height Trials"@en ;
-                        skos:definition "Competitor Height Trials is a list of (Height Trials) performed by an athlete in a Vertical Jumps unit competition. In this type of rounds, athletes attempt jumping or vaulting a specific height."@en .
 
 
 ###  http://purl.org/athletics#CrossCountry
@@ -905,21 +693,6 @@ dct:modified rdf:type owl:DatatypeProperty .
                      rdfs:isDefinedBy <http://purl.org/athletics#> ;
                      rdfs:label "Distance Performance"@en ;
                      skos:definition "Performance measured as distance"@en .
-
-
-###  http://purl.org/athletics#DivisionalCompetition
-:DivisionalCompetition rdf:type owl:Class ;
-                       rdfs:subClassOf :Competition ;
-                       dct:description "A Divisional Competition is a competition that is divided into a number of competitions. For instace, The Boston Marathon is divided in two divisions: Open/overall division and Masters division."@en ;
-                       rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                       rdfs:label "Divisional Competition"@en .
-
-
-###  http://purl.org/athletics#FieldTrial
-:FieldTrial rdf:type owl:Class ;
-            rdfs:isDefinedBy <http://purl.org/athletics#> ;
-            rdfs:label "Field Trial"@en ;
-            skos:definition "A Field Trial is an individual, unitary athlete's attempt in a field competition."@en .
 
 
 ###  http://purl.org/athletics#HammerThrow
@@ -1003,30 +776,6 @@ dct:modified rdf:type owl:DatatypeProperty .
                  rdfs:label "Mountain Running"@en ;
                  skos:broader :Race ;
                  skos:definition "Mountain running is a Athletics discipline that takes place on terrain that is mainly off-road and which course may gain elevation."@en .
-
-
-###  http://purl.org/athletics#MultiRoundCompetition
-:MultiRoundCompetition rdf:type owl:Class ;
-                       rdfs:subClassOf :Competition ;
-                       dct:description "A Multi Round Competition is an athletic event organised as a sequence of rounds. For instance, track and field events are usually structured in qualification rounds (i.e, preliminary rounds, qualification rounds, semifinals and final)."@en ;
-                       rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                       rdfs:label "Multi Round Competition"@en .
-
-
-###  http://purl.org/athletics#MultiStageCompetition
-:MultiStageCompetition rdf:type owl:Class ;
-                       rdfs:subClassOf :Competition ;
-                       dct:description "A Multi Stage Competition is an athletic event organised as a set of stages. For instance, The Diamond League and the Surrey Cross Country League."@en ;
-                       rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                       rdfs:label "MultiStage Competition"@en .
-
-
-###  http://purl.org/athletics#MultidisciplineCompetition
-:MultidisciplineCompetition rdf:type owl:Class ;
-                            rdfs:subClassOf :Competition ;
-                            dct:description "A Multidiscipline Competition is a competition that incorporates a number of different event disciplines. For instance, the 2012 London Summer Olympic Games 2012, and the 2016 European Athletics Championships."@en ;
-                            rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                            rdfs:label "Multidiscipline Competition"@en .
 
 
 ###  http://purl.org/athletics#Pentathlon
@@ -1209,13 +958,6 @@ dct:modified rdf:type owl:DatatypeProperty .
              skos:definition "Relays or relay race is a track race between two or more teams where each member of the team runs one leg of the race."@en .
 
 
-###  http://purl.org/athletics#TrialsAtHeight
-:TrialsAtHeight rdf:type owl:Class ;
-                rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                rdfs:label "Trials at Height"@en ;
-                skos:definition "Trials at Height is a list of consecutive attempts (Height Trials) performed by an athlete over a specific height in a Vertical Jumps unit competition."@en .
-
-
 ###  http://purl.org/athletics#TripleJump
 :TripleJump rdf:type owl:Class ;
             rdfs:subClassOf :HorizontalJumps ;
@@ -1238,7 +980,7 @@ dct:modified rdf:type owl:DatatypeProperty .
                  rdfs:subClassOf :Competition ;
                  dct:description "A Unit Competition is a unitary competition defined by specific sports rules (for instance, the Heat 1 race at the semifinals of 100m event in the Olympic Games). Competition Rounds have one or more Unit Competitions."@en ;
                  rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                 rdfs:label "Competition Round"@en .
+                 rdfs:label "Unit Competition"@en .
 
 
 ###  http://purl.org/athletics#UnitDistanceCompetition
@@ -1298,6 +1040,10 @@ schema:Agent rdf:type owl:Class .
 
 ###  http://schema.org/EventSeries
 schema:EventSeries rdf:type owl:Class .
+
+
+###  http://schema.org/ExerciseAction
+schema:ExerciseAction rdf:type owl:Class .
 
 
 ###  http://schema.org/Organization
@@ -1619,11 +1365,6 @@ schema:weight rdf:type owl:NamedIndividual ,
 #################################################################
 #    Annotations
 #################################################################
-
-:increasingHeight rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                  rdfs:label "increasing height"@en ;
-                  skos:definition "The subsequent heights to which the bar will be raised at the end of each round of trials within a vertical jumps unit competition."@en .
-
 
 <http://purl.org/athletics#/bestPerformance> rdfs:label "best performance"@en ;
                                              rdfs:isDefinedBy <http://purl.org/athletics#/> ;

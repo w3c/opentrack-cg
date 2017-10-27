@@ -4,164 +4,119 @@
     "@type" : "UnitDistanceCompetition",
     
     "name" : "EA U17 Men Discus – Final",
-    "competitorDistanceTrials" : [ 
+    "category" : { "name" : "U17M" },
+    "participation" : [ 
        {
-          "@type" : "CompetitorDistanceTrials",
-          "competitor" : {
-            "bibIdentifier" : "549",
-            "category" : { "name" : "U17M" },
-            "agent" : {
-              "@type" : "Athlete",
-              "name" : "Matt Blandford",
-              "affiliation" : "Tonbridge AC" 
-            }
+          "@type" : "Competitor",
+          "agent" : {
+            "@type" : "Athlete",
+            "name" : "Matt Blandford",
+            "affiliation" : "Tonbridge AC" 
           },
-          "fieldTrial" : [
+          "bibIdentifier" : "549",
+          "trial" : [
             {
-              "@type" : "FieldTrial",
+              "@type" : "DistanceTrial",
               "attemptNumber" : 1,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : {
-                    "@type" : "QuantitativeValue",
-                    "value" : "48.05",
-                    "unitCode" : "MTR"
-                }
+                "distance" : { "value" : "48.05", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
               }
             },
             {
-              "@type" : "FieldTrial",
+              "@type" : "DistanceTrial",
               "attemptNumber" : 2,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : {
-                    "@type" : "QuantitativeValue",
-                    "value" : "55.69",
-                    "unitCode" : "MTR"
-                }
+                "distance" : { "value" : "55.69", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
               }
             },
             {
-              "@type" : "FieldTrial",
+              "@type" : "DistanceTrial",
               "attemptNumber" : 3,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : {
-                    "@type" : "QuantitativeValue",
-                    "value" : "57.69",
-                    "unitCode" : "MTR"
-                }
+                "distance" : { "value" : "57.69", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
               }
             },
             {
-              "@type" : "FieldTrial",
+              "@type" : "DistanceTrial",
               "attemptNumber" : 4,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : {
-                    "@type" : "QuantitativeValue",
-                    "value" : "53.28",
-                    "unitCode" : "MTR"
-                }
+                "distance" : { "value" : "53.28", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
               }
             },
             {
-              "@type" : "FieldTrial",
+              "@type" : "DistanceTrial",
               "attemptNumber" : 5,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : {
-                    "@type" : "QuantitativeValue",
-                    "value" : "59.76",
-                    "unitCode" : "MTR"
-                }
+                "distance" : { "value" : "59.76", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
               }
             },
             {
-              "@type" : "FieldTrial",
+              "@type" : "DistanceTrial",
               "attemptNumber" : 6,
               "competitionFeature" : "feature:NM"
             }
           ]
        },
        {
-          "@type" : "CompetitorDistanceTrials",
-          "competitor" : {
-            "bibIdentifier" : "792",
-            "category" : { "name" : "U17M" },
-            "agent" : {
-              "@type" : "Athlete",
-              "name" : "Gurtal Randhawa",
-              "affiliation" : "Windsor Slough Eton & H"  
-            }
+          "@type" : "Competitor",
+          "agent" : {
+            "@type" : "Athlete",
+            "name" : "Gurtal Randhawa",
+            "affiliation" : "Windsor Slough Eton & H"  
           },
-          "fieldTrial" : [
+          "bibIdentifier" : "792",
+          "trial" : [
             {
-              "@type" : "FieldTrial",
+              "@type" : "DistanceTrial",
               "attemptNumber" : 1,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : {
-                    "@type" : "QuantitativeValue",
-                    "value" : "43.30",
-                    "unitCode" : "MTR"
-                }
+                "distance" : { "value" : "43.30", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
               }
             },
             {
-              "@type" : "FieldTrial",
+              "@type" : "DistanceTrial",
               "attemptNumber" : 2,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : {
-                    "@type" : "QuantitativeValue",
-                    "value" : "42.46",
-                    "unitCode" : "MTR"
-                }
+                "distance" : { "value" : "42.46", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
               }
             },
             {
-              "@type" : "FieldTrial",
+              "@type" : "DistanceTrial",
               "attemptNumber" : 3,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : {
-                    "@type" : "QuantitativeValue",
-                    "value" : "42.70",
-                    "unitCode" : "MTR"
-                }
+                "distance" : { "value" : "42.70", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
               }
             },
             {
-              "@type" : "FieldTrial",
+              "@type" : "DistanceTrial",
               "attemptNumber" : 4,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : {
-                    "@type" : "QuantitativeValue",
-                    "value" : "45.08",
-                    "unitCode" : "MTR"
-                }
+                "distance" : { "value" : "45.08", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
               }
             },
             {
-              "@type" : "FieldTrial",
+              "@type" : "DistanceTrial",
               "attemptNumber" : 5,
               "competitionFeature" : "feature:NM"
             },
             {
-              "@type" : "FieldTrial",
+              "@type" : "DistanceTrial",
               "attemptNumber" : 6,
               "performance" : {
                 "@type" : "DistancePerformance",
-                "distance" : {
-                    "@type" : "QuantitativeValue",
-                    "value" : "44.33",
-                    "unitCode" : "MTR"
-                }
+                "distance" : { "value" : "44.33", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
               }
             }
           ]
-       }           
+       }
     ]
 }

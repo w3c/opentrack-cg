@@ -356,10 +356,10 @@ spacing: Distance</y:AttributeLabel>
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="50.0" width="137.44295612009222" x="411.27852193995375" y="1497.9617919670443"/>
+          <y:Geometry height="63.0" width="173.94295612009222" x="411.27852193995375" y="1490.0"/>
           <y:Fill color="#FFCC99" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="108.7236328125" x="14.35966165379611" y="3.0">CombinedEvent<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="138.037109375" x="17.95292337254611" y="3.0">CombinedDiscipline<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -367,7 +367,8 @@ spacing: Distance</y:AttributeLabel>
             </y:ModelParameter>
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-            <y:AttributeLabel>discipline: Discipline</y:AttributeLabel>
+            <y:AttributeLabel>discipline: Discipline
+scorePointsReference: URL</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
@@ -933,7 +934,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
     <edge id="e15" source="n16" target="n16">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="46.134698557793214" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:Path sx="58.38644680954147" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
         </y:QuadCurveEdge>
@@ -1219,8 +1220,8 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="-5.074643121515919" sy="7.038208032955708" tx="52.52093583229158" ty="0.0">
-            <y:Point x="330.0" y="1530.0"/>
+          <y:Path sx="-6.4222892953474044" sy="8.868142121524196" tx="52.52093583229158" ty="0.0">
+            <y:Point x="330.0" y="1530.3681421215242"/>
             <y:Point x="330.0" y="1140.0"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -1455,7 +1456,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="68.68910219399538" ty="0.0">
+          <y:Path sx="0.0" sy="0.0" tx="86.93050430623009" ty="0.0">
             <y:Point x="630.0" y="1455.8117919670442"/>
             <y:Point x="630.0" y="1522.9617919670443"/>
           </y:Path>
@@ -1469,7 +1470,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="7.660144181256555" tx="68.68910219399538" ty="0.0">
+          <y:Path sx="0.0" sy="7.660144181256555" tx="86.93050430623009" ty="0.0">
             <y:Point x="630.0" y="1508.4719361483008"/>
             <y:Point x="630.0" y="1522.9617919670443"/>
           </y:Path>
@@ -1483,7 +1484,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="68.68910219399538" ty="0.0">
+          <y:Path sx="0.0" sy="0.0" tx="86.93050430623009" ty="0.0">
             <y:Point x="630.0" y="1543.3117919670442"/>
             <y:Point x="630.0" y="1522.9617919670443"/>
           </y:Path>
@@ -1497,7 +1498,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="68.68910219399538" ty="0.0">
+          <y:Path sx="0.0" sy="0.0" tx="86.93050430623009" ty="0.0">
             <y:Point x="630.0" y="1585.8117919670442"/>
             <y:Point x="630.0" y="1522.9617919670443"/>
           </y:Path>
