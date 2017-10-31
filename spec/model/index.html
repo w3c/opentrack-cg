@@ -477,8 +477,8 @@ An <dfn>Athlete</dfn> is a **[Person](#person)** who participates in Athletics e
 | `name` | `schema:name` | Athlete's full name. | Text |
 | `familyName` | `schema:familyName` | Athlete's family name; surname. | Text |
 | `givenName` | `schema:givenName` |Athlete's given name; first name. | Text |
-| `prevFamilyName` | `ath:prevFamilyName` | Athlete's former family name; surname. | Text |
-| `prevGivenName` | `ath:prevGivenName` | Athlete's former given name; first name. | Text |
+| `prevFamilyName` | `ath:previousFamilyName` | Athlete's former family name; surname. | Text |
+| `prevGivenName` | `ath:previousGivenName` | Athlete's former given name; first name. | Text |
 | `alternateName` | `schema:alternateName` | An alias to name an athlete. | Text |
 | `address` | `schema:address` | Main residence address of an athlete. | [Postal Address](#postal-address) or Text |
 | `image` | `schema:image` | Picture of an athlete. | URL |
@@ -496,7 +496,7 @@ An <dfn>Athlete</dfn> is a **[Person](#person)** who participates in Athletics e
 | `sponsor` | `schema:sponsor` | Athlete's sponsor. | [Person](#person) or [Organization](#organizations) |
 | `affiliation` | `schema:affiliation` | Organization ([Sports Club](#sports-club), [Sports Governing Body](#sports-governing-body), school, university, etc.) which an athlete is affiliated to. | [Organization](#organization) |
 | `memberOf` | `schema:memberOf` | Team which an athlete is part of (for instance, a National Team). | [Sports Team](#sports-team) |
-| `bestPerformance` | `ath:bestPerformance` | Athlete's records and best performances. | [Performance](#performance) |
+| `performance` | `ath:sportsPerformance` | Athlete's records and best performances. | [Performance](#performance) |
 | `captainOf` | `ath:captainOf` | Team which an athlete is captain of. | [Sports Team](#sports-team) |
 
 
@@ -577,7 +577,7 @@ A <dfn>Sports Team</dfn> is a group of [Athletes](#athlete) who play a particula
 | `nationality` | `schema:location` | Teams's location represented by its country. | [Country](#country) |
 | `sponsor` | `schema:sponsor` | Sponsor of a team. | [Person](#persons) or [Organization](#organization) |
 | `coach` | `schema:coach` | Person who acts as coach for a team. | [Person](#person) |
-| `bestPerformance` | `ath:bestPerformance` | Record and/or best performance of a team (e.g., relay competition best). | [Performance](#performance) |
+| `sportsPerformance` | `ath:sportsPerformance` | Record and/or best performance of a team (e.g., relay competition best). | [Performance](#performance) |
 | `captain` | `ath:captain` | Athlete, leader of a team. | [Athlete](#athlete) |
 | `athlete` | `schema:athlete` | Athlete affiliated to a team. | [Athlete](#athlete) |
 
@@ -822,7 +822,7 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
     <li>subClassOf: `schema:SportsEvent`</li>
     <li>superClasses: </li>
     <ul>
-        <li>`ath:UnitCompetition`</li>
+        <li>`ath:UnitCompetitionEvent`</li>
     </ul>
 </ul>
 
@@ -842,7 +842,7 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `organizer` | `schema:organizer` | Person(s) or organization(s) that organizes a competition. | [Person](#persons) or [Organization](#organizations) |
 | `contributor` | `schema:contributor` | Person(s) or organization(s) that collaborates in the organization of a competition. | [Person](#person) or [Organization](#organization) |
 | `starter` | `schema:competitor` | Athletes(s) or teams(s) taking part in the competition at the beginning of the event to compete in the event. | [Competitor](#competitor) |
-| `participation` | `schema:potentialAction` | Action of Athletes(s) or teams(s) taking part of the competition. | [Competitor](#competitor) |
+| `participation` | `ath:competitionAction` | Action of Athletes(s) or teams(s) taking part of the competition. | [Competitor](#competitor) |
 | `sponsor` | `schema:sponsor` | Person(s) or organization(s) that sponsors a competition. | [Person](#person) or [Organization](#organization) |
 | `attendee` | `schema:attendee` | Person(s) who attends a competition. | [Person](#person) |
 | `sportsDiscipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#discipline) |
@@ -850,7 +850,7 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `entryRequirements` | `ath:entryRequirements` | Requirements to take part in a competition.  | Text |
 | `results` | `pending:resultDecision` | List with the results of the participation in a competition. There may be different results during the competition (start list, intermediate results, partial results, final results, etc.) .  | [Results](#results) |
 | `unitCompetition` | `ath:unitCompetition` | Unit competition that is part of a parent competition (e.g. every heat of a semifinal round in a 200m event).  | [Unit Competition](#unit-competition) |
-| `stage` | `ath:stage` | A stage within a multi stage competition. | [Competition](#competition) |
+| `competitionStage` | `ath:competitionStage` | A stage within a multi stage competition. | [Competition](#competition) |
 | `round` | `ath:round` | Round in an athletic event organised as a sequence of rounds. For instance, track and field events are usually structured in qualification rounds (i.e, preliminary rounds, qualification rounds, semifinals and final). Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races. Examples of Competition Rounds: 110m Hurdles Men Preliminary Round Heat 1, 10,000m Men Final, and 110 Hurdles Man Semifinal 1. | [Competition](#competition) |
 | `qualificationCriteria` | `ath:qualificationCriteria` | Requirements for a competitor to get to the next round in a multi round competition (e.g., a preliminary round of qualification in track events may select a number of athletes by their performance and others by heat ranking). | [Qualification Criteria](#qualification-criteria) |
 
@@ -914,7 +914,7 @@ See a complete [example of divisional competition (European Championships with d
 A <dfn>Unit Competition</dfn> is a unitary competition defined by specific sports rules (for instance, the Heat 1 race at the semifinals of 100m event in the Olympic Games). [Competition Rounds](#competition-round) have one or more [Unit Competitions](#unit-competition).
 
 <ul>
-    <li>class: `UnitCompetition` (`ath:UnitCompetition`)</li>
+    <li>class: `UnitCompetitionEvent` (`ath:UnitCompetitionEvent`)</li>
     <li>subClassOf: `ath:Competition`</li>
     <li>superclasses:
         <ul>
@@ -934,7 +934,7 @@ Unit Competitions may vary, depending on the type of the Athletics event:
 A <dfn>Unit Race</dfn> is a competitive event where performances are measured as time (i.e., races and legs in relay races). Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race.
 
 * class: `UnitRace` (`ath:UnitRace`)
-* subClassOf: `ath:UnitCompetition`
+* subClassOf: `ath:UnitCompetitionEvent`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -950,7 +950,7 @@ A <dfn>Unit Field Competition</dfn> is a unitary competition in field events (fo
 
 <ul>
     <li>class: `UnitFieldCompetition` (`ath:UnitFieldCompetition`)</li>
-    <li>subClassOf: `ath:UnitCompetition`</li>
+    <li>subClassOf: `ath:UnitCompetitionEvent`</li>
     <li>superclasses:
         <ul>
             <li>´ath:UnitHeightCompetition´</li>
@@ -1324,8 +1324,8 @@ A <dfn>Result</dfn> is the information obtained after the performance of competi
 
 Results may be under different statuses depending on the stage of the competition.
 
-* class: `Result` (`ath:PlaceDecision`)
-* subClassOf: `pending:PlaceDecision`
+* class: `Result` (`ath:CompetitionResult`)
+* subClassOf: `pending:CompetitionResult`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -1335,9 +1335,10 @@ Results may be under different statuses depending on the stage of the competitio
 | `competitor` | `pending:competitor` | Athlete or team participating in the event. | [Competitor](#competitor) |
 | `competitionFeature` | `ath:competitionFeature` |Set of features and notes included by officials in a starting list or results (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | [Competition Feature Type](#competition-feature-type) |
 | `protestStatus` | `ath:protestStatus` | Status of the protest action of the competitor at a stage of the competition. | [Protest Status Type](#protest-status-type) |
+| `resultStatus` | `ath:resultStatus` | Status of the result in a competition. | [Result Status](#result-status) |
 | `startingOrder` | `ath:startingOrder` | Competitor's order in the start list of a competition stage. | Integer |
 | `trackLane` | `ath:trackLane` | Track lane number assigned to a competitor in case of certain track disciplines. | Integer |
-| `rank` | `pending:numberedPosition` | A numerical rank, place, or position. For example, '1' would represent 1st place in a competitive event.  | Integer |
+| `rank` | `ath:rank` | A numerical rank, place, or position. For example, '1' would represent 1st place in a competitive event.  | Integer |
 | `recordOrBest` | `ath:recordOrBest` | Type of record or best performance related to a result (e.g., World Record, National Record, Personal Best, etc.). | [Record or Best](#record-or-best) |
 | `performance` | `ath:performance` | Measure to quantify the performance of the competitor after a competition stage linked to results.  | [Performance](#performance) |
 | `award` | `schema:award` | Award related to the result achieved by the athlete. | Text |
@@ -1390,9 +1391,9 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 |:--- |:-------- |:----------- |:---------- |
 | `identifier` | `schema:identifier` | Unique character string to identify a performance. | Text |
 | `windAssistance` | `ath:windAssistance` | Wind speed at the moment of registering the performance (it could be either positive or negative). | Text |
-| `recordOrBest` | `schema:award` | Type of record or best performance related to a result in a competition (e.g., World Record, National Record, Personal Best, etc.). | [Record or Best](#record-or-best) |
+| `recordOrBest` | `ath:recordOrBest` | Type of record or best performance related to a result in a competition (e.g., World Record, National Record, Personal Best, etc.). | [Record or Best](#record-or-best) |
 | `sportsDiscipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#discipline) |
-| `date` | `dc:date` | Date when the athlete achieved a performance. | [Date](#date) |
+| `endTime` | `schema:endTime` | Date and time when the athlete achieved a performance. | [DateTime](#datetime) |
 | `agent` | `schema:agent` | Athlete or team that achieved the performance. | [Athlete](#athlete) or [Sports Team](#sports-team) |
 | `result` | `schema:result` | Competition result achieved with this performance. | [Result](#result) |
 
@@ -1512,8 +1513,8 @@ Records or bests can be defined on demand. There is a predefined list of [common
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
 | `description` | `schema:description` | Descriptive text of the qualification criteria. | Text |
-| `byPlaceOrStandard` | `ath:byPlaceOrStandard` | Number of competitors that are qualified in a round by rank (track events) or standard (field events). | Integer |
-| `byPerformance` | `ath:byPerformance` | Number of competitors that are qualified in a round by best performance. | Integer |
+| `byPlaceOrStandard` | `ath:qualifiedByPerformance` | Number of competitors that are qualified in a round by rank (track events) or standard (field events). | Integer |
+| `byPerformance` | `ath:qualifiedByPerformance` | Number of competitors that are qualified in a round by best performance. | Integer |
 
 <pre class="example">
 {
@@ -1538,23 +1539,39 @@ Sometimes may be of interest gathering and representing information about device
 
 * class: `Timekeeping` (`ath:TimekeepingAction`)
 * subClassOf: `schema:ControlAction`
+* superClasses: 
+  * `ath:FullyAutomaticTimekeepingAction`
+  * `ath:HandTimekeepingAction`
+  * `ath:TransponderSystemTimekeepingAction`
+
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
 | `identifier` | `schema:identifier` | Unique character string to identify a timekeeping method. | Text |
-| `timekeepingType` | `dct:type` | Type of the system used. | [Timekeeping Type](#timekeeping-type) |
 | `name` | `schema:name` | Name of a method used for timekeeping (i.e., `Hand Timing`, `Fully Automatic` or `Transponder System Timing`) | Text |
 | `description` | `schema:description` | Description and notes about the method used for timekeeping. | Text |
 | `instrument` | `schema:instrument` | Brand, model and features of the device/system used for timekeeping. | Text |
 
-<pre class="example">
-{
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/timekeeping/FAT.jsonld",
-    "@type" :  "Timekeeping",
-    "timekeepingType" : "timekeeping:FAT",
-    "name" : "Generic Fully Automated System"
-}
-</pre>
+#### Hand Timekeeping
+
+<dfn>Hand Timing</dfn> (`HT`) is a process and/or mechanism of timing competitions by hand. It is usually given to 0.1 seconds (average the different timekeepers and rounded up).
+
+* class: `HandTimekeeping` (`ath:HandTimekeepingAction`)
+* subClassOf: `schema:TimekeepingAction`
+
+#### Fully Automatic Timekeeping
+
+<dfn>Fully Automatic Timing</dfn> (`FAT`) is a process and/or mechanism of timing competitions, obtained from a Photo Finish System (FAT usually given to 0.01 seconds);
+
+* class: `FullyAutomaticTimekeeping` (`ath:FullyAutomaticTimekeepingAction`)
+* subClassOf: `schema:TimekeepingAction`
+
+#### Transponder System Timekeeping
+
+<dfn>Transponder System Timing</dfn> is a process and/or mechanism of timing provided by radio signal devices. Road races use a variety of chip timing systems, precision is less important than recording thousands of people easily in the right order.
+
+* class: `TransponderSystemTimekeepingAction` (`ath:TransponderSystemTimekeepingAction`)
+* subClassOf: `schema:TimekeepingAction`
 
 
 ### Place
@@ -2289,16 +2306,6 @@ Type of stadium, track and/or field where a competition take places.
 | `venue:VenueIndoor` | Indoor venue |
 | `venue:VenueOutdoor`    | Outdoor venue |
 
-
-### Timekeeping Type
-
-Timekeeping mechanism types.
-
-| Code | Type |
-| ---- | ---- |
-| `timekeeping:HT` | Hand Timing |
-| `timekeeping:FAT`    | Fully Automatic |
-| `timekeeping:TST` | Transponder System Timing |
 
 ### Wind Speed
 
