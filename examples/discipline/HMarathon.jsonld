@@ -4,7 +4,7 @@
     "@type": "MiddleOrLongDistance",    
     "name": "Half Marathon",
     "descriptition": "Road running race of 21.0975 kilometres (13.1094 mi) – half the distance of a marathon",
-    "raceCompetitionType": "RaceIndividual",
+    "raceCompetitionType": "race:RaceIndividual",
     "distance" : {
         "@type" : "QuantitativeValue",
         "value" : "21,0975",

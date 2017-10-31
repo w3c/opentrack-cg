@@ -4,8 +4,8 @@
     "@type": "Sprint",    
     "name": "100 metres",
     "alternateName": "100-metre dash",
-    "raceCompetitionType": "RaceIndividual",
-    "venueType": "VenueOutdoor",
+    "raceCompetitionType": "race:RaceIndividual",
+    "venueType": "venue:VenueOutdoor",
     "distance" : {
         "@type" : "QuantitativeValue",
         "value" : "100",

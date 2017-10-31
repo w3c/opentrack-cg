@@ -6,6 +6,7 @@
         "MultidisciplineCompetition"
     ],
     "name": "2016 European Athletics Championships",
+    "superEvent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/EuropeanChampionships.jsonld" },
     "alternateName": "Amsterdam Euro 2016",
     "url": "http://www.european-athletics.org/competitions/european-athletics-championships/2016/events/",
     "image": "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Amsterdam2016logo.png",
@@ -30,207 +31,207 @@
     "status": "event:Finished",
     "organizer": { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld" },
     "category": { "@id" : "http://w3c.github.io/opentrack-cg/examples/category/SEN.jsonld" },
-    "division": [
+    "subEvent": [
         {
             "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W",
-            "@type": "MultiRoundCompetition",
+            "@type": "Competition",
             "name": "2016 European Championships - 100m Women",
             "discipline": { "@id" : "http://w3c.github.io/opentrack-cg/examples/discipline/100m.jsonld" },
-            "category": "http://w3c.github.io/opentrack-cg/examples/category/SENF.jsonld",            
+            "category": { "@id" : "http://w3c.github.io/opentrack-cg/examples/category/SENF.jsonld" }, 
             "startDate": "2016-06-07",
             "endDate": "2016-06-08",
             "status": "Finished",
-            "starter": [
+            "participation": [
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_100Haase",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "100"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_101Papaioannou",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/101Papaioannou.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "101"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_102Sedney",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/102Sedney.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "102"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_103Eftimova",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/103Eftimova.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "103"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_104Kora",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "104"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_105Siragusa",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/105Siragusa.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "105"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_106Belibasaki",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/106Belibasaki.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "106"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_107Wingfield",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/107Wingfield.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "107"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_122Povh",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/122Povh.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "122"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_108Mihalinec",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/108Mihalinec.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "108"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_109Foster",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/109Foster.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "109"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_110Galais",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/110Galais.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "110"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_111Bezeková",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/111Bezeková.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "111"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_112Ograzeanu",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/112Ograzeanu.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "112"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_113Lavanchy",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/113Lavanchy.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "113"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_114Hooper",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/114Hooper.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "114"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_115DorcasBazolo",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/115DorcasBazolo.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "115"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_116Okparaebo",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/116Okparaebo.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "116"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_117PopowiczDrapała",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/117PopowiczDrapała.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "117"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_118García",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/118García.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "118"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_119Nguyen",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/119Nguyen.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "119"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_120GrinčikaitėSamuolė",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/120GrinčikaitėSamuolė.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "120"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_121Schippers",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/121Schippers.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "121"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_122Philip",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/122Philip.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "122"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_123Akakpo",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/123Akakpo.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "123"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_124LalovaCollio",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/124LalovaCollio.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "124"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_125Pinto",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/125Pinto.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "125"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_126Pohrebnyak",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/126Pohrebnyak.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "126"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_127DorcasBazolo",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/127DorcasBazolo.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "127"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_128Henry",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/128Henry.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "128"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_129Kambundji",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/129Kambundji.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "129"
                 },
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_130Gnafoua",
                     "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/130Gnafoua.jsonld" },
-                    "@type" : "competitor",
+                    "@type" : "Competitor",
                     "bibIdentifier" : "130"
                 }            
             ],
@@ -247,7 +248,7 @@
             "round": [
                 {
                     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1",
-                    "@type": "CompetitionRound",
+                    "@type": "Competition",
                     "name": "100m Women - Round 1",
                     "startDate": "2016-06-07T12:45:00+02:00",
                     "qualificationCriteria": {

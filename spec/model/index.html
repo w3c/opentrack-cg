@@ -1640,7 +1640,7 @@ A <dfn>Place</dfn> is a location, venue or territories where events are held or 
 
 ### Discipline
 
-A <dfn>Discipline</dfn> is a particular type of Athletics event defined by specific rules. 
+An <dfn>Athletics Discipline</dfn> is a particular type of Athletics event defined by specific rules. 
 
 [According to IAAF](https://www.iaaf.org/disciplines), Athletics events may be classified into: _Sprints_, _Middle/long distance_, _Hurdles_, _Road Running_, _Jumps_, _Throws_, _Combined Events_, _Race Walks_, _Relays_, _Cross Country_, _Mountain Running_ and _Ultra Running_. IOC ODF [[IOC-ODF]] uses: _Races (track and road) and relays_, _Throws_, _Horizontal Jumps_ and _Vertical Jumps_. [Athlib proposes codes](http://opentrack.run/athlib/build/html/eventcodes.html) to represent disciplines.
 
@@ -1675,27 +1675,27 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
-| `venueType` | `ath:venueType` | Type of the stadium (indoor/outdoor). | [Venue Type](#venue-type) |
 | `name` | `schema:name` | Descriptive name of the discipline. | Text |
+| `venueType` | `ath:AthleticsVenueType` | Type of a stadium with track and/or field facilities (indoor/outdoor). | [Venue Type](#venue-type) |
 
 #### Race
 
 <dfn>Race</dfn> is a type of competition to see who is the fastest, including running or race-waking.
 
 <ul>
-    <li>class: `Race` (`ath:Race`)</li>
+    <li>class: `Race` (`ath:RaceDiscipline`)</li>
     <li>subClassOf: `ath:AthleticsDiscipline`</li>
     <li>superClasses: 
         <ul>
-            <li>`ath:MiddleOrLongDistanceRace`</li>
-            <li>`ath:Hurdles`</li>
-            <li>`ath:Sprints`</li>
-            <li>`ath:RaceWalking`</li>
-            <li>`ath:CrossCountry`</li>
-            <li>`ath:RoadRunning`</li>
-            <li>`ath:MountainRunning`</li>
-            <li>`ath:TrackRelays`</li>
-            <li>`ath:UltraRunning`</li>
+            <li>`ath:MiddleOrLongDistanceDiscipline`</li>
+            <li>`ath:HurdlesDiscipline`</li>
+            <li>`ath:SprintsDiscipline`</li>
+            <li>`ath:RaceWalkingDiscipline`</li>
+            <li>`ath:CrossCountryDiscipline`</li>
+            <li>`ath:RoadRunningDiscipline`</li>
+            <li>`ath:MountainRunningDiscipline`</li>
+            <li>`ath:TrackRelaysDiscipline`</li>
+            <li>`ath:UltraRunningDiscipline`</li>
         </ul>
     </li>
 </ul>
@@ -1725,7 +1725,7 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
-| `obstacleHeight` | `ath:obstacleHeight` | Obstacle height. | [Distance](#distance) |
+| `height` | `ath:height` | Obstacle height. | [Distance](#distance) |
 
 ##### Hurdles
 
@@ -1736,8 +1736,8 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
-| `hurdlesHeight` | `ath:hurdlesHeight` | Hurdles height. | [Distance](#distance) |
-| `hurdlesSpacing` | `ath:hurdlesSpacing` | Horizontal distance between hurdles. | [Distance](#distance) |
+| `height` | `ath:height` | Hurdles height. | [Distance](#distance) |
+| `spacing` | `ath:spacing` | Horizontal distance between hurdles. | [Distance](#distance) |
 
 ##### Sprints
 
@@ -1745,6 +1745,11 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 * class: `Sprints` (`ath:Sprints`)
 * subClassOf: `ath:Race`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `trackType` | `ath:runningTrackType` | Type of track where a sprint race is held (straight, curved). | [Running Track Type](#running-track-type) |
+
 
 ##### Race-walking
 
@@ -2332,6 +2337,16 @@ Types of features related to field trials.
 | ------------- | ---- |
 | `trial:valid` | Trial is valid |
 | `trial:substitute` | Substitute trial |
+
+
+### Running Track Type
+
+Types of tracks where running races are held.
+
+| Code | Issue/feature |
+| ------------- | ---- |
+| `track:straight` | Straight track |
+| `track:curved` | Curved track |
 
 
 ### Person Roles

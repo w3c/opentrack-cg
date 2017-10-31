@@ -4,7 +4,7 @@
     "@type": "MiddleOrLongDistance",    
     "name": "1500 metres",
     "descriptition": "Track race of 1500 m distance",
-    "raceCompetitionType": "RaceIndividual",
+    "raceCompetitionType": "race:RaceIndividual",
     "distance" : {
         "@type" : "QuantitativeValue",
         "value" : "1500",

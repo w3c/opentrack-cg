@@ -4,7 +4,7 @@
     "@type": "MiddleOrLongDistance",    
     "name": "3000 metres",
     "descriptition": "Track race of 3000 m distance",
-    "raceCompetitionType": "RaceIndividual",
+    "raceCompetitionType": "race:RaceIndividual",
     "distance" : {
         "@type" : "QuantitativeValue",
         "value" : "3000",

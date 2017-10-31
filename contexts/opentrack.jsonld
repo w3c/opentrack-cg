@@ -13,7 +13,7 @@
     "fed"           : "http://purl.org/athletics/federation#",
     "best"          : "http://purl.org/athletics/best#",
     "trial"         : "http://purl.org/athletics/trial#",
-    "timekeeping"   : "http://purl.org/athletics/timekeeping#",
+    "track"         : "http://purl.org/athletics/track#",
     "qudt"          : "http://qudt.org/schema/qudt/",
     "unit"          : "http://qudt.org/vocab/unit/",
 
@@ -45,6 +45,9 @@
     "PointsPerformance"     : "ath:PointsPerformance",
     "TimePerformance"       : "ath:TimePerformance",    
     "Timekeeping"           : "ath:TimekeepingAction",
+    "TransponderSystemTimekeeping" : "ath:TransponderSystemTimekeepingAction",
+    "FullyAutomaticTimekeeping"    : "ath:FullyAutomaticTimekeepingAction",
+    "HandTimekeeping"       : "ath:HandTimekeepingAction",
     "UnitFieldCompetition"  : "ath:UnitFieldCompetition",
     "UnitHeightCompetition" : "ath:UnitHeightCompetition",
     "UnitDistanceCompetition" : "ath:UnitDistanceCompetition",
@@ -53,8 +56,8 @@
     "HeightTrial"           : "ath:HeightTrial",
 
     "AthleticsDiscipline"   : "ath:AthleticsDiscipline",    
-    "Race"                  : "ath:Race",
-    "MiddleOrLongDistanceRace" : "ath:MiddleOrLongDistanceRace",
+    "Race"                  : "ath:RaceDiscipline",
+    "MiddleOrLongDistanceRace" : "ath:MiddleOrLongDistanceRaceDiscipline",
     "Steeplechase"          : "ath:Steeplechase",
     "Hurdles"               : "ath:Hurdles",
     "Sprint"                : "ath:Sprint",
@@ -193,9 +196,7 @@
     "addressCountry"    : { "@id" : "schema:addressCountry" , "@type" : "@vocab" },
     "instrument"        : "schema:instrument" ,
     "maxDuration"       : { "@id" : "ath:maxDuration" , 
-    "hurdlesSpacing"    : "@id" : "ath:hurdlesSpacing" , 
-    "hurdlesHeight"     : "@id" : "ath:hurdlesHeight" , 
-    "obstacleHeight"    : "@id" : "ath:obstacleHeight" ,
+    "spacing"           : "@id" : "ath:spacing" , 
     "discusDiameter"    : "@id" : "ath:discusDiameter" ,
     "hammerLength"      : "@id" : "ath:hammerLength" ,
     "scorePointsReference": "@id" : "ath:scorePointsReference" ,
@@ -204,21 +205,17 @@
     "value"             : { "@id" : "schema:value", "@type": "xsd:decimal" },
     "unitCode"          : "schema:unitCode",
     
-    "raceCompetitionType"    : { "@id" : "ath:raceCompetitionType", "@type" : "@vocab" },
-    "trackAndFieldVenueType" : { "@id" : "ath:trackAndFieldVenueType", "@type" : "@vocab" },
-    "timekeepingType"        : { "@id" : "ath:timekeepingType", "@type" : "@vocab" },
+    "raceCompetitionType" : { "@id" : "ath:raceCompetitionType", "@type" : "@vocab" },
+    "venueType"         : { "@id" : "ath:venueType", "@type" : "@vocab" },
+    "trackType"         : { "@id" : "ath:runningTrackType", "@type" : "@vocab" },
 
     "Individual"        : "ath:individualRace",
     "Relays"            : "ath:relayRace",
     "TimeTrial"         : "ath:timeTrialRace",
     
-    "Indoor"            : "ath:indoorVenue",
-    "Outdoor"           : "ath:indoorVenue",
+    "Indoor"            : "ath:AthleticsVenueIndoor",
+    "Outdoor"           : "ath:AthleticsVenueOutdoor",
     
-    "TST"   : "ath:tst",
-    "FAT"   : "ath:fat",
-    "HT"    : "ath:ht",
-
     "Male"      : "schema:Male",
     "Female"    : "schema:Female"
   }

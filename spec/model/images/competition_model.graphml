@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
-  <!--Created by yEd 3.17-->
+  <!--Created by yEd 3.17.1-->
   <key attr.name="Description" attr.type="string" for="graph" id="d0"/>
   <key for="port" id="d1" yfiles.type="portgraphics"/>
   <key for="port" id="d2" yfiles.type="portgeometry"/>
@@ -211,7 +211,7 @@ contributor: Agent
 sponsor: Agent
 attendee: Person
 entryRequirements: Text
-stage: Competition
+competitionStage: Competition
 round: Competition
 starter: Agent</y:AttributeLabel>
             <y:MethodLabel/>
@@ -990,7 +990,6 @@ superEvent<y:LabelModel>
     </edge>
     <edge id="e32" source="n16" target="n15">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="52.70575055665488"/>
@@ -1002,7 +1001,6 @@ superEvent<y:LabelModel>
     </edge>
     <edge id="e33" source="n17" target="n15">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="52.70575055665488"/>
@@ -1040,7 +1038,6 @@ superEvent<y:LabelModel>
     </edge>
     <edge id="e36" source="n19" target="n10">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="14.015625"/>
@@ -1052,7 +1049,6 @@ superEvent<y:LabelModel>
     </edge>
     <edge id="e37" source="n18" target="n10">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="14.015625"/>
@@ -1072,7 +1068,6 @@ superEvent<y:LabelModel>
     </edge>
     <edge id="e38" source="n13" target="n15">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1092,7 +1087,6 @@ superEvent<y:LabelModel>
     </edge>
     <edge id="e39" source="n15" target="n0">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="141.2961994147479" sy="0.0" tx="-100.00768973744653" ty="25.154555512288383"/>
@@ -1112,7 +1106,6 @@ superEvent<y:LabelModel>
     </edge>
     <edge id="e40" source="n7" target="n20">
       <data key="d8"/>
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="130.08530160023975" sy="-96.64237980719943" tx="0.0" ty="0.0"/>

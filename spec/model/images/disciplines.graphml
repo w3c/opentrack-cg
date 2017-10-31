@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
-  <!--Created by yEd 3.17-->
+  <!--Created by yEd 3.17.1-->
   <key attr.name="Description" attr.type="string" for="graph" id="d0"/>
   <key for="port" id="d1" yfiles.type="portgraphics"/>
   <key for="port" id="d2" yfiles.type="portgeometry"/>
@@ -17,10 +17,10 @@
     <node id="n0">
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="300.638679245283" width="457.73845919212147" x="-179.5169811320754" y="1259.6806603773587"/>
+          <y:Geometry height="300.638679245283" width="547.2674843837973" x="-269.0460063237512" y="1259.6806603773587"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" raised="false" type="dashed" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="226.86922959606073" y="148.31933962264156">
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="271.63374219189865" y="148.31933962264156">
             <y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -47,7 +47,7 @@
             </y:ModelParameter>
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-            <y:AttributeLabel>straight: Boolean</y:AttributeLabel>
+            <y:AttributeLabel>trackType: TrackType</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
@@ -527,10 +527,10 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="50.0" width="173.94295612009225" x="104.27852193995382" y="1115.0"/>
+          <y:Geometry height="63.0" width="208.90188273564542" x="69.3195953244007" y="1108.5"/>
           <y:Fill color="#CCCCCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="70.2568359375" x="51.843060091296124" y="3.0">Discipline<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="129.24560546875" x="39.82813863344771" y="3.0">AthleticsDiscipline<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -538,7 +538,8 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
             </y:ModelParameter>
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-            <y:AttributeLabel>venueType: VenueType</y:AttributeLabel>
+            <y:AttributeLabel>name: Text
+venueType: AthleticsVenueType</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
@@ -716,10 +717,10 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="30.0" width="137.44295612009222" x="-136.2214780600459" y="1313.8632080329558"/>
+          <y:Geometry height="30.0" width="182.87559576959927" x="-239.11304432510605" y="1313.8632080329558"/>
           <y:Fill color="#CCCCCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="78.17236328125" x="29.63529641942111" y="3.0">VenueType<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="137.1611328125" x="22.857231478549636" y="3.0">AthleticsVenueType<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -737,10 +738,10 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="30.0" width="151.44295612009233" x="104.27852193995383" y="1291.9382080329558"/>
+          <y:Geometry height="30.0" width="208.90188273564542" x="46.81959532440075" y="1291.9382080329558"/>
           <y:Fill color="#CCCCCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="89.36962890625" x="31.036663606921167" y="3.0">IndoorVenue<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="148.3583984375" x="30.271742149072708" y="3.0">AthleticsVenueIndoor<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -758,10 +759,10 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="30.0" width="151.44295612009233" x="104.27852193995383" y="1335.0"/>
+          <y:Geometry height="30.0" width="208.90188273564542" x="46.81959532440075" y="1335.0"/>
           <y:Fill color="#CCCCCC" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="101.0302734375" x="25.206341341296167" y="3.0">OutdoorVenue<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="160.01904296875" x="24.441419883447708" y="3.0">AthleticsVenueOutdoor<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1196,7 +1197,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
     <edge id="e37" source="n24" target="n24">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="58.38644680954151" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:Path sx="70.12091168748942" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
         </y:QuadCurveEdge>
@@ -1220,7 +1221,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="-6.4222892953474044" sy="8.868142121524196" tx="52.52093583229158" ty="0.0">
+          <y:Path sx="-6.4222892953474044" sy="8.868142121524196" tx="63.07655465409434" ty="0.0">
             <y:Point x="330.0" y="1530.3681421215242"/>
             <y:Point x="330.0" y="1140.0"/>
           </y:Path>
@@ -1234,7 +1235,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="4.5" tx="56.31762998884278" ty="0.0">
+          <y:Path sx="0.0" sy="4.5" tx="67.6363055929445" ty="0.0">
             <y:Point x="330.0" y="1082.0"/>
             <y:Point x="330.0" y="1140.0"/>
           </y:Path>
@@ -1248,7 +1249,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="2.4" tx="38.5997239249372" ty="0.0">
+          <y:Path sx="0.0" sy="2.4" tx="46.357467878310324" ty="0.0">
             <y:Point x="330.0" y="1260.0"/>
             <y:Point x="330.0" y="1140.0"/>
           </y:Path>
@@ -1372,7 +1373,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
     <edge id="e53" source="n33" target="n33">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="46.134698557793214" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:Path sx="61.384815363222145" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
         </y:QuadCurveEdge>
@@ -1381,7 +1382,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
     <edge id="e54" source="n34" target="n34">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="50.83399925709396" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:Path sx="70.1209116874894" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
         </y:QuadCurveEdge>
@@ -1390,7 +1391,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
     <edge id="e55" source="n35" target="n35">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="50.83399925709396" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:Path sx="70.1209116874894" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
         </y:QuadCurveEdge>
@@ -1400,9 +1401,9 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="-8.0617919670442" tx="60.00000000000003" ty="-4.25">
-            <y:Point x="52.50000000000023" y="1341.9382080329558"/>
-            <y:Point x="52.50000000000023" y="1324.6132080329558"/>
+          <y:Path sx="0.0" sy="-8.0617919670442" tx="79.83338001394986" ty="-4.25">
+            <y:Point x="-4.958926615552855" y="1341.9382080329558"/>
+            <y:Point x="-4.958926615552855" y="1324.6132080329558"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="white_delta"/>
@@ -1414,9 +1415,9 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="-3.822605561276987" tx="60.00000000000003" ty="-4.25">
-            <y:Point x="52.50000000000023" y="1303.1156024716788"/>
-            <y:Point x="52.50000000000023" y="1324.6132080329558"/>
+          <y:Path sx="0.0" sy="-3.822605561276987" tx="79.83338001394986" ty="-4.25">
+            <y:Point x="-4.958926615552855" y="1303.1156024716788"/>
+            <y:Point x="-4.958926615552855" y="1324.6132080329558"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="white_delta"/>
@@ -1549,7 +1550,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="78.75000000000006" ty="0.0">
+          <y:Path sx="0.0" sy="0.0" tx="94.57711673057975" ty="0.0">
             <y:Point x="330.0" y="1374.0430178818283"/>
             <y:Point x="330.0" y="1140.0"/>
           </y:Path>

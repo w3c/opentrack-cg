@@ -214,7 +214,7 @@
       <text stroke-linecap="butt" x="396.0125" y="-44.5538" clip-path="url(#clipPath10)" font-family="sans-serif" stroke="none" stroke-miterlimit="1.45" xml:space="preserve">sponsor: Agent</text>
       <text stroke-linecap="butt" x="396.0125" y="-30.421" clip-path="url(#clipPath10)" font-family="sans-serif" stroke="none" stroke-miterlimit="1.45" xml:space="preserve">attendee: Person</text>
       <text stroke-linecap="butt" x="396.0125" y="-16.2882" clip-path="url(#clipPath10)" font-family="sans-serif" stroke="none" stroke-miterlimit="1.45" xml:space="preserve">entryRequirements: Text</text>
-      <text stroke-linecap="butt" x="396.0125" y="-2.1554" clip-path="url(#clipPath10)" font-family="sans-serif" stroke="none" stroke-miterlimit="1.45" xml:space="preserve">stage: Competition</text>
+      <text stroke-linecap="butt" x="396.0125" y="-2.1554" clip-path="url(#clipPath10)" font-family="sans-serif" stroke="none" stroke-miterlimit="1.45" xml:space="preserve">competitionStage: Competition</text>
       <text stroke-linecap="butt" x="396.0125" y="11.9774" clip-path="url(#clipPath10)" font-family="sans-serif" stroke="none" stroke-miterlimit="1.45" xml:space="preserve">round: Competition</text>
       <text stroke-linecap="butt" x="396.0125" y="26.1103" clip-path="url(#clipPath10)" font-family="sans-serif" stroke="none" stroke-miterlimit="1.45" xml:space="preserve">starter: Agent</text>
       <line y2="33" fill="none" x1="392" clip-path="url(#clipPath10)" x2="650" y1="33"/>
