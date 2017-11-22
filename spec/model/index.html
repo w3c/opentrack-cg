@@ -1588,10 +1588,24 @@ A <dfn>Place</dfn> is a location, venue or territories where events are held or 
 | `address` | `schema:address` | Postal address related to a venue. | [Postal Address](#postal-address) or Text |
 | `url` | `schema:url` | Webpage URL about a venue. | URL |
 | `image` | `schema:image` | Picture about a venue. | URL |
-| `geo` | `schema:geo` | Coordinates of a venue. | [GeoCoordinates](http://schema.org/GeoCoordinates) or [GeoShape](http://schema.org/GeoShape)  |
+| `geo` | `schema:geo` | Geographic coordinates and/or elevation (expressed in metres, following [WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)) of a venue. | [Geo Coordinates](#geo-coordinates)  |
 | `map` | `schema:hasMap` | URL to a map pointing to a venue. | URL |
 | `telephone` | `schema:telephone` | Telephone number of a venue. | Text |
 | `fax` | `schema:faxNumber` | Fax number of a venue. | Text |
+
+
+#### Geo Coordinates
+
+<dfn>Geo Coordinates</dfn> are the geographic coordinates of a place or event. 
+
+* class: `schema:GeoCoordinates`
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `latitude` | `schema:latitude` | The latitude of a location. For example 37.42242 ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). | Number |
+| `longitude` | `schema:longitude` | The longitude of a location. For example -122.08585 ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). | Number |
+| `elevation` | `schema:elevation` | The elevation of a location in metres ([WGS 84](https://en.wikipedia.org/wiki/World_Geodetic_System)). | Number |
+
 
 <pre class="example">
 {
@@ -1600,7 +1614,8 @@ A <dfn>Place</dfn> is a location, venue or territories where events are held or 
     "name": "Olympic Stadium Amsterdam",
     "geo": {
         "latitude": "52.343417",
-        "longitude": "4.854192"
+        "longitude": "4.854192",
+        "elevation": "123.93"      
     },
     "map": "http://example.org/map",
     "address": {
@@ -2059,7 +2074,8 @@ Mass must be represented by a quantified value, expressing the magnitude and kin
 
 *It is recommended using the 'kilogram'* (kg), as it is the base unit of mass in the International System of Units (SI).
 
-* Kilogram: `KGM`
+* Kilogram (kg): `KGM`
+* Pound (lb): `LBR`
 
 <pre class="example">
 {
