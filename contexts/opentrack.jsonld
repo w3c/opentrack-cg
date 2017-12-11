@@ -212,9 +212,9 @@
     "venueType"         : { "@id" : "ath:venueType", "@type" : "@vocab" },
     "trackType"         : { "@id" : "ath:runningTrackType", "@type" : "@vocab" },
 
-    "Individual"        : "ath:individualRace",
-    "Relays"            : "ath:relayRace",
-    "TimeTrial"         : "ath:timeTrialRace",
+    "Individual"        : "ath:IndividualCompetition",
+    "Relays"            : "ath:RelayCompetition",
+    "TimeTrial"         : "ath:TimeTrialCompetition",
     
     "Indoor"            : "ath:AthleticsVenueIndoor",
     "Outdoor"           : "ath:AthleticsVenueOutdoor",
