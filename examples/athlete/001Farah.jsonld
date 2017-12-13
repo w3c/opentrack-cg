@@ -1,54 +1,70 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
-    "@type" : "Athlete",
-    
-    "name" : "Mohamed Muktar Jama Farah",
-    "familyName" : "Farah",
-    "givenName" : "Mohamed Muktar Jama",
-    "alternateName" : "Mo Farah",               
-    "url" : "http://www.mofarah.com",
-    "gender" : "Male" ,
-    "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/MoPodiumRio2016.png/800px-MoPodiumRio2016.png",
-    "nationality" : "countrycode:GBR",                       
-    "email" : "fakeemail@example.com",
-    "height" : {
-        "@type" : "QuantitativeValue",
-        "value" : "1.75",
-        "unitCode" : "MTR"
+    "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+    "@type": "Athlete",
+    "name": "Mohamed Muktar Jama Farah",
+    "familyName": "Farah",
+    "givenName": "Mohamed Muktar Jama",
+    "alternateName": "Mo Farah",
+    "url": "http://www.mofarah.com",
+    "gender": "Male",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/MoPodiumRio2016.png/800px-MoPodiumRio2016.png",
+    "nationality": "countrycode:GBR",
+    "email": "fakeemail@example.com",
+    "height": {
+        "@type": "QuantitativeValue",
+        "value": "1.75",
+        "unitCode": "MTR"
     },
-    "weight" : {
-        "@type" : "QuantitativeValue",
-        "value" : "65.0",
-        "unitCode" : "KGM"
+    "weight": {
+        "@type": "QuantitativeValue",
+        "value": "65.0",
+        "unitCode": "KGM"
     },
-    "birthPlace" : "Mogadishu, Somalia" ,
-    "birthDate" : "1983-04-23",
-    "coach" : { 
-        "name" : "Alberto Salazar" 
+    "birthPlace": "Mogadishu, Somalia",
+    "birthDate": "1983-04-23",
+    "coach": {
+        "name": "Alberto Salazar"
     },
-    "sponsor" : {
-        "@type" : "Organization",
-        "name" : "Nike Oregon Project",
-        "url" : "https://nikeoregonproject.com"            
+    "sponsor": {
+        "@type": "Organization",
+        "name": "Nike Oregon Project",
+        "url": "https://nikeoregonproject.com"
     },
-    "affiliation" : 
-        [
-            { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld" },
-            { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld" },
-            { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" },
-            { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld" }
-        ],
-    "memberOf" : 
-        [
-            { "@id" : "http://w3c.github.io/opentrack-cg/examples/team/GBR2012.jsonld" },
-            { "@id" : "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld" }
-        ],
-    "bestPerformance" :
-        [
-           { "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon" },
-           { "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m" },
-           { "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m" }
-        ],
-    "owl:sameAs" : { "@id" : "http://dbpedia.org/resource/Mo_Farah" }
+    "affiliation": [
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld"
+        }
+    ],
+    "memberOf": [
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/team/GBR2012.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld"
+        }
+    ],
+    "bestPerformance": [
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m"
+        }
+    ],
+    "owl:sameAs": {
+        "@id": "http://dbpedia.org/resource/Mo_Farah"
+    }
 }

@@ -15,15 +15,27 @@
         "postalCode": "B42 2BE",
         "addressCountry": "countrycode:GBR"
     },
-    "areaServed" : "countrycode:GBR",
+    "areaServed": "countrycode:GBR",
     "memberOf": [
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld" }
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld"
+        }
     ],
     "member": [
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GB-ENG.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GB-NIR.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GB-SCT.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GB-WLS.jsonld" }
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GB-ENG.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GB-NIR.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GB-SCT.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GB-WLS.jsonld"
+        }
     ]
 }

@@ -1,13 +1,13 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/discipline/1500m.jsonld",
-    "@type": "MiddleOrLongDistance",    
+    "@id": "http://w3c.github.io/opentrack-cg/examples/discipline/1500m.jsonld",
+    "@type": "MiddleOrLongDistance",
     "name": "1500 metres",
     "descriptition": "Track race of 1500 m distance",
     "raceCompetitionType": "race:RaceIndividual",
-    "distance" : {
-        "@type" : "QuantitativeValue",
-        "value" : "1500",
-        "unitCode" : "MTR"
+    "distance": {
+        "@type": "QuantitativeValue",
+        "value": "1500",
+        "unitCode": "MTR"
     }
 }

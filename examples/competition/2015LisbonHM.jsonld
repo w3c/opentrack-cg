@@ -1,17 +1,16 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/2015LisbonHM.jsonld",
+    "@id": "http://w3c.github.io/opentrack-cg/examples/competition/2015LisbonHM.jsonld",
     "@type": "DivisionalCompetition",
-
     "name": [
-    	{
-	    	"@value" : "2015 EDP Lisbon Half Marathon",
-	    	"@language" : "en" 
-    	},
-    	{
-	    	"@value" : "EDP Meia Maratona Lisboa 2015",
-	    	"@language" : "pt" 
-    	}
+        {
+            "@value": "2015 EDP Lisbon Half Marathon",
+            "@language": "en"
+        },
+        {
+            "@value": "EDP Meia Maratona Lisboa 2015",
+            "@language": "pt"
+        }
     ],
     "url": "http://www.maratonaclubedeportugal.com/corrida/edp-lisbon-half-marathon/",
     "image": "http://www.maratonaclubedeportugal.com/generated_files/corridas/logotipo/EDP%20Meia%20Maratona%20de%20Lisboa%202017.jpg",

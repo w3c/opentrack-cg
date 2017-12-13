@@ -1,20 +1,34 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld",
-    "@type" : "Team",
-    "name" : "Great Britain National Team - Olympic Games 2016",
-    "alternateName" : "GBR",
-    "nationality" : "countrycode:GBR",
-    "memberOf" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" },
-    "athlete" : [
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/002Butchart.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/004Athlete4.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/005Athlete5.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/006Athlete6.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/006Athlete7.jsonld" }
+    "@id": "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld",
+    "@type": "Team",
+    "name": "Great Britain National Team - Olympic Games 2016",
+    "alternateName": "GBR",
+    "nationality": "countrycode:GBR",
+    "memberOf": {
+        "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+    },
+    "athlete": [
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/002Butchart.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/004Athlete4.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/005Athlete5.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/006Athlete6.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/006Athlete7.jsonld"
+        }
     ],
-    "captain" :  { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld" }
+    "captain": {
+        "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
+    }
 }
-
-
