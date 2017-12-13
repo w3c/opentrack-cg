@@ -19,7 +19,7 @@
 
     "countrycode"   : "http://publications.europa.eu/resource/authority/country/",
     "continent"     : "http://publications.europa.eu/resource/authority/continent/",
-        
+
     "Organization"  : "schema:Organization",
     "Person"        : "schema:Person",
     "Place"         : "schema:Place",
@@ -37,13 +37,13 @@
     "SportsDiscipline"      : "ath:SportsDiscipline",
     "QualificationCriteria" : "ath:QualificationCriteria",
     "UnitCompetition"       : "ath:UnitCompetition",
-    "UnitRace"              : "ath:UnitRace",    
+    "UnitRace"              : "ath:UnitRace",
     "Result"                : "ath:CompetitionResult",
     "Performance"           : "ath:SportsPerformance",
     "RecordOrBest"          : "ath:RecordOrBest",
     "DistancePerformance"   : "ath:DistancePerformance",
     "PointsPerformance"     : "ath:PointsPerformance",
-    "TimePerformance"       : "ath:TimePerformance",    
+    "TimePerformance"       : "ath:TimePerformance",
     "Timekeeping"           : "ath:TimekeepingAction",
     "TransponderSystemTimekeeping" : "ath:TransponderSystemTimekeepingAction",
     "FullyAutomaticTimekeeping"    : "ath:FullyAutomaticTimekeepingAction",
@@ -55,7 +55,7 @@
     "DistanceTrial"         : "ath:DistanceTrial",
     "HeightTrial"           : "ath:HeightTrial",
 
-    "AthleticsDiscipline"   : "ath:AthleticsDiscipline",    
+    "AthleticsDiscipline"   : "ath:AthleticsDiscipline",
     "Race"                  : "ath:RaceDiscipline",
     "MiddleOrLongDistanceRace" : "ath:MiddleOrLongDistanceRaceDiscipline",
     "Steeplechase"          : "ath:Steeplechase",
@@ -126,7 +126,7 @@
     "foundingDate"      : { "@id": "schema:foundingDate", "@type": "xsd:date" },
     "athlete"           : "schema:athlete" ,
     "captain"           : "ath:captain" ,
-    "location"          : "schema:location" , 
+    "location"          : "schema:location" ,
     "areaServed"        : { "@id": "schema:areaServed" , "@type": "@vocab" },
     "member"            : "schema:member",
     "requiredMinAge"    : { "@id": "schema:requiredMinAge", "@type": "xsd:integer" },
@@ -150,8 +150,8 @@
     "category"          : "ath:sportsCategory" ,
     "entryRequirements" : "ath:entryRequirements" ,
     "results"           : { "@id": "pending:resultDecision", "@container": "@list" },
-    
-    "unitCompetition"   : "ath:UnitCompetitionEvent" ,  
+
+    "unitCompetition"   : "ath:UnitCompetitionEvent" ,
     "competitionStage"  : { "@id": "ath:competitionStage", "@container": "@list" },
     "round"             : { "@id" : "ath:round", "@container": "@list" },
     "qualificationCriteria" : "ath:qualificationCriteria",
@@ -163,7 +163,7 @@
     "targetHeight"      : "schema:height",
     "attemptNumber"     : "ath:attemptNumber",
     "trialFeature"      : "ath:trialFeature",
-    
+
     "subEvent"          : "schema:subEvent",
     "superEvent"        : "schema:superEvent",
     "toLocation"        : "schema:toLocation",
@@ -198,16 +198,16 @@
     "country"           : { "@id" : "schema:addressCountry" , "@type" : "@vocab" },
     "addressCountry"    : { "@id" : "schema:addressCountry" , "@type" : "@vocab" },
     "instrument"        : "schema:instrument" ,
-    "maxDuration"       : { "@id" : "ath:maxDuration" , 
-    "spacing"           : "@id" : "ath:spacing" , 
-    "discusDiameter"    : "@id" : "ath:discusDiameter" ,
-    "hammerLength"      : "@id" : "ath:hammerLength" ,
-    "scorePointsReference": "@id" : "ath:scorePointsReference" ,
+    "maxDuration"       : { "@id" : "ath:maxDuration" },
+    "spacing"           : { "@id" : "ath:spacing" },
+    "discusDiameter"    : { "@id" : "ath:discusDiameter" },
+    "hammerLength"      : { "@id" : "ath:hammerLength" },
+    "scorePointsReference": { "@id" : "ath:scorePointsReference" },
     "disqualificationReason" : "ath:disqualificationReason" ,
 
     "value"             : { "@id" : "schema:value", "@type": "xsd:decimal" },
     "unitCode"          : "schema:unitCode",
-    
+
     "raceCompetitionType" : { "@id" : "ath:raceCompetitionType", "@type" : "@vocab" },
     "venueType"         : { "@id" : "ath:venueType", "@type" : "@vocab" },
     "trackType"         : { "@id" : "ath:runningTrackType", "@type" : "@vocab" },
@@ -215,13 +215,11 @@
     "Individual"        : "ath:individualRace",
     "Relays"            : "ath:relayRace",
     "TimeTrial"         : "ath:timeTrialRace",
-    
+
     "Indoor"            : "ath:AthleticsVenueIndoor",
     "Outdoor"           : "ath:AthleticsVenueOutdoor",
-    
+
     "Male"      : "schema:Male",
     "Female"    : "schema:Female"
   }
 }
-
-
