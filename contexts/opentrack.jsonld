@@ -1,227 +1,352 @@
 {
-  "@context":
-  {
-    "@language"     : "en",
-    "foaf"          : "http://xmlns.com/foaf/0.1/",
-    "xsd"           : "http://www.w3.org/2001/XMLSchema#",
-    "owl"           : "http://www.w3.org/2002/07/owl#",
-    "dcterms"       : "http://purl.org/dc/terms/",
-    "schema"        : "http://schema.org/",
-    "pending"       : "http://tocheckifincluded.schema.org/",
-    "ath"           : "http://purl.org/athletics#",
-    "feature"       : "http://purl.org/athletics/feature#",
-    "fed"           : "http://purl.org/athletics/federation#",
-    "best"          : "http://purl.org/athletics/best#",
-    "trial"         : "http://purl.org/athletics/trial#",
-    "track"         : "http://purl.org/athletics/track#",
-    "qudt"          : "http://qudt.org/schema/qudt/",
-    "unit"          : "http://qudt.org/vocab/unit/",
-
-    "countrycode"   : "http://publications.europa.eu/resource/authority/country/",
-    "continent"     : "http://publications.europa.eu/resource/authority/continent/",
-        
-    "Organization"  : "schema:Organization",
-    "Person"        : "schema:Person",
-    "Place"         : "schema:Place",
-    "PostalAddress" : "schema:PostalAddress",
-    "Club"          : "schema:SportsClub",
-    "Team"          : "schema:SportsTeam",
-    "QuantitativeValue" : "schema:QuantitativeValue",
-
-    "Athlete"               : "ath:Athlete",
-    "Federation"            : "ath:SportsGoverningBody",
-    "Category"              : "ath:CompetitiveAudience",
-    "Competitor"            : "ath:CompetitionAction",
-    "Competition"           : "pending:CompetitionEvent",
-    "CompetitionSeries"     : "schema:EventSeries",
-    "SportsDiscipline"      : "ath:SportsDiscipline",
-    "QualificationCriteria" : "ath:QualificationCriteria",
-    "UnitCompetition"       : "ath:UnitCompetition",
-    "UnitRace"              : "ath:UnitRace",    
-    "Result"                : "ath:CompetitionResult",
-    "Performance"           : "ath:SportsPerformance",
-    "RecordOrBest"          : "ath:RecordOrBest",
-    "DistancePerformance"   : "ath:DistancePerformance",
-    "PointsPerformance"     : "ath:PointsPerformance",
-    "TimePerformance"       : "ath:TimePerformance",    
-    "Timekeeping"           : "ath:TimekeepingAction",
-    "TransponderSystemTimekeeping" : "ath:TransponderSystemTimekeepingAction",
-    "FullyAutomaticTimekeeping"    : "ath:FullyAutomaticTimekeepingAction",
-    "HandTimekeeping"       : "ath:HandTimekeepingAction",
-    "UnitFieldCompetition"  : "ath:UnitFieldCompetition",
-    "UnitHeightCompetition" : "ath:UnitHeightCompetition",
-    "UnitDistanceCompetition" : "ath:UnitDistanceCompetition",
-    "Trial"                 : "ath:FieldTrial",
-    "DistanceTrial"         : "ath:DistanceTrial",
-    "HeightTrial"           : "ath:HeightTrial",
-
-    "AthleticsDiscipline"   : "ath:AthleticsDiscipline",    
-    "Race"                  : "ath:RaceDiscipline",
-    "MiddleOrLongDistanceRace" : "ath:MiddleOrLongDistanceRaceDiscipline",
-    "Steeplechase"          : "ath:Steeplechase",
-    "Hurdles"               : "ath:Hurdles",
-    "Sprint"                : "ath:Sprint",
-    "RaceWalking"           : "ath:RaceWalking",
-    "RoadRunning"           : "ath:RoadRunning",
-    "CrossCountry"          : "ath:CrossCountry",
-    "MountainRunning"       : "ath:MountainRunning",
-    "TrackRelays"           : "ath:TrackRelays",
-    "UltraRunning"          : "ath:UltraRunning",
-    "Throws"                : "ath:Throws",
-    "ShotPut"               : "ath:ShotPut",
-    "DiscusThrow"           : "ath:DiscusThrow",
-    "HammerThrow"           : "ath:HammerThrow",
-    "JavelinThrow"          : "ath:JavelinThrow",
-    "WeightThrow"           : "ath:WeightThrow",
-    "HorizontalJumps"       : "ath:HorizontalJumps",
-    "LongJump"              : "ath:LongJump",
-    "TripleJump"            : "ath:TripleJump",
-    "VerticalJumps"         : "ath:VerticalJumps",
-    "HighJump"              : "ath:HighJump",
-    "PoleVault"             : "ath:PoleVault",
-    "CombinedDiscipline"    : "ath:CombinedDiscipline",
-    "Pentathlon"            : "ath:Pentathlon",
-    "Heptathlon"            : "ath:Heptathlon",
-    "Decathlon"             : "ath:Decathlon",
-    "ThrowsPentathlon"      : "ath:ThrowsPentathlon",
-
-    "identifier"        : "schema:identifier",
-    "name"              : "schema:name",
-    "alternateName"     : "schema:alternateName",
-    "address"           : { "@id": "schema:address", "@type": "schema:PostalAddress" },
-    "streetAddress"     : "schema:streetAddress",
-    "addressLocality"   : "schema:addressLocality",
-    "longitude"         : "schema:longitude",
-    "latitude"          : "schema:latitude",
-    "elevation"         : "schema:elevation",
-    "image"             : { "@id": "schema:image", "@type": "@id" },
-    "logo"              : { "@id": "schema:logo", "@type": "@id" },
-    "email"             : "schema:email",
-    "telephone"         : "schema:telephone",
-    "faxNumber"         : "schema:faxNumber",
-    "url"               : { "@id": "schema:url", "@type": "@id" },
-    "familyName"        : "schema:familyName",
-    "givenName"         : "schema:givenName",
-    "prevFamilyName"    : "ath:previousFamilyName",
-    "prevGivenName"     : "ath:previousFamilyName",
-    "award"             : "schema:award",
-    "agent"             : "schema:agent",
-    "gender"            : { "@id": "schema:gender", "@type": "@vocab" },
-    "height"            : "schema:height",
-    "weight"            : "schema:weight",
-    "nationality"       : { "@id": "schema:nationality", "@type": "@vocab" },
-    "birthDate"         : { "@id": "schema:birthDate", "@type": "xsd:date" },
-    "deathDate"         : { "@id": "schema:deathDate", "@type": "xsd:date" },
-    "datePublished"     : { "@id": "schema:datePublished", "@type": "xsd:date" },
-    "birthPlace"        : "schema:birthPlace",
-    "memberOf"          : "schema:memberOf" ,
-    "team"              : "schema:member" ,
-    "coach"             : "schema:coach" ,
-    "sponsor"           : "schema:sponsor",
-    "affiliation"       : "schema:affiliation" ,
-    "bestPerformance"   : "ath:bestPerformance" ,
-    "sportsPerformance" : "ath:sportsPerformance",
-    "captainOf"         : "ath:captainOf" ,
-    "dissolutionDate"   : { "@id": "schema:dissolutionDate", "@type": "xsd:date" },
-    "foundingDate"      : { "@id": "schema:foundingDate", "@type": "xsd:date" },
-    "athlete"           : "schema:athlete" ,
-    "captain"           : "ath:captain" ,
-    "location"          : "schema:location" , 
-    "areaServed"        : { "@id": "schema:areaServed" , "@type": "@vocab" },
-    "member"            : "schema:member",
-    "requiredMinAge"    : { "@id": "schema:requiredMinAge", "@type": "xsd:integer" },
-    "requiredMaxAge"    : { "@id": "schema:requiredMaxAge", "@type": "xsd:integer" },
-    "requiredGender"    : { "@id": "schema:requiredGender", "@type": "@vocab" },
-    "recognizingAuthority" : "schema:recognizingAuthority",
-    "geographicArea"    : "schema:geographicArea",
-    "healthCondition"   : "schema:healthCondition",
-
-    "startDate"         : { "@id": "schema:startDate", "@type": "xsd:date" },
-    "endDate"           : { "@id": "schema:endDate", "@type": "xsd:date" },
-    "startTime"         : { "@id": "schema:startTime", "@type": "xsd:datetime" },
-    "endTime"           : { "@id": "schema:endTime", "@type": "xsd:datetime" },
-    "eventStatus"       : { "@id": "schema:eventStatus", "@type": "@vocab" },
-    "resultStatus"      : { "@id": "ath:resultStatus", "@type": "@vocab" },
-    "organizer"         : "schema:organizer",
-    "contributor"       : "schema:contributor",
-    "participation"     : "ath:competitionAction" ,
-    "attendee"          : "schema:attendee",
-    "sportsDiscipline"  : "ath:sportsDiscipline" ,
-    "category"          : "ath:sportsCategory" ,
-    "entryRequirements" : "ath:entryRequirements" ,
-    "results"           : { "@id": "pending:resultDecision", "@container": "@list" },
-    
-    "unitCompetition"   : "ath:UnitCompetitionEvent" ,  
-    "competitionStage"  : { "@id": "ath:competitionStage", "@container": "@list" },
-    "round"             : { "@id" : "ath:round", "@container": "@list" },
-    "qualificationCriteria" : "ath:qualificationCriteria",
-    "byPlaceOrStandard" : { "@id" : "ath:qualifiedByPlaceOrStandard", "@type": "xsd:integer"  },
-    "byPerformance"     : { "@id" : "ath:qualifiedByPerformance", "@type": "xsd:integer" },
-
-    "increasingHeight"  : "ath:increasingHeight",
-    "startingHeight"    : "ath:startingHeight",
-    "targetHeight"      : "schema:height",
-    "attemptNumber"     : "ath:attemptNumber",
-    "trialFeature"      : "ath:trialFeature",
-    
-    "subEvent"          : "schema:subEvent",
-    "superEvent"        : "schema:superEvent",
-    "toLocation"        : "schema:toLocation",
-    "fromLocation"      : "schema:fromLocation",
-    "course"            : "schema:exerciseCourse",
-    "timekeeping"       : "ath:timekeeping",
-    "starter"           : "schema:competitor",
-    "competitionFeature": { "@id" : "ath:competitionFeature" , "@type": "@vocab" },
-    "bibIdentifier"     : "ath:bibIdentifier",
-    "transponderIdentifier" : "ath:transponderIdentifier",
-    "inCompetition"     : "schema:sportsEvent",
-    "startingOrder"     : { "@id" : "ath:startingOrder", "@type": "xsd:integer"  },
-    "trackLane"         : { "@id" : "ath:trackLane", "@type": "xsd:integer"  },
-    "rank"              : { "@id" : "ath:rank", "@type": "xsd:integer"  },
-    "recordOrBest"      : { "@id" : "schema:award" , "@type" : "@vocab" },
-    "spatialCoverage"   : { "@id" : "schema:spatialCoverage" , "@type" : "@vocab" },
-    "temporalCoverage"  : { "@id" : "schema:temporalCoverage" , "@type" : "@vocab" },
-    "created"           : { "@id" : "dcterms:created", "@type": "xsd:datetime"  },
-    "modified"          : { "@id" : "dcterms:modified", "@type": "xsd:datetime"  },
-    "performance"       : "schema:result" ,
-    "windAssistance"    : "ath:windAssistance" ,
-    "time"              : { "@id" : "pending:performTime", "@type": "xsd:time"  },
-    "reactionTime"      : { "@id" : "ath:reactionTime", "@type": "xsd:time"  },
-    "scorePoints"       : { "@id" : "ath:scorePoints", "@type": "xsd:decimal"  },
-    "distance"          : "schema:distance",
-    "geo"               : "schema:geo",
-    "map"               : "schema:hasMap",
-    "fax"               : "schema:faxNumber",
-    "locality"          : "schema:addressLocality",
-    "postOfficeBoxNumber": "schema:postOfficeBoxNumber",
-    "postalCode"        : "schema:postalCode",
-    "country"           : { "@id" : "schema:addressCountry" , "@type" : "@vocab" },
-    "addressCountry"    : { "@id" : "schema:addressCountry" , "@type" : "@vocab" },
-    "instrument"        : "schema:instrument" ,
-    "maxDuration"       : { "@id" : "ath:maxDuration" , 
-    "spacing"           : "@id" : "ath:spacing" , 
-    "discusDiameter"    : "@id" : "ath:discusDiameter" ,
-    "hammerLength"      : "@id" : "ath:hammerLength" ,
-    "scorePointsReference": "@id" : "ath:scorePointsReference" ,
-    "disqualificationReason" : "ath:disqualificationReason" ,
-
-    "value"             : { "@id" : "schema:value", "@type": "xsd:decimal" },
-    "unitCode"          : "schema:unitCode",
-    
-    "raceCompetitionType" : { "@id" : "ath:raceCompetitionType", "@type" : "@vocab" },
-    "venueType"         : { "@id" : "ath:venueType", "@type" : "@vocab" },
-    "trackType"         : { "@id" : "ath:runningTrackType", "@type" : "@vocab" },
-
-    "Individual"        : "ath:individualRace",
-    "Relays"            : "ath:relayRace",
-    "TimeTrial"         : "ath:timeTrialRace",
-    
-    "Indoor"            : "ath:AthleticsVenueIndoor",
-    "Outdoor"           : "ath:AthleticsVenueOutdoor",
-    
-    "Male"      : "schema:Male",
-    "Female"    : "schema:Female"
-  }
+    "@context": {
+        "@language": "en",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "schema": "http://schema.org/",
+        "pending": "http://tocheckifincluded.schema.org/",
+        "ath": "http://purl.org/athletics#",
+        "feature": "http://purl.org/athletics/feature#",
+        "fed": "http://purl.org/athletics/federation#",
+        "best": "http://purl.org/athletics/best#",
+        "trial": "http://purl.org/athletics/trial#",
+        "track": "http://purl.org/athletics/track#",
+        "qudt": "http://qudt.org/schema/qudt/",
+        "unit": "http://qudt.org/vocab/unit/",
+        "countrycode": "http://publications.europa.eu/resource/authority/country/",
+        "continent": "http://publications.europa.eu/resource/authority/continent/",
+        "Organization": "schema:Organization",
+        "Person": "schema:Person",
+        "Place": "schema:Place",
+        "PostalAddress": "schema:PostalAddress",
+        "Club": "schema:SportsClub",
+        "Team": "schema:SportsTeam",
+        "QuantitativeValue": "schema:QuantitativeValue",
+        "Athlete": "ath:Athlete",
+        "Federation": "ath:SportsGoverningBody",
+        "Category": "ath:CompetitiveAudience",
+        "Competitor": "ath:CompetitionAction",
+        "Competition": "pending:CompetitionEvent",
+        "CompetitionSeries": "schema:EventSeries",
+        "SportsDiscipline": "ath:SportsDiscipline",
+        "QualificationCriteria": "ath:QualificationCriteria",
+        "UnitCompetition": "ath:UnitCompetition",
+        "UnitRace": "ath:UnitRace",
+        "Result": "ath:CompetitionResult",
+        "Performance": "ath:SportsPerformance",
+        "RecordOrBest": "ath:RecordOrBest",
+        "DistancePerformance": "ath:DistancePerformance",
+        "PointsPerformance": "ath:PointsPerformance",
+        "TimePerformance": "ath:TimePerformance",
+        "Timekeeping": "ath:TimekeepingAction",
+        "TransponderSystemTimekeeping": "ath:TransponderSystemTimekeepingAction",
+        "FullyAutomaticTimekeeping": "ath:FullyAutomaticTimekeepingAction",
+        "HandTimekeeping": "ath:HandTimekeepingAction",
+        "UnitFieldCompetition": "ath:UnitFieldCompetition",
+        "UnitHeightCompetition": "ath:UnitHeightCompetition",
+        "UnitDistanceCompetition": "ath:UnitDistanceCompetition",
+        "Trial": "ath:FieldTrial",
+        "DistanceTrial": "ath:DistanceTrial",
+        "HeightTrial": "ath:HeightTrial",
+        "AthleticsDiscipline": "ath:AthleticsDiscipline",
+        "Race": "ath:RaceDiscipline",
+        "MiddleOrLongDistanceRace": "ath:MiddleOrLongDistanceRaceDiscipline",
+        "Steeplechase": "ath:Steeplechase",
+        "Hurdles": "ath:Hurdles",
+        "Sprint": "ath:Sprint",
+        "RaceWalking": "ath:RaceWalking",
+        "RoadRunning": "ath:RoadRunning",
+        "CrossCountry": "ath:CrossCountry",
+        "MountainRunning": "ath:MountainRunning",
+        "TrackRelays": "ath:TrackRelays",
+        "UltraRunning": "ath:UltraRunning",
+        "Throws": "ath:Throws",
+        "ShotPut": "ath:ShotPut",
+        "DiscusThrow": "ath:DiscusThrow",
+        "HammerThrow": "ath:HammerThrow",
+        "JavelinThrow": "ath:JavelinThrow",
+        "WeightThrow": "ath:WeightThrow",
+        "HorizontalJumps": "ath:HorizontalJumps",
+        "LongJump": "ath:LongJump",
+        "TripleJump": "ath:TripleJump",
+        "VerticalJumps": "ath:VerticalJumps",
+        "HighJump": "ath:HighJump",
+        "PoleVault": "ath:PoleVault",
+        "CombinedDiscipline": "ath:CombinedDiscipline",
+        "Pentathlon": "ath:Pentathlon",
+        "Heptathlon": "ath:Heptathlon",
+        "Decathlon": "ath:Decathlon",
+        "ThrowsPentathlon": "ath:ThrowsPentathlon",
+        "identifier": "schema:identifier",
+        "name": "schema:name",
+        "alternateName": "schema:alternateName",
+        "address": {
+            "@id": "schema:address",
+            "@type": "schema:PostalAddress"
+        },
+        "streetAddress": "schema:streetAddress",
+        "addressLocality": "schema:addressLocality",
+        "longitude": "schema:longitude",
+        "latitude": "schema:latitude",
+        "elevation": "schema:elevation",
+        "image": {
+            "@id": "schema:image",
+            "@type": "@id"
+        },
+        "logo": {
+            "@id": "schema:logo",
+            "@type": "@id"
+        },
+        "email": "schema:email",
+        "telephone": "schema:telephone",
+        "faxNumber": "schema:faxNumber",
+        "url": {
+            "@id": "schema:url",
+            "@type": "@id"
+        },
+        "familyName": "schema:familyName",
+        "givenName": "schema:givenName",
+        "prevFamilyName": "ath:previousFamilyName",
+        "prevGivenName": "ath:previousFamilyName",
+        "award": "schema:award",
+        "agent": "schema:agent",
+        "gender": {
+            "@id": "schema:gender",
+            "@type": "@vocab"
+        },
+        "height": "schema:height",
+        "weight": "schema:weight",
+        "nationality": {
+            "@id": "schema:nationality",
+            "@type": "@vocab"
+        },
+        "birthDate": {
+            "@id": "schema:birthDate",
+            "@type": "xsd:date"
+        },
+        "deathDate": {
+            "@id": "schema:deathDate",
+            "@type": "xsd:date"
+        },
+        "datePublished": {
+            "@id": "schema:datePublished",
+            "@type": "xsd:date"
+        },
+        "birthPlace": "schema:birthPlace",
+        "memberOf": "schema:memberOf",
+        "team": "schema:member",
+        "coach": "schema:coach",
+        "sponsor": "schema:sponsor",
+        "affiliation": "schema:affiliation",
+        "bestPerformance": "ath:bestPerformance",
+        "sportsPerformance": "ath:sportsPerformance",
+        "captainOf": "ath:captainOf",
+        "dissolutionDate": {
+            "@id": "schema:dissolutionDate",
+            "@type": "xsd:date"
+        },
+        "foundingDate": {
+            "@id": "schema:foundingDate",
+            "@type": "xsd:date"
+        },
+        "athlete": "schema:athlete",
+        "captain": "ath:captain",
+        "location": "schema:location",
+        "areaServed": {
+            "@id": "schema:areaServed",
+            "@type": "@vocab"
+        },
+        "member": "schema:member",
+        "requiredMinAge": {
+            "@id": "schema:requiredMinAge",
+            "@type": "xsd:integer"
+        },
+        "requiredMaxAge": {
+            "@id": "schema:requiredMaxAge",
+            "@type": "xsd:integer"
+        },
+        "requiredGender": {
+            "@id": "schema:requiredGender",
+            "@type": "@vocab"
+        },
+        "recognizingAuthority": "schema:recognizingAuthority",
+        "geographicArea": "schema:geographicArea",
+        "healthCondition": "schema:healthCondition",
+        "startDate": {
+            "@id": "schema:startDate",
+            "@type": "xsd:date"
+        },
+        "endDate": {
+            "@id": "schema:endDate",
+            "@type": "xsd:date"
+        },
+        "startTime": {
+            "@id": "schema:startTime",
+            "@type": "xsd:datetime"
+        },
+        "endTime": {
+            "@id": "schema:endTime",
+            "@type": "xsd:datetime"
+        },
+        "eventStatus": {
+            "@id": "schema:eventStatus",
+            "@type": "@vocab"
+        },
+        "resultStatus": {
+            "@id": "ath:resultStatus",
+            "@type": "@vocab"
+        },
+        "organizer": "schema:organizer",
+        "contributor": "schema:contributor",
+        "participation": "ath:competitionAction",
+        "attendee": "schema:attendee",
+        "sportsDiscipline": "ath:sportsDiscipline",
+        "category": "ath:sportsCategory",
+        "entryRequirements": "ath:entryRequirements",
+        "results": {
+            "@id": "pending:resultDecision",
+            "@container": "@list"
+        },
+        "unitCompetition": "ath:UnitCompetitionEvent",
+        "competitionStage": {
+            "@id": "ath:competitionStage",
+            "@container": "@list"
+        },
+        "round": {
+            "@id": "ath:round",
+            "@container": "@list"
+        },
+        "qualificationCriteria": "ath:qualificationCriteria",
+        "byPlaceOrStandard": {
+            "@id": "ath:qualifiedByPlaceOrStandard",
+            "@type": "xsd:integer"
+        },
+        "byPerformance": {
+            "@id": "ath:qualifiedByPerformance",
+            "@type": "xsd:integer"
+        },
+        "increasingHeight": "ath:increasingHeight",
+        "startingHeight": "ath:startingHeight",
+        "targetHeight": "schema:height",
+        "attemptNumber": "ath:attemptNumber",
+        "trialFeature": "ath:trialFeature",
+        "subEvent": "schema:subEvent",
+        "superEvent": "schema:superEvent",
+        "toLocation": "schema:toLocation",
+        "fromLocation": "schema:fromLocation",
+        "course": "schema:exerciseCourse",
+        "timekeeping": "ath:timekeeping",
+        "starter": "schema:competitor",
+        "competitionFeature": {
+            "@id": "ath:competitionFeature",
+            "@type": "@vocab"
+        },
+        "bibIdentifier": "ath:bibIdentifier",
+        "transponderIdentifier": "ath:transponderIdentifier",
+        "inCompetition": "schema:sportsEvent",
+        "startingOrder": {
+            "@id": "ath:startingOrder",
+            "@type": "xsd:integer"
+        },
+        "trackLane": {
+            "@id": "ath:trackLane",
+            "@type": "xsd:integer"
+        },
+        "rank": {
+            "@id": "ath:rank",
+            "@type": "xsd:integer"
+        },
+        "recordOrBest": {
+            "@id": "schema:award",
+            "@type": "@vocab"
+        },
+        "spatialCoverage": {
+            "@id": "schema:spatialCoverage",
+            "@type": "@vocab"
+        },
+        "temporalCoverage": {
+            "@id": "schema:temporalCoverage",
+            "@type": "@vocab"
+        },
+        "created": {
+            "@id": "dcterms:created",
+            "@type": "xsd:datetime"
+        },
+        "modified": {
+            "@id": "dcterms:modified",
+            "@type": "xsd:datetime"
+        },
+        "performance": "schema:result",
+        "windAssistance": "ath:windAssistance",
+        "time": {
+            "@id": "pending:performTime",
+            "@type": "xsd:time"
+        },
+        "reactionTime": {
+            "@id": "ath:reactionTime",
+            "@type": "xsd:time"
+        },
+        "scorePoints": {
+            "@id": "ath:scorePoints",
+            "@type": "xsd:decimal"
+        },
+        "distance": "schema:distance",
+        "geo": "schema:geo",
+        "map": "schema:hasMap",
+        "fax": "schema:faxNumber",
+        "locality": "schema:addressLocality",
+        "postOfficeBoxNumber": "schema:postOfficeBoxNumber",
+        "postalCode": "schema:postalCode",
+        "country": {
+            "@id": "schema:addressCountry",
+            "@type": "@vocab"
+        },
+        "addressCountry": {
+            "@id": "schema:addressCountry",
+            "@type": "@vocab"
+        },
+        "instrument": "schema:instrument",
+        "maxDuration": {
+            "@id": "ath:maxDuration"
+        },
+        "spacing": {
+            "@id": "ath:spacing"
+        },
+        "discusDiameter": {
+            "@id": "ath:discusDiameter"
+        },
+        "hammerLength": {
+            "@id": "ath:hammerLength"
+        },
+        "scorePointsReference": {
+            "@id": "ath:scorePointsReference"
+        },
+        "disqualificationReason": "ath:disqualificationReason",
+        "value": {
+            "@id": "schema:value",
+            "@type": "xsd:decimal"
+        },
+        "unitCode": "schema:unitCode",
+        "raceCompetitionType": {
+            "@id": "ath:raceCompetitionType",
+            "@type": "@vocab"
+        },
+        "venueType": {
+            "@id": "ath:venueType",
+            "@type": "@vocab"
+        },
+        "trackType": {
+            "@id": "ath:runningTrackType",
+            "@type": "@vocab"
+        },
+        "Individual": "ath:individualRace",
+        "Relays": "ath:relayRace",
+        "TimeTrial": "ath:timeTrialRace",
+        "Indoor": "ath:AthleticsVenueIndoor",
+        "Outdoor": "ath:AthleticsVenueOutdoor",
+        "Male": "schema:Male",
+        "Female": "schema:Female"
+    }
 }
-
-

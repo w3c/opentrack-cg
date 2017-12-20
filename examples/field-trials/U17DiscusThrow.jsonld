@@ -1,122 +1,163 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/field-trials/U17DiscusThrow.jsonld",
-    "@type" : "UnitDistanceCompetition",
-    
-    "name" : "EA U17 Men Discus – Final",
-    "category" : { "name" : "U17M" },
-    "participation" : [ 
-       {
-          "@type" : "Competitor",
-          "agent" : {
-            "@type" : "Athlete",
-            "name" : "Matt Blandford",
-            "affiliation" : "Tonbridge AC" 
-          },
-          "bibIdentifier" : "549",
-          "trial" : [
-            {
-              "@type" : "DistanceTrial",
-              "attemptNumber" : 1,
-              "performance" : {
-                "@type" : "DistancePerformance",
-                "distance" : { "value" : "48.05", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
-              }
+    "@id": "http://w3c.github.io/opentrack-cg/examples/field-trials/U17DiscusThrow.jsonld",
+    "@type": "UnitDistanceCompetition",
+    "name": "EA U17 Men Discus – Final",
+    "category": {
+        "name": "U17M"
+    },
+    "participation": [
+        {
+            "@type": "Competitor",
+            "agent": {
+                "@type": "Athlete",
+                "name": "Matt Blandford",
+                "affiliation": "Tonbridge AC"
             },
-            {
-              "@type" : "DistanceTrial",
-              "attemptNumber" : 2,
-              "performance" : {
-                "@type" : "DistancePerformance",
-                "distance" : { "value" : "55.69", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
-              }
+            "bibIdentifier": "549",
+            "trial": [
+                {
+                    "@type": "DistanceTrial",
+                    "attemptNumber": 1,
+                    "performance": {
+                        "@type": "DistancePerformance",
+                        "distance": {
+                            "value": "48.05",
+                            "unitCode": "MTR",
+                            "@type": "QuantitativeValue"
+                        }
+                    }
+                },
+                {
+                    "@type": "DistanceTrial",
+                    "attemptNumber": 2,
+                    "performance": {
+                        "@type": "DistancePerformance",
+                        "distance": {
+                            "value": "55.69",
+                            "unitCode": "MTR",
+                            "@type": "QuantitativeValue"
+                        }
+                    }
+                },
+                {
+                    "@type": "DistanceTrial",
+                    "attemptNumber": 3,
+                    "performance": {
+                        "@type": "DistancePerformance",
+                        "distance": {
+                            "value": "57.69",
+                            "unitCode": "MTR",
+                            "@type": "QuantitativeValue"
+                        }
+                    }
+                },
+                {
+                    "@type": "DistanceTrial",
+                    "attemptNumber": 4,
+                    "performance": {
+                        "@type": "DistancePerformance",
+                        "distance": {
+                            "value": "53.28",
+                            "unitCode": "MTR",
+                            "@type": "QuantitativeValue"
+                        }
+                    }
+                },
+                {
+                    "@type": "DistanceTrial",
+                    "attemptNumber": 5,
+                    "performance": {
+                        "@type": "DistancePerformance",
+                        "distance": {
+                            "value": "59.76",
+                            "unitCode": "MTR",
+                            "@type": "QuantitativeValue"
+                        }
+                    }
+                },
+                {
+                    "@type": "DistanceTrial",
+                    "attemptNumber": 6,
+                    "competitionFeature": "feature:NM"
+                }
+            ]
+        },
+        {
+            "@type": "Competitor",
+            "agent": {
+                "@type": "Athlete",
+                "name": "Gurtal Randhawa",
+                "affiliation": "Windsor Slough Eton & H"
             },
-            {
-              "@type" : "DistanceTrial",
-              "attemptNumber" : 3,
-              "performance" : {
-                "@type" : "DistancePerformance",
-                "distance" : { "value" : "57.69", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
-              }
-            },
-            {
-              "@type" : "DistanceTrial",
-              "attemptNumber" : 4,
-              "performance" : {
-                "@type" : "DistancePerformance",
-                "distance" : { "value" : "53.28", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
-              }
-            },
-            {
-              "@type" : "DistanceTrial",
-              "attemptNumber" : 5,
-              "performance" : {
-                "@type" : "DistancePerformance",
-                "distance" : { "value" : "59.76", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
-              }
-            },
-            {
-              "@type" : "DistanceTrial",
-              "attemptNumber" : 6,
-              "competitionFeature" : "feature:NM"
-            }
-          ]
-       },
-       {
-          "@type" : "Competitor",
-          "agent" : {
-            "@type" : "Athlete",
-            "name" : "Gurtal Randhawa",
-            "affiliation" : "Windsor Slough Eton & H"  
-          },
-          "bibIdentifier" : "792",
-          "trial" : [
-            {
-              "@type" : "DistanceTrial",
-              "attemptNumber" : 1,
-              "performance" : {
-                "@type" : "DistancePerformance",
-                "distance" : { "value" : "43.30", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
-              }
-            },
-            {
-              "@type" : "DistanceTrial",
-              "attemptNumber" : 2,
-              "performance" : {
-                "@type" : "DistancePerformance",
-                "distance" : { "value" : "42.46", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
-              }
-            },
-            {
-              "@type" : "DistanceTrial",
-              "attemptNumber" : 3,
-              "performance" : {
-                "@type" : "DistancePerformance",
-                "distance" : { "value" : "42.70", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
-              }
-            },
-            {
-              "@type" : "DistanceTrial",
-              "attemptNumber" : 4,
-              "performance" : {
-                "@type" : "DistancePerformance",
-                "distance" : { "value" : "45.08", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
-              }
-            },
-            {
-              "@type" : "DistanceTrial",
-              "attemptNumber" : 5,
-              "competitionFeature" : "feature:NM"
-            },
-            {
-              "@type" : "DistanceTrial",
-              "attemptNumber" : 6,
-              "performance" : {
-                "@type" : "DistancePerformance",
-                "distance" : { "value" : "44.33", "unitCode" : "MTR", "@type" : "QuantitativeValue" }
-              }
-            }
-          ]
-       }
+            "bibIdentifier": "792",
+            "trial": [
+                {
+                    "@type": "DistanceTrial",
+                    "attemptNumber": 1,
+                    "performance": {
+                        "@type": "DistancePerformance",
+                        "distance": {
+                            "value": "43.30",
+                            "unitCode": "MTR",
+                            "@type": "QuantitativeValue"
+                        }
+                    }
+                },
+                {
+                    "@type": "DistanceTrial",
+                    "attemptNumber": 2,
+                    "performance": {
+                        "@type": "DistancePerformance",
+                        "distance": {
+                            "value": "42.46",
+                            "unitCode": "MTR",
+                            "@type": "QuantitativeValue"
+                        }
+                    }
+                },
+                {
+                    "@type": "DistanceTrial",
+                    "attemptNumber": 3,
+                    "performance": {
+                        "@type": "DistancePerformance",
+                        "distance": {
+                            "value": "42.70",
+                            "unitCode": "MTR",
+                            "@type": "QuantitativeValue"
+                        }
+                    }
+                },
+                {
+                    "@type": "DistanceTrial",
+                    "attemptNumber": 4,
+                    "performance": {
+                        "@type": "DistancePerformance",
+                        "distance": {
+                            "value": "45.08",
+                            "unitCode": "MTR",
+                            "@type": "QuantitativeValue"
+                        }
+                    }
+                },
+                {
+                    "@type": "DistanceTrial",
+                    "attemptNumber": 5,
+                    "competitionFeature": "feature:NM"
+                },
+                {
+                    "@type": "DistanceTrial",
+                    "attemptNumber": 6,
+                    "performance": {
+                        "@type": "DistancePerformance",
+                        "distance": {
+                            "value": "44.33",
+                            "unitCode": "MTR",
+                            "@type": "QuantitativeValue"
+                        }
+                    }
+                }
+            ]
+        }
     ]
 }

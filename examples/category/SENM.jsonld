@@ -1,10 +1,12 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/category/SENM.jsonld",
+    "@id": "http://w3c.github.io/opentrack-cg/examples/category/SENM.jsonld",
     "@type": "Category",
     "name": "Senior (Male)",
     "description": "Open class with no upper age limit but some limitations on younger people competing in endurance events. Male gender.",
-    "requiredMinAge" : 16,
-    "requiredGender" : "Male",
-    "recognizingAuthority" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld" }
+    "requiredMinAge": 16,
+    "requiredGender": "Male",
+    "recognizingAuthority": {
+        "@id": "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld"
+    }
 }

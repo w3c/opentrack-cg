@@ -1,14 +1,14 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/discipline/100m.jsonld",
-    "@type": "Sprint",    
+    "@id": "http://w3c.github.io/opentrack-cg/examples/discipline/100m.jsonld",
+    "@type": "Sprint",
     "name": "100 metres",
     "alternateName": "100-metre dash",
     "raceCompetitionType": "race:RaceIndividual",
     "venueType": "venue:VenueOutdoor",
-    "distance" : {
-        "@type" : "QuantitativeValue",
-        "value" : "100",
-        "unitCode" : "MTR"
+    "distance": {
+        "@type": "QuantitativeValue",
+        "value": "100",
+        "unitCode": "MTR"
     }
 }

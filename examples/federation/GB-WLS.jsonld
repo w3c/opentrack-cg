@@ -13,6 +13,8 @@
         "postalCode": "CF11 8AZ",
         "addressCountry": "countrycode:GBR"
     },
-    "areaServed" : "Welsh",
-    "memberOf": { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" }
+    "areaServed": "Welsh",
+    "memberOf": {
+        "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+    }
 }

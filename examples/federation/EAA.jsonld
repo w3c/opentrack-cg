@@ -15,30 +15,76 @@
         "postalCode": "CH-1003",
         "addressCountry": "countrycode:CHE"
     },
-    "areaServed" : "continent:EUROPE",
-    "memberOf": { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld" },
+    "areaServed": "continent:EUROPE",
+    "memberOf": {
+        "@id": "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld"
+    },
     "member": [
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/ALB.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/AND.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/ARM.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/AUT.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/AZE.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BLR.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BEL.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BIH.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BUL.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/CRO.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/CYP.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/ALB.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/AND.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/ARM.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/AUT.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/AZE.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BLR.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BEL.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BIH.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BUL.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/CRO.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/CYP.jsonld" }
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/ALB.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/AND.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/ARM.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/AUT.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/AZE.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/BLR.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/BEL.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/BIH.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/BUL.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/CRO.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/CYP.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/ALB.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/AND.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/ARM.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/AUT.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/AZE.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/BLR.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/BEL.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/BIH.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/BUL.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/CRO.jsonld"
+        },
+        {
+            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/CYP.jsonld"
+        }
     ]
 }
