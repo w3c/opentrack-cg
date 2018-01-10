@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/w3c/opentrack-cg.svg?branch=master)](https://travis-ci.org/w3c/opentrack-cg)
+
 # OpenTrack – Open Tools for Athletics
 
 Quick links:
@@ -9,7 +11,7 @@ Quick links:
 
 This is the repository for the [W3C OpenTrack Community Group](https://www.w3.org/community/opentrack/) to develop and document specifications and code related to **OpenTrack**, a set of tools to increase interoperability among systems managing information on athletics and sports in general. OpenTrack includes schemas and vocabularies to describe sports, as well as open source software that helps managing that kind of information.
 
-Through OpenTrack athletics entities around the world (sport clubs, federations, private event organizers, etc.) will be able to open the data contributing towards open data in sports. This will bring new business opportunities to third parties (developers, public bodies, private companies, citizens, academia). 
+Through OpenTrack athletics entities around the world (sport clubs, federations, private event organizers, etc.) will be able to open the data contributing towards open data in sports. This will bring new business opportunities to third parties (developers, public bodies, private companies, citizens, academia).
 
 In order to maximize the impact and adoption of the final proposal, this initiative is supported by [European Athletics](http://www.european-athletics.org) and other [relevant institutions](https://www.w3.org/community/opentrack/participants) of the world of *Data Management* and *Athletics*.
 
@@ -17,7 +19,7 @@ Read the [Charter](https://w3c.github.io/opentrack-cg/charter.html) for more inf
 
 ## What tools?
 
-The main component of OpenTrack is a set of vocabularies and taxonomies that will help publishers to model and expose information regarding athletics (events, athletes, facilities, results, rankings, and others). 
+The main component of OpenTrack is a set of vocabularies and taxonomies that will help publishers to model and expose information regarding athletics (events, athletes, facilities, results, rankings, and others).
 
 Participants in this group will contribute with code recipes, libraries, and examples about the use of athletics information.
 
@@ -44,4 +46,4 @@ If you have never used Github, please have a look at [this guide on how to use G
 
 * IOC [ODF](http://odf.olympictech.org/2016-Rio/rio_2016_OG.htm)
 * IPTC [SportsML](https://iptc.org/standards/sportsml-g2/). Vocabularies for sharing content (e.g., news) about sports in general. There are some specific vocabularies for concrete sports. Athletics is missing.
-* BBC [Sport Ontology](http://www.bbc.co.uk/ontologies/sport#). Lightweight ontology for publishing data about competitive sports events. 
+* BBC [Sport Ontology](http://www.bbc.co.uk/ontologies/sport#). Lightweight ontology for publishing data about competitive sports events.
