@@ -1,7 +1,7 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
     "@id": "http://w3c.github.io/opentrack-cg/examples/discipline/3000m.jsonld",
-    "@type": "MiddleOrLongDistance",
+    "@type": "DistanceDiscipline",
     "name": "3000 metres",
     "descriptition": "Track race of 3000 m distance",
     "raceCompetitionType": "race:RaceIndividual",

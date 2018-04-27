@@ -1,7 +1,7 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
     "@id": "http://w3c.github.io/opentrack-cg/examples/discipline/1500m.jsonld",
-    "@type": "MiddleOrLongDistance",
+    "@type": "DistanceDiscipline",
     "name": "1500 metres",
     "descriptition": "Track race of 1500 m distance",
     "raceCompetitionType": "race:RaceIndividual",

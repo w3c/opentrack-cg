@@ -612,20 +612,21 @@ dct:modified rdf:type owl:DatatypeProperty .
                      rdfs:subClassOf :SportsDiscipline ;
                      rdfs:isDefinedBy <http://purl.org/athletics#> ;
                      rdfs:label "Athletics Discipline"@en ;
-                     skos:definition "Athletics discipline is a particular Athletics type of event practiced under specific rules."@en .
+                     skos:definition "Athletics discipline is a particular Athletics type of event practiced under specific rules."@en ;
+                     skos:narrower :RaceDiscipline , 
+                                :ThrowsDiscipline ,
+                                :HorizontalJumpsDiscipline ,
+                                :VerticalJumpsDiscipline ,
+                                :CombinedDiscipline .
 
 
-###  http://purl.org/athletics#CombinedEvent
-:CombinedEvent rdf:type owl:Class ;
+###  http://purl.org/athletics#CombinedDiscipline
+:CombinedDiscipline rdf:type owl:Class ;
                rdfs:subClassOf :AthleticsDiscipline ;
                rdfs:isDefinedBy <http://purl.org/athletics#> ;
-               rdfs:label "Combined Event"@en ;
+               rdfs:label "Combined Discipline"@en ;
                skos:broader :AthleticsDiscipline ;
-               skos:definition "Combined Events are competitions in which athletes participate in a number of track and field events, earning points for their performance in each event, which adds to a total points score."@en ;
-               skos:narrower :Decathlon ,
-                             :Heptathlon ,
-                             :Pentathlon ,
-                             :ThrowsPentathlon .
+               skos:definition "Combined Disciplines are competitions in which athletes participate in a number of track and field events, earning points for their performance in each event, which adds to a total points score."@en .
 
 
 ###  http://purl.org/athletics#Competition
@@ -660,30 +661,21 @@ dct:modified rdf:type owl:DatatypeProperty .
                      skos:definition "Competitive Audience is the potential audience to take part in the competition of athletes and teams in sports events. This marks the categories of the competition."@en .
 
 
-###  http://purl.org/athletics#CrossCountry
-:CrossCountry rdf:type owl:Class ;
-              rdfs:subClassOf :Race ;
+###  http://purl.org/athletics#CrossCountryDiscipline
+:CrossCountryDiscipline rdf:type owl:Class ;
+              rdfs:subClassOf :RaceDiscipline ;
               rdfs:isDefinedBy <http://purl.org/athletics#> ;
               rdfs:label "Cross Country"@en ;
-              skos:broader :Race ;
+              skos:broader :RaceDiscipline ;
               skos:definition "Cross country is a running discipline in which teams and individuals run a race on open-air courses over natural terrain such as dirt or grass."@en .
 
 
-###  http://purl.org/athletics#Decathlon
-:Decathlon rdf:type owl:Class ;
-           rdfs:subClassOf :CombinedEvent ;
-           rdfs:isDefinedBy <http://purl.org/athletics#> ;
-           rdfs:label "Decathlon"@en ;
-           skos:broader :CombinedEvent ;
-           skos:definition "Decathlon is a competition in which athletes participate in ten track and field combined events, earning points for their performance in each event, which adds to a total points score."@en .
-
-
-###  http://purl.org/athletics#DiscusThrow
-:DiscusThrow rdf:type owl:Class ;
-             rdfs:subClassOf :Throws ;
+###  http://purl.org/athletics#DiscusThrowDiscipline
+:DiscusThrowDiscipline rdf:type owl:Class ;
+             rdfs:subClassOf :ThrowsDiscipline ;
              rdfs:isDefinedBy <http://purl.org/athletics#> ;
              rdfs:label "Discus Throw"@en ;
-             skos:broader :Throws ;
+             skos:broader :ThrowsDiscipline ;
              skos:definition "The Discus Throw is a track and field event in which an athlete throws a heavy disc (the discus) in an attempt to mark a farther distance than their competitors. The diameter and weight of the discus varies depending on the competition rules."@en .
 
 
@@ -695,96 +687,78 @@ dct:modified rdf:type owl:DatatypeProperty .
                      skos:definition "Performance measured as distance"@en .
 
 
-###  http://purl.org/athletics#HammerThrow
-:HammerThrow rdf:type owl:Class ;
-             rdfs:subClassOf :Throws ;
+###  http://purl.org/athletics#HammerThrowDiscipline
+:HammerThrowDiscipline rdf:type owl:Class ;
+             rdfs:subClassOf :ThrowsDiscipline ;
              rdfs:isDefinedBy <http://purl.org/athletics#> ;
              rdfs:label "Hammer Throw"@en ;
-             skos:broader :Throws ;
+             skos:broader :ThrowsDiscipline ;
              skos:definition "Hammer Throw is a track and field event in which an athlete throws a metal ball attached by a steel wire to a grip (the hammer). The size of the ball, and the length of the wire varies depending on the competition rules."@en .
 
 
-###  http://purl.org/athletics#Heptathlon
-:Heptathlon rdf:type owl:Class ;
-            rdfs:subClassOf :CombinedEvent ;
-            rdfs:isDefinedBy <http://purl.org/athletics#> ;
-            rdfs:label "Heptathlon"@en ;
-            skos:broader :CombinedEvent ;
-            skos:definition "Heptathlon is a competition in which athletes participate in seven track and field combined events, earning points for their performance in each event, which adds to a total points score. "@en .
-
-
-###  http://purl.org/athletics#HighJump
-:HighJump rdf:type owl:Class ;
-          rdfs:subClassOf :VerticalJumps ;
+###  http://purl.org/athletics#HighJumpsDiscipline
+:HighJumpsDiscipline rdf:type owl:Class ;
+          rdfs:subClassOf :VerticalJumpsDiscipline ;
           rdfs:isDefinedBy <http://purl.org/athletics#> ;
           rdfs:label "High Jump"@en ;
-          skos:broader :VerticalJumps ;
+          skos:broader :VerticalJumpsDiscipline ;
           skos:definition "High Jump is a track and field event in which competitors must jump unaided over a horizontal bar placed at measured heights without dislodging it."@en .
 
 
-###  http://purl.org/athletics#HorizontalJumps
-:HorizontalJumps rdf:type owl:Class ;
+###  http://purl.org/athletics#HorizontalJumpsDiscipline
+:HorizontalJumpsDiscipline rdf:type owl:Class ;
                  rdfs:subClassOf :AthleticsDiscipline ;
                  rdfs:isDefinedBy <http://purl.org/athletics#> ;
                  rdfs:label "Horizontal Jumps"@en ;
                  skos:broader :AthleticsDiscipline ;
                  skos:definition "Horizontal Jumps are track and field events in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point. Horizontal jumps include: long jump and triple jump."@en ;
-                 skos:narrower :LongJump ,
-                               :TripleJump .
+                 skos:narrower :LongJumpDiscipline ,
+                               :TripleJumpDiscipline .
 
 
-###  http://purl.org/athletics#Hurdles
-:Hurdles rdf:type owl:Class ;
-         rdfs:subClassOf :Race ;
+###  http://purl.org/athletics#HurdlesDiscipline
+:HurdlesDiscipline rdf:type owl:Class ;
+         rdfs:subClassOf :RaceDiscipline ;
          rdfs:isDefinedBy <http://purl.org/athletics#> ;
          rdfs:label "Hurdles"@en ;
-         skos:broader :Race ;
+         skos:broader :RaceDiscipline ;
          skos:definition "Hurdles is a running event where athletes jump over hurdles at speed."@en .
 
 
-###  http://purl.org/athletics#JavelinThrow
-:JavelinThrow rdf:type owl:Class ;
-              rdfs:subClassOf :Throws ;
+###  http://purl.org/athletics#JavelinThrowDiscipline
+:JavelinThrowDiscipline rdf:type owl:Class ;
+              rdfs:subClassOf :ThrowsDiscipline ;
               rdfs:isDefinedBy <http://purl.org/athletics#> ;
               rdfs:label "Javelin Throw"@en ;
-              skos:broader :Throws ;
+              skos:broader :ThrowsDiscipline ;
               skos:definition "The Javelin Throw is a track and field event where the javelin, a spear about 2.5 m (8 ft 2 in) in length, is thrown. Lenght and weight of javelin may vary depending on the rules of the competition."@en .
 
 
-###  http://purl.org/athletics#LongJump
-:LongJump rdf:type owl:Class ;
-          rdfs:subClassOf :HorizontalJumps ;
+###  http://purl.org/athletics#LongJumpDiscipline
+:LongJumpDiscipline rdf:type owl:Class ;
+          rdfs:subClassOf :HorizontalJumpsDiscipline ;
           rdfs:isDefinedBy <http://purl.org/athletics#> ;
           rdfs:label "Long Jump"@en ;
+          skos:broader :HorizontalJumpsDiscipline ;
           skos:definition "Long Jump (or broad jump) is a track and field event in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point."@en .
 
 
-###  http://purl.org/athletics#MiddleOrLongDistanceRace
-:MiddleOrLongDistanceRace rdf:type owl:Class ;
-                          rdfs:subClassOf :Race ;
+###  http://purl.org/athletics#DistanceDiscipline
+:DistanceDiscipline rdf:type owl:Class ;
+                          rdfs:subClassOf :RaceDiscipline ;
                           rdfs:isDefinedBy <http://purl.org/athletics#> ;
                           rdfs:label "Middle Or Long Distance Race"@en ;
-                          skos:broader :Race ;
-                          skos:definition "Middle-distance or Long-distance running event, over a distance longer than sprints (over 800m and up to Marathon 42.195 Km)."@en ;
-                          skos:narrower :Steeplechase .
+                          skos:broader :RaceDiscipline ;
+                          skos:definition "Middle-distance or Long-distance running event, over a distance longer than sprints (over 800m and up to Marathon 42.195 Km)."@en .
 
 
-###  http://purl.org/athletics#MountainRunning
-:MountainRunning rdf:type owl:Class ;
-                 rdfs:subClassOf :Race ;
+###  http://purl.org/athletics#MountainRunningDiscipline
+:MountainRunningDiscipline rdf:type owl:Class ;
+                 rdfs:subClassOf :RaceDiscipline ;
                  rdfs:isDefinedBy <http://purl.org/athletics#> ;
                  rdfs:label "Mountain Running"@en ;
-                 skos:broader :Race ;
+                 skos:broader :RaceDiscipline ;
                  skos:definition "Mountain running is a Athletics discipline that takes place on terrain that is mainly off-road and which course may gain elevation."@en .
-
-
-###  http://purl.org/athletics#Pentathlon
-:Pentathlon rdf:type owl:Class ;
-            rdfs:subClassOf :CombinedEvent ;
-            rdfs:isDefinedBy <http://purl.org/athletics#> ;
-            rdfs:label "Pentathlon"@en ;
-            skos:broader :CombinedEvent ;
-            skos:definition "Pentathlon is a competition in which athletes participate in five track and field combined events, earning points for their performance in each event, which adds to a total points score."@en .
 
 
 ###  http://purl.org/athletics#Performance
@@ -802,12 +776,12 @@ dct:modified rdf:type owl:DatatypeProperty .
                    skos:definition "Performance measured as points"@en .
 
 
-###  http://purl.org/athletics#PoleVault
-:PoleVault rdf:type owl:Class ;
-           rdfs:subClassOf :VerticalJumps ;
+###  http://purl.org/athletics#PoleVaultDiscipline
+:PoleVaultDiscipline rdf:type owl:Class ;
+           rdfs:subClassOf :VerticalJumpsDiscipline ;
            rdfs:isDefinedBy <http://purl.org/athletics#> ;
            rdfs:label "Pole Vault"@en ;
-           skos:broader :VerticalJumps ;
+           skos:broader :VerticalJumpsDiscipline ;
            skos:definition "Pole vault is a track and field event in which a person uses a long, flexible pole as an aid to jump over a bar."@en .
 
 
@@ -818,30 +792,30 @@ dct:modified rdf:type owl:DatatypeProperty .
                        skos:definition "Qualification Criteria are the requirements for the competitor to pass a competition round. Qualification may be based on the finishing position or by best time."@en .
 
 
-###  http://purl.org/athletics#Race
-:Race rdf:type owl:Class ;
+###  http://purl.org/athletics#RaceDiscipline
+:RaceDiscipline rdf:type owl:Class ;
       rdfs:subClassOf :AthleticsDiscipline ;
       rdfs:isDefinedBy <http://purl.org/athletics#> ;
       rdfs:label "Race"@en ;
       skos:broader :AthleticsDiscipline ;
       skos:definition "A type of competition to see who is the fastest, including running or race-waking."@en ;
-      skos:narrower :Hurdles ,
-                    :MiddleOrLongDistanceRace ,
-                    :MountainRunning ,
-                    :RaceWalking ,
-                    :RoadRunning ,
-                    :Steeplechase ,
-                    :TrackRelays ,
-                    :UltraRunning ,
-                    <http://purl.org/athletics#/Sprint> .
+      skos:narrower :HurdlesDiscipline ,
+                    :DistanceDiscipline ,
+                    :MountainRunningDiscipline ,
+                    :RaceWalkingDiscipline ,
+                    :RoadRunningDiscipline ,
+                    :SteeplechaseDiscipline ,
+                    :TrackRelaysDiscipline ,
+                    :UltraRunningDiscipline ,
+                    :SprintsDiscipline .
 
 
-###  http://purl.org/athletics#RaceWalking
-:RaceWalking rdf:type owl:Class ;
-             rdfs:subClassOf :Race ;
+###  http://purl.org/athletics#RaceWalkingDiscipline
+:RaceWalkingDiscipline rdf:type owl:Class ;
+             rdfs:subClassOf :RaceDiscipline ;
              rdfs:isDefinedBy <http://purl.org/athletics#> ;
              rdfs:label "Race Walking"@en ;
-             skos:broader :Race ;
+             skos:broader :RaceDiscipline ;
              skos:definition "Racewalking, or race walking, is a long-distance discipline where one foot must appear to be in contact with the ground at all times."@en .
 
 
@@ -859,20 +833,21 @@ dct:modified rdf:type owl:DatatypeProperty .
         skos:definition "Result is a competitor's achievent before (start list), during and after the competition. Result items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition ‘under protest’, etc.)."@en .
 
 
-###  http://purl.org/athletics#RoadRunning
-:RoadRunning rdf:type owl:Class ;
-             rdfs:subClassOf :Race ;
+###  http://purl.org/athletics#RoadRunningDiscipline
+:RoadRunningDiscipline rdf:type owl:Class ;
+             rdfs:subClassOf :RaceDiscipline ;
              rdfs:isDefinedBy <http://purl.org/athletics#> ;
              rdfs:label "Road Running"@en ;
-             skos:broader :Race ;
+             skos:broader :RaceDiscipline ;
              skos:definition "Road running is an Athletics discipline on a measured course over an established road."@en .
 
 
-###  http://purl.org/athletics#ShotPut
-:ShotPut rdf:type owl:Class ;
-         rdfs:subClassOf :Throws ;
+###  http://purl.org/athletics#ShotPutDiscipline
+:ShotPutDiscipline rdf:type owl:Class ;
+         rdfs:subClassOf :ThrowsDiscipline ;
          rdfs:isDefinedBy <http://purl.org/athletics#> ;
          rdfs:label "Shot Put"@en ;
+         skos:broader :ThrowsDiscipline ;
          skos:definition "Shot Put is a track and field event involving throwing/putting (throwing in a pushing motion) a heavy spherical object (the shot) as far as possible. The size of the ball, and the legth of the wire varies depending on the competition rules."@en .
 
 
@@ -881,6 +856,7 @@ dct:modified rdf:type owl:DatatypeProperty .
                   rdfs:subClassOf skos:Concept ;
                   rdfs:isDefinedBy <http://purl.org/athletics#> ;
                   rdfs:label "Sports Discipline"@en ;
+                  rdfs:narrower :AthleticsDiscipline ;
                   skos:definition "Type of sports"@en .
 
 
@@ -893,46 +869,36 @@ dct:modified rdf:type owl:DatatypeProperty .
                      skos:definition "Sports Governing Body is an organization in charge of governing and rule sports. These sports governing bodies may be attached to other higher-level organizations (clubs or federations) attached to them."@en .
 
 
-###  http://purl.org/athletics#Sprints
-:Sprints rdf:type owl:Class ;
-         rdfs:subClassOf :Race ;
+###  http://purl.org/athletics#SprintsDiscipline
+:SprintsDiscipline rdf:type owl:Class ;
+         rdfs:subClassOf :RaceDiscipline ;
          rdfs:isDefinedBy <http://purl.org/athletics#> ;
          rdfs:label "Sprints"@en ;
-         skos:broader :Race ;
+         skos:broader :RaceDiscipline ;
          skos:definition "Sprints are running events over a short distance (less than 800m)."@en .
 
 
-###  http://purl.org/athletics#Steeplechase
+###  http://purl.org/athletics#SteeplechaseDiscipline
 :Steeplechase rdf:type owl:Class ;
-              rdfs:subClassOf :Race ;
+              rdfs:subClassOf :RaceDiscipline ;
               rdfs:isDefinedBy <http://purl.org/athletics#> ;
               rdfs:label "Steeplechase"@en ;
-              skos:broader :MiddleOrLongDistanceRace ;
+              skos:broader :RaceDiscipline ;
               skos:definition "Steeplechase is a long distance running event where runners must clear obstacles and water jumps."@en .
 
 
-###  http://purl.org/athletics#Throws
-:Throws rdf:type owl:Class ;
+###  http://purl.org/athletics#ThrowsDiscipline
+:ThrowsDiscipline rdf:type owl:Class ;
         rdfs:subClassOf :AthleticsDiscipline ;
         rdfs:isDefinedBy <http://purl.org/athletics#> ;
         rdfs:label "Throws"@en ;
         skos:broader :AthleticsDiscipline ;
         skos:definition "Throws are types of field events in which athletes throws heavy objects in an attempt to mark a farther distance than their competitors."@en ;
-        skos:narrower :DiscusThrow ,
-                      :HammerThrow ,
-                      :JavelinThrow ,
-                      :ShotPut ,
-                      :WeightThrow .
-
-
-###  http://purl.org/athletics#ThrowsPentathlon
-:ThrowsPentathlon rdf:type owl:Class ;
-                  rdfs:subClassOf :CombinedEvent ;
-                  rdfs:isDefinedBy <http://purl.org/athletics#> ;
-                  rdfs:label "Throws Pentathlon"@en ;
-                  skos:broader :CombinedEvent ;
-                  skos:definition "Throws Pentathlon is a competition in which athletes participate in five combined throwing events, earning points for their performance in each event, which adds to a total points score."@en .
-
+        skos:narrower :DiscusThrowDiscipline ,
+                      :HammerThrowDiscipline ,
+                      :JavelinThrowDiscipline ,
+                      :ShotPutDiscipline ,
+                      :WeightThrowDiscipline .
 
 ###  http://purl.org/athletics#TimePerformance
 :TimePerformance rdf:type owl:Class ;
@@ -949,29 +915,30 @@ dct:modified rdf:type owl:DatatypeProperty .
              skos:definition "Timekeeping is a process and/or mechanism of timing competitions."@en .
 
 
-###  http://purl.org/athletics#TrackRelays
-:TrackRelays rdf:type owl:Class ;
-             rdfs:subClassOf :Race ;
+###  http://purl.org/athletics#TrackRelaysDiscipline
+:TrackRelaysDiscipline rdf:type owl:Class ;
+             rdfs:subClassOf :RaceDiscipline ;
              rdfs:isDefinedBy <http://purl.org/athletics#> ;
              rdfs:label "Track Relays"@en ;
-             skos:broader :Race ;
+             skos:broader :RaceDiscipline ;
              skos:definition "Relays or relay race is a track race between two or more teams where each member of the team runs one leg of the race."@en .
 
 
-###  http://purl.org/athletics#TripleJump
-:TripleJump rdf:type owl:Class ;
-            rdfs:subClassOf :HorizontalJumps ;
+###  http://purl.org/athletics#TripleJumpDiscipline
+:TripleJumpDiscipline rdf:type owl:Class ;
+            rdfs:subClassOf :HorizontalJumpsDiscipline ;
             rdfs:isDefinedBy <http://purl.org/athletics#> ;
             rdfs:label "Triple Jump"@en ;
+            skos:broader :HorizontalJumpsDiscipline ;
             skos:definition "Triple Jump (sometimes referred to as the hop, step and jump or the hop, skip and jump), is a track and field event, where competitors run down the track and perform a hop, a bound and then a jump into the sand pit."@en .
 
 
-###  http://purl.org/athletics#UltraRunning
-:UltraRunning rdf:type owl:Class ;
-              rdfs:subClassOf :Race ;
+###  http://purl.org/athletics#UltraRunningDiscipline
+:UltraRunningDiscipline rdf:type owl:Class ;
+              rdfs:subClassOf :RaceDiscipline ;
               rdfs:isDefinedBy <http://purl.org/athletics#> ;
               rdfs:label "Ultra Running"@en ;
-              skos:broader :Race ;
+              skos:broader :RaceDiscipline ;
               skos:definition "Ultra running, ultra distance or ultramarathon, is a footrace longer than the traditional marathon length (42.195 Km)."@en .
 
 
@@ -1015,22 +982,23 @@ dct:modified rdf:type owl:DatatypeProperty .
           skos:definition "A Unit Race is a competitive event where performances are measured as time (i.e., races and legs in relay races). Timed events have specific information about timekeeping. This kind of events may have information about the start/finish point and the course of the race."@en .
 
 
-###  http://purl.org/athletics#VerticalJumps
-:VerticalJumps rdf:type owl:Class ;
+###  http://purl.org/athletics#VerticalJumpsDiscipline
+:VerticalJumpsDiscipline rdf:type owl:Class ;
                rdfs:subClassOf :AthleticsDiscipline ;
                rdfs:isDefinedBy <http://purl.org/athletics#> ;
                rdfs:label "Vertical Jumps"@en ;
                skos:definition "Vertical Jumps are track and field events in which competitors must jump or vault over a horizontal bar placed at measured heights without dislodging it."@en ;
-               skos:narrower :HighJump ,
-                             :PoleVault .
+               skos:broader :AthleticsDiscipline ;
+               skos:narrower :HighJumpDiscipline ,
+                             :PoleVaultDiscipline .
 
 
-###  http://purl.org/athletics#WeightThrow
-:WeightThrow rdf:type owl:Class ;
-             rdfs:subClassOf :Throws ;
+###  http://purl.org/athletics#WeightThrowDiscipline
+:WeightThrowDiscipline rdf:type owl:Class ;
+             rdfs:subClassOf :ThrowsDiscipline ;
              rdfs:isDefinedBy <http://purl.org/athletics#> ;
              rdfs:label "Weight Throw"@en ;
-             skos:broader :Throws ;
+             skos:broader :ThrowsDiscipline ;
              skos:definition "Weight Throw is a track and field event usually play indoors which is equivalent to the hammer throw event, which can only be held outdoors. Ball weight may vary depending on the rules of the competition."@en .
 
 

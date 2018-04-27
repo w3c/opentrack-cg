@@ -1,7 +1,7 @@
 {
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
     "@id": "http://w3c.github.io/opentrack-cg/examples/discipline/HMarathon.jsonld",
-    "@type": "MiddleOrLongDistance",
+    "@type": "DistanceDiscipline",
     "name": "Half Marathon",
     "descriptition": "Road running race of 21.0975 kilometres (13.1094 mi) – half the distance of a marathon",
     "raceCompetitionType": "race:RaceIndividual",

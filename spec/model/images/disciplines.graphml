@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
-  <!--Created by yEd 3.17.1-->
+  <!--Created by yEd 3.18.0.2-->
   <key attr.name="Description" attr.type="string" for="graph" id="d0"/>
   <key for="port" id="d1" yfiles.type="portgraphics"/>
   <key for="port" id="d2" yfiles.type="portgeometry"/>
@@ -46,7 +46,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>trackType: TrackType</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
@@ -57,17 +57,17 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="50.0" width="191.3284410699252" x="711.7785219399537" y="401.5"/>
+          <y:Geometry height="50.0" width="151.44295612009245" x="711.7785219399537" y="318.24999999999994"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="180.09033203125" x="5.619054519337595" y="3.0">MiddlOrLongDistanceRace<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="61.87158203125" x="44.78568704442122" y="3.0">Distance<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>duration: Time</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
@@ -88,7 +88,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
@@ -109,7 +109,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
@@ -130,7 +130,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>weight: Quantity
 </y:AttributeLabel>
             <y:MethodLabel/>
@@ -152,7 +152,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>discusDiameter: Distance
 </y:AttributeLabel>
             <y:MethodLabel/>
@@ -174,7 +174,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
@@ -195,7 +195,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>wireLength: Distance
 </y:AttributeLabel>
             <y:MethodLabel/>
@@ -217,7 +217,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>javelinLength: Distance
 </y:AttributeLabel>
             <y:MethodLabel/>
@@ -239,7 +239,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
@@ -260,7 +260,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
@@ -281,7 +281,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
@@ -302,7 +302,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
@@ -323,7 +323,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
@@ -334,7 +334,7 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="63.0" width="151.44295612009233" x="711.7785219399537" y="470.5"/>
+          <y:Geometry height="63.0" width="151.44295612009233" x="711.7785219399537" y="387.24999999999994"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="56.39990234375" x="47.52152688817117" y="3.0">Hurdles<y:LabelModel>
@@ -344,7 +344,7 @@
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>height: Distance
 spacing: Distance</y:AttributeLabel>
             <y:MethodLabel/>
@@ -366,7 +366,7 @@ spacing: Distance</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>discipline: Discipline
 scorePointsReference: URL</y:AttributeLabel>
             <y:MethodLabel/>
@@ -388,7 +388,7 @@ scorePointsReference: URL</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
@@ -409,7 +409,7 @@ scorePointsReference: URL</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>ascent: Distance
 descent: Distance</y:AttributeLabel>
             <y:MethodLabel/>
@@ -431,7 +431,7 @@ descent: Distance</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>length: Distance
 competitionType: RaceCompetitionType</y:AttributeLabel>
             <y:MethodLabel/>
@@ -453,7 +453,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
@@ -474,7 +474,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
@@ -485,17 +485,17 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="50.0" width="118.44295612009233" x="960.7785219399539" y="401.5"/>
+          <y:Geometry height="50.0" width="151.44295612009233" x="711.7785219399537" y="480.24999999999994"/>
           <y:Fill color="#CCFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="90.455078125" x="13.993938997546167" y="3.0">Steeplechase<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="90.455078125" x="30.493938997546167" y="3.0">Steeplechase<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>heigth: Distance</y:AttributeLabel>
             <y:MethodLabel/>
           </y:UML>
@@ -516,7 +516,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
@@ -537,7 +537,7 @@ competitionType: RaceCompetitionType</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel>name: Text
 venueType: AthleticsVenueType</y:AttributeLabel>
             <y:MethodLabel/>
@@ -546,90 +546,6 @@ venueType: AthleticsVenueType</y:AttributeLabel>
       </data>
     </node>
     <node id="n25">
-      <data key="d4"/>
-      <data key="d6">
-        <y:UMLClassNode>
-          <y:Geometry height="30.0" width="151.44295612009233" x="711.7785219399537" y="1440.8117919670442"/>
-          <y:Fill color="#FFCC99" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="75.91259765625" x="37.76517923192117" y="3.0">Pentathlon<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-            <y:AttributeLabel/>
-            <y:MethodLabel/>
-          </y:UML>
-        </y:UMLClassNode>
-      </data>
-    </node>
-    <node id="n26">
-      <data key="d4"/>
-      <data key="d6">
-        <y:UMLClassNode>
-          <y:Geometry height="30.0" width="151.44295612009233" x="711.7785219399536" y="1485.8117919670442"/>
-          <y:Fill color="#FFCC99" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="78.15966796875" x="36.64164407567117" y="3.0">Heptathlon<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-            <y:AttributeLabel/>
-            <y:MethodLabel/>
-          </y:UML>
-        </y:UMLClassNode>
-      </data>
-    </node>
-    <node id="n27">
-      <data key="d4"/>
-      <data key="d6">
-        <y:UMLClassNode>
-          <y:Geometry height="30.0" width="151.44295612009233" x="711.7785219399536" y="1528.3117919670442"/>
-          <y:Fill color="#FFCC99" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="71.361328125" x="40.04081399754617" y="3.0">Decathlon<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-            <y:AttributeLabel/>
-            <y:MethodLabel/>
-          </y:UML>
-        </y:UMLClassNode>
-      </data>
-    </node>
-    <node id="n28">
-      <data key="d4"/>
-      <data key="d6">
-        <y:UMLClassNode>
-          <y:Geometry height="30.0" width="151.44295612009233" x="711.7785219399536" y="1570.8117919670442"/>
-          <y:Fill color="#FFCC99" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="2.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.310546875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="126.19873046875" x="12.622112825671167" y="3.0">ThrowsPentathlon<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
-            <y:AttributeLabel/>
-            <y:MethodLabel/>
-          </y:UML>
-        </y:UMLClassNode>
-      </data>
-    </node>
-    <node id="n29">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -643,14 +559,14 @@ venueType: AthleticsVenueType</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n30">
+    <node id="n26">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -664,14 +580,14 @@ venueType: AthleticsVenueType</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n31">
+    <node id="n27">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -685,14 +601,14 @@ venueType: AthleticsVenueType</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.07815755208333336" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n32">
+    <node id="n28">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -706,14 +622,14 @@ venueType: AthleticsVenueType</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.07815755208333336" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n33">
+    <node id="n29">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -727,14 +643,14 @@ venueType: AthleticsVenueType</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n34">
+    <node id="n30">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -748,14 +664,14 @@ venueType: AthleticsVenueType</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n35">
+    <node id="n31">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -769,14 +685,14 @@ venueType: AthleticsVenueType</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n36">
+    <node id="n32">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -790,7 +706,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
               <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="" use3DEffect="true">
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
             <y:AttributeLabel/>
             <y:MethodLabel/>
           </y:UML>
@@ -809,7 +725,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
     <edge id="e1" source="n2" target="n2">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="64.22213406542943" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:Path sx="50.833999257093964" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
         </y:QuadCurveEdge>
@@ -989,7 +905,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
     <edge id="e21" source="n22" target="n22">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="39.75707618017087" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:Path sx="50.83399925709395" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="standard"/>
         </y:QuadCurveEdge>
@@ -1009,7 +925,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="9.920634920634921" tx="122.0972084376382" ty="0.0">
-            <y:Point x="630.0" y="436.42063492063494"/>
+            <y:Point x="630.0" y="353.1706349206349"/>
             <y:Point x="630.0" y="710.0"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -1023,7 +939,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="11.0" tx="122.0972084376382" ty="0.0">
-            <y:Point x="630.0" y="513.0"/>
+            <y:Point x="630.0" y="429.74999999999994"/>
             <y:Point x="630.0" y="710.0"/>
           </y:Path>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
@@ -1116,18 +1032,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e31" source="n22" target="n2">
-      <data key="d8"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e32" source="n7" target="n5">
+    <edge id="e31" source="n7" target="n5">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1141,7 +1046,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e33" source="n6" target="n5">
+    <edge id="e32" source="n6" target="n5">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1155,7 +1060,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e34" source="n8" target="n5">
+    <edge id="e33" source="n8" target="n5">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1166,7 +1071,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e35" source="n9" target="n5">
+    <edge id="e34" source="n9" target="n5">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1180,7 +1085,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e36" source="n10" target="n5">
+    <edge id="e35" source="n10" target="n5">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1194,7 +1099,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e37" source="n24" target="n24">
+    <edge id="e36" source="n24" target="n24">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="70.12091168748942" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1203,7 +1108,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e38" source="n19" target="n24">
+    <edge id="e37" source="n19" target="n24">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1217,7 +1122,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e39" source="n16" target="n24">
+    <edge id="e38" source="n16" target="n24">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1231,7 +1136,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e40" source="n5" target="n24">
+    <edge id="e39" source="n5" target="n24">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1245,7 +1150,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e41" source="n4" target="n24">
+    <edge id="e40" source="n4" target="n24">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1259,43 +1164,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e42" source="n25" target="n25">
-      <data key="d10">
-        <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="50.833999257093936" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="standard"/>
-        </y:QuadCurveEdge>
-      </data>
-    </edge>
-    <edge id="e43" source="n26" target="n26">
-      <data key="d10">
-        <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="50.833999257093936" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="standard"/>
-        </y:QuadCurveEdge>
-      </data>
-    </edge>
-    <edge id="e44" source="n27" target="n27">
-      <data key="d10">
-        <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="50.833999257093936" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="standard"/>
-        </y:QuadCurveEdge>
-      </data>
-    </edge>
-    <edge id="e45" source="n28" target="n28">
-      <data key="d10">
-        <y:QuadCurveEdge straightness="0.1">
-          <y:Path sx="50.833999257093936" sy="0.0" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="standard"/>
-        </y:QuadCurveEdge>
-      </data>
-    </edge>
-    <edge id="e46" source="n29" target="n29">
+    <edge id="e41" source="n25" target="n25">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="50.83399925709396" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1304,7 +1173,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e47" source="n30" target="n30">
+    <edge id="e42" source="n26" target="n26">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="50.83399925709396" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1313,7 +1182,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e48" source="n31" target="n31">
+    <edge id="e43" source="n27" target="n27">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="50.83399925709396" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1322,7 +1191,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e49" source="n32" target="n32">
+    <edge id="e44" source="n28" target="n28">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="50.83399925709396" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1331,7 +1200,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e50" source="n30" target="n29">
+    <edge id="e45" source="n26" target="n25">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1345,7 +1214,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e51" source="n31" target="n29">
+    <edge id="e46" source="n27" target="n25">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1356,7 +1225,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e52" source="n32" target="n29">
+    <edge id="e47" source="n28" target="n25">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1370,7 +1239,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e53" source="n33" target="n33">
+    <edge id="e48" source="n29" target="n29">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="61.384815363222145" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1379,7 +1248,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e54" source="n34" target="n34">
+    <edge id="e49" source="n30" target="n30">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="70.1209116874894" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1388,7 +1257,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e55" source="n35" target="n35">
+    <edge id="e50" source="n31" target="n31">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="70.1209116874894" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1397,7 +1266,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e56" source="n35" target="n33">
+    <edge id="e51" source="n31" target="n29">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1411,7 +1280,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e57" source="n34" target="n33">
+    <edge id="e52" source="n30" target="n29">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1425,7 +1294,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e58" source="n11" target="n4">
+    <edge id="e53" source="n11" target="n4">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1439,7 +1308,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e59" source="n12" target="n4">
+    <edge id="e54" source="n12" target="n4">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1453,63 +1322,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e60" source="n25" target="n16">
-      <data key="d8"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="86.93050430623009" ty="0.0">
-            <y:Point x="630.0" y="1455.8117919670442"/>
-            <y:Point x="630.0" y="1522.9617919670443"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e61" source="n26" target="n16">
-      <data key="d8"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="7.660144181256555" tx="86.93050430623009" ty="0.0">
-            <y:Point x="630.0" y="1508.4719361483008"/>
-            <y:Point x="630.0" y="1522.9617919670443"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e62" source="n27" target="n16">
-      <data key="d8"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="86.93050430623009" ty="0.0">
-            <y:Point x="630.0" y="1543.3117919670442"/>
-            <y:Point x="630.0" y="1522.9617919670443"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e63" source="n28" target="n16">
-      <data key="d8"/>
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="0.0" tx="86.93050430623009" ty="0.0">
-            <y:Point x="630.0" y="1585.8117919670442"/>
-            <y:Point x="630.0" y="1522.9617919670443"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="2.0"/>
-          <y:Arrows source="none" target="white_delta"/>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e64" source="n36" target="n36">
+    <edge id="e55" source="n32" target="n32">
       <data key="d10">
         <y:QuadCurveEdge straightness="0.1">
           <y:Path sx="46.13469855779326" sy="0.0" tx="0.0" ty="0.0"/>
@@ -1518,7 +1331,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:QuadCurveEdge>
       </data>
     </edge>
-    <edge id="e65" source="n13" target="n36">
+    <edge id="e56" source="n13" target="n32">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1532,7 +1345,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e66" source="n14" target="n36">
+    <edge id="e57" source="n14" target="n32">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1546,7 +1359,7 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e67" source="n36" target="n24">
+    <edge id="e58" source="n32" target="n24">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
@@ -1560,13 +1373,27 @@ venueType: AthleticsVenueType</y:AttributeLabel>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e68" source="n17" target="n19">
+    <edge id="e59" source="n17" target="n19">
       <data key="d8"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="2.0"/>
           <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e60" source="n22" target="n19">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="119.39000325942254" ty="0.0">
+            <y:Point x="630.2307692307693" y="505.24999999999994"/>
+            <y:Point x="630.2307692307693" y="505.24999999999994"/>
+            <y:Point x="630.2307692307693" y="710.0"/>
+          </y:Path>
+          <y:LineStyle color="#000000" type="line" width="2.0"/>
+          <y:Arrows source="none" target="standard"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>

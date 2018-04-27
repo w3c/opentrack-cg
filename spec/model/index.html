@@ -1679,10 +1679,10 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
     <li>subClassOf: `ath:SportsDiscipline`</li>
     <li>superClasses: 
         <ul>
-            <li>`ath:Race`</li>
-            <li>`ath:Throws`</li>
-            <li>`ath:HorizontalJumps`</li>
-            <li>`ath:VerticalJumps`</li>
+            <li>`ath:RaceDiscipline`</li>
+            <li>`ath:ThrowsDiscipline`</li>
+            <li>`ath:HorizontalJumpsDiscipline`</li>
+            <li>`ath:VerticalJumpsDiscipline`</li>
             <li>`ath:CombinedDiscipline`</li>
         </ul>
     </li>
@@ -1702,7 +1702,7 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
     <li>subClassOf: `ath:AthleticsDiscipline`</li>
     <li>superClasses: 
         <ul>
-            <li>`ath:MiddleOrLongDistanceDiscipline`</li>
+            <li>`ath:DistanceDiscipline`</li>
             <li>`ath:HurdlesDiscipline`</li>
             <li>`ath:SprintsDiscipline`</li>
             <li>`ath:RaceWalkingDiscipline`</li>
@@ -1722,21 +1722,20 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
 | `maxDuration` | `ath:maxDuration` | Maximum duration of the race in case of being a time-fixed competition (i.e., one hour, one day, etc.). | [Time](#time) |
 
 
-##### Middle Or Long Distance Race
+##### Distance Race
 
-A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance running event, over a distance longer than sprints. Range of distances includes 800 <abbr title="meters">m</abbr>, up to Marathon 42.195 <abbr title="Kilometers">Km</abbr>.
+A <dfn>Distance Race</dfn> is a Middle-distance or Long-distance running event, over a distance longer than sprints. Range of distances includes 800 <abbr title="meters">m</abbr>, up to Marathon 42.195 <abbr title="Kilometers">Km</abbr>.
 
-* class: `MiddleOrLongDistanceRace` (`ath:MiddleOrLongDistanceRace`)
-* subClassOf: `ath:Race`
-* superClass: `ath:Steeplechase`
+* class: `DistanceDiscipline` (`ath:DistanceDiscipline`)
+* subClassOf: `ath:RaceDiscipline`
 
 
-###### Steeplechase
+##### Steeplechase
 
 <dfn>Steeplechase</dfn> is a long distance running event where runners must clear obstacles and water jumps.
 
-* class: `Steeplechase` (`ath:Steeplechase`)
-* subClassOf: `ath:MiddleOrLongDistanceRace`
+* class: `SteeplechaseDiscipline` (`ath:SteeplechaseDiscipline`)
+* subClassOf: `ath:RaceDiscipline`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -1746,8 +1745,8 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Hurdles</dfn> is a running event where athletes jump over hurdles at speed.
 
-* class: `Hurdles` (`ath:Hurdles`)
-* subClassOf: `ath:Race`
+* class: `HurdlesDiscipline` (`ath:HurdlesDiscipline`)
+* subClassOf: `ath:RaceDiscipline`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -1758,8 +1757,8 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Sprints</dfn> are running events over a short distance (less than 800m).
 
-* class: `Sprints` (`ath:Sprints`)
-* subClassOf: `ath:Race`
+* class: `SprintsDiscipline` (`ath:SprintsDiscipline`)
+* subClassOf: `ath:RaceDiscipline`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -1770,60 +1769,60 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Race-walking</dfn>, or race walking, is a long-distance discipline where one foot must appear to be in contact with the ground at all times.
 
-* class: `RaceWalking` (`ath:RaceWalking`)
-* subClassOf: `ath:Race`
+* class: `RaceWalkingDiscipline` (`ath:RaceWalkingDiscipline`)
+* subClassOf: `ath:RaceDiscipline`
 
 ##### Cross Country
 
 <dfn>Cross Country</dfn> is a running discipline in which teams and individuals run a race on open-air courses over natural terrain such as dirt or grass.
 
 * class: `CrossCountry` (`ath:CrossCountry`)
-* subClassOf: `ath:Race`
+* subClassOf: `ath:RaceDiscipline`
 
 ##### Road Running
 
 <dfn>Road Running</dfn> is an Athletics discipline on a measured course over an established road.
 
-* class: `RoadRunning` (`ath:RoadRunning`)
-* subClassOf: `ath:Race`
+* class: `RoadRunningDiscipline` (`ath:RoadRunningDiscipline`)
+* subClassOf: `ath:RaceDiscipline`
 
 ##### Mountain Running
 
 <dfn>Mountain Running</dfn> is a Athletics discipline that takes place on terrain that is mainly off-road and which course may gain elevation.
 
-* class: `MountainRunning` (`ath:MountainRunning`)
-* subClassOf: `ath:Race`
+* class: `MountainRunningDiscipline` (`ath:MountainRunningDiscipline`)
+* subClassOf: `ath:RaceDiscipline`
 
 
 ##### Track Relays
 
-<dfb>Relays</dfb>, relays race or relay race, is a track race between two or more teams where each member of the team runs one leg of the race.
+<dfn>Relays</dfn>, relays race or relay race, is a track race between two or more teams where each member of the team runs one leg of the race.
 
-* class: `TrackRelays` (`ath:TrackRelays`)
-* subClassOf: `ath:Race`
+* class: `TrackRelaysDiscipline` (`ath:TrackRelaysDiscipline`)
+* subClassOf: `ath:RaceDiscipline`
 
 
 ##### Ultra Running
 
 <dfn>Ultra running</dfn>, ultra distance or ultramarathon, is a road race longer than the traditional marathon length (42.195 Km). 
 
-* class: `UltraRunning` (`ath:UltraRunning`)
-* subClassOf: `ath:Race`
+* class: `UltraRunningDiscipline` (`ath:UltraRunningDiscipline`)
+* subClassOf: `ath:RaceDiscipline`
 
 #### Throws
 
 <dfn>Throws</dfn> are types of field events in which athletes throws heavy objects in an attempt to mark a farther distance than their competitors.
 
 <ul>
-    <li>class: `Throws` (`ath:Throws`)</li>
+    <li>class: `ThrowsDiscipline` (`ath:ThrowsDiscipline`)</li>
     <li>subClassOf: `ath:AthleticsDiscipline`</li>
     <li>superClasses:
         <ul>
-            <li>`ath:ShotPut`</li>
-            <li>`ath:DiscusThrow`</li>
-            <li>`ath:HammerThrow`</li>
-            <li>`ath:JavelinThrow`</li>
-            <li>`ath:WeightThrow`</li>
+            <li>`ath:ShotPutDiscipline`</li>
+            <li>`ath:DiscusThrowDiscipline`</li>
+            <li>`ath:HammerThrowDiscipline`</li>
+            <li>`ath:JavelinThrowDiscipline`</li>
+            <li>`ath:WeightThrowDiscipline`</li>
         </ul>
     </li>
 </ul>
@@ -1836,15 +1835,15 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Shot Put</dfn> is a track and field event involving throwing/putting (throwing in a pushing motion) a heavy spherical object (the shot) as far as possible. The size of the ball, and the length of the wire varies depending on the competition rules.
 
-* class: `ShotPut` (`ath:ShotPut`)
-* subClassOf: `ath:Throws`
+* class: `ShotPutDiscipline` (`ath:ShotPutDiscipline`)
+* subClassOf: `ath:ThrowsDiscipline`
 
 ##### Discus Throw
 
 <dfn>Discus Throw</dfn> is a track and field event in which an athlete throws a heavy disc (the discus) in an attempt to mark a farther distance than their competitors. The diameter and weight of the discus varies depending on the competition rules.
 
-* class: `DiscusThrow` (`ath:DiscusThrow`)
-* subClassOf: `ath:Throws`
+* class: `DiscusThrowDiscipline` (`ath:DiscusThrowDiscipline`)
+* subClassOf: `ath:ThrowsDiscipline`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -1854,8 +1853,8 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Hammer Throw</dfn> is a track and field event in which an athlete throws a metal ball attached by a steel wire to a grip (the hammer). The size of the ball, and the length of the wire varies depending on the competition rules.
 
-* class: `HammerThrow` (`ath:HammerThrow`)
-* subClassOf: `ath:Throws`
+* class: `HammerThrowDiscipline` (`ath:HammerThrowDiscipline`)
+* subClassOf: `ath:ThrowsDiscipline`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -1865,8 +1864,8 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Javelin Throw</dfn> is a track and field event where the javelin, a spear about 2.5 m (8 ft 2 in) in length, is thrown. Lenght and weight of javelin may vary depending on the rules of the competition.
 
-* class: `JavelinThrow` (`ath:JavelinThrow`)
-* subClassOf: `ath:Throws`
+* class: `JavelinThrowDiscipline` (`ath:JavelinThrowDiscipline`)
+* subClassOf: `ath:ThrowsDiscipline`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -1876,20 +1875,20 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Weight Throw</dfn> is a track and field event usually play indoors which is equivalent to the hammer throw event, which can only be held outdoors. Ball weight may vary depending on the rules of the competition.
 
-* class: `WeightThrow` (`ath:WeightThrow`)
-* subClassOf: `ath:Throws`
+* class: `WeightThrowDiscipline` (`ath:WeightThrowDiscipline`)
+* subClassOf: `ath:ThrowsDiscipline`
 
 #### Horizontal Jumps
 
 <dfn>Horizontal Jumps</dfn> are track and field events in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point. Horizontal jumps include: long jump and triple jump.
 
 <ul>
-    <li>class: `HorizontalJumps` (`ath:HorizontalJumps`)</li>
+    <li>class: `HorizontalJumpsDiscipline` (`ath:HorizontalJumpsDiscipline`)</li>
     <li>subClassOf: `ath:AthleticsDiscipline`</li>
     <li>superClasses:
         <ul>
-            <li>`ath:LongJump`</li>
-            <li>`ath:TripleJump`</li>
+            <li>`ath:LongJumpDiscipline`</li>
+            <li>`ath:TripleJumpDiscipline</li>
         </ul>
     </li>
 </ul>
@@ -1898,27 +1897,27 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>Long Jump</dfn> (or broad jump) is a track and field event in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point.
 
-* class: `LongJump` (`ath:LongJump`)
-* subClassOf: `ath:HorizontalJumps`
+* class: `LongJumpDiscipline` (`ath:LongJumpDiscipline`)
+* subClassOf: `ath:HorizontalJumpsDiscipline`
 
 ##### Triple Jump
 
 <dfn>Triple Jump</dfn> (sometimes referred to as the hop, step and jump or the hop, skip and jump), is a track and field event, where competitors run down the track and perform a hop, a bound and then a jump into the sand pit.
 
-* class: `TripleJump` (`ath:TripleJump`)
-* subClassOf: `ath:HorizontalJumps`
+* class: `TripleJumpDiscipline` (`ath:TripleJumpDiscipline`)
+* subClassOf: `ath:HorizontalJumpsDiscipline`
 
 #### VerticalJumps
 
 <dfn>Vertical Jumps</dfn> are track and field events in which competitors must jump or vault over a horizontal bar placed at measured heights without dislodging it.
 
 <ul>
-    <li>class: `VerticalJumps` (`ath:VerticalJumps`)</li>
+    <li>class: `VerticalJumpsDiscipline` (`ath:VerticalJumpsDiscipline`)</li>
     <li>subClassOf: `ath:AthleticsDiscipline`</li>
     <li>superClasses:
         <ul>
-            <li>`ath:HighJump`</li>
-            <li>`ath:PoleVault`</li>
+            <li>`ath:HighJumpDiscipline`</li>
+            <li>`ath:PoleVaultDiscipline`</li>
         </ul>
     </li>
 </ul>
@@ -1927,15 +1926,15 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 
 <dfn>High Jump</dfn> is a track and field event in which competitors must jump unaided over a horizontal bar placed at measured heights without dislodging it.
 
-* class: `HighJump` (`ath:HighJump`)
-* subClassOf: `ath:VerticalJumps`
+* class: `HighJumpDiscipline` (`ath:HighJumpDiscipline`)
+* subClassOf: `ath:VerticalJumpsDiscipline`
 
 ##### Pole Vault
 
 <dfn>Pole Vault</dfn> is a track and field event in which a person uses a long, flexible pole as an aid to jump over a bar.
 
-* class: `PoleVault` (`ath:PoleVault`)
-* subClassOf: `ath:VerticalJumps`
+* class: `PoleVaultDiscipline` (`ath:PoleVaultDiscipline`)
+* subClassOf: `ath:VerticalJumpsDiscipline`
 
 #### Combined Discipline
 
@@ -1944,48 +1943,12 @@ A <dfn>Middle Or Long Distance Race</dfn> is a Middle-distance or Long-distance 
 <ul>
     <li>class: `CombinedDiscipline` (`ath:CombinedDiscipline`)</li>
     <li>subClassOf: `ath:AthleticsDiscipline`</li>
-    <li>superClasses:
-        <ul>
-            <li>`ath:Pentathlon`</li>
-            <li>`ath:Heptathlon`</li>
-            <li>`ath:Decathlon`</li>
-            <li>`ath:ThrowsPentathlon`</li>
-        </ul>
-    </li>
 </ul>
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
 | `sportsDiscipline` | `ath:sportsDiscipline` | Combined sub-disciplines for this event. | [Discipline](#discipline) |
 | `scorePointsReference` | `ath:scorePointsReference` | Reference to the score table used for this competition. | URL |
-
-##### Pentathlon
-
-<dfn>Pentathlon</dfn> is a competition in which athletes participate in five track and field combined events, earning points for their performance in each event, which adds to a total points score.
-
-* class: `Pentathlon` (`ath:Pentathlon`)
-* subClassOf: `ath:CombinedDiscipline`
-
-##### Heptathlon
-
-<dfn>Heptathlon</dfn> is a competition in which athletes participate in seven track and field combined events, earning points for their performance in each event, which adds to a total points score.
-
-* class: `Heptathlon` (`ath:Heptathlon`)
-* subClassOf: `ath:CombinedDiscipline`
-
-##### Decathlon
-
-<dfn>Decathlon</dfn> is a competition in which athletes participate in ten track and field combined events, earning points for their performance in each event, which adds to a total points score.
-
-* class: `Decathlon` (`ath:Decathlon`)
-* subClassOf: `ath:CombinedDiscipline`
-
-##### ThrowsPentathlon
-
-<dfn>Throws Pentathlon</dfn> is a competition in which athletes participate in five combined throwing events, earning points for their performance in each event, which adds to a total points score.
-
-* class: `ThrowsPentathlon` (`ath:ThrowsPentathlon`)
-* subClassOf: `ath:CombinedDiscipline`
 
 </section>
 
