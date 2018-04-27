@@ -14,6 +14,8 @@
         "postalCode": "BT9 5PR",
         "addressCountry": "countrycode:GBR"
     },
-    "areaServed" : "Scotland",
-    "memberOf": { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" }
+    "areaServed": "Scotland",
+    "memberOf": {
+        "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+    }
 }

@@ -13,6 +13,8 @@
         "postalCode": "BT9 5PR",
         "addressCountry": "countrycode:GBR"
     },
-    "areaServed" : "Northern Ireland",
-    "memberOf": { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" }
+    "areaServed": "Northern Ireland",
+    "memberOf": {
+        "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+    }
 }
