@@ -446,8 +446,8 @@ In order to represent properly the model, the work was divided in three parts:
 ### Competitions
 
 <figure>
-    ![Competition Conceptual Model](images/competition_model.svg)
-    <figcaption>Athletics competition model</figcaption> 
+    ![Competition Conceptual Model](images/deep_competition_model.png)
+    <figcaption>Athletics in-competition model</figcaption> 
 </figure>
 
 <dl>
@@ -1377,7 +1377,7 @@ Results may be under different statuses depending on the stage of the competitio
 | `protestStatus` | `ath:protestStatus` | Status of the protest action of the competitor at a stage of the competition. | [Protest Status Type](#protest-status-type) |
 | `resultStatus` | `ath:resultStatus` | Status of the result in a competition. | [Result Status](#result-status) |
 | `startingOrder` | `ath:startingOrder` | Competitor's order in the start list of a competition stage. | Integer |
-| `trackLane` | `ath:trackLane` | Track lane number assigned to a competitor in case of certain track disciplines. | Integer |
+| `trackLane` | `ath:trackLane` | Track lane number assigned to a competitor in case of certain track disciplines. | Text |
 | `rank` | `ath:rank` | A numerical rank, place, or position. For example, '1' would represent 1st place in a competitive event.  | Integer |
 | `recordOrBest` | `ath:recordOrBest` | Type of record or best performance related to a result (e.g., World Record, National Record, Personal Best, etc.). | [Record or Best](#record-or-best) |
 | `performance` | `ath:performance` | Measure to quantify the performance of the competitor after a competition stage linked to results.  | [Performance](#performance) |
