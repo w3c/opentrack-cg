@@ -405,10 +405,47 @@ Classes may be described hierarchically to express differences in the model. For
 
 The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish Athletics information.
 
-In order to represent properly the model, the work was divided in two parts:
-1. **Competitors**, athletes and organizations that take part in the competition; and
-2. **Competitions** (scheduling and results).
+In order to represent properly the model, the work was divided in three parts:
+1. **Competition Calendar**. High-level representation of competitions, seen as sports events for competitors and the public in general. 
+2. **Competitors**, athletes and organizations that take part in the competition; and
+3. **In-Competition management**. Description of all parts within a competition (structure, heats, results, etc).
 
+### Competition Calendar
+
+<figure>
+    ![Competition Calendar Conceptual Model](images/high_level_competition_model.png)
+    <figcaption>High-Level Competition Conceptual Model</figcaption> 
+</figure>
+
+<dl>
+    <dt>[Athlete](#athlete)</dt>
+    <dd>Person who takes part in Athletics events as individual competitor. Athletes are defined by gender, age, nationality, and other personal information.</dd>
+
+    <dt>[Sports Team](#sports-team)</dt>
+    <dd>A group of people who takes part in a competition as a whole, competing against other groups of people. Both athletes and teams can be affiliated to [Organizations](#organizations) such as clubs, schools, university, and/or federations.
+
+    <dt>[Governing Body](#governing-body)</dt>
+    <dd>Sports Governing Bodies in charge of governing and rule Athletics in specific territories. Athletics Federations are Sports Governing Bodies that may be attached to other higher-level federations. **[Athletes](#athlete)**, **[Teams](#teams)**, **[Clubs](#clubs)** and other [Organizations](#organization) may be attached to Governing Bodies.</dd>
+</dl>         
+    
+    
+### Competitors
+
+<figure>
+    ![Competitor Conceptual Model](images/competitor_model.svg)
+    <figcaption>Competitor Conceptual Model</figcaption> 
+</figure>
+
+<dl>
+    <dt>[Athlete](#athlete)</dt>
+    <dd>Person who takes part in Athletics events as individual competitor. Athletes are defined by gender, age, nationality, and other personal information.</dd>
+
+    <dt>[Sports Team](#sports-team)</dt>
+    <dd>A group of people who takes part in a competition as a whole, competing against other groups of people. Both athletes and teams can be affiliated to [Organizations](#organizations) such as clubs, schools, university, and/or federations.
+
+    <dt>[Governing Body](#governing-body)</dt>
+    <dd>Sports Governing Bodies in charge of governing and rule Athletics in specific territories. Athletics Federations are Sports Governing Bodies that may be attached to other higher-level federations. **[Athletes](#athlete)**, **[Teams](#teams)**, **[Clubs](#clubs)** and other [Organizations](#organization) may be attached to Governing Bodies.</dd>
+</dl>      
 
 ### Competitors
 
@@ -426,8 +463,8 @@ In order to represent properly the model, the work was divided in two parts:
 
     <dt>[Governing Body](#governing-body)</dt>
     <dd>Sports Governing Bodies in charge of governing and rule Athletics in specific territories. Athletics Federations are Sports Governing Bodies that may be attached to other higher-level federations. **[Athletes](#athlete)**, **[Teams](#teams)**, **[Clubs](#clubs)** and other [Organizations](#organization) may be attached to Governing Bodies.</dd>
-</dl>
-
+</dl>    
+    
 ### Competitions
 
 <figure>
