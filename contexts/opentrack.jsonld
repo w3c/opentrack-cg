@@ -32,7 +32,7 @@
         "Competition": "pending:CompetitionEvent",
         "CompetitionSeries": "schema:EventSeries",
         "SportsDiscipline": "ath:SportsDiscipline",
-        "QualificationCriteria": "ath:QualificationCriteria",
+        "QualificationCriteria": "ath:CompetitionQualificationCriteria",
         "UnitCompetition": "ath:UnitCompetition",
         "UnitRace": "ath:UnitRace",
         "Result": "ath:CompetitionResult",
@@ -200,7 +200,7 @@
         "participation": "ath:competitionAction",
         "attendee": "schema:attendee",
         "sportsDiscipline": "ath:sportsDiscipline",
-        "category": "ath:sportsCategory",
+        "category": "ath:competitionCategory",
         "entryRequirements": "ath:entryRequirements",
         "results": {
             "@id": "pending:resultDecision",

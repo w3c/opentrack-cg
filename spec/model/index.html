@@ -792,9 +792,9 @@ See a common predefined [list of the main categories](#category-type) recognized
 | `requiredGender` | `schema:requiredGender` | Gender of athletes involved in a category.  | [Gender Type](#gender-type) |
 | `requiredMinAge` | `schema:requiredMinAge` | Athletes' minumum age to be eligible for a category.  | Integer |
 | `requiredMaxAge` | `schema:requiredMaxAge` | Athletes' maximum age to be eligible for a category.  | Integer |
-| `recognizingAuthority` | `ath:recognizingAuthority` | Governing body or organization that recognizes and rule a specific category.  | [Person](#person) or [Organization](#organization) |
+| `recognizingAuthority` | `schema:recognizingAuthority` | Governing body or organization that recognizes and rule a specific category.  | [Organization](#organization) |
 | `geographicArea` | `schema:geographicArea` | The geographic area associated with the category.  | [AdministrativeArea ](http://schema.org/AdministrativeArea) |
-| `healthCondition` | `schema:healthCondition` | Specifying the health condition(s) of the target audience of a competition (e.g., in the case of a medical certificate is required).  | [AdministrativeArea ](http://schema.org/AdministrativeArea) |
+| `healthCondition` | `schema:healthCondition` | Specifying the health condition(s) of the target audience of a competition (e.g., in the case of a medical certificate is required).  | [MedicalCondition](http://schema.org/MedicalCondition) |
 
 
 Example of category description (Senior Women):
@@ -833,7 +833,7 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `name` | `schema:name` | Descriptive name of a competition. | Text |
 | `alternateName` | `schema:alternateName` | An alias to name the competition. It could be an acronym or abbreviation. | Text |
 | `description` | `schema:description`  | Descriptive text about a competition. | Text |
-| `location` | `schema:location` | Venue where a competition is held (for instance, Berlin Olympic Stadium). | [Venue](#venue) or Text |
+| `location` | `schema:location` | Venue where a competition is held (for instance, Berlin Olympic Stadium). | [Place](#place) or Text |
 | `url` | `schema:url` | Webpage URL about a competition. | URL |
 | `image` | `schema:image` | Picture about a competition. | URL |
 | `startDate` | `schema:startDate` | Date and time when a competition starts. | [Date](#date) or [DateTime](#datetime) |
@@ -841,12 +841,12 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `eventStatus` | `schema:eventStatus` | Status of a competition according to a enumeration of potential values (i.e., scheduled, completed, etc.) | [Event Status Type](#competition-status) |
 | `organizer` | `schema:organizer` | Person(s) or organization(s) that organizes a competition. | [Person](#persons) or [Organization](#organizations) |
 | `contributor` | `schema:contributor` | Person(s) or organization(s) that collaborates in the organization of a competition. | [Person](#person) or [Organization](#organization) |
-| `starter` | `schema:competitor` | Athletes(s) or teams(s) taking part in the competition at the beginning of the event to compete in the event. | [Person](#person) or [Organization](#organization) |
-| `participation` | `ath:competitionAction` | Action of Athletes(s) or teams(s) taking part of the competition. | [Person](#person) or [Sports Team](#sports-team) |
+| `starter` | `schema:competitor` | Athletes(s) or teams(s) taking part in the competition at the beginning of the event to compete in the event. | [Person](#person) or [Sports Team](#sports-team) |
+| `participation` | `ath:competitionAction` | Action of Athletes(s) or teams(s) taking part of the competition. | [Competitor](#competitor) |
 | `sponsor` | `schema:sponsor` | Person(s) or organization(s) that sponsors a competition. | [Person](#person) or [Organization](#organization) |
 | `attendee` | `schema:attendee` | Person(s) who attends a competition. | [Person](#person) |
-| `sportsDiscipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#discipline) |
-| `category` | `ath:sportsCategory` | The specific category for a competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Category](#category) |
+| `sportsDiscipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [SportsDiscipline](#sports-discipline) |
+| `competitionCategory` | `ath:competitionCategory` | The specific category for a competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Competition Category](#competition-category) |
 | `entryRequirements` | `ath:entryRequirements` | Requirements to take part in a competition.  | Text |
 | `results` | `pending:resultDecision` | List with the results of the participation in a competition. There may be different results during the competition (start list, intermediate results, partial results, final results, etc.) .  | [Results](#results) |
 | `unitCompetition` | `ath:unitCompetition` | Unit competition that is part of a parent competition (e.g. every heat of a semifinal round in a 200m event).  | [Unit Competition](#unit-competition) |
@@ -1392,7 +1392,7 @@ _Using the previous example of result list, Shelly-Ann Fraser-Pryce's performanc
 | `identifier` | `schema:identifier` | Unique character string to identify a performance. | Text |
 | `windAssistance` | `ath:windAssistance` | Wind speed at the moment of registering the performance (it could be either positive or negative). | Text |
 | `recordOrBest` | `ath:recordOrBest` | Type of record or best performance related to a result in a competition (e.g., World Record, National Record, Personal Best, etc.). | [Record or Best](#record-or-best) |
-| `sportsDiscipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#discipline) |
+| `sportsDiscipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Sports Discipline](#sports-discipline) |
 | `endTime` | `schema:endTime` | Date and time when the athlete achieved a performance. | [DateTime](#datetime) |
 | `agent` | `schema:agent` | Athlete or team that achieved the performance. | [Athlete](#athlete) or [Sports Team](#sports-team) |
 | `result` | `schema:result` | Competition result achieved with this performance. | [Result](#result) |
@@ -1487,7 +1487,7 @@ Both official and unofficial records may be kept by statisticians.
 | `spatialCoverage` | `schema:spatialCoverage` | Spatial coverage of the record or best (e.g. in the case of area records, the country, continent or region). | [Country](#country), [Continent](#continent) or [AdministrativeArea](http://schema.org/AdministrativeArea)  |
 | `temporalCoverage` | `schema:temporalCoverage` | Temporal coverage of the record or best (e.g., a 2016-2017 season best) | [PeriodOfTime](http://purl.org/dc/terms/PeriodOfTime) |
 | `recognizingAuthority` | `ath:recognizingAuthority` | Governing body or organization that recognizes a record.  | [Person](#person) or [Organization](#organization) |
-| `category` | `ath:sportsCategory` | The specific category for this record or best (e.g., *M35*, *U18 Male*,  etc). | [Category](#category) |
+| `category` | `ath:competitionCategory` | The specific category for this record or best (e.g., *M35*, *U18 Male*,  etc). | [Category](#category) |
 
 <pre class="example">
 {
@@ -1508,17 +1508,17 @@ Records or bests can be defined on demand. There is a predefined list of [common
 
 <dfn>Qualification Criteria</dfn> are the requirements for the competitor to pass a qualification round. Qualification may be based on the *standard or finishing position*, or by *performance*.
 
-* class: `ath:QualificationCriteria`
+* class: `ath:CompetitionQualificationCriteria`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
 | `description` | `schema:description` | Descriptive text of the qualification criteria. | Text |
-| `byPlaceOrStandard` | `ath:qualifiedByPerformance` | Number of competitors that are qualified in a round by rank (track events) or standard (field events). | Integer |
+| `byPlaceOrStandard` | `ath:qualifiedByPlaceOrStandard` | Number of competitors that are qualified in a round by rank (track events) or standard (field events). | Integer |
 | `byPerformance` | `ath:qualifiedByPerformance` | Number of competitors that are qualified in a round by best performance. | Integer |
 
 <pre class="example">
 {
-    "@type": "QualificationCriteria",
+    "@type": "CompetitionQualificationCriteria",
     "description": "First 2 in each heat (Q) and the next 2 fastest (q) advance to the final",
     "byPlaceOrStandard": 6,
     "byPerformance": 2
@@ -1574,11 +1574,11 @@ Sometimes may be of interest gathering and representing information about device
 * subClassOf: `schema:TimekeepingAction`
 
 
-### Venue
+### Place
 
-A <dfn>Venue</dfn> is a location, place or territories where events are held or organizations are located. Events may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). Federations may cover specific Administrative Areas.
+A <dfn>Place</dfn> is a location, venue or territories where events are held or organizations are located. Events may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). Federations may cover specific Administrative Areas.
 
-* class: `schema:SportsActivityLocation`
+* class: `schema:Place`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -1653,7 +1653,7 @@ A <dfn>Venue</dfn> is a location, place or territories where events are held or 
 </pre>
 
 
-### Discipline
+### Sports Discipline
 
 An <dfn>Athletics Discipline</dfn> is a particular type of Athletics event defined by specific rules. 
 
@@ -1703,6 +1703,7 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
     <li>superClasses: 
         <ul>
             <li>`ath:DistanceDiscipline`</li>
+            <li>`ath:SteeplechaseDiscipline`</li>
             <li>`ath:HurdlesDiscipline`</li>
             <li>`ath:SprintsDiscipline`</li>
             <li>`ath:RaceWalkingDiscipline`</li>
@@ -1739,7 +1740,7 @@ A <dfn>Distance Race</dfn> is a Middle-distance or Long-distance running event, 
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
-| `height` | `ath:height` | Obstacle height. | [Distance](#distance) |
+| `height` | `schema:height` | Obstacle height. | [Distance](#distance) |
 
 ##### Hurdles
 
@@ -1750,7 +1751,7 @@ A <dfn>Distance Race</dfn> is a Middle-distance or Long-distance running event, 
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
-| `height` | `ath:height` | Hurdles height. | [Distance](#distance) |
+| `height` | `schema:height` | Hurdles height. | [Distance](#distance) |
 | `spacing` | `ath:spacing` | Horizontal distance between hurdles. | [Distance](#distance) |
 
 ##### Sprints
@@ -1947,7 +1948,7 @@ A <dfn>Distance Race</dfn> is a Middle-distance or Long-distance running event, 
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
-| `sportsDiscipline` | `ath:sportsDiscipline` | Combined sub-disciplines for this event. | [Discipline](#discipline) |
+| `sportsDiscipline` | `ath:sportsDiscipline` | Combined sub-disciplines for this event. | [Sports Discipline](#sports-discipline) |
 | `scorePointsReference` | `ath:scorePointsReference` | Reference to the score table used for this competition. | URL |
 
 </section>
