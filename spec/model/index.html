@@ -833,7 +833,7 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `name` | `schema:name` | Descriptive name of a competition. | Text |
 | `alternateName` | `schema:alternateName` | An alias to name the competition. It could be an acronym or abbreviation. | Text |
 | `description` | `schema:description`  | Descriptive text about a competition. | Text |
-| `location` | `schema:location` | Venue where a competition is held (for instance, Berlin Olympic Stadium). | [Place](#place) or Text |
+| `location` | `schema:location` | Venue where a competition is held (for instance, Berlin Olympic Stadium). | [Venue](#venue) or Text |
 | `url` | `schema:url` | Webpage URL about a competition. | URL |
 | `image` | `schema:image` | Picture about a competition. | URL |
 | `startDate` | `schema:startDate` | Date and time when a competition starts. | [Date](#date) or [DateTime](#datetime) |
@@ -841,8 +841,8 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `eventStatus` | `schema:eventStatus` | Status of a competition according to a enumeration of potential values (i.e., scheduled, completed, etc.) | [Event Status Type](#competition-status) |
 | `organizer` | `schema:organizer` | Person(s) or organization(s) that organizes a competition. | [Person](#persons) or [Organization](#organizations) |
 | `contributor` | `schema:contributor` | Person(s) or organization(s) that collaborates in the organization of a competition. | [Person](#person) or [Organization](#organization) |
-| `starter` | `schema:performer` | Athletes(s) or teams(s) taking part in the competition at the beginning of the event to compete in the event. | [Person](#person) or [Organization](#organization) |
-| `participation` | `ath:competitionAction` | Action of Athletes(s) or teams(s) taking part of the competition. | [Competitor](#competitor) |
+| `starter` | `schema:competitor` | Athletes(s) or teams(s) taking part in the competition at the beginning of the event to compete in the event. | [Person](#person) or [Organization](#organization) |
+| `participation` | `ath:competitionAction` | Action of Athletes(s) or teams(s) taking part of the competition. | [Person](#person) or [Sports Team](#sports-team) |
 | `sponsor` | `schema:sponsor` | Person(s) or organization(s) that sponsors a competition. | [Person](#person) or [Organization](#organization) |
 | `attendee` | `schema:attendee` | Person(s) who attends a competition. | [Person](#person) |
 | `sportsDiscipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [Discipline](#discipline) |
@@ -1574,11 +1574,11 @@ Sometimes may be of interest gathering and representing information about device
 * subClassOf: `schema:TimekeepingAction`
 
 
-### Place
+### Venue
 
-A <dfn>Place</dfn> is a location, venue or territories where events are held or organizations are located. Events may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). Federations may cover specific Administrative Areas.
+A <dfn>Venue</dfn> is a location, place or territories where events are held or organizations are located. Events may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, mountain races, road races, etc.). Federations may cover specific Administrative Areas.
 
-* class: `schema:Place`
+* class: `schema:SportsActivityLocation`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
