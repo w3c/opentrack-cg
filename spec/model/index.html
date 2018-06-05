@@ -418,34 +418,15 @@ In order to represent properly the model, the work was divided in three parts:
 </figure>
 
 <dl>
-    <dt>[Athlete](#athlete)</dt>
-    <dd>Person who takes part in Athletics events as individual competitor. Athletes are defined by gender, age, nationality, and other personal information.</dd>
+    <dt><a href="#competition">Competition</a></dt>
+    <dd>Competitions are organized occasions where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition (sub events and super events). These competitions can be organized periodically (<a href="#competition-series">Competition Series</a>), such as the Summer Olympic Games. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fund-raising road races, etc.).</dd>
 
-    <dt>[Sports Team](#sports-team)</dt>
-    <dd>A group of people who takes part in a competition as a whole, competing against other groups of people. Both athletes and teams can be affiliated to [Organizations](#organizations) such as clubs, schools, university, and/or federations.
+    <dt><a href="#venue">Venue</a></dt>
+    <dd>Place or location where events and competitions are held.</dd>
 
-    <dt>[Governing Body](#governing-body)</dt>
-    <dd>Sports Governing Bodies in charge of governing and rule Athletics in specific territories. Athletics Federations are Sports Governing Bodies that may be attached to other higher-level federations. **[Athletes](#athlete)**, **[Teams](#teams)**, **[Clubs](#clubs)** and other [Organizations](#organization) may be attached to Governing Bodies.</dd>
-</dl>         
-    
-    
-### Competitors
-
-<figure>
-    ![Competitor Conceptual Model](images/competitor_model.svg)
-    <figcaption>Competitor Conceptual Model</figcaption> 
-</figure>
-
-<dl>
-    <dt>[Athlete](#athlete)</dt>
-    <dd>Person who takes part in Athletics events as individual competitor. Athletes are defined by gender, age, nationality, and other personal information.</dd>
-
-    <dt>[Sports Team](#sports-team)</dt>
-    <dd>A group of people who takes part in a competition as a whole, competing against other groups of people. Both athletes and teams can be affiliated to [Organizations](#organizations) such as clubs, schools, university, and/or federations.
-
-    <dt>[Governing Body](#governing-body)</dt>
-    <dd>Sports Governing Bodies in charge of governing and rule Athletics in specific territories. Athletics Federations are Sports Governing Bodies that may be attached to other higher-level federations. **[Athletes](#athlete)**, **[Teams](#teams)**, **[Clubs](#clubs)** and other [Organizations](#organization) may be attached to Governing Bodies.</dd>
-</dl>      
+    <dt><a href="#category">Category</a></dt>
+    <dd>Specific category, or intended competitive audience, within an event (e.g., Senior Men, U18 Women, etc.).</dd>
+</dl>
 
 ### Competitors
 
@@ -455,15 +436,16 @@ In order to represent properly the model, the work was divided in three parts:
 </figure>
 
 <dl>
-    <dt>[Athlete](#athlete)</dt>
+    <dt><a href="#athlete">Athlete</a></dt>
     <dd>Person who takes part in Athletics events as individual competitor. Athletes are defined by gender, age, nationality, and other personal information.</dd>
 
-    <dt>[Sports Team](#sports-team)</dt>
+    <dt><a href="#sports-team">Sports Team</a></dt>
     <dd>A group of people who takes part in a competition as a whole, competing against other groups of people. Both athletes and teams can be affiliated to [Organizations](#organizations) such as clubs, schools, university, and/or federations.
 
-    <dt>[Governing Body](#governing-body)</dt>
-    <dd>Sports Governing Bodies in charge of governing and rule Athletics in specific territories. Athletics Federations are Sports Governing Bodies that may be attached to other higher-level federations. **[Athletes](#athlete)**, **[Teams](#teams)**, **[Clubs](#clubs)** and other [Organizations](#organization) may be attached to Governing Bodies.</dd>
-</dl>    
+    <dt><a href="#governing-body">Governing Body</a></dt>
+    <dd>Sports Governing Bodies in charge of governing and rule Athletics in specific territories. Athletics Federations are Sports Governing Bodies that may be attached to other higher-level federations. Athletes, Teams, Clubs and other Organizations may be attached to Governing Bodies.</dd>
+</dl>
+  
     
 ### Competitions
 
@@ -473,22 +455,16 @@ In order to represent properly the model, the work was divided in three parts:
 </figure>
 
 <dl>
-    <dt>[Competition](#competition)</dt>
-    <dd>Competitions are organized occasions where Athletics events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition (sub events and super events). These competitions can be organized periodically ([Competition Series](#competition-series)), such as the Summer Olympic Games. These events may have of different nature, depending on the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fund-raising road races, etc.). Athletics competitions may divided in several (sub)events such as in [Summer Olympic Games](https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics) that include 24 independent event disciplines for men and 23 for women); they may include several stages like the Diamond League); also competitions may be composed of several disciplines.</dd>
+    <dt><a href="#competition">Competition</a></dt>
+    <dd>Athletics competitions may divided in several (sub)events such as in <a href="#https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics">Summer Olympic Games</a> that include 24 independent event disciplines for men and 23 for women); they may include several stages like the Diamond League); also competitions may be composed of several disciplines.</dd>
 
-    <dt>[Venue](#venue)</dt>
-    <dd>Place or location where events and competitions are held.</dd>
+    <dt><a href="#competitor">Competitor</a></dt>
+    <dd>Competitor is the action of taking part in a competition. Competitor is either an athletes or a team that take part in an Athletics event, identified by specific information such as bib number, and best performance for the specific discipline of the event. This entry information is relative to the competition and relevant for <a href="#results">Results</a>.</dd>
 
-    <dt>[Category](#category)</dt>
-    <dd>Specific category, or intended competitive audience, within an event (e.g., Senior Men, U18 Women, etc.).</dd>
-
-    <dt>[Competitor](#competitor)</dt>
-    <dd>Competitor is the action of taking part in a competition. Competitor is either an athletes or a team that take part in an Athletics event, identified by specific information such as bib number, and best performance for the specific discipline of the event. This entry information is relative to the competition and relevant for **[Results](#results)**.</dd>
-
-    <dt>[Results](#results)</dt>
+    <dt><a href="#results">Results</a></dt>
     <dd>Results is a list of competitors (entries in the competition) with their [Performances](#performance) after an event or a concrete round. It serves as ranking for each stage of the competition. Result list items will include information about the impact of the performance in the competition (i.e., records, disqualifications, competition 'under protest', etc.).</dd>
 
-    <dt>[Performance](#performance)</dt>
+    <dt><a href="#performance">Performance</a></dt>
     <dd>Resulting competitor's accomplishment recognized by judges after a competition round. Measurements depend on the type of discipline (i.e., running performances are measured as time, jumps and throws are measured in centimetres). It may include information about the conditions in which competitor got the performance (e.g., wind speed). </dd>
 
 </dl>
