@@ -820,6 +820,8 @@ Example of category description (Senior Women):
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
 | `target` | `schema:target` | The entry point for the registration. | URL |
+| `startTime` | `schema:startTime` | DateTime when the registration period starts. | [DateTime](#datetime) |
+| `endTime` | `schema:endTime` | DateTime when the registration period ends. | [DateTime](#datetime) |
 
 
 Example of competition with open registration:
@@ -831,7 +833,9 @@ Example of competition with open registration:
     "name": "London Half Marathon",
     "openCompetitionRegistration" : { 
         "@type" : "RegisterAction",
-        "target" : "http://example.com/half-marathon/registration"
+        "target" : "http://example.com/half-marathon/registration",
+        "startTime" : "2012-01-03",
+        "endTime" : "2012-02-03"
     }
 }
 </pre>
