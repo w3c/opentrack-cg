@@ -2148,21 +2148,14 @@ Examples: `continent:AFRICA` for *Africa*, `continent:AMERICA` for *America*, `c
 
 ### Competition Status
 
-Status of a competition. 
+Status of a competition.
 
 | Code | Status |
 | ---- | ------ |
-| `event:Unscheduled` | Competition is not confirmed. |
-| `event:Scheduled` | Competition is scheduled. |
-| `event:Postponed` | Competition will be postponed without being rescheduled yet. |
-| `event:Rescheduled` | Competition is rescheduled. |
-| `event:Delayed` | An event is held up, for example by inclement weather. Can happen before or during an event.
-| `event:ScheduledBreak` | Competition has a scheduled break (`intermission` in SportsML). |
-| `event:Running` | Competition in progress (`mid-event` in SportsML). |
-| `event:Interrupted` | Competition interrupted once in progress (`halted` in SportsML). |
-| `event:GettingReady` | The start of the competition is imminent |
-| `event:Finished` | Competition is over and no more action will happen on the field of play (last competitor finished). (`post-event` in SportsML) |
-| `event:Cancelled` | Competition will not take place (`suspended`, `cancelled`, `discarded` in SportsML) |
+| `schema:EventScheduled` | Competition is scheduled. |
+| `schema:EventPostponed` | Competition will be postponed without being rescheduled yet. |
+| `schema:EventRescheduled` | Competition is rescheduled. |
+| `schema:EventCancelled` | Competition will not take place (`suspended`, `cancelled`, `discarded` in SportsML) |
 
 
 ### Record or Best Type
