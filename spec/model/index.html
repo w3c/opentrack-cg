@@ -811,6 +811,31 @@ Example of category description (Senior Women):
 }
 </pre>
 
+### Competition Registration
+
+<dfn>Competition Registration</dfn> is the action of applying to the competition organizers for taking part in the competition.
+  
+* class: `RegisterAction` (`schema:RegisterAction`)
+
+| Key | Property | Description | Value Type |
+|:--- |:-------- |:----------- |:---------- |
+| `target` | `schema:target` | The entry point for the registration. | URL |
+
+
+Example of competition with open registration:
+<pre class="example">
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/001.jsonld",
+    "@type": "SportsCompetitionEvent",
+    "name": "London Half Marathon",
+    "openCompetitionRegistration" : { 
+        "@type" : "RegisterAction",
+        "target" : "http://example.com/half-marathon/registration"
+    }
+}
+</pre>
+    
 ### Competition
 
 A <dnf>Competition</dnf>, Athletics Competition or Sports Competition is an event in which [Athletes](#athlete) or [Teams](#team) take part in order to find out who is best at a particular sports activity.
@@ -853,6 +878,7 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `competitionStage` | `ath:competitionStage` | A stage within a multi stage competition. | [Competition](#competition) |
 | `round` | `ath:round` | Round in an athletic event organised as a sequence of rounds. For instance, track and field events are usually structured in qualification rounds (i.e, preliminary rounds, qualification rounds, semifinals and final). Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races. Examples of Competition Rounds: 110m Hurdles Men Preliminary Round Heat 1, 10,000m Men Final, and 110 Hurdles Man Semifinal 1. | [Competition](#competition) |
 | `qualificationCriteria` | `ath:qualificationCriteria` | Requirements for a competitor to get to the next round in a multi round competition (e.g., a preliminary round of qualification in track events may select a number of athletes by their performance and others by heat ranking). | [Qualification Criteria](#qualification-criteria) |
+| `openCompetitionRegistration` | `schema:potentialAction` | Potential action of athletes' sign up to take part in the competition. | [Competition Registration](#competition-registration) |
 
 
 Competitions may be part of [Competition Series](#competition-series), this is, competitions that have events periodically (e.g., [2016 Summer Olympic Games in Rio](https://www.olympic.org/rio-2016/athletics) as part of the Olympic Games held every four years);
