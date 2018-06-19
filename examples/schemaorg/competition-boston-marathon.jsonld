@@ -1,0 +1,32 @@
+{
+    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c.github.io/opentrack-cg/examples/schemaorg/competition-boston-marathon.jsonld",
+    "@type": "SportsCompetitionEvent",
+    "name": "Boston Marathon 2018",
+    "description": "Annual BAA Boston Marathon",
+    "organizer": "Boston Athletics Association",
+    "sponsor": "Adidas",
+    "url": "http://www.baa.org/races/boston-marathon.aspx",
+    "image": "http://w3c.github.io/opentrack-cg/examples/schemaorg/images/boston_marathon.jpg",
+    "location": {
+        "@type": "SportsActivityLocation",
+        "name": "Boston",
+        "map": "http://www.baa.org/races/boston-marathon/event-information/~/media/Images/BAA/Races/Maps/Boston%20Marathon/2018/2018_bm_lrg.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "5 E Main Street",
+            "addressLocality": "Hopkinton",
+            "addressRegion": "MA",
+            "postalCode": "MA 02116",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "42.222001",
+              "longitude": "-71.535175"
+            },
+            "addressCountry": "US"
+        }
+    },
+    "startDate": "2018-04-13",
+    "endDate": "2018-04-13",
+    "status": "EventScheduled"
+}
