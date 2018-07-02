@@ -442,9 +442,9 @@ All the types and properties included in the diagram exists in Schema.org. The <
     <dd>Person who takes part in Sports events as individual competitor. Athletes are defined by gender, age, nationality, and other personal information.</dd>
     
     <dt><a href="#sports-team">Sports Team</a></dt>
-    <dd>A group of people who takes part in a competition as a whole, competing against other groups of people. Both athletes and teams can be affiliated to [Organizations](#organizations) such as clubs, schools, university, and/or federations.
+    <dd>A group of people who takes part in a competition as a whole, competing against other groups of people. Both athletes and teams can be affiliated to [Organizations](#organization) such as clubs, schools, university, and/or federations.
 
-    <dt><a href="#governing-body">Sports Governing Body</a></dt>
+    <dt><a href="#sports-governing-body">Sports Governing Body</a></dt>
     <dd>Sports Governing Bodies in charge of governing and rule Athletics in specific territories. Athletics Federations are Sports Governing Bodies that may be attached to other higher-level federations. Athletes, Teams, Clubs and other Organizations may be attached to Governing Bodies.</dd>
 </dl>
   
@@ -485,10 +485,10 @@ An <dfn>Athlete</dfn> is a **[Person](#person)** who participates in Sports even
 | `deathDate` | `schema:deathDate` | Date of death. | [Date](#date) |
 | `birthPlace` | `schema:birthPlace` | Locality and country of birth (e.g. "Tallinn, Estonia") | [Place](#place) |
 | `coach` | `schema:coach` | Athlete's main coach. | [Person](#person) |
-| `sponsor` | `schema:sponsor` | Athlete's sponsor. | [Person](#person) or [Organization](#organizations) |
+| `sponsor` | `schema:sponsor` | Athlete's sponsor. | [Person](#person) or [Organization](#organization) |
 | `affiliation` | `schema:affiliation` | Organization ([Sports Club](#sports-club), [Sports Governing Body](#sports-governing-body), school, university, etc.) which an athlete is affiliated to. | [Organization](#organization) |
 | `memberOf` | `schema:memberOf` | Team which an athlete is part of (for instance, a National Team). | [Sports Team](#sports-team) |
-| `performance` | `ath:sportsPerformance` | Athlete's records and best performances. | [Performance](#performance) |
+| `bestSportsPerformance` | `ath:bestSportsPerformance` | Athlete's records and best performances. | SportsPerformance |
 | `captainOf` | `ath:captainOf` | Team which an athlete is captain of. | [Sports Team](#sports-team) |
 
 
@@ -567,7 +567,7 @@ A <dfn>Sports Team</dfn> is a group of [Athletes](#athlete) who play a particula
 | `url` | `schema:url` | Webpage URL about a team. | URL |
 | `memberOf` | `schema:memberOf` | Organization (federation, club, school, etc.) which a team is attached to. | [Organization](#organization) |
 | `nationality` | `schema:location` | Teams's location represented by its country. | [Country](#country) |
-| `sponsor` | `schema:sponsor` | Sponsor of a team. | [Person](#persons) or [Organization](#organization) |
+| `sponsor` | `schema:sponsor` | Sponsor of a team. | [Person](#person) or [Organization](#organization) |
 | `coach` | `schema:coach` | Person who acts as coach for a team. | [Person](#person) |
 | `sportsPerformance` | `ath:sportsPerformance` | Record and/or best performance of a team (e.g., relay competition best). | [Performance](#performance) |
 | `captain` | `ath:captain` | Athlete, leader of a team. | [Athlete](#athlete) |
@@ -643,7 +643,7 @@ An <dfn>Organization</dfn> is a basic entity to represent a organized group of p
 
 #### Sports Club
 
-A <dfn>Sports Club</dfn>, **sport club** or **athletics club**, is an [Organization](#organizations) for [Athletes](#athlete) formed for the purpose of playing sports. Clubs may have different [Teams](#teams) created for specific competitions, such as leagues, relay races, etc.
+A <dfn>Sports Club</dfn>, **sport club** or **athletics club**, is an [Organization](#organization) for [Athletes](#athlete) formed for the purpose of playing sports. Clubs may have different [Teams](#teams) created for specific competitions, such as leagues, relay races, etc.
 
 * Class: `Club` (`schema:SportsClub`)
 * subClassOf: `schema:Organization`
@@ -663,7 +663,7 @@ A <dfn>Sports Club</dfn>, **sport club** or **athletics club**, is an [Organizat
 | `dissolutionDate` | `schema:dissolutionDate` | Date when a team was dissolved. | [Date](#date) |
 | `foundingDate` | `schema:foundingDate` | Date when a team was established. | [Date](#date) |
 | `organization` | `schema:memberOf` | Organization which a club is attached to. | [Organization](#organization) |
-| `sponsor` | `schema:sponsor` | Sponsor of a club. | [Person](#persons) or [Organization](#organization) |
+| `sponsor` | `schema:sponsor` | Sponsor of a club. | [Person](#person) or [Organization](#organization) |
 | `athlete` | `schema:athlete` | Athlete who is affiliated to a club. | [Athlete](#athlete) |
 | `team` | `schema:member` | [Sports Team](#sports-team) attached to a club. | [Sports Team](#sports-team) |
 
@@ -754,11 +754,11 @@ A <dfn>Sports Governing Body</dfn> is a special type of organization in charge o
 }
 </pre>
 
-### Category (Competitive Audience)
+### Category
 
 <dfn>Category</dfn> is a division that marks the competition of athletes and teams in sports events. A category describe the potential **audience** of a sports event. Categories may include restrictions of gender, age range and other specific rules depending of the sports discipline.
 
-Examples of categories in Athletics are: *M35* (Men aged 35-39), *U23* (Under 23) Men, or *ad hoc* categories for non-official competitions such as *teachers* and *parents* in school sports. There is a predefined list of [standard categories](#age-and-sex-categories) recognized by international federations.
+Examples of categories in Athletics are: *M35* (Men aged 35-39), *U23* (Under 23) Men, or *ad hoc* categories for non-official competitions such as *teachers* and *parents* in school sports. There is a predefined list of [standard categories](#category-type) recognized by international federations.
 
 See a common predefined [list of the main categories](#category-type) recognized by international Sports Governing Bodies.
 
@@ -826,7 +826,7 @@ Example of competition with open registration:
     
 ### Competition
 
-A <dnf>Competition</dnf>, Athletics Competition or Sports Competition is an event in which [Athletes](#athlete) or [Teams](#team) take part in order to find out who is best at a particular sports activity.
+A <dnf>Competition</dnf>, Athletics Competition or Sports Competition is an event in which [Athletes](#athlete) or [Teams](#sports-team) take part in order to find out who is best at a particular sports activity.
 
 Athletics [Competitions](#competition) may be of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fund-raising road races or school races are also considered as [Competitions](#competition).
 
@@ -848,14 +848,13 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `startDate` | `schema:startDate` | Date and time when a competition starts. | [Date](#date) or [DateTime](#datetime) |
 | `endDate` | `schema:endDate` | Date and time when a competition ends. | [Date](#date) or [DateTime](#datetime) |
 | `eventStatus` | `schema:eventStatus` | Status of a competition according to a enumeration of potential values (i.e., scheduled, completed, etc.) | [Event Status Type](#competition-status) |
-| `organizer` | `schema:organizer` | Person(s) or organization(s) that organizes a competition. | [Person](#persons) or [Organization](#organizations) |
+| `organizer` | `schema:organizer` | Person(s) or organization(s) that organizes a competition. | [Person](#person) or [Organization](#organizations) |
 | `contributor` | `schema:contributor` | Person(s) or organization(s) that collaborates in the organization of a competition. | [Person](#person) or [Organization](#organization) |
 | `starter` | `schema:competitor` | Athletes(s) or teams(s) taking part in the competition at the beginning of the event to compete in the event. | [Person](#person) or [Sports Team](#sports-team) |
-| `participation` | `ath:competitionAction` | Action of Athletes(s) or teams(s) taking part of the competition. | [Competitor](#competitor) |
 | `sponsor` | `schema:sponsor` | Person(s) or organization(s) that sponsors a competition. | [Person](#person) or [Organization](#organization) |
 | `attendee` | `schema:attendee` | Person(s) who attends a competition. | [Person](#person) |
 | `sportsDiscipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [SportsDiscipline](#sports-discipline) |
-| `competitionCategory` | `ath:competitionCategory` | The specific category for a competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Competition Category](#competition-category) |
+| `competitionCategory` | `ath:competitionCategory` | The specific category for a competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Competition Category](#category) |
 | `entryRequirements` | `ath:entryRequirements` | Requirements to take part in a competition.  | Text |
 | `results` | `ath:resultDecision` | List with the results of the participation in a competition. There may be different results during the competition (start list, intermediate results, partial results, final results, etc.) .  | [Results](#results) |
 | `competitionRegistration` | `schema:potentialAction` | Potential action of athletes' sign up to take part in the competition. | [Competition Registration](#competition-registration) |
@@ -875,7 +874,7 @@ Competitions may be part of [Competition Series](#competition-series), this is, 
 | `name` | `schema:name` | Descriptive name of a recurring competition. | Text |
 | `alternateName` | `schema:alternateName` | An alias to name a recurring competition. | Text |
 | `description` | `schema:description` | About a recurring competition. | Text |
-| `subEvent` | `schema:subEvent` | A competition that happens as a recurring event within a series of competitions (e.g., *London 2012*  *Olympic Games*) | [Competition](#competitions) |
+| `subEvent` | `schema:subEvent` | A competition that happens as a recurring event within a series of competitions (e.g., *London 2012*  *Olympic Games*) | [Competition](#competition) |
 
 <pre class="example">
 {
@@ -946,7 +945,7 @@ A <dfn>Place</dfn> is a location, venue or territories where events are held or 
 }
 </pre>
 
-### Postal Addresses
+### Postal Address
 
 <dfn>Postal Address</dfn> describes a postal address relative to a place.
 
@@ -1032,7 +1031,7 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
 | `distance` | `schema:distance` | Distance of the race. | [Distance](#distance) |
-| `raceCompetitionType` | `ath:raceCompetitionType` | Type of competition (time trial, relays, etc.). | [Race Competition Type](#race-competition-type) |
+| `raceCompetitionType` | `ath:raceCompetitionType` | Type of competition (time trial, relays, etc.). | [Competition Type](#competition-type) |
 | `maxDuration` | `ath:maxDuration` | Maximum duration of the race in case of being a time-fixed competition (i.e., one hour, one day, etc.). | [Time](#time) |
 
 
@@ -1143,7 +1142,7 @@ A <dfn>Distance Race</dfn> is a Middle-distance or Long-distance running event, 
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
-| `weight` | `schema:weight` | Weight of the throwing object. | [Weight](#weight) |
+| `weight` | `schema:weight` | Weight of the throwing object. | [Mass](#mass) |
 
 ##### Shot Put
 
@@ -1365,7 +1364,7 @@ Mass must be represented by a quantified value, expressing the magnitude and kin
 Other unit codes may be used if needed. Check and select the correspondent code from the [UN/CEFACT Common Codes](../references/rec20_Rev9e_2014.xls).
 
 
-### Gender
+### Gender Type
 
 Enumeration of genders with two values:
 
