@@ -488,7 +488,7 @@ An <dfn>Athlete</dfn> is a **[Person](#person)** who participates in Sports even
 | `sponsor` | `schema:sponsor` | Athlete's sponsor. | [Person](#person) or [Organization](#organization) |
 | `affiliation` | `schema:affiliation` | Organization ([Sports Club](#sports-club), [Sports Governing Body](#sports-governing-body), school, university, etc.) which an athlete is affiliated to. | [Organization](#organization) |
 | `memberOf` | `schema:memberOf` | Team which an athlete is part of (for instance, a National Team). | [Sports Team](#sports-team) |
-| `bestSportsPerformance` | `ath:bestSportsPerformance` | Athlete's records and best performances. | SportsPerformance |
+| `bestSportsPerformance` | `ath:bestSportsPerformance` | Athlete's records and best performances. | Sports Performance |
 | `captainOf` | `ath:captainOf` | Team which an athlete is captain of. | [Sports Team](#sports-team) |
 
 
@@ -569,7 +569,7 @@ A <dfn>Sports Team</dfn> is a group of [Athletes](#athlete) who play a particula
 | `nationality` | `schema:location` | Teams's location represented by its country. | [Country](#country) |
 | `sponsor` | `schema:sponsor` | Sponsor of a team. | [Person](#person) or [Organization](#organization) |
 | `coach` | `schema:coach` | Person who acts as coach for a team. | [Person](#person) |
-| `sportsPerformance` | `ath:sportsPerformance` | Record and/or best performance of a team (e.g., relay competition best). | [Performance](#performance) |
+| `sportsPerformance` | `ath:sportsPerformance` | Record and/or best performance of a team (e.g., relay competition best). | Sports Performance |
 | `captain` | `ath:captain` | Athlete, leader of a team. | [Athlete](#athlete) |
 | `athlete` | `schema:athlete` | Athlete affiliated to a team. | [Athlete](#athlete) |
 
@@ -643,7 +643,7 @@ An <dfn>Organization</dfn> is a basic entity to represent a organized group of p
 
 #### Sports Club
 
-A <dfn>Sports Club</dfn>, **sport club** or **athletics club**, is an [Organization](#organization) for [Athletes](#athlete) formed for the purpose of playing sports. Clubs may have different [Teams](#teams) created for specific competitions, such as leagues, relay races, etc.
+A <dfn>Sports Club</dfn>, **sport club** or **athletics club**, is an [Organization](#organization) for [Athletes](#athlete) formed for the purpose of playing sports. Clubs may have different [Teams](#sports-team) created for specific competitions, such as leagues, relay races, etc.
 
 * Class: `Club` (`schema:SportsClub`)
 * subClassOf: `schema:Organization`
@@ -848,7 +848,7 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `startDate` | `schema:startDate` | Date and time when a competition starts. | [Date](#date) or [DateTime](#datetime) |
 | `endDate` | `schema:endDate` | Date and time when a competition ends. | [Date](#date) or [DateTime](#datetime) |
 | `eventStatus` | `schema:eventStatus` | Status of a competition according to a enumeration of potential values (i.e., scheduled, completed, etc.) | [Event Status Type](#competition-status) |
-| `organizer` | `schema:organizer` | Person(s) or organization(s) that organizes a competition. | [Person](#person) or [Organization](#organizations) |
+| `organizer` | `schema:organizer` | Person(s) or organization(s) that organizes a competition. | [Person](#person) or [Organization](#organization) |
 | `contributor` | `schema:contributor` | Person(s) or organization(s) that collaborates in the organization of a competition. | [Person](#person) or [Organization](#organization) |
 | `starter` | `schema:competitor` | Athletes(s) or teams(s) taking part in the competition at the beginning of the event to compete in the event. | [Person](#person) or [Sports Team](#sports-team) |
 | `sponsor` | `schema:sponsor` | Person(s) or organization(s) that sponsors a competition. | [Person](#person) or [Organization](#organization) |
@@ -856,7 +856,7 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `sportsDiscipline` | `ath:sportsDiscipline` | Type of an Athletics competition according to specific rules set by governing bodies (e.g., `Outdoor Sprint Relays`). | [SportsDiscipline](#sports-discipline) |
 | `competitionCategory` | `ath:competitionCategory` | The specific category for a competition (e.g., *M35*, *U18 Male*, *local competitors*, etc). | [Competition Category](#category) |
 | `entryRequirements` | `ath:entryRequirements` | Requirements to take part in a competition.  | Text |
-| `results` | `ath:resultDecision` | List with the results of the participation in a competition. There may be different results during the competition (start list, intermediate results, partial results, final results, etc.) .  | [Results](#results) |
+| `results` | `ath:resultDecision` | List with the results of the participation in a competition. There may be different results during the competition (start list, intermediate results, partial results, final results, etc.) .  | Results |
 | `competitionRegistration` | `schema:potentialAction` | Potential action of athletes' sign up to take part in the competition. | [Competition Registration](#competition-registration) |
 
 
