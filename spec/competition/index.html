@@ -828,10 +828,8 @@ A <dnf>Competition</dnf>, Athletics Competition or Sports Competition is an even
 
 Athletics [Competitions](#competition) may be of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fund-raising road races or school races are also considered as [Competitions](#competition).
 
-<ul>
-    <li>class: `Competition` (`ath:CompetitionEvent`)</li>
-    <li>subClassOf: `schema:SportsEvent`</li>
-</ul>
+* class: `Competition` (`ath:CompetitionEvent`)
+* subClassOf: `schema:SportsEvent`
 
 
 | Key | Property | Description | Value Type |
@@ -985,12 +983,7 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
 
 * class: `Discipline` (`ath:AthleticsDiscipline`)
 * subClassOf: `ath:SportsDiscipline`
-* superClasses: 
-    * `ath:RaceDiscipline`
-    * `ath:ThrowsDiscipline`
-    * `ath:HorizontalJumpsDiscipline`
-    * `ath:VerticalJumpsDiscipline`
-    * `ath:CombinedDiscipline`
+* superClasses: `ath:RaceDiscipline`, `ath:ThrowsDiscipline`, `ath:HorizontalJumpsDiscipline`, `ath:VerticalJumpsDiscipline`, `ath:CombinedDiscipline`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -1001,24 +994,9 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
 
 <dfn>Race</dfn> is a type of competition to see who is the fastest, including running or race-waking.
 
-<ul>
-    <li>class: `Race` (`ath:RaceDiscipline`)</li>
-    <li>subClassOf: `ath:AthleticsDiscipline`</li>
-    <li>superClasses: 
-        <ul>
-            <li>`ath:DistanceDiscipline`</li>
-            <li>`ath:SteeplechaseDiscipline`</li>
-            <li>`ath:HurdlesDiscipline`</li>
-            <li>`ath:SprintsDiscipline`</li>
-            <li>`ath:RaceWalkingDiscipline`</li>
-            <li>`ath:CrossCountryDiscipline`</li>
-            <li>`ath:RoadRunningDiscipline`</li>
-            <li>`ath:MountainRunningDiscipline`</li>
-            <li>`ath:TrackRelaysDiscipline`</li>
-            <li>`ath:UltraRunningDiscipline`</li>
-        </ul>
-    </li>
-</ul>
+* class: `Race` (`ath:RaceDiscipline`)
+* subClassOf: `ath:AthleticsDiscipline`
+* superClasses: `ath:DistanceDiscipline`, `ath:SteeplechaseDiscipline`, `ath:HurdlesDiscipline`, `ath:SprintsDiscipline`, `ath:RaceWalkingDiscipline`, `ath:CrossCountryDiscipline`, `ath:RoadRunningDiscipline`, `ath:MountainRunningDiscipline`, `ath:TrackRelaysDiscipline`, `ath:UltraRunningDiscipline`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -1118,19 +1096,10 @@ A <dfn>Distance Race</dfn> is a Middle-distance or Long-distance running event, 
 
 <dfn>Throws</dfn> are types of field events in which athletes throws heavy objects in an attempt to mark a farther distance than their competitors.
 
-<ul>
-    <li>class: `ThrowsDiscipline` (`ath:ThrowsDiscipline`)</li>
-    <li>subClassOf: `ath:AthleticsDiscipline`</li>
-    <li>superClasses:
-        <ul>
-            <li>`ath:ShotPutDiscipline`</li>
-            <li>`ath:DiscusThrowDiscipline`</li>
-            <li>`ath:HammerThrowDiscipline`</li>
-            <li>`ath:JavelinThrowDiscipline`</li>
-            <li>`ath:WeightThrowDiscipline`</li>
-        </ul>
-    </li>
-</ul>
+* class: `ThrowsDiscipline` (`ath:ThrowsDiscipline`)
+* subClassOf: `ath:AthleticsDiscipline`
+* superClasses: `ath:ShotPutDiscipline`, `ath:DiscusThrowDiscipline`, `ath:HammerThrowDiscipline`, `ath:JavelinThrowDiscipline`, `ath:WeightThrowDiscipline`
+
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -1187,16 +1156,10 @@ A <dfn>Distance Race</dfn> is a Middle-distance or Long-distance running event, 
 
 <dfn>Horizontal Jumps</dfn> are track and field events in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point. Horizontal jumps include: long jump and triple jump.
 
-<ul>
-    <li>class: `HorizontalJumpsDiscipline` (`ath:HorizontalJumpsDiscipline`)</li>
-    <li>subClassOf: `ath:AthleticsDiscipline`</li>
-    <li>superClasses:
-        <ul>
-            <li>`ath:LongJumpDiscipline`</li>
-            <li>`ath:TripleJumpDiscipline</li>
-        </ul>
-    </li>
-</ul>
+* class: `HorizontalJumpsDiscipline` (`ath:HorizontalJumpsDiscipline`)
+* subClassOf: `ath:AthleticsDiscipline`
+* superClasses: `ath:LongJumpDiscipline`, `ath:TripleJumpDiscipline
+
 
 ##### Long Jump
 
@@ -1216,16 +1179,9 @@ A <dfn>Distance Race</dfn> is a Middle-distance or Long-distance running event, 
 
 <dfn>Vertical Jumps</dfn> are track and field events in which competitors must jump or vault over a horizontal bar placed at measured heights without dislodging it.
 
-<ul>
-    <li>class: `VerticalJumpsDiscipline` (`ath:VerticalJumpsDiscipline`)</li>
-    <li>subClassOf: `ath:AthleticsDiscipline`</li>
-    <li>superClasses:
-        <ul>
-            <li>`ath:HighJumpDiscipline`</li>
-            <li>`ath:PoleVaultDiscipline`</li>
-        </ul>
-    </li>
-</ul>
+* class: `VerticalJumpsDiscipline` (`ath:VerticalJumpsDiscipline`)
+* subClassOf: `ath:AthleticsDiscipline`
+* superClasses: `ath:HighJumpDiscipline`, `ath:PoleVaultDiscipline`
 
 ##### High Jump
 
@@ -1245,10 +1201,8 @@ A <dfn>Distance Race</dfn> is a Middle-distance or Long-distance running event, 
 
 <dfn>Combined Discipline</dfn> is a competition where athletes participate in a number of track and field events, earning points for their performance in each event, which adds to a total points score.
 
-<ul>
-    <li>class: `CombinedDiscipline` (`ath:CombinedDiscipline`)</li>
-    <li>subClassOf: `ath:AthleticsDiscipline`</li>
-</ul>
+* class: `CombinedDiscipline` (`ath:CombinedDiscipline`)
+* subClassOf: `ath:AthleticsDiscipline`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
