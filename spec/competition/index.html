@@ -106,7 +106,7 @@
 
 <p>This OpenTrack vocabulary proposes an extension of Schema.org [[SCHEMA-ORG]], producing a lightweight schema to identify, expose and process Athletics data on the Web.</p>
 
-<p>This Schema.org extension takes into account its current version, and continuing with the work done previously by the specific <a href="https://www.w3.org/wiki/WebSchemas/Sports">Sports task force</a>.</p>
+<p>This Schema.org extension takes into account its current version, and continuing with the work done previously by the specific <a href="https://www.w3.org/wiki/WebSchemas/Sports">Sports Schema.org task force</a>.</p>
 
     </section>
     <section id='sotd'>
@@ -591,7 +591,7 @@ Description of a national team:
         { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/006Athlete6.jsonld" },
         { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/006Athlete7.jsonld" }
     ],
-    "captain" :  { "@id" : http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld" }
+    "captain" :  { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld" }
 }
 </pre>
 
@@ -672,7 +672,6 @@ A <dfn>Sports Club</dfn>, **sport club** or **athletics club**, is an [Organizat
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
     "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
     "@type" : "Club",
-
     "name": "Newham &amp; Essex Beagles",
     "alternateName": "BeaglesAC",
     "url": "http://www.newhamandessexbeagles.co.uk/",
@@ -880,7 +879,6 @@ Competitions may be part of [Competition Series](#competition-series), this is, 
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
     "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/EuropeanChampionships.jsonld",
     "@type": "CompetitionSeries",
- 
     "name": "European Athletics Championships",
     "description": "The European Athletics Championships is a recurring event organized by European Athletics, that is held every two years. This championship gathers together the best athletes and national teams in Europe.",
     "organizer": { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld" },
@@ -984,6 +982,7 @@ Disciplines are described by specific features (i.e., throws disciplines, such a
 </figure>
 
 This hierarchical taxonomy enables the definition of any type of Athletic event.
+
 
 <ul>
     <li>class: `Discipline` (`ath:AthleticsDiscipline`)</li>
