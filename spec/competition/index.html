@@ -983,20 +983,14 @@ Disciplines are described by specific features (i.e., throws disciplines, such a
 
 This hierarchical taxonomy enables the definition of any type of Athletic event.
 
-
-<ul>
-    <li>class: `Discipline` (`ath:AthleticsDiscipline`)</li>
-    <li>subClassOf: `ath:SportsDiscipline`</li>
-    <li>superClasses: 
-        <ul>
-            <li>`ath:RaceDiscipline`</li>
-            <li>`ath:ThrowsDiscipline`</li>
-            <li>`ath:HorizontalJumpsDiscipline`</li>
-            <li>`ath:VerticalJumpsDiscipline`</li>
-            <li>`ath:CombinedDiscipline`</li>
-        </ul>
-    </li>
-</ul>
+* class: `Discipline` (`ath:AthleticsDiscipline`)
+* subClassOf: `ath:SportsDiscipline`
+* superClasses: 
+  * `ath:RaceDiscipline`
+  * `ath:ThrowsDiscipline`
+  * `ath:HorizontalJumpsDiscipline`
+  * `ath:VerticalJumpsDiscipline`
+  * `ath:CombinedDiscipline`
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -1010,6 +1004,20 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
 <ul>
     <li>class: `Race` (`ath:RaceDiscipline`)</li>
     <li>subClassOf: `ath:AthleticsDiscipline`</li>
+    <li>superClasses: 
+        <ul>
+            <li>`ath:DistanceDiscipline`</li>
+            <li>`ath:SteeplechaseDiscipline`</li>
+            <li>`ath:HurdlesDiscipline`</li>
+            <li>`ath:SprintsDiscipline`</li>
+            <li>`ath:RaceWalkingDiscipline`</li>
+            <li>`ath:CrossCountryDiscipline`</li>
+            <li>`ath:RoadRunningDiscipline`</li>
+            <li>`ath:MountainRunningDiscipline`</li>
+            <li>`ath:TrackRelaysDiscipline`</li>
+            <li>`ath:UltraRunningDiscipline`</li>
+        </ul>
+    </li>
 </ul>
 
 | Key | Property | Description | Value Type |
