@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <title>OpenTrack Data Model</title>
+    <title>Open Athletics Data Model</title>
     <script
      src='https://www.w3.org/Tools/respec/respec-w3c-common'
      class='remove'></script>
@@ -101,7 +101,7 @@
 
 <p>This specification, developed by [W3C OpenTrack Community Group](http://www.w3.org/community/opentrack/), introduces a data model to support the publication of Athletics data on the Web. This document defines the main concepts and relations of Athletics competitions, including competitors and their results, enabling a common representation of information in this sector.</p>
 
-<p>The OpenTrack model is mapped to existing standards, including BBC Sports Ontology [[SPORT-ONT]], Schema.org [[SCHEMA-ORG]], [[QUDT-SPACETIME]] types and properties. The resulting OpenTrack Vocabulary is a lightweight schema aiming at identifying, defining and exposing data on the Web.</p>
+<p>The Open Athletics model is mapped to existing standards, including BBC Sports Ontology [[SPORT-ONT]], Schema.org [[SCHEMA-ORG]], [[QUDT-SPACETIME]] types and properties. The resulting Open Athletics Vocabulary is a lightweight schema aiming at identifying, defining and exposing data on the Web.</p>
 
     </section>
     <section id='sotd'>
@@ -112,7 +112,7 @@
     <section class="informative">
 ## Introduction
 
-This section describes the conceptual model for OpenTrack. As described in [the charter](https://w3c.github.io/opentrack-cg/charter.html), this model describes data related to Athletics competitions including: Track and Field; Road Running; Race Walking; Cross-Country Running; Mountain Running; and trail Running disciplines.
+This section describes the conceptual model for Open Athletics. As described in [the charter](https://w3c.github.io/opentrack-cg/charter.html), this model describes data related to Athletics competitions including: Track and Field; Road Running; Race Walking; Cross-Country Running; Mountain Running; and trail Running disciplines.
 
 This model will be focus on Athletics competitions, having into account: events; athletes and teams; results; performances; management of start lists; results; and facilities.
 
@@ -127,15 +127,15 @@ No section should be considered final, and the absence of any content does not i
 This specification is divided into two main sections:
 
 1. **Introduction** - this introductory part;
-2. **How to** - How to use the model and describe resources using OpenTrack and JSON-LD;
+2. **How to** - How to use the model and describe resources using Open Athletics and JSON-LD;
 3. **Concepts** - describes the key entities and their attributes, including the concrete data model;
 4. **Classification Schemas** - lists of taxonomies and value schemas related to Athletics.
  
 ## Background
 
-OpenTrack descriptions need homogeneous classes, properties and data types to specify values of properties. This work is based [on existing requirements](http://opentrack.run/standards/), and the rules set up by the IAAF [[IAAF-RULES]] and by WMA [[WMA-RULES]].
+Open Athletics descriptions need homogeneous classes, properties and data types to specify values of properties. This work is based [on existing requirements](http://opentrack.run/standards/), and the rules set up by the IAAF [[IAAF-RULES]] and by WMA [[WMA-RULES]].
 
-OpenTrack vocabulary is aligned with other existing schemas and ontologies focused on sports, such as: Sport Ontology [[SPORT-ONT]], IPTC SportsML [[SPORTSML]] and Schema.org [[SCHEMA-ORG]].
+Open Athletics vocabulary is aligned with other existing schemas and ontologies focused on sports, such as: Sport Ontology [[SPORT-ONT]], IPTC SportsML [[SPORTSML]] and Schema.org [[SCHEMA-ORG]].
 
 </section>
 
@@ -184,7 +184,7 @@ The content of the example is in monospace font and may be syntax colored.
 
 <section class="informative">
 
-## How to use OpenTrack with JSON-LD
+## How to use Open Athletics with JSON-LD
 
 With the objective of a wide use of this model, the schema is very flexible and all examples will be expressed in [[JSON-LD]] format. Along with the vocabulary, there is a specific [[JSON-LD]] context that will ease the adoption of the vocabulary, even for those who don not have deep knowledge of the Semantic Web.
 
@@ -391,7 +391,7 @@ All JSON-LD objects should have a `@type` explicitly indicating the class of the
 Classes may be described hierarchically to express differences in the model. For instance, Opentrack defines different types of competitions, with [Competition](#competition) as the core entity that defines a generic competitive sports event. [Competition](#competition) has several subclasses: [Multi Stage Competition](#multi-stage-competition), [Divisional Competition](#divisional-competition), [Multi Round Competition](#multi-round-competition), [Multidiscipline Competition](#multidiscipline-competition) and [Unit Competition](#unit-competition). This means that instances of these subclasses will be also considered a [Competition](#competition).
 
 * In case the author does not know the nature of the competition, by default they should use the most generic class (i.e., [Competition](#competition)).
-* A competition may categorized with more than a type. For instance 2016 Olympic Games is a [MultidisciplineCompetition](#multidisciplinecompetition) (100m, 200m, Throws, basketball, tennis, etc.) and a [DivisionalCompetition](#divisionalcompetition) (divisions are disciplines and categories).
+* A competition may categorized with more than a type. For instance 2016 Olympic Games could be a [MultidisciplineCompetition](#multidisciplinecompetition) (100m, 200m, Throws, basketball, tennis, etc.) and a [DivisionalCompetition](#divisionalcompetition) (divisions are disciplines and categories).
 
 </section>
 
@@ -402,8 +402,8 @@ Classes may be described hierarchically to express differences in the model. For
 The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish Athletics information.
 
 In order to represent properly the model, the work was divided in three parts:
-1. **Competition Calendar**. High-level representation of competitions, seen as sports events for competitors and the public in general. 
-2. **Competitors**, athletes and organizations that take part in the competition; and
+1. **Competition Calendar**: High-level representation of competitions, seen as sports events for competitors and the public in general. 
+2. **Stakeholders**: athletes and organizations that take part in the competition; and
 3. **In-Competition management**. Description of all parts within a competition (structure, heats, results, etc).
 
 ### Competition Calendar
@@ -514,7 +514,6 @@ An <dfn>Athlete</dfn> is a **[Person](#person)** who participates in Athletics e
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
     "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
     "@type" : "Athlete",
- 
     "name" : "Mohamed Muktar Jama Farah",
     "familyName" : "Farah",
     "givenName" : "Mohamed Muktar Jama",
@@ -537,6 +536,7 @@ An <dfn>Athlete</dfn> is a **[Person](#person)** who participates in Athletics e
     "birthPlace" : "Mogadishu, Somalia" ,
     "birthDate" : "1983-04-23",
     "coach" : {
+        "@type" : "Person",
         "name" : "Alberto Salazar"
     },
     "sponsor" : {
@@ -606,7 +606,6 @@ Description of a national team:
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
     "@id" : "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld",
     "@type" : "Team",
- 
     "name" : "Great Britain National Team - Olympic Games 2016",
     "alternateName" : "GBR",
     "nationality" : "countrycode:GBR",
@@ -700,7 +699,6 @@ A <dfn>Sports Club</dfn>, **sport club** or **athletics club**, is an [Organizat
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
     "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
     "@type" : "Club",
-
     "name": "Newham &amp; Essex Beagles",
     "alternateName": "BeaglesAC",
     "url": "http://www.newhamandessexbeagles.co.uk/",
@@ -746,6 +744,7 @@ A <dfn>Sports Governing Body</dfn> is a special type of organization in charge o
     "faxNumber": "(41 21) 313 43 51",
     "telephone": "(41 21) 313 43 50",
     "address": {
+        "@type": "PostalAddress",
         "name": "European Athletic Association",
         "streetAddress": "Avenue Louis-Ruchonnet 16",
         "addressLocality": "Lausanne",
@@ -824,7 +823,7 @@ Example of category description (Senior Women):
 
 <dfn>Competition Registration</dfn> is the action of applying to the competition organizers for taking part in the competition.
   
-* class: `RegisterAction` (`schema:RegisterAction`)
+* class: `CompetitionRegistration` (`schema:RegisterAction`)
 
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
@@ -843,7 +842,7 @@ Example of competition with open registration:
     "@type": "SportsCompetitionEvent",
     "name": "London Half Marathon",
     "competitionRegistration" : { 
-        "@type" : "RegisterAction",
+        "@type" : "CompetitionRegistration",
         "target" : "http://example.com/half-marathon/registration",
         "startTime" : "2012-01-03",
         "endTime" : "2012-02-03"
@@ -858,7 +857,7 @@ A <dnf>Competition</dnf>, Athletics Competition or Sports Competition is an even
 Athletics [Competitions](#competition) may be of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fund-raising road races or school races are also considered as [Competitions](#competition).
 
 <ul>
-    <li>class: `Competition` (`pending:CompetitionEvent`)</li>
+    <li>class: `Competition` (`ath:CompetitionEvent`)</li>
     <li>subClassOf: `schema:SportsEvent`</li>
     <li>superClasses: </li>
     <ul>
@@ -1660,6 +1659,7 @@ A <dfn>Place</dfn> is a location, venue or territories where events are held or 
     },
     "map": "http://example.org/map",
     "address": {
+        "@type": "PostalAddress",
         "streetAddress": "Olympisch Stadion 2",
         "addressLocality": "Amsterdam",
         "postalCode": "1076 DE",
@@ -2109,29 +2109,29 @@ According to IAAF Rule 132.4, there are official standard abbreviations and symb
 
 | Code | Issue/feature |
 | ------------- | ---- |
-| `feature:DNS` | Did Not Start |
-| `feature:DNF` | Did Not Finish |
-| `feature:DQ` | Disqualified |
-| `feature:R` | Retired from competition |
-| `feature:Q` | Qualified by place (track) or standard (field) |
-| `feature:q` | Qualified by performance (time in timed events and rank in field events) |
-| `feature:qR` | Advanced to next round by Referee |
-| `feature:qJ` | Advanced to next round by Jury of Appeal |
-| `feature:>` | Bent knee (Race walking) |
-| `feature:~` | Loss of contact (Race walking) |
-| `feature:yC` | yellow Card |
-| `feature:yRC` | Second yellow Card |
-| `feature:RC` | Red Card |
-| `feature:Fn` | False Start |
-| `feature:o` | Clearance (valid trial in Height Events) |
-| `feature:-` | Pass (passed trial in field events) |
-| `feature:x` | Failure (failed trial in field events) |
-| `feature:NM` | No Mark |
-| `feature:NH` | No Height |
-| `feature:h` | Hand-timing |
-| `feature:a` | Automatic timing with no hundredths of a second measured |
-| `feature:A` | Performance achieved at altitude |
-| `feature:OT` | Oversized Track |
+| `DNS` | Did Not Start |
+| `DNF` | Did Not Finish |
+| `DQ` | Disqualified |
+| `R` | Retired from competition |
+| `Q` | Qualified by place (track) or standard (field) |
+| `q` | Qualified by performance (time in timed events and rank in field events) |
+| `qR` | Advanced to next round by Referee |
+| `qJ` | Advanced to next round by Jury of Appeal |
+| `>` | Bent knee (Race walking) |
+| `~` | Loss of contact (Race walking) |
+| `yC` | yellow Card |
+| `yRC` | Second yellow Card |
+| `RC` | Red Card |
+| `Fn` | False Start |
+| `o` | Clearance (valid trial in Height Events) |
+| `-` | Pass (passed trial in field events) |
+| `x` | Failure (failed trial in field events) |
+| `NM` | No Mark |
+| `NH` | No Height |
+| `h` | Hand-timing |
+| `a` | Automatic timing with no hundredths of a second measured |
+| `A` | Performance achieved at altitude |
+| `OT` | Oversized Track |
 
 
 ### Category Type
@@ -2192,12 +2192,12 @@ Examples: `continent:AFRICA` for *Africa*, `continent:AMERICA` for *America*, `c
 
 Status of a competition.
 
-| Code | Status |
-| ---- | ------ |
-| `schema:EventScheduled` | Competition is scheduled. |
-| `schema:EventPostponed` | Competition will be postponed without being rescheduled yet. |
-| `schema:EventRescheduled` | Competition is rescheduled. |
-| `schema:EventCancelled` | Competition will not take place (`suspended`, `cancelled`, `discarded` in SportsML) |
+| Code | Class | Status |
+| ---- | ----- | ------ |
+| `Scheduled` | `schema:EventScheduled` | Competition is scheduled. |
+| `Postponed` | `schema:EventPostponed` | Competition will be postponed without being rescheduled yet. |
+| `Rescheduled` | `schema:EventRescheduled` | Competition is rescheduled. |
+| `Cancelled` | `schema:EventCancelled` | Competition will not take place (`suspended`, `cancelled`, `discarded` in SportsML) |
 
 
 ### Record or Best Type
