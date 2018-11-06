@@ -298,6 +298,7 @@ xsd:time rdf:type rdfs:Datatype .
                   skos:definition "Type of an Athletics competition according to specific rules set by governing bodies (e.g., Outdoor Sprint Relays)."@en .
 
 
+
 ###  http://purl.org/athletics#stage
 :stage rdf:type owl:ObjectProperty ;
        rdfs:range :CompetitionEvent ;
@@ -452,6 +453,13 @@ schema:weight rdf:type owl:ObjectProperty .
 #################################################################
 #    Data properties
 #################################################################
+
+###  http://purl.org/athletics#referenceDate
+:referenceDate rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:date ;
+               rdfs:isDefinedBy <http://purl.org/athletics#> ;
+               rdfs:label "reference date"@en ;
+               skos:definition " A date of reference in the current year used to calculate the permitted age in a category (i.e., IAAF categories take the 31st December of the current year as reference). Values of this property must be represented in truncated ISO8601 notation, specifying only month and day (e.g., Dec 31: --1231)."@en .
 
 ###  http://purl.org/athletics#attemptNumber
 :attemptNumber rdf:type owl:DatatypeProperty ;

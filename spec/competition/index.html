@@ -770,11 +770,12 @@ See a common predefined [list of the main categories](#category-type) recognized
 | `alternateName` | `schema:alternateName` | Code used to identify a category (i.e., `M35`, `W35`) | Text |
 | `description` | `schema:description` | Description and notes about a category. | Text |
 | `requiredGender` | `schema:requiredGender` | Gender of athletes involved in a category.  | [Gender Type](#gender-type) |
-| `requiredMinAge` | `schema:requiredMinAge` | Athletes' minumum age to be eligible for a category.  | Integer |
+| `requiredMinAge` | `schema:requiredMinAge` | Athletes' minimum age to be eligible for a category.  | Integer |
 | `requiredMaxAge` | `schema:requiredMaxAge` | Athletes' maximum age to be eligible for a category.  | Integer |
 | `recognizingAuthority` | `schema:recognizingAuthority` | Governing body or organization that recognizes and rule a specific category.  | [Organization](#organization) |
 | `geographicArea` | `schema:geographicArea` | The geographic area associated with the category.  | [AdministrativeArea ](http://schema.org/AdministrativeArea) |
 | `healthCondition` | `schema:healthCondition` | Specifying the health condition(s) of the target audience of a competition (e.g., in the case of a medical certificate is required).  | [MedicalCondition](http://schema.org/MedicalCondition) |
+| `referenceDate` | `ath:referenceDate` | A date of reference in the current year used to calculate the permitted age in a category (i.e., IAAF categories take the 31st December of the current year as reference). Values of this property must be represented in [truncated ISO8601 notation](https://tools.ietf.org/html/rfc6350#section-4.3.1), specifying only month and day (e.g., Dec 31: `--1231`).  | [Date](#date) |
 
 
 Example of category description (Senior Women):
