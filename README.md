@@ -4,7 +4,7 @@
 
 Quick links:
 * [Athletics Conceptual Model](https://w3c.github.io/opentrack-cg/spec/model/)
-* [Competition Vocabulary based on Schema.org](https://w3c.github.io/opentrack-cg/spec/competition/)
+* [Competition Data Model and Vocabulary](https://w3c.github.io/opentrack-cg/spec/competition/) based on Schema.org
 * Tools: [Taxonomies and real implementation examples](http://purl.org/athletics/codes)
 * [Community Group](https://www.w3.org/community/opentrack/)
 * [This repository](https://github.com/w3c/opentrack-cg)
