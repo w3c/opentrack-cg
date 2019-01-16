@@ -153,7 +153,7 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://purl.org/athletics#division
 :division rdf:type owl:ObjectProperty ;
-          rdfs:range :CompetitionEvent ;
+          rdfs:range :SportsCompetitionEvent ;
           rdfs:isDefinedBy <http://purl.org/athletics#> ;
           rdfs:label "division"@en ;
           skos:definition "Division of a Multi Division Competition."@en .
@@ -301,7 +301,7 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://purl.org/athletics#stage
 :stage rdf:type owl:ObjectProperty ;
-       rdfs:range :CompetitionEvent ;
+       rdfs:range :SportsCompetitionEvent ;
        rdfs:isDefinedBy <http://purl.org/athletics#> ;
        rdfs:label "stage"@en ;
        skos:definition "Competition stage in a Multi Stage Competition."@en .
@@ -355,7 +355,7 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://purl.org/athletics#unitCompetition
 :unitCompetition rdf:type owl:ObjectProperty ;
-                 rdfs:domain :CompetitionEvent ;
+                 rdfs:domain :SportsCompetitionEvent ;
                  rdfs:range :UnitCompetition ;
                  rdfs:isDefinedBy <http://purl.org/athletics#> ;
                  rdfs:label "unit competition"@en ;
@@ -503,7 +503,7 @@ schema:weight rdf:type owl:ObjectProperty .
 
 ###  http://purl.org/athletics#entryRequirements
 :entryRequirements rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :CompetitionEvent ;
+                   rdfs:domain :SportsCompetitionEvent ;
                    rdfs:range rdfs:Literal ;
                    rdfs:isDefinedBy <http://purl.org/athletics#> ;
                    rdfs:label "entry requirements"@en ;
@@ -637,8 +637,8 @@ dct:modified rdf:type owl:DatatypeProperty .
                skos:definition "Combined Disciplines are competitions in which athletes participate in a number of track and field events, earning points for their performance in each event, which adds to a total points score."@en .
 
 
-###  http://purl.org/athletics#CompetitionEvent
-:CompetitionEvent rdf:type owl:Class ;
+###  http://purl.org/athletics#SportsCompetitionEvent
+:SportsCompetitionEvent rdf:type owl:Class ;
              rdfs:subClassOf schema:SportsEvent ;
              dct:description "A Competition, Athletics Competition or Sports Competition is an event in which Athletes or Teams take part in order to find out who is best at a particular sports activity."@en ;
              rdfs:isDefinedBy <http://purl.org/athletics#> ;
@@ -655,7 +655,7 @@ dct:modified rdf:type owl:DatatypeProperty .
 
 ###  http://purl.org/athletics#CompetitionRound
 :CompetitionRound rdf:type owl:Class ;
-                  rdfs:subClassOf :CompetitionEvent ;
+                  rdfs:subClassOf :SportsCompetitionEvent ;
                   dct:description "A Competition Round is each sub-event of a Multi Round Competition. Rounds in competitions have one of more Unit Competitions (e.g., a heat in a qualifying round, the race in the 200m final round) where competitors are distributed. The number and type of rounds depend on the competition rules for each discipline. For instance, track sprint competitions with many participants may have various heats at preliminary round, several heats at first round, two semifinals, and a final. Competition rounds aims at qualifying athletes to next round until the final. There are competitions that only have one final round such as Marathon or Cross Country races. Examples of Competition Rounds: 110m Hurdles Men Preliminary Round Heat 1, 10,000m Men Final, and 110 Hurdles Man Semifinal 1."@en ;
                   rdfs:isDefinedBy <http://purl.org/athletics#> ;
                   rdfs:label "Competition Round"@en .
@@ -952,7 +952,7 @@ dct:modified rdf:type owl:DatatypeProperty .
 
 ###  http://purl.org/athletics#UnitCompetition
 :UnitCompetition rdf:type owl:Class ;
-                 rdfs:subClassOf :CompetitionEvent ;
+                 rdfs:subClassOf :SportsCompetitionEvent ;
                  dct:description "A Unit Competition is a unitary competition defined by specific sports rules (for instance, the Heat 1 race at the semifinals of 100m event in the Olympic Games). Competition Rounds have one or more Unit Competitions."@en ;
                  rdfs:isDefinedBy <http://purl.org/athletics#> ;
                  rdfs:label "Unit Competition"@en .

@@ -29,7 +29,7 @@
         "Federation": "ath:SportsGoverningBody",
         "Category": "ath:CompetitiveAudience",
         "Competitor": "ath:CompetitionAction",
-        "Competition": "ath:CompetitionEvent",
+        "Competition": "ath:SportsCompetitionEvent",
         "CompetitionSeries": "schema:EventSeries",
         "SportsDiscipline": "ath:SportsDiscipline",
         "QualificationCriteria": "ath:CompetitionQualificationCriteria",
