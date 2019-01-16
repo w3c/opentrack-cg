@@ -394,7 +394,7 @@ All JSON-LD objects should have a `@type` explicitly indicating the class of the
 Classes may be described hierarchically to express differences in the model. For instance, Opentrack defines different types of competitions, with [Competition](#competition) as the core entity that defines a generic competitive sports event. [Competition](#competition) has several subclasses: *Multi Stage Competition*, *Divisional Competition*, *Multi Round Competition*, *Multidiscipline Competition* and [Unit Competition](#unit-competition). This means that instances of these subclasses will be also considered a [Competition](#competition).
 
 * In case the author does not know the nature of the competition, by default they should use the most generic class (i.e., [Competition](#competition)).
-* A competition may categorized with more than a type. For instance 2016 Olympic Games could be a [MultidisciplineCompetition](#multidisciplinecompetition) (100m, 200m, Throws, basketball, tennis, etc.) and a [DivisionalCompetition](#divisionalcompetition) (divisions are disciplines and categories).
+* A competition may categorized with more than a type. For instance 2016 Olympic Games could be a *Multidiscipline Competition* (100m, 200m, Throws, basketball, tennis, etc.) and a *Divisional Competition* (divisions are disciplines and categories).
 
 </section>
 
@@ -455,7 +455,7 @@ In order to represent properly the model, the work was divided in three parts:
 
 <dl>
     <dt><a href="#competition">Competition</a></dt>
-    <dd>Athletics competitions may divided in several (sub)events such as in <a href="#https://en.wikipedia.org/wiki/Athletics_at_the_Summer_Olympics">Summer Olympic Games</a> that include 24 independent event disciplines for men and 23 for women); they may include several stages like the Diamond League); also competitions may be composed of several disciplines.</dd>
+    <dd>Athletics competitions may divided in several (sub)events such as in Summer Olympic Games that include 24 independent event disciplines for men and 23 for women); they may include several stages like the Diamond League); also competitions may be composed of several disciplines.</dd>
 
     <dt><a href="#competitor">Competitor</a></dt>
     <dd>Competitor is the action of taking part in a competition. Competitor is either an athletes or a team that take part in an Athletics event, identified by specific information such as bib number, and best performance for the specific discipline of the event. This entry information is relative to the competition and relevant for <a href="#results">Results</a>.</dd>
@@ -692,7 +692,7 @@ A <dfn>Sports Club</dfn>, **sport club** or **athletics club**, is an [Organizat
 | `dissolutionDate` | `schema:dissolutionDate` | Date when a team was dissolved. | [Date](#date) |
 | `foundingDate` | `schema:foundingDate` | Date when a team was established. | [Date](#date) |
 | `organization` | `schema:memberOf` | Organization which a club is attached to. | [Organization](#organization) |
-| `sponsor` | `schema:sponsor` | Sponsor of a club. | [Person](#persons) or [Organization](#organization) |
+| `sponsor` | `schema:sponsor` | Sponsor of a club. | [Person](#person) or [Organization](#organization) |
 | `athlete` | `schema:athlete` | Athlete who is affiliated to a club. | [Athlete](#athlete) |
 | `team` | `schema:member` | [Sports Team](#sports-team) attached to a club. | [Sports Team](#sports-team) |
 
@@ -881,7 +881,7 @@ Athletics [Competitions](#competition) may be of different nature, depending on 
 | `startDate` | `schema:startDate` | Date and time when a competition starts. | [Date](#date) or [DateTime](#datetime) |
 | `endDate` | `schema:endDate` | Date and time when a competition ends. | [Date](#date) or [DateTime](#datetime) |
 | `eventStatus` | `schema:eventStatus` | Status of a competition according to a enumeration of potential values (i.e., scheduled, completed, etc.) | [Event Status Type](#competition-status) |
-| `organizer` | `schema:organizer` | Person(s) or organization(s) that organizes a competition. | [Person](#persons) or [Organization](#organization) |
+| `organizer` | `schema:organizer` | Person(s) or organization(s) that organizes a competition. | [Person](#person) or [Organization](#organization) |
 | `contributor` | `schema:contributor` | Person(s) or organization(s) that collaborates in the organization of a competition. | [Person](#person) or [Organization](#organization) |
 | `starter` | `schema:competitor` | Athletes(s) or teams(s) taking part in the competition at the beginning of the event to compete in the event. | [Person](#person) or [Sports Team](#sports-team) |
 | `participation` | `ath:competitionAction` | Action of Athletes(s) or teams(s) taking part of the competition. | [Competitor](#competitor) |
@@ -1343,7 +1343,7 @@ A <dfn>Competitor</dfn> represents the participation of competitors (teams or at
 |:--- |:-------- |:----------- |:---------- |
 | `identifier` | `schema:identifier` | Unique character string to identify an entry in the competition. | Text |
 | `agent` | `schema:agent` | Athlete or team competing in an event. | [Athlete](#athlete) or [Sports Team](#sports-team) |
-| `competitorStatus` | `schema:actionStatus` | Status of the competition action of competitor (i.e., competition under protest, disqualified, etc.). | [Protest Status](#protest-status-type) |
+| `competitorStatus` | `schema:actionStatus` | Status of the competition action of competitor (i.e., competition under protest, disqualified, etc.). | [Protest Status](#protest-status) |
 | `bibIdentifier` | `ath:bibIdentifier` | Text or number printed on the bib, identifying a competitor during the competition. | Text |
 | `transponderIdentifier` | `ath:transponderIdentifier` | Text or code identifying a competitor by a transponder. | Text |
 | `inCompetition` | `schema:sportsEvent` | Competition in which a competitor takes part. | [Competition](#competition) |
@@ -1377,7 +1377,7 @@ Results may be under different statuses depending on the stage of the competitio
 | `modified` | `dc:modified` | Exact date and time when the results were updated. | [DateTime](#datetime) |
 | `competitor` | `pending:competitor` | Athlete or team participating in the event. | [Competitor](#competitor) |
 | `competitionFeature` | `ath:competitionFeature` |Set of features and notes included by officials in a starting list or results (e.g., 'Qualified without standard in field events', 'Advanced to next round by Referee') | [Competition Feature Type](#competition-feature-type) |
-| `protestStatus` | `ath:protestStatus` | Status of the protest action of the competitor at a stage of the competition. | [Protest Status Type](#protest-status-type) |
+| `protestStatus` | `ath:protestStatus` | Status of the protest action of the competitor at a stage of the competition. | [Protest Status](#protest-status) |
 | `resultStatus` | `ath:resultStatus` | Status of the result in a competition. | [Result Status](#results-status) |
 | `startingOrder` | `ath:startingOrder` | Competitor's order in the start list of a competition stage. | Integer |
 | `trackLane` | `ath:trackLane` | Track lane number assigned to a competitor in case of certain track disciplines. | Text |
@@ -1763,7 +1763,7 @@ This hierarchical taxonomy enables the definition of any type of Athletic event.
 | Key | Property | Description | Value Type |
 |:--- |:-------- |:----------- |:---------- |
 | `distance` | `schema:distance` | Distance of the race. | [Distance](#distance) |
-| `raceCompetitionType` | `ath:raceCompetitionType` | Type of competition (time trial, relays, etc.). | [Race Competition Type](#race-competition-type) |
+| `raceCompetitionType` | `ath:raceCompetitionType` | Type of competition (time trial, relays, etc.). | [Race Competition Type](#competition-type) |
 | `maxDuration` | `ath:maxDuration` | Maximum duration of the race in case of being a time-fixed competition (i.e., one hour, one day, etc.). | [Time](#time) |
 
 
