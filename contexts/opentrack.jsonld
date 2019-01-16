@@ -353,6 +353,9 @@
         "TimeTrial": "ath:timeTrialRace",
         "Indoor": "ath:AthleticsVenueIndoor",
         "Outdoor": "ath:AthleticsVenueOutdoor",
+        "CrossCountry": "ath:AthleticsVenueCrossCountry",
+        "Mountain": "ath:AthleticsVenueMountain",
+        "Road": "ath:AthleticsVenueRoad",
         "Male": "schema:Male",
         "Female": "schema:Female"
     }
