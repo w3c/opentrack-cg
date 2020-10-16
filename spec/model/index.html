@@ -3,7 +3,9 @@
   <head>
     <meta charset='utf-8'>
     <title>Open Athletics Data Model</title>
-    <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+    <script
+     src='https://www.w3.org/Tools/respec/respec-w3c-common'
+     class='remove'></script>
     <script class='remove'>
       var respecConfig = {
         group: "opentrack",
@@ -123,17 +125,16 @@
   <body>
 
     <section>
-        <h2 id="abstract">Abstract</h2>    
-        <p>This specification, developed by [W3C OpenTrack Community Group](http://www.w3.org/community/opentrack/), introduces a data model to support the publication of Athletics data on the Web. This document defines the main concepts and relations of Athletics competitions, including competitors and their results, enabling a common representation of information in this sector.</p>
+<p id="abstract">This specification, developed by [W3C OpenTrack Community Group](http://www.w3.org/community/opentrack/), introduces a data model to support the publication of Athletics data on the Web. This document defines the main concepts and relations of Athletics competitions, including competitors and their results, enabling a common representation of information in this sector.</p>
 
-        <p>The Open Athletics model is mapped to existing standards, including BBC Sports Ontology [[SPORT-ONT]], Schema.org [[SCHEMA-ORG]], [[QUDT-SPACETIME]] types and properties. The resulting Open Athletics Vocabulary is a lightweight schema aiming at identifying, defining and exposing data on the Web.</p>
+<p>The Open Athletics model is mapped to existing standards, including BBC Sports Ontology [[SPORT-ONT]], Schema.org [[SCHEMA-ORG]], [[QUDT-SPACETIME]] types and properties. The resulting Open Athletics Vocabulary is a lightweight schema aiming at identifying, defining and exposing data on the Web.</p>
     </section>
     <section id="sotd">
       <p>
         This model and vocabulary is in process of development.
       </p>
     </section>
-    <section class="informative">
+    <section class="informative" data-format="markdown">
 
 ## Introduction
 
@@ -164,8 +165,7 @@ Open Athletics vocabulary is aligned with other existing schemas and ontologies 
 
 </section>
 
-<section id="conformance">
-
+<section id="conformance" data-format="markdown">
 This specification makes use of the compact IRI Syntax; please refer to the [Compact IRIs](http://www.w3.org/TR/json-ld/#compact-iris) from [[JSON-LD]].
 
 This specification makes use of the following namespaces:
@@ -184,7 +184,7 @@ The domain of this specification is Athletics ([http://dbpedia.org/resource/Spor
 
 </section>
 
-<section>
+<section data-format="markdown">
 ## Typographical Conventions
 
 The following typographic conventions are used in this specification:
@@ -206,7 +206,7 @@ The content of the example is in monospace font and may be syntax colored.
 
 </section>
 
-<section class="informative">
+<section class="informative" data-format="markdown">
 
 ## How to use Open Athletics with JSON-LD
 
@@ -419,7 +419,7 @@ Classes may be described hierarchically to express differences in the model. For
 
 </section>
 
-<section>
+<section data-format="markdown">
 
 ## Overview of the model
 
@@ -493,11 +493,11 @@ In order to represent properly the model, the work was divided in three parts:
 
 </section>
 
-<section>
+<section data-format="markdown">
 
-<h2>Concepts</h2>
+## Concepts
 
-<h3>Athlete</h3>
+### Athlete
 
 An <dfn>Athlete</dfn> is a **[Person](#person)** who participates in Athletics events.
 
