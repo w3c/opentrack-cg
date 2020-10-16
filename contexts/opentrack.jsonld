@@ -20,7 +20,7 @@
         "Organization": "schema:Organization",
         "Person": "schema:Person",
         "Place": "schema:Place",
-        "SportsActivityLocation" : "schema:SportsActivityLocation",
+        "SportsActivityLocation": "schema:SportsActivityLocation",
         "PostalAddress": "schema:PostalAddress",
         "Club": "schema:SportsClub",
         "Team": "schema:SportsTeam",
