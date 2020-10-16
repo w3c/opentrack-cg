@@ -19,9 +19,9 @@
             "addressRegion": "MA",
             "postalCode": "MA 02116",
             "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "42.222001",
-              "longitude": "-71.535175"
+                "@type": "GeoCoordinates",
+                "latitude": "42.222001",
+                "longitude": "-71.535175"
             },
             "addressCountry": "US"
         }
