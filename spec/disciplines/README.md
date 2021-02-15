@@ -2,11 +2,26 @@
 
 List of codes (identifiers) for athletics events.
 
-[TOC]
+- [Athletics Disciplines](#athletics-disciplines)
+  * [Races](#races)
+    + [Sprints](#sprints)
+    + [Hurdles](#hurdles)
+    + [Steeplechase](#steeplechase)
+    + [Half Distance & Long Distance Races](#half-distance---long-distance-races)
+    + [Race Walking](#race-walking)
+    + [Track Relays](#track-relays)
+    + [Road Running](#road-running)
+    + [Cross Country](#cross-country)
+    + [Mountain Running](#mountain-running)
+    + [Ultrarunning](#ultrarunning)
+  * [Throws](#throws)
+  * [Horizontal Jumps](#horizontal-jumps)
+  * [Vertical Jumps](#vertical-jumps)
+  * [Combined Disciplines](#combined-disciplines)
 
 ## Races
 
-## Sprints
+### Sprints
 
 NAME | CODE | Description 
 ---- | ----- | ----------
