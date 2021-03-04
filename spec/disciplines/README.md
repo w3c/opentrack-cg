@@ -1,6 +1,6 @@
 # Athletics Disciplines
 
-List of codes (identifiers) for athletics events.
+List of codes (identifiers) for athletics events. These will be described using the [Sports Discipline vocabulary](../competition/#sports-discipline).
 
 - [Athletics Disciplines](#athletics-disciplines)
   * [Races](#races)
@@ -33,12 +33,15 @@ List of codes (identifiers) for athletics events.
 
 ### Hurdles
 
-| identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
-| ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
-| 60mH | 60m Hurdles (0.60) Indoor | Indoor | 60mH | Individual | MTR | 60 |
-| 100mH | H100m Hurdles (0.84) Women Outdoor | Outdoor | 100m | Individual | MTR | 100 |
-| 110mH | 110m Hurdles (1.067) Men Outdoor | Outdoor | 110mH | Individual | MTR | 110 |
-| 400mH | 400m Hurdles (0.91) Men Outdoor | Outdoor | 400mH | Individual | MTR | 400 |
+| identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value | height>value | height>value |
+| ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- | ------------ | ------------ |
+| 60mH | 60m Hurdles (0.60) Indoor | Indoor | 60mH | Individual | MTR | 60 |  MTR | 1.067 |
+| 100mH | H100m Hurdles (0.84) Women Outdoor | Outdoor | 100m | Individual | MTR | 100 | MTR | 0.84 |
+| 110mH | 110m Hurdles (1.067) Men Outdoor | Outdoor | 110mH | Individual | MTR | 110 | MTR | 1.067 |
+| 400mH | 400m Hurdles (0.91) Men Outdoor | Outdoor | 400mH | Individual | MTR | 400 | MTR | 0.914 |
+| 400mHW | 400m Hurdles (0.76) Women Outdoor | Outdoor | 400mH | Individual | MTR | 400 | MTR | | 0.762 |
+
+Note: Spacing is complex: distance to first hurdle, spacing between intermediate hurdles, distance last hurdle to the end.
 
 
 ### Steeplechase
