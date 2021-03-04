@@ -51,16 +51,17 @@ List of codes (identifiers) for athletics events.
 
 ### Middle Distance & Long Distance Races
 
-| identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
-| ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
+| identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value | maxDuration |
+| ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- | ----------- |
+| 800m | 800m Outdoor | Outdoor | 800m | Individual | MTR | 800 |
+| i800m | 800m Indoor | Indoor | 800m | Individual | MTR | 800 |
 | i1500m | 1500m Indoor | Indoor | 1500m | Individual | MTR | 1500 |
 | 1500m | 1500m Outdoor | Outdoor | 1500m | Individual | MTR | 1500 |
 | i3000m | 3000m Indoor | Indoor | 3000m | Individual | MTR | 3000 |
 | 3000m | 3000m Outdoor | Outdoor | 3000m | Individual | MTR | 3000 |
-| 10000m | 10000m | Outdoor | 10,000m | Individual | MTR | 10000 |
 | 5000m | 5000m Outdoor | Outdoor | 5000m | Individual | MTR | 5000 |
-| i800m | 800m Indoor | Indoor | 800m | Individual | MTR | 800 |
-| 800m | 800m Outdoor | Outdoor | 800m | Individual | MTR | 800 |
+| 10000m | 10000m | Outdoor | 10,000m | Individual | MTR | 10000 |
+| 24h | 24 Hours | Outdoor | 24H | Individual | | | 23:59:59.999
 
 
 ### Race Walking
@@ -112,8 +113,8 @@ List of codes (identifiers) for athletics events.
 | Sub-type | identifier | name | venueType | alternateName | competitionType | weight>unit | weight>value |
 | -------- | ---------- | ---- | --------- | ------------- | --------------- | ----------- | ------------ |
 | Discus Throw | DT | Discus Throw (1 kg) Outdoor | Outdoor | DT | Individual | KGM | 1 |
-| Hammer Throw | HT | Hammer Throw (7.260kg)  |  | HT | Individual | KGM | 7.26 |
-| Javelin Throw | JT | Javelin Throw (800g) |  | JT | Individual | KGM | 0.8 |
+| Hammer Throw | HT | Hammer Throw (7.260kg)  | Outdoor | HT | Individual | KGM | 7.26 |
+| Javelin Throw | JT | Javelin Throw (800g) | Outdoor | JT | Individual | KGM | 0.8 |
 | Shot Put | iSP | Shot Put (4 kg) Indoor | Indoor | SP | Individual | KGM | 4 |
 | Shot Put | SP | Shot Put (4 kg) Outdoor | Outdoor | SP | Individual | KGM | 4 |
 
