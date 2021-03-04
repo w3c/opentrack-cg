@@ -35,7 +35,7 @@ List of codes (identifiers) for athletics events. These will be described using 
 
 | identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value | height>value | height>value |
 | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- | ------------ | ------------ |
-| 60mH | 60m Hurdles (0.60) Indoor | Indoor | 60mH | Individual | MTR | 60 |  MTR | 1.067 |
+| 60mH | 60m Hurdles (0.60) Indoor | Indoor | 60mH | Individual | MTR | 60 | MTR | 1.067 |
 | 100mH | H100m Hurdles (0.84) Women Outdoor | Outdoor | 100m | Individual | MTR | 100 | MTR | 0.84 |
 | 110mH | 110m Hurdles (1.067) Men Outdoor | Outdoor | 110mH | Individual | MTR | 110 | MTR | 1.067 |
 | 400mH | 400m Hurdles (0.91) Men Outdoor | Outdoor | 400mH | Individual | MTR | 400 | MTR | 0.914 |
@@ -46,10 +46,10 @@ Note: Spacing is complex: distance to first hurdle, spacing between intermediate
 
 ### Steeplechase
 
-| identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
-| ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
-| 2000mSC | 2000m Steeplechase Men | Outdoor | 2000mSC | Individual | MTR | 2000 |
-| 3000mSC | 3000m Steeplechase Men | Outdoor | 3000mSC | Individual | MTR | 3000 |
+| identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value | height>value | height>value |
+| ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- | ------------ | ------------ |
+| 2000mSC | 2000m Steeplechase | Outdoor | 2000mSC | Individual | MTR | 2000 | MTR | 0.838 |
+| 3000mSC | 3000m Steeplechase (36") | Outdoor | 3000mSC | Individual | MTR | 3000 | MTR | 0.914 |
 
 
 ### Middle Distance & Long Distance Races
