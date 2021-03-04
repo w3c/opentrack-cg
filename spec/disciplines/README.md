@@ -4,22 +4,24 @@ List of codes (identifiers) for athletics events.
 
 - [Athletics Disciplines](#athletics-disciplines)
   * [Races](#races)
-    + Sprints
-    + Hurdles
-    + Steeplechase
-    + Middle Distance & Long Distance Races
-    + Race Walking
-    + Track Relays
-    + Road Running
-    + Cross Country
-    + Mountain Running
-    + Ultrarunning
+    + [Sprints](#sprints)
+    + [Hurdles](#hurdles)
+    + [Steeplechase](#steeplechase)
+    + [Middle Distance & Long Distance Races](#middle-distance---long-distance-races)
+    + [Race Walking](#race-walking)
+    + [Track Relays](#track-relays)
+    + [Road Running](#road-running)
+    + [Cross Country](#cross-country)
+    + [Mountain Running](#mountain-running)
+    + [Ultrarunning](#ultrarunning)
   * [Throws](#throws)
   * [Horizontal Jumps](#horizontal-jumps)
   * [Vertical Jumps](#vertical-jumps)
   * [Combined Disciplines](#combined-disciplines)
 
 ## Races
+
+### Sprints
 
 | typeEvent | subTypeEvent | identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
 | --------- | ------------ | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
@@ -28,22 +30,54 @@ List of codes (identifiers) for athletics events.
 | Race | Sprint | i400m | 400m Indoor | Indoor | 400m | Individual | MTR | 400 |
 | Race | Sprint | 200m | 200m Outdoor | Outdoor | 200m | Individual | MTR | 200 |
 | Race | Sprint | 400m | 400m Outdoor | Outdoor | 400m | Individual | MTR | 400 |
+
+### Hurdles
+
+| typeEvent | subTypeEvent | identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
+| --------- | ------------ | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
 | Race | Hurdles | 60mH | 60m Hurdles (0.60) Indoor | Indoor | 60mH | Individual | MTR | 60 |
 | Race | Hurdles | 100mH | H100m Hurdles (0.84) Women Outdoor | Outdoor | 100m | Individual | MTR | 100 |
 | Race | Hurdles | 110mH | 110m Hurdles (1.067) Men Outdoor | Outdoor | 110mH | Individual | MTR | 110 |
 | Race | Hurdles | 400mH | 400m Hurdles (0.91) Men Outdoor | Outdoor | 400mH | Individual | MTR | 400 |
+
+
+### Steeplechase
+
+| typeEvent | subTypeEvent | identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
+| --------- | ------------ | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
 | Race | Steeplechase | 2000mSC | 2000m Steeplechase Men | Outdoor | 2000mSC | Individual | MTR | 2000 |
 | Race | Steeplechase | 3000mSC | 3000m Steeplechase Men | Outdoor | 3000mSC | Individual | MTR | 3000 |
+
+
+### Middle Distance & Long Distance Races
+
+| typeEvent | subTypeEvent | identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
+| --------- | ------------ | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
 | Race | Middle-Long Distance | i1500m | 1500m Indoor | Indoor | 1500m | Individual | MTR | 1500 |
 | Race | Middle-Long Distance | 1500m | 1500m Outdoor | Outdoor | 1500m | Individual | MTR | 1500 |
 | Race | Middle-Long Distance | i3000m | 3000m Indoor | Indoor | 3000m | Individual | MTR | 3000 |
 | Race | Middle-Long Distance | 3000m | 3000m Outdoor | Outdoor | 3000m | Individual | MTR | 3000 |
 | Race | Middle-Long Distance | 10000m | 10000m | Outdoor | 10,000m | Individual | MTR | 10000 |
-| Race | Middle-Long Distance | HMar | Half Marathon | Road | HMar | Individual | MTR | 21097 |
 | Race | Middle-Long Distance | 5000m | 5000m Outdoor | Outdoor | 5000m | Individual | MTR | 5000 |
 | Race | Middle-Long Distance | i800m | 800m Indoor | Indoor | 800m | Individual | MTR | 800 |
 | Race | Middle-Long Distance | 800m | 800m Outdoor | Outdoor | 800m | Individual | MTR | 800 |
-| Race | Middle-Long Distance | Mar | Marathon | Road | Mar | Individual | MTR | 42195 |
+
+
+### Race Walking
+
+| typeEvent | subTypeEvent | identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
+| --------- | ------------ | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
+| Race | Race Walking | 10000mRW | 10000m Race Walking on track | Road | 10,000mRW | Individual | MTR | 10000 |
+| Race | Race Walking | 10kmRW | 10km Race Walking on Road | Road | 10kmRW | Individual | MTR | 10000 |
+| Race | Race Walking | 20kmRW | 20km Race Walking on Road | Road | 20kmRW | Individual | MTR | 20000 |
+| Race | Race Walking | 5000mRW | 5000m Race Walking on track | Outdoor | 5000mRW | Individual | MTR | 5000 |
+| Race | Race Walking | 50kmRW | 50km Race Walking on Road | Road | 50kmRW | Individual | MTR | 5000 |
+
+
+### Track Relays
+
+| typeEvent | subTypeEvent | identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
+| --------- | ------------ | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
 | Race | Track Relays | 4x100mR | 4x100m Outdoor | Outdoor | 4 x 100mR | Relays | MTR | 400 |
 | Race | Track Relays | 4x200mR | 4x200m Outdoor | Outdoor | 4 x 200mR | Relays | MTR | 800 |
 | Race | Track Relays | i4x400mR | 4x400m Indoor | Indoor | 4 x 400mR | Relays | MTR | 1600 |
@@ -51,11 +85,26 @@ List of codes (identifiers) for athletics events.
 | Race | Track Relays | 4x800mR | 4x800m Outdoor | Outdoor | 4 x 800mR | Relays | MTR | 3200 |
 | Race | Track Relays | 4x1500mR | 4x1500m Outdoor | Outdoor | 4x1500mR | Relays | MTR | 6000 |
 | Race | Track Relays | MedleyR | Medley Relay Outdoor | Outdoor | MedleyR | Relays |  |  |
-| Race | Race Walking | 10000mRW | 10000m Race Walking on track | Road | 10,000mRW | Individual | MTR | 10000 |
-| Race | Race Walking | 10kmRW | 10km Race Walking on Road | Road | 10kmRW | Individual | MTR | 10000 |
-| Race | Race Walking | 20kmRW | 20km Race Walking on Road | Road | 20kmRW | Individual | MTR | 20000 |
-| Race | Race Walking | 5000mRW | 5000m Race Walking on track | Outdoor | 5000mRW | Individual | MTR | 5000 |
-| Race | Race Walking | 50kmRW | 50km Race Walking on Road | Road | 50kmRW | Individual | MTR | 5000 |
+
+
+### Road Running
+
+| typeEvent | subTypeEvent | identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
+| --------- | ------------ | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
+| Race | Middle-Long Distance | HMar | Half Marathon | Road | HMar | Individual | MTR | 21097 |
+| Race | Middle-Long Distance | Mar | Marathon | Road | Mar | Individual | MTR | 42195 |
+
+
+### Cross Country
+
+
+
+### Mountain Running
+
+
+
+### Ultrarunning
+
 
 
 ## Throws
@@ -96,5 +145,7 @@ List of codes (identifiers) for athletics events.
 | Combined Discipline | Heptathlon | iHep | Heptathlon Men Indoor | Indoor | Hep | Individual |
 | Combined Discipline | Heptathlon | HepM | Heptathlon Men |  | Hep | Individual |
 | Combined Discipline | Decathlon | Dec | Decathlon Men |  | Dec | Individual |
+
+
 
 
