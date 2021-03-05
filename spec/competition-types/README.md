@@ -1,4 +1,4 @@
-# Type of Athletics Competitions
+## Type of Athletics Competitions
 
 This taxonomy of types of competitions aims at classifying the event according to the competition level, scope, permits and other specific information.
 
