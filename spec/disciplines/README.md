@@ -39,7 +39,7 @@ List of codes (identifiers) for athletics events. These will be described using 
 | 100mH | H100m Hurdles (0.84) Women Outdoor | Outdoor | 100m | Individual | MTR | 100 | MTR | 0.84 |
 | 110mH | 110m Hurdles (1.067) Men Outdoor | Outdoor | 110mH | Individual | MTR | 110 | MTR | 1.067 |
 | 400mH | 400m Hurdles (0.91) Men Outdoor | Outdoor | 400mH | Individual | MTR | 400 | MTR | 0.914 |
-| 400mHW | 400m Hurdles (0.76) Women Outdoor | Outdoor | 400mH | Individual | MTR | 400 | MTR | | 0.762 |
+| 400mHW | 400m Hurdles (0.76) Women Outdoor | Outdoor | 400mH | Individual | MTR | 400 | MTR | 0.762 |
 
 Note: Spacing is complex: distance to first hurdle, spacing between intermediate hurdles, distance last hurdle to the end.
 
