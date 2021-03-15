@@ -2,6 +2,8 @@
 
 This taxonomy of types of competitions aims at classifying the event according to the competition level, scope, permits and other specific information.
 
+This document is a draft. Feel free to suggest changes and additions. 
+
 |  CODE | DETAILS | Track & Field | Combined Events | Road Running | Road Walking | Governing Body |
 | --------- | ------- | ------------- | --------------- | ------------ | ------------ | -------------- |
 | OW | Olympic Games | x | x | x | x | World Athletics |
