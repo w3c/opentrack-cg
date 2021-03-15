@@ -23,7 +23,7 @@ List of codes (identifiers) for athletics events. These will be described using 
 
 ### Sprints
 
-| identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
+| identifier | name | venueType | code | competitionType | distance>unit | distance>value |
 | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
 | 60m | 60m Indoor | Indoor | 60 | Individual | MTR | 60 |
 | 100m | 100m Outdoor | Outdoor | 100 | Individual | MTR | 100 |
@@ -33,7 +33,7 @@ List of codes (identifiers) for athletics events. These will be described using 
 
 ### Hurdles
 
-| identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value | height>value | height>value |
+| identifier | name | venueType | code | competitionType | distance>unit | distance>value | height>value | height>value |
 | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- | ------------ | ------------ |
 | 60mH | 60m Hurdles (0.60) Indoor | Indoor | 60H | Individual | MTR | 60 | MTR | 1.067 |
 | 100mH | H100m Hurdles (0.84) Women Outdoor | Outdoor | 100H | Individual | MTR | 100 | MTR | 0.84 |
@@ -46,7 +46,7 @@ Note: Spacing is complex: distance to first hurdle, spacing between intermediate
 
 ### Steeplechase
 
-| identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value | height>value | height>value |
+| identifier | name | venueType | code | competitionType | distance>unit | distance>value | height>value | height>value |
 | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- | ------------ | ------------ |
 | 2000mSC | 2000m Steeplechase | Outdoor | 2000SC | Individual | MTR | 2000 | MTR | 0.838 |
 | 3000mSC | 3000m Steeplechase (36") | Outdoor | 3000SC | Individual | MTR | 3000 | MTR | 0.914 |
@@ -54,7 +54,7 @@ Note: Spacing is complex: distance to first hurdle, spacing between intermediate
 
 ### Middle Distance & Long Distance Races
 
-| identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value | maxDuration |
+| identifier | name | venueType | code | competitionType | distance>unit | distance>value | maxDuration |
 | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- | ----------- |
 | 800m | 800m Outdoor | Outdoor | 800 | Individual | MTR | 800 |
 | i800m | 800m Indoor | Indoor | 800 | Individual | MTR | 800 |
@@ -69,7 +69,7 @@ Note: Spacing is complex: distance to first hurdle, spacing between intermediate
 
 ### Race Walking
 
-| identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
+| identifier | name | venueType | code | competitionType | distance>unit | distance>value |
 | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
 | 10000mRW | 10000m Race Walking on track | Road | 10KW | Individual | MTR | 10000 |
 | 10kmRW | 10km Race Walking on Road | Road | 10KW | Individual | MTR | 10000 |
@@ -80,7 +80,7 @@ Note: Spacing is complex: distance to first hurdle, spacing between intermediate
 
 ### Track Relays
 
-| identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
+| identifier | name | venueType | code | competitionType | distance>unit | distance>value |
 | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
 | 4x100mR | 4x100m Outdoor | Outdoor | 4X100 | Relays | MTR | 400 |
 | 4x200mR | 4x200m Outdoor | Outdoor | 4X200 | Relays | MTR | 800 |
@@ -93,7 +93,7 @@ Note: Spacing is complex: distance to first hurdle, spacing between intermediate
 
 ### Road Running
 
-| identifier | name | venueType | alternateName | competitionType | distance>unit | distance>value |
+| identifier | name | venueType | code | competitionType | distance>unit | distance>value |
 | ---------- | ---- | --------- | ------------- | --------------- | ------------- | -------------- |
 | HMar | Half Marathon | Road | HM | Individual | MTR | 21097 |
 | Mar | Marathon | Road | MAR | Individual | MTR | 42195 |
@@ -113,7 +113,7 @@ Note: Spacing is complex: distance to first hurdle, spacing between intermediate
 
 ## Throws
 
-| Sub-type | identifier | name | venueType | alternateName | competitionType | weight>unit | weight>value |
+| Sub-type | identifier | name | venueType | code | competitionType | weight>unit | weight>value |
 | -------- | ---------- | ---- | --------- | ------------- | --------------- | ----------- | ------------ |
 | Discus Throw | DT | Discus Throw (1 kg) Outdoor | Outdoor | DT | Individual | KGM | 1 |
 | Hammer Throw | HT | Hammer Throw (7.260kg)  | Outdoor | HT | Individual | KGM | 7.26 |
@@ -124,7 +124,7 @@ Note: Spacing is complex: distance to first hurdle, spacing between intermediate
 
 ## Horizontal Jumps 
 
-| Sub-type | identifier | name | venueType | alternateName | competitionType |
+| Sub-type | identifier | name | venueType | code | competitionType |
 | -------- | ---------- | ---- | --------- | ------------- | --------------- |
 | Long Jump | iLJ | Long Jump Indoor | Indoor | LJ | Individual |
 | Long Jump | LJ | Long Jump Outdoor | Outdoor | LJ | Individual |
@@ -133,7 +133,7 @@ Note: Spacing is complex: distance to first hurdle, spacing between intermediate
 
 ## Vertical Jumps 
 
-| Sub-type | identifier | name | venueType | alternateName | competitionType |
+| Sub-type | identifier | name | venueType | code | competitionType |
 | -------- | ---------- | ---- | --------- | ------------- | --------------- |
 | High Jump | iHJ | High Jump Indoor | Indoor | HJ | Individual |
 | High Jump | HJ | High Jump Outdoor | Outdoor | HJ | Individual |
@@ -142,7 +142,7 @@ Note: Spacing is complex: distance to first hurdle, spacing between intermediate
 
 ## Combined Disciplines
 
-| identifier | name | venueType | alternateName | competitionType |
+| identifier | name | venueType | code | competitionType |
 | ---------- | ---- | --------- | ------------- | --------------- |
 | Pentathlon | Pen | Pentathlon Women Indoor | Indoor | PEN | Individual |
 | Heptathlon | HepW | Heptathlon Women |  | HEP | Individual |
