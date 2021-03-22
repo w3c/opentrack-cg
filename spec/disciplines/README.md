@@ -96,6 +96,9 @@ Simplification of identifiers for athletics events, describing the existing [Ope
 | identifier | name | distance>unit | distance>value |
 | ---------- | ---- | ------------- | -------------- |
 | `ROAD` | (Generic) ROAD RUNNING | | |
+| `1M` | 1 Mile | SMI | 1 |
+| `2M` | 2 Miles | SMI | 2 |
+| `5M` | 5 Miles | SMI | 5 |
 | `10K` | 10K | MTR | 10000 |
 | `HM` | Half Marathon | MTR | 21097 |
 | `MAR` | Marathon | MTR | 42195 |
