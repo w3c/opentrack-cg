@@ -6,6 +6,43 @@ The structure of the message starts with a high level event (let's name it [Comp
 
 ![High level data model](./images/wa-proposal.svg "Simplified UML with the main entities and their properties")
 
+## Summary of entities
+
+- [Competition](#competition): Global competition.
+- [Athlete](#athlete)s: Athletes, part of the competition.
+- [RelayTeam](#relayteam)s: Teams, part of the competition.
+- [Venue](#venue)s: Venues where the competition was held. 
+- [CompetitionUnit](#competitionunit)s: Events of the main competition
+  - [Round](#round)s: Rounds and stages of the unitary competitions
+    - [Race](#race)s: Unitary races and field events part of a round.
+      - [IndividualResult](#individualresult)s: Results of a individual competition.
+      - [RelayResult](#relayresult): Results of a relay competition.
+        - Detailed Results
+          - [DetailOutdoorHorizontalJump](#detailoutdoorhorizontaljump): Outdoor HJ detailed result.
+          - [DetailIndoorHorizontalJump](#detailindoorhorizontaljump): Indoor HJ detailed result.
+          - [DetailVerticalJump](#detailverticaljump): VJ detailed result.
+          - [DetailThrow](#detailthrow): Detailed result in a throws unitary competition.
+          - [DetailSplitTimes](#detailsplittimes): Detailed split times.
+
+## Summary of Controlled Vocabularies
+
+- [Date](#date)
+- [Time](#time)
+- [Gender](#gender)
+- [Country](#country)
+- [Round Type](#roundtype)
+- [WindAssistance](#windassistance)
+- [QualificationType](#qualificationtype)
+- Types of Results
+  - [Fault](#fault)
+  - [TimeResultFormat](#timeresultformat)
+  - [MetresResultFormat](#metresresultformat) 
+  - [PointsResultFormat](#pointsresultformat) 
+  - [MetresTrackResultFormat](#metrestrackresultformat)
+- [HorizontalJumpFeatures](#horizontaljumpfeatures)
+- [VerticalJumpFeatures](#verticaljumpfeatures)
+- [ThrowsFeatures](#throwsfeatures)
+
 ## Competition
 
 | property | type | description | Required  | 
@@ -200,12 +237,6 @@ Measure of wind:
 
 A [Race](#race) always produces an array of either [IndividualResult](#individualresult)s or [RelayResult](#relayresult)s. Each entity -[IndividualResult](#individualresult) and [RelayResult](#relayresult)- contains a property `result` whose value pattern (a `string`) varies depending on the type of event. The patterns for these events are as follows:
 
-- [Fault](#fault)
-- [TimeResultFormat](#timeresultformat)
-- [MetresResultFormat](#metresresultformat) 
-- [PointsResultFormat](#pointsresultformat) 
-- [MetresTrackResultFormat](#metrestrackresultformat)
-
 #### Fault
 
 Fault values: 
@@ -272,10 +303,3 @@ Values:
 - `x` 
 - `-`
 - `r`
-
-Issues and questions to clarify:
-- Could we have local identifiers for athletes represented as `strings` (e.g., IDs in Spain `MA-02983`)?
-- Competition's venues are represented as an array that is not linked to the specific competition units. May they be necessary for specific unit competitions and results?
-- Should `startTime` and `endTime` of a `UnitCompetition` be under any reference (e.g., UTC?) 
-
-
