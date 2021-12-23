@@ -4,6 +4,8 @@ World Athletics sent a proposal of API to share competition results. The method 
 
 The structure of the message starts with a high level event (let's name it [Competition](#competition))
 
+![High level data model](./images/wa-proposal.svg "Simplified UML with the main entities and their properties")
+
 ## Competition
 
 | property | type | description | Required  | 
