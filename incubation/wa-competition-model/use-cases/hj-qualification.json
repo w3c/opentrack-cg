@@ -1,0 +1,76 @@
+{
+  "waId": 0,  // Croatian National Championships 2021 
+  "athletes": [
+    {
+      "id": 1,
+      "waId": 1,
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "birthdate": "2000-08-24",
+      "country": "SLO",
+      "sex": "female"
+    },
+    {
+      "id": 2,
+      "waId": 2,
+      "firstName": "John",
+      "lastName": "Smith",
+      "birthdate": "2001-08-24",
+      "country": "SLO",
+      "sex": "male"
+    }    
+  ],
+  "venues": [
+    {
+      "id": 1,
+      "waId": 0,
+      "name": "Stadion Branko Čavlović-Čavlek",
+      "country": "CRO"
+    }
+  ],
+  "units": [
+    {
+      "waEventId": 0,
+      "title": "Men's High Jump",
+      "minAge": 18,
+      "rounds": [
+        {
+          "type": "Qualification",
+          "races": [
+            {
+              "number": 1,
+              "wind": "NWI",
+              "date": "2021-08-24",
+              "startTime": "10:00:54",
+              "endTime": "11:10:01",
+              "results": [
+                {
+                  "athleteId": 2,
+                  "wind": "NWI",
+                  "result": "2.20",     // Supposing he cleared 2.20 in the Final (in MetresResultFormat)
+                  "placeInRace": 5,     // 5th in this qualification contest 
+                  "placeInRound": 5,    // 8th in the overall qualification round
+                  "qualified": "q",     
+                  "detail": [           // Array of DetailVerticalJump
+                    {
+                        "height": "1.75",   // MetresResultFormat
+                        "attempts": "o"
+                    },
+                    {
+                        "height": "1.80",   
+                        "attempts": "xxo"  // <-- first and second attempt on 1.80 failed     
+                    },
+                    {
+                        "height": "2.00",   
+                        "attempts": "xo"       
+                    }                    
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

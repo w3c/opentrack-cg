@@ -1,0 +1,48 @@
+{
+  "waId": 22,  // Olympics 2024 
+  "athletes": [
+    {
+      "id": 1,
+      "waId": 1,
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "birthdate": "2000-08-24",
+      "country": "SLO",
+      "sex": "female"
+    }    
+  ],
+  "venues": [
+    {
+      "id": 12,
+      "waId": 34,
+      "name": "Saint-Denis Stadium",
+      "country": "FRA"
+    }
+  ],
+  "units": [
+    {
+      "waEventId": 11,
+      "title": "Women's 100m",
+      "rounds": [
+        {
+          "type": "Final",
+          "races": [
+            {
+              "number": 1,
+              "wind": "NWI",
+              "date": "2024-08-24",
+              "startTime": "10:00:54",
+              "endTime": "11:10:01",
+              "results": [
+                {
+                  "athleteId": 1,
+                  "result": "DQ"       // Fault
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

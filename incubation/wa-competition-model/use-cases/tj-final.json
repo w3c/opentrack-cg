@@ -1,0 +1,77 @@
+{
+  "waId": 10,  // International Meeting Zadar 2021  
+  "athletes": [
+    {
+      "id": 1,
+      "waId": 1,
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "birthdate": "2000-08-24",
+      "country": "SLO",
+      "sex": "female"
+    }    
+  ],
+  "venues": [
+    {
+      "id": 120,
+      "waId": 374,
+      "name": "Višnjik Sports Center",
+      "country": "CRO"
+    }
+  ],
+  "units": [
+    {
+      "waEventId": 11,
+      "title": "Women's Triple Jump",
+      "rounds": [
+        {
+          "type": "Final",
+          "races": [
+            {
+              "number": 1,
+              "wind": "+1.2",
+              "date": "2024-08-24",
+              "startTime": "10:00:54",
+              "endTime": "11:10:01",
+              "results": [
+                {
+                  "athleteId": 1,
+                  "wind": "+1.2",
+                  "result": "13.43",    // in MetresResultFormat
+                  "placeInRace": 2,     // Second in the (one) final 
+                  "placeInRound": 2,    // Place in the overall round
+                  "detail": [           // Array of DetailOutdoorHorizontalJump
+                    {
+                        "result": "x",      // MetresResultFormat or fail
+                        "wind": "+1.1"
+                    },
+                    {
+                        "result": "13.00",
+                        "wind": "+1.1"
+                    },
+                    {
+                        "result": "12.22",
+                        "wind": "+1.1"
+                    },
+                    {
+                        "result": "x",
+                        "wind": "+1.1"
+                    },
+                    {
+                        "result": "13.43",
+                        "wind": "+1.2"          //  <-- best performance at 5th attempt
+                    },
+                    {
+                        "result": "x",
+                        "wind": "+1.1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
