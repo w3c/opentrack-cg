@@ -7,23 +7,14 @@
         <script class="remove">
             var respecConfig = {
                 group: "opentrack",
+                latestVersion: "https://w3c.github.io/opentrack-cg/spec/competition/",
                 specStatus: "CG-DRAFT",
                 editors: [
                     {
-                        w3cid: "37258",
                         name: "Martin Alvarez-Espinar",
-                        url: "http://www.w3c.es/Personal/Martin",
-                        company: "CTIC Technology Centre",
-                        companyURL: "http://fundacionctic.org",
-                    },
-                ],
-                authors: [
-                    {
-                        w3cid: "37258",
-                        name: "Martin Alvarez-Espinar",
-                        url: "http://www.w3c.es/Personal/Martin",
-                        company: "CTIC Technology Centre",
-                        companyURL: "http://fundacionctic.org",
+                        companyURL: "https://www.huawei.com",
+                        company: "Huawei",
+                        w3cid: 125049
                     },
                 ],
                 repoURL: "https://github.com/w3c/opentrack-cg",
@@ -71,7 +62,6 @@
                     },
                 ],
                 logos: [],
-                edDraftURI: "https://github.com/espinr/opentrack-cg/blob/master/spec/competition/index.html",
                 localBiblio: {
                     "SCHEMA-ORG": {
                         title: "Schema.org",
@@ -87,7 +77,7 @@
                         href: "https://www.iaaf.org/download/download?filename=89ed4cba-6b5e-49fe-a43e-9f5487b77a84.pdf",
                         publisher: "IAAF",
                     },
-                    SPORTSML: {
+                    "SPORTSML": {
                         title: "SportsML",
                         href: "http://dev.iptc.org/SportsML",
                         publisher: "IPTC",
@@ -114,7 +104,7 @@
                     },
                 },
                 shortName: "opentrack",
-                isNoTrack: true,
+                noRecTrack: true
             };
         </script>
         <style>
@@ -502,17 +492,17 @@ The content of the example is in monospace font and may be syntax colored.
 
                 <p>All the types and properties included in the diagram exists in Schema.org. The <strong>new ones are represented in bold red</strong>.</p>
                 <dl>
-                    <dt><a href="#competition">Sports Competition</a></dt>
+                    <dt><a>Sports Competition</a></dt>
                     <dd>
-                        Sports Competitions are organized occasions where sports events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition (sub events
-                        and super events). These competitions can be organized periodically (<a href="#competition-series">Competition Series</a>), such as the Summer Olympic Games. These events may have of different nature, depending on
+                        <a>Sports Competitions</a> are organized occasions where sports events are planed and take place at a specific location during a period of time. Most Athletics events are part of a bigger meeting, or competition (sub events
+                        and super events). These competitions can be organized periodically (<a>Competition Series</a>), such as the Summer Olympic Games. These events may have of different nature, depending on
                         the disciplines, schedule, competitors, and scope (e.g., championships tournaments, leagues, fund-raising road races, etc.).
                     </dd>
 
-                    <dt><a href="#place">Venue</a></dt>
-                    <dd>Place or location where events and competitions are held.</dd>
+                    <dt>Venue</dt>
+                    <dd>[=Place=] or location where events and competitions are held.</dd>
 
-                    <dt><a href="#category">Category</a></dt>
+                    <dt><a>Category</a></dt>
                     <dd>Specific category, or intended competitive audience, within an event (e.g., Senior Men, U18 Women, etc.).</dd>
                 </dl>
             </section>
@@ -526,16 +516,16 @@ The content of the example is in monospace font and may be syntax colored.
                 <p>All the types and properties included in the diagram exists in Schema.org. The <strong>new ones are represented in bold red</strong>.</p>
 
                 <dl>
-                    <dt><a href="#athlete">Athlete</a></dt>
+                    <dt><a>Athlete</a></dt>
                     <dd>Person who takes part in Sports events as individual competitor. Athletes are defined by gender, age, nationality, and other personal information.</dd>
 
-                    <dt><a href="#sports-team">Sports Team</a></dt>
+                    <dt><a>Sports Team</a></dt>
                     <dd>
                         A group of people who takes part in a competition as a whole, competing against other groups of people. Both athletes and teams can be affiliated to [Organizations](#organization) such as clubs, schools, university,
                         and/or federations.
                     </dd>
 
-                    <dt><a href="#sports-governing-body">Sports Governing Body</a></dt>
+                    <dt><a>Sports Governing Body</a></dt>
                     <dd>
                         Sports Governing Bodies in charge of governing and rule Athletics in specific territories. Athletics Federations are Sports Governing Bodies that may be attached to other higher-level federations. Athletes, Teams,
                         Clubs and other Organizations may be attached to Governing Bodies.
@@ -551,7 +541,7 @@ The content of the example is in monospace font and may be syntax colored.
             <section>
                 <h3>Athlete</h3>
                 <p>
-                    An <dfn>Athlete</dfn> is a <strong><a href="#person">Person</a></strong> who participates in Sports events.
+                    An <dfn>Athlete</dfn> is a <strong><a>Person</a></strong> who participates in Sports events.
                 </p>
                 <ul>
                     <li>Class: <code>Athlete</code> (<code>ath:Athlete</code>)</li>
@@ -613,7 +603,7 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>address</code></td>
                             <td style="text-align: left;"><code>schema:address</code></td>
                             <td style="text-align: left;">Main residence address of an athlete.</td>
-                            <td style="text-align: left;"><a href="#postal-address">Postal Address</a> or Text</td>
+                            <td style="text-align: left;"><a>Postal Address</a> or Text</td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>image</code></td>
@@ -679,31 +669,31 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>birthPlace</code></td>
                             <td style="text-align: left;"><code>schema:birthPlace</code></td>
                             <td style="text-align: left;">Locality and country of birth (e.g. &quot;Tallinn, Estonia&quot;)</td>
-                            <td style="text-align: left;"><a href="#place">Place</a></td>
+                            <td style="text-align: left;"><a>Place</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>coach</code></td>
                             <td style="text-align: left;"><code>schema:coach</code></td>
                             <td style="text-align: left;">Athlete&#39;s main coach.</td>
-                            <td style="text-align: left;"><a href="#person">Person</a></td>
+                            <td style="text-align: left;"><a>Person</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>sponsor</code></td>
                             <td style="text-align: left;"><code>schema:sponsor</code></td>
                             <td style="text-align: left;">Athlete&#39;s sponsor.</td>
-                            <td style="text-align: left;"><a href="#person">Person</a> or <a href="#organization">Organization</a></td>
+                            <td style="text-align: left;"><a>Person</a> or <a>Organization</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>affiliation</code></td>
                             <td style="text-align: left;"><code>schema:affiliation</code></td>
-                            <td style="text-align: left;">Organization (<a href="#sports-club">Sports Club</a>, <a href="#sports-governing-body">Sports Governing Body</a>, school, university, etc.) which an athlete is affiliated to.</td>
-                            <td style="text-align: left;"><a href="#organization">Organization</a></td>
+                            <td style="text-align: left;">Organization (<a>Sports Club</a>, <a>Sports Governing Body</a>, school, university, etc.) which an athlete is affiliated to.</td>
+                            <td style="text-align: left;"><a>Organization</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>memberOf</code></td>
                             <td style="text-align: left;"><code>schema:memberOf</code></td>
                             <td style="text-align: left;">Team which an athlete is part of (for instance, a National Team).</td>
-                            <td style="text-align: left;"><a href="#sports-team">Sports Team</a></td>
+                            <td style="text-align: left;"><a>Sports Team</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>bestSportsPerformance</code></td>
@@ -715,7 +705,7 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>captainOf</code></td>
                             <td style="text-align: left;"><code>ath:captainOf</code></td>
                             <td style="text-align: left;">Team which an athlete is captain of.</td>
-                            <td style="text-align: left;"><a href="#sports-team">Sports Team</a></td>
+                            <td style="text-align: left;"><a>Sports Team</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -783,8 +773,8 @@ The content of the example is in monospace font and may be syntax colored.
             <section>
                 <h3 id="sports-team">Sports Team</h3>
                 <p>
-                    A <dfn>Sports Team</dfn> is a group of <a href="#athlete">Athletes</a> who play a particular sport or game together against other similar groups of people. In Athletics there are certain events designed for teams
-                    competition (e.g., relay races). Teams in those competitions may be composed of <a href="#athlete">Athletes</a> affiliated to the same or different organization, representing a federation (national, regional team), or
+                    A <dfn data-lt="team">Sports Team</dfn> is a group of <a>Athletes</a> who play a particular sport or game together against other similar groups of people. In Athletics there are certain events designed for teams
+                    competition (e.g., relay races). Teams in those competitions may be composed of <a>Athletes</a> affiliated to the same or different organization, representing a federation (national, regional team), or
                     just a joint of independent athletes.
                 </p>
                 <ul>
@@ -840,7 +830,7 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>memberOf</code></td>
                             <td style="text-align: left;"><code>schema:memberOf</code></td>
                             <td style="text-align: left;">Organization (federation, club, school, etc.) which a team is attached to.</td>
-                            <td style="text-align: left;"><a href="#organization">Organization</a></td>
+                            <td style="text-align: left;"><a>Organization</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>nationality</code></td>
@@ -852,13 +842,13 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>sponsor</code></td>
                             <td style="text-align: left;"><code>schema:sponsor</code></td>
                             <td style="text-align: left;">Sponsor of a team.</td>
-                            <td style="text-align: left;"><a href="#person">Person</a> or <a href="#organization">Organization</a></td>
+                            <td style="text-align: left;"><a>Person</a> or <a>Organization</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>coach</code></td>
                             <td style="text-align: left;"><code>schema:coach</code></td>
                             <td style="text-align: left;">Person who acts as coach for a team.</td>
-                            <td style="text-align: left;"><a href="#person">Person</a></td>
+                            <td style="text-align: left;"><a>Person</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>sportsPerformance</code></td>
@@ -870,13 +860,13 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>captain</code></td>
                             <td style="text-align: left;"><code>ath:captain</code></td>
                             <td style="text-align: left;">Athlete, leader of a team.</td>
-                            <td style="text-align: left;"><a href="#athlete">Athlete</a></td>
+                            <td style="text-align: left;"><a>Athlete</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>athlete</code></td>
                             <td style="text-align: left;"><code>schema:athlete</code></td>
                             <td style="text-align: left;">Athlete affiliated to a team.</td>
-                            <td style="text-align: left;"><a href="#athlete">Athlete</a></td>
+                            <td style="text-align: left;"><a>Athlete</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -955,7 +945,7 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>address</code></td>
                             <td style="text-align: left;"><code>schema:address</code></td>
                             <td style="text-align: left;">Main residence address of a person.</td>
-                            <td style="text-align: left;"><a href="#postal-address">Postal Address</a> or Text</td>
+                            <td style="text-align: left;"><a>Postal Address</a> or Text</td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>image</code></td>
@@ -1025,7 +1015,7 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>address</code></td>
                             <td style="text-align: left;"><code>schema:address</code></td>
                             <td style="text-align: left;">Postal address where an organization is located.</td>
-                            <td style="text-align: left;"><a href="#postal-address">Postal Address</a> or Text</td>
+                            <td style="text-align: left;"><a>Postal Address</a> or Text</td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>email</code></td>
@@ -1049,27 +1039,27 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>areaServed</code></td>
                             <td style="text-align: left;"><code>schema:areaServed</code></td>
                             <td style="text-align: left;">Spatial coverage of an organization, usually administrative areas (city, region, country, etc.)</td>
-                            <td style="text-align: left;"><a href="#place">Place</a>, <a href="#country">Country</a> or <a href="#continent">Continent</a></td>
+                            <td style="text-align: left;"><a>Place</a>, <a href="#country">Country</a> or <a href="#continent">Continent</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>memberOf</code></td>
                             <td style="text-align: left;"><code>schema:memberOf</code></td>
                             <td style="text-align: left;">Organization, such as higher-level federation(s), to which an organization is attached to.</td>
-                            <td style="text-align: left;"><a href="#organization">Organization</a></td>
+                            <td style="text-align: left;"><a>Organization</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>member</code></td>
                             <td style="text-align: left;"><code>schema:member</code></td>
                             <td style="text-align: left;">Person or organization attached to an organization.</td>
-                            <td style="text-align: left;"><a href="#person">Person</a> or <a href="#organization">Organization</a></td>
+                            <td style="text-align: left;"><a>Person</a> or <a>Organization</a></td>
                         </tr>
                     </tbody>
                 </table>
                 <section>
                     <h4 id="sports-club">Sports Club</h4>
                     <p>
-                        A <dfn>Sports Club</dfn>, <strong>sport club</strong> or <strong>athletics club</strong>, is an <a href="#organization">Organization</a> for <a href="#athlete">Athletes</a> formed for the purpose of playing sports.
-                        Clubs may have different <a href="#sports-team">Teams</a> created for specific competitions, such as leagues, relay races, etc.
+                        A <dfn>Sports Club</dfn>, <strong>sport club</strong> or <strong>athletics club</strong>, is an <a>Organization</a> for <a>Athletes</a> formed for the purpose of playing sports.
+                        Clubs may have different <a>Teams</a> created for specific competitions, such as leagues, relay races, etc.
                     </p>
                     <ul>
                         <li>Class: <code>Club</code> (<code>schema:SportsClub</code>)</li>
@@ -1107,7 +1097,7 @@ The content of the example is in monospace font and may be syntax colored.
                                 <td style="text-align: left;"><code>address</code></td>
                                 <td style="text-align: left;"><code>schema:address</code></td>
                                 <td style="text-align: left;">Main postal address where a club is registered or located.</td>
-                                <td style="text-align: left;"><a href="#postal-address">Postal Address</a> or Text</td>
+                                <td style="text-align: left;"><a>Postal Address</a> or Text</td>
                             </tr>
                             <tr>
                                 <td style="text-align: left;"><code>image</code></td>
@@ -1161,25 +1151,25 @@ The content of the example is in monospace font and may be syntax colored.
                                 <td style="text-align: left;"><code>organization</code></td>
                                 <td style="text-align: left;"><code>schema:memberOf</code></td>
                                 <td style="text-align: left;">Organization which a club is attached to.</td>
-                                <td style="text-align: left;"><a href="#organization">Organization</a></td>
+                                <td style="text-align: left;"><a>Organization</a></td>
                             </tr>
                             <tr>
                                 <td style="text-align: left;"><code>sponsor</code></td>
                                 <td style="text-align: left;"><code>schema:sponsor</code></td>
                                 <td style="text-align: left;">Sponsor of a club.</td>
-                                <td style="text-align: left;"><a href="#person">Person</a> or <a href="#organization">Organization</a></td>
+                                <td style="text-align: left;"><a>Person</a> or <a>Organization</a></td>
                             </tr>
                             <tr>
                                 <td style="text-align: left;"><code>athlete</code></td>
                                 <td style="text-align: left;"><code>schema:athlete</code></td>
                                 <td style="text-align: left;">Athlete who is affiliated to a club.</td>
-                                <td style="text-align: left;"><a href="#athlete">Athlete</a></td>
+                                <td style="text-align: left;"><a>Athlete</a></td>
                             </tr>
                             <tr>
                                 <td style="text-align: left;"><code>team</code></td>
                                 <td style="text-align: left;"><code>schema:member</code></td>
-                                <td style="text-align: left;"><a href="#sports-team">Sports Team</a> attached to a club.</td>
-                                <td style="text-align: left;"><a href="#sports-team">Sports Team</a></td>
+                                <td style="text-align: left;"><a>Sports Team</a> attached to a club.</td>
+                                <td style="text-align: left;"><a>Sports Team</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -1282,8 +1272,8 @@ The content of the example is in monospace font and may be syntax colored.
             <section>
                 <h3 id="category">Category</h3>
                 <p>
-                    <dfn>Category</dfn> is a division that marks the competition of athletes and teams in sports events. A category describe the potential <strong>audience</strong> of a sports event. Categories may include restrictions of
-                    gender, age range and other specific rules depending of the sports discipline.
+                    <dfn data-lt="competition category">Category</dfn> is a division that marks the competition of athletes and teams in sports events. A category describe the potential <strong>audience</strong> of a sports event. Categories may include restrictions of
+                    gender, age range and other specific rules depending of the [=sports discipline=].
                 </p>
                 <p>
                     Examples of categories in Athletics are: <em>M35</em> (Men aged 35-39), <em>U23</em> (Under 23) Men, or <em>ad hoc</em> categories for non-official competitions such as <em>teachers</em> and <em>parents</em> in school
@@ -1350,13 +1340,13 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>recognizingAuthority</code></td>
                             <td style="text-align: left;"><code>schema:recognizingAuthority</code></td>
                             <td style="text-align: left;">Governing body or organization that recognizes and rule a specific category.</td>
-                            <td style="text-align: left;"><a href="#organization">Organization</a></td>
+                            <td style="text-align: left;"><a>Organization</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>geographicArea</code></td>
                             <td style="text-align: left;"><code>schema:geographicArea</code></td>
                             <td style="text-align: left;">The geographic area associated with the category.</td>
-                            <td style="text-align: left;"><a href="http://schema.org/AdministrativeArea">AdministrativeArea </a></td>
+                            <td style="text-align: left;"><a href="http://schema.org/AdministrativeArea">AdministrativeArea</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>healthCondition</code></td>
@@ -1454,13 +1444,13 @@ The content of the example is in monospace font and may be syntax colored.
             <section>
                 <h3 id="competition">Competition</h3>
                 <p>
-                    A <dnf>Competition</dnf>, Athletics Competition or Sports Competition is an event in which <a href="#athlete">Athletes</a> or <a href="#sports-team">Teams</a> take part in order to find out who is best at a particular
+                    A <dfn data-lt="athletics competition|sports competition">Competition</dfn>, Athletics Competition or Sports Competition is an event in which [=Athletes=] or [=Teams=] take part in order to find out who is best at a particular
                     sports activity.
                 </p>
                 <p>
-                    Athletics <a href="#competition">Competitions</a> may be of different nature, depending on disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors
+                    Athletics [=Competitions=] may be of different nature, depending on [=disciplines=] (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors
                     (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fund-raising road races or school races are also considered as
-                    <a href="#competition">Competitions</a>.
+                    [=Competitions=].
                 </p>
                 <ul>
                     <li>class: <code>Competition</code> (<code>ath:SportsCompetitionEvent</code>)</li>
@@ -1552,31 +1542,31 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>starter</code></td>
                             <td style="text-align: left;"><code>schema:competitor</code></td>
                             <td style="text-align: left;">Athletes(s) or teams(s) taking part in the competition at the beginning of the event to compete in the event.</td>
-                            <td style="text-align: left;"><a href="#person">Person</a> or <a href="#sports-team">Sports Team</a></td>
+                            <td style="text-align: left;"><a>Person</a> or <a>Sports Team</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>sponsor</code></td>
                             <td style="text-align: left;"><code>schema:sponsor</code></td>
                             <td style="text-align: left;">Person(s) or organization(s) that sponsors a competition.</td>
-                            <td style="text-align: left;"><a href="#person">Person</a> or <a href="#organization">Organization</a></td>
+                            <td style="text-align: left;"><a>Person</a> or <a>Organization</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>attendee</code></td>
                             <td style="text-align: left;"><code>schema:attendee</code></td>
                             <td style="text-align: left;">Person(s) who attends a competition.</td>
-                            <td style="text-align: left;"><a href="#person">Person</a></td>
+                            <td style="text-align: left;"><a>Person</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>sportsDiscipline</code></td>
                             <td style="text-align: left;"><code>ath:sportsDiscipline</code></td>
                             <td style="text-align: left;">Type of an Athletics competition according to specific rules set by governing bodies (e.g., <code>Outdoor Sprint Relays</code>).</td>
-                            <td style="text-align: left;"><a href="#sports-discipline">SportsDiscipline</a></td>
+                            <td style="text-align: left;"><a>Sports Discipline</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>competitionCategory</code></td>
                             <td style="text-align: left;"><code>ath:competitionCategory</code></td>
                             <td style="text-align: left;">The specific category for a competition (e.g., <em>M35</em>, <em>U18 Male</em>, <em>local competitors</em>, etc).</td>
-                            <td style="text-align: left;"><a href="#category">Competition Category</a></td>
+                            <td style="text-align: left;"><a>Competition Category</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>entryRequirements</code></td>
@@ -1596,12 +1586,12 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>competitionRegistration</code></td>
                             <td style="text-align: left;"><code>schema:potentialAction</code></td>
                             <td style="text-align: left;">Potential action of athletes&#39; sign up to take part in the competition.</td>
-                            <td style="text-align: left;"><a href="#competition-registration">Competition Registration</a></td>
+                            <td style="text-align: left;">[=Competition Registration=]</td>
                         </tr>
                     </tbody>
                 </table>
                 <p>
-                    Competitions may be part of <a href="#competition-series">Competition Series</a>, this is, competitions that have events periodically (e.g.,
+                    Competitions may be part of [=Competition Series=], this is, competitions that have events periodically (e.g.,
                     <a href="https://www.olympic.org/rio-2016/athletics">2016 Summer Olympic Games in Rio</a> as part of the Olympic Games held every four years);
                 </p>
                 <section>
@@ -1648,7 +1638,7 @@ The content of the example is in monospace font and may be syntax colored.
                                 <td style="text-align: left;"><code>subEvent</code></td>
                                 <td style="text-align: left;"><code>schema:subEvent</code></td>
                                 <td style="text-align: left;">A competition that happens as a recurring event within a series of competitions (e.g., <em>London 2012</em> <em>Olympic Games</em>)</td>
-                                <td style="text-align: left;"><a href="#competition">Competition</a></td>
+                                <td style="text-align: left;">[=Competition=]</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1712,7 +1702,7 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>address</code></td>
                             <td style="text-align: left;"><code>schema:address</code></td>
                             <td style="text-align: left;">Postal address related to a venue.</td>
-                            <td style="text-align: left;"><a href="#postal-address">Postal Address</a> or Text</td>
+                            <td style="text-align: left;"><a>Postal Address</a> or Text</td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>url</code></td>
@@ -1730,7 +1720,7 @@ The content of the example is in monospace font and may be syntax colored.
                             <td style="text-align: left;"><code>geo</code></td>
                             <td style="text-align: left;"><code>schema:geo</code></td>
                             <td style="text-align: left;">Geographic coordinates and/or elevation (expressed in metres, following <a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>) of a venue.</td>
-                            <td style="text-align: left;"><a href="#geo-coordinates">Geo Coordinates</a></td>
+                            <td style="text-align: left;"><a>Geo Coordinates</a></td>
                         </tr>
                         <tr>
                             <td style="text-align: left;"><code>map</code></td>
@@ -1885,11 +1875,11 @@ The content of the example is in monospace font and may be syntax colored.
             </section>
             <section>
                 <h3 id="sports-discipline">Sports Discipline</h3>
-                <p>An <dfn>Athletics Discipline</dfn> is a particular type of Athletics event defined by specific rules.</p>
+                <p>An <dfn data-lt="sports discipline|discipline">Athletics Discipline</dfn> is a particular type of Athletics event defined by specific rules.</p>
                 <p>
                     <a href="https://www.iaaf.org/disciplines">According to IAAF</a>, Athletics events may be classified into: <em>Sprints</em>, <em>Middle/long distance</em>, <em>Hurdles</em>, <em>Road Running</em>, <em>Jumps</em>,
                     <em>Throws</em>, <em>Combined Events</em>, <em>Race Walks</em>, <em>Relays</em>, <em>Cross Country</em>, <em>Mountain Running</em> and <em>Ultra Running</em>. IOC ODF [[IOC-ODF]] uses:
-                    <em>Races (track and road) and relays</em>, <em>Throws</em>, <em>Horizontal Jumps</em> and <em>Vertical Jumps</em>. <a href="http://opentrack.run/athlib/build/html/eventcodes.html">Athlib proposes codes</a> to represent
+                    <em>[=Races=] (track and road) and relays</em>, <em>Throws</em>, <em>Horizontal Jumps</em> and <em>Vertical Jumps</em>. <a href="http://opentrack.run/athlib/build/html/eventcodes.html">Athlib proposes codes</a> to represent
                     disciplines.
                 </p>
                 <p>
@@ -1933,7 +1923,7 @@ The content of the example is in monospace font and may be syntax colored.
                 </table>
                 <section>
                     <h4 id="race">Race</h4>
-                    <p><dfn>Race</dfn> is a type of competition to see who is the fastest, including running or race-waking.</p>
+                    <p><dfn data-export>Race</dfn> is a type of competition to see who is the fastest, including running (long-medium [=distance races=]), [=sprints=], [=steeplechase=], [=hurdles=]) and [=race-walking=].</p>
                     <ul>
                         <li>class: <code>Race</code> (<code>ath:RaceDiscipline</code>)</li>
                         <li>subClassOf: <code>ath:AthleticsDiscipline</code></li>
@@ -1962,7 +1952,7 @@ The content of the example is in monospace font and may be syntax colored.
                                 <td style="text-align: left;"><code>raceCompetitionType</code></td>
                                 <td style="text-align: left;"><code>ath:raceCompetitionType</code></td>
                                 <td style="text-align: left;">Type of competition (time trial, relays, etc.).</td>
-                                <td style="text-align: left;"><a href="#competition-type">Competition Type</a></td>
+                                <td style="text-align: left;"><a href="competition-type">Competition Type</a></td>
                             </tr>
                             <tr>
                                 <td style="text-align: left;"><code>maxDuration</code></td>
@@ -1975,7 +1965,7 @@ The content of the example is in monospace font and may be syntax colored.
                     <section>
                         <h5 id="distance-race">Distance Race</h5>
                         <p>
-                            A <dfn>Distance Race</dfn> is a Middle-distance or Long-distance running event, over a distance longer than sprints. Range of distances includes 800 <abbr title="meters">m</abbr>, up to Marathon 42.195
+                            A <dfn data-export>Distance Race</dfn> is a Middle-distance or Long-distance running event, over a distance longer than sprints. Range of distances includes 800 <abbr title="meters">m</abbr>, up to Marathon 42.195
                             <abbr title="Kilometers">Km</abbr>.
                         </p>
                         <ul>
@@ -1985,7 +1975,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </section>
                     <section>
                         <h5 id="steeplechase">Steeplechase</h5>
-                        <p><dfn>Steeplechase</dfn> is a long distance running event where runners must clear obstacles and water jumps.</p>
+                        <p><dfn data-export>Steeplechase</dfn> is a long distance running event where runners must clear obstacles and water jumps.</p>
                         <ul>
                             <li>class: <code>SteeplechaseDiscipline</code> (<code>ath:SteeplechaseDiscipline</code>)</li>
                             <li>subClassOf: <code>ath:RaceDiscipline</code></li>
@@ -2011,7 +2001,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </section>
                     <section>
                         <h5 id="hurdles">Hurdles</h5>
-                        <p><dfn>Hurdles</dfn> is a running event where athletes jump over hurdles at speed.</p>
+                        <p><dfn data-export>Hurdles</dfn> is a running event where athletes jump over hurdles at speed.</p>
                         <ul>
                             <li>class: <code>HurdlesDiscipline</code> (<code>ath:HurdlesDiscipline</code>)</li>
                             <li>subClassOf: <code>ath:RaceDiscipline</code></li>
@@ -2043,7 +2033,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </section>
                     <section>
                         <h5 id="sprints">Sprints</h5>
-                        <p><dfn>Sprints</dfn> are running events over a short distance (less than 800m).</p>
+                        <p><dfn data-export>Sprints</dfn> are running events over a short distance (less than 800m).</p>
                         <ul>
                             <li>class: <code>SprintsDiscipline</code> (<code>ath:SprintsDiscipline</code>)</li>
                             <li>subClassOf: <code>ath:RaceDiscipline</code></li>
@@ -2069,7 +2059,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </section>
                     <section>
                         <h5 id="race-walking">Race-walking</h5>
-                        <p><dfn>Race-walking</dfn>, or race walking, is a long-distance discipline where one foot must appear to be in contact with the ground at all times.</p>
+                        <p><dfn data-export>Race-walking</dfn>, or race walking, is a long-distance discipline where one foot must appear to be in contact with the ground at all times.</p>
                         <ul>
                             <li>class: <code>RaceWalkingDiscipline</code> (<code>ath:RaceWalkingDiscipline</code>)</li>
                             <li>subClassOf: <code>ath:RaceDiscipline</code></li>
@@ -2077,7 +2067,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </section>
                     <section>
                         <h5 id="cross-country">Cross Country</h5>
-                        <p><dfn>Cross Country</dfn> is a running discipline in which teams and individuals run a race on open-air courses over natural terrain such as dirt or grass.</p>
+                        <p><dfn data-export>Cross Country</dfn> is a running discipline in which teams and individuals run a race on open-air courses over natural terrain such as dirt or grass.</p>
                         <ul>
                             <li>class: <code>CrossCountry</code> (<code>ath:CrossCountry</code>)</li>
                             <li>subClassOf: <code>ath:RaceDiscipline</code></li>
@@ -2085,7 +2075,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </section>
                     <section>
                         <h5 id="road-running">Road Running</h5>
-                        <p><dfn>Road Running</dfn> is an Athletics discipline on a measured course over an established road.</p>
+                        <p><dfn data-export>Road Running</dfn> is an Athletics discipline on a measured course over an established road.</p>
                         <ul>
                             <li>class: <code>RoadRunningDiscipline</code> (<code>ath:RoadRunningDiscipline</code>)</li>
                             <li>subClassOf: <code>ath:RaceDiscipline</code></li>
@@ -2093,7 +2083,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </section>
                     <section>
                         <h5 id="mountain-running">Mountain Running</h5>
-                        <p><dfn>Mountain Running</dfn> is a Athletics discipline that takes place on terrain that is mainly off-road and which course may gain elevation.</p>
+                        <p><dfn data-export>Mountain Running</dfn> is a Athletics discipline that takes place on terrain that is mainly off-road and which course may gain elevation.</p>
                         <ul>
                             <li>class: <code>MountainRunningDiscipline</code> (<code>ath:MountainRunningDiscipline</code>)</li>
                             <li>subClassOf: <code>ath:RaceDiscipline</code></li>
@@ -2101,7 +2091,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </section>
                     <section>
                         <h5 id="track-relays">Track Relays</h5>
-                        <p><dfn>Relays</dfn>, relays race or relay race, is a track race between two or more teams where each member of the team runs one leg of the race.</p>
+                        <p><dfn data-export>Relays</dfn>, relays race or relay race, is a track race between two or more teams where each member of the team runs one leg of the race.</p>
                         <ul>
                             <li>class: <code>TrackRelaysDiscipline</code> (<code>ath:TrackRelaysDiscipline</code>)</li>
                             <li>subClassOf: <code>ath:RaceDiscipline</code></li>
@@ -2109,7 +2099,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </section>
                     <section>
                         <h5 id="ultra-running">Ultra Running</h5>
-                        <p><dfn>Ultra running</dfn>, ultra distance or ultramarathon, is a road race longer than the traditional marathon length (42.195 Km).</p>
+                        <p><dfn data-export>Ultra running</dfn>, ultra distance or ultramarathon, is a road race longer than the traditional marathon length (42.195 Km).</p>
                         <ul>
                             <li>class: <code>UltraRunningDiscipline</code> (<code>ath:UltraRunningDiscipline</code>)</li>
                             <li>subClassOf: <code>ath:RaceDiscipline</code></li>
@@ -2118,7 +2108,7 @@ The content of the example is in monospace font and may be syntax colored.
                 </section>
                 <section>
                     <h4 id="throws">Throws</h4>
-                    <p><dfn>Throws</dfn> are types of field events in which athletes throws heavy objects in an attempt to mark a farther distance than their competitors.</p>
+                    <p><dfn data-export>Throws</dfn> are types of field events in which athletes throws heavy objects in an attempt to mark a farther distance than their competitors.</p>
                     <ul>
                         <li>class: <code>ThrowsDiscipline</code> (<code>ath:ThrowsDiscipline</code>)</li>
                         <li>subClassOf: <code>ath:AthleticsDiscipline</code></li>
@@ -2147,7 +2137,7 @@ The content of the example is in monospace font and may be syntax colored.
                     <section>
                         <h5 id="shot-put">Shot Put</h5>
                         <p>
-                            <dfn>Shot Put</dfn> is a track and field event involving throwing/putting (throwing in a pushing motion) a heavy spherical object (the shot) as far as possible. The size of the ball, and the length of the wire
+                            <dfn data-export>Shot Put</dfn> is a track and field event involving throwing/putting (throwing in a pushing motion) a heavy spherical object (the shot) as far as possible. The size of the ball, and the length of the wire
                             varies depending on the competition rules.
                         </p>
                         <ul>
@@ -2158,7 +2148,7 @@ The content of the example is in monospace font and may be syntax colored.
                     <section>
                         <h5 id="discus-throw">Discus Throw</h5>
                         <p>
-                            <dfn>Discus Throw</dfn> is a track and field event in which an athlete throws a heavy disc (the discus) in an attempt to mark a farther distance than their competitors. The diameter and weight of the discus
+                            <dfn data-export>Discus Throw</dfn> is a track and field event in which an athlete throws a heavy disc (the discus) in an attempt to mark a farther distance than their competitors. The diameter and weight of the discus
                             varies depending on the competition rules.
                         </p>
                         <ul>
@@ -2187,7 +2177,7 @@ The content of the example is in monospace font and may be syntax colored.
                     <section>
                         <h5 id="hammer-throw">Hammer Throw</h5>
                         <p>
-                            <dfn>Hammer Throw</dfn> is a track and field event in which an athlete throws a metal ball attached by a steel wire to a grip (the hammer). The size of the ball, and the length of the wire varies depending on the
+                            <dfn data-export>Hammer Throw</dfn> is a track and field event in which an athlete throws a metal ball attached by a steel wire to a grip (the hammer). The size of the ball, and the length of the wire varies depending on the
                             competition rules.
                         </p>
                         <ul>
@@ -2215,7 +2205,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </section>
                     <section>
                         <h5 id="javelin-throw">Javelin Throw</h5>
-                        <p><dfn>Javelin Throw</dfn> is a track and field event where the javelin, a spear about 2.5 m (8 ft 2 in) in length, is thrown. Lenght and weight of javelin may vary depending on the rules of the competition.</p>
+                        <p><dfn data-export>Javelin Throw</dfn> is a track and field event where the javelin, a spear about 2.5 m (8 ft 2 in) in length, is thrown. Lenght and weight of javelin may vary depending on the rules of the competition.</p>
                         <ul>
                             <li>class: <code>JavelinThrowDiscipline</code> (<code>ath:JavelinThrowDiscipline</code>)</li>
                             <li>subClassOf: <code>ath:ThrowsDiscipline</code></li>
@@ -2242,7 +2232,7 @@ The content of the example is in monospace font and may be syntax colored.
                     <section>
                         <h5 id="weight-throw">Weight Throw</h5>
                         <p>
-                            <dfn>Weight Throw</dfn> is a track and field event usually play indoors which is equivalent to the hammer throw event, which can only be held outdoors. Ball weight may vary depending on the rules of the
+                            <dfn data-export>Weight Throw</dfn> is a track and field event usually play indoors which is equivalent to the hammer throw event, which can only be held outdoors. Ball weight may vary depending on the rules of the
                             competition.
                         </p>
                         <ul>
@@ -2254,7 +2244,7 @@ The content of the example is in monospace font and may be syntax colored.
                 <section>
                     <h4 id="horizontal-jumps">Horizontal Jumps</h4>
                     <p>
-                        <dfn>Horizontal Jumps</dfn> are track and field events in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point. Horizontal jumps include: long jump and
+                        <dfn data-export>Horizontal Jumps</dfn> are track and field events in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point. Horizontal jumps include: long jump and
                         triple jump.
                     </p>
                     <ul>
@@ -2264,7 +2254,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </ul>
                     <section>
                         <h5 id="long-jump">Long Jump</h5>
-                        <p><dfn>Long Jump</dfn> (or broad jump) is a track and field event in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point.</p>
+                        <p><dfn data-export>Long Jump</dfn> (or broad jump) is a track and field event in which athletes combine speed, strength and agility in an attempt to leap as far as possible from a take off point.</p>
                         <ul>
                             <li>class: <code>LongJumpDiscipline</code> (<code>ath:LongJumpDiscipline</code>)</li>
                             <li>subClassOf: <code>ath:HorizontalJumpsDiscipline</code></li>
@@ -2273,7 +2263,7 @@ The content of the example is in monospace font and may be syntax colored.
                     <section>
                         <h5 id="triple-jump">Triple Jump</h5>
                         <p>
-                            <dfn>Triple Jump</dfn> (sometimes referred to as the hop, step and jump or the hop, skip and jump), is a track and field event, where competitors run down the track and perform a hop, a bound and then a jump into
+                            <dfn data-export>Triple Jump</dfn> (sometimes referred to as the hop, step and jump or the hop, skip and jump), is a track and field event, where competitors run down the track and perform a hop, a bound and then a jump into
                             the sand pit.
                         </p>
                         <ul>
@@ -2284,7 +2274,7 @@ The content of the example is in monospace font and may be syntax colored.
                 </section>
                 <section>
                     <h4 id="verticaljumps">VerticalJumps</h4>
-                    <p><dfn>Vertical Jumps</dfn> are track and field events in which competitors must jump or vault over a horizontal bar placed at measured heights without dislodging it.</p>
+                    <p><dfn data-export>Vertical Jumps</dfn> are track and field events in which competitors must jump or vault over a horizontal bar placed at measured heights without dislodging it.</p>
                     <ul>
                         <li>class: <code>VerticalJumpsDiscipline</code> (<code>ath:VerticalJumpsDiscipline</code>)</li>
                         <li>subClassOf: <code>ath:AthleticsDiscipline</code></li>
@@ -2292,7 +2282,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </ul>
                     <section>
                         <h5 id="high-jump">High Jump</h5>
-                        <p><dfn>High Jump</dfn> is a track and field event in which competitors must jump unaided over a horizontal bar placed at measured heights without dislodging it.</p>
+                        <p><dfn data-export>High Jump</dfn> is a track and field event in which competitors must jump unaided over a horizontal bar placed at measured heights without dislodging it.</p>
                         <ul>
                             <li>class: <code>HighJumpDiscipline</code> (<code>ath:HighJumpDiscipline</code>)</li>
                             <li>subClassOf: <code>ath:VerticalJumpsDiscipline</code></li>
@@ -2300,7 +2290,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </section>
                     <section>
                         <h5 id="pole-vault">Pole Vault</h5>
-                        <p><dfn>Pole Vault</dfn> is a track and field event in which a person uses a long, flexible pole as an aid to jump over a bar.</p>
+                        <p><dfn data-export>Pole Vault</dfn> is a track and field event in which a person uses a long, flexible pole as an aid to jump over a bar.</p>
                         <ul>
                             <li>class: <code>PoleVaultDiscipline</code> (<code>ath:PoleVaultDiscipline</code>)</li>
                             <li>subClassOf: <code>ath:VerticalJumpsDiscipline</code></li>
@@ -2309,7 +2299,7 @@ The content of the example is in monospace font and may be syntax colored.
                 </section>
                 <section>
                     <h4 id="combined-discipline">Combined Discipline</h4>
-                    <p><dfn>Combined Discipline</dfn> is a competition where athletes participate in a number of track and field events, earning points for their performance in each event, which adds to a total points score.</p>
+                    <p><dfn data-export>Combined Discipline</dfn> is a competition where athletes participate in a number of track and field events, earning points for their performance in each event, which adds to a total points score.</p>
                     <ul>
                         <li>class: <code>CombinedDiscipline</code> (<code>ath:CombinedDiscipline</code>)</li>
                         <li>subClassOf: <code>ath:AthleticsDiscipline</code></li>
@@ -2328,7 +2318,7 @@ The content of the example is in monospace font and may be syntax colored.
                                 <td style="text-align: left;"><code>sportsDiscipline</code></td>
                                 <td style="text-align: left;"><code>ath:sportsDiscipline</code></td>
                                 <td style="text-align: left;">Combined sub-disciplines for this event.</td>
-                                <td style="text-align: left;"><a href="#sports-discipline">Sports Discipline</a></td>
+                                <td style="text-align: left;"><a>Sports Discipline</a></td>
                             </tr>
                             <tr>
                                 <td style="text-align: left;"><code>scorePointsReference</code></td>
