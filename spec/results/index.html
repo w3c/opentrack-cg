@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Athletics Competition Results Model</title>
+        <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+        <script class="remove">
+            var respecConfig = {
+                group: "opentrack",
+                latestVersion: "https://w3c.github.io/opentrack-cg/spec/results/",
+                specStatus: "CG-DRAFT",
+                editors: [
+                    {
+                        name: "Martin Alvarez-Espinar",
+                        companyURL: "https://www.huawei.com",
+                        company: "Huawei",
+                        w3cid: 125049
+                    },
+                ],
+                repoURL: "https://github.com/w3c/opentrack-cg",
+                maxTocLevel: 3,
+                processVersion: 2018,
+                otherLinks: [
+                    {
+                        key: "Contributors",
+                        data: [
+                        ],
+                    },
+                    {
+                        key: "Repository",
+                        value: "Github",
+                        href: "https://github.com/w3c/opentrack-cg",
+                        class: "repo",
+                    },
+                    {
+                        key: "Issues",
+                        href: "https://github.com/w3c/opentrack-cg/issues/",
+                    },
+                ],
+                logos: [],
+                localBiblio: {
+                    "IOC-ODF": {
+                        title: "Olympic Data Feed",
+                        href: "http://odf.olympictech.org/",
+                        publisher: "IOC",
+                    }
+                },
+                shortName: "opentrack",
+                noRecTrack: true
+            };
+        </script>
+        <style>
+            table tr:hover {
+                background-color: #c9daf8;
+            }
+            table th {
+                border-bottom: 2px #c9daf8 solid;
+            }
+            tr:nth-child(even) {
+                background: #f1f9ff;
+            }
+            tr:nth-child(odd) {
+                background: #fff;
+            }
+            table.definitions td, table.definitions th{
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="abstract">
+            <p>
+                This specification, developed by the <a href="http://www.w3.org/community/opentrack/">W3C OpenTrack Community Group</a>, introduces a data schema to describe Athletics data on the Web. This document, based on the World Athletics´ requirements, defines the main concepts of Athletics competitions, with the objective of interoperability of result competition data.
+            </p>
+        </section>
+        <section id="sotd">
+            <p>
+                This vocabulary is in process of development.
+            </p>
+        </section>
+        <section class="informative">
+            <h2 id="introduction">Introduction</h2>
+            <p>
+                This proposal is based on the World Athletics´ requirements to represent competitions and their results, including: event structure (rounds); athletes and teams; results; performances; and venues.</p>
+            <p>
+                This document specifies a lightweight schema, implemented in JSON to represent the main concepts and relations, and potential values to guarantee a common representation of the information in this realm.
+            </p>
+            <p>
+                No section should be considered final, and the absence of any content does not imply that such content is out of scope, or may not appear in the future. If you feel something should be covered, please
+                <a href="https://github.com/w3c/opentrack-cg/issues">tell us</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2 id="typographical-conventions">Typographical Conventions</h2>
+            <p>The following typographic conventions are used in this specification:</p>
+            <ul>
+                <li><code>markup</code>: Markup (elements, attributes, properties), machine processable values (string, characters, media types), property name, or a file name is in a monospace font.</li>
+                <li>
+                    <strong><em>definition</em></strong>: A definition of a term, to be used elsewhere in this or other specifications, is in bold and italics.
+                </li>
+                <li><a href="">hyperlink</a>: A hyperlink is underlined and in blue.</li>
+            </ul>
+            <div class="note">
+                Notes are in light green boxes with a green left border and with a &quot;Note&quot; header in green. Notes are normative or informative depending on the whether they are in a normative or informative section, respectively.
+            </div>
+            <pre class="example">
+Examples are in light khaki boxes, with khaki left border, and with a
+numbered "Example" header in khaki. Examples are always informative.
+The content of the example is in monospace font and may be syntax colored.
+            </pre>
+        </section>
+
+        <section>
+            <h2 id="overview-of-the-model">Overview of the model</h2>
+            <p>The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish Athletics competitions and their results.</p>
+            <figure>
+                <img src="./images/wa-proposal.svg" alt="Athletics Competition Model" />
+                <figcaption>Athletics Competition Model</figcaption>
+            </figure>
+            
+            <p>The main entities of the model are:</p>
+
+            <dl>
+                <dt>Competition</dt>
+                <dd>
+                    A [=competition=] is an organized occasion where one or more sports events are planed and take place at a specific location during a period of time. Athletics events are usually part of a bigger meeting, or competition (e.g., Area Championships, Olympic Games, track and field meetings) and are organized in different sub-events depending on the disciplines and categories (i.e., [=competition units=]). These unitary competitions (e.g., 100m U18 Men, 110 U23 Women) are structured in [=rounds=] (e.g., semi-finals, finals...) that include one or more unitary [=races=] or field contests.
+                </dd>
+
+                <dt>Competitors (Athletes and Teams)</dt>
+                <dd>
+                    An [=athlete=] is a person who takes part in a [=competition=] as an individual competitor. Athletes are defined by gender, age, nationality, and other personal information. A [=relay team=] is group of [=athletes=] who takes part in a competition as a whole, competing against other teams. Both athletes and teams can be affiliated to.
+                </dd>
+
+                <dt>Venues</dt>
+                <dd>
+                    A [=venue=] is the place or location where the [=competitions=] are held.
+                </dd>
+
+                <dt>Results</dt>
+                <dd>
+                    Unitary [=races=] or field contests produce results. Depending on the type of competitor, results may be either [=individual results=] (corresponding to [=athletes=]) or [=relay results=] (generated by [=teams=]). The nature of the event type determines the details of individual results and performance of competitors: [=outdoor horizontal jump results=], [=indoor horizontal jump results=], [=vertical jump results=], [=throws results=], and [=split times=].  
+                </dd>
+            </dl>
+
+            <p>See below all the concepts and their attributes explained in detail, including the specific class and properties that serve to describe Athletics resources. Concepts include examples of implementation.</p>
+        </section>
+
+        <section>
+            <h2>Concepts</h2>
+            <section>
+                <h3>Athlete</h3>
+                <p>
+                    An <dfn>athlete</dfn> is a person who participates in an [=athletics competition=].
+                </p>
+                <table class="definitions">
+                    <thead>
+                        <tr>
+                            <th scope="col">Member</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>`id`</td>
+                            <td>`integer`</td>
+                            <td>Local identifier of an athlete.</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`waId`</td>
+                            <td>`integer`</td>
+                            <td>Unique identifier of an athlete provided by World Athletics.</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>`firstName`</td>
+                            <td>`string`</td>
+                            <td>Athlete's given name.</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`lastName`</td>
+                            <td>`string`</td>
+                            <td>Athlete's family name or surname.</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`birthdate`</td>
+                            <td>`string` (<a href="#date">Date</a>)</td>
+                            <td>Athlete's date of birth.</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`country`</td>
+                            <td>`enum` (<a href="#country">Country</a>)</td>
+                            <td>Athlete's nationality.</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`sex`</td>
+                            <td>`enum` (<a href="#gender">Gender</a>)</td>
+                            <td>Athlete's gender.</td>
+                            <td>no</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <pre class="example" title="Description of an athlete">
+{
+    "id" : 1002,
+    "waId" : 1000,
+    "firstName" : "John",
+    "lastName" : "Smith",
+    "sex" : "male" ,
+    "birthdate" : "2000-10-01",
+    "country" : "GBR",
+}
+                </pre>
+            </section>
+            <section>
+                <h3 id="relay-team">Relay Team</h3>
+                <p>
+                    A <dfn data-lt="team">relay team</dfn> is a group of <a>athletes</a> who take part in an athletics [=competition=]. 
+                </p>
+                <table class="definitions">
+                    <thead>
+                        <tr>
+                            <th scope="col">Member</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>`id`</td>
+                            <td>`integer`</td>
+                            <td>Local identifier of a team.</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`waId`</td>
+                            <td>`integer`</td>
+                            <td>Unique identifier of a team provided by World Athletics.</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>`name`</td>
+                            <td>`string`</td>
+                            <td>Team's denomination.</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`country`</td>
+                            <td>`enum` (<a href="#country">Country</a> or "`INT`")</td>
+                            <td>Team's nationality in IOC [[[IOC-ODF]]] format or "`INT`" if international.</td>
+                            <td>yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <pre class="example" title="Description of a team">
+{
+    "id": 10002,
+    "waId": 41, 
+    "name" : "Great Britain National Team (4x100)",
+    "country" : "GBR"
+}
+                </pre>
+            </section>
+            <section>
+                <h3 id="venue">Venue</h3>
+                <p>
+                    A <dfn>venue</dfn> is a location, place or territory where an event is held. Events may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, road races, etc.).
+                </p>
+                <table class="definitions">
+                    <thead>
+                        <tr>
+                            <th scope="col">Member</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>`id`</td>
+                            <td>`integer`</td>
+                            <td>Local identifier of a venue.</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`waId`</td>
+                            <td>`integer`</td>
+                            <td>Unique identifier of a venue provided by World Athletics.</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>`name`</td>
+                            <td>`string`</td>
+                            <td>Denomination of the venue.</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`country`</td>
+                            <td>`string` (<a href="#country">Country</a>)</td>
+                            <td>Country of the venue in IOC [[[IOC-ODF]]] format.</td>
+                            <td>yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <pre class="example" title="Description of a venue">
+{
+    "id": 10212,
+    "waId": 3321, 
+    "name" : "Olympic Stadium Amsterdam",
+    "country" : "NED"
+}
+                </pre>
+            </section>
+            <section>
+                <h3 id="competition">Competition</h3>
+                <p>
+                    A <dfn data-lt="athletics competition|sports competition">Competition</dfn> is an athletics event in which [=athletes=] or [=teams=] take part in order to find out who is best at a particular discipline.
+                </p>
+                <p>
+                    Athletics [=competitions=] may be of different nature, depending on the disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors
+                    (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fund-raising road races or school races are also considered as [=competitions=].
+                </p>
+                <table class="definitions">
+                    <thead>
+                        <tr>
+                            <th scope="col">Member</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>`waId`</td>
+                            <td>`integer`</td>
+                            <td>Unique identifier of a competition provided by World Athletics.</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>`athletes`</td>
+                            <td>`array` of [=Athletes=]</td>
+                            <td>List of athletes registered in the competition.</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`relayTeams`</td>
+                            <td>`array` of [=Relay Teams=]</td>
+                            <td>List of teams registered in the competition.</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>`venues`</td>
+                            <td>`array` of [=Venues=]</td>
+                            <td>List of venues where a competition is held.</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>`units`</td>
+                            <td>`array` of [=Competition Units=]</td>
+                            <td>Structure of the competition in units.</td>
+                            <td>yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="issue">
+                    Relay Teams shouldn't be required in Competitions.
+                </div>
+                <pre class="example" title="Description of a competition">
+{
+    "waId": 10928,
+    "athletes": [...],
+    "relayTeams": [...],
+    "venues": [...],
+    "units" : [...]
+}
+                </pre>
+            </section>
+            <section>
+                <h3 id="competition-unit">Competition Unit</h3>
+                <p>
+                    A <dfn data-lt="athletics competition unit">competition unit</dfn> is a sub-event within an [=athletics competition=] that addresses a specific discipline and category (e.g., 100m U18 Men, 110 U23 Women, Marathon Men).
+                </p>
+                <table class="definitions">
+                    <thead>
+                        <tr>
+                            <th scope="col">Member</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>`waEventId`</td>
+                            <td>`integer`</td>
+                            <td>Unique identifier of a competition provided by World Athletics.</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`title`</td>
+                            <td>`string`</td>
+                            <td>Additional information about this competition unit to distinguish from other competition units of the same World Athletics event.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>`minAge`</td>
+                            <td>`integer`</td>
+                            <td>Minimum age of the athletes competing in a competition unit [0..130].</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>`maxAge`</td>
+                            <td>`integer`</td>
+                            <td>Maximum age of the athletes competing in a competition unit [0..130].</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>`rounds`</td>
+                            <td>`array` of [=Rounds=]</td>
+                            <td>Structure of the unitary competition in rounds.</td>
+                            <td>yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="issue">
+                    Should we include gender as well?
+                </div>
+                <pre class="example" title="Description of a competition unit">
+{
+    "waEventId": 10930,
+    "title": "Marathon Men (U23)",
+    "maxAge": 22,
+    "minAge": 18,
+    "rounds" : [...]
+}
+                </pre>
+            </section>
+            <section>
+                <h3 id="round">Round</h3>
+                <p>
+                    A <dfn>round</dfn> is a stage or phase of a [=competition unit=] (e.g., semi-final, qualifications, final).
+                </p>
+                <table class="definitions">
+                    <thead>
+                        <tr>
+                            <th scope="col">Member</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>`type`</td>
+                            <td>`enum` (<a href="#round-type">Round Type</a>)</td>
+                            <td>Stage of the competition.</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`races`</td>
+                            <td>`array` of [=Races=]</td>
+                            <td>One or more physical events held in a round.</td>
+                            <td>yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="issue">
+                    Both members should be required (at least one).
+                </div>
+                <pre class="example" title="Description of a round">
+{
+    "type": "Final",
+    "races": [...]
+}
+                </pre>
+            </section>
+            <section>
+                <h3 id="race">Race</h3>
+                <p>
+                    A <dfn>race</dfn> or field contest, is a physical event where the competitors produce [=results=].
+                </p>
+                <table class="definitions">
+                    <thead>
+                        <tr>
+                            <th scope="col">Member</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>`number`</td>
+                            <td>`integer`</td>
+                            <td>Positive integer indicating the number of race or contest in the [=round=].</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`date`</td>
+                            <td>`string` (<a href="#date">Date</a>)</td>
+                            <td>Date when the race or field contest was held.</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>`wind`</td>
+                            <td>`string` (<a href="#wind-assistance">Wind Assistance</a>)</td>
+                            <td>Wind assistance in this race or field contest.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>`oversizedTrack`</td>
+                            <td>`boolean`</td>
+                            <td>Flag to indicate if the track is oversized.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>`startTime`</td>
+                            <td>`string` (<a href="#time">Time</a>)</td>
+                            <td>Start time of the race.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>`endTime`</td>
+                            <td>`string` (<a href="#time">Time</a>)</td>
+                            <td>End time of the race.</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>`results`</td>
+                            <td>`array` of [=Results=]</td>
+                            <td>Results of this race or field contest.</td>
+                            <td>yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="issue">
+                    Should we include startDate, endDate?
+                </div>
+                <pre class="example" title="Description of a round">
+{
+    "number": 1,
+    "date": "2022-01-22",
+    "wind": "+1.4",
+    "startTime": "10:00",
+    "endTime": "12:11",
+    "results": [...]
+}
+                </pre>
+            </section>
+            <section>
+                <h3 id="results">Results</h3>
+                <p>
+                    A <dfn>result</dfn> is the outcome of the participation or a competitor in a [=race=] or field contest. Individual [=athletes=] produce [=individual results=] and [=teams=] produce [=relay results=].
+                </p>
+                <section>
+                    <h4 id="individual-result">Individual Result</h4>
+                    <p>
+                        An <dfn>individual result</dfn> is the outcome of the participation or an [=athlete=] in a [=race=] or field contest.
+                    </p>
+                    <table class="definitions">
+                        <thead>
+                            <tr>
+                                <th scope="col">Member</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>`athleteId`</td>
+                                <td>`integer`</td>
+                                <td>Identifier of the athlete.</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>`wind`</td>
+                                <td>`string` (<a href="#wind-assistance">Wind Assistance</a>)</td>
+                                <td>Wind assistance associated to a result.</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>`result`</td>
+                                <td>`string` (<a href="#fault">Fault</a> or <a href="#time-result-format">Time Result Format</a> or <a href="#metres-result-format">Metres Result Format</a> or <a href="#points-result-format">Points Result Format</a> or <a href="#metres-track-result-format">Metres Track Result Format</a>)</td>
+                                <td>Individual result details (i.e., performance or feature).</td>
+                                <td>no</td>
+                            </tr>                            
+                            <tr>
+                                <td>`outOfCompetition`</td>
+                                <td>`boolean`</td>
+                                <td>Flag to indicate if the athlete is out of the competition.</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>`placeInRace`</td>
+                                <td>`integer`</td>
+                                <td>Athlete's rank in the race or field contest.</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>`placeInRound`</td>
+                                <td>`integer`</td>
+                                <td>Athlete's rank in the round.</td>
+                                <td>no</td>
+                            </tr>                            
+                            <tr>
+                                <td>`qualified`</td>
+                                <td>`enum` (<a href="#qualification-type">Qualification Type</a>)</td>
+                                <td>Information about the qualification for the next round.</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>`detail`</td>
+                                <td>`array` of ([=Outdoor horizontal jump results=] or [=Indoor horizontal jump results=] or [=Vertical jump results=] or [=Throws results=] or [=Split times=])</td>
+                                <td>Concrete details of the results.</td>
+                                <td>no</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <pre class="example" title="Description of an individual result">
+    {
+        "athleteId": 1221,
+        "wind": "+1.4",
+        "result": "10.33",
+        "outOfCompetition": false,
+        "placeInRace": 2,
+        "placeInRound": 3,
+        "qualified": "q",
+        "detail": [...]
+    }
+                    </pre>
+                </section>
+                <section>
+                    <h4 id="relay-result">Relay Result</h4>
+                    <p>
+                        A <dfn>relay result</dfn> is the outcome of the participation or a [=relay team=] in a [=race=].
+                    </p>
+                    <table class="definitions">
+                        <thead>
+                            <tr>
+                                <th scope="col">Member</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>`relayTeamId`</td>
+                                <td>`integer`</td>
+                                <td>Identifier of the team.</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>`legs`</td>
+                                <td>`array` of `integer`</td>
+                                <td>Local athlete's identifiers corresponding to the relay legs.</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>`result`</td>
+                                <td>`string` (<a href="#fault">Fault</a> or <a href="#time-result-format">Time Result Format</a> or (<a href="#metres-result-format">Metres Result Format</a>) or <a href="#points-result-format">Points Result Format</a> or <a href="#metres-track-result-format">Metres Track Result Format</a>)</td>
+                                <td>Team result details (i.e., performance or feature).</td>
+                                <td>no</td>
+                            </tr>                            
+                            <tr>
+                                <td>`outOfCompetition`</td>
+                                <td>`boolean`</td>
+                                <td>Flag to indicate if the team is out of the competition.</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>`placeInRace`</td>
+                                <td>`integer`</td>
+                                <td>Team's rank in the race or field contest.</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>`placeInRound`</td>
+                                <td>`integer`</td>
+                                <td>Team's rank in the round.</td>
+                                <td>no</td>
+                            </tr>                            
+                            <tr>
+                                <td>`qualified`</td>
+                                <td>`enum` (<a href="#qualification-type">Qualification Type</a>)</td>
+                                <td>Information about the qualification for the next round.</td>
+                                <td>no</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <pre class="example" title="Description of a relay result">
+    {
+        "relayTeamId": 2322,
+        "legs": [ 1221, 2029, 9123, 2342],
+        "result": "43.33",
+        "outOfCompetition": false,
+        "placeInRace": 2,
+        "placeInRound": 3,
+        "qualified": "q"
+    }
+                </section>
+            </section>
+            <section>
+                <h3 id="detailed-results">Detailed Results</h3>
+                <p>
+                    A detailed result is the fine-grained specification of the participation or a competitor in a [=race=] or field contest. Depending on the discipline, the result details could be expressed as: [=outdoor horizontal jump results=], [=indoor horizontal jump results=], [=vertical jump results=], [=throws results=], and [=split times=].
+                </p>
+                <section>
+                    <h4 id="outdoor-horizontal-jump-results">Outdoor Horizontal Jump Results</h4>
+                    <p>
+                        <dfn>Outdoor horizontal jump results</dfn> are the details of the outcomes of the [=athlete=]'s participation in an outdoor horizontal jump contest.
+                    </p>
+                    <table class="definitions">
+                        <thead>
+                            <tr>
+                                <th scope="col">Member</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>`result`</td>
+                                <td>`string` (<a href="#horizontal-jump-features">Horizontal Jump Features</a> or <a href="#metres-result-format">Metres Result Format</a>)</td>
+                                <td>Performance or feature achieved.</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>`wind`</td>
+                                <td>`string` (<a href="#wind-assistance">Wind Assistance</a>)</td>
+                                <td>Wind assistance associated to a result.</td>
+                                <td>yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <pre class="example" title="Description of an outdoor triple jump result detail">
+    {
+        "result": "14.54",
+        "wind": "+1.4"
+    }
+                    </pre>
+                </section>
+                <section>
+                    <h4 id="indoor-horizontal-jump-results">Indoor Horizontal Jump Results</h4>
+                    <p>
+                        <dfn>Indoor horizontal jump results</dfn> are the details of the outcomes of the [=athlete=]'s participation in an indoor horizontal jump contest.
+                    </p>
+                    <table class="definitions">
+                        <thead>
+                            <tr>
+                                <th scope="col">Member</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>`result`</td>
+                                <td>`string` (<a href="#horizontal-jump-features">Horizontal Jump Features</a> or (<a href="#metres-result-format">Metres Result Format</a>)</td>
+                                <td>Performance or feature achieved.</td>
+                                <td>yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <pre class="example" title="Description of an indoor triple jump result detail">
+    {
+        "result": "14.54"
+    }
+                    </pre>
+                </section>
+                <section>
+                    <h4 id="vertical-jump-results">Vertical Jump Results</h4>
+                    <p>
+                        <dfn>Vertical jump results</dfn> are the details of the outcomes of the [=athlete=]'s participation in a vertical jump contest.
+                    </p>
+                    <table class="definitions">
+                        <thead>
+                            <tr>
+                                <th scope="col">Member</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>`height`</td>
+                                <td>`string` (<a href="#metres-result-format">Metres Result Format</a>)</td>
+                                <td>Performance or feature achieved.</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>`attempts`</td>
+                                <td>`string` (<a href="#vertical-jump-features">Vertical Jump Features</a>)</td>
+                                <td>Record of attempts in the contest.</td>
+                                <td>yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <pre class="example" title="Description of a high jump result detail">
+    {
+        "height": "2.22",
+        "attempts": "xxo"
+    }
+                    </pre>
+                </section>
+                <section>
+                    <h4 id="throws-results">Throws Results</h4>
+                    <p>
+                        <dfn>Throws results</dfn> are the details of the outcomes of the [=athlete=]'s participation in a throws contest.
+                    </p>
+                    <table class="definitions">
+                        <thead>
+                            <tr>
+                                <th scope="col">Member</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>`result`</td>
+                                <td>`string` (<a href="#throws-features">Throws Features</a> or <a href="#metres-result-format">Metres Result Format</a>)</td>
+                                <td>Performance or feature achieved.</td>
+                                <td>yes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <pre class="example" title="Description of a shot put result detail">
+    {
+        "height": "15.31"
+    }
+                    </pre>
+                </section>
+                <section>
+                    <h4 id="split-times">Split Times</h4>
+                    <p>
+                        <dfn>Split times</dfn> are the partial times of the [=athlete=]'s performance recorded during a [=race=] at specific distances.
+                    </p>
+                    <table class="definitions">
+                        <thead>
+                            <tr>
+                                <th scope="col">Member</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>`distance`</td>
+                                <td>`string` (<a href="#metres-result-format">Metres Result Format</a>)</td>
+                                <td>Distance of the race where a split time was recorded.</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>`result`</td>
+                                <td>`string` (<a href="#time-result-format">Time Result Format</a>)</td>
+                                <td>Split time at a specific distance during a race.</td>
+                                <td>yes</td>
+                            </tr>                            
+                        </tbody>
+                    </table>
+                    <pre class="example" title="Description of a shot put result detail">
+    {
+        "distance": "400",
+        "result": "01:04.23"
+    }
+                    </pre>
+                </section>
+            </section>
+        </section>
+
+        <hr />
+
+        <section>
+            <h2 id="enumeration-codes">Enumerations and Codes</h2>
+
+            <section>
+                <h3 id="date">Date</h3>
+                <p>Date is represented using the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> standard: `[YYYY][MM][DD]` or `[YYYY]-[MM]-[DD]`.</p>
+                <pre class="example" title="Representation of 7th April 2017">
+2017-04-07
+                </pre>
+            </section>
+            <section>
+                <h3 id="time">Time</h3>
+                <p>Time is represented using the <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> standard: `[hh][mm][ss].sss` or `[hh]:[mm]:[ss].sss`.</p>
+                <pre class="example" title="Representation of 2 hours, 5 minutes and 34 seconds">
+02:05:34.000
+                </pre>
+            </section>
+            <section>
+                <h3 id="gender">Gender</h3>
+                <p>Enumeration of genders with two values:</p>
+                <table class="definitions">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Gender</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>Male</code></td>
+                            <td>Men and/or boys.</td>
+                        </tr>
+                        <tr>
+                            <td><code>Female</code></td>
+                            <td>Women and/or girls.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="issue">
+                    Should we unify the notation styles of terms (title case)?
+                </div>
+            </section>
+            <section>
+                <h3 id="country">Country</h3>
+                <p>One of:
+                   `AFG`,  `AIA`,  `ALB`,  `ALG`,  `ANA`,  `AND`,  `ANG`,  `ANT`,  `ARG`,  `ARM`,  `ART`,  `ARU`,  `ASA`,  `AUS`,  `AUT`,  `AZE`,  `BAH`,  `BAN`,  `BAR`,  `BDI`,  `BEL`,  `BEN`,  `BER`,  `BHU`,  `BIH`,  `BIZ`,  `BLR`,  `BOL`,  `BOT`,  `BRA`,  `BRN`,  `BRU`,  `BUL`,  `BUR`,  `CAF`,  `CAM`,  `CAN`,  `CAY`,  `CGO`,  `CHA`,  `CHI`,  `CHN`,  `CIV`,  `CMR`,  `COD`,  `COK`,  `COL`,  `COM`,  `CPV`,  `CRC`,  `CRO`,  `CUB`,  `CYP`,  `CZE`,  `DEN`,  `DJI`,  `DMA`,  `DOM`,  `ECU`,  `EGY`,  `ERI`,  `ESA`,  `ESP`,  `EST`,  `ETH`,  `FIJ`,  `FIN`,  `FRA`,  `FSM`,  `GAB`,  `GAM`,  `GBR`,  `GBS`,  `GEO`,  `GEQ`,  `GER`,  `GHA`,  `GIB`,  `GRE`,  `GRN`,  `GUA`,  `GUI`,  `GUM`,  `GUY`,  `HAI`,  `HKG`,  `HON`,  `HUN`,  `INA`,  `IND`,  `IRI`,  `IRL`,  `IRQ`,  `ISL`,  `ISR`,  `ISV`,  `ITA`,  `IVB`,  `JAM`,  `JOR`,  `JPN`,  `KAZ`,  `KEN`,  `KGZ`,  `KIR`,  `KOR`,  `KOS`,  `KSA`,  `KUW`,  `LAO`,  `LAT`,  `LBA`,  `LBN`,  `LBR`,  `LCA`,  `LES`,  `LIE`,  `LTU`,  `LUX`,  `MAC`,  `MAD`,  `MAR`,  `MAS`,  `MAW`,  `MDA`,  `MDV`,  `MEX`,  `MGL`,  `MHL`,  `MKD`,  `MLI`,  `MLT`,  `MNE`,  `MNT`,  `MON`,  `MOZ`,  `MRI`,  `MTN`,  `MYA`,  `NAM`,  `NCA`,  `NED`,  `NEP`,  `NFI`,  `NGR`,  `NIG`,  `NMI`,  `NOR`,  `NRU`,  `NZL`,  `OMA`,  `PAK`,  `PAN`,  `PAR`,  `PER`,  `PHI`,  `PLE`,  `PLW`,  `PNG`,  `POL`,  `POR`,  `PRK`,  `PUR`,  `PYF`,  `QAT`,  `ROU`,  `RSA`,  `RUS`,  `RWA`,  `SAM`,  `SEN`,  `SEY`,  `SGP`,  `SKN`,  `SLE`,  `SLO`,  `SMR`,  `SOL`,  `SOM`,  `SRB`,  `SRI`,  `SSD`,  `STP`,  `SUD`,  `SUI`,  `SUR`,  `SVK`,  `SWE`,  `SWZ`,  `SYR`,  `TAN`,  `TGA`,  `THA`,  `TJK`,  `TKM`,  `TKS`,  `TLS`,  `TOG`,  `TPE`,  `TTO`,  `TUN`,  `TUR`,  `TUV`,  `UAE`,  `UGA`,  `UKR`,  `URU`,  `USA`,  `UZB`,  `VAN`,  `VEN`,  `VIE`,  `VIN`,  `YEM`,  `ZAM`,  `ZIM`
+                </p>
+            </section>
+            <section>
+                <h3 id="round-type">Round Type</h3>
+                <p>Values:</p>
+                <ul>
+                    <li>`Final`</li>
+                    <li>`Final A-B`</li>
+                    <li>`Semifinal`</li>
+                    <li>`Quarterfinal`</li> 
+                    <li>`Round 1`</li> 
+                    <li>`Qualification`</li> 
+                    <li>`Group`</li> 
+                    <li>`Preliminary Round`</li> 
+                    <li>`Extra Race`</li>
+                </ul>
+            </section>
+            <section>
+                <h3 id="wind-assistance">Wind Assistance</h3>
+                <p>Measure of wind:</p>
+                <ul>
+                    <li>`^[+-]?[1-9]?[0-9]\.[0-9]$` (expressed in m/s)</li>
+                    <li>`NWI`, `NW`, `W`</li>
+                </ul>
+            </section>            
+            <section>
+                <h3 id="qualification-type">Qualification Type</h3>
+                <p>Values:</p>
+                <ul>
+                    <li>`q`</li>
+                    <li>`Q`</li>
+                </ul>
+            </section>      
+            <section>
+                <h3 id="result-types">Result Types</h3>
+                <p>
+                    A [=race=] or field contest, always produces an array of either [=individual results=] or [=relay results=]. These entities contain a `result` member whose value pattern is a `string` that varies depending on the type of event.
+                </p>
+                <section>
+                    <h4 id="fault">Fault</h4>
+                    <p>Values:</p>
+                    <ul>
+                        <li>`DNF`</li>
+                        <li>`DNS`</li>
+                        <li>`DQ`</li>
+                        <li>`NM`</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4 id="time-result-format">Time Result Format</h4>
+                    <p>Regular expression: `^(((0|[1-9][0-9]{0,2})\.[0-9][0-9h])|((0|[1-9][0-9]{0,2}):[0-5][0-9](\.[0-9][0-9h])?)|((0|[1-9][0-9]{0,2})(:[0-5][0-9]){2}(\.[0-9][0-9h])?))$`</p>
+                    <div class="note" title="Usage">
+                        <p>
+                            Measured time is represented following these patterns: 
+                        </p>
+                        <ul>
+                            <li>`ss.uu`</li>
+                            <li>`mm:ss.uu`</li>
+                            <li>`hh:mm:ss.uu`</li>
+                            <li> `mm:ss`</li>
+                            <li>`hh:mm:ss`</li>
+                        </ul>
+                        <p>
+                            Where `hh` (hours), `mm` (minutes), `ss` (seconds), `uu` (milliseconds)
+                        </p>
+                        <p>
+                            In the case of hand timing, the `h` character must be used in place of the millisecond digit (i.e., `ss.uh`, `mm:ss.uh`, and `hh:mm:ss.uh`).
+                        </p>
+                    </div>
+                </section>
+                <section>
+                    <h4 id="metres-result-format">Metres Result Format</h4>
+                    <p>Regular expression: `^(0|[1-9][0-9]{0,2})\.[0-9]{2}$` (result in metres with centimetre precision)</p>
+                </section>
+                <section>
+                    <h4 id="points-result-format">Points Result Format</h4>
+                    <p>Regular expression: `^(0|[1-9][0-9]{0,2})\.[0-9]{2}$` (combined event points)</p>
+                </section>
+                <section>
+                    <h4 id="metres-track-result-format">Metres Track Result Format</h4>
+                    <p>Regular expression: `^0|([1-9][0-9]{0,5})$` (result in metres)</p>
+                </section>
+                <section>
+                    <h4 id="horizontal-jump-features">Horizontal Jump Features</h4>
+                    <p>Values:</p>
+                    <ul>
+                        <li>`o`: clearance (valid trial)</li>
+                        <li>`-`: pass</li>
+                        <li>`x`: failure</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4 id="vertical-jump-features">Vertical Jump Features</h4>
+                    <p>Values:</p>
+                    <ul>
+                        <li>`o`</li>
+                        <li>`x`</li>
+                        <li>`r`</li>
+                        <li>`-`</li>
+                        <li>`xo`</li>
+                        <li>`xx`</li>
+                        <li>`xr`</li>
+                        <li>`x-`</li>
+                        <li>`or`</li>
+                        <li>`xxo`</li>
+                        <li>`xxx`</li>
+                        <li>`xxr`</li>
+                        <li>`xx-`</li>
+                        <li>`xor`</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4 id="throws-features">Throws Features</h4>
+                    <p>Values:</p>
+                    <ul>
+                        <li>`x`</li>
+                        <li>`-`</li>
+                        <li>`r`</li>
+                    </ul>
+                </section>
+            </section>    
+        </section>
+    </body>
+</html>
