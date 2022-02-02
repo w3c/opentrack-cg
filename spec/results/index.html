@@ -362,13 +362,13 @@ monospace font and may be syntax colored. Examples are always informative.
                             <td>`relayTeams`</td>
                             <td>`array` of [=Relay Teams=]</td>
                             <td>List of teams registered in the competition.</td>
-                            <td>no</td>
+                            <td>yes</td>
                         </tr>
                         <tr>
                             <td>`venues`</td>
                             <td>`array` of [=Venues=]</td>
                             <td>List of venues where a competition is held.</td>
-                            <td>no</td>
+                            <td>yes</td>
                         </tr>
                         <tr>
                             <td>`units`</td>
@@ -439,7 +439,7 @@ monospace font and may be syntax colored. Examples are always informative.
                     </tbody>
                 </table>
                 <div class="issue">
-                    Should we include gender as well?
+                    Should we include the classification gender as well? According to the rule book: `men`, `women`, `universal`.
                 </div>
                 <pre class="example" title="Description of a competition unit">
 {
@@ -481,8 +481,8 @@ monospace font and may be syntax colored. Examples are always informative.
                     </tbody>
                 </table>
                 <div class="issue">
-                    Both members should be required (at least one).
-                </div>
+                    Should we change the term of `races` to `race-field-events`?
+                </div>                                
                 <pre class="example" title="Description of a round">
 {
     "type": "Final",
@@ -552,7 +552,10 @@ monospace font and may be syntax colored. Examples are always informative.
                 <div class="issue">
                     Should we include startDate, endDate?
                 </div>
-                <pre class="example" title="Description of a round">
+                <div class="issue">
+                    Should we link venues from here?
+                </div>                
+                <pre class="example" title="Description of a race">
 {
     "number": 1,
     "date": "2022-01-22",
