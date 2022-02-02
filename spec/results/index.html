@@ -70,23 +70,23 @@
     <body>
         <section id="abstract">
             <p>
-                This specification, developed by the <a href="http://www.w3.org/community/opentrack/">W3C OpenTrack Community Group</a>, introduces a data schema to describe Athletics data on the Web. This document, based on the World Athletics´ requirements, defines the main concepts of Athletics competitions, with the objective of interoperability of result competition data.
+                This specification, developed by the <a href="http://www.w3.org/community/opentrack/">W3C OpenTrack Community Group</a>, introduces a data schema to describe Athletics data on the Web. Based on the World Athletics' requirements, this document defines the main concepts of Athletics competitions, with the objective of interoperability of result competition data.
             </p>
         </section>
         <section id="sotd">
             <p>
-                This vocabulary is in process of development.
+                This document is in the process of development.
             </p>
         </section>
         <section class="informative">
             <h2 id="introduction">Introduction</h2>
             <p>
-                This proposal is based on the World Athletics´ requirements to represent competitions and their results, including: event structure (rounds); athletes and teams; results; performances; and venues.</p>
+                This proposal is based on the World Athletics´ requirements to represent competitions and their results, including event structure (rounds), athletes and teams, results, performances, and venues.</p>
             <p>
-                This document specifies a lightweight schema, implemented in JSON to represent the main concepts and relations, and potential values to guarantee a common representation of the information in this realm.
+                This document specifies a lightweight schema implemented in JSON to represent the main concepts and relations and potential values to guarantee a homogeneous representation of the information in this realm.
             </p>
             <p>
-                No section should be considered final, and the absence of any content does not imply that such content is out of scope, or may not appear in the future. If you feel something should be covered, please
+                No section should be considered final, and the absence of any content does not imply that such content is out of scope or may not appear in the future. If you feel something should be covered, please
                 <a href="https://github.com/w3c/opentrack-cg/issues">tell us</a>.
             </p>
         </section>
@@ -95,25 +95,25 @@
             <h2 id="typographical-conventions">Typographical Conventions</h2>
             <p>The following typographic conventions are used in this specification:</p>
             <ul>
-                <li><code>markup</code>: Markup (elements, attributes, properties), machine processable values (string, characters, media types), property name, or a file name is in a monospace font.</li>
+                <li><code>markup</code>: Markup (elements, attributes, properties), machine processable values (string, characters, media types), property name, or a file name is represented in a monospace font.</li>
                 <li>
-                    <strong><em>definition</em></strong>: A definition of a term, to be used elsewhere in this or other specifications, is in bold and italics.
+                    <strong><em>definition</em></strong>: A definition of a term to be used elsewhere in this or other specifications is in bold and italics.
                 </li>
                 <li><a href="">hyperlink</a>: A hyperlink is underlined and in blue.</li>
             </ul>
             <div class="note">
-                Notes are in light green boxes with a green left border and with a &quot;Note&quot; header in green. Notes are normative or informative depending on the whether they are in a normative or informative section, respectively.
+                Notes are in light green boxes with a green left border and with a &quot;Note&quot; header in green. Notes are normative or informative depending on whether they are in normative or informative sections.
             </div>
             <pre class="example">
 Examples are in light khaki boxes, with khaki left border, and with a
-numbered "Example" header in khaki. Examples are always informative.
-The content of the example is in monospace font and may be syntax colored.
+numbered "Example" header in khaki. The content of the example is in 
+monospace font and may be syntax colored. Examples are always informative.
             </pre>
         </section>
 
         <section>
             <h2 id="overview-of-the-model">Overview of the model</h2>
-            <p>The model is related to the competition management in Athletics. By using this model systems will be able to describe, collect, process, store and publish Athletics competitions and their results.</p>
+            <p>The model is related to competition management in Athletics. Through this model, systems will describe, collect, process, store and publish Athletics competitions and their results.</p>
             <figure>
                 <img src="./images/wa-proposal.svg" alt="Athletics Competition Model" />
                 <figcaption>Athletics Competition Model</figcaption>
@@ -124,17 +124,17 @@ The content of the example is in monospace font and may be syntax colored.
             <dl>
                 <dt>Competition</dt>
                 <dd>
-                    A [=competition=] is an organized occasion where one or more sports events are planed and take place at a specific location during a period of time. Athletics events are usually part of a bigger meeting, or competition (e.g., Area Championships, Olympic Games, track and field meetings) and are organized in different sub-events depending on the disciplines and categories (i.e., [=competition units=]). These unitary competitions (e.g., 100m U18 Men, 110 U23 Women) are structured in [=rounds=] (e.g., semi-finals, finals...) that include one or more unitary [=races=] or field contests.
+                    A [=competition=] is an organized occasion where one or more sports events are planned and occur at a specific location. Athletics events are usually part of a bigger meeting or competition (e.g., Area Championships, Olympic Games, track and field meetings) and are organized in different sub-events depending on the disciplines and categories (i.e., [=competition units=]). These unitary competitions (e.g., 100m U18 Men, 110 U23 Women) are structured in [=rounds=] (e.g., semi-finals, finals...) that include one or more unitary [=races=] or field contests.
                 </dd>
 
                 <dt>Competitors (Athletes and Teams)</dt>
                 <dd>
-                    An [=athlete=] is a person who takes part in a [=competition=] as an individual competitor. Athletes are defined by gender, age, nationality, and other personal information. A [=relay team=] is group of [=athletes=] who takes part in a competition as a whole, competing against other teams. Both athletes and teams can be affiliated to.
+                    An [=athlete=] is a person who takes part in a [=competition=] as an individual competitor. Athletes are defined by gender, age, nationality, and other personal information. A [=relay team=] is a group of [=athletes=] who takes part in a competition as a whole, competing against other teams.
                 </dd>
 
                 <dt>Venues</dt>
                 <dd>
-                    A [=venue=] is the place or location where the [=competitions=] are held.
+                    A [=venue=] is a place or location where the [=competitions=] are held.
                 </dd>
 
                 <dt>Results</dt>
@@ -143,7 +143,7 @@ The content of the example is in monospace font and may be syntax colored.
                 </dd>
             </dl>
 
-            <p>See below all the concepts and their attributes explained in detail, including the specific class and properties that serve to describe Athletics resources. Concepts include examples of implementation.</p>
+            <p>See all the concepts below and their attributes explained in detail, including the specific class and properties that serve to describe Athletics resources. Concepts include examples of implementation.</p>
         </section>
 
         <section>
@@ -272,7 +272,7 @@ The content of the example is in monospace font and may be syntax colored.
             <section>
                 <h3 id="venue">Venue</h3>
                 <p>
-                    A <dfn>venue</dfn> is a location, place or territory where an event is held. Events may take part either in stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, road races, etc.).
+                    A <dfn>venue</dfn> is a location, place, or territory where an event is held. Events may take part either in-stadia (e.g., track and field events at Helsinki Olympic Stadium) or outside stadia (e.g., cross-country, road races, etc.).
                 </p>
                 <table class="definitions">
                     <thead>
@@ -325,8 +325,8 @@ The content of the example is in monospace font and may be syntax colored.
                     A <dfn data-lt="athletics competition|sports competition">Competition</dfn> is an athletics event in which [=athletes=] or [=teams=] take part in order to find out who is best at a particular discipline.
                 </p>
                 <p>
-                    Athletics [=competitions=] may be of different nature, depending on the disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g. one-day meetings, World championships, etc.), competitors
-                    (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fund-raising road races or school races are also considered as [=competitions=].
+                    Athletics [=competitions=] may be of different nature, depending on the disciplines (e.g., 100m, marathon, pole vault, etc.), schedule (e.g., one-day meetings, World championships, etc.), competitors
+                    (e.g., U23, Masters, etc.), and scope (e.g., regional, national, supranational championships, leagues, etc.). Other amateur competitions such as fund-raising road races or school races are also considered [=competitions=].
                 </p>
                 <table class="definitions">
                     <thead>
@@ -485,7 +485,7 @@ The content of the example is in monospace font and may be syntax colored.
             <section>
                 <h3 id="race">Race</h3>
                 <p>
-                    A <dfn>race</dfn> or field contest, is a physical event where the competitors produce [=results=].
+                    A <dfn>race</dfn> or field contest is a physical event where the competitors produce [=results=].
                 </p>
                 <table class="definitions">
                     <thead>
@@ -500,7 +500,7 @@ The content of the example is in monospace font and may be syntax colored.
                         <tr>
                             <td>`number`</td>
                             <td>`integer`</td>
-                            <td>Positive integer indicating the number of race or contest in the [=round=].</td>
+                            <td>Positive integer indicating the number of the [=race=] or contest in the [=round=].</td>
                             <td>yes</td>
                         </tr>
                         <tr>
@@ -558,12 +558,12 @@ The content of the example is in monospace font and may be syntax colored.
             <section>
                 <h3 id="results">Results</h3>
                 <p>
-                    A <dfn>result</dfn> is the outcome of the participation or a competitor in a [=race=] or field contest. Individual [=athletes=] produce [=individual results=] and [=teams=] produce [=relay results=].
+                    A <dfn>result</dfn> is the outcome of the competitor's participation in a [=race=] or field contest. Individual [=athletes=] produce [=individual results=], and [=teams=] have [=relay results=].
                 </p>
                 <section>
                     <h4 id="individual-result">Individual Result</h4>
                     <p>
-                        An <dfn>individual result</dfn> is the outcome of the participation or an [=athlete=] in a [=race=] or field contest.
+                        An <dfn>individual result</dfn> is the outcome of the an [=athlete=]'s participation in a [=race=] or field contest.
                     </p>
                     <table class="definitions">
                         <thead>
@@ -584,7 +584,7 @@ The content of the example is in monospace font and may be syntax colored.
                             <tr>
                                 <td>`wind`</td>
                                 <td>`string` (<a href="#wind-assistance">Wind Assistance</a>)</td>
-                                <td>Wind assistance associated to a result.</td>
+                                <td>Wind assistance associated with a result.</td>
                                 <td>no</td>
                             </tr>
                             <tr>
@@ -641,7 +641,7 @@ The content of the example is in monospace font and may be syntax colored.
                 <section>
                     <h4 id="relay-result">Relay Result</h4>
                     <p>
-                        A <dfn>relay result</dfn> is the outcome of the participation or a [=relay team=] in a [=race=].
+                        A <dfn>relay result</dfn> is the outcome of a [=relay team=]'s the participation in a [=race=].
                     </p>
                     <table class="definitions">
                         <thead>
@@ -712,7 +712,7 @@ The content of the example is in monospace font and may be syntax colored.
             <section>
                 <h3 id="detailed-results">Detailed Results</h3>
                 <p>
-                    A detailed result is the fine-grained specification of the participation or a competitor in a [=race=] or field contest. Depending on the discipline, the result details could be expressed as: [=outdoor horizontal jump results=], [=indoor horizontal jump results=], [=vertical jump results=], [=throws results=], and [=split times=].
+                    A detailed result is the fine-grained specification of the competitor's participation in a [=race=] or field contest. Depending on the discipline, the result details could be expressed as [=outdoor horizontal jump results=], [=indoor horizontal jump results=], [=vertical jump results=], [=throws results=], and [=split times=].
                 </p>
                 <section>
                     <h4 id="outdoor-horizontal-jump-results">Outdoor Horizontal Jump Results</h4>
@@ -738,7 +738,7 @@ The content of the example is in monospace font and may be syntax colored.
                             <tr>
                                 <td>`wind`</td>
                                 <td>`string` (<a href="#wind-assistance">Wind Assistance</a>)</td>
-                                <td>Wind assistance associated to a result.</td>
+                                <td>Wind assistance associated with a result.</td>
                                 <td>yes</td>
                             </tr>
                         </tbody>
@@ -753,7 +753,7 @@ The content of the example is in monospace font and may be syntax colored.
                 <section>
                     <h4 id="indoor-horizontal-jump-results">Indoor Horizontal Jump Results</h4>
                     <p>
-                        <dfn>Indoor horizontal jump results</dfn> are the details of the outcomes of the [=athlete=]'s participation in an indoor horizontal jump contest.
+                        <dfn>Indoor horizontal jump results</dfn> are the details of the [=athlete=]'s participation in an indoor horizontal jump contest.
                     </p>
                     <table class="definitions">
                         <thead>
@@ -782,7 +782,7 @@ The content of the example is in monospace font and may be syntax colored.
                 <section>
                     <h4 id="vertical-jump-results">Vertical Jump Results</h4>
                     <p>
-                        <dfn>Vertical jump results</dfn> are the details of the outcomes of the [=athlete=]'s participation in a vertical jump contest.
+                        <dfn>Vertical jump results</dfn> are the details of the [=athlete=]'s participation in a vertical jump contest.
                     </p>
                     <table class="definitions">
                         <thead>
@@ -818,7 +818,7 @@ The content of the example is in monospace font and may be syntax colored.
                 <section>
                     <h4 id="throws-results">Throws Results</h4>
                     <p>
-                        <dfn>Throws results</dfn> are the details of the outcomes of the [=athlete=]'s participation in a throws contest.
+                        <dfn>Throws results</dfn> are the details of the [=athlete=]'s participation in a throws contest.
                     </p>
                     <table class="definitions">
                         <thead>
