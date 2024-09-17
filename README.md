@@ -1,14 +1,31 @@
 [![Build Status](https://travis-ci.org/w3c/opentrack-cg.svg?branch=master)](https://travis-ci.org/w3c/opentrack-cg)
 
-# OpenTrack – Open Tools for Athletics
+# Open Athletics Community Group (Main Repository)
 
-Quick links:
+This is the home repository of Open Athletics CG (officially named OpenTrack CG).
+
+The Open Athletics CG is composed by __a group of sports data enthusiasts__ motivated by the opportunities the open data promised during the rising data revolution in the public sector. This CG is a forum to discuss technology for athletics. We focus on data interoperability, including __data exchange across multi-level federations, clubs, timekeepers, race organizers, and the community in general__. The group aims to define the best approach to __make the most of the sports (open) data__ through __open standards and collaboration__. 
+
+The CG organizes monthly teleconferences, and its members usually meet in physical meetings, like the series of AthTech Conferences promoted by European Athletics and with the participation of dozens of experts. 
+
+This CG aimed to motivate the interchange of Athletics data across federations, clubs and businesses. Interoperability was and still is a challenge due to the heterogeneity of governing bodies and systems (i.e., lack of a central or a federated system to collect results automatically at the international level). Competitions are similar worldwide (i.e., changing distances and units, throwing different objects, and using different surfaces), and most of the information, like the results or the competitors, is public, so global interoperability seems feasible. 
+
+
+## Quick links
+
+Info and logistics for the group activities:
+
+* [Blog](https://www.w3.org/community/opentrack/)
+* [Forum & instant messaging](https://forum.openathletics.net/)
+* [Contact and feedback](https://github.com/w3c/opentrack-cg/issues)
+* [Meetings calendar](https://www.w3.org/groups/cg/opentrack/calendar/).
+
+
+Documents produced so far:
+
 * [Athletics Conceptual Model](https://w3c.github.io/opentrack-cg/spec/model/)
 * [Competition Data Model and Vocabulary](https://w3c.github.io/opentrack-cg/spec/competition/) based on Schema.org
-* Tools: [Taxonomies and real implementation examples](http://purl.org/athletics/codes)
-* [Community Group](https://www.w3.org/community/opentrack/)
-* [This repository](https://github.com/w3c/opentrack-cg)
-* [Open Issues](https://github.com/w3c/opentrack-cg/issues)
+
 
 ## About OpenTrack
 
@@ -45,9 +62,21 @@ Of course you can! Unless the piece of software or document listed in this repos
 
 ## How can I participate?
 
-Everyone —either W3C Member or not— is invited to [join the W3C OpenTrack CG](https://www.w3.org/community/opentrack/). Just click on the 'join' button, and register with your W3C account (in case you don't have, please [request one](https://www.w3.org/accounts/request). Once you are a group member, you will be subscribed to the [main mailing list](https://lists.w3.org/Archives/Public/public-opentrack/).
+Everyone —either W3C Member or not— is invited to [join the W3C OpenTrack CG](https://www.w3.org/community/opentrack/). Just click on the 'join' button, and register with your W3C account (in case you don't have, please [request one](https://www.w3.org/accounts/request). Once you are a group member, you will be subscribed to the [main mailing list](https://lists.w3.org/Archives/Public/public-opentrack/) and the [calendar](https://www.w3.org/groups/cg/opentrack/calendar/).
+
+
+### How to join?
+
+First, join our [forum](https://forum.openathletics.net/) so you can ask for help :)
+
+
+1. If you don't have an account, [apply for one](https://www.w3.org/account/request/).
+2. [Login on the W3C system](https://auth.w3.org/login).
+3. And [apply for joining the group](https://www.w3.org/community/opentrack/join).
+
 
 If you have never used Github, please have a look at [this guide on how to use Github at W3C](https://www.w3.org/2006/tools/wiki/Github).
+
 
 ## References
 
