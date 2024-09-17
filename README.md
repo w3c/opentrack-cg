@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/w3c/opentrack-cg.svg?branch=master)](https://travis-ci.org/w3c/opentrack-cg)
 
-# Open Athletics Community Group (Main Repository)
+# Open Athletics Community Group 
 
 This is the home repository of Open Athletics CG (officially named OpenTrack CG).
 
@@ -27,7 +27,7 @@ Documents produced so far:
 * [Competition Data Model and Vocabulary](https://w3c.github.io/opentrack-cg/spec/competition/) based on Schema.org
 
 
-## About OpenTrack
+## About Open Athletics (_OpenTrack_)
 
 This is the repository for the [W3C OpenTrack Community Group](https://www.w3.org/community/opentrack/) to develop and document specifications and code related to what we call **Open Athletics** —formerly *OpenTrack*, but changed to make the scope broader—, a set of tools to increase interoperability among systems managing information on athletics and sports in general. Open Athletics includes schemes and vocabularies to describe sports, as well as open source software that helps managing that kind of information.
 
