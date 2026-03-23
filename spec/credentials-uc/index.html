@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Sports Competition Digital Credentials Use Cases</title>
+    <script src='https://www.w3.org/Tools/respec/respec-w3c' async class='remove'></script>
+    <script class='remove'>
+      // All config options at https://respec.org/docs/
+      var respecConfig = {
+        group: "opentrack",
+        latestVersion: "https://w3c.github.io/opentrack-cg/spec/credentials-uc/",
+        specStatus: "CG-DRAFT",
+        shortName: "credentials-uc",
+        specStatus: "unofficial",
+        pluralize: true,
+        editors: [
+          {
+            name: "Martin Alvarez-Espinar",
+            companyURL: "https://www.huawei.com",
+            company: "Huawei",
+            w3cid: 125049
+          },
+        ],
+        github: {
+          branch: "main",
+          repoURL: "w3c/opentrack-cg", 
+        },
+        logos: [
+          {
+            src: "https://www.w3.org/StyleSheets/TR/2021/logos/back-cg-draft.png",
+            alt: "Community Group Draft Report"
+          }
+        ],
+        // See https://respec.org/docs/#xref for usage.
+        xref: ["web-platform","VC-DATA-MODEL-2.0"],
+        noRecTrack: true
+      };
+    </script>
+
+  </head>
+  <body>
+    <h1 id="title">Sports Competition Digital Credentials Use Cases</h1>
+    <section id='abstract'>
+      <p>
+        This is required.
+      </p>
+    </section>
+    <section id='sotd'>
+      <p>
+        This document is in early definition. 
+      </p>
+    </section>
+    <section class="informative" id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        Blah, blah...
+      </p>
+    </section>
+    <section>
+      <h2>Terminology</h2>
+      <p>
+        This specification uses terms and a glossary already defined by other standardization activities, especially related to the [=verifiable credentials=] ecosystem [[VC-OVERVIEW]].
+      </p>
+      <dl>
+        <dt>[=Credential=]</dt>
+        <dd>A set of one or more [=claims=] made by an [=issuer=], as defined in [[VC-DATA-MODEL-2.0]].</dd>
+        <dt>[=Holder=]</dt>
+        <dd>A role of an entity might be performed by possessing one or more [=verifiable credentials=] and generating [=verifiable presentations=]. Examples of [=holders=] in the sports scope are athletes, coaches, managers, runners, and fans. Holders store their [=credentials=] in [=credential repositories=] like wallets. Read a complete definition in [[VC-DATA-MODEL-2.0]].</dd>
+        <dt>[=Issuer=]</dt>
+        <dd>A role an entity can perform by asserting [=claims=], creating a [=verifiable credential=] from these [=claims=], and transmitting the [=verifiable credential=] to a [=holder=]. Read a complete definition in [[VC-DATA-MODEL-2.0]].</dd>
+        <dt>[=Presentation=]</dt>
+        <dd>Data derived from one or more [=verifiable credentials=] issued by one or more [=issuers=] that is shared with a specific [=verifier=], as defined in [[VC-DATA-MODEL-2.0]].</dd>
+        <dt>[=Credential repository=]</dt>
+        <dd>Software, like a personal wallet or other applications, that stores and protects access to [=holders=]' [=verifiable credentials=].</dd>
+        <dt>[=Selective disclosure=]</dt>
+        <dd>The ability of a [=holder=] to make fine-grained decisions about what information to share, as defined in [[VC-DATA-MODEL-2.0]].</dd>
+        <dt>[=Verification=]</dt>
+        <dd>The evaluation of whether a [=verifiable credential=] or [=verifiable presentation=] is authentic, including checking that the [=credential=] or [=presentation=] conforms to the document specification, the securing mechanism is satisfied, and, if present, the status check succeeds. Read a complete definition in [[VC-DATA-MODEL-2.0]].</dd>
+        <dt>[=Verifier=]</dt>
+        <dd>A role an entity performs by receiving one or more [=verifiable credentials=], optionally inside a verifiable presentation for processing, as defined in [[VC-DATA-MODEL-2.0]]..</dd>
+        <dt>[=Verifiable credential=]</dt>
+        <dd>A tamper-evident [=credential=] whose authorship can be cryptographically verified. [=Verifiable credentials=] can be used to build [=verifiable presentations=], as defined in [[VC-DATA-MODEL-2.0]]</dd>
+        <dt>[=Verifiable presentation=]</dt>
+        <dd>A tamper-evident presentation of information encoded in such a way that authorship of the data can be trusted after a process of cryptographic verification. Read a complete definition in [[VC-DATA-MODEL-2.0]].</dd>     
+      </dl>
+    </section>
+    <section>
+      <h2>Stakeholders and Credentials</h2>
+      <section id="stakeholders">
+        <h3>Stakeholders</h3>
+        <dl>
+          <dt><dfn>Athlete</dfn></dt>
+          <dd>Person that participates in a competition regulated by a [=sports federation=]. [=Athletes=] are subjects of [=credentials=] issued by federations (e.g., competition licenses and attestation of achievements).</dd>
+          <dt><dfn>Competition Management System</dfn></dt>
+          <dd>Software that automates the administration of athletic events, streamlining registration, scheduling, and results in competitions. [=Competition Management Systems=] are operated by trusted service providers, and they can act as [=verifiers=] (e.g., verification of credentials for event registrations) and [=issuers=] (e.g., issuance of attestation of results after a competition).</dd>
+          <dt><dfn>Sports Federation</dfn></dt>
+          <dd>Non-governmental governing body that administers, rules, and promotes a given sport. [=Sports federations=] usually play the [=issuer=] role, providing sports users like [=athletes=], [=coaches=], [=officials=], and [=managers=] with [=credentials=] (e.g., licenses and attestation of achievements) for operation under the scope of the regulated sport. Federations may also play the [=verifier=] role as described in the @@@ next section.</dd>
+          <dt><dfn>Sports Integrity Unit</dfn></dt>
+          <dd>Trusted organization aiming to address ethical misconduct in the sport, including non-authorized doping usage. The Athletics Integrity Unit (AIU) is one example of a [=Sports Integrity Unit=].</dd>
+          <dt><dfn>Sports Official</dfn></dt>
+          <dd>Relying person involved in competition management and regulated sports competitions, in charge of enforcing rules, ensuring safety, and guaranteeing fairness in sports. Examples of [=Sports Officials=] include referees, judges, and marshals. [=Sports Officials=] may operate [=Competition Management Systems=] during events.</dd>
+        </dl>
+      </section>
+      <section id="credentials">
+        <h3>Credentials</h3>
+        <p>In regulated sports, a [=credential=] might consist of information related to:</p>
+        <ul>
+          <li>identifying the subject of the [=credential=] (e.g., athlete's picture and name)</li>
+          <li>issuing authority (e.g., [=sports federation=], service provider, medical service)</li>
+          <li>type of document or claim (e.g., medical certificate, sports license, and competition permit)</li>
+          <li>attributed asserted by the issuing authority about the subject (e.g., competitive category and anti-doping ban)</li>
+          <li>evidences of subject's qualifications required for issuance of the credential (e.g., competition permit based on performances)</li>
+          <li>constraints on the credential (e.g., validity period, scope of the license).</li>
+        </ul>
+        <p>Common credentials that we can find in regulated sports are:</p>
+        <dl>
+          <dt><dfn>Athlete License</dfn></dt>
+          <dd>Official [=credential=] issued by a [=Sports Federation=] granting eligibility to compete in restricted events while ensuring adherence to rules, safety, and ethical integrity codes.</dd>
+          <dt><dfn>Sports Coaching License</dfn></dt>
+          <dd>Formal [=credential=] attesting the expertise in sports coaching. Sports coaching licenses are typically issued by [=sports federations=] specific to that sport.</dd>
+          <dt><dfn>Athlete Manager License</dfn></dt>
+          <dd>Official [=credential=] that validates expertise in athlete representation in a specific sport.</dd>
+          <dt><dfn>Runner Card</dfn></dt>
+          <dd>Official document required by federations and event organizers to participate in competitive road running events in concrete contexts. It might serve as sports insurance for runners and bring other benefits through external sponsorship, like discounts on services and products. Examples: <abbr title="Federazione Italiana di Atletica Leggera" lang="it">FIDAL</abbr>'s (Italian Athletics Federation) <a href="https://runcard.com/">Runcard</a>, Spanish <a href="https://web.archive.org/web/20211208074955/https://www.carnetcorredor.es/" lang="es">Carnet Corredor</a>, and <a href="https://www.swiss-running.ch/">Swiss Running</a>.</dd>
+          <dt><dfn>Integrity Competition Permit</dfn></dt>
+          <dd>Attestation by neutral integrity commissions that guarantees the competitor's adherence to the sport rules regarding transparency, ethics, and fair play.</dd>
+          <dt><dfn>Sports Medical Certificate</dfn></dt>
+          <dd>Document usually signed by a doctor certifying an [=Athlete=] has no contraindications to competitive sport. This health condition attestation is often required for long-distance running races in France and Italy. Some events only require a simple positive self-declaration signed by the athletes themselves.</dd>
+          <dt><dfn>Record Attestation</dfn></dt>
+          <dd>Formal ratification process that confirms sports performances meet regulation standards and so can be recognized as official, often requiring integrity acceptance, approved equipment, and qualified officials. These credentials are usually managed by sports federations.</dd>
+          <dt><dfn>Elite or High-Performance Condition Attestation</dfn></dt>
+          <dd>Confirmation of an athlete's high performance or elite status, indicating their high competitive level in sports. Conditions might vary across jurisdictions and sports, and these certificates may be used for grants or subsidies assignation. Examples of elite or high-performance condition could consider top positions in national rankings, regular participation in international competitions and Olympic/Paralympic Games participation.</dd>
+          <dt><dfn>Competition Qualification Attestation</dfn></dt>
+          <dd>Official confirmation of an athlete meeting performance and integrity standards to advance in competitions (e.g., heats, semi-finals, and finals) or to participate in restricted competitions (e.g., membership of a national team).</dd>
+          <dt><dfn>Competition Result Attestation</dfn></dt>
+          <dd>Official confirmation of an athlete's performance during a competition. This result ratification may be associated with rewards and used by the athletes with third-party organizers to register in restricted events (e.g., minimum performance thresholds, starting lists ordered by performance).</dd>
+          <dt><dfn>Prize/Participation Voucher</dfn></dt>
+          <dd>Redeemable documents serving as proof of entitlement to awards or discounts often used in grassroots competitions to boost event participation and promote local sponsors. <a href="https://freizeit.sbb.ch/en/stories/races-sport-swiss-runners">Swiss Runners Tickets</a> are examples of participation vouchers.</dd>
+        </dl>
+      </section>
+    </section>
+    <section id="usecases">
+      <h2>Use Cases</h2>
+      <p>This section collects typical scenarios and use cases where digital credentials may be applied to regulated sports.</p>
+      <div class="ednote">
+        Please contribute with your use case sending an <a href="https://github.com/w3c/opentrack-cg/issues/new">issue</a> in our repository.
+      </div>
+
+    </section>
+    <section id='conformance'>
+      <!-- This section is filled automatically by ReSpec. -->
+    </section>
+  </body>
+</html>
