@@ -9,6 +9,7 @@
       var respecConfig = {
         group: "opentrack",
         latestVersion: "https://w3c.github.io/opentrack-cg/spec/credentials-uc/",
+        edDraftURI: "https://w3c.github.io/opentrack-cg/spec/credentials-uc/",
         specStatus: "CG-DRAFT",
         shortName: "credentials-uc",
         specStatus: "unofficial",
@@ -42,18 +43,21 @@
     <h1 id="title">Sports Competition Digital Credentials Use Cases</h1>
     <section id='abstract'>
       <p>
-        This is required.
+        Regulated sports usually depend on authorized entities that manage identities and credentials autonomously but follow common patterns and rules. This document collects scenarios and use cases in the athletics ecosystem where the application of the paradigm of <strong>distributed digital credentials</strong> can be naturally applied. 
       </p>
     </section>
     <section id='sotd'>
       <p>
-        This document is in early definition. 
+        This document is in early definition. We appreciate contributions from other sports. 
       </p>
     </section>
     <section class="informative" id="introduction">
       <h2>Introduction</h2>
       <p>
-        Blah, blah...
+        The decentralized model for digital identity and verifiable digital credentials enables trust while bringing full management flexibility and data sovereignty. In this model, the user holds their own verified credentials issued by trusted authorities and can be verified by relying parties.
+      </p>
+      <p>
+        During the <a href="https://www.w3.org/community/opentrack/2025/11/11/digital-credentials-in-sports-wallets-for-athletics/">conversations at AthTech'26</a>, we discussed the feasibility of digitally transforming athletics and contributing to the digital credential ecosystem with new complementary scenarios and stakeholders. This document is a first attempt to gather use cases with the needs and challenges in the management of credentials in athletics and sports in general.
       </p>
     </section>
     <section>
@@ -100,7 +104,7 @@
         <dt><dfn>Competition Management System</dfn></dt>
         <dd>Software that automates the administration of athletic events, streamlining registration, scheduling, and results in competitions. [=Competition management systems=] are operated by trusted service providers, and they can act as [=verifiers=] (e.g., verification of credentials for event registrations) and [=issuers=] (e.g., issuance of attestation of results after a competition).</dd>
 
-        <dt><dfn>Occasional Runner</dfn></dt>
+        <dt><dfn data-lt="runner">Occasional Runner</dfn></dt>
         <dd>Person that ocasionally engages in running races and is not officially registered with a [=sports federation=] as an [=Athlete=].</dd>          
 
         <dt><dfn>Sports Federation</dfn></dt>
@@ -143,7 +147,7 @@
         <dt><dfn>Integrity Competition Permit</dfn></dt>
         <dd>Attestation by neutral integrity commissions that guarantees the competitor's adherence to the sport rules regarding transparency, ethics, and fair play.</dd>
         
-        <dt><dfn>Sports Medical Certificate</dfn></dt>
+        <dt><dfn data-lt="fit-to-run">Sports Medical Certificate</dfn></dt>
         <dd>Document usually signed by a doctor certifying an [=Athlete=] has no contraindications to competitive sport. This attestation, also know as <em>fit-to-run</em> certificate, is often required for long-distance running races in France and Italy. Some events only require a simple positive self-declaration signed by the athletes themselves.</dd>
                   
         <dt><dfn>Competition Qualification Attestation</dfn></dt>
@@ -155,7 +159,7 @@
         <dt><dfn>Elite or High-Performance Condition Attestation</dfn></dt>
         <dd>Confirmation of an athlete's high performance or elite status, indicating their high competitive level in sports. Conditions might vary across jurisdictions and sports, and these certificates may be used for grants or subsidies assignation. Examples of elite or high-performance condition could consider top positions in national rankings, regular participation in international competitions and Olympic/Paralympic Games participation.</dd>
 
-        <dt><dfn>Competition Result Attestation</dfn></dt>
+        <dt><dfn data-lt="competition result">Competition Result Attestation</dfn></dt>
         <dd>Official confirmation of an athlete's performance during a competition. This result ratification may be associated with rewards and used by the athletes with third-party organizers to register in restricted events (e.g., minimum performance thresholds, starting lists ordered by performance).</dd>
 
         <dt><dfn>Event Registration Attestation</dfn></dt>
