@@ -54,8 +54,9 @@
     <section class="informative" id="introduction">
       <h2>Introduction</h2>
       <p>
-        The decentralized model for digital identity and verifiable digital credentials enables trust while bringing full management flexibility and data sovereignty. In this model, the user holds their own verified credentials issued by trusted authorities and can be verified by relying parties.
+        The decentralized model for digital identity and verifiable credentials enables trust while bringing full management flexibility and data sovereignty. In this model, the user holds their own verified credentials issued by trusted authorities and can be verified by relying parties.
       </p>
+      <p>The rise of the digital wallets and, in concrete, the <abbr title="European Union Digital Identity">EUDI</abbr> wallet ecosystem, brings new opportunities for the management of personal credentials and authentication in scenarios like this. Storing a digital athlete's license and the permits to participate in the competition (i.e., qualification attestations and integrity permits) and the presentation to trusted officials would facilitate the process while increasing efficiency (i.e., real-time checking of attestations) and privacy (with selective disclosure or zero-knowledge proof).</p>
       <p>
         During the <a href="https://www.w3.org/community/opentrack/2025/11/11/digital-credentials-in-sports-wallets-for-athletics/">conversations at AthTech'26</a>, we discussed the feasibility of digitally transforming athletics and contributing to the digital credential ecosystem with new complementary scenarios and stakeholders. This document is a first attempt to gather use cases with the needs and challenges in the management of credentials in athletics and sports in general.
       </p>
@@ -101,7 +102,7 @@
         <dt><dfn>Athlete's Manager</dfn></dt>
         <dd>Person with rights to legally represent athletes in a specific sport.</dd>
 
-        <dt><dfn>Competition Management System</dfn></dt>
+        <dt><dfn data-lt="system">Competition Management System</dfn></dt>
         <dd>Software that automates the administration of athletic events, streamlining registration, scheduling, and results in competitions. [=Competition management systems=] are operated by trusted service providers, and they can act as [=verifiers=] (e.g., verification of credentials for event registrations) and [=issuers=] (e.g., issuance of attestation of results after a competition).</dd>
 
         <dt><dfn data-lt="runner">Occasional Runner</dfn></dt>
@@ -113,7 +114,7 @@
         <dt><dfn>Sports Integrity Unit</dfn></dt>
         <dd>Trusted organization aiming to address ethical misconduct in the sport, including non-authorized doping usage. The Athletics Integrity Unit (AIU) is one example of a [=sports integrity unit=].</dd>
         
-        <dt><dfn>Sports Official</dfn></dt>
+        <dt><dfn data-lt="official">Sports Official</dfn></dt>
         <dd>Relying person involved in competition management and regulated sports competitions, in charge of enforcing rules, ensuring safety, and guaranteeing fairness in sports. Examples of [=sports officials=] include referees, judges, and marshals. [=Sports Officials=] may operate [=competition management systems=] during events.</dd>
       </dl>
     </section>
@@ -135,7 +136,7 @@
       </figure>
 
       <dl>
-        <dt><dfn>Athlete License</dfn></dt>
+        <dt><dfn data-lt="athlete's license">Athlete License</dfn></dt>
         <dd>Official [=credential=] issued by a [=sports federation=] to an [=athlete=] granting eligibility to compete in restricted events while ensuring adherence to rules, safety, and ethical integrity codes.</dd>
         
         <dt><dfn>Athlete Manager License</dfn></dt>
@@ -179,7 +180,7 @@
           <figcaption>Use cases for credential presentation in remote (online) scenarios</figcaption>
         </figure>
 
-        <h4 id="R01">R01: Athlete License Request</h4>
+        <h4 id="R01">Athlete License Request</h4>
         <dl>
           <dt>Holder</dt>
           <dd>[=Athlete=]</dd>
@@ -193,7 +194,7 @@
           <dd>[=Sports Federation=]</dd>
         </dl>
 
-        <h4 id="R02">R02: Athlete Registration in Competition</h4>
+        <h4 id="R02">Athlete Registration in Competition</h4>
         <dl>
           <dt>Holder</dt>
           <dd>[=Athlete=]</dd>
@@ -211,7 +212,7 @@
           <dd>[=Competition Management System=]</dd>
         </dl>
 
-        <h4 id="R03">R03: Runner Registration in Competition</h4>
+        <h4 id="R03">Runner Registration in Competition</h4>
         <dl>
           <dt>Holder</dt>
           <dd>[=Occasional Runner=]</dd>
@@ -226,7 +227,7 @@
           <dd>[=Competition Management System=]</dd>
         </dl>
 
-        <h4 id="R04">R04: Application of Sports Development Grant</h4>
+        <h4 id="R04">Application of Sports Development Grant</h4>
         <dl>
           <dt>Holder</dt>
           <dd>[=Athlete=]</dd>
@@ -242,7 +243,7 @@
           <dd>Public Service</dd>
         </dl>
 
-        <h4 id="R05">R05: Discount Purchase with Participant Voucher</h4>
+        <h4 id="R05">Discount Purchase with Participant Voucher</h4>
         <dl>
           <dt>Holder</dt>
           <dd>[=Occasional Runner=]</dd>
@@ -256,7 +257,7 @@
           <dd>Sponsoring Merchant</dd>
         </dl>
 
-        <h4 id="R06">R06: Delegated Registration in Competition</h4>
+        <h4 id="R06">Delegated Registration in Competition</h4>
         <dl>
           <dt>Holder</dt>
           <dd>[=Athlete's Manager=]</dd>
@@ -278,7 +279,7 @@
           <figcaption>Use cases for credential presentation in proximity scenarios</figcaption>
         </figure>
 
-        <h4 id="P01">P01: Athlete's Check-in in Competition</h4>
+        <h4 id="P01">Athlete's Check-in in Competition</h4>
         <dl>
           <dt>Holder</dt>
           <dd>[=Athlete=]</dd>
@@ -294,7 +295,7 @@
           <dd>[=Competition Management System=]</dd>
         </dl>
       
-        <h4 id="P02">P02: Pick-Up of Runner's Bib Number</h4>
+        <h4 id="P02">Pick-Up of Runner's Bib Number</h4>
         <dl>
           <dt>Holder</dt>
           <dd>[=Occasional Runner=]</dd>
@@ -309,7 +310,7 @@
           <dd>[=Competition Management System=]</dd>
         </dl>
 
-        <h4 id="P03">P03: Competition Call-Room</h4>
+        <h4 id="P03">Competition <em>Call Room</em></h4>
         <dl>
           <dt>Holder</dt>
           <dd>[=Athlete=]</dd>
@@ -317,12 +318,26 @@
           <dd>
             <ul>
               <li>[=Athlete License=]</li>
+              <li>[=Competition Qualification Attestation=]</li>
             </ul>
           </dd>
           <dt>Verifier</dt>
           <dd>[=Competition Management System=]</dd>
         </dl>
 
+        <p>
+          A <em>Call Room</em> in athletics is a strict, mandatory process where officials verify an athlete's identity, dressing, and equipment compliance before a competition. Physically, the Call Room is a restricted area usually located between the warm-up area and the entry to the track, field, or start line of the competition. Athletes must identify themselves to the officials considering a tight schedule that varies depending on the discipline and type of event -it happens a few minutes before the competition.
+        </p>
+        <p>
+          In the <em>Call Room</em> process, judges check the identity of the athlete, the competition bibs (i.e., identifiers and placement), shoe and uniform compliance, and other aspects like advertising. It is a critical moment for the athletes because missing or failing the <em>Call Room</em> without a valid reason leads to exclusion from participating in the competition.
+        </p>
+        <p>
+          Time for fixing errors is too short. For instance, in outdoor events like road racing or cross-country, the <em>Call Room</em> closes ten minutes before the competition starts. Thus the strict process and short time before the start is a critical moment for the competitors. Currently, athletes are required to identify themselves to the officials through an official document (i.e., the [=athlete's license=], passport, or ID card). Right after the <em>Call Room</em>, an authorized team manager must collect the identification documents and give them back after the race, with the subsequent risk of losing or misplacing the documents.
+        </p>
+        <p>
+          Since the [=officials=] must confirm the participation of the athletes in the [=system=], this scenario is ideal for the presentation of digital credentials in proximity. For identification with minimum disclosure of information, judges with a smartphone or tablet may request the [=athlete's license=] validity, name, and picture. In some competitions, they could request additional attributes related to qualification and permits. 
+          Athletes may use their personal smartphones with a digital wallet to present the claims requested by the officials operating a [=competition management system=]. However, in the <a href="https://publications.european-athletics.org/clujnapoca/competition-procedure/">official competitions</a>, subject to World Athletics Rules, smartphones are strictly not allowed in the <em>Call Room</em> procedure, so the best option is to <strong>store and present the credentials through the athlete's smartwatch</strong>. It is a device allowed in competitions and the only external digital accessory that athletes carry during a competition.
+        </p>
       </section>
 
       <div class="ednote">
