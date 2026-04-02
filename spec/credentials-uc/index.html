@@ -43,7 +43,7 @@
     <h1 id="title">Sports Competition Digital Credentials Use Cases</h1>
     <section id='abstract'>
       <p>
-        Regulated sports usually depend on authorized entities that manage identities and credentials autonomously but follow common patterns and rules. This document collects scenarios and use cases in the athletics ecosystem where the application of the paradigm of <strong>distributed digital credentials</strong> can be naturally applied. 
+        Regulated sports usually depend on authorized entities that manage identities and credentials autonomously but follow common patterns and rules. This document collects scenarios and use cases in the athletics ecosystem where the application of the paradigm of <strong>decentralized digital credentials</strong> can be naturally applied. 
       </p>
     </section>
     <section id='sotd'>
@@ -99,16 +99,16 @@
         <dt><dfn>Athlete</dfn></dt>
         <dd>Person that participates in a competition regulated by a [=sports federation=]. [=Athletes=] are subjects of [=credentials=] issued by federations (e.g., competition licenses and attestation of achievements).</dd>
 
-        <dt><dfn>Athlete's Manager</dfn></dt>
-        <dd>Person with rights to legally represent athletes in a specific sport.</dd>
+        <dt><dfn>Athlete Manager</dfn></dt>
+        <dd>Sports agent with rights to legally represent athletes in a specific sport.</dd>
 
         <dt><dfn data-lt="system">Competition Management System</dfn></dt>
         <dd>Software that automates the administration of athletic events, streamlining registration, scheduling, and results in competitions. [=Competition management systems=] are operated by trusted service providers, and they can act as [=verifiers=] (e.g., verification of credentials for event registrations) and [=issuers=] (e.g., issuance of attestation of results after a competition).</dd>
 
         <dt><dfn data-lt="runner">Occasional Runner</dfn></dt>
-        <dd>Person that ocasionally engages in running races and is not officially registered with a [=sports federation=] as an [=Athlete=].</dd>          
+        <dd>Person that ocasionally engages in running races and is not officially registered with a [=sports federation=] as an [=athlete=].</dd>          
 
-        <dt><dfn>Sports Federation</dfn></dt>
+        <dt><dfn data-lt="Federation">Sports Federation</dfn></dt>
         <dd>Non-governmental governing body that administers, rules, and promotes a given sport. [=Sports federations=] usually play the [=issuer=] role, providing sports users like [=athletes=], coaches, officials, and managers with [=credentials=] (e.g., licenses and attestation of achievements) for operation under the scope of the regulated sport. Federations may also play the [=verifier=] role as described in the <a href="#usecases">use cases section</a>.</dd>
         
         <dt><dfn>Sports Integrity Unit</dfn></dt>
@@ -136,7 +136,7 @@
       </figure>
 
       <dl>
-        <dt><dfn data-lt="athlete's license">Athlete License</dfn></dt>
+        <dt><dfn data-lt="athlete's license|license">Athlete License</dfn></dt>
         <dd>Official [=credential=] issued by a [=sports federation=] to an [=athlete=] granting eligibility to compete in restricted events while ensuring adherence to rules, safety, and ethical integrity codes.</dd>
         
         <dt><dfn>Athlete Manager License</dfn></dt>
@@ -149,24 +149,24 @@
         <dd>Attestation by neutral integrity commissions that guarantees the competitor's adherence to the sport rules regarding transparency, ethics, and fair play.</dd>
         
         <dt><dfn data-lt="fit-to-run">Sports Medical Certificate</dfn></dt>
-        <dd>Document usually signed by a doctor certifying an [=Athlete=] has no contraindications to competitive sport. This attestation, also know as <em>fit-to-run</em> certificate, is often required for long-distance running races in France and Italy. Some events only require a simple positive self-declaration signed by the athletes themselves.</dd>
+        <dd>Document usually signed by a doctor certifying an [=athlete=] has no contraindications to competitive sport. This attestation, also know as <em>fit-to-run</em> certificate, is often required for long-distance running races in France and Italy. Some events only require a simple positive self-declaration signed by the athletes themselves.</dd>
                   
-        <dt><dfn>Competition Qualification Attestation</dfn></dt>
+        <dt><dfn data-lt="Competition Qualification">Competition Qualification Attestation</dfn></dt>
         <dd>Official confirmation of an athlete meeting performance and integrity standards to advance in competitions (e.g., heats, semi-finals, and finals) or to participate in restricted competitions (e.g., membership of a national team).</dd>
 
-        <dt><dfn>Record Attestation</dfn></dt>
+        <dt><dfn data-lt="Record holder attestation">Record Attestation</dfn></dt>
         <dd>Formal ratification process that confirms sports performances meet regulation standards and so can be recognized as official, often requiring integrity acceptance, approved equipment, and qualified officials. These credentials are usually managed by sports federations.</dd>
 
-        <dt><dfn>Elite or High-Performance Condition Attestation</dfn></dt>
+        <dt><dfn data-lt="Elite or High-Performance">Elite or High-Performance Condition Attestation</dfn></dt>
         <dd>Confirmation of an athlete's high performance or elite status, indicating their high competitive level in sports. Conditions might vary across jurisdictions and sports, and these certificates may be used for grants or subsidies assignation. Examples of elite or high-performance condition could consider top positions in national rankings, regular participation in international competitions and Olympic/Paralympic Games participation.</dd>
 
         <dt><dfn data-lt="competition result">Competition Result Attestation</dfn></dt>
         <dd>Official confirmation of an athlete's performance during a competition. This result ratification may be associated with rewards and used by the athletes with third-party organizers to register in restricted events (e.g., minimum performance thresholds, starting lists ordered by performance).</dd>
 
-        <dt><dfn>Event Registration Attestation</dfn></dt>
+        <dt><dfn data-lt="event registration">Event Registration Attestation</dfn></dt>
         <dd>Official confirmation of registration in a sports event. This certificate might ratify the registration of [=occasional runners=] in races, [=athletes=] in athletics tournaments, and third-parties as expectators.</dd>
 
-        <dt><dfn>Participation or Prize Voucher</dfn></dt>
+        <dt><dfn data-lt="prize voucher">Participation or Prize Voucher</dfn></dt>
         <dd>Redeemable documents serving as proof of entitlement to awards or discounts often used in grassroots competitions to boost event participation and promote local sponsors. <a href="https://freizeit.sbb.ch/en/stories/races-sport-swiss-runners">Swiss Runners Tickets</a> are examples of participation vouchers.</dd>
       </dl>
     </section>
@@ -174,13 +174,14 @@
       <h2>Use Cases</h2>
       <p>This section collects typical scenarios and use cases where digital credentials may be applied to regulated sports. These cases are related to presentation of credentials in remote (online) and in proximity.</p>
       <section id="remote_presentation">
-        <h3>Presentation of Credentials in Remote (Online)</h3>
+        <h3>Remote Presentation of Credentials</h3>
         <figure>
           <img src="./img/Presentation-Online.png" alt="Representation of use cases for presentations of credentials in remote: holders, credentials and verifiers">
           <figcaption>Use cases for credential presentation in remote (online) scenarios</figcaption>
         </figure>
 
-        <h4 id="R01">Athlete License Request</h4>
+        <h4 id="R01">Athlete License Request using <abbr title="Personal Identification Document">PID</abbr></h4>
+        <p>An athlete attached to a federation requests the issuance of their digital license, authenticating by the official <abbr>PID</abbr>.</p>
         <dl>
           <dt>Holder</dt>
           <dd>[=Athlete=]</dd>
@@ -192,9 +193,18 @@
           </dd>
           <dt>Verifier</dt>
           <dd>[=Sports Federation=]</dd>
+          <dt>Journey:</dt>
+          <dd>
+            <ol>
+              <li>🌐 An [=athlete=] attached to a [=sports federation=] enters the federation's website, using the browser of their smartphone, to obtain the digital [=athlete license=]. This license is needed for competitions during the sports season.</li>
+              <li>🪪 The [=sports federation=]'s website requests authentication and the [=athlete=] logs in to the website, presenting their official <abbr>PID</abbr> that is stored in the wallet of their smartphone.</li>
+              <li>🪪 After the verification of the user, the [=federation=]'s system issues a [=license=] to the [=athlete=]'s wallet.</li>
+            </ol>
+          </dd>
         </dl>
 
-        <h4 id="R02">Athlete Registration in Competition</h4>
+        <h4 id="R02">Registration in the National Championships</h4>
+        <p>An athlete that is qualified for the National Championships registers using an online platform after presenting a valid license, medical certificate, and the competition permits required for participation in the event.</p>
         <dl>
           <dt>Holder</dt>
           <dd>[=Athlete=]</dd>
@@ -210,9 +220,28 @@
           </dd>
           <dt>Verifier</dt>
           <dd>[=Competition Management System=]</dd>
+          <dt>Journey:</dt>
+          <dd>
+            <ol>
+              <li>🏟️ An [=athlete=] wants to register in the National Championships through the event's website, which is connected to the [=competition management system=]. Registration is limited to the top ten athletes in the ranking.</li>
+              <li>📱 The [=competition management system=] generates a QR code with a request for the claims required for the registration:
+                <ul>
+                  <li>Attributes of the [=athlete license=]: name, surname, email, picture, competition category, and expiration date of the license.</li>
+                  <li>A valid [=Sports Medical Certificate=] to guarantee the athlete is in healthy conditions.</li>
+                  <li>An updated [=Integrity Competition Permit=]</li>
+                  <li>An attestation about the [=Competition Qualification=], achieved in previous competitions granting access to the current competition.</li>
+                  <li>Optionally, the attestation of previous [=Competition Results=] to measure the quality of the athlete.</li>
+                </ul>
+              </li>
+              <li>🪪 The [=athlete=] scans the QR code with the wallet in their smartphone and accepts presenting all the attributes requested from the credentials stored in the wallet.</li>
+              <li>✅ The [=competition management system=] verifies the validity and integrity of the claims and registers the [=athlete=] in the competition.</li>
+              <li>🎫 The [=athlete=] receives a confirmation email and a QR code to start the issuance of the [=Event Registration Attestation=], confirming the registration in the event.</li>
+            </ol>
+          </dd>
         </dl>
 
-        <h4 id="R03">Runner Registration in Competition</h4>
+        <h4 id="R03">Sign up for the City Marathon</h4>
+        <p>An occasional runner registers for the City Marathon using their runner card and a fit-to-run certificate on the event's website.</p>
         <dl>
           <dt>Holder</dt>
           <dd>[=Occasional Runner=]</dd>
@@ -225,9 +254,25 @@
           </dd>
           <dt>Verifier</dt>
           <dd>[=Competition Management System=]</dd>
+          <dt>Journey:</dt>
+          <dd>
+            <ol>
+              <li>🎽 An [=occasional runner=] wants to register in the City Marathon through the event's website (connected to the [=competition management system=]). Registration requires participants to hold a valid [=Runner Card=] and a [=fit-to-run=] certificate.</li>
+              <li>📱 The [=competition management system=] generates a QR code with a request for the claims required for the registration:
+                <ul>
+                  <li>Attributes of the [=Runner Card=]: name, surname, email, picture, competition category, and expiration date of the license.</li>
+                  <li>A valid [=sports medical certificate=] (fit-to-run attestation) confirming that the person is in healthy conditions.</li>
+                </ul>
+              </li>
+              <li>🪪 The [=runner=] scans the QR code with the wallet in their smartphone and accepts presenting all the attributes requested from the credentials stored in the wallet.</li>
+              <li>✅ The [=competition management system=] verifies the validity and integrity of the claims and registers the [=runner=] in the marathon.</li>
+              <li>🎫 The [=runner=] receives a confirmation email and a QR code to start the issuance of the [=event registration attestation=], confirming the registration in the marathon.</li>
+            </ol>
+          </dd>
         </dl>
 
-        <h4 id="R04">Application of Sports Development Grant</h4>
+        <h4 id="R04">Application for a Sports Development Grant</h4>
+        <p>An athlete that applies for a grant as part of a public program for sports development of high-performance athletes that have achieved outstanding results in their sports.</p>
         <dl>
           <dt>Holder</dt>
           <dd>[=Athlete=]</dd>
@@ -235,15 +280,31 @@
           <dd>
             <ul>
               <li>[=Elite or High-Performance Condition Attestation=]</li>
-              <li>[=Record Attestation=]</li>
+              <li>[=Record Holder Attestation=]</li>
               <li>Official <abbr>PID</abbr></li>
             </ul>
           </dd>
           <dt>Verifier</dt>
           <dd>Public Service</dd>
+          <dt>Journey</dt>
+          <dd>
+            <ol>
+              <li>🏆 An [=athlete=] is recognized by their national [=sports federation=] as an [=elite or high-performance=] athlete due to the results achieved during the season. The [=federation=] sends an email with a link to apply for a public grant to support the development of high-level athletes. The grant is offered by a third-party agency.</li>
+              <li>📱 The [=athlete=] accesses the public website from their smartphone and clicks the option to apply for a <em>sports development grant</em>.</li>
+              <li>🪪 The website requests some credentials to verify the athlete fulfills the criteria:
+                <ul>
+                  <li><abbr>PID</abbr> for identification as the natural person getting the grant.</li>
+                  <li>[=Elite or high-performance condition attestation=] and, optionally,</li>
+                  <li>[=Record holder attestations=], for increasing chances for getting the grant.</li>
+                </ul> </li>
+              <li>🆗 The [=athlete=] is prompted with a dialog to open the wallet where the concrete credentials are stored. The [=athlete=] opens the sports wallet and agrees to present the attributes required from the three documents.</li>
+              <li>✅ The public service verifies the authenticity and integrity of the credentials and registers the [=athlete=] as an applicant.</li>
+            </ol>    
+          </dd>
         </dl>
 
-        <h4 id="R05">Discount Purchase with Participant Voucher</h4>
+        <h4 id="R05">Discount Purchase with Winner's Voucher</h4>
+        <p>A runner applies a discount voucher, received after winning a fun race, when purchasing goods on a sponsoring e-commerce website.</p>
         <dl>
           <dt>Holder</dt>
           <dd>[=Occasional Runner=]</dd>
@@ -251,16 +312,34 @@
           <dd>
             <ul>
               <li>[=Participation or Prize Voucher=]</li>
+              <li>Payment Mandate</li>
+              <li>Official <abbr>PID</abbr></li>
             </ul>
           </dd>
           <dt>Verifier</dt>
           <dd>Sponsoring Merchant</dd>
+          <dt>Journey:</dt>
+          <dd>
+            <ol>
+              <li>🧧 An [=occasional runner=], who received a [=prize voucher=] after winning a race, goes to a sponsoring merchant webshop to buy some goods using their desktop browser.</li>
+              <li>🤳 The system offers the [=runner=] the option of one-click checkout using the credentials store. The merchant's website shows a QR code that is scanned by the [=runner=] using their mobile app wallet.</li>
+              <li>💳 The [=runner=] agrees to present:
+                <ul>
+                  <li>Invoicing and delivery information from the <abbr>PID</abbr>.</li>
+                  <li>The [=prize voucher=] for a discount.</li>
+                  <li>The mandate for payment.</li>
+                </ul>
+              </li>
+              <li>🆗 The merchant's website confirms the transaction and sends the confirmation to the [=runner=].</li>
+            </ol>
+          </dd>
         </dl>
 
         <h4 id="R06">Delegated Registration in Competition</h4>
+        <p>An athlete manager registers several athletes to compete in a meeting.</p>
         <dl>
           <dt>Holder</dt>
-          <dd>[=Athlete's Manager=]</dd>
+          <dd>[=Athlete Manager=]</dd>
           <dt>Credentials (claims) Presented</dt>
           <dd>
             <ul>
@@ -269,17 +348,27 @@
           </dd>
           <dt>Verifier</dt>
           <dd>[=Competition Management System=]</dd>
+          <dt>Journey:</dt>
+          <dd>
+            <ol>
+              <li>💼 An [=athlete manager=], with a valid license, goes to the website of an athletics meeting and selects the option of <em>delegated registration</em>.</li>
+              <li>📲 The [=athlete manager=] scans a QR code with the wallet that stores their sports credentials and accepts to share the [=athlete manager license=] data, including their athletes associated.</li>
+              <li>🎽 The [=athlete manager=] selects the athletes to register and confirms.</li>
+              <li>💎 The [=competition management system=] verifies the license validity and integrity and shows confirmation.</li>
+            </ol>
+          </dd>  
         </dl>
-      
       </section>
+
       <section id="proximity_presentation">
-        <h3>Presentation of Credentials in Proximity</h3>
+        <h3>Proximity Presentation of Credentials</h3>
         <figure>
           <img src="./img/Presentation-Proximity.png" alt="Representation of use cases for presentations of credentials in promitity: holders, credentials and verifiers">
           <figcaption>Use cases for credential presentation in proximity scenarios</figcaption>
         </figure>
 
         <h4 id="P01">Athlete's Check-in in Competition</h4>
+        <p>An athlete, registered in a competition, enters the stadium two hours before the start of their participation and confirms participation to the event's officials.</p>
         <dl>
           <dt>Holder</dt>
           <dd>[=Athlete=]</dd>
@@ -293,9 +382,20 @@
           </dd>
           <dt>Verifier</dt>
           <dd>[=Competition Management System=]</dd>
+          <dt>Journey:</dt>
+          <dd>
+            <ol>
+              <li>🏟️ An [=athlete=] that is registered in an official competition goes to the stadium before their participation. The [=athlete=] presents themself to the [=officials=] in the competition secretariat.</li>
+              <li>🪪 The [=official=] requests the [=license=] validity, the [=event registration attestation=], and the [=competition qualification attestation=] that confirm the athlete is allowed to compete in the events of that competition.</li>
+              <li>📱 The [=athlete=] shares a QR code from the wallet on their smartphone with the [=official=].</li>
+              <li>📱 The [=official=] verifies the [=license=] validity, the [=event registration=] and [=competition qualification=] attestation by scanning the QR code with a smartphone app connected to the [=competition management system=]. The smartphones exchange the required information via Bluetooth or NFC.</li>
+              <li>📋 After a successful validation, the [=competition management system=] includes the [=athlete=] in the official starting lists.</li>
+            </ol>  
+          </dd>
         </dl>
       
-        <h4 id="P02">Pick-Up of Runner's Bib Number</h4>
+        <h4 id="P02">Pick-Up of Bib Number in City Marathon</h4>
+        <p>A runner, registered for the City Marathon, collects their participation package and bib number before the City Marathon, presenting their Runner Card and proof of registration hours before the race.</p>
         <dl>
           <dt>Holder</dt>
           <dd>[=Occasional Runner=]</dd>
@@ -308,9 +408,21 @@
           </dd>
           <dt>Verifier</dt>
           <dd>[=Competition Management System=]</dd>
+          <dt>Journey:</dt>
+          <dd>
+            <ol>
+              <li>🏃‍♂️‍➡️ A [=runner=] that is registered in a city marathon goes to the venue before the event to collect the participation pack, including their bib number, required for participation.</li>
+              <li>🪪 Event organizer staff request the [=Runner Card=] used for registration in the event.</li>
+              <li>📱 The [=runner=] shares a QR code from the wallet on their smartphone with the event organizer.</li>
+              <li>📱 The event organizer verifies the [=Runner Card=] by scanning the QR code with a smartphone app connected to the [=competition management system=]. The event organizer's smartphone app and the runner's smartphone wallet exchange the information via Bluetooth or NFC.</li>
+              <li>✅ After successful validation in the system, the event organizer checks the picture of the [=runner=] on their tablet and gives the participation pack with the assigned bib number for the competition.</li>
+              <li>🎽 The [=runner=] wears the bib number and goes to the race start line.</li>
+            </ol>  
+          </dd>          
         </dl>
 
-        <h4 id="P03">Competition <em>Call Room</em></h4>
+        <h4 id="P03">Athlete Passes Competition <em>Call Room</em></h4>
+        <p>A cross-country athlete presents to the Call Room officials minutes before the competition, identifying themself and showing the qualifification credentials to participate in the race.</p>
         <dl>
           <dt>Holder</dt>
           <dd>[=Athlete=]</dd>
@@ -323,21 +435,23 @@
           </dd>
           <dt>Verifier</dt>
           <dd>[=Competition Management System=]</dd>
+          <dt>Journey:</dt>
+          <dd>
+            <ol>
+              <li>🫷 An [=athlete=] presents themself at the Call Room, ten minutes before a cross-country race starts.</li>
+              <li>🪪 A competition [=official=] requests the [=Athlete's License=] and the attestation of [=Competition Qualification=] based on previous results.</li>
+              <li>⌚ The [=athlete=] shares a QR code from the wallet on their smartwatch with the [=official=].</li>
+              <li>📱 The [=official=] verifies the [=athlete license=] and [=Competition Qualification Attestation=] by scanning the QR code on the watch with a dedicated tablet connected to the [=competition management system=]. The Official's tablet and the Athlete's smartwatch exchange the information via Bluetooth or NFC.</li>
+              <li>✅ After successful validation of the attestations, the [=official=] checks the picture of the [=athlete=] on their tablet, and confirms the registration of the athlete in the race.</li>
+              <li>🏃‍♂️‍➡️ The [=athlete=] enters into the restricted area of competition.</li>
+            </ol>  
+          </dd>
         </dl>
 
-        <p>
+        <p class="note">
           A <em>Call Room</em> in athletics is a strict, mandatory process where officials verify an athlete's identity, dressing, and equipment compliance before a competition. Physically, the Call Room is a restricted area usually located between the warm-up area and the entry to the track, field, or start line of the competition. Athletes must identify themselves to the officials considering a tight schedule that varies depending on the discipline and type of event -it happens a few minutes before the competition.
         </p>
-        <p>
-          In the <em>Call Room</em> process, judges check the identity of the athlete, the competition bibs (i.e., identifiers and placement), shoe and uniform compliance, and other aspects like advertising. It is a critical moment for the athletes because missing or failing the <em>Call Room</em> without a valid reason leads to exclusion from participating in the competition.
-        </p>
-        <p>
-          Time for fixing errors is too short. For instance, in outdoor events like road racing or cross-country, the <em>Call Room</em> closes ten minutes before the competition starts. Thus the strict process and short time before the start is a critical moment for the competitors. Currently, athletes are required to identify themselves to the officials through an official document (i.e., the [=athlete's license=], passport, or ID card). Right after the <em>Call Room</em>, an authorized team manager must collect the identification documents and give them back after the race, with the subsequent risk of losing or misplacing the documents.
-        </p>
-        <p>
-          Since the [=officials=] must confirm the participation of the athletes in the [=system=], this scenario is ideal for the presentation of digital credentials in proximity. For identification with minimum disclosure of information, judges with a smartphone or tablet may request the [=athlete's license=] validity, name, and picture. In some competitions, they could request additional attributes related to qualification and permits. 
-          Athletes may use their personal smartphones with a digital wallet to present the claims requested by the officials operating a [=competition management system=]. However, in the <a href="https://publications.european-athletics.org/clujnapoca/competition-procedure/">official competitions</a>, subject to World Athletics Rules, smartphones are strictly not allowed in the <em>Call Room</em> procedure, so the best option is to <strong>store and present the credentials through the athlete's smartwatch</strong>. It is a device allowed in competitions and the only external digital accessory that athletes carry during a competition.
-        </p>
+ 
       </section>
 
       <div class="ednote">
