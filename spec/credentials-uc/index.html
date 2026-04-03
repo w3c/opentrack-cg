@@ -43,7 +43,7 @@
     <h1 id="title">Sports Competition Digital Credentials Use Cases</h1>
     <section id='abstract'>
       <p>
-        Regulated sports usually depend on authorized entities that manage identities and credentials autonomously but follow common patterns and rules. This document collects scenarios and use cases in the athletics ecosystem where the application of the paradigm of <strong>decentralized digital credentials</strong> can be naturally applied. 
+        Regulated sports usually depend on authorized entities that follow common rules for competitive sports. These entities, sports federations, usually manage identities and credentials for their stakeholders autonomously, using their own systems, but follow similar patterns and requirements to enable global participation in competitions. This document collects scenarios and use cases in the athletics ecosystem where the paradigm of <strong>decentralized digital credentials</strong> can be naturally applied.
       </p>
     </section>
     <section id='sotd'>
@@ -106,7 +106,7 @@
         <dd>Software that automates the administration of athletic events, streamlining registration, scheduling, and results in competitions. [=Competition management systems=] are operated by trusted service providers, and they can act as [=verifiers=] (e.g., verification of credentials for event registrations) and [=issuers=] (e.g., issuance of attestation of results after a competition).</dd>
 
         <dt><dfn data-lt="runner">Occasional Runner</dfn></dt>
-        <dd>Person that ocasionally engages in running races and is not officially registered with a [=sports federation=] as an [=athlete=].</dd>          
+        <dd>Person that occasionally engages in running races and is not officially registered with a [=sports federation=] as an [=athlete=].</dd>          
 
         <dt><dfn data-lt="Federation">Sports Federation</dfn></dt>
         <dd>Non-governmental governing body that administers, rules, and promotes a given sport. [=Sports federations=] usually play the [=issuer=] role, providing sports users like [=athletes=], coaches, officials, and managers with [=credentials=] (e.g., licenses and attestation of achievements) for operation under the scope of the regulated sport. Federations may also play the [=verifier=] role as described in the <a href="#usecases">use cases section</a>.</dd>
@@ -115,7 +115,7 @@
         <dd>Trusted organization aiming to address ethical misconduct in the sport, including non-authorized doping usage. The Athletics Integrity Unit (AIU) is one example of a [=sports integrity unit=].</dd>
         
         <dt><dfn data-lt="official">Sports Official</dfn></dt>
-        <dd>Relying person involved in competition management and regulated sports competitions, in charge of enforcing rules, ensuring safety, and guaranteeing fairness in sports. Examples of [=sports officials=] include referees, judges, and marshals. [=Sports Officials=] may operate [=competition management systems=] during events.</dd>
+        <dd>Relying person involved in competition management and regulated sports competitions, in charge of enforcing rules, ensuring safety, and guaranteeing fairness in sports. Examples of [=sports officials=] include referees, judges, and marshals. [=Sports officials=] may operate [=competition management systems=] during events.</dd>
       </dl>
     </section>
     <section id="credentials">
@@ -164,7 +164,7 @@
         <dd>Official confirmation of an athlete's performance during a competition. This result ratification may be associated with rewards and used by the athletes with third-party organizers to register in restricted events (e.g., minimum performance thresholds, starting lists ordered by performance).</dd>
 
         <dt><dfn data-lt="event registration">Event Registration Attestation</dfn></dt>
-        <dd>Official confirmation of registration in a sports event. This certificate might ratify the registration of [=occasional runners=] in races, [=athletes=] in athletics tournaments, and third-parties as expectators.</dd>
+        <dd>Official confirmation of registration in a sports event. This certificate might ratify the registration of [=occasional runners=] in races, [=athletes=] in athletics tournaments, and third-parties as spectators.</dd>
 
         <dt><dfn data-lt="prize voucher">Participation or Prize Voucher</dfn></dt>
         <dd>Redeemable documents serving as proof of entitlement to awards or discounts often used in grassroots competitions to boost event participation and promote local sponsors. <a href="https://freizeit.sbb.ch/en/stories/races-sport-swiss-runners">Swiss Runners Tickets</a> are examples of participation vouchers.</dd>
@@ -229,8 +229,8 @@
                   <li>Attributes of the [=athlete license=]: name, surname, email, picture, competition category, and expiration date of the license.</li>
                   <li>A valid [=Sports Medical Certificate=] to guarantee the athlete is in healthy conditions.</li>
                   <li>An updated [=Integrity Competition Permit=]</li>
-                  <li>An attestation about the [=Competition Qualification=], achieved in previous competitions granting access to the current competition.</li>
-                  <li>Optionally, the attestation of previous [=Competition Results=] to measure the quality of the athlete.</li>
+                  <li>An attestation about the [=competition qualification=], achieved in previous competitions granting access to the current competition.</li>
+                  <li>Optionally, the attestation of previous [=competition results=] to measure the quality of the athlete.</li>
                 </ul>
               </li>
               <li>🪪 The [=athlete=] scans the QR code with the wallet in their smartphone and accepts presenting all the attributes requested from the credentials stored in the wallet.</li>
@@ -422,7 +422,7 @@
         </dl>
 
         <h4 id="P03">Athlete Passes Competition <em>Call Room</em></h4>
-        <p>A cross-country athlete presents to the Call Room officials minutes before the competition, identifying themself and showing the qualifification credentials to participate in the race.</p>
+        <p>A cross-country athlete presents to the Call Room officials minutes before the competition, identifying themself and showing the qualification credentials to participate in the race.</p>
         <dl>
           <dt>Holder</dt>
           <dd>[=Athlete=]</dd>
@@ -439,7 +439,7 @@
           <dd>
             <ol>
               <li>🫷 An [=athlete=] presents themself at the Call Room, ten minutes before a cross-country race starts.</li>
-              <li>🪪 A competition [=official=] requests the [=Athlete's License=] and the attestation of [=Competition Qualification=] based on previous results.</li>
+              <li>🪪 A competition [=official=] requests the [=Athlete's License=] and the attestation of [=competition qualification=] based on previous results.</li>
               <li>⌚ The [=athlete=] shares a QR code from the wallet on their smartwatch with the [=official=].</li>
               <li>📱 The [=official=] verifies the [=athlete license=] and [=Competition Qualification Attestation=] by scanning the QR code on the watch with a dedicated tablet connected to the [=competition management system=]. The Official's tablet and the Athlete's smartwatch exchange the information via Bluetooth or NFC.</li>
               <li>✅ After successful validation of the attestations, the [=official=] checks the picture of the [=athlete=] on their tablet, and confirms the registration of the athlete in the race.</li>
