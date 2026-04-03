@@ -2,13 +2,15 @@
 
 # Open Athletics Community Group 
 
-This is the home repository of Open Athletics CG (officially named OpenTrack CG).
+This is the home repository of Open Athletics CG (historically and officially named W3C OpenTrack CG).
 
 The Open Athletics CG is composed by __a group of sports data enthusiasts__ motivated by the opportunities the open data promised during the rising data revolution in the public sector. This CG is a forum to discuss technology for athletics. We focus on data interoperability, including __data exchange across multi-level federations, clubs, timekeepers, race organizers, and the community in general__. The group aims to define the best approach to __make the most of the sports (open) data__ through __open standards and collaboration__. 
 
-The CG organizes monthly teleconferences, and its members usually meet in physical meetings, like the series of AthTech Conferences promoted by European Athletics and with the participation of dozens of experts. 
+The CG organizes teleconferences eventually, and its members usually meet in physical meetings, like the series of [AthTech Conferences](https://athtech.run/) organized by [European Athletics](https://www.european-athletics.com/home) and with the participation of hundreds of experts and public in general. 
 
-This CG aimed to motivate the interchange of Athletics data across federations, clubs and businesses. Interoperability was and still is a challenge due to the heterogeneity of governing bodies and systems (i.e., lack of a central or a federated system to collect results automatically at the international level). Competitions are similar worldwide (i.e., changing distances and units, throwing different objects, and using different surfaces), and most of the information, like the results or the competitors, is public, so global interoperability seems feasible. 
+This CG aimed to motivate the interchange of Athletics data across federations, clubs and businesses. Interoperability is a challenge due to the heterogeneity of governing bodies and systems (i.e., lack of a central or a federated system to collect results automatically at the international level). Competitions are similar worldwide (i.e., changing distances and units, throwing different objects, and using different surfaces), and most of the information, like the results or the competitors, is public, so global interoperability seems feasible. 
+
+We aim to implement and deploy cutting-edge technologies for the digital transformation of the sport, enhancing management and increasing efficiency across federations, service providers, and consumers. One of the latest examples is the application of decentralized digital credentials to competitive sports.     
 
 
 ## Quick links
@@ -25,13 +27,14 @@ Documents produced so far:
 
 * [Athletics Conceptual Model](https://w3c.github.io/opentrack-cg/spec/model/)
 * [Competition Data Model and Vocabulary](https://w3c.github.io/opentrack-cg/spec/competition/) based on Schema.org
+* [Sports Competition Digital Credentials Use Cases](https://w3c.github.io/opentrack-cg/spec/credentials-uc/) (status: working draft)
 
 
-## About Open Athletics (_OpenTrack_)
+## About Open Athletics
 
-This is the repository for the [W3C OpenTrack Community Group](https://www.w3.org/community/opentrack/) to develop and document specifications and code related to what we call **Open Athletics** —formerly *OpenTrack*, but changed to make the scope broader—, a set of tools to increase interoperability among systems managing information on athletics and sports in general. Open Athletics includes schemes and vocabularies to describe sports, as well as open source software that helps managing that kind of information.
+This is the repository for the [W3C Open Athletics Community Group](https://www.w3.org/community/opentrack/) to develop and document specifications and code related to what we call **Open Athletics** —formerly *OpenTrack*, but changed to make the scope broader—, a set of tools to increase interoperability among systems managing information on athletics and sports in general. Open Athletics includes schemes and vocabularies to describe sports, as well as open source software that helps managing that kind of information.
 
-Through OpenTrack and Open Athletics, entities around the world (sport clubs, federations, private event organizers, etc.) will be able to open the data contributing towards open data in sports. This will bring new business opportunities to third parties (developers, public bodies, private companies, citizens, academia).
+Through Open Athletics, entities around the world (sport clubs, federations, private event organizers, etc.) will be able to open the data contributing towards open data in sports. This will bring new business opportunities to third parties (developers, public bodies, private companies, citizens, academia).
 
 In order to maximize the impact and adoption of the final proposal, this initiative is supported by [European Athletics](http://www.european-athletics.org) and other [relevant institutions](https://www.w3.org/community/opentrack/participants) of the world of *Data Management* and *Athletics*.
 
@@ -43,7 +46,7 @@ The main component of OpenTrack is a set of vocabularies and taxonomies that wil
 
 Participants in this group will contribute with code recipes, libraries, and examples about the use of athletics information.
 
-Currently, we are working on what we call it, **Open Athletics** models, vocabularies, and tools: 
+In the past we worked on **Open Athletics** models, vocabularies, and tools: 
 
 * A **[Conceptual Data Model for Athletics](https://w3c.github.io/opentrack-cg/spec/model/)** to define Athletics competitions, events, management and participation in an abstract way; and
 * a **[Sports Competition Data Model and Vocabulary](https://w3c.github.io/opentrack-cg/spec/competition/)** based on Schema.org. It contains examples of implementation for competitions, participation, athletes, organizations, etc.
@@ -58,11 +61,11 @@ Schemas and vocabularies will be aligned with the existing W3C standards, in con
 
 ## Can I use it?
 
-Of course you can! Unless the piece of software or document listed in this repository has specified an explicit license, everything is under the [W3C Software and Document License](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document). This means that, by default, you have permission to copy, modify, and distribute OpenTrack works, with or without modification, for any purpose and without fee or royalty.
+Of course you can! Unless the piece of software or document listed in this repository has specified an explicit license, everything is under the [W3C Software and Document License](https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document). This means that, by default, you have permission to copy, modify, and distribute our works, with or without modification, for any purpose and without fee or royalty.
 
 ## How can I participate?
 
-Everyone —either W3C Member or not— is invited to [join the W3C OpenTrack CG](https://www.w3.org/community/opentrack/). Just click on the 'join' button, and register with your W3C account (in case you don't have, please [request one](https://www.w3.org/accounts/request). Once you are a group member, you will be subscribed to the [main mailing list](https://lists.w3.org/Archives/Public/public-opentrack/) and the [calendar](https://www.w3.org/groups/cg/opentrack/calendar/).
+Everyone —either W3C Member or not— is invited to [join the W3C Open Athletics CG](https://www.w3.org/community/opentrack/). Just click on the 'join' button, and register with your W3C account (in case you don't have, please [request one](https://www.w3.org/accounts/request). Once you are a group member, you will be subscribed to the [main mailing list](https://lists.w3.org/Archives/Public/public-opentrack/) and the [calendar](https://www.w3.org/groups/cg/opentrack/calendar/).
 
 
 ### How to join?
