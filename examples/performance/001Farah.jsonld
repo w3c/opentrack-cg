@@ -1,17 +1,17 @@
 [
     {
-        "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-        "@id": "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon",
+        "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+        "@id": "http://w3c-cg.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon",
         "@type": "TimePerformance",
         "agent": {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
         },
         "sportsDiscipline": {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/discipline/HMarathon.jsonld"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/discipline/HMarathon.jsonld"
         },
         "datePublished": "2015-03-22",
         "inCompetition": {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/competition/2015LisbonHM.jsonld"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/competition/2015LisbonHM.jsonld"
         },
         "time": "00:59:32",
         "recordOrBest": [
@@ -20,15 +20,15 @@
         ]
     },
     {
-        "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-        "@id": "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m",
+        "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+        "@id": "http://w3c-cg.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m",
         "@type": "TimePerformance",
         "datePublished": "2018-07-02",
         "agent": {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
         },
         "sportsDiscipline": {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/discipline/1500m.jsonld"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/discipline/1500m.jsonld"
         },
         "time": "00:03:28.810",
         "recordOrBest": [
@@ -37,15 +37,15 @@
         ]
     },
     {
-        "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-        "@id": "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m",
+        "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+        "@id": "http://w3c-cg.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m",
         "@type": "TimePerformance",
         "datePublished": "2018-02-12",
         "agent": {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
         },
         "sportsDiscipline": {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/discipline/3000m.jsonld"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/discipline/3000m.jsonld"
         },
         "time": "00:07:32.620",
         "recordOrBest": "best:NR"

@@ -1,6 +1,6 @@
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GB-SCT.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c-cg.github.io/opentrack-cg/examples/federation/GB-SCT.jsonld",
     "@type": "Federation",
     "name": "Scottish Athletics Ltd",
     "email": "stc@example.com",
@@ -16,6 +16,6 @@
     },
     "areaServed": "Scotland",
     "memberOf": {
-        "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+        "@id": "http://w3c-cg.github.io/opentrack-cg/examples/federation/GBR.jsonld"
     }
 }

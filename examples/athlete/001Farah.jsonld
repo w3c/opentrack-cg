@@ -1,6 +1,6 @@
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c-cg.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
     "@type": "Athlete",
     "name": "Mohamed Muktar Jama Farah",
     "familyName": "Farah",
@@ -33,35 +33,35 @@
     },
     "affiliation": [
         {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/club/NEB.jsonld"
         },
         {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/club/NOP.jsonld"
         },
         {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/federation/GBR.jsonld"
         },
         {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/federation/USATF.jsonld"
         }
     ],
     "memberOf": [
         {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/team/GBR2012.jsonld"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/team/GBR2012.jsonld"
         },
         {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/team/GBR2016.jsonld"
         }
     ],
     "bestPerformance": [
         {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon"
         },
         {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m"
         },
         {
-            "@id": "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m"
+            "@id": "http://w3c-cg.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m"
         }
     ],
     "owl:sameAs": {

@@ -1,6 +1,6 @@
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GB-WLS.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c-cg.github.io/opentrack-cg/examples/federation/GB-WLS.jsonld",
     "@type": "Federation",
     "name": "Welsh Athletics",
     "url": "http://www.welshathletics.org",
@@ -15,6 +15,6 @@
     },
     "areaServed": "Welsh",
     "memberOf": {
-        "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+        "@id": "http://w3c-cg.github.io/opentrack-cg/examples/federation/GBR.jsonld"
     }
 }

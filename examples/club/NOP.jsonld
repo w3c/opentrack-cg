@@ -1,14 +1,14 @@
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id": "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c-cg.github.io/opentrack-cg/examples/club/NOP.jsonld",
     "@type": "Club",
     "name": "Nike Oregon Project",
-    "logo": "https://w3c.github.io/opentrack-cg/examples/images/club/logo7.svg",
+    "logo": "https://w3c-cg.github.io/opentrack-cg/examples/images/club/logo7.svg",
     "url": "https://nikeoregonproject.com/",
     "athlete": {
-        "@id": "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
+        "@id": "http://w3c-cg.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
     },
     "federation": {
-        "@id": "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld"
+        "@id": "http://w3c-cg.github.io/opentrack-cg/examples/federation/USATF.jsonld"
     }
 }

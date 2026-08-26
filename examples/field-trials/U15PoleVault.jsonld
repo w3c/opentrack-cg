@@ -1,6 +1,6 @@
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id": "http://w3c.github.io/opentrack-cg/examples/field-trials/U15PoleVault.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c-cg.github.io/opentrack-cg/examples/field-trials/U15PoleVault.jsonld",
     "@type": "UnitHeightCompetition",
     "name": "EA U15 Boys Pole Vault – Final",
     "category": {

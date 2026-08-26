@@ -154,7 +154,7 @@
         <section class="informative">
             <h2 id="introduction">Introduction</h2>
             <p>
-                This section describes the conceptual model for Open Athletics. As described in <a href="https://w3c.github.io/opentrack-cg/charter.html">the charter</a>, this model describes data related to Athletics competitions
+                This section describes the conceptual model for Open Athletics. As described in <a href="https://w3c-cg.github.io/opentrack-cg/charter.html">the charter</a>, this model describes data related to Athletics competitions
                 including: Track and Field; Road Running; Race Walking; Cross-Country Running; Mountain Running; and trail Running disciplines.
             </p>
             <p>This model will be focus on Athletics competitions, having into account: events; athletes and teams; results; performances; management of start lists; results; and facilities.</p>
@@ -278,8 +278,8 @@ The content of the example is in monospace font and may be syntax colored.
 
                 <pre class="example">
 {
-    "@context" : "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+    "@context" : "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
     "@type" : "Athlete",
     "name" : "Mohamed Muktar Jama Farah",
     "familyName" : "Farah",
@@ -289,7 +289,7 @@ The content of the example is in monospace font and may be syntax colored.
     "gender" : "Male" ,
     "birthDate" : "1983-04-23",
     "image" : "https://example.com/260px-MoPodiumRio2016.png",
-    "club" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld"
+    "club" : "http://w3c-cg.github.io/opentrack-cg/examples/club/NEB.jsonld"
 } 
 
 
@@ -306,13 +306,13 @@ The content of the example is in monospace font and may be syntax colored.
                     <p>By specifying</p>
 
                     <pre>
-    "@context" : "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld"
+    "@context" : "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld"
 
 
                     </pre>
 
                     <p>
-                        we indicate the context of the document, that is defined in <a href="http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld">the linked document</a>. So we can use the keys of the context as a simplification for
+                        we indicate the context of the document, that is defined in <a href="http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld">the linked document</a>. So we can use the keys of the context as a simplification for
                         the representation.
                     </p>
                 </section>
@@ -338,24 +338,24 @@ The content of the example is in monospace font and may be syntax colored.
                     <p><code>@id</code> is used to uniquely identify entities or resources through IRIs.</p>
                     <p>When dereferencing an entity related via a URL, the location should provide a representation of that entity.</p>
                     <pre class="example">
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
+    "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"
 
 
                     </pre>
 
                     <p>
                         This example describes an <code>Athlete</code> that is identified as
-                        <a href='http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"'>http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld</a>. The web address will provide information about the entity (the
+                        <a href='http://w3c-cg.github.io/opentrack-cg/examples/athlete/001Farah.jsonld"'>http://w3c-cg.github.io/opentrack-cg/examples/athlete/001Farah.jsonld</a>. The web address will provide information about the entity (the
                         same that is being described in the example). Having these identifiers we will be able to refer this entity from other entity descriptions or documents.
                     </p>
                     <p>Using this mechanism, we can enrich descriptions just linking our descriptions with other IRIs that already identify resources. For instance, the athlete is affiliated to a club:</p>
                     <pre class="example">
-    "club" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld" }
+    "club" : { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/club/NEB.jsonld" }
 
 
                     </pre>
 
-                    <p>That club (identified by <a href="http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld">http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld</a>) is described in the same way.</p>
+                    <p>That club (identified by <a href="http://w3c-cg.github.io/opentrack-cg/examples/club/NEB.jsonld">http://w3c-cg.github.io/opentrack-cg/examples/club/NEB.jsonld</a>) is described in the same way.</p>
                     <p>
                         There may be exceptions of JSON-LD objects that <strong>do not</strong> have <code>@id</code>s associated. We should avoid this case unless we are sure the object defined is useful only in the context of the current
                         description (i.e., no reusable in future descriptions).
@@ -400,9 +400,9 @@ The content of the example is in monospace font and may be syntax colored.
                     <p>In this case, the potential values are expressed in the context as aliases, so we can use <code>Male</code> instead of <code>http://schema.org/Male</code>.</p>
                     <h5 id="objects">Objects</h5>
                     <p>As shown above, a resource identified by an IRI may be used as value of a property.</p>
-                    <p>In case <a href="http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld">the resource</a> is already identified (and described) we can link it directly:</p>
+                    <p>In case <a href="http://w3c-cg.github.io/opentrack-cg/examples/club/NEB.jsonld">the resource</a> is already identified (and described) we can link it directly:</p>
                     <pre class="example">
-    "club" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld" }
+    "club" : { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/club/NEB.jsonld" }
 
 
                     </pre>
@@ -410,7 +410,7 @@ The content of the example is in monospace font and may be syntax colored.
                     <p>Otherwise we can describe that resource nested in the main object:</p>
                     <pre class="example">
     "club" : {
-        "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
+        "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/club/NEB.jsonld",
         "@type": "Club",
         "name": "Newham &amp; Essex Beagles",
         "alternateName": "BeaglesAC",
@@ -434,8 +434,8 @@ The content of the example is in monospace font and may be syntax colored.
                     <h5 id="arrays">Arrays</h5>
                     <p>Most of the properties may be repeated to describe the same resource. For instance, the athlete may be affiliated to two clubs:</p>
                     <pre class="example">
-    "club" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld" },
-    "club" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld" }
+    "club" : { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/club/NEB.jsonld" },
+    "club" : { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/club/NOP.jsonld" }
 
 
                     </pre>
@@ -443,8 +443,8 @@ The content of the example is in monospace font and may be syntax colored.
                     <pre class="example">
     "club" : 
         [ 
-            { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld" },
-            { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld" }
+            { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/club/NEB.jsonld" },
+            { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/club/NOP.jsonld" }
         ]
 
 
@@ -761,8 +761,8 @@ The content of the example is in monospace font and may be syntax colored.
 
                 <pre class="example">
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/001Farah.jsonld",
     "@type" : "Athlete",
     "name" : "Mohamed Muktar Jama Farah",
     "familyName" : "Farah",
@@ -796,24 +796,24 @@ The content of the example is in monospace font and may be syntax colored.
     },
     "affiliation" : 
         [
-            { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld" },
-            { "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NOP.jsonld" }
+            { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/club/NEB.jsonld" },
+            { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/club/NOP.jsonld" }
         ],
     "memberOf" : 
         [
-            { "@id" : "http://w3c.github.io/opentrack-cg/examples/team/GBR2012.jsonld" },
-            { "@id" : "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld" }
+            { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/team/GBR2012.jsonld" },
+            { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/team/GBR2016.jsonld" }
         ],
     "affiliation" :
         [
-           { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" },
-           { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/USATF.jsonld" }
+           { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/GBR.jsonld" },
+           { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/USATF.jsonld" }
         ],
     "bestPerformance" :
         [
-           { "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon" },
-           { "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m" },
-           { "@id" : "http://w3c.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m" }
+           { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/performance/001Farah.jsonld#HMarathon" },
+           { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/performance/001Farah.jsonld#1500m" },
+           { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/performance/001Farah.jsonld#3000m" }
         ]
 }
 
@@ -933,22 +933,22 @@ The content of the example is in monospace font and may be syntax colored.
                 <p>Description of a national team:</p>
                 <pre class="example">
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/team/GBR2016.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/team/GBR2016.jsonld",
     "@type" : "Team",
     "name" : "Great Britain National Team - Olympic Games 2016",
     "alternateName" : "GBR",
     "nationality" : "countrycode:GBR",
-    "memberOf" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" },
+    "memberOf" : { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/GBR.jsonld" },
     "athlete" : [
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/002Butchart.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/004Athlete4.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/005Athlete5.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/006Athlete6.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/006Athlete7.jsonld" }
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/001Farah.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/002Butchart.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/004Athlete4.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/005Athlete5.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/006Athlete6.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/006Athlete7.jsonld" }
     ],
-    "captain" :  { "@id" : http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld" }
+    "captain" :  { "@id" : http://w3c-cg.github.io/opentrack-cg/examples/athlete/001Farah.jsonld" }
 }
 
 
@@ -1233,8 +1233,8 @@ The content of the example is in monospace font and may be syntax colored.
                     </table>
                     <pre class="example">
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/club/NEB.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/club/NEB.jsonld",
     "@type" : "Club",
     "name": "Newham &amp; Essex Beagles",
     "alternateName": "BeaglesAC",
@@ -1253,11 +1253,11 @@ The content of the example is in monospace font and may be syntax colored.
     },
     "sponsor": { "name" : "Asics" } ,
     "athlete": [
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/001Farah.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/002Athlete2.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/003Athlete3.jsonld" }
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/001Farah.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/002Athlete2.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/003Athlete3.jsonld" }
     ],
-    "memberOf" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld" }
+    "memberOf" : { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/GBR.jsonld" }
 }
 
 
@@ -1275,8 +1275,8 @@ The content of the example is in monospace font and may be syntax colored.
                     </ul>
                     <pre class="example">
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c-cg.github.io/opentrack-cg/examples/federation/EAA.jsonld",
     "@type": "Federation",
     "name": "European Athletics",
     "alternateName": "European Athletic Association",
@@ -1293,30 +1293,30 @@ The content of the example is in monospace font and may be syntax colored.
         "addressCountry": "countrycode:CHE"
     },
     "areaServed" : "continent:EUROPE",
-    "memberOf": "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld",
+    "memberOf": "http://w3c-cg.github.io/opentrack-cg/examples/federation/IAAF.jsonld",
     "member": [
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/ALB.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/AND.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/ARM.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/AUT.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/AZE.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BLR.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BEL.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BIH.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BUL.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/CRO.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/CYP.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/ALB.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/AND.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/ARM.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/AUT.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/AZE.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BLR.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BEL.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BIH.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/BUL.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/CRO.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/CYP.jsonld" }
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/ALB.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/AND.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/ARM.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/AUT.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/AZE.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/BLR.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/BEL.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/BIH.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/BUL.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/CRO.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/CYP.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/ALB.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/AND.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/ARM.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/AUT.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/AZE.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/BLR.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/BEL.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/BIH.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/BUL.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/CRO.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/CYP.jsonld" }
     ]
 }
 
@@ -1414,14 +1414,14 @@ The content of the example is in monospace font and may be syntax colored.
                 <p>Example of category description (Senior Women):</p>
                 <pre class="example">
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/category/SENF.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/category/SENF.jsonld",
     "@type": "Category",
     "name": "Senior (Female)",
     "description": "Open class with no upper age limit but some limitations on younger people competing in endurance events. Female gender.",
     "requiredMinAge" : 16,
     "requiredGender" : "Female",
-    "recognizingAuthority" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/IAAF.jsonld" }
+    "recognizingAuthority" : { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/IAAF.jsonld" }
 }
 
 
@@ -1472,8 +1472,8 @@ The content of the example is in monospace font and may be syntax colored.
                 <p>Example of competition with open registration:</p>
                 <pre class="example">
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/001.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/competition/001.jsonld",
     "@type": "SportsCompetitionEvent",
     "name": "London Half Marathon",
     "competitionRegistration" : { 
@@ -1701,7 +1701,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </figcaption>
                 </figure>
 
-                <p>See a complete <a href="http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld">example of divisional competition (European Championships with detail of 100m event)</a>.</p>
+                <p>See a complete <a href="http://w3c-cg.github.io/opentrack-cg/examples/competition/Euro2016.jsonld">example of divisional competition (European Championships with detail of 100m event)</a>.</p>
                 <section>
                     <h4 id="competition-series">Competition Series</h4>
                     <p><dfn>Competition Series</dfn> are competitive events held periodically (for instance, the Summer Olympic Games have recurring events organized every four years).</p>
@@ -1752,16 +1752,16 @@ The content of the example is in monospace font and may be syntax colored.
                     </table>
                     <pre class="example">
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/EuropeanChampionships.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/competition/EuropeanChampionships.jsonld",
     "@type": "CompetitionSeries",
 
     "name": "European Athletics Championships",
     "description": "The European Athletics Championships is a recurring event organized by European Athletics, that is held every two years. This championship gathers together the best athletes and national teams in Europe.",
-    "organizer": { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld" },
+    "organizer": { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/EAA.jsonld" },
     "subEvent" : [
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld" },
-        { "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2018.jsonld" }
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/competition/Euro2016.jsonld" },
+        { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/competition/Euro2018.jsonld" }
     ]
 }
 
@@ -1903,8 +1903,8 @@ The content of the example is in monospace font and may be syntax colored.
                             <p>Example of description of height card, simplified with an athlete&#39;s participation:</p>
                             <pre class="example">
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/field-trials/U15PoleVault.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/field-trials/U15PoleVault.jsonld",
     "@type" : "UnitHeightCompetition",    
     "name" : "EA U15 Boys Pole Vault – Final",
     "category" : { "name" : "U15B" },
@@ -2010,8 +2010,8 @@ The content of the example is in monospace font and may be syntax colored.
                             <p>Description of distance card simplified with information of two competitors:</p>
                             <pre class="example">
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/field-trials/U17DiscusThrow.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/field-trials/U17DiscusThrow.jsonld",
     "@type" : "UnitDistanceCompetition",
 
     "name" : "EA U17 Men Discus – Final",
@@ -2350,9 +2350,9 @@ The content of the example is in monospace font and may be syntax colored.
                 <p>Example of entry in a competition:</p>
                 <pre class="example">
 {
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_100Haase",
+    "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_100Haase",
     "@type" : "Competitor",
-    "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/100Haase.jsonld" },
+    "agent" : { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/100Haase.jsonld" },
     "bibIdentifier" : "100"
 }
 
@@ -2466,17 +2466,17 @@ The content of the example is in monospace font and may be syntax colored.
                     </table>
                     <pre class="example">
 {
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_5",
+    "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_5",
     "@type": "Result",
     "name": "5th Position - 100m Women - Round 1 - Heat 1",
-    "competitionEntry" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_104Kora" },
+    "competitionEntry" : { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_104Kora" },
     "trackLane": 8,
     "competitionFeature": "feature:q",
     "rank": 5,
     "performance": {
-        "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_104Kora",
+        "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H1_104Kora",
         "@type" : "TimePerformance",
-        "competitor" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/104Kora.jsonld" },
+        "competitor" : { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/104Kora.jsonld" },
         "windAssistance" : {
             "@type" : "QuantitativeValue",
             "value" : "-1.5",
@@ -2611,9 +2611,9 @@ The content of the example is in monospace font and may be syntax colored.
                     <p>Example of performance in a sprint event:</p>
                     <pre class="example">
 {
-    "@id" : "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_119Nguyen",
+    "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#100W_R1H3_119Nguyen",
     "@type" : "TimePerformance",
-    "agent" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/athlete/119Nguyen.jsonld" },
+    "agent" : { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/athlete/119Nguyen.jsonld" },
     "windAssistance" : {
         "@type" : "QuantitativeValue",
         "value" : "1.0",
@@ -2760,7 +2760,7 @@ The content of the example is in monospace font and may be syntax colored.
         "name" : "European Record",
         "identifier" : "ER",
         "spatial" : "continent:Europe",
-        "recognizingAuthority" : { "@id" : "http://w3c.github.io/opentrack-cg/examples/federation/EAA.jsonld" }
+        "recognizingAuthority" : { "@id" : "http://w3c-cg.github.io/opentrack-cg/examples/federation/EAA.jsonld" }
     }
 }                                     
 
@@ -3024,7 +3024,7 @@ The content of the example is in monospace font and may be syntax colored.
                     </table>
                     <pre class="example">
 {
-    "@id": "http://w3c.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#venue",
+    "@id": "http://w3c-cg.github.io/opentrack-cg/examples/competition/Euro2016.jsonld#venue",
     "@type": "schema:StadiumOrArena",
     "name": "Olympic Stadium Amsterdam",
     "geo": {
