@@ -1,13 +1,13 @@
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id": "http://w3c.github.io/opentrack-cg/examples/schemaorg/competition-boston-marathon.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c-cg.github.io/opentrack-cg/examples/schemaorg/competition-boston-marathon.jsonld",
     "@type": "SportsCompetitionEvent",
     "name": "Boston Marathon 2018",
     "description": "Annual BAA Boston Marathon",
     "organizer": "Boston Athletics Association",
     "sponsor": "Adidas",
     "url": "http://www.baa.org/races/boston-marathon.aspx",
-    "image": "http://w3c.github.io/opentrack-cg/examples/schemaorg/images/boston_marathon.jpg",
+    "image": "http://w3c-cg.github.io/opentrack-cg/examples/schemaorg/images/boston_marathon.jpg",
     "location": {
         "@type": "SportsActivityLocation",
         "name": "Boston",

@@ -1,6 +1,6 @@
 {
-    "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
-    "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GB-NIR.jsonld",
+    "@context": "http://w3c-cg.github.io/opentrack-cg/contexts/opentrack.jsonld",
+    "@id": "http://w3c-cg.github.io/opentrack-cg/examples/federation/GB-NIR.jsonld",
     "@type": "Federation",
     "name": "Athletics Northern Ireland",
     "email": "nir@example.com",
@@ -15,6 +15,6 @@
     },
     "areaServed": "Northern Ireland",
     "memberOf": {
-        "@id": "http://w3c.github.io/opentrack-cg/examples/federation/GBR.jsonld"
+        "@id": "http://w3c-cg.github.io/opentrack-cg/examples/federation/GBR.jsonld"
     }
 }
