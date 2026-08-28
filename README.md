@@ -19,7 +19,7 @@ Info and logistics for the group activities:
 
 * [Blog](https://www.w3.org/community/opentrack/)
 * [Forum & instant messaging](https://forum.openathletics.net/)
-* [Contact and feedback](https://github.com/w3c/opentrack-cg/issues)
+* [Contact and feedback](https://github.com/w3c-cg/opentrack-cg/issues)
 * [Meetings calendar](https://www.w3.org/groups/cg/opentrack/calendar/).
 
 
